@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+601826: Will Flávio Bolsonaro win the 2026 Brazilian presidential election?
+601850: Will Kylian Mbappe be the 2025/2026 top UCL goal scorer?
+601851: Will Erling Haaland be the 2025/2026 top UCL goal scorer?
+601852: Will Robert Lewandowski be the 2025/2026 top UCL goal scorer?
+601853: Will Mohamed Salah be the 2025/2026 top UCL goal scorer?
+601854: Will Harry Kane be the 2025/2026 top UCL goal scorer?
+601855: Will Ousmane Dembele be the 2025/2026 top UCL goal scorer?
+601856: Will Viktor Gyokeres be the 2025/2026 top UCL goal scorer?
+601857: Will Raphinha be the 2025/2026 top UCL goal scorer?
+601858: Will Serhou Guirassy be the 2025/2026 top UCL goal scorer?
+601859: Will Lamine Yamal be the 2025/2026 top UCL goal scorer?
+601860: Will Hugo Ekitike be the 2025/2026 top UCL goal scorer?
+601861: Will de Jesus Joao Pedro be the 2025/2026 top UCL goal scorer?
+601862: Will Cole Palmer be the 2025/2026 top UCL goal scorer?
+601863: Will Duscan Vlahovic be the 2025/2026 top UCL goal scorer?
+601864: Will Lautaro Martinez be the 2025/2026 top UCL goal scorer?
+601865: Will Jonathan David be the 2025/2026 top UCL goal scorer?
+601866: Will Jose Vinicius Junior be the 2025/2026 top UCL goal scorer?
+601867: Will Bukayo Saka be the 2025/2026 top UCL goal scorer?
+601868: Will Julian Alvarez be the 2025/2026 top UCL goal scorer?
+601869: Will Omar Marmoush be the 2025/2026 top UCL goal scorer?
+601870: Will Bradley Barcola be the 2025/2026 top UCL goal scorer?
+601871: Will Desire Doue be the 2025/2026 top UCL goal scorer?
+601872: Will Evangelos Pavlidis be the 2025/2026 top UCL goal scorer?
+601873: Will Luis Diaz be the 2025/2026 top UCL goal scorer?
+601874: Will de Goes Rodrygo be the 2025/2026 top UCL goal scorer?
+601875: Will Jamal Musiala be the 2025/2026 top UCL goal scorer?
+601876: Will Liam Delap be the 2025/2026 top UCL goal scorer?
+601877: Will Alexander Sorloth be the 2025/2026 top UCL goal scorer?
+601878: Will Marcos Rashford be the 2025/2026 top UCL goal scorer?
+601879: Will Michael Olise be the 2025/2026 top UCL goal scorer?
+601880: Will Khvicha Kvaratskhelia be the 2025/2026 top UCL goal scorer?
+601881: Will Jude Bellingham be the 2025/2026 top UCL goal scorer?
+601920: Will any presidential candidate win outright in the first round of the Brazil election?
+601921: Will Tarcisio de Frietas qualify for Brazil's presidential runoff?
+601922: Will Luiz Inácio Lula da Silva qualify for Brazil's presidential runoff?
+601923: Will Jair Bolsonaro qualify for Brazil's presidential runoff?
+601924: Will Fernando Haddad qualify for Brazil's presidential runoff?
+601925: Will Michelle Bolsonaro qualify for Brazil's presidential runoff?
+601936: Will Arsenal finish first in UCL league phase?
+601938: Will Real Madrid finish first in UCL league phase?
+601947: Will Atalanta finish first in UCL league phase?
+601948: Will Atlético Madrid finish first in UCL league phase?
+601951: Will Bayern Munich finish first in UCL league phase?
+601957: Will Inter Milan finish first in UCL league phase?
+601959: Will Liverpool finish first in UCL league phase?
+601960: Will Manchester City finish first in UCL league phase?
+601964: Will Paris Saint-Germain finish first in UCL league phase?
+601972: Will Union Saint-Gilloise advance to the round of 16?
+601973: Will Arsenal advance to the round of 16?
+601974: Will Qarabağ advance to the round of 16?
+601975: Will Real Madrid advance to the round of 16?
+601976: Will Tottenham Hotspur advance to the round of 16?
+601977: Will Borussia Dortmund advance to the round of 16?
+601978: Will Juventus advance to the round of 16?
+601979: Will Bodø/Glimt advance to the round of 16?
+601980: Will Slavia Prague advance to the round of 16?
+601981: Will Olympiacos advance to the round of 16?
+601982: Will Pafos advance to the round of 16?
+601983: Will Ajax advance to the round of 16?
+601984: Will Atalanta advance to the round of 16?
+601985: Will Atlético Madrid advance to the round of 16?
+601986: Will Barcelona advance to the round of 16?
+601987: Will Bayer Leverkusen advance to the round of 16?
+601988: Will Bayern Munich advance to the round of 16?
+601989: Will Chelsea advance to the round of 16?
+601990: Will Club Brugge advance to the round of 16?
+601991: Will Copenhagen advance to the round of 16?
+601992: Will Eintracht Frankfurt advance to the round of 16?
+601993: Will Galatasaray advance to the round of 16?
+601994: Will Inter Milan advance to the round of 16?
+601995: Will Kairat advance to the round of 16?
+601996: Will Liverpool advance to the round of 16?
+601997: Will Manchester City advance to the round of 16?
+601998: Will Monaco advance to the round of 16?
+601999: Will Napoli advance to the round of 16?
+602000: Will Newcastle United advance to the round of 16?
+602001: Will Paris Saint-Germain advance to the round of 16?
+602002: Will Sporting CP advance to the round of 16?
+602003: Will Benfica advance to the round of 16?
+602004: Will Marseille advance to the round of 16?
+602005: Will Villarreal advance to the round of 16?
+602006: Will PSV Eindhoven advance to the round of 16?
+602007: Will Athletic Bilbao advance to the round of 16?
+604470: Will China blockade Taiwan by June 30?
+604490: Will Trump visit China by March 31?
+604542: Will the Doomsday Clock move closer to Midnight?
+604675: Israeli parliament dissolved by March 31?
+608362: Will OpenAI’s market cap be less than $500B at market close on IPO day?
+608363: Will OpenAI’s market cap be between $500B and $750B at market close on IPO day?
+608364: Will OpenAI’s market cap be between $750B and $1T at market close on IPO day?
+608365: Will OpenAI’s market cap be between $1T and $1.25T at market close on IPO day?
+608366: Will OpenAI’s market cap be between $1.25T and $1.5T at market close on IPO day?
+608367: Will OpenAI’s market cap be $1.5T or greater at market close on IPO day?
+608368: Will OpenAI not IPO by December 31, 2026?
+608371: Will Fannie Mae’s market cap be less than $200B at market close on IPO day?
+608372: Will Fannie Mae’s market cap be between $200B and $250B at market close on IPO day?
+608373: Will Fannie Mae’s market cap be between $250B and $300B at market close on IPO day?
+608374: Will Fannie Mae’s market cap be between $300B and $350B at market close on IPO day?
+608375: Will Fannie Mae’s market cap be between $350B and $400B at market close on IPO day?
+608376: Will Fannie Mae’s market cap be $400B or greater at market close on IPO day?
+608377: Will Fannie Mae not IPO by June 30, 2026?
+608378: Will Freddie Mac’s market cap be less than $150B at market close on IPO day?
+608379: Will Freddie Mac’s market cap be between $150B and $200B at market close on IPO day?
+608380: Will Freddie Mac’s market cap be between $200B and $250B at market close on IPO day?
+608381: Will Freddie Mac’s market cap be between $250B and $300B at market close on IPO day?
+608382: Will Freddie Mac’s market cap be $300B or greater at market close on IPO day?
+608383: Will Freddie Mac not IPO by June 30, 2026?
+608384: Will Databricks’ market cap be less than $100B at market close on IPO day?
+608385: Will Databricks’ market cap be between $100B and $125B at market close on IPO day?
+608386: Will Databricks’ market cap be between $125B and $150B at market close on IPO day?
+608387: Will Databricks’ market cap be between $150B and $175B at market close on IPO day?
+608388: Will Databricks’ market cap be between $175B and $200B at market close on IPO day?
+608389: Will Databricks’ market cap be between $200B and $250B at market close on IPO day?
+608390: Will Databricks’ market cap be $250B or greater at market close on IPO day?
+608391: Will Databricks not IPO by June 30, 2026?
+608392: Will Stripe’s market cap be less than $80B at market close on IPO day?
+608393: Will Stripe’s market cap be between $80B and $100B at market close on IPO day?
+608394: Will Stripe’s market cap be between $100B and $120B at market close on IPO day?
+608395: Will Stripe’s market cap be between $120B and $140B at market close on IPO day?
+608396: Will Stripe’s market cap be $140B or greater at market close on IPO day?
+608397: Will Stripe not IPO by June 30, 2026?
+608398: Will Discord’s market cap be less than $15B at market close on IPO day?
+608399: Will Discord’s market cap be between $15B and $20B at market close on IPO day?
+608400: Will Discord’s market cap be between $20B and $25B at market close on IPO day?
+608401: Will Discord’s market cap be between $25B and $30B at market close on IPO day?
+608402: Will Discord’s market cap be $30B or greater at market close on IPO day?
+608403: Will Discord not IPO by June 30, 2026?
+608404: Will Anthropic’s market cap be less than $100B at market close on IPO day?
+608405: Will Anthropic’s market cap be between $100B and $200B at market close on IPO day?
+608406: Will Anthropic’s market cap be between $200B and $300B at market close on IPO day?
+608407: Will Anthropic’s market cap be between $300B and $400B at market close on IPO day?
+608408: Will Anthropic’s market cap be between $400B and $600B at market close on IPO day?
+608409: Will Anthropic’s market cap be $600B or greater at market close on IPO day?
+608410: Will Anthropic not IPO by June 30, 2026?
+608540: Will Kylian Mbappé win the 2026 Ballon d'Or?
+608541: Will Erling Haaland win the 2026 Ballon d'Or?
+608542: Will Jude Bellingham win the 2026 Ballon d'Or?
+608543: Will Ousmane Dembélé win the 2026 Ballon d'Or?
+608544: Will Mohamed Salah win the 2026 Ballon d'Or?
+608545: Will Lamine Yamal win the 2026 Ballon d'Or?
+608546: Will Vinícius Júnior win the 2026 Ballon d'Or?
+608547: Will Harry Kane win the 2026 Ballon d'Or?
+608548: Will Pedri win the 2026 Ballon d'Or?
+608549: Will Cole Palmer win the 2026 Ballon d'Or?
+609655: US recession by end of 2026?
+610236: NATO/EU troops fighting in Ukraine in June 30, 2026?
+610237: Will Putin meet with Zelenskyy by June 30, 2026?
+610256: Will Russia invade a NATO country by June 30, 2026?
+610376: Will Ukraine recapture Crimean territory by June 30, 2026?
+610379: Ukraine recognizes Russian sovereignty over its territory by June 30, 2026?
+610380: Ukraine election called by June 30, 2026?
+610381: Ukraine election held by June 30, 2026?
+611054: Will Tesla release Optimus by June 30, 2026?
+611153: Will Vladimir Fedoseev qualify for the 2026 World Chess Championship Candidates Tournament?
+611154: Will Magnus Carlsen qualify for the 2026 World Chess Championship Candidates Tournament?
+611157: Will Arjun Erigaisi qualify for the 2026 World Chess Championship Candidates Tournament?
+611158: Will Vincent Keymer qualify for the 2026 World Chess Championship Candidates Tournament?
+611159: Will Nodirbek Abdusattorov qualify for the 2026 World Chess Championship Candidates Tournament?
+611160: Will Hans Niemann qualify for the 2026 World Chess Championship Candidates Tournament?
+611161: Will Ian Nepomniachtchi qualify for the 2026 World Chess Championship Candidates Tournament?
+611162: Will Alireza Firouzja qualify for the 2026 World Chess Championship Candidates Tournament?
+611163: Will Maxime Vachier-Lagrave qualify for the 2026 World Chess Championship Candidates Tournament?
+612823: Will annual inflation increase by less than 24% in December?
+612824: Will annual inflation increase by between 24% and 26.9% in December?
+612825: Will annual inflation increase by between 27% and 29.9% in December?
+612826: Will annual inflation increase by between 30% and 32.9% in December?
+612827: Will annual inflation increase by between 33% and 35.9% in December?
+612828: Will annual inflation increase by between 36% and 38.9% in December?
+612829: Will annual inflation increase by 39% or higher in December?
+612843: Will Apple release a MacBook with cellular connectivity by June 30?
+613800: Will Hamnet be nominated for Best Picture at the 98th Academy Awards?
+613801: Will Sinners be nominated for Best Picture at the 98th Academy Awards?
+613802: Will One Battle After Another be nominated for Best Picture at the 98th Academy Awards?
+613803: Will Sentimental Value be nominated for Best Picture at the 98th Academy Awards?
+613804: Will Marty Supreme be nominated for Best Picture at the 98th Academy Awards?
+613805: Will Wicked: For Good be nominated for Best Picture at the 98th Academy Awards?
+613806: Will A House of Dynamite be nominated for Best Picture at the 98th Academy Awards?
+613807: Will Bugonia be nominated for Best Picture at the 98th Academy Awards?
+613808: Will It Was Just an Accident be nominated for Best Picture at the 98th Academy Awards?
+613809: Will Avatar: Fire and Ash be nominated for Best Picture at the 98th Academy Awards?
+613810: Will Jay Kelly be nominated for Best Picture at the 98th Academy Awards?
+613811: Will No Other Choice be nominated for Best Picture at the 98th Academy Awards?
+613812: Will Springsteen: Deliver Me From Nowhere be nominated for Best Picture at the 98th Academy Awards?
+613813: Will Frankenstein be nominated for Best Picture at the 98th Academy Awards?
+613814: Will The Smashing Machine be nominated for Best Picture at the 98th Academy Awards?
+613815: Will The Testament of Ann Lee be nominated for Best Picture at the 98th Academy Awards?
+613816: Will Sorry Baby be nominated for Best Picture at the 98th Academy Awards?
+613817: Will Rental Family be nominated for Best Picture at the 98th Academy Awards?
+613818: Will Weapons be nominated for Best Picture at the 98th Academy Awards?
+613819: Will Wake Up Dead Man: A Knives Out Mystery be nominated for Best Picture at the 98th Academy Awards?
+613820: Will Anemone be nominated for Best Picture at the 98th Academy Awards?
+613821: Will F1 be nominated for Best Picture at the 98th Academy Awards?
+613822: Will Train Dreams be nominated for Best Picture at the 98th Academy Awards?
+613823: Will After the Hunt be nominated for Best Picture at the 98th Academy Awards?
+613824: Will Die My Love be nominated for Best Picture at the 98th Academy Awards?
+613825: Will Highest 2 Lowest be nominated for Best Picture at the 98th Academy Awards?
+613826: Will The Life of Chuck be nominated for Best Picture at the 98th Academy Awards?
+613827: Will The Lost Bus be nominated for Best Picture at the 98th Academy Awards?
+613828: Will Nouvelle Vague be nominated for Best Picture at the 98th Academy Awards?
+613829: Will Warfare be nominated for Best Picture at the 98th Academy Awards?
+613830: Will Sound of Falling be nominated for Best Picture at the 98th Academy Awards?
+613831: Will Novocaine be nominated for Best Picture at the 98th Academy Awards?
+613832: Will Thunderbolts be nominated for Best Picture at the 98th Academy Awards?
+613835: Will One Battle After Another win Best Picture at the 98th Academy Awards?
+613836: Will Hamnet win Best Picture at the 98th Academy Awards?
+613837: Will Sinners win Best Picture at the 98th Academy Awards?
+613838: Will Sentimental Value win Best Picture at the 98th Academy Awards?
+613839: Will Marty Supreme win Best Picture at the 98th Academy Awards?
+613840: Will Wicked: For Good win Best Picture at the 98th Academy Awards?
+613841: Will Bugonia win Best Picture at the 98th Academy Awards?
+613842: Will It Was Just an Accident win Best Picture at the 98th Academy Awards?
+613843: Will Jay Kelly win Best Picture at the 98th Academy Awards?
+613844: Will A House of Dynamite win Best Picture at the 98th Academy Awards?
+613845: Will Avatar: Fire and Ash win Best Picture at the 98th Academy Awards?
+613846: Will No Other Choice win Best Picture at the 98th Academy Awards?
+613847: Will Springsteen: Deliver Me from Nowhere win Best Picture at the 98th Academy Awards?
+613848: Will Rental Family win Best Picture at the 98th Academy Awards?
+613849: Will Frankenstein win Best Picture at the 98th Academy Awards?
+613987: Will Leonardo DiCaprio be nominated for Best Actor at the 98th Academy Awards?
+613988: Will Jeremy Allen White be nominated for Best Actor at the 98th Academy Awards?
+613989: Will Michael B. Jordan be nominated for Best Actor at the 98th Academy Awards?
+613990: Will Timothée Chalamet be nominated for Best Actor at the 98th Academy Awards?
+613991: Will Daniel Day-Lewis be nominated for Best Actor at the 98th Academy Awards?
+613992: Will Jesse Plemons be nominated for Best Actor at the 98th Academy Awards?
+613993: Will Dwayne Johnson be nominated for Best Actor at the 98th Academy Awards?
+613994: Will Wagner Moura be nominated for Best Actor at the 98th Academy Awards?
+613995: Will Paul Mescal be nominated for Best Actor at the 98th Academy Awards?
+613996: Will George Clooney be nominated for Best Actor at the 98th Academy Awards?
+613997: Will Brendan Fraser be nominated for Best Actor at the 98th Academy Awards?
+613998: Will Lee Byung-hun be nominated for Best Actor at the 98th Academy Awards?
+613999: Will Joel Edgerton be nominated for Best Actor at the 98th Academy Awards?
+614000: Will Willem Dafoe be nominated for Best Actor at the 98th Academy Awards?
+614001: Will Colin Farrell be nominated for Best Actor at the 98th Academy Awards?
+614002: Will Brad Pitt be nominated for Best Actor at the 98th Academy Awards?
+614003: Will Matthew McConaughey be nominated for Best Actor at the 98th Academy Awards?
+614004: Will Joaquin Phoenix be nominated for Best Actor at the 98th Academy Awards?
+614005: Will Denzel Washington be nominated for Best Actor at the 98th Academy Awards?
+614007: Will Leonardo DiCaprio win Best Actor at the 98th Academy Awards?
+614008: Will Timothée Chalamet win Best Actor at the 98th Academy Awards?
+614009: Will Daniel Day-Lewis win Best Actor at the 98th Academy Awards?
+614010: Will Jeremy Allen White win Best Actor at the 98th Academy Awards?
+614011: Will Dwayne Johnson win Best Actor at the 98th Academy Awards?
+614012: Will Michael B. Jordan win Best Actor at the 98th Academy Awards?
+614013: Will Wagner Moura win Best Actor at the 98th Academy Awards?
+614014: Will Paul Mescal win Best Actor at the 98th Academy Awards?
+614015: Will Jesse Plemons win Best Actor at the 98th Academy Awards?
+614016: Will Brendan Fraser win Best Actor at the 98th Academy Awards?
+614017: Will George Clooney win Best Actor at the 98th Academy Awards?
+614018: Will Ethan Hawke win Best Actor at the 98th Academy Awards?
+614019: Will Colin Farrell win Best Actor at the 98th Academy Awards?
+614020: Will Channing Tatum win Best Actor at the 98th Academy Awards?
+614021: Will Hugh Jackman win Best Actor at the 98th Academy Awards?
+614055: Will Stellan Skarsgård be nominated for Best Supporting Actor at the 98th Academy Awards?
+614056: Will Sean Penn be nominated for Best Supporting Actor at the 98th Academy Awards?
+614057: Will Jeremy Strong be nominated for Best Supporting Actor at the 98th Academy Awards?
+614058: Will Paul Mescal be nominated for Best Supporting Actor at the 98th Academy Awards?
+614059: Will Adam Sandler be nominated for Best Supporting Actor at the 98th Academy Awards?
+614060: Will Delroy Lindo be nominated for Best Supporting Actor at the 98th Academy Awards?
+614061: Will Sean Bean be nominated for Best Supporting Actor at the 98th Academy Awards?
+614062: Will Miles Caton be nominated for Best Supporting Actor at the 98th Academy Awards?
+614063: Will Andrew Scott be nominated for Best Supporting Actor at the 98th Academy Awards?
+614064: Will Stephen Graham be nominated for Best Supporting Actor at the 98th Academy Awards?
+614065: Will Akira Emoto be nominated for Best Supporting Actor at the 98th Academy Awards?
+614066: Will Takehiro Hira be nominated for Best Supporting Actor at the 98th Academy Awards?
+614067: Will Jacob Elordi be nominated for Best Supporting Actor at the 98th Academy Awards?
+614068: Will Mark Hamill be nominated for Best Supporting Actor at the 98th Academy Awards?
+614069: Will Oscar Isaac be nominated for Best Supporting Actor at the 98th Academy Awards?
+614070: Will Andrew Garfield be nominated for Best Supporting Actor at the 98th Academy Awards?
+614071: Will Paul Dano be nominated for Best Supporting Actor at the 98th Academy Awards?
+614072: Will Jude Law be nominated for Best Supporting Actor at the 98th Academy Awards?
+614073: Will Kevin O'Leary be nominated for Best Supporting Actor at the 98th Academy Awards?
+614252: Will Sean Penn win Best Supporting Actor at the 98th Academy Awards?
+614253: Will Stellan Skarsgård win Best Supporting Actor at the 98th Academy Awards?
+614254: Will Paul Mescal win Best Supporting Actor at the 98th Academy Awards?
+614255: Will Adam Sandler win Best Supporting Actor at the 98th Academy Awards?
+614256: Will Jeremy Strong win Best Supporting Actor at the 98th Academy Awards?
+614257: Will Delroy Lindo win Best Supporting Actor at the 98th Academy Awards?
+614258: Will Akira Emoto win Best Supporting Actor at the 98th Academy Awards?
+614259: Will Miles Caton win Best Supporting Actor at the 98th Academy Awards?
+614260: Will Andrew Garfield win Best Supporting Actor at the 98th Academy Awards?
+614261: Will Jacob Elordi win Best Supporting Actor at the 98th Academy Awards?
+614262: Will Jack O'Connell win Best Supporting Actor at the 98th Academy Awards?
+614263: Will Sean Bean win Best Supporting Actor at the 98th Academy Awards?
+614264: Will Diego Luna win Best Supporting Actor at the 98th Academy Awards?
+614265: Will Jonathan Bailey win Best Supporting Actor at the 98th Academy Awards?
+614266: Will Peter Dinklage win Best Supporting Actor at the 98th Academy Awards?
+614268: Will Benicio Del Toro win Best Supporting Actor at the 98th Academy Awards?
+614296: Will Jessie Buckley be nominated for Best Actress at the 98th Academy Awards?
+614297: Will Renate Reinsve be nominated for Best Actress at the 98th Academy Awards?
+614298: Will Cynthia Erivo be nominated for Best Actress at the 98th Academy Awards?
+614299: Will Emma Stone be nominated for Best Actress at the 98th Academy Awards?
+614300: Will Rose Byrne be nominated for Best Actress at the 98th Academy Awards?
+614301: Will Amanda Seyfried be nominated for Best Actress at the 98th Academy Awards?
+614302: Will Sydney Sweeney be nominated for Best Actress at the 98th Academy Awards?
+614303: Will Jennifer Lawrence be nominated for Best Actress at the 98th Academy Awards?
+614304: Will Eva Victor be nominated for Best Actress at the 98th Academy Awards?
+614305: Will Julia Roberts be nominated for Best Actress at the 98th Academy Awards?
+614306: Will Jessica Lange be nominated for Best Actress at the 98th Academy Awards?
+614307: Will June Squibb be nominated for Best Actress at the 98th Academy Awards?
+614308: Will Lucy Liu be nominated for Best Actress at the 98th Academy Awards?
+614309: Will Jodie Comer be nominated for Best Actress at the 98th Academy Awards?
+614310: Will Saoirse Ronan be nominated for Best Actress at the 98th Academy Awards?
+614311: Will Jessie Buckley win Best Actress at the 98th Academy Awards?
+614312: Will Renate Reinsve win Best Actress at the 98th Academy Awards?
+614313: Will Cynthia Erivo win Best Actress at the 98th Academy Awards?
+614314: Will Rose Byrne win Best Actress at the 98th Academy Awards?
+614315: Will Emma Stone win Best Actress at the 98th Academy Awards?
+614316: Will Julia Roberts win Best Actress at the 98th Academy Awards?
+614317: Will Jennifer Lawrence win Best Actress at the 98th Academy Awards?
+614318: Will Tessa Thompson win Best Actress at the 98th Academy Awards?
+614319: Will Sydney Sweeney win Best Actress at the 98th Academy Awards?
+614320: Will Emily Blunt win Best Actress at the 98th Academy Awards?
+614321: Will Kate Hudson win Best Actress at the 98th Academy Awards?
+614322: Will June Squibb win Best Actress at the 98th Academy Awards?
+614323: Will Cate Blanchett win Best Actress at the 98th Academy Awards?
+614324: Will Eva Victor win Best Actress at the 98th Academy Awards?
+614325: Will Laura Dern win Best Actress at the 98th Academy Awards?
+614355: Will Teyana Taylor win Best Supporting Actress at the 98th Academy Awards?
+614356: Will Ariana Grande win Best Supporting Actress at the 98th Academy Awards?
+614357: Will Elle Fanning win Best Supporting Actress at the 98th Academy Awards?
+614358: Will Wunmi Mosaku win Best Supporting Actress at the 98th Academy Awards?
+614359: Will Emily Blunt win Best Supporting Actress at the 98th Academy Awards?
+614360: Will Chase Infiniti win Best Supporting Actress at the 98th Academy Awards?
+614361: Will Amy Madigan win Best Supporting Actress at the 98th Academy Awards?
+614362: Will Inga Ibsdotter Lilleaas win Best Supporting Actress at the 98th Academy Awards?
+614363: Will Gwyneth Paltrow win Best Supporting Actress at the 98th Academy Awards?
+614364: Will Jennifer Lopez win Best Supporting Actress at the 98th Academy Awards?
+614365: Will Glenn Close win Best Supporting Actress at the 98th Academy Awards?
+614366: Will Mari Yamamoto win Best Supporting Actress at the 98th Academy Awards?
+614367: Will Rebecca Ferguson win Best Supporting Actress at the 98th Academy Awards?
+614368: Will Ayo Edebiri win Best Supporting Actress at the 98th Academy Awards?
+614369: Will Laura Dern win Best Supporting Actress at the 98th Academy Awards?
+614371: Will Odessa A'zion win Best Supporting Actress at the 98th Academy Awards?
+614397: Will Elle Fanning be nominated for Best Supporting Actress at the 98th Academy Awards?
+614398: Will Teyana Taylor be nominated for Best Supporting Actress at the 98th Academy Awards?
+614399: Will Ariana Grande be nominated for Best Supporting Actress at the 98th Academy Awards?
+614400: Will Gwyneth Paltrow be nominated for Best Supporting Actress at the 98th Academy Awards?
+614401: Will Inga Ibsdotter Lilleaas be nominated for Best Supporting Actress at the 98th Academy Awards?
+614402: Will Amy Madigan be nominated for Best Supporting Actress at the 98th Academy Awards?
+614403: Will Chase Infiniti be nominated for Best Supporting Actress at the 98th Academy Awards?
+614404: Will Emily Blunt be nominated for Best Supporting Actress at the 98th Academy Awards?
+614405: Will Wunmi Mosaku be nominated for Best Supporting Actress at the 98th Academy Awards?
+614406: Will Angelina LookingGlass be nominated for Best Supporting Actress at the 98th Academy Awards?
+614407: Will Laura Dern be nominated for Best Supporting Actress at the 98th Academy Awards?
+614408: Will Regina Hall be nominated for Best Supporting Actress at the 98th Academy Awards?
+614409: Will Mari Yamamoto be nominated for Best Supporting Actress at the 98th Academy Awards?
+614410: Will Kate Hudson be nominated for Best Supporting Actress at the 98th Academy Awards?
+614411: Will Glenn Close be nominated for Best Supporting Actress at the 98th Academy Awards?
+614412: Will Greta Lee be nominated for Best Supporting Actress at the 98th Academy Awards?
+614413: Will Samantha Morton be nominated for Best Supporting Actress at the 98th Academy Awards?
+614414: Will Hailee Steinfeld be nominated for Best Supporting Actress at the 98th Academy Awards?
+614415: Will Thomasin McKenzie be nominated for Best Supporting Actress at the 98th Academy Awards?
+614416: Will Tilda Swinton be nominated for Best Supporting Actress at the 98th Academy Awards?
+614417: Will Ayo Edebiri be nominated for Best Supporting Actress at the 98th Academy Awards?
+614429: Will Sentimental Value win Best Original Screenplay at the 98th Academy Awards?
+614430: Will Sinners win Best Original Screenplay at the 98th Academy Awards?
+614431: Will A House of Dynamite win Best Original Screenplay at the 98th Academy Awards?
+614432: Will Marty Supreme win Best Original Screenplay at the 98th Academy Awards?
+614433: Will It Was Just an Accident win Best Original Screenplay at the 98th Academy Awards?
+614434: Will Jay Kelly win Best Original Screenplay at the 98th Academy Awards?
+614435: Will Rental Family win Best Original Screenplay at the 98th Academy Awards?
+614436: Will The Secret Agent win Best Original Screenplay at the 98th Academy Awards?
+614437: Will Weapons win Best Original Screenplay at the 98th Academy Awards?
+614438: Will After the Hunt win Best Original Screenplay at the 98th Academy Awards?
+614439: Will Roofman win Best Original Screenplay at the 98th Academy Awards?
+614440: Will Father Mother Sister Brother win Best Original Screenplay at the 98th Academy Awards?
+614441: Will Sorry Baby win Best Original Screenplay at the 98th Academy Awards?
+614442: Will If I Had Legs I'd Kick You win Best Original Screenplay at the 98th Academy Awards?
+614443: Will The Smashing Machine win Best Original Screenplay at the 98th Academy Awards?
+614565: Will One Battle After Another win Best Adapted Screenplay at the 98th Academy Awards?
+614566: Will Hamnet win Best Adapted Screenplay at the 98th Academy Awards?
+614567: Will Bugonia win Best Adapted Screenplay at the 98th Academy Awards?
+614568: Will Wake Up Dead Man win Best Adapted Screenplay at the 98th Academy Awards?
+614569: Will Springsteen: Deliver Me from Nowhere win Best Adapted Screenplay at the 98th Academy Awards?
+614570: Will No Other Choice win Best Adapted Screenplay at the 98th Academy Awards?
+614571: Will Frankenstein win Best Adapted Screenplay at the 98th Academy Awards?
+614572: Will Wicked: For Good win Best Adapted Screenplay at the 98th Academy Awards?
+614573: Will The Life of Chuck win Best Adapted Screenplay at the 98th Academy Awards?
+614574: Will Train Dreams win Best Adapted Screenplay at the 98th Academy Awards?
+614575: Will Ballad of a Small Player win Best Adapted Screenplay at the 98th Academy Awards?
+614576: Will Hedda win Best Adapted Screenplay at the 98th Academy Awards?
+614577: Will Is This Thing On? win Best Adapted Screenplay at the 98th Academy Awards?
+614578: Will Nouvelle Vague win Best Adapted Screenplay at the 98th Academy Awards?
+614579: Will Nuremberg win Best Adapted Screenplay at the 98th Academy Awards?
+614701: Will Paul Thomas Anderson be nominated for Best Director at the 98th Academy Awards?
+614702: Will Chloé Zhao be nominated for Best Director at the 98th Academy Awards?
+614703: Will Ryan Coogler be nominated for Best Director at the 98th Academy Awards?
+614704: Will Joachim Trier be nominated for Best Director at the 98th Academy Awards?
+614705: Will Jafar Panahi be nominated for Best Director at the 98th Academy Awards?
+614706: Will Josh Safdie be nominated for Best Director at the 98th Academy Awards?
+614707: Will Yorgos Lanthimos be nominated for Best Director at the 98th Academy Awards?
+614708: Will Benny Safdie be nominated for Best Director at the 98th Academy Awards?
+614709: Will Mona Fastvold be nominated for Best Director at the 98th Academy Awards?
+614710: Will James Cameron be nominated for Best Director at the 98th Academy Awards?
+614711: Will Park Chan-wook be nominated for Best Director at the 98th Academy Awards?
+614712: Will Jon M. Chu be nominated for Best Director at the 98th Academy Awards?
+614713: Will Guillermo del Toro be nominated for Best Director at the 98th Academy Awards?
+614714: Will Noah Baumbach be nominated for Best Director at the 98th Academy Awards?
+614715: Will Zach Cregger be nominated for Best Director at the 98th Academy Awards?
+614716: Will Edward Berger be nominated for Best Director at the 98th Academy Awards?
+614717: Will Anthony Maras be nominated for Best Director at the 98th Academy Awards?
+614718: Will Clint Bentley be nominated for Best Director at the 98th Academy Awards?
+614719: Will Paul Thomas Anderson win Best Director at the 98th Academy Awards?
+614720: Will Joachim Trier win Best Director at the 98th Academy Awards?
+614721: Will Chloé Zhao win Best Director at the 98th Academy Awards?
+614722: Will Ryan Coogler win Best Director at the 98th Academy Awards?
+614723: Will Benny Safdie win Best Director at the 98th Academy Awards?
+614724: Will Jafar Panahi win Best Director at the 98th Academy Awards?
+614725: Will Yorgos Lanthimos win Best Director at the 98th Academy Awards?
+614726: Will Josh Safdie win Best Director at the 98th Academy Awards?
+614727: Will Kathryn Bigelow win Best Director at the 98th Academy Awards?
+614728: Will Park Chan-wook win Best Director at the 98th Academy Awards?
+614729: Will Guillermo del Toro win Best Director at the 98th Academy Awards?
+614730: Will Kleber Mendonça Filho win Best Director at the 98th Academy Awards?
+614731: Will Jon M. Chu win Best Director at the 98th Academy Awards?
+614732: Will Hikari win Best Director at the 98th Academy Awards?
+614733: Will Derek Cianfrance win Best Director at the 98th Academy Awards?
+614763: Will One Battle After Another win Best Film Editing at the 98th Academy Awards?
+614764: Will Sinners win Best Film Editing at the 98th Academy Awards?
+614765: Will A House of Dynamite win Best Film Editing at the 98th Academy Awards?
+614766: Will F1: The Movie win Best Film Editing at the 98th Academy Awards?
+614767: Will No Other Choice win Best Film Editing at the 98th Academy Awards?
+614768: Will Hamnet win Best Film Editing at the 98th Academy Awards?
+614769: Will Marty Supreme win Best Film Editing at the 98th Academy Awards?
+614770: Will Sentimental Value win Best Film Editing at the 98th Academy Awards?
+614771: Will Wicked: For Good win Best Film Editing at the 98th Academy Awards?
+614772: Will Bugonia win Best Film Editing at the 98th Academy Awards?
+614773: Will Avatar: Fire and Ash win Best Film Editing at the 98th Academy Awards?
+614774: Will The Smashing Machine win Best Film Editing at the 98th Academy Awards?
+614775: Will Frankenstein win Best Film Editing at the 98th Academy Awards?
+614776: Will Springsteen: Deliver Me from Nowhere win Best Film Editing at the 98th Academy Awards?
+614777: Will It Was Just an Accident win Best Film Editing at the 98th Academy Awards?
+614805: Will One Battle After Another win Best Cinematography at the 98th Academy Awards?
+614806: Will Hamnet win Best Cinematography at the 98th Academy Awards?
+614807: Will Sinners win Best Cinematography at the 98th Academy Awards?
+614809: Will F1: The Movie win Best Cinematography at the 98th Academy Awards?
+614810: Will Frankenstein win Best Cinematography at the 98th Academy Awards?
+614811: Will Marty Supreme win Best Cinematography at the 98th Academy Awards?
+614813: Will Bugonia win Best Cinematography at the 98th Academy Awards?
+614814: Will Nouvelle Vague win Best Cinematography at the 98th Academy Awards?
+614815: Will Train Dreams win Best Cinematography at the 98th Academy Awards?
+614816: Will Wicked: For Good win Best Cinematography at the 98th Academy Awards?
+614819: Will Ballad of a Small Player win Best Cinematography at the 98th Academy Awards?
+614854: Will The Perfect Neighbor be nominated for Best Documentary Feature at the 98th Academy Awards?
+614856: Will 2000 Meters to Andriivka be nominated for Best Documentary Feature at the 98th Academy Awards?
+614857: Will Mr. Nobody Against Putin be nominated for Best Documentary Feature at the 98th Academy Awards?
+614859: Will Cutting Through Rocks be nominated for Best Documentary Feature at the 98th Academy Awards?
+614861: Will Apocalypse in the Tropics be nominated for Best Documentary Feature at the 98th Academy Awards?
+614865: Will Come See Me in the Good Light be nominated for Best Documentary Feature at the 98th Academy Awards?
+614869: Will Wicked: For Good win Best Production Design at the 98th Academy Awards?
+614870: Will Frankenstein win Best Production Design at the 98th Academy Awards?
+614871: Will Sinners win Best Production Design at the 98th Academy Awards?
+614872: Will Hamnet win Best Production Design at the 98th Academy Awards?
+614873: Will Avatar: Fire and Ash win Best Production Design at the 98th Academy Awards?
+614874: Will Marty Supreme win Best Production Design at the 98th Academy Awards?
+614875: Will One Battle After Another win Best Production Design at the 98th Academy Awards?
+614876: Will The Phoenician Scheme win Best Production Design at the 98th Academy Awards?
+614877: Will Bugonia win Best Production Design at the 98th Academy Awards?
+614878: Will The Fantastic Four: First Steps win Best Production Design at the 98th Academy Awards?
+614879: Will Wake Up Dead Man win Best Production Design at the 98th Academy Awards?
+614880: Will Nouvelle Vague win Best Production Design at the 98th Academy Awards?
+614881: Will Springsteen: Deliver Me from Nowhere win Best Production Design at the 98th Academy Awards?
+614882: Will Hedda win Best Production Design at the 98th Academy Awards?
+614883: Will Kiss of the Spider Woman win Best Production Design at the 98th Academy Awards?
+614911: Will Wicked: For Good win Best Costume Design at the 98th Academy Awards?
+614912: Will Hamnet win Best Costume Design at the 98th Academy Awards?
+614913: Will Frankenstein win Best Costume Design at the 98th Academy Awards?
+614914: Will Sinners win Best Costume Design at the 98th Academy Awards?
+614915: Will Marty Supreme win Best Costume Design at the 98th Academy Awards?
+614916: Will Kiss of the Spider Woman win Best Costume Design at the 98th Academy Awards?
+614917: Will One Battle After Another win Best Costume Design at the 98th Academy Awards?
+614918: Will Hedda win Best Costume Design at the 98th Academy Awards?
+614919: Will Downton Abbey: The Grand Finale win Best Costume Design at the 98th Academy Awards?
+614920: Will Bugonia win Best Costume Design at the 98th Academy Awards?
+614921: Will Springsteen: Deliver Me from Nowhere win Best Costume Design at the 98th Academy Awards?
+614922: Will Snow White win Best Costume Design at the 98th Academy Awards?
+614923: Will The Fantastic Four: First Steps win Best Costume Design at the 98th Academy Awards?
+614924: Will The Phoenician Scheme win Best Costume Design at the 98th Academy Awards?
+614925: Will Nouvelle Vague win Best Costume Design at the 98th Academy Awards?
+614953: Will Frankenstein win Best Makeup and Hairstyling at the 98th Academy Awards?
+614954: Will Wicked: For Good win Best Makeup and Hairstyling at the 98th Academy Awards?
+614955: Will The Smashing Machine win Best Makeup and Hairstyling at the 98th Academy Awards?
+614957: Will Sinners win Best Makeup and Hairstyling at the 98th Academy Awards?
+614963: Will Marty Supreme win Best Makeup and Hairstyling at the 98th Academy Awards?
+614967: Will One Battle After Another win Best Makeup and Hairstyling at the 98th Academy Awards?
+615012: Will KPop Demon Hunters be nominated for Best Animated Feature at the 98th Academy Awards?
+615013: Will Zootopia 2 be nominated for Best Animated Feature at the 98th Academy Awards?
+615014: Will Arco be nominated for Best Animated Feature at the 98th Academy Awards?
+615015: Will Little Amélie or the Character of Rain be nominated for Best Animated Feature at the 98th Academy Awards?
+615016: Will In Your Dreams be nominated for Best Animated Feature at the 98th Academy Awards?
+615017: Will Cassandra Kulukundis (One Battle After Another) be nominated for Achievement in Casting at the 98th Academy Awards?
+615018: Will Francine Maisler (Sinners) be nominated for Achievement in Casting at the 98th Academy Awards?
+615019: Will Tiffany Little Canfield & Bernard Telsey (Wicked: For Good) be nominated for Achievement in Casting at the 98th Academy Awards?
+615020: Will Nina Gold (Hamnet) be nominated for Achievement in Casting at the 98th Academy Awards?
+615021: Will Jennifer Venditti (Marty Supreme) be nominated for Achievement in Casting at the 98th Academy Awards?
+615022: Will Yngvill Kolset Haga & Avy Kaufman (Sentimental Value) be nominated for Achievement in Casting at the 98th Academy Awards?
+615024: Will Robin D. Cook (Frankenstein) be nominated for Achievement in Casting at the 98th Academy Awards?
+616902: Will no Fed rate cuts happen in 2026?
+616903: Will 1 Fed rate cut happen in 2026?

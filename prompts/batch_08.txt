@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+645504: Will Mitchell Marner win the 2025–2026 NHL Frank J. Selke Trophy?
+645505: Will Auston Matthews win the 2025–2026 NHL Frank J. Selke Trophy?
+645506: Will Joel Eriksson Ek win the 2025–2026 NHL Frank J. Selke Trophy?
+645507: Will Anze Kopitar win the 2025–2026 NHL Frank J. Selke Trophy?
+645508: Will Shane Pinto win the 2025–2026 NHL Frank J. Selke Trophy?
+645509: Will Elias Pettersson win the 2025–2026 NHL Frank J. Selke Trophy?
+645510: Will Seth Jarvis win the 2025–2026 NHL Frank J. Selke Trophy?
+645511: Will Brandon Hagel win the 2025–2026 NHL Frank J. Selke Trophy?
+645512: Will Jordan Staal win the 2025–2026 NHL Frank J. Selke Trophy?
+645513: Will Nick Suzuki win the 2025–2026 NHL Frank J. Selke Trophy?
+645514: Will Roope Hintz win the 2025–2026 NHL Frank J. Selke Trophy?
+645515: Will Macklin Celebrini win the 2025–2026 NHL Frank J. Selke Trophy?
+645516: Will Sebastian Aho win the 2025–2026 NHL Frank J. Selke Trophy?
+645517: Will Phillip Danault win the 2025–2026 NHL Frank J. Selke Trophy?
+645518: Will Mark Stone win the 2025–2026 NHL Frank J. Selke Trophy?
+645519: Will Sidney Crosby win the 2025–2026 NHL Frank J. Selke Trophy?
+645520: Will Ryan O'Reilly win the 2025–2026 NHL Frank J. Selke Trophy?
+645521: Will Valeri Nichushkin win the 2025–2026 NHL Frank J. Selke Trophy?
+645522: Will Jason Robertson win the 2025–2026 NHL Frank J. Selke Trophy?
+645523: Will Quinton Byfield win the 2025–2026 NHL Frank J. Selke Trophy?
+645524: Will Bo Horvat win the 2025–2026 NHL Frank J. Selke Trophy?
+645525: Will Artturi Lehkonen win the 2025–2026 NHL Frank J. Selke Trophy?
+645526: Will Adam Lowry win the 2025–2026 NHL Frank J. Selke Trophy?
+645527: Will Matt Boldy win the 2025–2026 NHL Frank J. Selke Trophy?
+645528: Will Mikael Backlund win the 2025–2026 NHL Frank J. Selke Trophy?
+645529: Will Marcus Foligno win the 2025–2026 NHL Frank J. Selke Trophy?
+645530: Will Ryan Nugent-Hopkins win the 2025–2026 NHL Frank J. Selke Trophy?
+645531: Will William Karlsson win the 2025–2026 NHL Frank J. Selke Trophy?
+645532: Will Chandler Stephenson win the 2025–2026 NHL Frank J. Selke Trophy?
+645533: Will Robert Thomas win the 2025–2026 NHL Frank J. Selke Trophy?
+645534: Will Alex Tuch win the 2025–2026 NHL Frank J. Selke Trophy?
+645556: Will Andre Tourigny win the 2025–2026 NHL Jack Adams Award?
+645557: Will Joel Quenneville win the 2025–2026 NHL Jack Adams Award?
+645558: Will Martin St Louis win the 2025–2026 NHL Jack Adams Award?
+645559: Will Dean Evason win the 2025–2026 NHL Jack Adams Award?
+645560: Will Todd McLellan win the 2025–2026 NHL Jack Adams Award?
+645561: Will Rick Tocchet win the 2025–2026 NHL Jack Adams Award?
+645562: Will Sheldon Keefe win the 2025–2026 NHL Jack Adams Award?
+645563: Will Jeff Blashill win the 2025–2026 NHL Jack Adams Award?
+645564: Will Mike Sullivan win the 2025–2026 NHL Jack Adams Award?
+645565: Will Adam Foote win the 2025–2026 NHL Jack Adams Award?
+645566: Will Jim Montgomery win the 2025–2026 NHL Jack Adams Award?
+645567: Will Lindy Ruff win the 2025–2026 NHL Jack Adams Award?
+645568: Will Ryan Warsofsky win the 2025–2026 NHL Jack Adams Award?
+645569: Will Marco Sturm win the 2025–2026 NHL Jack Adams Award?
+645570: Will Andrew Brunette win the 2025–2026 NHL Jack Adams Award?
+645571: Will Jared Bednar win the 2025–2026 NHL Jack Adams Award?
+645572: Will Jon Cooper win the 2025–2026 NHL Jack Adams Award?
+645573: Will Jim Hiller win the 2025–2026 NHL Jack Adams Award?
+645574: Will Travis Green win the 2025–2026 NHL Jack Adams Award?
+645575: Will Lane Lambert win the 2025–2026 NHL Jack Adams Award?
+645576: Will Ryan Huska win the 2025–2026 NHL Jack Adams Award?
+645577: Will John Hynes win the 2025–2026 NHL Jack Adams Award?
+645578: Will Patrick Roy win the 2025–2026 NHL Jack Adams Award?
+645579: Will Dan Muse win the 2025–2026 NHL Jack Adams Award?
+645580: Will Scott Arniel win the 2025–2026 NHL Jack Adams Award?
+645581: Will Kris Knoblauch win the 2025–2026 NHL Jack Adams Award?
+645582: Will Rod Brind'Amour win the 2025–2026 NHL Jack Adams Award?
+645583: Will Craig Berube win the 2025–2026 NHL Jack Adams Award?
+645584: Will Paul Maurice win the 2025–2026 NHL Jack Adams Award?
+645585: Will Glen Gulutzan win the 2025–2026 NHL Jack Adams Award?
+645586: Will Bruce Cassidy win the 2025–2026 NHL Jack Adams Award?
+645587: Will Spencer Carbery win the 2025–2026 NHL Jack Adams Award?
+645609: Will Cale Makar win the 2025–2026 NHL James Norris Memorial Trophy?
+645610: Will Quinn Hughes win the 2025–2026 NHL James Norris Memorial Trophy?
+645611: Will Zach Werenski win the 2025–2026 NHL James Norris Memorial Trophy?
+645612: Will Rasmus Dahlin win the 2025–2026 NHL James Norris Memorial Trophy?
+645613: Will Adam Fox win the 2025–2026 NHL James Norris Memorial Trophy?
+645614: Will Roman Josi win the 2025–2026 NHL James Norris Memorial Trophy?
+645615: Will Evan Bouchard win the 2025–2026 NHL James Norris Memorial Trophy?
+645616: Will Victor Hedman win the 2025–2026 NHL James Norris Memorial Trophy?
+645617: Will Lane Hutson win the 2025–2026 NHL James Norris Memorial Trophy?
+645618: Will Miro Heiskanen win the 2025–2026 NHL James Norris Memorial Trophy?
+645619: Will Thomas Harley win the 2025–2026 NHL James Norris Memorial Trophy?
+645620: Will Josh Morrissey win the 2025–2026 NHL James Norris Memorial Trophy?
+645621: Will Shea Theodore win the 2025–2026 NHL James Norris Memorial Trophy?
+645622: Will Jake Sanderson win the 2025–2026 NHL James Norris Memorial Trophy?
+645623: Will Luke Hughes win the 2025–2026 NHL James Norris Memorial Trophy?
+645624: Will Noah Dobson win the 2025–2026 NHL James Norris Memorial Trophy?
+645625: Will Charlie McAvoy win the 2025–2026 NHL James Norris Memorial Trophy?
+645626: Will Jaccob Slavin win the 2025–2026 NHL James Norris Memorial Trophy?
+645627: Will Jackson LaCombe win the 2025–2026 NHL James Norris Memorial Trophy?
+645628: Will Alex Pietrangelo win the 2025–2026 NHL James Norris Memorial Trophy?
+645629: Will Esa Lindell win the 2025–2026 NHL James Norris Memorial Trophy?
+645630: Will Adam Larsson win the 2025–2026 NHL James Norris Memorial Trophy?
+645631: Will Ryker Evans win the 2025–2026 NHL James Norris Memorial Trophy?
+645632: Will Dante Fabbro win the 2025–2026 NHL James Norris Memorial Trophy?
+645633: Will Simon Edvinsson win the 2025–2026 NHL James Norris Memorial Trophy?
+645634: Will Vince Dunn win the 2025–2026 NHL James Norris Memorial Trophy?
+645635: Will Alex Vlasic win the 2025–2026 NHL James Norris Memorial Trophy?
+645636: Will Cam Fowler win the 2025–2026 NHL James Norris Memorial Trophy?
+645637: Will Philip Broberg win the 2025–2026 NHL James Norris Memorial Trophy?
+645638: Will Morgan Rielly win the 2025–2026 NHL James Norris Memorial Trophy?
+645639: Will Mike Matheson win the 2025–2026 NHL James Norris Memorial Trophy?
+645640: Will Neal Pionk win the 2025–2026 NHL James Norris Memorial Trophy?
+645641: Will Mikhail Sergachev win the 2025–2026 NHL James Norris Memorial Trophy?
+645642: Will Rasmus Sandin win the 2025–2026 NHL James Norris Memorial Trophy?
+645643: Will Brandt Clarke win the 2025–2026 NHL James Norris Memorial Trophy?
+645644: Will Gustav Forsling win the 2025–2026 NHL James Norris Memorial Trophy?
+645645: Will Moritz Seider win the 2025–2026 NHL James Norris Memorial Trophy?
+645646: Will John Carlson win the 2025–2026 NHL James Norris Memorial Trophy?
+645647: Will Jared Spurgeon win the 2025–2026 NHL James Norris Memorial Trophy?
+645648: Will Dougie Hamilton win the 2025–2026 NHL James Norris Memorial Trophy?
+645649: Will Brandon Montour win the 2025–2026 NHL James Norris Memorial Trophy?
+645650: Will Brent Burns win the 2025–2026 NHL James Norris Memorial Trophy?
+645651: Will Jake Walman win the 2025–2026 NHL James Norris Memorial Trophy?
+645652: Will Filip Hronek win the 2025–2026 NHL James Norris Memorial Trophy?
+645653: Will Seth Jones win the 2025–2026 NHL James Norris Memorial Trophy?
+645654: Will Aaron Ekblad win the 2025–2026 NHL James Norris Memorial Trophy?
+645655: Will Darnell Nurse win the 2025–2026 NHL James Norris Memorial Trophy?
+645656: Will Kris Letang win the 2025–2026 NHL James Norris Memorial Trophy?
+645657: Will Hampus Lindholm win the 2025–2026 NHL James Norris Memorial Trophy?
+645658: Will Brady Skjei win the 2025–2026 NHL James Norris Memorial Trophy?
+645659: Will Sean Durzi win the 2025–2026 NHL James Norris Memorial Trophy?
+645660: Will Justin Faulk win the 2025–2026 NHL James Norris Memorial Trophy?
+645661: Will Jakob Chychrun win the 2025–2026 NHL James Norris Memorial Trophy?
+645662: Will Shayne Gostisbehere win the 2025–2026 NHL James Norris Memorial Trophy?
+645663: Will Brock Faber win the 2025–2026 NHL James Norris Memorial Trophy?
+645664: Will Mattias Ekholm win the 2025–2026 NHL James Norris Memorial Trophy?
+645665: Will Noah Hanifin win the 2025–2026 NHL James Norris Memorial Trophy?
+645666: Will Owen Power win the 2025–2026 NHL James Norris Memorial Trophy?
+645667: Will K'Andre Miller win the 2025–2026 NHL James Norris Memorial Trophy?
+645668: Will Devon Toews win the 2025–2026 NHL James Norris Memorial Trophy?
+645669: Will Colton Parayko win the 2025–2026 NHL James Norris Memorial Trophy?
+645670: Will Travis Sanheim win the 2025–2026 NHL James Norris Memorial Trophy?
+645671: Will Mason Lohrei win the 2025–2026 NHL James Norris Memorial Trophy?
+645672: Will Drew Doughty win the 2025–2026 NHL James Norris Memorial Trophy?
+645673: Will Rasmus Andersson win the 2025–2026 NHL James Norris Memorial Trophy?
+645674: Will MacKenzie Weegar win the 2025–2026 NHL James Norris Memorial Trophy?
+645675: Will Bowen Byram win the 2025–2026 NHL James Norris Memorial Trophy?
+645676: Will Erik Karlsson win the 2025–2026 NHL James Norris Memorial Trophy?
+645677: Will Thomas Chabot win the 2025–2026 NHL James Norris Memorial Trophy?
+645699: Will Leon Draisaitl win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645700: Will Auston Matthews win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645701: Will Kirill Kaprizov win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645702: Will David Pastrnak win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645703: Will Nathan MacKinnon win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645704: Will Connor McDavid win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645705: Will Mikko Rantanen win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645706: Will William Nylander win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645707: Will Brayden Point win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645708: Will Tage Thompson win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645709: Will Jack Hughes win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645710: Will Sam Reinhart win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645711: Will Cole Caufield win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645712: Will Nikita Kucherov win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645713: Will Kyle Connor win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645714: Will Filip Forsberg win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645715: Will Jake Guentzel win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645716: Will Martin Necas win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645717: Will Matthew Boldy win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645718: Will Alex Ovechkin win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645719: Will Mark Scheifele win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645720: Will Wyatt Johnston win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645721: Will Seth Jarvis win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645722: Will Jason Robertson win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645723: Will Alex DeBrincat win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645724: Will Connor Bedard win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645725: Will Artemi Panarin win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645726: Will Adrian Kempe win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645727: Will Macklin Celebrini win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645728: Will Elias Pettersson (1988) win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645729: Will Tom Wilson win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645730: Will Elias Pettersson win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645731: Will Matthew Tkachuk win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645732: Will Dylan Larkin win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645733: Will Jack Eichel win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645734: Will Lucas Raymond win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645735: Will Zach Hyman win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645736: Will Matt Duchene win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645737: Will Patrik Laine win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645738: Will Robert Thomas win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645739: Will Juraj Slafkovsky win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645740: Will Roope Hintz win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645741: Will Kirill Marchenko win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645742: Will Mark Stone win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645743: Will Bo Horvat win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645744: Will Brock Nelson win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645745: Will Timo Meier win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645746: Will Jared McCann win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645747: Will Mika Zibanejad win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645748: Will Aleksander Barkov win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645749: Will Pavel Dorofeyev win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645750: Will Mathew Barzal win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645751: Will Chris Kreider win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645752: Will Adam Fantilli win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645753: Will Carter Verhaeghe win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645754: Will Bryan Rust win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645755: Will Brady Tkachuk win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645756: Will John Tavares win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645757: Will Jesper Bratt win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645758: Will Quinton Byfield win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645759: Will Alex Tuch win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645760: Will Steven Stamkos win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645761: Will Tim Stutzle win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645762: Will Brock Boeser win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645763: Will Nico Hischier win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645764: Will Sebastian Aho win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645765: Will Dylan Guenther win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645766: Will Sidney Crosby win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645767: Will Tomas Hertl win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645768: Will Brad Marchand win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645769: Will Travis Konecny win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645770: Will J.T. Miller win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645771: Will Nazem Kadri win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645772: Will Brandon Hagel win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645773: Will Clayton Keller win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645774: Will Nick Suzuki win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645775: Will Mitchell Marner win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645776: Will Andrei Svechnikov win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645777: Will Jordan Kyrou win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645778: Will Kevin Fiala win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645779: Will Matvei Michkov win the 2025–2026 NHL Maurice 'Rocket' Richard Trophy?
+645801: Will Connor Hellebuyck win the 2025–2026 NHL Vezina Trophy?
+645802: Will Igor Shesterkin win the 2025–2026 NHL Vezina Trophy?
+645803: Will Andrei Vasilevskiy win the 2025–2026 NHL Vezina Trophy?
+645804: Will Jake Oettinger win the 2025–2026 NHL Vezina Trophy?
+645805: Will Logan Thompson win the 2025–2026 NHL Vezina Trophy?
+645806: Will Ilya Sorokin win the 2025–2026 NHL Vezina Trophy?
+645807: Will Sergei Bobrovsky win the 2025–2026 NHL Vezina Trophy?
+645808: Will Anthony Stolarz win the 2025–2026 NHL Vezina Trophy?
+645809: Will Darcy Kuemper win the 2025–2026 NHL Vezina Trophy?
+645810: Will Filip Gustavsson win the 2025–2026 NHL Vezina Trophy?
+645811: Will Mackenzie Blackwood win the 2025–2026 NHL Vezina Trophy?
+645812: Will Jeremy Swayman win the 2025–2026 NHL Vezina Trophy?
+645813: Will Juuse Saros win the 2025–2026 NHL Vezina Trophy?
+645814: Will Thatcher Demko win the 2025–2026 NHL Vezina Trophy?
+645815: Will Jacob Markstrom win the 2025–2026 NHL Vezina Trophy?
+645816: Will Lukas Dostal win the 2025–2026 NHL Vezina Trophy?
+645817: Will Jordan Binnington win the 2025–2026 NHL Vezina Trophy?
+645818: Will Sam Montembeault win the 2025–2026 NHL Vezina Trophy?
+645819: Will Linus Ullmark win the 2025–2026 NHL Vezina Trophy?
+645820: Will Joey Daccord win the 2025–2026 NHL Vezina Trophy?
+645821: Will Frederik Andersen win the 2025–2026 NHL Vezina Trophy?
+645822: Will Adin Hill win the 2025–2026 NHL Vezina Trophy?
+645823: Will Dustin Wolf win the 2025–2026 NHL Vezina Trophy?
+645824: Will Karel Vejmelka win the 2025–2026 NHL Vezina Trophy?
+645825: Will Spencer Knight win the 2025–2026 NHL Vezina Trophy?
+645826: Will Pyotr Kochetkov win the 2025–2026 NHL Vezina Trophy?
+645827: Will Joseph Woll win the 2025–2026 NHL Vezina Trophy?
+645828: Will Stuart Skinner win the 2025–2026 NHL Vezina Trophy?
+645829: Will Jet Greaves win the 2025–2026 NHL Vezina Trophy?
+645830: Will Elvis Merzlikins win the 2025–2026 NHL Vezina Trophy?
+645831: Will Charlie Lindgren win the 2025–2026 NHL Vezina Trophy?
+645832: Will Jake Allen win the 2025–2026 NHL Vezina Trophy?
+645833: Will Scott Wedgewood win the 2025–2026 NHL Vezina Trophy?
+645834: Will Yaroslav Askarov win the 2025–2026 NHL Vezina Trophy?
+645835: Will Vitek Vanecek win the 2025–2026 NHL Vezina Trophy?
+645836: Will Arvid Soderblom win the 2025–2026 NHL Vezina Trophy?
+645837: Will Anton Forsberg win the 2025–2026 NHL Vezina Trophy?
+645838: Will Tristan Jarry win the 2025–2026 NHL Vezina Trophy?
+645839: Will Petr Mrazek win the 2025–2026 NHL Vezina Trophy?
+645840: Will Joonas Korpisalo win the 2025–2026 NHL Vezina Trophy?
+645841: Will Dan Vladar win the 2025–2026 NHL Vezina Trophy?
+645842: Will Justus Annunen win the 2025–2026 NHL Vezina Trophy?
+645843: Will Ilya Samsonov win the 2025–2026 NHL Vezina Trophy?
+645844: Will Alexandar Georgiev win the 2025–2026 NHL Vezina Trophy?
+645845: Will Cam Talbot win the 2025–2026 NHL Vezina Trophy?
+645846: Will John Gibson win the 2025–2026 NHL Vezina Trophy?
+645847: Will Casey DeSmith win the 2025–2026 NHL Vezina Trophy?
+645848: Will Connor Ingram win the 2025–2026 NHL Vezina Trophy?
+645849: Will Jonathan Quick win the 2025–2026 NHL Vezina Trophy?
+645850: Will Jesper Wallstedt win the 2025–2026 NHL Vezina Trophy?
+645851: Will Semyon Varlamov win the 2025–2026 NHL Vezina Trophy?
+645852: Will Alex Lyon win the 2025–2026 NHL Vezina Trophy?
+645853: Will Ukko-Pekka Luukkonen win the 2025–2026 NHL Vezina Trophy?
+645854: Will Alex Nedeljkovic win the 2025–2026 NHL Vezina Trophy?
+645855: Will Philipp Grubauer win the 2025–2026 NHL Vezina Trophy?
+645856: Will David Rittich win the 2025–2026 NHL Vezina Trophy?
+645857: Will Eric Comrie win the 2025–2026 NHL Vezina Trophy?
+645858: Will Ivan Fedotov win the 2025–2026 NHL Vezina Trophy?
+645859: Will Jonas Johansson win the 2025–2026 NHL Vezina Trophy?
+645860: Will Calvin Pickard win the 2025–2026 NHL Vezina Trophy?
+645861: Will Kevin Lankinen win the 2025–2026 NHL Vezina Trophy?
+645862: Will Samuel Ersson win the 2025–2026 NHL Vezina Trophy?
+645863: Will Joel Hofer win the 2025–2026 NHL Vezina Trophy?
+645864: Will Jakub Dobes win the 2025–2026 NHL Vezina Trophy?
+645997: Will Rachida Dati win the Paris mayor election?
+645998: Will Pierre-Yves Bournazel win the Paris mayor election?
+645999: Will David Belliard win the Paris mayor election?
+646000: Will Sophia Chikirou win the Paris mayor election?
+646001: Will Thierry Mariani win the Paris mayor election?
+646002: Will Sarah Knafo win the Paris mayor election?
+646003: Will Emmanuel Grégoire win the Paris mayor election?
+646245: Will the Boston Bruins make the NHL Playoffs?
+646246: Will the Buffalo Sabres make the NHL Playoffs?
+646247: Will the Detroit Red Wings make the NHL Playoffs?
+646248: Will the Florida Panthers make the NHL Playoffs?
+646249: Will the Montreal Canadiens make the NHL Playoffs?
+646250: Will the Ottawa Senators make the NHL Playoffs?
+646251: Will the Tampa Bay Lightning make the NHL Playoffs?
+646252: Will the Toronto Maple Leafs make the NHL Playoffs?
+646253: Will the Carolina Hurricanes make the NHL Playoffs?
+646254: Will the Columbus Blue Jackets make the NHL Playoffs?
+646255: Will the New Jersey Devils make the NHL Playoffs?
+646256: Will the New York Islanders make the NHL Playoffs?
+646257: Will the New York Rangers make the NHL Playoffs?
+646258: Will the Philadelphia Flyers make the NHL Playoffs?
+646259: Will the Pittsburgh Penguins make the NHL Playoffs?
+646260: Will the Washington Capitals make the NHL Playoffs?
+646261: Will the Arizona Coyotes make the NHL Playoffs?
+646262: Will the Chicago Blackhawks make the NHL Playoffs?
+646263: Will the Colorado Avalanche make the NHL Playoffs?
+646264: Will the Dallas Stars make the NHL Playoffs?
+646265: Will the Minnesota Wild make the NHL Playoffs?
+646266: Will the Nashville Predators make the NHL Playoffs?
+646267: Will the St. Louis Blues make the NHL Playoffs?
+646268: Will the Winnipeg Jets make the NHL Playoffs?
+646269: Will the Anaheim Ducks make the NHL Playoffs?
+646270: Will the Calgary Flames make the NHL Playoffs?
+646271: Will the Edmonton Oilers make the NHL Playoffs?
+646272: Will the Los Angeles Kings make the NHL Playoffs?
+646273: Will the San Jose Sharks make the NHL Playoffs?
+646274: Will the Seattle Kraken make the NHL Playoffs?
+646275: Will the Vancouver Canucks make the NHL Playoffs?
+646276: Will the Vegas Golden Knights make the NHL Playoffs?
+648378: Billionaire one-time wealth tax on California ballot?
+648383: Billionaire one-time wealth tax passes in California election 2026?
+648872: US x Russia military clash by June 30, 2026?
+648896: Claudia Sheinbaum out as President of Mexico by June 30?
+651327: Will Gavin Newsom announce a Presidential run by December 31, 2026?
+651395: Will Ari Weinstein leave OpenAI by December 31, 2026?
+651400: Will Conrad Kramer leave OpenAI by December 31, 2026?
+651482: Will Liam rank #1 among boy names on the SSA’s official list for 2025?
+651483: Will Noah rank #1 among boy names on the SSA’s official list for 2025?
+651484: Will Oliver rank #1 among boy names on the SSA’s official list for 2025?
+651485: Will Theodore rank #1 among boy names on the SSA’s official list for 2025?
+651486: Will James rank #1 among boy names on the SSA’s official list for 2025?
+651487: Will Henry rank #1 among boy names on the SSA’s official list for 2025?
+651488: Will Mateo rank #1 among boy names on the SSA’s official list for 2025?
+651489: Will Elijah rank #1 among boy names on the SSA’s official list for 2025?
+651490: Will Lucas rank #1 among boy names on the SSA’s official list for 2025?
+651491: Will William rank #1 among boy names on the SSA’s official list for 2025?
+651519: Will Olivia rank #1 among girl names on the SSA’s official list for 2025?
+651520: Will Emma rank #1 among girl names on the SSA’s official list for 2025?
+651521: Will Amelia rank #1 among girl names on the SSA’s official list for 2025?
+651522: Will Charlotte rank #1 among girl names on the SSA’s official list for 2025?
+651523: Will Mia rank #1 among girl names on the SSA’s official list for 2025?
+651524: Will Sophia rank #1 among girl names on the SSA’s official list for 2025?
+651525: Will Isabella rank #1 among girl names on the SSA’s official list for 2025?
+651526: Will Evelyn rank #1 among girl names on the SSA’s official list for 2025?
+651527: Will Ava rank #1 among girl names on the SSA’s official list for 2025?
+651528: Will Sofia rank #1 among girl names on the SSA’s official list for 2025?
+653788: OpenAI announces it has achieved AGI before 2027?
+654196: Will Jia Yueting enter mainland China by June 30?
+654412: Will the Fed decrease interest rates by 50+ bps after the March 2026 meeting?
+654413: Will the Fed decrease interest rates by 25 bps after the March 2026 meeting?
+654414: Will there be no change in Fed interest rates after the March 2026 meeting?
+654415: Will the Fed increase interest rates by 25+ bps after the March 2026 meeting?
+654422: Negative GDP growth in Q4 2025?
+654423: Will US GDP growth in Q4 2025 be less than 1.0%?
+654424: Will US GDP growth in Q4 2025 be between 1.0% and 1.5%?
+654425: Will US GDP growth in Q4 2025 be between 1.5% and 2.0%?
+654426: Will US GDP growth in Q4 2025 be between 2.0% and 2.5%?
+654427: Will US GDP growth in Q4 2025 be between 2.5% and 3.0%?
+654428: Will US GDP growth in Q4 2025 be between 3.0% and 3.5%?
+654429: Will US GDP growth in Q4 2025 be greater than 3.5%?
+655407: Will Conor Gallagher sign with a new club during the winter transfer window?
+655408: Will Richarlison sign with a new club during the winter transfer window?
+655409: Will Timo Werner sign with a new club during the winter transfer window?
+655410: Will Joshua Zirkzee sign with a new club during the winter transfer window?
+655412: Will Bruno Fernandes sign with a new club during the winter transfer window?
+655413: Will Marc Guehi sign with a new club during the winter transfer window?
+655414: Will Vinicius Jr. sign with a new club during the winter transfer window?
+655415: Will Malo Gusto sign with a new club during the winter transfer window?
+655417: Will Robert Lewandowski sign with a new club during the winter transfer window?
+655418: Will Rúben Neves sign with a new club during the winter transfer window?
+655420: Will Morten Hjulmand sign with a new club during the winter transfer window?
+655421: Will Marc-André ter Stegen sign with a new club during the winter transfer window?
+655422: Will Kobbie Mainoo sign with a new club during the winter transfer window?
+655423: Will Julian Brandt sign with a new club during the winter transfer window?
+655424: Will Neymar sign with a new club during the winter transfer window?
+655425: Will Dayot Upamecano sign with a new club during the winter transfer window?
+655426: Will Dušan Vlahović sign with a new club during the winter transfer window?
+655427: Will Ibrahima Konaté sign with a new club during the winter transfer window?
+655428: Will Mason Greenwood sign with a new club during the winter transfer window?
+655429: Will Jobe Bellingham sign with a new club during the winter transfer window?
+655430: Will Kalvin Phillips sign with a new club during the winter transfer window?
+655431: Will Adam Wharton sign with a new club during the winter transfer window?
+655433: Will Kenan Yildiz sign with a new club during the winter transfer window?
+655678: Will Magnus Carlsen win the 2025–2026 Speed Chess Championship?
+655679: Will Denis Lazavik win the 2025–2026 Speed Chess Championship?
+655681: Will Alireza Firouzja win the 2025–2026 Speed Chess Championship?
+655682: Will Hikaru Nakamura win the 2025–2026 Speed Chess Championship?
+655828: South Carolina Gamecocks vs. California Baptist Lancers
+656273: Fulton-Montgomery Raiders vs. Western Illinois Leathernecks (W)
+656311: Will OpenAI IPO by June 30 2026?
+656312: Will OpenAI IPO by December 31 2026?
+656313: OpenAI $1t+ IPO before 2027?
+657287: Will MetaMask launch a token by June 30?
+658126: Will Argentina dollarize by June 30, 2026?
+658198: Will Consensys IPO by June 30 2026?
+658928: Will Purdue win the 2026 NCAA Tournament?
+658929: Will Florida win the 2026 NCAA Tournament?
+658930: Will Louisville win the 2026 NCAA Tournament?
+658931: Will Michigan win the 2026 NCAA Tournament?
+658932: Will UCLA win the 2026 NCAA Tournament?
+658933: Will Alabama win the 2026 NCAA Tournament?
+658934: Will Gonzaga win the 2026 NCAA Tournament?
+658935: Will Michigan State win the 2026 NCAA Tournament?
+658936: Will Houston win the 2026 NCAA Tournament?
+658937: Will Kentucky win the 2026 NCAA Tournament?
+658938: Will Texas Tech win the 2026 NCAA Tournament?
+658939: Will BYU win the 2026 NCAA Tournament?
+658940: Will Arkansas win the 2026 NCAA Tournament?
+658941: Will Arizona win the 2026 NCAA Tournament?
+658942: Will North Carolina win the 2026 NCAA Tournament?
+658943: Will NC State win the 2026 NCAA Tournament?
+658944: Will Duke win the 2026 NCAA Tournament?
+658945: Will Connecticut win the 2026 NCAA Tournament?
+658946: Will Illinois win the 2026 NCAA Tournament?
+658947: Will Kansas win the 2026 NCAA Tournament?
+658948: Will Tennessee win the 2026 NCAA Tournament?
+658949: Will Iowa State win the 2026 NCAA Tournament?
+658950: Will Auburn win the 2026 NCAA Tournament?
+658951: Will Creighton win the 2026 NCAA Tournament?
+659026: Will South Carolina (Women’s) win the 2025–2026 SEC Regular Season?
+659027: Will LSU (Women’s) win the 2025–2026 SEC Regular Season?
+659028: Will Kentucky (Women’s) win the 2025–2026 SEC Regular Season?
+659029: Will Georgia (Women’s) win the 2025–2026 SEC Regular Season?
+659030: Will Texas A&M (Women’s) win the 2025–2026 SEC Regular Season?
+659031: Will Mississippi St. (Women’s) win the 2025–2026 SEC Regular Season?
+659032: Will Texas (Women’s) win the 2025–2026 SEC Regular Season?
+659033: Will Oklahoma (Women’s) win the 2025–2026 SEC Regular Season?
+659034: Will Vanderbilt (Women’s) win the 2025–2026 SEC Regular Season?
+659035: Will Missouri (Women’s) win the 2025–2026 SEC Regular Season?
+659036: Will Arkansas (Women’s) win the 2025–2026 SEC Regular Season?
+659037: Will Tennessee (Women’s) win the 2025–2026 SEC Regular Season?
+659038: Will Ole Miss (Women’s) win the 2025–2026 SEC Regular Season?
+659039: Will Alabama (Women’s) win the 2025–2026 SEC Regular Season?
+659040: Will Florida (Women’s) win the 2025–2026 SEC Regular Season?
+659041: Will Auburn (Women’s) win the 2025–2026 SEC Regular Season?
+659821: Colorado State Rams vs. Saint Mary's Gaels (W)
+661699: Khamenei out as Supreme Leader of Iran by June 30?
+661700: Khamenei out as Supreme Leader of Iran in 2026?
+661750: Roberts Wesleyan Redhawks vs. LIU Sharks
+662903: Will Alabama win the 2025-2026 SEC Men's Basketball regular season championship?
+662904: Will Arkansas win the 2025-2026 SEC Men's Basketball regular season championship?
+662905: Will Auburn win the 2025-2026 SEC Men's Basketball regular season championship?
+662906: Will Florida win the 2025-2026 SEC Men's Basketball regular season championship?
+662907: Will Georgia win the 2025-2026 SEC Men's Basketball regular season championship?
+662908: Will Kentucky win the 2025-2026 SEC Men's Basketball regular season championship?
+662909: Will LSU win the 2025-2026 SEC Men's Basketball regular season championship?
+662910: Will Mississippi State win the 2025-2026 SEC Men's Basketball regular season championship?
+662911: Will Missouri win the 2025-2026 SEC Men's Basketball regular season championship?
+662912: Will Oklahoma win the 2025-2026 SEC Men's Basketball regular season championship?
+662913: Will Ole Miss win the 2025-2026 SEC Men's Basketball regular season championship?
+662914: Will South Carolina win the 2025-2026 SEC Men's Basketball regular season championship?
+662915: Will Tennessee win the 2025-2026 SEC Men's Basketball regular season championship?
+662916: Will Texas A&M win the 2025-2026 SEC Men's Basketball regular season championship?
+662917: Will Texas win the 2025-2026 SEC Men's Basketball regular season championship?
+662918: Will Vanderbilt win the 2025-2026 SEC Men's Basketball regular season championship?
+662932: Will another team win the 2025-2026 SEC Men's Basketball regular season championship?
+663312: Will Illinois win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663313: Will Indiana win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663314: Will Iowa win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663315: Will Maryland win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663316: Will Michigan State win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663317: Will Michigan win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663318: Will Minnesota win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663319: Will Nebraska win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663320: Will Northwestern win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663321: Will Ohio State win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663322: Will Oregon win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663323: Will Penn State win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663324: Will Purdue win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663325: Will Rutgers win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663326: Will UCLA win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663327: Will USC win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663328: Will Washington win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663329: Will Wisconsin win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663330: Will another team win the 2025-2026 Big 10 Men's Basketball regular season championship?
+663369: Will Arizona State win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663370: Will Arizona win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663371: Will BYU win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663372: Will Baylor win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663373: Will Cincinnati win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663374: Will Colorado win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663375: Will Houston win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663376: Will Iowa State win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663377: Will Kansas win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663378: Will Kansas State win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663379: Will Oklahoma State win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663380: Will TCU win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663381: Will Texas Tech win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663382: Will UCF win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663383: Will Utah win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663384: Will West Virginia win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663385: Will another team win the 2025-2026 Big 12 Men's Basketball regular season championship?
+663391: Will Boston College win the 2025-2026 ACC Men’s Basketball regular season championship?
+663392: Will California win the 2025-2026 ACC Men’s Basketball regular season championship?
+663393: Will Clemson win the 2025-2026 ACC Men’s Basketball regular season championship?
+663394: Will Duke win the 2025-2026 ACC Men’s Basketball regular season championship?
+663395: Will Florida State win the 2025-2026 ACC Men’s Basketball regular season championship?
+663396: Will Georgia Tech win the 2025-2026 ACC Men’s Basketball regular season championship?
+663397: Will Louisville win the 2025-2026 ACC Men’s Basketball regular season championship?
+663398: Will Miami win the 2025-2026 ACC Men’s Basketball regular season championship?
+663399: Will NC State win the 2025-2026 ACC Men’s Basketball regular season championship?
+663400: Will North Carolina win the 2025-2026 ACC Men’s Basketball regular season championship?
+663401: Will Notre Dame win the 2025-2026 ACC Men’s Basketball regular season championship?

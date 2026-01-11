@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1149470: FC Internazionale Milano vs. Pisa SC: O/U 4.5
+1149471: FC Internazionale Milano vs. Pisa SC: Both Teams to Score
+1149472: XRP Up or Down - January 12, 1AM ET
+1149473: Set 1 Winner: Quinn vs Fucsovics
+1149474: Quinn vs. Fucsovics: Set 1 Games O/U 8.5
+1149475: Quinn vs. Fucsovics: Total Sets O/U 2.5
+1149476: Quinn vs. Fucsovics: Match O/U 21.5
+1149477: Quinn vs. Fucsovics: Set 1 Games O/U 9.5
+1149478: Quinn vs. Fucsovics: Set 1 Games O/U 10.5
+1149479: Quinn vs. Fucsovics: Match O/U 22.5
+1149480: Quinn vs. Fucsovics: Match O/U 23.5
+1149486: Altmaier vs. Munar: Match O/U 21.5
+1149487: Altmaier vs. Munar: Total Sets O/U 2.5
+1149488: Set 1 Winner: Altmaier vs Munar
+1149489: Altmaier vs. Munar: Set 1 Games O/U 8.5
+1149490: Altmaier vs. Munar: Match O/U 22.5
+1149491: Altmaier vs. Munar: Set 1 Games O/U 9.5
+1149492: Altmaier vs. Munar: Match O/U 23.5
+1149493: Altmaier vs. Munar: Set 1 Games O/U 10.5
+1149494: Machac vs. Duckworth: Match O/U 21.5
+1149495: Machac vs. Duckworth: Total Sets O/U 2.5
+1149496: Set 1 Winner: Machac vs Duckworth
+1149497: Machac vs. Duckworth: Set 1 Games O/U 8.5
+1149498: Machac vs. Duckworth: Match O/U 22.5
+1149499: Machac vs. Duckworth: Set 1 Games O/U 9.5
+1149500: Machac vs. Duckworth: Match O/U 23.5
+1149501: Machac vs. Duckworth: Set 1 Games O/U 10.5
+1149502: Set 1 Winner: Opelka vs Popyrin
+1149503: Opelka vs. Popyrin: Match O/U 21.5
+1149504: Opelka vs. Popyrin: Total Sets O/U 2.5
+1149505: Opelka vs. Popyrin: Set 1 Games O/U 8.5
+1149506: Opelka vs. Popyrin: Match O/U 22.5
+1149507: Opelka vs. Popyrin: Set 1 Games O/U 9.5
+1149508: Opelka vs. Popyrin: Match O/U 23.5
+1149509: Opelka vs. Popyrin: Set 1 Games O/U 10.5
+1149510: Kokkinakis vs. Korda: Match O/U 21.5
+1149511: Set 1 Winner: Kokkinakis vs Korda
+1149512: Kokkinakis vs. Korda: Total Sets O/U 2.5
+1149513: Kokkinakis vs. Korda: Set 1 Games O/U 8.5
+1149514: Kokkinakis vs. Korda: Match O/U 22.5
+1149515: Kokkinakis vs. Korda: Set 1 Games O/U 9.5
+1149516: Kokkinakis vs. Korda: Match O/U 23.5
+1149517: Kokkinakis vs. Korda: Set 1 Games O/U 10.5
+1149518: Kecmanovic vs. Vacherot: Match O/U 21.5
+1149519: Kecmanovic vs. Vacherot: Set 1 Games O/U 8.5
+1149520: Set 1 Winner: Kecmanovic vs Vacherot
+1149521: Kecmanovic vs. Vacherot: Total Sets O/U 2.5
+1149522: Kecmanovic vs. Vacherot: Match O/U 22.5
+1149523: Kecmanovic vs. Vacherot: Set 1 Games O/U 9.5
+1149524: Kecmanovic vs. Vacherot: Match O/U 23.5
+1149525: Kecmanovic vs. Vacherot: Set 1 Games O/U 10.5
+1149526: Set 1 Winner: Dzumhur vs Nakashima
+1149527: Dzumhur vs. Nakashima: Total Sets O/U 2.5
+1149528: Dzumhur vs. Nakashima: Match O/U 21.5
+1149529: Dzumhur vs. Nakashima: Set 1 Games O/U 8.5
+1149530: Dzumhur vs. Nakashima: Set 1 Games O/U 9.5
+1149531: Dzumhur vs. Nakashima: Match O/U 22.5
+1149532: Dzumhur vs. Nakashima: Set 1 Games O/U 10.5
+1149533: Dzumhur vs. Nakashima: Match O/U 23.5
+1149534: Humbert vs. Atmane: Total Sets O/U 2.5
+1149535: Set 1 Winner: Humbert vs Atmane
+1149536: Humbert vs. Atmane: Match O/U 21.5
+1149537: Humbert vs. Atmane: Set 1 Games O/U 8.5
+1149538: Humbert vs. Atmane: Match O/U 22.5
+1149539: Humbert vs. Atmane: Set 1 Games O/U 9.5
+1149540: Humbert vs. Atmane: Match O/U 23.5
+1149541: Humbert vs. Atmane: Set 1 Games O/U 10.5
+1149542: Schoolkate vs. Hijikata: Set 1 Games O/U 8.5
+1149543: Schoolkate vs. Hijikata: Match O/U 21.5
+1149544: Set 1 Winner: Schoolkate vs Hijikata
+1149545: Schoolkate vs. Hijikata: Total Sets O/U 2.5
+1149546: Schoolkate vs. Hijikata: Set 1 Games O/U 9.5
+1149547: Schoolkate vs. Hijikata: Match O/U 22.5
+1149548: Schoolkate vs. Hijikata: Set 1 Games O/U 10.5
+1149549: Schoolkate vs. Hijikata: Match O/U 23.5
+1149550: Set 1 Winner: Marozsan vs Monfils
+1149551: Marozsan vs. Monfils: Total Sets O/U 2.5
+1149552: Marozsan vs. Monfils: Set 1 Games O/U 8.5
+1149553: Marozsan vs. Monfils: Match O/U 21.5
+1149554: Marozsan vs. Monfils: Set 1 Games O/U 9.5
+1149555: Marozsan vs. Monfils: Match O/U 22.5
+1149556: Marozsan vs. Monfils: Set 1 Games O/U 10.5
+1149557: Marozsan vs. Monfils: Match O/U 23.5
+1149558: Agut vs. Perricard: Match O/U 21.5
+1149559: Set 1 Winner: Agut vs Perricard
+1149560: Agut vs. Perricard: Total Sets O/U 2.5
+1149561: Agut vs. Perricard: Set 1 Games O/U 8.5
+1149562: Agut vs. Perricard: Match O/U 22.5
+1149563: Agut vs. Perricard: Set 1 Games O/U 9.5
+1149564: Agut vs. Perricard: Match O/U 23.5
+1149565: Agut vs. Perricard: Set 1 Games O/U 10.5
+1149566: Brooksby vs. Watt: Set 1 Games O/U 8.5
+1149567: Brooksby vs. Watt: Match O/U 21.5
+1149568: Set 1 Winner: Brooksby vs Watt
+1149569: Brooksby vs. Watt: Total Sets O/U 2.5
+1149570: Brooksby vs. Watt: Match O/U 22.5
+1149571: Brooksby vs. Watt: Set 1 Games O/U 9.5
+1149572: Brooksby vs. Watt: Match O/U 23.5
+1149573: Brooksby vs. Watt: Set 1 Games O/U 10.5
+1149574: Borges vs. Etcheverry: Match O/U 21.5
+1149575: Set 1 Winner: Borges vs Etcheverry
+1149576: Borges vs. Etcheverry: Total Sets O/U 2.5
+1149577: Borges vs. Etcheverry: Set 1 Games O/U 8.5
+1149578: Borges vs. Etcheverry: Match O/U 22.5
+1149579: Borges vs. Etcheverry: Match O/U 23.5
+1149580: Borges vs. Etcheverry: Set 1 Games O/U 9.5
+1149581: Borges vs. Etcheverry: Set 1 Games O/U 10.5
+1149582: Muller vs. Giron: Match O/U 21.5
+1149583: Set 1 Winner: Muller vs Giron
+1149584: Muller vs. Giron: Set 1 Games O/U 8.5
+1149585: Muller vs. Giron: Match O/U 22.5
+1149586: Muller vs. Giron: Total Sets O/U 2.5
+1149587: Muller vs. Giron: Set 1 Games O/U 9.5
+1149588: Muller vs. Giron: Match O/U 23.5
+1149589: Muller vs. Giron: Set 1 Games O/U 10.5
+1149590: Navone vs. Michelsen: Match O/U 21.5
+1149591: Navone vs. Michelsen: Total Sets O/U 2.5
+1149592: Navone vs. Michelsen: Set 1 Games O/U 8.5
+1149593: Set 1 Winner: Navone vs Michelsen
+1149594: Navone vs. Michelsen: Match O/U 22.5
+1149595: Navone vs. Michelsen: Match O/U 23.5
+1149596: Navone vs. Michelsen: Set 1 Games O/U 9.5
+1149597: Navone vs. Michelsen: Set 1 Games O/U 10.5
+1149598: Tabilo vs. Carabelli: Set 1 Games O/U 8.5
+1149599: Set 1 Winner: Tabilo vs Carabelli
+1149600: Tabilo vs. Carabelli: Total Sets O/U 2.5
+1149601: Tabilo vs. Carabelli: Match O/U 21.5
+1149602: Tabilo vs. Carabelli: Set 1 Games O/U 9.5
+1149603: Tabilo vs. Carabelli: Match O/U 22.5
+1149604: Tabilo vs. Carabelli: Set 1 Games O/U 10.5
+1149605: Tabilo vs. Carabelli: Match O/U 23.5
+1149606: Comesana vs. Royer: Match O/U 21.5
+1149607: Set 1 Winner: Comesana vs Royer
+1149608: Comesana vs. Royer: Set 1 Games O/U 8.5
+1149609: Comesana vs. Royer: Total Sets O/U 2.5
+1149610: Comesana vs. Royer: Match O/U 22.5
+1149611: Comesana vs. Royer: Set 1 Games O/U 9.5
+1149612: Comesana vs. Royer: Match O/U 23.5
+1149613: Comesana vs. Royer: Set 1 Games O/U 10.5
+1149758: Cade Cunningham: Points Over 27.5
+1149762: Isaiah Stewart: Points Over 13.5
+1149770: Isaiah Stewart: Rebounds Over 6.5
+1149773: Cade Cunningham: Rebounds Over 5.5
+1149776: Cade Cunningham: Assists Over 9.5
+1150043: Series FURIA Rounds Handicap (-10.5)
+1150044: Total Rounds Over/Under 43.5
+1150049: Bitcoin Up or Down - January 12, 2AM ET
+1150058: Ethereum Up or Down - January 12, 2AM ET
+1150062: Will Levante UD win on 2026-01-23?
+1150066: Will Levante UD vs. Elche CF end in a draw?
+1150069: Will Elche CF win on 2026-01-23?
+1150076: Map Handicap: SR (-1.5)
+1150077: Phoenix to win 1 maps?
+1150078: Phoenix to win 2 maps?
+1150079: SkinRave to win 1 maps?
+1150080: SkinRave to win 2 maps?
+1150081: Total Rounds Over/Under 44.5
+1150082: Solana Up or Down - January 12, 2AM ET
+1150083: Will Málaga CF win on 2026-01-23?
+1150084: Will Málaga CF vs. Burgos CF end in a draw?
+1150085: Will Burgos CF win on 2026-01-23?
+1150092: Map Handicap: NRG (-1.5)
+1150094: NRG to win 1 maps?
+1150096: NRG to win 2 maps?
+1150097: Voca to win 1 maps?
+1150099: Voca to win 2 maps?
+1150104: XRP Up or Down - January 12, 2AM ET
+1150121: Series Vitality Rounds Handicap (-9.5)
+1150133: Jusuf Nurkić: Points Over 15.5
+1150137: Jusuf Nurkić: Rebounds Over 9.5
+1150144: Jusuf Nurkić: Assists Over 4.5
+1150365: Total Rounds Over/Under 43.5
+1150366: Total Rounds Over/Under 42.5
+1150367: Series Spirit Rounds Handicap (-10.5)
+1150397: Bitcoin Up or Down - January 12, 3AM ET
+1150403: Ethereum Up or Down - January 12, 3AM ET
+1150413: Solana Up or Down - January 12, 3AM ET
+1150414: Will SC Bastia win on 2026-01-23?
+1150415: Will SC Bastia vs. Montpellier HSC end in a draw?
+1150416: Will Montpellier HSC win on 2026-01-23?
+1150417: Levante UD vs. Elche CF: O/U 1.5
+1150418: Levante UD vs. Elche CF: O/U 2.5
+1150419: Levante UD vs. Elche CF: O/U 3.5
+1150420: Levante UD vs. Elche CF: O/U 4.5
+1150421: Levante UD vs. Elche CF: Both Teams to Score
+1150422: XRP Up or Down - January 12, 3AM ET
+1150423: Will AS Nancy-Lorraine win on 2026-01-23?
+1150424: Will AS Nancy-Lorraine vs. Rodez Aveyron Football end in a draw?
+1150426: Will Rodez Aveyron Football win on 2026-01-23?
+1150427: Will Amiens SC win on 2026-01-23?
+1150428: Will Amiens SC vs. Stade Lavallois Mayenne FC end in a draw?
+1150429: Will Stade Lavallois Mayenne FC win on 2026-01-23?
+1150439: Will Pau FC win on 2026-01-23?
+1150440: Will Pau FC vs. Grenoble Foot 38 end in a draw?
+1150441: Will Grenoble Foot 38 win on 2026-01-23?
+1150451: Will FC Annecy win on 2026-01-23?
+1150452: Will FC Annecy vs. Clermont Foot 63 end in a draw?
+1150453: Will Clermont Foot 63 win on 2026-01-23?
+1150458: Set Handicap: Fucsovics (-1.5) vs Quinn (+1.5)
+1150459: Set Handicap: Vacherot (-1.5) vs Kecmanovic (+1.5)
+1150460: Set Handicap: Korda (-1.5) vs Kokkinakis (+1.5)
+1150461: Set Handicap: Machac (-1.5) vs Duckworth (+1.5)
+1150462: Set Handicap: Munar (-1.5) vs Altmaier (+1.5)
+1150463: Set Handicap: Hijikata (-1.5) vs Schoolkate (+1.5)
+1150465: Set Handicap: Nakashima (-1.5) vs Dzumhur (+1.5)
+1150466: Set Handicap: Humbert (-1.5) vs Atmane (+1.5)
+1150714: Bitcoin Up or Down - January 12, 4AM ET
+1150715: Ethereum Up or Down - January 12, 4AM ET
+1150716: Will Carrarese Calcio win on 2026-01-23?
+1150717: Will Carrarese Calcio vs. Empoli FC end in a draw?
+1150718: Will Empoli FC win on 2026-01-23?
+1150719: Solana Up or Down - January 12, 4AM ET
+1150720: XRP Up or Down - January 12, 4AM ET
+1150722: Set Handicap: Popyrin (-1.5) vs Opelka (+1.5)
+1150942: Map Handicap: MARS (-1.5)
+1150943: regain to win 1 maps?
+1150945: regain to win 2 maps?
+1150947: Marsborne to win 1 maps?
+1150948: Marsborne to win 2 maps?
+1150953: Map Handicap: M80 (-1.5)
+1150954: M80 to win 1 maps?
+1150955: M80 to win 2 maps?
+1150956: BOSS to win 1 maps?
+1150957: BOSS to win 2 maps?
+1150998: Bitcoin Up or Down - January 12, 5AM ET
+1151002: Ethereum Up or Down - January 12, 5AM ET
+1151009: Solana Up or Down - January 12, 5AM ET
+1151010: XRP Up or Down - January 12, 5AM ET
+1151246: Bitcoin Up or Down - January 12, 6AM ET
+1151247: Will the highest temperature in London be 9°C or below on January 12?
+1151248: Will the highest temperature in London be 10°C on January 12?
+1151249: Will the highest temperature in London be 11°C on January 12?
+1151250: Will the highest temperature in London be 12°C on January 12?
+1151251: Will the highest temperature in London be 13°C on January 12?
+1151252: Will the highest temperature in London be 14°C on January 12?
+1151253: Ethereum Up or Down - January 12, 6AM ET
+1151254: Will the highest temperature in London be 15°C or higher on January 12?
+1151255: Solana Up or Down - January 12, 6AM ET
+1151256: XRP Up or Down - January 12, 6AM ET
+1151259: Will the highest temperature in Buenos Aires be 35°C or below on January 12?
+1151260: Spread: CA Talleres (-1.5)
+1151261: Will the highest temperature in Buenos Aires be 36°C on January 12?
+1151262: CA Talleres vs. CA Newell's Old Boys: O/U 1.5
+1151263: Will the highest temperature in Buenos Aires be 37°C on January 12?
+1151264: CA Talleres vs. CA Newell's Old Boys: O/U 2.5
+1151265: CA Talleres vs. CA Newell's Old Boys: O/U 3.5
+1151266: Will the highest temperature in Buenos Aires be 38°C on January 12?
+1151267: CA Talleres vs. CA Newell's Old Boys: O/U 4.5
+1151268: CA Talleres vs. CA Newell's Old Boys: Both Teams to Score
+1151269: Will the highest temperature in Buenos Aires be 39°C on January 12?
+1151270: Will the highest temperature in Buenos Aires be 40°C on January 12?
+1151271: Will the highest temperature in Buenos Aires be 41°C or higher on January 12?
+1151272: Adelaide International: Maya Joint vs Sofia Kenin
+1151274: Spread: CS Independiente Rivadavia (-1.5)
+1151275: CS Independiente Rivadavia vs. CA Tucumán: O/U 1.5
+1151276: CS Independiente Rivadavia vs. CA Tucumán: O/U 2.5
+1151277: CS Independiente Rivadavia vs. CA Tucumán: O/U 3.5
+1151278: CS Independiente Rivadavia vs. CA Tucumán: O/U 4.5
+1151279: CS Independiente Rivadavia vs. CA Tucumán: Both Teams to Score
+1151280: Adelaide International: Ajla Tomljanovic vs Clara Tauson
+1151283: Spread: CA Independiente (-1.5)
+1151284: Adelaide International: Mirra Andreeva vs Leylah Fernandez
+1151285: CA Independiente vs. Estudiantes de La Plata: O/U 1.5
+1151286: CA Independiente vs. Estudiantes de La Plata: O/U 2.5
+1151287: CA Independiente vs. Estudiantes de La Plata: O/U 3.5
+1151288: CA Independiente vs. Estudiantes de La Plata: O/U 4.5
+1151289: CA Independiente vs. Estudiantes de La Plata: Both Teams to Score
+1151291: Adelaide International: Emerson Jones vs Emma Navarro
+1151292: Spread: CA San Lorenzo de Almagro (-1.5)
+1151293: CA San Lorenzo de Almagro vs. CA Lanús: O/U 1.5
+1151294: CA San Lorenzo de Almagro vs. CA Lanús: O/U 2.5
+1151295: CA San Lorenzo de Almagro vs. CA Lanús: O/U 3.5
+1151297: CA San Lorenzo de Almagro vs. CA Lanús: O/U 4.5
+1151298: CA San Lorenzo de Almagro vs. CA Lanús: Both Teams to Score
+1151299: Adelaide International: Liudmila Samsonova vs Marketa Vondrousova
+1151300: Will the highest temperature in Seoul be 2°C or below on January 12?
+1151301: Will the highest temperature in Seoul be 3°C on January 12?
+1151302: Will the highest temperature in Seoul be 4°C on January 12?
+1151303: Will the highest temperature in Seoul be 5°C on January 12?
+1151304: Will the highest temperature in Seoul be 6°C on January 12?
+1151305: Will the highest temperature in Seoul be 7°C on January 12?
+1151306: Will the highest temperature in Seoul be 8°C or higher on January 12?
+1151308: Adelaide International: Kimberly Birrell vs Diana Shnaider
+1151310: Adelaide International: Daria Kasatkina vs Maria Sakkari
+1151313: Adelaide International: Victoria Mboko vs Beatriz Haddad Maia
+1151315: Hobart International: Emma Raducanu vs Camila Osorio
+1151316: Hobart International: Elsa Jacquemot vs Magdalena Frech
+1151317: Will the highest temperature in Toronto be -1°C or below on January 12?
+1151318: Will the highest temperature in Toronto be 0°C on January 12?
+1151319: Will the highest temperature in Toronto be 1°C on January 12?
+1151320: Will the highest temperature in Toronto be 2°C on January 12?
+1151321: Will the highest temperature in Toronto be 3°C on January 12?
+1151322: Will the highest temperature in Toronto be 4°C on January 12?
+1151323: Will the highest temperature in Toronto be 5°C or higher on January 12?
+1151324: Hobart International: Rebecca Sramkova vs Varvara Gracheva
+1151325: Hobart International: Taylah Preston vs Jessica Bouzas Maneiro
+1151326: Hobart International: Iva Jovic vs Janice Tjen
+1151327: Hobart International: Xinyu Wang vs Talia Gibson
+1151328: Hobart International: Tatjana Maria vs Venus Williams
+1151329: Will the highest temperature in Seattle be 43°F or below on January 12?
+1151330: Will the highest temperature in Seattle be between 44-45°F on January 12?
+1151331: Will the highest temperature in Seattle be between 46-47°F on January 12?
+1151332: Will the highest temperature in Seattle be between 48-49°F on January 12?
+1151333: Will the highest temperature in Seattle be between 50-51°F on January 12?
+1151334: Will the highest temperature in Seattle be between 52-53°F on January 12?
+1151335: Will the highest temperature in Seattle be 54°F or higher on January 12?
+1151336: Hobart International: Emiliana Arango vs Antonia Ruzic
+1151337: Hobart International: Peyton Stearns vs Barbora Krejcikova
+1151338: Hobart International: Olga Danilovic vs McCartney Kessler
+1151340: Will the highest temperature in New York City be 37°F or below on January 12?
+1151342: Will the highest temperature in New York City be between 38-39°F on January 12?
+1151343: Will the highest temperature in New York City be between 40-41°F on January 12?
+1151344: Will the highest temperature in New York City be between 42-43°F on January 12?
+1151345: Will the highest temperature in New York City be between 44-45°F on January 12?
+1151346: Will the highest temperature in New York City be between 46-47°F on January 12?
+1151347: Will the highest temperature in New York City be 48°F or higher on January 12?
+1151351: Will the highest temperature in Dallas be 65°F or below on January 12?
+1151352: Will the highest temperature in Dallas be between 66-67°F on January 12?
+1151353: Will the highest temperature in Dallas be between 68-69°F on January 12?
+1151354: Will the highest temperature in Dallas be between 70-71°F on January 12?
+1151355: Will the highest temperature in Dallas be between 72-73°F on January 12?
+1151356: Will the highest temperature in Dallas be between 74-75°F on January 12?
+1151357: Will the highest temperature in Dallas be 76°F or higher on January 12?
+1151358: Will the highest temperature in Atlanta be 47°F or below on January 12?
+1151359: Will the highest temperature in Atlanta be between 48-49°F on January 12?
+1151360: Will the highest temperature in Atlanta be between 50-51°F on January 12?
+1151361: Will the highest temperature in Atlanta be between 52-53°F on January 12?
+1151362: Will the highest temperature in Atlanta be between 54-55°F on January 12?
+1151363: Will the highest temperature in Atlanta be between 56-57°F on January 12?
+1151364: Will the highest temperature in Atlanta be 58°F or higher on January 12?
+1151623: Bitcoin Up or Down - January 12, 7AM ET
+1151624: Ethereum Up or Down - January 12, 7AM ET
+1151625: Solana Up or Down - January 12, 7AM ET
+1151626: XRP Up or Down - January 12, 7AM ET
+1151627: Derby County FC vs. West Bromwich Albion FC: O/U 1.5
+1151628: Derby County FC vs. West Bromwich Albion FC: O/U 2.5
+1151629: Derby County FC vs. West Bromwich Albion FC: O/U 3.5
+1151630: Derby County FC vs. West Bromwich Albion FC: O/U 4.5
+1151631: Derby County FC vs. West Bromwich Albion FC: Both Teams to Score
+1151632: Tomljanovic vs. Tauson: Total Sets O/U 2.5
+1151633: Set 1 Winner: Tomljanovic vs Tauson
+1151634: Tomljanovic vs. Tauson: Set 1 Games O/U 8.5
+1151635: Tomljanovic vs. Tauson: Match O/U 21.5
+1151636: Tomljanovic vs. Tauson: Set 1 Games O/U 9.5
+1151637: Tomljanovic vs. Tauson: Match O/U 22.5
+1151638: Tomljanovic vs. Tauson: Match O/U 23.5
+1151639: Tomljanovic vs. Tauson: Set 1 Games O/U 10.5
+1151640: Andreeva vs. Fernandez: Set 1 Games O/U 8.5
+1151641: Andreeva vs. Fernandez: Match O/U 21.5
+1151642: Andreeva vs. Fernandez: Total Sets O/U 2.5
+1151643: Set 1 Winner: Andreeva vs Fernandez
+1151644: Andreeva vs. Fernandez: Set 1 Games O/U 9.5
+1151645: Andreeva vs. Fernandez: Match O/U 22.5
+1151646: Andreeva vs. Fernandez: Set 1 Games O/U 10.5
+1151647: Andreeva vs. Fernandez: Match O/U 23.5
+1151648: Set 1 Winner: Joint vs Kenin
+1151649: Joint vs. Kenin: Total Sets O/U 2.5
+1151650: Joint vs. Kenin: Match O/U 21.5
+1151651: Joint vs. Kenin: Set 1 Games O/U 8.5
+1151652: Joint vs. Kenin: Match O/U 22.5
+1151653: Joint vs. Kenin: Set 1 Games O/U 9.5
+1151654: Joint vs. Kenin: Match O/U 23.5
+1151655: Joint vs. Kenin: Set 1 Games O/U 10.5
+1151656: Jones vs. Navarro: Match O/U 21.5
+1151657: Jones vs. Navarro: Set 1 Games O/U 8.5
+1151658: Set 1 Winner: Jones vs Navarro
+1151659: Jones vs. Navarro: Total Sets O/U 2.5
+1151660: Jones vs. Navarro: Match O/U 22.5
+1151661: Jones vs. Navarro: Match O/U 23.5
+1151662: Jones vs. Navarro: Set 1 Games O/U 9.5
+1151663: Jones vs. Navarro: Set 1 Games O/U 10.5
+1151664: Samsonova vs. Vondrousova: Match O/U 21.5
+1151665: Samsonova vs. Vondrousova: Set 1 Games O/U 8.5
+1151666: Set 1 Winner: Samsonova vs Vondrousova
+1151667: Samsonova vs. Vondrousova: Total Sets O/U 2.5
+1151668: Samsonova vs. Vondrousova: Match O/U 22.5
+1151669: Samsonova vs. Vondrousova: Match O/U 23.5
+1151670: Samsonova vs. Vondrousova: Set 1 Games O/U 9.5
+1151671: Samsonova vs. Vondrousova: Set 1 Games O/U 10.5
+1151672: Birrell vs. Shnaider: Total Sets O/U 2.5
+1151673: Birrell vs. Shnaider: Set 1 Games O/U 8.5
+1151674: Set 1 Winner: Birrell vs Shnaider
+1151675: Birrell vs. Shnaider: Match O/U 21.5
+1151676: Birrell vs. Shnaider: Set 1 Games O/U 9.5
+1151677: Birrell vs. Shnaider: Match O/U 22.5
+1151678: Birrell vs. Shnaider: Set 1 Games O/U 10.5
+1151679: Birrell vs. Shnaider: Match O/U 23.5
+1151680: Kasatkina vs. Sakkari: Total Sets O/U 2.5
+1151681: Set 1 Winner: Kasatkina vs Sakkari
+1151682: Kasatkina vs. Sakkari: Set 1 Games O/U 8.5
+1151683: Kasatkina vs. Sakkari: Match O/U 21.5
+1151684: Kasatkina vs. Sakkari: Set 1 Games O/U 9.5
+1151685: Kasatkina vs. Sakkari: Match O/U 22.5
+1151686: Kasatkina vs. Sakkari: Set 1 Games O/U 10.5
+1151687: Kasatkina vs. Sakkari: Match O/U 23.5
+1151688: Set 1 Winner: Mboko vs Maia
+1151689: Mboko vs. Maia: Set 1 Games O/U 8.5
+1151690: Mboko vs. Maia: Total Sets O/U 2.5
+1151691: Mboko vs. Maia: Match O/U 21.5
+1151692: Mboko vs. Maia: Set 1 Games O/U 9.5
+1151693: Mboko vs. Maia: Match O/U 22.5
+1151694: Mboko vs. Maia: Set 1 Games O/U 10.5
+1151695: Mboko vs. Maia: Match O/U 23.5
+1151696: Sramkova vs. Gracheva: Match O/U 21.5
+1151697: Sramkova vs. Gracheva: Total Sets O/U 2.5
+1151698: Set 1 Winner: Sramkova vs Gracheva
+1151699: Sramkova vs. Gracheva: Set 1 Games O/U 8.5
+1151700: Sramkova vs. Gracheva: Match O/U 22.5
+1151701: Sramkova vs. Gracheva: Match O/U 23.5
+1151702: Sramkova vs. Gracheva: Set 1 Games O/U 9.5
+1151703: Sramkova vs. Gracheva: Set 1 Games O/U 10.5
+1151704: Set 1 Winner: Preston vs Maneiro
+1151705: Preston vs. Maneiro: Match O/U 21.5
+1151706: Preston vs. Maneiro: Total Sets O/U 2.5
+1151707: Preston vs. Maneiro: Set 1 Games O/U 8.5
+1151708: Preston vs. Maneiro: Match O/U 22.5
+1151709: Preston vs. Maneiro: Set 1 Games O/U 9.5
+1151710: Preston vs. Maneiro: Match O/U 23.5
+1151711: Preston vs. Maneiro: Set 1 Games O/U 10.5
+1151712: Jovic vs. Tjen: Total Sets O/U 2.5
+1151713: Jovic vs. Tjen: Match O/U 21.5
+1151714: Set 1 Winner: Jovic vs Tjen
+1151715: Jovic vs. Tjen: Set 1 Games O/U 8.5
+1151716: Jovic vs. Tjen: Match O/U 22.5
+1151717: Jovic vs. Tjen: Set 1 Games O/U 9.5
+1151718: Jovic vs. Tjen: Match O/U 23.5
+1151719: Jovic vs. Tjen: Set 1 Games O/U 10.5
+1151720: Wang vs. Gibson: Match O/U 21.5
+1151721: Wang vs. Gibson: Total Sets O/U 2.5
+1151722: Set 1 Winner: Wang vs Gibson
+1151723: Wang vs. Gibson: Set 1 Games O/U 8.5
+1151724: Wang vs. Gibson: Match O/U 22.5
+1151725: Wang vs. Gibson: Match O/U 23.5
+1151726: Wang vs. Gibson: Set 1 Games O/U 9.5
+1151727: Wang vs. Gibson: Set 1 Games O/U 10.5
+1151728: Maria vs. Williams: Set 1 Games O/U 8.5
+1151729: Set 1 Winner: Maria vs Williams
+1151730: Maria vs. Williams: Match O/U 21.5
+1151731: Maria vs. Williams: Total Sets O/U 2.5
+1151732: Maria vs. Williams: Set 1 Games O/U 9.5
+1151733: Maria vs. Williams: Set 1 Games O/U 10.5
+1151734: Maria vs. Williams: Match O/U 22.5
+1151735: Maria vs. Williams: Match O/U 23.5
+1151736: Set 1 Winner: Jacquemot vs Frech
+1151737: Jacquemot vs. Frech: Set 1 Games O/U 8.5
+1151738: Jacquemot vs. Frech: Total Sets O/U 2.5
+1151739: Jacquemot vs. Frech: Match O/U 21.5
+1151740: Jacquemot vs. Frech: Set 1 Games O/U 9.5
+1151741: Jacquemot vs. Frech: Match O/U 22.5
+1151742: Jacquemot vs. Frech: Set 1 Games O/U 10.5
+1151743: Jacquemot vs. Frech: Match O/U 23.5
+1151744: Danilovic vs. Kessler: Total Sets O/U 2.5
+1151745: Danilovic vs. Kessler: Set 1 Games O/U 8.5
+1151746: Danilovic vs. Kessler: Match O/U 21.5
+1151747: Set 1 Winner: Danilovic vs Kessler
+1151748: Danilovic vs. Kessler: Match O/U 22.5
+1151749: Danilovic vs. Kessler: Set 1 Games O/U 9.5
+1151750: Danilovic vs. Kessler: Match O/U 23.5
+1151751: Danilovic vs. Kessler: Set 1 Games O/U 10.5
+1151752: Raducanu vs. Osorio: Set 1 Games O/U 8.5
+1151753: Raducanu vs. Osorio: Total Sets O/U 2.5
+1151754: Set 1 Winner: Raducanu vs Osorio
+1151755: Raducanu vs. Osorio: Match O/U 21.5
+1151756: Raducanu vs. Osorio: Set 1 Games O/U 9.5
+1151757: Raducanu vs. Osorio: Match O/U 22.5
+1151758: Raducanu vs. Osorio: Set 1 Games O/U 10.5
+1151759: Raducanu vs. Osorio: Match O/U 23.5
+1151760: Stearns vs. Krejcikova: Total Sets O/U 2.5
+1151761: Stearns vs. Krejcikova: Set 1 Games O/U 8.5
+1151762: Set 1 Winner: Stearns vs Krejcikova
+1151763: Stearns vs. Krejcikova: Match O/U 21.5
+1151764: Stearns vs. Krejcikova: Match O/U 22.5
+1151765: Stearns vs. Krejcikova: Set 1 Games O/U 9.5
+1151766: Stearns vs. Krejcikova: Match O/U 23.5
+1151767: Stearns vs. Krejcikova: Set 1 Games O/U 10.5
+1151768: Arango vs. Ruzic: Match O/U 21.5
+1151769: Set 1 Winner: Arango vs Ruzic
+1151770: Arango vs. Ruzic: Set 1 Games O/U 8.5
+1151771: Arango vs. Ruzic: Total Sets O/U 2.5
+1151772: Arango vs. Ruzic: Match O/U 22.5
+1151773: Arango vs. Ruzic: Match O/U 23.5
+1151774: Arango vs. Ruzic: Set 1 Games O/U 9.5
+1151775: Arango vs. Ruzic: Set 1 Games O/U 10.5
+1152160: Bitcoin Up or Down - January 12, 8AM ET
+1152177: Ethereum Up or Down - January 12, 8AM ET
+1152178: Solana Up or Down - January 12, 8AM ET
+1152179: XRP Up or Down - January 12, 8AM ET
+1152213: Bitcoin Up or Down - January 11, 8:00AM-12:00PM ET
+1152214: Ethereum Up or Down - January 11, 8:00AM-12:00PM ET
+1152216: XRP Up or Down - January 11, 8:00AM-12:00PM ET
+1152219: Solana Up or Down - January 11, 8:00AM-12:00PM ET
+1152470: Bitcoin Up or Down - January 12, 9AM ET
+1152476: Ethereum Up or Down - January 12, 9AM ET
+1152481: Solana Up or Down - January 12, 9AM ET
+1152482: XRP Up or Down - January 12, 9AM ET
+1152457: XRP Up or Down - January 11, 8:45AM-9:00AM ET
+1152458: Bitcoin Up or Down - January 11, 8:45AM-9:00AM ET
+1152459: Solana Up or Down - January 11, 8:45AM-9:00AM ET
+1152460: Ethereum Up or Down - January 11, 8:45AM-9:00AM ET
+1152466: Solana Up or Down - January 11, 8:50AM-8:55AM ET

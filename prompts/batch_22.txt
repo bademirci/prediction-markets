@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1059433: Will Alexander Volkov become UFC champion in 2026?
+1059434: Will Sergei Pavlovich become UFC champion in 2026?
+1059730: Ukraine peace referendum passed before 2027?
+1059735: Will Ro Khanna advance from the CA-17 primary?
+1059736: Will Nicholas Finan advance from the CA-17 primary?
+1059737: Will Ha Phan advance from the CA-17 primary?
+1059738: Will Ritesh Tandon advance from the CA-17 primary?
+1059739: Will Leavitt say "Baby" or "Pregnant" during the next White House press briefing?
+1059772: Jeffrey Epstein confirmed to be alive before 2027?
+1060078: Will Russia capture all of Stepnohirsk by March 31, 2026?
+1060079: Will Russia capture all of Stepnohirsk by January 31, 2026?
+1060080: Will Al Hazem SC win on 2026-01-26?
+1060081: Will Al Hazem SC vs. Damac Saudi Club end in a draw?
+1060082: Will Damac Saudi Club win on 2026-01-26?
+1060083: Will Al Ittihad Saudi Club win on 2026-01-26?
+1060084: Will Al Ittihad Saudi Club vs. Al Okhdood SC end in a draw?
+1060085: Will Al Okhdood SC win on 2026-01-26?
+1060086: Will Al Nassr Saudi Club win on 2026-01-26?
+1060087: Will Al Nassr Saudi Club vs. Al Taawoun Saudi Club end in a draw?
+1060088: Will Al Taawoun Saudi Club win on 2026-01-26?
+1060097: Will Russia capture all of Prymorske by January 15, 2026?
+1060098: Will Russia capture all of Prymorske by January 31, 2026?
+1060120: Will Russia enter Vozdvyzhivka by January 31?
+1060122: Will Russia enter Zaliznychne by January 31?
+1060432: Will Melbourne Victory FC win on 2026-01-26?
+1060433: Will Melbourne Victory FC vs. Sydney FC end in a draw?
+1060434: Will Sydney FC win on 2026-01-26?
+1060481: Will Florida enact a redistricting law by March 31?
+1060486: Will the Republican Party win the CA-17 House seat?
+1060487: Will the Democratic Party win the CA-17 House seat?
+1060516: Will Rayan Cherki break the Premier League assists record?
+1060714: Nothing Ever Happens: 2026
+1060764: Will Elon Musk's net worth be less than $620b on January 31?
+1060765: Will Elon Musk's net worth be between $620b and $630b on January 31?
+1060766: Will Elon Musk's net worth be between $630b and $640b on January 31?
+1060767: Will Elon Musk's net worth be between $640b and $650b on January 31?
+1060768: Will Elon Musk's net worth be between $650b and $660b on January 31?
+1060769: Will Elon Musk's net worth be between $660b and $670b on January 31?
+1060770: Will Elon Musk's net worth be at least $670b on January 31?
+1060775: Atlético San Luis vs. Tigres de la UANL: O/U 1.5
+1060776: Atlético San Luis vs. Tigres de la UANL: O/U 2.5
+1060777: Atlético San Luis vs. Tigres de la UANL: O/U 3.5
+1060778: Atlético San Luis vs. Tigres de la UANL: O/U 4.5
+1060779: Atlético San Luis vs. Tigres de la UANL: Both Teams to Score
+1060780: Pumas de la UNAM vs. Querétaro FC: O/U 1.5
+1060781: Pumas de la UNAM vs. Querétaro FC: O/U 2.5
+1060782: Pumas de la UNAM vs. Querétaro FC: O/U 3.5
+1060783: Pumas de la UNAM vs. Querétaro FC: O/U 4.5
+1060784: Pumas de la UNAM vs. Querétaro FC: Both Teams to Score
+1060867: Republicans win Trifecta with Senate Supermajority in midterms?
+1061277: Calcio Padova vs. Modena FC 2018: O/U 1.5
+1061278: Calcio Padova vs. Modena FC 2018: O/U 2.5
+1061279: Calcio Padova vs. Modena FC 2018: O/U 3.5
+1061280: Calcio Padova vs. Modena FC 2018: O/U 4.5
+1061281: Calcio Padova vs. Modena FC 2018: Both Teams to Score
+1061282: Mantova 1911 vs. Palermo FC: O/U 1.5
+1061283: Mantova 1911 vs. Palermo FC: O/U 2.5
+1061284: Mantova 1911 vs. Palermo FC: O/U 3.5
+1061285: Mantova 1911 vs. Palermo FC: O/U 4.5
+1061286: Mantova 1911 vs. Palermo FC: Both Teams to Score
+1061327: Al Hilal Saudi Club vs. Al Nassr Saudi Club: O/U 1.5
+1061328: Al Hilal Saudi Club vs. Al Nassr Saudi Club: O/U 2.5
+1061329: Al Hilal Saudi Club vs. Al Nassr Saudi Club: O/U 3.5
+1061330: Al Hilal Saudi Club vs. Al Nassr Saudi Club: O/U 4.5
+1061331: Al Hilal Saudi Club vs. Al Nassr Saudi Club: Both Teams to Score
+1061332: Al Ettifaq Saudi Club vs. Al Khaleej Saudi Club: O/U 1.5
+1061333: Al Ettifaq Saudi Club vs. Al Khaleej Saudi Club: O/U 2.5
+1061334: Al Ettifaq Saudi Club vs. Al Khaleej Saudi Club: O/U 3.5
+1061335: Al Ettifaq Saudi Club vs. Al Khaleej Saudi Club: O/U 4.5
+1061336: Al Ettifaq Saudi Club vs. Al Khaleej Saudi Club: Both Teams to Score
+1061337: Al Hazem SC vs. Al Najmah Saudi Club: O/U 1.5
+1061338: Al Hazem SC vs. Al Najmah Saudi Club: O/U 2.5
+1061339: Al Hazem SC vs. Al Najmah Saudi Club: O/U 3.5
+1061340: Al Hazem SC vs. Al Najmah Saudi Club: O/U 4.5
+1061341: Al Hazem SC vs. Al Najmah Saudi Club: Both Teams to Score
+1061462: Aberdeen FC vs. Rangers FC: O/U 1.5
+1061463: Aberdeen FC vs. Rangers FC: O/U 2.5
+1061464: Aberdeen FC vs. Rangers FC: O/U 3.5
+1061465: Aberdeen FC vs. Rangers FC: O/U 4.5
+1061466: Aberdeen FC vs. Rangers FC: Both Teams to Score
+1061467: Dundee FC vs. Heart of Midlothian FC: O/U 1.5
+1061468: Dundee FC vs. Heart of Midlothian FC: O/U 2.5
+1061469: Dundee FC vs. Heart of Midlothian FC: O/U 3.5
+1061470: Dundee FC vs. Heart of Midlothian FC: O/U 4.5
+1061471: Dundee FC vs. Heart of Midlothian FC: Both Teams to Score
+1061497: Livingston FC vs. St Mirren FC: O/U 1.5
+1061498: Livingston FC vs. St Mirren FC: O/U 2.5
+1061499: Livingston FC vs. St Mirren FC: O/U 3.5
+1061500: Livingston FC vs. St Mirren FC: O/U 4.5
+1061501: Livingston FC vs. St Mirren FC: Both Teams to Score
+1061561: Málaga CF vs. AD Ceuta FC: O/U 1.5
+1061562: Málaga CF vs. AD Ceuta FC: O/U 2.5
+1061563: Málaga CF vs. AD Ceuta FC: O/U 3.5
+1061564: Málaga CF vs. AD Ceuta FC: O/U 4.5
+1061565: Málaga CF vs. AD Ceuta FC: Both Teams to Score
+1061566: Granada CF vs. CD Castellón: O/U 1.5
+1061567: Granada CF vs. CD Castellón: O/U 2.5
+1061568: Granada CF vs. CD Castellón: O/U 3.5
+1061569: Granada CF vs. CD Castellón: O/U 4.5
+1061570: Granada CF vs. CD Castellón: Both Teams to Score
+1061571: CD Leganés vs. Real Valladolid CF: O/U 1.5
+1061572: CD Leganés vs. Real Valladolid CF: O/U 2.5
+1061573: CD Leganés vs. Real Valladolid CF: O/U 3.5
+1061574: CD Leganés vs. Real Valladolid CF: O/U 4.5
+1061575: CD Leganés vs. Real Valladolid CF: Both Teams to Score
+1061611: RC Deportivo La Coruña vs. Cádiz CF: O/U 1.5
+1061715: Paris Saint-Germain FC vs. Paris FC: O/U 1.5
+1061716: Paris Saint-Germain FC vs. Paris FC: O/U 2.5
+1061717: Paris Saint-Germain FC vs. Paris FC: O/U 3.5
+1061718: Paris Saint-Germain FC vs. Paris FC: O/U 4.5
+1061719: Paris Saint-Germain FC vs. Paris FC: Both Teams to Score
+1061720: Lille OSC vs. Olympique Lyonnais: O/U 1.5
+1061721: Lille OSC vs. Olympique Lyonnais: O/U 2.5
+1061722: Lille OSC vs. Olympique Lyonnais: O/U 3.5
+1061723: Lille OSC vs. Olympique Lyonnais: O/U 4.5
+1061724: Lille OSC vs. Olympique Lyonnais: Both Teams to Score
+1061725: Le Mans FC vs. AS Nancy-Lorraine: O/U 1.5
+1061726: Le Mans FC vs. AS Nancy-Lorraine: O/U 2.5
+1061727: Le Mans FC vs. AS Nancy-Lorraine: O/U 3.5
+1061728: Le Mans FC vs. AS Nancy-Lorraine: O/U 4.5
+1061729: Le Mans FC vs. AS Nancy-Lorraine: Both Teams to Score
+1061730: US Chantilly vs. Stade Rennais FC 1901: O/U 1.5
+1061731: US Chantilly vs. Stade Rennais FC 1901: O/U 2.5
+1061732: US Chantilly vs. Stade Rennais FC 1901: O/U 3.5
+1061733: US Chantilly vs. Stade Rennais FC 1901: O/U 4.5
+1061734: US Chantilly vs. Stade Rennais FC 1901: Both Teams to Score
+1061735: FC Nantes vs. OGC Nice: O/U 1.5
+1061736: FC Nantes vs. OGC Nice: O/U 2.5
+1061737: FC Nantes vs. OGC Nice: O/U 3.5
+1061738: FC Nantes vs. OGC Nice: O/U 4.5
+1061739: FC Nantes vs. OGC Nice: Both Teams to Score
+1061740: FC Metz vs. Montpellier HSC: O/U 1.5
+1061741: FC Metz vs. Montpellier HSC: O/U 2.5
+1061742: FC Metz vs. Montpellier HSC: O/U 3.5
+1061743: FC Metz vs. Montpellier HSC: O/U 4.5
+1061744: FC Metz vs. Montpellier HSC: Both Teams to Score
+1061745: FC Sochaux-Montbéliard vs. Racing Club de Lens: O/U 1.5
+1061746: FC Sochaux-Montbéliard vs. Racing Club de Lens: O/U 2.5
+1061747: FC Sochaux-Montbéliard vs. Racing Club de Lens: O/U 3.5
+1061748: FC Sochaux-Montbéliard vs. Racing Club de Lens: O/U 4.5
+1061749: FC Sochaux-Montbéliard vs. Racing Club de Lens: Both Teams to Score
+1063268: Will Genoa CFC win on 2026-01-12?
+1063269: Will Norwich City FC win on 2026-01-26?
+1063271: Will Genoa CFC vs. Cagliari Calcio end in a draw?
+1063272: Will Norwich City FC vs. Coventry City FC end in a draw?
+1063274: Will Coventry City FC win on 2026-01-26?
+1063275: Will Cagliari Calcio win on 2026-01-12?
+1063297: Will Juventus FC win on 2026-01-12?
+1063298: Will Juventus FC vs. US Cremonese end in a draw?
+1063299: Will US Cremonese win on 2026-01-12?
+1063325: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1)
+1063326: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Who wins the toss?
+1063327: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Completed match?
+1063328: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Toss Match Double Chattogram Challengers Winner
+1063329: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Toss Match Double Draw
+1063330: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Toss Match Double Durbar Rajshahi Winner
+1063334: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Team Top Batter Chattogram Challengers Winner
+1063335: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Team Top Batter Draw
+1063336: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Team Top Batter Durbar Rajshahi Winner
+1063337: BPL: Durdanto Dhaka vs Rangpur Riders (Game 1)
+1063338: BPL: Durdanto Dhaka vs Rangpur Riders (Game 1) - Who wins the toss?
+1063339: BPL: Durdanto Dhaka vs Rangpur Riders (Game 1) - Completed match?
+1063340: BPL: Durdanto Dhaka vs Rangpur Riders (Game 1) - Toss Match Double Durdanto Dhaka Winner
+1063341: BPL: Durdanto Dhaka vs Rangpur Riders (Game 1) - Toss Match Double Draw
+1063342: BPL: Durdanto Dhaka vs Rangpur Riders (Game 1) - Toss Match Double Rangpur Riders Winner
+1063343: BPL: Durdanto Dhaka vs Rangpur Riders (Game 1) - Most Sixes Durdanto Dhaka Winner
+1063344: BPL: Durdanto Dhaka vs Rangpur Riders (Game 1) - Most Sixes Draw
+1063345: BPL: Durdanto Dhaka vs Rangpur Riders (Game 1) - Most Sixes Rangpur Riders Winner
+1063346: BPL: Durdanto Dhaka vs Rangpur Riders (Game 1) - Team Top Batter Durdanto Dhaka Winner
+1063347: BPL: Durdanto Dhaka vs Rangpur Riders (Game 1) - Team Top Batter Draw
+1063348: BPL: Durdanto Dhaka vs Rangpur Riders (Game 1) - Team Top Batter Rangpur Riders Winner
+1063600: Juventus FC vs. US Cremonese: O/U 1.5
+1063602: Juventus FC vs. US Cremonese: O/U 2.5
+1063604: Juventus FC vs. US Cremonese: O/U 3.5
+1063605: Juventus FC vs. US Cremonese: O/U 4.5
+1063606: Juventus FC vs. US Cremonese: Both Teams to Score
+1063611: Genoa CFC vs. Cagliari Calcio: O/U 1.5
+1063613: Genoa CFC vs. Cagliari Calcio: O/U 2.5
+1063614: Genoa CFC vs. Cagliari Calcio: O/U 3.5
+1063615: Genoa CFC vs. Cagliari Calcio: O/U 4.5
+1063616: Genoa CFC vs. Cagliari Calcio: Both Teams to Score
+1063617: FC Internazionale Milano vs. SSC Napoli: O/U 1.5
+1063618: FC Internazionale Milano vs. SSC Napoli: O/U 2.5
+1063619: FC Internazionale Milano vs. SSC Napoli: O/U 3.5
+1063620: FC Internazionale Milano vs. SSC Napoli: O/U 4.5
+1063621: FC Internazionale Milano vs. SSC Napoli: Both Teams to Score
+1063627: Hellas Verona FC vs. SS Lazio: O/U 1.5
+1063628: Hellas Verona FC vs. SS Lazio: O/U 2.5
+1063629: Hellas Verona FC vs. SS Lazio: O/U 3.5
+1063630: Hellas Verona FC vs. SS Lazio: O/U 4.5
+1063631: Hellas Verona FC vs. SS Lazio: Both Teams to Score
+1063637: ACF Fiorentina vs. AC Milan: O/U 1.5
+1063638: ACF Fiorentina vs. AC Milan: O/U 2.5
+1063639: ACF Fiorentina vs. AC Milan: O/U 3.5
+1063640: ACF Fiorentina vs. AC Milan: O/U 4.5
+1063641: ACF Fiorentina vs. AC Milan: Both Teams to Score
+1063647: US Lecce vs. Parma Calcio 1913: O/U 1.5
+1063648: US Lecce vs. Parma Calcio 1913: O/U 2.5
+1063649: US Lecce vs. Parma Calcio 1913: O/U 3.5
+1063650: US Lecce vs. Parma Calcio 1913: O/U 4.5
+1063651: US Lecce vs. Parma Calcio 1913: Both Teams to Score
+1064010: Will Sevilla FC win on 2026-01-12?
+1064012: Will Sevilla FC vs. RC Celta de Vigo end in a draw?
+1064013: Will RC Celta de Vigo win on 2026-01-12?
+1064014: Will SD Huesca win on 2026-01-12?
+1064015: Will SD Huesca vs. Córdoba CF end in a draw?
+1064016: Will Córdoba CF win on 2026-01-12?
+1064213: Sevilla FC vs. RC Celta de Vigo: O/U 1.5
+1064214: Sevilla FC vs. RC Celta de Vigo: O/U 2.5
+1064215: Sevilla FC vs. RC Celta de Vigo: O/U 3.5
+1064216: Sevilla FC vs. RC Celta de Vigo: O/U 4.5
+1064217: Sevilla FC vs. RC Celta de Vigo: Both Teams to Score
+1064218: Levante UD vs. RCD Espanyol de Barcelona: O/U 1.5
+1064219: Levante UD vs. RCD Espanyol de Barcelona: O/U 2.5
+1064220: Levante UD vs. RCD Espanyol de Barcelona: O/U 3.5
+1064221: Levante UD vs. RCD Espanyol de Barcelona: O/U 4.5
+1064222: Levante UD vs. RCD Espanyol de Barcelona: Both Teams to Score
+1064223: Rayo Vallecano de Madrid vs. RCD Mallorca: O/U 1.5
+1064224: Rayo Vallecano de Madrid vs. RCD Mallorca: O/U 2.5
+1064225: Rayo Vallecano de Madrid vs. RCD Mallorca: O/U 3.5
+1064226: Rayo Vallecano de Madrid vs. RCD Mallorca: O/U 4.5
+1064227: Rayo Vallecano de Madrid vs. RCD Mallorca: Both Teams to Score
+1065103: Spread: Hull City AFC (-1.5)
+1065104: Hull City AFC vs. Watford FC: O/U 1.5
+1065105: Hull City AFC vs. Watford FC: O/U 2.5
+1065106: Hull City AFC vs. Watford FC: O/U 3.5
+1065107: Hull City AFC vs. Watford FC: O/U 4.5
+1065108: Hull City AFC vs. Watford FC: Both Teams to Score
+1065127: Spread: Ipswich Town FC (-1.5)
+1065128: Portsmouth FC vs. Ipswich Town FC: O/U 1.5
+1065129: Portsmouth FC vs. Ipswich Town FC: O/U 2.5
+1065130: Portsmouth FC vs. Ipswich Town FC: O/U 3.5
+1065131: Portsmouth FC vs. Ipswich Town FC: O/U 4.5
+1065132: Portsmouth FC vs. Ipswich Town FC: Both Teams to Score
+1065157: Spread: Sheffield United FC (-1.5)
+1065158: Sheffield United FC vs. Oxford United FC: O/U 1.5
+1065159: Sheffield United FC vs. Oxford United FC: O/U 2.5
+1065160: Sheffield United FC vs. Oxford United FC: O/U 3.5
+1065161: Sheffield United FC vs. Oxford United FC: O/U 4.5
+1065162: Sheffield United FC vs. Oxford United FC: Both Teams to Score
+1065631: Will Luís Marques Mendes win the first round by less than 2%?
+1065632: Will Luís Marques Mendes win the first round by 2–4%?
+1065633: Will Luís Marques Mendes win the first round by 4–6%?
+1065634: Will Luís Marques Mendes win the first round by at least 6%?
+1065635: Will André Ventura win the first round by less than 2%?
+1065636: Will André Ventura win the first round by 2–4%?
+1065637: Will André Ventura win the first round by at least 4%?
+1065638: Will António José Seguro win the first round?
+1065639: Will Henrique Gouveia e Melo win the first round?
+1065640: Will João Cotrim de Figueiredo win the first round?
+1065641: Will another person win the first round?
+1065658: Will Luís Marques Mendes win less than 16% of votes in the first round?
+1065659: Will Luís Marques Mendes win between 16% and 18% of votes in the first round?
+1065660: Will Luís Marques Mendes win between 18% and 20% of votes in the first round?
+1065661: Will Luís Marques Mendes win between 20% and 22% of votes in the first round?
+1065662: Will Luís Marques Mendes win between 22% and 24% of votes in the first round?
+1065663: Will Luís Marques Mendes win between 24% and 26% of votes in the first round?
+1065664: Will Luís Marques Mendes win more than 26% of votes in the first round?
+1065665: Will Henrique Gouveia e Melo win less than 12% of votes in the first round?
+1065666: Will Henrique Gouveia e Melo win between 12% and 14% of votes in the first round?
+1065667: Will Henrique Gouveia e Melo win between 14% and 16% of votes in the first round?
+1065668: Will Henrique Gouveia e Melo win between 16% and 18% of votes in the first round?
+1065669: Will Henrique Gouveia e Melo win between 18% and 20% of votes in the first round?
+1065670: Will Henrique Gouveia e Melo win between 20% and 22% of votes in the first round?
+1065671: Will Henrique Gouveia e Melo win more than 22% of votes in the first round?
+1065680: Will António José Seguro win less than 12% of votes in the first round?
+1065681: Will António José Seguro win between 12% and 14% of votes in the first round?
+1065682: Will António José Seguro win between 14% and 16% of votes in the first round?
+1065683: Will António José Seguro win between 16% and 18% of votes in the first round?
+1065684: Will António José Seguro win between 18% and 20% of votes in the first round?
+1065685: Will António José Seguro win between 20% and 22% of votes in the first round?
+1065686: Will António José Seguro win more than 22% of votes in the first round?
+1065687: Will João Cotrim de Figueiredo win less than 10% of votes in the first round?
+1065688: Will João Cotrim de Figueiredo win between 10% and 12% of votes in the first round?
+1065693: Will João Cotrim de Figueiredo win between 12% and 14% of votes in the first round?
+1065694: Will João Cotrim de Figueiredo win between 14% and 16% of votes in the first round?
+1065695: Will João Cotrim de Figueiredo win between 16% and 18% of votes in the first round?
+1065696: Will João Cotrim de Figueiredo win between 18% and 20% of votes in the first round?
+1065697: Will João Cotrim de Figueiredo win more than 20% of votes in the first round?
+1065702: Will André Ventura win less than 16% of votes in the first round?
+1065703: Will André Ventura win between 16% and 18% of votes in the first round?
+1065704: Will André Ventura win between 18% and 20% of votes in the first round?
+1065705: Will André Ventura win between 20% and 22% of votes in the first round?
+1065706: Will André Ventura win between 22% and 24% of votes in the first round?
+1065707: Will André Ventura win between 24% and 26% of votes in the first round?
+1065708: Will André Ventura win more than 26% of votes in the first round?
+1065811: Lamar Jackson traded by next season?
+1065900: Will Israel strike Lebanon on January 10, 2026?
+1065901: Will Israel strike Lebanon on January 11, 2026?
+1065902: Will Israel strike Lebanon on January 12, 2026?
+1065903: Will Israel strike Lebanon on January 13, 2026?
+1065904: Will Israel strike Lebanon on January 14, 2026?
+1065905: Will Israel strike Lebanon on January 15, 2026?
+1065906: Will Israel strike Lebanon on January 16, 2026?
+1065907: Will Israel strike Lebanon on January 17, 2026?
+1065970: Will Israel strike Gaza on January 9, 2026?
+1065972: Will Israel strike Gaza on January 11, 2026?
+1065973: Will Israel strike Gaza on January 12, 2026?
+1065974: Will Israel strike Gaza on January 13, 2026?
+1065975: Will Israel strike Gaza on January 14, 2026?
+1065976: Will Israel strike Gaza on January 15, 2026?
+1065977: Will Israel strike Gaza on January 16, 2026?
+1065978: Will Israel strike Gaza on January 17, 2026?
+1066009: Will Tim Walz resign by December 31, 2026?
+1066079: Will Darryn Peterson be the first pick in the 2026 NBA draft?
+1066080: Will Cameron Boozer be the first pick in the 2026 NBA draft?
+1066081: Will AJ Dybantsa be the first pick in the 2026 NBA draft?
+1066082: Will Caleb Wilson be the first pick in the 2026 NBA draft?
+1066083: Will Koa Peat be the first pick in the 2026 NBA draft?
+1066084: Will Nate Ament be the first pick in the 2026 NBA draft?
+1066085: Will Mikel Brown Jr. be the first pick in the 2026 NBA draft?
+1066086: Will Jayden Quaintance be the first pick in the 2026 NBA draft?
+1066087: Will Tounde Yessoufou be the first pick in the 2026 NBA draft?
+1066276: Will Ryan Seacrest say "New Year" or "New Year's" 30+ times on New Year's Rockin' Eve?
+1066292: Will "Greenland 2: Migration" Opening Weekend Box Office be less than 9m?
+1066293: Will "Greenland 2: Migration" Opening Weekend Box Office be between 9m and 10.5m?
+1066294: Will "Greenland 2: Migration" Opening Weekend Box Office be between 10.5m and 12m?
+1066295: Will "Greenland 2: Migration" Opening Weekend Box Office be between 12m and 13.5m?
+1066296: Will "Greenland 2: Migration" Opening Weekend Box Office be greater than 13.5m?
+1066308: Will Michigan be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066309: Will Arizona be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066310: Will Iowa State be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066311: Will UConn be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066312: Will Duke be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066313: Will Purdue be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066314: Will Gonzaga be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066315: Will Houston be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066316: Will Michigan State be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066317: Will BYU be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066318: Will Vanderbilt be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066319: Will North Carolina be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066320: Will Nebraska be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066321: Will Louisville be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066322: Will Alabama be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066323: Will Texas Tech be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066324: Will Kansas be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066325: Will Arkansas be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066326: Will Illinois be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066327: Will Tennessee be a number 1 seed in the 2026 NCAA Men’s Basketball March Madness Tournament?
+1066379: Will MrBeast hit 465 Million subscribers by January 31?
+1066556: Lai Ching-te impeached by June 30?
+1066639: Kings vs. Blue Jackets
+1066640: Islanders vs. Flyers
+1066641: Utah vs. Lightning
+1066642: Bruins vs. Rangers
+1066643: Ducks vs. Oilers
+1067175: Will JPMorgan Chase fail by June 30, 2026?
+1067176: Will HSBC fail by June 30, 2026?
+1067177: Will Scotiabank fail by June 30, 2026?
+1067178: Will BNP Paribas fail by June 30, 2026?
+1067179: Will UBS fail by June 30, 2026?
+1067180: Will Deutsche Bank fail by June 30, 2026?
+1067181: Will Citigroup fail by June 30, 2026?
+1067182: Will Goldman Sachs fail by June 30, 2026?
+1067187: Xi Jinping divorce before 2027?
+1067220: Will Marty Supreme make 70 million or more domestically by January 31?
+1067227: Will Greenland 2: Migration make 25 million or more domestically by January 31?
+1067496: Will FC Porto win on 2026-01-26?
+1067497: Will FC Porto vs. Gil Vicente FC end in a draw?
+1067498: Will Gil Vicente FC win on 2026-01-26?
+1067511: Will Anaconda make 70 million or more domestically by January 31?
+1067835: Will Lighter reach $10 before 2027?
+1067836: Will Lighter reach $8 before 2027?
+1067837: Will Lighter reach $6 before 2027?
+1067838: Will Lighter reach $4 before 2027?
+1067839: Will Lighter dip to $2 before 2027?
+1067840: Will Lighter dip to $1.5 before 2027?
+1067841: Will Lighter dip to $1 before 2027?
+1067844: SD Huesca vs. Córdoba CF: O/U 1.5
+1067846: SD Huesca vs. Córdoba CF: O/U 2.5
+1067847: SD Huesca vs. Córdoba CF: O/U 3.5
+1067848: SD Huesca vs. Córdoba CF: O/U 4.5
+1067849: SD Huesca vs. Córdoba CF: Both Teams to Score
+1067851: Spread: Liverpool FC (-2.5)
+1067852: Liverpool FC vs. Barnsley FC: O/U 1.5
+1067853: Liverpool FC vs. Barnsley FC: O/U 2.5
+1067854: Liverpool FC vs. Barnsley FC: O/U 3.5
+1067855: Liverpool FC vs. Barnsley FC: O/U 4.5
+1067856: Liverpool FC vs. Barnsley FC: Both Teams to Score
+1067857: Spread: Manchester United FC (-1.5)
+1067858: Manchester United FC vs. Brighton & Hove Albion FC: O/U 1.5
+1067859: Manchester United FC vs. Brighton & Hove Albion FC: O/U 2.5
+1067860: Manchester United FC vs. Brighton & Hove Albion FC: O/U 3.5
+1067861: Manchester United FC vs. Brighton & Hove Albion FC: O/U 4.5
+1067862: Manchester United FC vs. Brighton & Hove Albion FC: Both Teams to Score
+1067863: Spread: Arsenal FC (-2.5)
+1067864: Portsmouth FC vs. Arsenal FC: O/U 1.5
+1067865: Portsmouth FC vs. Arsenal FC: O/U 2.5
+1067866: Portsmouth FC vs. Arsenal FC: O/U 3.5
+1067867: Portsmouth FC vs. Arsenal FC: O/U 4.5
+1067868: Portsmouth FC vs. Arsenal FC: Both Teams to Score
+1067869: Spread: Leeds United FC (-1.5)
+1067870: Derby County FC vs. Leeds United FC: O/U 1.5
+1067871: Derby County FC vs. Leeds United FC: O/U 2.5
+1067872: Derby County FC vs. Leeds United FC: O/U 3.5
+1067873: Derby County FC vs. Leeds United FC: O/U 4.5
+1067874: Derby County FC vs. Leeds United FC: Both Teams to Score
+1067887: Spread: Norwich City FC (-1.5)
+1067888: Norwich City FC vs. Walsall FC: O/U 1.5
+1067889: Norwich City FC vs. Walsall FC: O/U 2.5
+1067890: Norwich City FC vs. Walsall FC: O/U 3.5
+1067891: Norwich City FC vs. Walsall FC: O/U 4.5
+1067892: Norwich City FC vs. Walsall FC: Both Teams to Score
+1067893: Spread: Salford City FC (-1.5)
+1067894: Salford City FC vs. Swindon Town FC: O/U 1.5
+1067895: Salford City FC vs. Swindon Town FC: O/U 2.5
+1067896: Salford City FC vs. Swindon Town FC: O/U 3.5
+1067897: Salford City FC vs. Swindon Town FC: O/U 4.5
+1067898: Salford City FC vs. Swindon Town FC: Both Teams to Score
+1067905: Spread: West Ham United FC (-1.5)
+1067906: West Ham United FC vs. Queens Park Rangers FC: O/U 1.5
+1067907: West Ham United FC vs. Queens Park Rangers FC: O/U 2.5
+1067908: West Ham United FC vs. Queens Park Rangers FC: O/U 3.5
+1067909: West Ham United FC vs. Queens Park Rangers FC: O/U 4.5
+1067910: West Ham United FC vs. Queens Park Rangers FC: Both Teams to Score
+1067953: Spread: Hull City AFC (-1.5)
+1067954: Hull City AFC vs. Blackburn Rovers FC: O/U 1.5
+1067955: Hull City AFC vs. Blackburn Rovers FC: O/U 2.5
+1067956: Hull City AFC vs. Blackburn Rovers FC: O/U 3.5
+1067957: Hull City AFC vs. Blackburn Rovers FC: O/U 4.5
+1067958: Hull City AFC vs. Blackburn Rovers FC: Both Teams to Score
+1067971: Spread: Sheffield United FC (-1.5)
+1067972: Sheffield United FC vs. Mansfield Town FC: O/U 1.5
+1067973: Sheffield United FC vs. Mansfield Town FC: O/U 2.5
+1067974: Sheffield United FC vs. Mansfield Town FC: O/U 3.5
+1067975: Sheffield United FC vs. Mansfield Town FC: O/U 4.5
+1067976: Sheffield United FC vs. Mansfield Town FC: Both Teams to Score
+1067989: Spread: Swansea City AFC (-1.5)
+1067990: Swansea City AFC vs. West Bromwich Albion FC: O/U 1.5
+1067991: Swansea City AFC vs. West Bromwich Albion FC: O/U 2.5
+1067992: Swansea City AFC vs. West Bromwich Albion FC: O/U 3.5
+1067993: Swansea City AFC vs. West Bromwich Albion FC: O/U 4.5
+1067994: Swansea City AFC vs. West Bromwich Albion FC: Both Teams to Score
+1068040: Will MicroStrategy announce holding 680k+ BTC by January 31?
+1068045: Will MicroStrategy announce holding 800k+ BTC by December 31, 2026?
+1068299: Opinion FDV above $500M one day after launch?
+1068300: Opinion FDV above $1B one day after launch?
+1068302: Opinion FDV above $2B one day after launch?
+1068303: Opinion FDV above $3B one day after launch?
+1068304: Opinion FDV above $4B one day after launch?
+1068305: Opinion FDV above $5B one day after launch?
+1068307: Base FDV above $2B one day after launch?
+1068308: Base FDV above $4B one day after launch?
+1068309: Base FDV above $6B one day after launch?
+1068310: Base FDV above $8B one day after launch?
+1068311: Base FDV above $10B one day after launch?
+1068312: Base FDV above $12B one day after launch?
+1068317: Based FDV above $200M one day after launch?
+1068318: Rainbow FDV above $200M one day after launch?
+1068319: Rainbow FDV above $400M one day after launch?
+1068320: Rainbow FDV above $600M one day after launch?
+1068321: Rainbow FDV above $800M one day after launch?
+1068322: Rainbow FDV above $1B one day after launch?
+1068327: Will Pump.fun perform an airdrop by December 31, 2026
+1068336: Perena FDV above $100M one day after launch?
+1068337: Perena FDV above $200M one day after launch?
+1068338: Perena FDV above $300M one day after launch?
+1068339: Perena FDV above $400M one day after launch?
+1068340: Perena FDV above $500M one day after launch?
+1068341: Perena FDV above $600M one day after launch?
+1068346: Will Bitcoin outperform Gold in 2026?
+1068359: Hyperliquid listed on Coinbase before 2027?
+1068384: Will El Salvador hold $1b+ of BTC by December 31, 2026?
+1068435: Will Bitcoin Dominance hit 70% before 2027?
+1068623: Altcoin market cap dip to $150B before 2027?
+1068681: Will Rabby launch a token by March 31, 2026?
+1068682: Will Rabby launch a token by June 30, 2026?
+1068683: Will Rabby launch a token by September 30, 2026?
+1068684: Will Rabby launch a token by December 31, 2026?
+1068689: Will Phantom launch a token by March 31, 2026?
+1068690: Will Phantom launch a token by June 30, 2026?
+1068691: Will Phantom launch a token by September 30, 2026?
+1068692: Will Phantom launch a token by December 31, 2026?
+1068701: Another crypto hack over $100m before 2027?
+1068702: Trump eliminates capital gains tax on crypto before 2027?
+1068707: Will knots flip bitcoin core before 2027?
+1068728: Will USDT market cap hit $200B before 2027?
+1068733: Will stablecoins hit $500B before 2027?
+1068762: Will USDC hit 50% of USDT market cap by December 31, 2026?
+1068767: Will Metamask daily perps revenue hit $100k by December 31, 2026?
+1068768: Will RWAs hit $50B by December 31, 2026?
+1069148: Will JPMorgan Chase (JPM) beat quarterly earnings?
+1069149: Will BNY (BK) beat quarterly earnings?
+1069150: Will Delta Air Lines (DAL) beat quarterly earnings?
+1069183: Will Zelenskyy talk to Putin by January 31?
+1069184: Will Zelenskyy talk to Putin by March 31?
+1069497: Al Fateh Saudi Club vs. Al Riyadh Saudi Club: O/U 1.5
+1069498: Al Fateh Saudi Club vs. Al Riyadh Saudi Club: O/U 2.5
+1069499: Al Fateh Saudi Club vs. Al Riyadh Saudi Club: O/U 3.5
+1069500: Al Fateh Saudi Club vs. Al Riyadh Saudi Club: O/U 4.5
+1069501: Al Fateh Saudi Club vs. Al Riyadh Saudi Club: Both Teams to Score
+1069503: Damac Saudi Club vs. Al Ittihad Saudi Club: O/U 1.5
+1069504: Damac Saudi Club vs. Al Ittihad Saudi Club: O/U 2.5
+1069505: Damac Saudi Club vs. Al Ittihad Saudi Club: O/U 3.5
+1069506: Damac Saudi Club vs. Al Ittihad Saudi Club: O/U 4.5
+1069507: Damac Saudi Club vs. Al Ittihad Saudi Club: Both Teams to Score
+1069508: Al Okhdood SC vs. Al Kholood Saudi Club: O/U 1.5
+1069509: Al Okhdood SC vs. Al Kholood Saudi Club: O/U 2.5
+1069510: Al Okhdood SC vs. Al Kholood Saudi Club: O/U 3.5
+1069511: Al Okhdood SC vs. Al Kholood Saudi Club: O/U 4.5

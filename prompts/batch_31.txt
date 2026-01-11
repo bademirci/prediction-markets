@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1123204: SA20: Paarl Royals vs Durban's Super Giants (Game 1) - Most Sixes Durban's Super Giants Winner
+1123205: SA20: Paarl Royals vs Durban's Super Giants (Game 1) - Team Top Batter Paarl Royals Winner
+1123206: SA20: Paarl Royals vs Durban's Super Giants (Game 1) - Team Top Batter Draw
+1123207: SA20: Paarl Royals vs Durban's Super Giants (Game 1) - Team Top Batter Durban's Super Giants Winner
+1123208: Will SpaceX Starship Flight Test 12 launch by February 28?
+1123209: Will SpaceX Starship Flight Test 12 launch by March 31?
+1123210: Will Tommy Rees be the next Cleveland Browns Head Coach?
+1123211: Will Jim Schwartz be the next Cleveland Browns Head Coach?
+1123212: Will Brian Daboll be the next Cleveland Browns Head Coach?
+1123213: Will Kliff Kingsbury be the next Cleveland Browns Head Coach?
+1123214: Will Mike McCarthy be the next Cleveland Browns Head Coach?
+1123215: Will Matt Nagy be the next Cleveland Browns Head Coach?
+1123216: Will Robert Saleh be the next Cleveland Browns Head Coach?
+1123217: Will Klayton Adams be the next Cleveland Browns Head Coach?
+1123218: Will Joe Brady be the next Cleveland Browns Head Coach?
+1123219: Will Thomas Brown be the next Cleveland Browns Head Coach?
+1123220: Will Klint Kubiak be the next Cleveland Browns Head Coach?
+1123221: Will Mike LaFleur be the next Cleveland Browns Head Coach?
+1123222: Will Davis Webb be the next Cleveland Browns Head Coach?
+1123223: Will Lou Anarumo be the next Cleveland Browns Head Coach?
+1123224: Will Matt Burke be the next Cleveland Browns Head Coach?
+1123225: Will Jeff Hafley be the next Cleveland Browns Head Coach?
+1123226: Will Brian Flores be the next Cleveland Browns Head Coach?
+1123227: Will Jesse Minter be the next Cleveland Browns Head Coach?
+1123228: Will Chris Shula be the next Cleveland Browns Head Coach?
+1123229: Will Ryan Day be the next Cleveland Browns Head Coach?
+1123230: Will Marcus Freeman be the next Cleveland Browns Head Coach?
+1123231: Will Dan Lanning be the next Cleveland Browns Head Coach?
+1123232: Will John Harbaugh be the next Cleveland Browns Head Coach?
+1123233: Will Mike McDaniel be the next Cleveland Browns Head Coach?
+1123234: Will Mike Tomlin be the next Cleveland Browns Head Coach?
+1123235: Will Mike McDaniel be the next Cleveland Browns Head Coach?
+1123262: Will Enrique Leaño win the 2026 Sucre mayoral election?
+1123263: Will Horacio Poppe win the 2026 Sucre mayoral election?
+1123264: Will Wilber Chocamani win the 2026 Sucre mayoral election?
+1123265: Will Erick Marcelo Pedrazas López win the 2026 Sucre mayoral election?
+1123267: Will Franz Tata García win the 2026 Sucre mayoral election?
+1123304: Will Brian Flores be the next Arizona Cardinals Head Coach?
+1123305: Will Vance Joseph be the next Arizona Cardinals Head Coach?
+1123306: Will Klint Kubiak be the next Arizona Cardinals Head Coach?
+1123307: Will Chris Shula be the next Arizona Cardinals Head Coach?
+1123308: Will Mike McCarthy be the next Arizona Cardinals Head Coach?
+1123309: Will Arthur Smith be the next Arizona Cardinals Head Coach?
+1123310: Will Klayton Adams be the next Arizona Cardinals Head Coach?
+1123311: Will Aden Durde be the next Arizona Cardinals Head Coach?
+1123312: Will Grant Udinski be the next Arizona Cardinals Head Coach?
+1123313: Will Declan Doyle be the next Arizona Cardinals Head Coach?
+1123314: Will Josh McCown be the next Arizona Cardinals Head Coach?
+1123315: Will Mike LaFleur be the next Arizona Cardinals Head Coach?
+1123316: Will John Harbaugh be the next Arizona Cardinals Head Coach?
+1123317: Will Mike McDaniel be the next Arizona Cardinals Head Coach?
+1123361: Will Condoleezza Rice be the next Cleveland Browns Head Coach?
+1123362: Will the Christian Democratic Party (PDC) win the most gubernatorial elections in Bolivia in 2026?
+1123363: Will Libre – Liberty and Democracy (LIBRE) win the most gubernatorial elections in Bolivia in 2026?
+1123364: Will Unity Bloc (UNIDAD) win the most gubernatorial elections in Bolivia in 2026?
+1123365: Will Popular Alliance (AP) win the most gubernatorial elections in Bolivia in 2026?
+1123366: Will Autonomy for Bolivia – Súmate (APB Súmate) win the most gubernatorial elections in Bolivia in 2026?
+1123367: Will the Movement for Socialism (MAS-IPSP) win the most gubernatorial elections in Bolivia in 2026?
+1123379: Will Elon Musk change his X profile picture by January 31?
+1123388: Will Kliff Kingsbury be the next Las Vegas Raiders Head Coach?
+1123389: Will Robert Saleh be the next Las Vegas Raiders Head Coach?
+1123390: Will Brian Flores be the next Las Vegas Raiders Head Coach?
+1123391: Will Mike McCarthy be the next Las Vegas Raiders Head Coach?
+1123392: Will Kevin Stefanski be the next Las Vegas Raiders Head Coach?
+1123393: Will Joe Brady be the next Las Vegas Raiders Head Coach?
+1123394: Will Klint Kubiak be the next Las Vegas Raiders Head Coach?
+1123395: Will Adam Stenavich be the next Las Vegas Raiders Head Coach?
+1123396: Will Mike LaFleur be the next Las Vegas Raiders Head Coach?
+1123397: Will Todd Monken be the next Las Vegas Raiders Head Coach?
+1123398: Will Jesse Minter be the next Las Vegas Raiders Head Coach?
+1123399: Will Chris Shula be the next Las Vegas Raiders Head Coach?
+1123400: Will Matt Burke be the next Las Vegas Raiders Head Coach?
+1123401: Will Anthony Weaver be the next Las Vegas Raiders Head Coach?
+1123402: Will Declan Doyle be the next Las Vegas Raiders Head Coach?
+1123403: Will Grant Udinski be the next Las Vegas Raiders Head Coach?
+1123404: Will Tom Brady be the next Las Vegas Raiders Head Coach?
+1123405: Will Alix Earle be the next Las Vegas Raiders Head Coach?
+1123406: Will John Harbaugh be the next Las Vegas Raiders Head Coach?
+1123407: Will Mike McDaniel be the next Las Vegas Raiders Head Coach?
+1123437: Venezuela coup attempt by March 31?
+1123442: Will Klint Kubiak be the next Atlanta Falcons Head Coach?
+1123443: Will Kevin Stefanski be the next Atlanta Falcons Head Coach?
+1123444: Will Kliff Kingsbury be the next Atlanta Falcons Head Coach?
+1123445: Will Joe Brady be the next Atlanta Falcons Head Coach?
+1123446: Will Klayton Adams be the next Atlanta Falcons Head Coach?
+1123447: Will Jeff Hafley be the next Atlanta Falcons Head Coach?
+1123448: Will Mike LaFleur be the next Atlanta Falcons Head Coach?
+1123449: Will Ejiro Evero be the next Atlanta Falcons Head Coach?
+1123450: Will Bill Belichick be the next Atlanta Falcons Head Coach?
+1123451: Will Anthony Weaver be the next Atlanta Falcons Head Coach?
+1123452: Will John Harbaugh be the next Atlanta Falcons Head Coach?
+1123453: Will Mike McDaniel be the next Atlanta Falcons Head Coach?
+1123479: Iran coup attempt by June 30?
+1123528: Will Vance Joseph be the next Tennessee Titans Head Coach?
+1123529: Will Lou Anarumo be the next Tennessee Titans Head Coach?
+1123530: Will Steve Spagnuolo be the next Tennessee Titans Head Coach?
+1123531: Will Matt Nagy be the next Tennessee Titans Head Coach?
+1123532: Will Kevin Stefanski be the next Tennessee Titans Head Coach?
+1123533: Will Jesse Minter be the next Tennessee Titans Head Coach?
+1123534: Will Anthony Weaver be the next Tennessee Titans Head Coach?
+1123535: Will Matt Burke be the next Tennessee Titans Head Coach?
+1123536: Will John Harbaugh be the next Tennessee Titans Head Coach?
+1123537: Will Mike McDaniel be the next Tennessee Titans Head Coach?
+1123582: Another critical Cloudflare incident by February 28?
+1123759: Will CA Aldosivi win on 2026-01-22?
+1123760: Will CA Aldosivi vs. CSyD Defensa y Justicia end in a draw?
+1123761: Will CSyD Defensa y Justicia win on 2026-01-22?
+1123762: Will CA Banfield win on 2026-01-22?
+1123763: Will CA Banfield vs. CA Huracán end in a draw?
+1123764: Will CA Huracán win on 2026-01-22?
+1123765: Will CA Unión win on 2026-01-22?
+1123766: Will CA Unión vs. CA Platense end in a draw?
+1123767: Will CA Platense win on 2026-01-22?
+1123768: Will CA Central Córdoba win on 2026-01-22?
+1123769: Will CA Central Córdoba vs. CA Gimnasia y Esgrima de Mendoza end in a draw?
+1123770: Will CA Gimnasia y Esgrima de Mendoza win on 2026-01-22?
+1123771: Will Instituto AC Córdoba win on 2026-01-22?
+1123772: Will Instituto AC Córdoba vs. CA Vélez Sarsfield end in a draw?
+1123773: Will CA Vélez Sarsfield win on 2026-01-22?
+1123774: Will CA San Lorenzo de Almagro win on 2026-01-23?
+1123775: Will CA San Lorenzo de Almagro vs. CA Lanús end in a draw?
+1123776: Will CA Lanús win on 2026-01-23?
+1123777: Will CA Independiente win on 2026-01-23?
+1123778: Will CA Independiente vs. Estudiantes de La Plata end in a draw?
+1123779: Will Estudiantes de La Plata win on 2026-01-23?
+1123780: Will CS Independiente Rivadavia win on 2026-01-23?
+1123781: Will CS Independiente Rivadavia vs. CA Tucumán end in a draw?
+1123782: Will CA Tucumán win on 2026-01-23?
+1123783: Will CA Talleres win on 2026-01-23?
+1123784: Will CA Talleres vs. CA Newell's Old Boys end in a draw?
+1123785: Will CA Newell's Old Boys win on 2026-01-23?
+1123786: Will CA Barracas Central win on 2026-01-24?
+1123787: Will CA Barracas Central vs. CA River Plate end in a draw?
+1123788: Will CA River Plate win on 2026-01-24?
+1123789: Will Gimnasia y Esgrima de La Plata win on 2026-01-24?
+1123790: Will Gimnasia y Esgrima de La Plata vs. Racing Club end in a draw?
+1123791: Will Racing Club win on 2026-01-24?
+1123792: Will CA Rosario Central win on 2026-01-24?
+1123793: Will CA Rosario Central vs. CA Belgrano end in a draw?
+1123794: Will CA Belgrano win on 2026-01-24?
+1123795: Will CA Boca Juniors win on 2026-01-25?
+1123796: Will CA Boca Juniors vs. CD Riestra end in a draw?
+1123797: Will CD Riestra win on 2026-01-25?
+1123798: Will CA Tigre win on 2026-01-25?
+1123799: Will CA Tigre vs. AA Estudiantes end in a draw?
+1123800: Will AA Estudiantes win on 2026-01-25?
+1123801: Will AA Argentinos Juniors win on 2026-01-25?
+1123802: Will AA Argentinos Juniors vs. CA Sarmiento end in a draw?
+1123803: Will CA Sarmiento win on 2026-01-25?
+1123804: Will CA Platense win on 2026-01-26?
+1123805: Will CA Platense vs. Instituto AC Córdoba end in a draw?
+1123806: Will Instituto AC Córdoba win on 2026-01-26?
+1123807: Will CA Vélez Sarsfield win on 2026-01-27?
+1123808: Will CA Vélez Sarsfield vs. CA Talleres end in a draw?
+1123809: Will CA Talleres win on 2026-01-27?
+1123810: Will CA Huracán win on 2026-01-27?
+1123811: Will CA Huracán vs. CS Independiente Rivadavia end in a draw?
+1123812: Will CS Independiente Rivadavia win on 2026-01-27?
+1123813: Will CA Gimnasia y Esgrima de Mendoza win on 2026-01-27?
+1123814: Will CA Gimnasia y Esgrima de Mendoza vs. CA San Lorenzo de Almagro end in a draw?
+1123815: Will CA San Lorenzo de Almagro win on 2026-01-27?
+1123816: Will CA Newell's Old Boys win on 2026-01-27?
+1123817: Will CA Newell's Old Boys vs. CA Independiente end in a draw?
+1123818: Will CA Independiente win on 2026-01-27?
+1123819: Will CA Tucumán win on 2026-01-27?
+1123820: Will CA Tucumán vs. CA Central Córdoba end in a draw?
+1123821: Will CA Central Córdoba win on 2026-01-27?
+1123822: Will CA Aldosivi win on 2026-01-28?
+1123823: Will CA Aldosivi vs. CA Barracas Central end in a draw?
+1123824: Will CA Barracas Central win on 2026-01-28?
+1123825: Will Racing Club win on 2026-01-28?
+1123826: Will Racing Club vs. CA Rosario Central end in a draw?
+1123827: Will CA Rosario Central win on 2026-01-28?
+1123828: Will CA River Plate win on 2026-01-28?
+1123829: Will CA River Plate vs. Gimnasia y Esgrima de La Plata end in a draw?
+1123830: Will Gimnasia y Esgrima de La Plata win on 2026-01-28?
+1123831: Will Estudiantes de La Plata win on 2026-01-28?
+1123832: Will Estudiantes de La Plata vs. CA Boca Juniors end in a draw?
+1123833: Will CA Boca Juniors win on 2026-01-28?
+1123834: Will CD Riestra win on 2026-01-29?
+1123835: Will CD Riestra vs. CSyD Defensa y Justicia end in a draw?
+1123836: Will CSyD Defensa y Justicia win on 2026-01-29?
+1123837: Will CA Belgrano win on 2026-01-29?
+1123838: Will CA Belgrano vs. CA Tigre end in a draw?
+1123839: Will CA Tigre win on 2026-01-29?
+1123840: Will CA Lanús win on 2026-01-29?
+1123841: Will CA Lanús vs. CA Unión end in a draw?
+1123842: Will CA Unión win on 2026-01-29?
+1123843: Will CA Sarmiento win on 2026-01-29?
+1123844: Will CA Sarmiento vs. CA Banfield end in a draw?
+1123845: Will CA Banfield win on 2026-01-29?
+1123846: Will AA Estudiantes win on 2026-01-29?
+1123847: Will AA Estudiantes vs. AA Argentinos Juniors end in a draw?
+1123848: Will AA Argentinos Juniors win on 2026-01-29?
+1123849: Will CA San Lorenzo de Almagro win on 2026-01-31?
+1123850: Will CA San Lorenzo de Almagro vs. CA Central Córdoba end in a draw?
+1123851: Will CA Central Córdoba win on 2026-01-31?
+1123852: Will CA Independiente win on 2026-01-31?
+1123853: Will CA Independiente vs. CA Vélez Sarsfield end in a draw?
+1123854: Will CA Vélez Sarsfield win on 2026-01-31?
+1123855: Will CA Tucumán win on 2026-01-31?
+1123856: Will CA Tucumán vs. CA Huracán end in a draw?
+1123857: Will CA Huracán win on 2026-01-31?
+1123858: Will CA Talleres win on 2026-01-31?
+1123859: Will CA Talleres vs. CA Platense end in a draw?
+1123860: Will CA Platense win on 2026-01-31?
+1123861: Will CA Barracas Central win on 2026-02-01?
+1123862: Will CA Barracas Central vs. CD Riestra end in a draw?
+1123863: Will CD Riestra win on 2026-02-01?
+1123864: Will CA Boca Juniors win on 2026-02-01?
+1123865: Will CA Boca Juniors vs. CA Newell's Old Boys end in a draw?
+1123866: Will CA Newell's Old Boys win on 2026-02-01?
+1123867: Will CA Rosario Central win on 2026-02-01?
+1123868: Will CA Rosario Central vs. CA River Plate end in a draw?
+1123869: Will CA River Plate win on 2026-02-01?
+1123870: Will Gimnasia y Esgrima de La Plata win on 2026-02-02?
+1123871: Will Gimnasia y Esgrima de La Plata vs. CA Aldosivi end in a draw?
+1123872: Will CA Aldosivi win on 2026-02-02?
+1123873: Will CSyD Defensa y Justicia win on 2026-02-02?
+1123874: Will CSyD Defensa y Justicia vs. Estudiantes de La Plata end in a draw?
+1123875: Will Estudiantes de La Plata win on 2026-02-02?
+1123876: Will CA Tigre win on 2026-02-02?
+1123877: Will CA Tigre vs. Racing Club end in a draw?
+1123878: Will Racing Club win on 2026-02-02?
+1123879: Will CA Unión win on 2026-02-02?
+1123880: Will CA Unión vs. CA Gimnasia y Esgrima de Mendoza end in a draw?
+1123881: Will CA Gimnasia y Esgrima de Mendoza win on 2026-02-02?
+1123882: Will AA Argentinos Juniors win on 2026-02-02?
+1123883: Will AA Argentinos Juniors vs. CA Belgrano end in a draw?
+1123884: Will CA Belgrano win on 2026-02-02?
+1123913: Amouranth divorced by June 30? 
+1123919: Will Qairat FK win on 2026-01-20?
+1123920: Will Qairat FK vs. Club Brugge KV end in a draw?
+1123921: Will Club Brugge KV win on 2026-01-20?
+1123923: Will FK Bodø/Glimt win on 2026-01-20?
+1123924: Will FK Bodø/Glimt vs. Manchester City FC end in a draw?
+1123925: Will Manchester City FC win on 2026-01-20?
+1123928: Valorant: FUT Esports vs Gentle Mates (BO3)
+1123929: Valorant: FUT Esports vs Gentle Mates - Map 1 Winner
+1123930: Valorant: FUT Esports vs Gentle Mates - Map 2 Winner
+1123931: Games Total: O/U 2.5
+1123932: FUT Esports to win 2 maps?
+1123933: FUT Esports to win 0 maps?
+1123934: FUT Esports to win 1 maps?
+1123935: Gentle Mates Rounds Handicap (-2.5)
+1123936: Map Handicap: GM (-1.5)
+1123937: Total Rounds Over/Under 54.5
+1123938: Total Rounds Over/Under 52.5
+1123939: Total Rounds Over/Under 53.5
+1123940: Gentle Mates to win 0 maps?
+1123941: Gentle Mates to win 1 maps?
+1123942: Gentle Mates to win 2 maps?
+1123961: Spread: Manchester City FC (-1.5)
+1123962: FK Bodø/Glimt vs. Manchester City FC: O/U 1.5
+1123963: FK Bodø/Glimt vs. Manchester City FC: O/U 2.5
+1123964: FK Bodø/Glimt vs. Manchester City FC: O/U 3.5
+1123965: FK Bodø/Glimt vs. Manchester City FC: O/U 4.5
+1123966: FK Bodø/Glimt vs. Manchester City FC: Both Teams to Score
+1123967: Spread: Club Brugge KV (-1.5)
+1123968: Qairat FK vs. Club Brugge KV: O/U 1.5
+1123969: Qairat FK vs. Club Brugge KV: O/U 2.5
+1123970: Qairat FK vs. Club Brugge KV: O/U 3.5
+1123971: Qairat FK vs. Club Brugge KV: O/U 4.5
+1123972: Qairat FK vs. Club Brugge KV: Both Teams to Score
+1123981: QBgami in Week 1 of NFL Playoffs?
+1124147: Bangladesh July Charter referendum passes?
+1124168: Will Russia capture all of Myrnohrad by February 28?
+1124169: Will Trump visit Greenland by March 31?
+1124174: Will Trump and Machado share the Nobel Peace Prize?
+1124175: Will "Stranger Things: Season 5" be the top global Netflix show this week? (January 13, 2026)
+1124176: Will "Run Away" be the top global Netflix show this week? (January 13, 2026)
+1124177: Will "Emily in Paris: Season 5" be the top global Netflix show this week? (January 13, 2026)
+1124178: Will "11.22.63" be the top global Netflix show this week? (January 13, 2026)
+1124179: Will "Unlocked: A Jail Experiment: Season 2" be the top global Netflix show this week? (January 13, 2026)
+1124180: Will "His & Hers" be the top global Netflix show this week? (January 13, 2026)
+1124201: Will "Stranger Things: Season 5" be the #2 global Netflix show this week? (January 13, 2026)
+1124202: Will "Run Away" be the #2 global Netflix show this week? (January 13, 2026)
+1124203: Will "Emily in Paris: Season 5" be the #2 global Netflix show this week? (January 13, 2026)
+1124204: Will "11.22.63" be the #2 global Netflix show this week? (January 13, 2026)
+1124205: Will "Unlocked: A Jail Experiment: Season 2" be the #2 global Netflix show this week? (January 13, 2026)
+1124206: Will "His & Hers" be the #2 global Netflix show this week? (January 13, 2026)
+1124223: Will "Stranger Things: Season 5" be the top US Netflix show this week? (January 13, 2026)
+1124224: Will "Run Away" be the top US Netflix show this week? (January 13, 2026)
+1124225: Will "Emily in Paris: Season 5" be the top US Netflix show this week? (January 13, 2026)
+1124226: Will "11.22.63" be the top US Netflix show this week? (January 13, 2026)
+1124227: Will "Unlocked: A Jail Experiment: Season 2" be the top US Netflix show this week? (January 13, 2026)
+1124228: Will "His & Hers" be the top US Netflix show this week? (January 13, 2026)
+1124253: Italy Nordio Reform Referendum passes?
+1124266: Will "Stranger Things: Season 5" be the #2 US Netflix show this week? (January 13, 2026)
+1124267: Will "Run Away" be the #2 US Netflix show this week? (January 13, 2026)
+1124268: Will "Emily in Paris: Season 5" be the #2 US Netflix show this week? (January 13, 2026)
+1124269: Will "11.22.63" be the #2 US Netflix show this week? (January 13, 2026)
+1124270: Will "Unlocked: A Jail Experiment: Season 2" be the #2 US Netflix show this week? (January 13, 2026)
+1124271: Will "His & Hers" be the #2 US Netflix show this week? (January 13, 2026)
+1124293: Granada CF vs. SD Eibar: O/U 1.5
+1124294: Granada CF vs. SD Eibar: O/U 2.5
+1124295: Granada CF vs. SD Eibar: O/U 3.5
+1124296: Granada CF vs. SD Eibar: O/U 4.5
+1124298: Granada CF vs. SD Eibar: Both Teams to Score
+1124309: Will Valve remove Mirage from the Map Pool?
+1124310: Will Valve remove Inferno from the Map Pool?
+1124311: Will Valve remove Nuke from the Map Pool?
+1124312: Will Valve remove Dust 2 from the Map Pool?
+1124313: Will Valve remove Overpass from the Map Pool?
+1124314: Will Valve remove Ancient from the Map Pool?
+1124315: Will Valve remove Train from the Map Pool?
+1124614: Will $MARU reach $1B in Q1?
+1124615: Will $MARU reach $900M in Q1?
+1124616: Will $MARU reach $800M in Q1?
+1124617: Will $MARU reach $700M in Q1?
+1124618: Will $MARU reach $600M in Q1?
+1124631: Will Valve launch Premier Season 4 by January 31?
+1124632: Will Damac Saudi Club win on 2026-02-03?
+1124633: Will Damac Saudi Club vs. Al Kholood Saudi Club end in a draw?
+1124634: Will Al Kholood Saudi Club win on 2026-02-03?
+1124635: Will Al Khaleej Saudi Club win on 2026-02-03?
+1124636: Will Al Khaleej Saudi Club vs. Al Qadisiyah Saudi Club end in a draw?
+1124637: Will Al Qadisiyah Saudi Club win on 2026-02-03?
+1124638: Will Al Ettifaq Saudi Club win on 2026-02-03?
+1124639: Will Al Ettifaq Saudi Club vs. Al Taawoun Saudi Club end in a draw?
+1124640: Will Al Taawoun Saudi Club win on 2026-02-03?
+1124641: Will Lebanese Forces win the most seats in the 2026 Lebanese parliamentary election?
+1124642: Will Hezbollah win the most seats in the 2026 Lebanese parliamentary election?
+1124643: Will Amal Movement win the most seats in the 2026 Lebanese parliamentary election?
+1124644: Will Free Patriotic Movement win the most seats in the 2026 Lebanese parliamentary election?
+1124645: Will Progressive Socialist Party win the most seats in the 2026 Lebanese parliamentary election?
+1124646: Will Kataeb Party win the most seats in the 2026 Lebanese parliamentary election?
+1124647: Will Armenian Revolutionary Federation win the most seats in the 2026 Lebanese parliamentary election?
+1124648: Will Marada Movement win the most seats in the 2026 Lebanese parliamentary election?
+1124649: Will Independence Movement win the most seats in the 2026 Lebanese parliamentary election?
+1124650: Will Taqaddom Party win the most seats in the 2026 Lebanese parliamentary election?
+1124651: Will Islamic Charitable Projects Association win the most seats in the 2026 Lebanese parliamentary election?
+1124652: Will Islamic Group win the most seats in the 2026 Lebanese parliamentary election?
+1124653: Will Union Party win the most seats in the 2026 Lebanese parliamentary election?
+1124654: Will Arab Socialist Ba'ath Party in Lebanon win the most seats in the 2026 Lebanese parliamentary election?
+1124655: Will National Liberal Party win the most seats in the 2026 Lebanese parliamentary election?
+1124656: Will Lana – Social Democratic Party win the most seats in the 2026 Lebanese parliamentary election?
+1124657: Will Mada Party win the most seats in the 2026 Lebanese parliamentary election?
+1124658: Will Khatt Ahmar win the most seats in the 2026 Lebanese parliamentary election?
+1124659: Will Popular Nasserist Organization win the most seats in the 2026 Lebanese parliamentary election?
+1124660: Will National Dialogue Party win the most seats in the 2026 Lebanese parliamentary election?
+1124661: Will Dignity Movement win the most seats in the 2026 Lebanese parliamentary election?
+1124662: Will Watani Alliance win the most seats in the 2026 Lebanese parliamentary election?
+1124663: Will ReLebanon win the most seats in the 2026 Lebanese parliamentary election?
+1124697: Will "Evil Influencer: The Jodi Hildebrandt Story" be the top global Netflix movie this week? (January 13, 2026)
+1124698: Will "Priscilla" be the top global Netflix movie this week? (January 13, 2026)
+1124699: Will "Man on Fire" be the top global Netflix movie this week? (January 13, 2026)
+1124700: Will "Kpop Demon Hunters" be the top global Netflix movie this week? (January 13, 2026)
+1124701: Will "Madagascar" be the top global Netflix movie this week? (January 13, 2026)
+1124702: Will "People We Meet on Vacation" be the top global Netflix movie this week? (January 13, 2026)
+1124719: Will "Evil Influencer: The Jodi Hildebrandt Story" be the #2 global Netflix movie this week? (January 13, 2026)
+1124720: Will "Priscilla" be the #2 global Netflix movie this week? (January 13, 2026)
+1124721: Will "Man on Fire" be the #2 global Netflix movie this week? (January 13, 2026)
+1124722: Will "Kpop Demon Hunters" be the #2 global Netflix movie this week? (January 13, 2026)
+1124723: Will "Madagascar" be the #2 global Netflix movie this week? (January 13, 2026)
+1124724: Will "People We Meet on Vacation" be the #2 global Netflix movie this week? (January 13, 2026)
+1124745: Will "Evil Influencer: The Jodi Hildebrandt Story" be the #2 US Netflix movie this week? (January 13, 2026)
+1124746: Will "Priscilla" be the #2 US Netflix movie this week? (January 13, 2026)
+1124747: Will "Man on Fire" be the #2 US Netflix movie this week? (January 13, 2026)
+1124748: Will "Kpop Demon Hunters" be the #2 US Netflix movie this week? (January 13, 2026)
+1124749: Will "Madagascar" be the #2 US Netflix movie this week? (January 13, 2026)
+1124750: Will "People We Meet on Vacation" be the #2 US Netflix movie this week? (January 13, 2026)
+1124767: Will "Evil Influencer: The Jodi Hildebrandt Story" be the top US Netflix movie this week? (January 13, 2026)
+1124768: Will "Priscilla" be the top US Netflix movie this week? (January 13, 2026)
+1124769: Will "Man on Fire" be the top US Netflix movie this week? (January 13, 2026)
+1124770: Will "Kpop Demon Hunters" be the top US Netflix movie this week? (January 13, 2026)
+1124771: Will "Madagascar" be the top US Netflix movie this week? (January 13, 2026)
+1124772: Will "People We Meet on Vacation" be the top US Netflix movie this week? (January 13, 2026)
+1124797: NATO dissolves before 2027?
+1124802: Scorigami in Week 1 of NFL Playoffs?
+1124807: Trump invokes War Powers against Venezuela by January 15?
+1124808: Trump invokes War Powers against Venezuela by January 31?
+1124812: AS Nancy-Lorraine vs. En Avant Guingamp: O/U 1.5
+1124813: AS Nancy-Lorraine vs. En Avant Guingamp: O/U 2.5
+1124814: AS Nancy-Lorraine vs. En Avant Guingamp: O/U 3.5
+1124815: AS Nancy-Lorraine vs. En Avant Guingamp: O/U 4.5
+1124816: AS Nancy-Lorraine vs. En Avant Guingamp: Both Teams to Score
+1124829: EU/NATO country announces peacekeeping force in Ukraine by December 31?
+1124834: US x Russia military clash by December 31, 2026?
+1125054: Will MegaETH perform an airdrop by January 31?
+1125087: Any Brazil STF Justice removed by impeachment before 2027?
+1125100: Will United Russia win fewer than 280 seats in the next Russian State Duma election?
+1125101: Will United Russia win between 280 and 294 seats in the next Russian State Duma election?
+1125102: Will United Russia win between 295 and 309 seats in the next Russian State Duma election?
+1125103: Will United Russia win between 310 and 324 seats in the next Russian State Duma election?
+1125104: Will United Russia win between 325 and 339 seats in the next Russian State Duma election?
+1125105: Will United Russia win between 340 and 354 seats in the next Russian State Duma election?
+1125106: Will United Russia win 355 or more seats in the next Russian State Duma election?
+1125126: Will Truist Financial (TFC) beat quarterly earnings?
+1125323: Will Aryna Sabalenka win a Calendar Grand Slam in 2026?
+1125324: Will Iga Swiatek win a Calendar Grand Slam in 2026?
+1125325: Will Elena Rybakina win a Calendar Grand Slam in 2026?
+1125326: Will Coco Gauff win a Calendar Grand Slam in 2026?
+1125327: Will Naomi Osaka win a Calendar Grand Slam in 2026?
+1125328: Will Amanda Anisimova win a Calendar Grand Slam in 2026?
+1125329: Will Jessica Pegula win a Calendar Grand Slam in 2026?
+1125330: Will Jasmine Paolini win a Calendar Grand Slam in 2026?
+1125331: Will Elina Svitolina win a Calendar Grand Slam in 2026?
+1125332: Will Belinda Bencic win a Calendar Grand Slam in 2026?
+1125333: Will Emma Raducanu win a Calendar Grand Slam in 2026?
+1125334: Will Mirra Andreeva win a Calendar Grand Slam in 2026?
+1125335: Will Victoria Azarenka win a Calendar Grand Slam in 2026?
+1125336: Will Qinwen Zheng win a Calendar Grand Slam in 2026?
+1125337: Will another player win a Calendar Grand Slam in 2026?
+1125338: Will no player win a Calendar Grand Slam in 2026?
+1125348: Will S&P 500 (SPX) hit $7,350 (HIGH) in January?
+1125349: Will S&P 500 (SPX) hit $7,200 (HIGH) in January?
+1125350: Will S&P 500 (SPX) hit $7,100 (HIGH) in January?
+1125351: Will S&P 500 (SPX) hit $7,040 (HIGH) in January?
+1125352: Will S&P 500 (SPX) hit $7000 (HIGH) in January?
+1125355: Will S&P 500 (SPX) hit $6,800 (LOW) in January?
+1125356: Will S&P 500 (SPX) hit $6,750 (LOW) in January?
+1125357: Will S&P 500 (SPX) hit $6,700 (LOW) in January?
+1125358: Will S&P 500 (SPX) hit $6,600 (LOW) in January?
+1125359: Will S&P 500 (SPX) hit $6,500 (LOW) in January?
+1125367: Will S&P 500 (SPX) close over $7,040 on the final trading day of January 2026?
+1125368: Will S&P 500 (SPX) close over $6,960 on the final trading day of January 2026?
+1125369: Will S&P 500 (SPX) close over $6,900 on the final trading day of January 2026?
+1125370: Will S&P 500 (SPX) close over $6,840 on the final trading day of January 2026?
+1125371: Will S&P 500 (SPX) close over $6,760 on the final trading day of January 2026?
+1125372: Will S&P 500 (SPX) close over $6,600 on the final trading day of January 2026?
+1125373: Will S&P 500 (SPX) hit $8,000 (HIGH) in June?
+1125374: Will S&P 500 (SPX) hit $7,700 (HIGH) in June?
+1125375: Will S&P 500 (SPX) hit $7,450 (HIGH) in June?
+1125376: Will S&P 500 (SPX) hit $7,300 (HIGH) in June?
+1125377: Will S&P 500 (SPX) hit $7,150 (HIGH) in June?
+1125378: Will S&P 500 (SPX) hit $7,050 (HIGH) in June?
+1125379: Will S&P 500 (SPX) hit $6,700 (LOW) in June?
+1125380: Will S&P 500 (SPX) hit $6,600 (LOW) in June?
+1125381: Will S&P 500 (SPX) hit $6,500 (LOW) in June?
+1125382: Will S&P 500 (SPX) hit $6,300 (LOW) in June?
+1125383: Will S&P 500 (SPX) hit $6,000 (LOW) in June?
+1125385: Will S&P 500 (SPX) hit $9,300 (HIGH) in December?
+1125386: Will S&P 500 (SPX) hit $8,600 (HIGH) in December?
+1125387: Will S&P 500 (SPX) hit $8,200 (HIGH) in December?
+1125388: Will S&P 500 (SPX) hit $7,800 (HIGH) in December?
+1125389: Will S&P 500 (SPX) hit $7,600 (HIGH) in December?
+1125390: Will S&P 500 (SPX) hit $7,400 (HIGH) in December?
+1125391: Will S&P 500 (SPX) hit $6,600 (LOW) in December?
+1125392: Will S&P 500 (SPX) hit $6,400 (LOW) in December?
+1125393: Will S&P 500 (SPX) hit $6,200 (LOW) in December?
+1125394: Will S&P 500 (SPX) hit $5,800 (LOW) in December?
+1125395: Will S&P 500 (SPX) hit $5,200 (LOW) in December?
+1125396: Will S&P 500 (SPX) hit $4,500 (LOW) in December?
+1125397: Will S&P 500 (SPX) close at <$6,000 in December?
+1125398: Will S&P 500 (SPX) close at $6,000-$6,500 in December?
+1125399: Will S&P 500 (SPX) close at $6,500-$7,000 in December?
+1125404: Will S&P 500 (SPX) close at >$8,000 in December?
+1125405: Will S&P 500 (SPX) close over $8,000 on the final trading day of December 2026?
+1125406: Will S&P 500 (SPX) close over $7,500 on the final trading day of December 2026?
+1125407: Will S&P 500 (SPX) close over $7,000 on the final trading day of December 2026?
+1125408: Will S&P 500 (SPX) close over $6,500 on the final trading day of December 2026?
+1125409: Will S&P 500 (SPX) close over $6,000 on the final trading day of December 2026?
+1125462: Will Nasdaq 100 (NDX) hit $45,000 (HIGH) in December?
+1125463: Will Nasdaq 100 (NDX) hit $39,000 (HIGH) in December?
+1125464: Will Nasdaq 100 (NDX) hit $35,000 (HIGH) in December?
+1125465: Will Nasdaq 100 (NDX) hit $32,000 (HIGH) in December?
+1125466: Will Nasdaq 100 (NDX) hit $30,000 (HIGH) in December?
+1125467: Will Nasdaq 100 (NDX) hit $28,500 (HIGH) in December?
+1125468: Will Nasdaq 100 (NDX) hit $25,000 (LOW) in December?
+1125469: Will Nasdaq 100 (NDX) hit $24,000 (LOW) in December?
+1125470: Will Nasdaq 100 (NDX) hit $23,000 (LOW) in December?
+1125471: Will Nasdaq 100 (NDX) hit $21,000 (LOW) in December?
+1125472: Will Nasdaq 100 (NDX) hit $18,000 (LOW) in December?
+1125473: Will Nasdaq 100 (NDX) hit $15,000 (LOW) in December?
+1125474: Will Nasdaq 100 (NDX) close at <$23,500 in December?
+1125475: Will Nasdaq 100 (NDX) close at $23,500-$25,000 in December?
+1125476: Will Nasdaq 100 (NDX) close at $25,000-$26,500 in December?
+1125477: Will Nasdaq 100 (NDX) close at $26,500-$28,500 in December?
+1125478: Will Nasdaq 100 (NDX) close at $28,500-$30,500 in December?
+1125479: Will Nasdaq 100 (NDX) close at $30,500-$33,000 in December?
+1125480: Will Nasdaq 100 (NDX) close at $33,000-$36,000 in December?
+1125481: Will Nasdaq 100 (NDX) close at >$36,000 in December?
+1125482: Will Nasdaq 100 (NDX) close over $38,000 on the final trading day of December 2026?
+1125483: Will Nasdaq 100 (NDX) close over $33,000 on the final trading day of December 2026?
+1125484: Will Nasdaq 100 (NDX) close over $30,000 on the final trading day of December 2026?
+1125485: Will Nasdaq 100 (NDX) close over $27,000 on the final trading day of December 2026?
+1125486: Will Nasdaq 100 (NDX) close over $24,000 on the final trading day of December 2026?
+1125487: Will Nasdaq 100 (NDX) close over $19,000 on the final trading day of December 2026?
+1125566: Will Unity Bancorp (UNTY) beat quarterly earnings?
+1125575: Will John Harbaugh join the New York Giants prior to April 23, 2026?
+1125576: Will John Harbaugh join the Atlanta Falcons prior to April 23, 2026?
+1125577: Will John Harbaugh join the Arizona Cardinals prior to April 23, 2026?
+1125578: Will John Harbaugh join the Cleveland Browns prior to April 23, 2026?
+1125579: Will John Harbaugh join the Las Vegas Raiders prior to April 23, 2026?
+1125580: Will John Harbaugh join the Tennessee Titans prior to April 23, 2026?
+1125581: Will John Harbaugh join the Miami Dolphins prior to April 23, 2026?
+1125598: Will BlackRock (BLK) beat quarterly earnings?
+1125627: Will Charles Schwab (SCHW) beat quarterly earnings?
+1125632: Will Kevin Stefanski be the next Baltimore Ravens Head Coach?
+1125633: Will Todd Monken be the next Baltimore Ravens Head Coach?
+1125634: Will Zach Orr be the next Baltimore Ravens Head Coach?
+1125635: Will Matt Nagy be the next Baltimore Ravens Head Coach?
+1125636: Will Brian Flores be the next Baltimore Ravens Head Coach?
+1125637: Will Klint Kubiak be the next Baltimore Ravens Head Coach?
+1125638: Will Mike Kafka be the next Baltimore Ravens Head Coach?
+1125639: Will Vance Joseph be the next Baltimore Ravens Head Coach?
+1125640: Will Mike LaFleur be the next Baltimore Ravens Head Coach?
+1125641: Will Mike McCarthy be the next Baltimore Ravens Head Coach?
+1125642: Will Mike McDaniel be the next Baltimore Ravens Head Coach?

@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1090215: Will Arman Tsarukyan be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090433: Will Wellington Phoenix FC win on 2026-01-30?
+1090434: Will Wellington Phoenix FC vs. Melbourne City FC end in a draw?
+1090435: Will Melbourne City FC win on 2026-01-30?
+1090436: Will Adelaide United FC win on 2026-01-30?
+1090437: Will Adelaide United FC vs. Macarthur FC end in a draw?
+1090438: Will Macarthur FC win on 2026-01-30?
+1090447: Will Islam Makhachev remain #1 in the UFC Pound-For-Pound Rankings?
+1090448: Will Ilia Topuria be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090449: Will Khamzat Chimaev be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090450: Will Alex Pereira be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090451: Will Alexander Volkanovski be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090452: Will Petr Yan be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090453: Will Merab Dvalishvili be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090454: Will Tom Aspinall be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090455: Will Alexandre Pantoja be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090456: Will Max Holloway be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090457: Will Dricus Du Plessis be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090458: Will Joshua Van be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090459: Will Magomed Ankalaev be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090460: Will Jack Della Maddalena be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090461: Will Arman Tsarukyan be the next fighter to be ranked first in the UFC Pound-For-Pound Rankings in 2026?
+1090474: Another critical Cloudflare incident by March 31?
+1090479: Record crypto liquidation in 2026?
+1090489: Israel x Hamas ceasefire cancelled by June 30?
+1090494: Will Russia capture all of Donetsk Oblast by March 31, 2026?
+1090495: Will Russia capture all of Donetsk Oblast by June 30, 2026?
+1090518: Will Israel strike ≤1 countries in January 2026?
+1090519: Will Israel strike 2 countries in January 2026?
+1090520: Will Israel strike 3 countries in January 2026?
+1090521: Will Israel strike ≥4 countries in January 2026?
+1090801: Trump announces new drug boat strike by January 17, 2026?
+1090811: Will anyone charged over daycare fraud in MN be deported by March 31?
+1090816: Will Trump pardon Martin Shkreli before 2027?
+1090819: Will Trump say "Six Seven" this week? (January 11)
+1090820: Will Trump say "Blue Slip" this week? (January 11)
+1090821: Will Trump say "Kennedy" or "Autism" this week? (January 11)
+1090822: Will Trump say "FIFA" this week? (January 11)
+1090823: Will Trump say "Atlantic" this week? (January 11)
+1090829: Will Trump say "Day Care" or "Daycare" this week? (January 11)
+1090830: Will Trump say "Anniversary" this week? (January 11)
+1090862: Valorant: KRÜ Esports vs FURIA Esports (BO3)
+1090863: Valorant: KRÜ Esports vs FURIA Esports - Map 1 Winner
+1090864: Valorant: KRÜ Esports vs FURIA Esports - Map 2 Winner
+1090865: Games Total: O/U 2.5
+1091092: Over 4 coins launched in 2026 end the year in the top 100?
+1091093: Over 6 coins launched in 2026 end the year in the top 100?
+1091094: Over 8 coins launched in 2026 end the year in the top 100?
+1091095: Over 10 coins launched in 2026 end the year in the top 100?
+1091096: Over 12 coins launched in 2026 end the year in the top 100?
+1091105: Will a coin launched in 2026 end the year in the top 50?
+1091106: Will a coin launched in 2026 end the year in the top 20?
+1091107: Will a coin launched in 2026 end the year in the top 10?
+1091108: Will a coin launched in 2026 end the year in the top 5?
+1091401: Al Ittihad Saudi Club vs. Al Ettifaq Saudi Club: O/U 1.5
+1091402: Al Ittihad Saudi Club vs. Al Ettifaq Saudi Club: O/U 2.5
+1091403: Al Ittihad Saudi Club vs. Al Ettifaq Saudi Club: O/U 3.5
+1091404: Al Ittihad Saudi Club vs. Al Ettifaq Saudi Club: O/U 4.5
+1091405: Al Ittihad Saudi Club vs. Al Ettifaq Saudi Club: Both Teams to Score
+1091407: Al Khaleej Saudi Club vs. Al Okhdood SC: O/U 1.5
+1091408: Al Khaleej Saudi Club vs. Al Okhdood SC: O/U 2.5
+1091409: Al Khaleej Saudi Club vs. Al Okhdood SC: O/U 3.5
+1091410: Al Khaleej Saudi Club vs. Al Okhdood SC: O/U 4.5
+1091411: Al Khaleej Saudi Club vs. Al Okhdood SC: Both Teams to Score
+1091412: Al Najmah Saudi Club vs. Al Fateh Saudi Club: O/U 1.5
+1091413: Al Najmah Saudi Club vs. Al Fateh Saudi Club: O/U 2.5
+1091414: Al Najmah Saudi Club vs. Al Fateh Saudi Club: O/U 3.5
+1091415: Al Najmah Saudi Club vs. Al Fateh Saudi Club: O/U 4.5
+1091416: Al Najmah Saudi Club vs. Al Fateh Saudi Club: Both Teams to Score
+1091835: Valorant: 100 Thieves vs Leviatán Esports (BO3)
+1091836: Valorant: 100 Thieves vs Leviatán Esports - Map 1 Winner
+1091837: Valorant: 100 Thieves vs Leviatán Esports - Map 2 Winner
+1091838: Games Total: O/U 2.5
+1092199: US strikes Iran by January 31, 2026?
+1092204: U.S. evacuates Baghdad Embassy by January 31?
+1092287: Will Lionel Messi announce his retirement in 2026?
+1092296: Will Trump establish a Gaza “Board of Peace” by January 31?
+1092481: Jerome Powell out as Fed Chair by March 31, 2026?
+1092482: Jerome Powell out as Fed Chair by May 14, 2026?
+1093236: Will AS Monaco FC win on 2026-01-16?
+1093238: Will AS Monaco FC vs. FC Lorient end in a draw?
+1093240: Will FC Lorient win on 2026-01-16?
+1093245: Will TSV Fortuna 95 Düsseldorf win on 2026-01-16?
+1093248: Will TSV Fortuna 95 Düsseldorf vs. DSC Arminia Bielefeld end in a draw?
+1093250: Will DSC Arminia Bielefeld win on 2026-01-16?
+1093253: Will Paris Saint-Germain FC win on 2026-01-16?
+1093255: Will SV Werder Bremen win on 2026-01-16?
+1093256: Will Paris Saint-Germain FC vs. Lille OSC end in a draw?
+1093260: Will SV Werder Bremen vs. Eintracht Frankfurt end in a draw?
+1093261: Will Lille OSC win on 2026-01-16?
+1093263: Will Eintracht Frankfurt win on 2026-01-16?
+1093266: Will Pisa SC win on 2026-01-16?
+1093267: Will Bristol City FC win on 2026-01-30?
+1093269: Will Pisa SC vs. Atalanta BC end in a draw?
+1093270: Will Bristol City FC vs. Derby County FC end in a draw?
+1093272: Will Atalanta BC win on 2026-01-16?
+1093273: Will Derby County FC win on 2026-01-30?
+1093277: Will Eintracht Braunschweig win on 2026-01-16?
+1093278: Will Elon Musk post 440-459 tweets from January 6 to January 13, 2026?
+1093279: Will Eintracht Braunschweig vs. 1. FC Magdeburg end in a draw?
+1093280: Will Elon Musk post 460-479 tweets from January 6 to January 13, 2026?
+1093281: Will 1. FC Magdeburg win on 2026-01-16?
+1093282: Will Elon Musk post 480-499 tweets from January 6 to January 13, 2026?
+1093284: Will Elon Musk post 500-519 tweets from January 6 to January 13, 2026?
+1093287: Will Elon Musk post 520-539 tweets from January 6 to January 13, 2026?
+1093288: Will Elon Musk post 540-559 tweets from January 6 to January 13, 2026?
+1093289: Will Elon Musk post 560-579 tweets from January 6 to January 13, 2026?
+1093290: Will Elon Musk post 580+ tweets from January 6 to January 13, 2026?
+1093347: SA20: Durban's Super Giants vs Sunrisers Eastern Cape (Game 1)
+1093348: SA20: Durban's Super Giants vs Sunrisers Eastern Cape (Game 1) - Who wins the toss?
+1093349: SA20: Durban's Super Giants vs Sunrisers Eastern Cape (Game 1) - Completed match?
+1093663: SV Werder Bremen vs. Eintracht Frankfurt: O/U 1.5
+1093664: SV Werder Bremen vs. Eintracht Frankfurt: O/U 2.5
+1093665: SV Werder Bremen vs. Eintracht Frankfurt: O/U 3.5
+1093666: Spread: Paris Saint-Germain FC (-1.5)
+1093667: SV Werder Bremen vs. Eintracht Frankfurt: O/U 4.5
+1093668: Paris Saint-Germain FC vs. Lille OSC: O/U 1.5
+1093669: SV Werder Bremen vs. Eintracht Frankfurt: Both Teams to Score
+1093670: Paris Saint-Germain FC vs. Lille OSC: O/U 2.5
+1093671: Paris Saint-Germain FC vs. Lille OSC: O/U 3.5
+1093672: Paris Saint-Germain FC vs. Lille OSC: O/U 4.5
+1093673: Paris Saint-Germain FC vs. Lille OSC: Both Teams to Score
+1093675: Spread: AS Monaco FC (-1.5)
+1093676: AS Monaco FC vs. FC Lorient: O/U 1.5
+1093677: AS Monaco FC vs. FC Lorient: O/U 2.5
+1093678: AS Monaco FC vs. FC Lorient: O/U 3.5
+1093679: AS Monaco FC vs. FC Lorient: O/U 4.5
+1093680: AS Monaco FC vs. FC Lorient: Both Teams to Score
+1093682: Pisa SC vs. Atalanta BC: O/U 1.5
+1093683: Pisa SC vs. Atalanta BC: O/U 2.5
+1093684: Pisa SC vs. Atalanta BC: O/U 3.5
+1093685: Pisa SC vs. Atalanta BC: O/U 4.5
+1093686: Pisa SC vs. Atalanta BC: Both Teams to Score
+1093942: Set 1 Winner: Cazaux vs Busta
+1094343: Will RCD Espanyol de Barcelona win on 2026-01-16?
+1094344: Will RCD Espanyol de Barcelona vs. Girona FC end in a draw?
+1094345: Will Girona FC win on 2026-01-16?
+1094346: SBV Excelsior vs. Telstar 1963: O/U 1.5
+1094347: SBV Excelsior vs. Telstar 1963: O/U 2.5
+1094348: SBV Excelsior vs. Telstar 1963: O/U 3.5
+1094350: SBV Excelsior vs. Telstar 1963: O/U 4.5
+1094351: SBV Excelsior vs. Telstar 1963: Both Teams to Score
+1094352: Will CD Castellón win on 2026-01-16?
+1094353: Will CD Castellón vs. CD Leganés end in a draw?
+1094354: Will CD Leganés win on 2026-01-16?
+1094692: Will Rodez Aveyron Football win on 2026-01-16?
+1094693: Will Rodez Aveyron Football vs. Le Mans FC end in a draw?
+1094694: Will Le Mans FC win on 2026-01-16?
+1094700: Will USL Dunkerque win on 2026-01-16?
+1094701: Will USL Dunkerque vs. Pau FC end in a draw?
+1094702: Will Pau FC win on 2026-01-16?
+1094709: Will FC Annecy win on 2026-01-16?
+1094710: RCD Espanyol de Barcelona vs. Girona FC: O/U 1.5
+1094711: Will FC Annecy vs. Amiens SC end in a draw?
+1094712: RCD Espanyol de Barcelona vs. Girona FC: O/U 2.5
+1094713: Will Amiens SC win on 2026-01-16?
+1094714: RCD Espanyol de Barcelona vs. Girona FC: O/U 3.5
+1094715: RCD Espanyol de Barcelona vs. Girona FC: O/U 4.5
+1094716: RCD Espanyol de Barcelona vs. Girona FC: Both Teams to Score
+1094717: Will Stade Lavallois Mayenne FC win on 2026-01-16?
+1094718: Will Stade Lavallois Mayenne FC vs. SC Bastia end in a draw?
+1094719: Will SC Bastia win on 2026-01-16?
+1094720: Will US Boulogne Côte d'Opale win on 2026-01-16?
+1094721: Will US Boulogne Côte d'Opale vs. Montpellier HSC end in a draw?
+1094722: Will Montpellier HSC win on 2026-01-16?
+1094735: Will María Corina Machado enter Venezuela by January 31?
+1094942: LoL: Weibo Gaming vs Invictus Gaming (BO3)
+1094943: LoL: Weibo Gaming vs Invictus Gaming - Game 1 Winner
+1094944: LoL: Weibo Gaming vs Invictus Gaming - Game 2 Winner
+1094945: Games Total: O/U 2.5
+1094946: LoL: Top Esports vs JD Gaming (BO3)
+1094947: LoL: Top Esports vs JD Gaming - Game 1 Winner
+1094948: LoL: Top Esports vs JD Gaming - Game 2 Winner
+1094949: Games Total: O/U 2.5
+1094950: LoL: LGD Gaming vs Ultra Prime (BO3)
+1094951: LoL: LGD Gaming vs Ultra Prime - Game 1 Winner
+1094952: LoL: LGD Gaming vs Ultra Prime - Game 2 Winner
+1094953: Games Total: O/U 2.5
+1094954: LoL: Invictus Gaming vs Anyone's Legend (BO3)
+1094955: LoL: Invictus Gaming vs Anyone's Legend - Game 1 Winner
+1094956: LoL: Invictus Gaming vs Anyone's Legend - Game 2 Winner
+1094957: Games Total: O/U 2.5
+1094958: LoL: Weibo Gaming vs Bilibili Gaming (BO3)
+1094959: LoL: Weibo Gaming vs Bilibili Gaming - Game 1 Winner
+1094960: LoL: Weibo Gaming vs Bilibili Gaming - Game 2 Winner
+1094961: Games Total: O/U 2.5
+1094962: LoL: LNG Esports vs Ultra Prime (BO3)
+1094963: LoL: LNG Esports vs Ultra Prime - Game 1 Winner
+1094964: LoL: LNG Esports vs Ultra Prime - Game 2 Winner
+1094965: Games Total: O/U 2.5
+1094966: LoL: Team WE vs EDward Gaming (BO3)
+1094967: LoL: Team WE vs EDward Gaming - Game 1 Winner
+1094968: LoL: Team WE vs EDward Gaming - Game 2 Winner
+1094969: Games Total: O/U 2.5
+1095005: Will UC Sampdoria win on 2026-01-16?
+1095006: Will UC Sampdoria vs. Virtus Entella end in a draw?
+1095007: Will Virtus Entella win on 2026-01-16?
+1095008: Mazatlán FC vs. CF Monterrey: O/U 1.5
+1095009: LoL: Bilibili Gaming vs Anyone's Legend (BO3)
+1095010: Mazatlán FC vs. CF Monterrey: O/U 2.5
+1095011: LoL: Bilibili Gaming vs Anyone's Legend - Game 1 Winner
+1095012: Mazatlán FC vs. CF Monterrey: O/U 3.5
+1095013: LoL: Bilibili Gaming vs Anyone's Legend - Game 2 Winner
+1095014: Mazatlán FC vs. CF Monterrey: O/U 4.5
+1095015: Games Total: O/U 2.5
+1095016: Mazatlán FC vs. CF Monterrey: Both Teams to Score
+1095337: Spread: Delaware Fightin' Blue Hens (-9.5)
+1095577: LoL: JD Gaming vs Invictus Gaming (BO3)
+1095578: LoL: JD Gaming vs Invictus Gaming - Game 1 Winner
+1095579: LoL: JD Gaming vs Invictus Gaming - Game 2 Winner
+1095580: Games Total: O/U 2.5
+1095900: West Bromwich Albion FC vs. Middlesbrough FC: O/U 1.5
+1095902: West Bromwich Albion FC vs. Middlesbrough FC: O/U 2.5
+1095904: West Bromwich Albion FC vs. Middlesbrough FC: O/U 3.5
+1095906: West Bromwich Albion FC vs. Middlesbrough FC: O/U 4.5
+1095908: West Bromwich Albion FC vs. Middlesbrough FC: Both Teams to Score
+1096279: Another US strike on Venezuela by January 10?
+1096293: Nicolás Maduro released from custody by January 31, 2026?
+1096295: Cilia Flores released from custody by January 31, 2026?
+1096314: Another US strike on Venezuela on January 9?
+1096315: Another US strike on Venezuela on January 10?
+1096316: Another US strike on Venezuela on January 11?
+1096317: Another US strike on Venezuela on January 12?
+1096322: US x Venezuela ceasefire by January 31?
+1096608: Congress authorizes military force against Venezuela by January 31?
+1096654: US forces in Venezuela again by January 31, 2026?
+1096898: Eintracht Braunschweig vs. 1. FC Magdeburg: O/U 1.5
+1096899: Eintracht Braunschweig vs. 1. FC Magdeburg: O/U 2.5
+1096900: Eintracht Braunschweig vs. 1. FC Magdeburg: O/U 3.5
+1096901: Eintracht Braunschweig vs. 1. FC Magdeburg: O/U 4.5
+1096902: Eintracht Braunschweig vs. 1. FC Magdeburg: Both Teams to Score
+1096903: TSV Fortuna 95 Düsseldorf vs. DSC Arminia Bielefeld: O/U 1.5
+1096904: TSV Fortuna 95 Düsseldorf vs. DSC Arminia Bielefeld: O/U 2.5
+1096905: TSV Fortuna 95 Düsseldorf vs. DSC Arminia Bielefeld: O/U 3.5
+1096906: TSV Fortuna 95 Düsseldorf vs. DSC Arminia Bielefeld: O/U 4.5
+1096907: TSV Fortuna 95 Düsseldorf vs. DSC Arminia Bielefeld: Both Teams to Score
+1096986: Utah State Aggies vs. Colorado State Rams
+1097003: U.S. recognizes Machado as leader of Venezuela by January 31?
+1097100: Venezuela election scheduled by January 31, 2026?
+1097101: Venezuela election scheduled by March 31, 2026?
+1097262: Cilia Flores released from custody by December 31, 2026?
+1097263: Nicolás Maduro released from custody by December 31, 2026?
+1097272: Will NAC Breda win on 2026-01-30?
+1097273: Will NAC Breda vs. FC Twente '65 end in a draw?
+1097274: Will FC Twente '65 win on 2026-01-30?
+1097279: Will AZ win on 2026-01-31?
+1097280: Will AZ vs. NEC end in a draw?
+1097281: Will NEC win on 2026-01-31?
+1097350: Another US strike on Venezuela by January 17?
+1097352: Another US strike on Venezuela by January 31?
+1097357: LoL: Vivo Keyd Stars vs paiN Gaming (BO1)
+1097358: LoL: Los Ratones vs Fnatic (BO1)
+1097730: Maduro guilty of all counts?
+1097752: Blue Jackets vs. Blackhawks
+1097844: LoL: Shifters vs GIANTX (BO1)
+1097857: LoL: RED Canids vs Fluxo W7M (BO1)
+1097969: Maduro trial scheduled by January 31?
+1098249: LoL: Team Heretics vs Natus Vincere (BO1)
+1098267: Will Club Puebla win on 2026-01-30?
+1098268: Will Club Puebla vs. Deportivo Toluca FC end in a draw?
+1098269: Will Deportivo Toluca FC win on 2026-01-30?
+1098270: Will Pumas de la UNAM win on 2026-01-30?
+1098271: Will Pumas de la UNAM vs. Club Santos Laguna end in a draw?
+1098272: Will Club Santos Laguna win on 2026-01-30?
+1098273: Will FC Juárez win on 2026-01-30?
+1098274: Will FC Juárez vs. CF Cruz Azul end in a draw?
+1098275: Will CF Cruz Azul win on 2026-01-30?
+1098288: Will Nicolás Maduro be sentenced to no prison time?
+1098289: Will Nicolás Maduro be sentenced to less than 20 years in prison?
+1098290: Will Nicolás Maduro be sentenced to between 20 and 40 years in prison?
+1098291: Will Nicolás Maduro be sentenced to between 40 and 60 years in prison?
+1098292: Will Nicolás Maduro be sentenced to at least 60 years in prison?
+1098299: Adelaide United FC vs. Melbourne Victory FC: O/U 1.5
+1098300: Adelaide United FC vs. Melbourne Victory FC: O/U 2.5
+1098301: Adelaide United FC vs. Melbourne Victory FC: O/U 3.5
+1098302: Adelaide United FC vs. Melbourne Victory FC: O/U 4.5
+1098303: Adelaide United FC vs. Melbourne Victory FC: Both Teams to Score
+1098305: LoL: FURIA Esports vs LOUD (BO1)
+1098307: Central Coast Mariners FC vs. Macarthur FC: O/U 1.5
+1098308: Central Coast Mariners FC vs. Macarthur FC: O/U 2.5
+1098309: Central Coast Mariners FC vs. Macarthur FC: O/U 3.5
+1098310: Central Coast Mariners FC vs. Macarthur FC: O/U 4.5
+1098311: Central Coast Mariners FC vs. Macarthur FC: Both Teams to Score
+1098330: Western Sydney Wanderers FC vs. Newcastle United Jets FC: O/U 1.5
+1098331: Western Sydney Wanderers FC vs. Newcastle United Jets FC: O/U 2.5
+1098332: Western Sydney Wanderers FC vs. Newcastle United Jets FC: O/U 3.5
+1098333: Western Sydney Wanderers FC vs. Newcastle United Jets FC: O/U 4.5
+1098334: Western Sydney Wanderers FC vs. Newcastle United Jets FC: Both Teams to Score
+1098756: LoL: Team Vitality vs SK Gaming (BO1)
+1098801: LoL: LOS vs Vivo Keyd Stars (BO1)
+1098802: LoL: Karmine Corp Blue vs Karmine Corp (BO1)
+1099134: Will Bank of America (BAC) beat quarterly earnings?
+1099135: Will Wells Fargo & Co (WFC) beat quarterly earnings?
+1099148: Will Citigroup (C) beat quarterly earnings?
+1099149: Will Morgan Stanley (MS) beat quarterly earnings?
+1099159: CD Castellón vs. CD Leganés: O/U 1.5
+1099160: CD Castellón vs. CD Leganés: O/U 2.5
+1099162: CD Castellón vs. CD Leganés: O/U 3.5
+1099163: CD Castellón vs. CD Leganés: O/U 4.5
+1099164: CD Castellón vs. CD Leganés: Both Teams to Score
+1099170: LoL: Movistar KOI vs G2 Esports (BO1)
+1099172: LoL: Leviatan Esports vs FURIA Esports (BO1)
+1099181: Will Goldman Sachs (GS) beat quarterly earnings?
+1099182: Will PNC Financial Services (PNC) beat quarterly earnings?
+1099187: Will State Street (STT) beat quarterly earnings?
+1099457: Will M&T Bank (MTB) beat quarterly earnings?
+1099497: US Boulogne Côte d'Opale vs. Montpellier HSC: O/U 1.5
+1099498: US Boulogne Côte d'Opale vs. Montpellier HSC: O/U 2.5
+1099499: US Boulogne Côte d'Opale vs. Montpellier HSC: O/U 3.5
+1099500: US Boulogne Côte d'Opale vs. Montpellier HSC: O/U 4.5
+1099501: US Boulogne Côte d'Opale vs. Montpellier HSC: Both Teams to Score
+1099503: Stade Lavallois Mayenne FC vs. SC Bastia: O/U 1.5
+1099504: Stade Lavallois Mayenne FC vs. SC Bastia: O/U 2.5
+1099505: Stade Lavallois Mayenne FC vs. SC Bastia: O/U 3.5
+1099506: Stade Lavallois Mayenne FC vs. SC Bastia: O/U 4.5
+1099507: Stade Lavallois Mayenne FC vs. SC Bastia: Both Teams to Score
+1099508: FC Annecy vs. Amiens SC: O/U 1.5
+1099509: FC Annecy vs. Amiens SC: O/U 2.5
+1099510: FC Annecy vs. Amiens SC: O/U 3.5
+1099511: FC Annecy vs. Amiens SC: O/U 4.5
+1099512: FC Annecy vs. Amiens SC: Both Teams to Score
+1099513: USL Dunkerque vs. Pau FC: O/U 1.5
+1099514: USL Dunkerque vs. Pau FC: O/U 2.5
+1099515: USL Dunkerque vs. Pau FC: O/U 3.5
+1099516: USL Dunkerque vs. Pau FC: O/U 4.5
+1099517: USL Dunkerque vs. Pau FC: Both Teams to Score
+1099518: Rodez Aveyron Football vs. Le Mans FC: O/U 1.5
+1099519: Rodez Aveyron Football vs. Le Mans FC: O/U 2.5
+1099520: Rodez Aveyron Football vs. Le Mans FC: O/U 3.5
+1099521: Rodez Aveyron Football vs. Le Mans FC: O/U 4.5
+1099522: Rodez Aveyron Football vs. Le Mans FC: Both Teams to Score
+1099767: Will Newcastle United Jets FC win on 2026-01-31?
+1099768: Will Newcastle United Jets FC vs. Brisbane Roar FC end in a draw?
+1099769: Will Brisbane Roar FC win on 2026-01-31?
+1099770: Will Sydney FC win on 2026-01-31?
+1099771: Will Sydney FC vs. Western Sydney Wanderers FC end in a draw?
+1099772: Will Western Sydney Wanderers FC win on 2026-01-31?
+1099773: Will Perth Glory FC win on 2026-01-31?
+1099774: Will Perth Glory FC vs. Auckland FC end in a draw?
+1099775: Will Auckland FC win on 2026-01-31?
+1099805: Will Milady floor price reach 6 ETH before 2027?
+1099806: Will Milady floor price reach 4 ETH before 2027?
+1099807: Will Milady floor price reach 2 ETH before 2027?
+1099856: UC Sampdoria vs. Virtus Entella: O/U 1.5
+1099857: UC Sampdoria vs. Virtus Entella: O/U 2.5
+1099858: UC Sampdoria vs. Virtus Entella: O/U 3.5
+1099859: UC Sampdoria vs. Virtus Entella: O/U 4.5
+1099860: UC Sampdoria vs. Virtus Entella: Both Teams to Score
+1099920: Spread: St. Thomas (MN) Tommies (-9.5)
+1099962: Spread: Wright State Raiders (-9.5)
+1099985: Siena Saints vs. Rider Broncs: O/U 133.5
+1100291: Will Venezuela become 51st state?
+1100370: Over $3M committed to the Infinex public sale?
+1100389: Richmond Spiders vs. Fordham Rams: O/U 139.5
+1100411: Spread: Middle Tennessee Blue Raiders (-4.5)
+1100718: Al Nassr Saudi Club vs. Al Shabab Saudi Club: O/U 1.5
+1100719: Al Nassr Saudi Club vs. Al Shabab Saudi Club: O/U 2.5
+1100721: Al Nassr Saudi Club vs. Al Shabab Saudi Club: O/U 3.5
+1100722: Al Nassr Saudi Club vs. Al Shabab Saudi Club: O/U 4.5
+1100723: Al Nassr Saudi Club vs. Al Shabab Saudi Club: Both Teams to Score
+1100724: Al Kholood Saudi Club vs. Al Ahli Saudi Club: O/U 1.5
+1100725: Al Kholood Saudi Club vs. Al Ahli Saudi Club: O/U 2.5
+1100726: Al Kholood Saudi Club vs. Al Ahli Saudi Club: O/U 3.5
+1100727: Al Kholood Saudi Club vs. Al Ahli Saudi Club: O/U 4.5
+1100728: Al Kholood Saudi Club vs. Al Ahli Saudi Club: Both Teams to Score
+1100733: Al Fayha Saudi Club vs. Damac Saudi Club: O/U 1.5
+1100734: Al Fayha Saudi Club vs. Damac Saudi Club: O/U 2.5
+1100735: Al Fayha Saudi Club vs. Damac Saudi Club: O/U 3.5
+1100736: Al Fayha Saudi Club vs. Damac Saudi Club: O/U 4.5
+1100737: Al Fayha Saudi Club vs. Damac Saudi Club: Both Teams to Score
+1101113: Spread: Mercyhurst Lakers (-1.5)
+1101114: Le Moyne Dolphins vs. Mercyhurst Lakers: O/U 145.5
+1101432: Siena Saints vs. Rider Broncs: O/U 135.5
+1101712: Jacksonville State Gamecocks vs. Liberty Flames: O/U 133.5
+1102060: Will SC Preußen Münster win on 2026-01-17?
+1102061: Will SC Preußen Münster vs. Karlsruher SC end in a draw?
+1102062: Will Karlsruher SC win on 2026-01-17?
+1102063: Will Racing Club de Lens win on 2026-01-17?
+1102064: Will Racing Club de Lens vs. AJ Auxerre end in a draw?
+1102067: Will Hamburger SV win on 2026-01-17?
+1102068: Will AJ Auxerre win on 2026-01-17?
+1102069: Will Manchester United FC win on 2026-01-17?
+1102070: Will Hamburger SV vs. Borussia Mönchengladbach end in a draw?
+1102071: Will Udinese Calcio win on 2026-01-17?
+1102072: Will Manchester United FC vs. Manchester City FC end in a draw?
+1102073: Will Borussia Mönchengladbach win on 2026-01-17?
+1102074: Will Udinese Calcio vs. FC Internazionale Milano end in a draw?
+1102075: Will Manchester City FC win on 2026-01-17?
+1102076: Will 1. FC Nürnberg win on 2026-01-17?
+1102077: Will Leicester City FC win on 2026-01-31?
+1102078: Will FC Internazionale Milano win on 2026-01-17?
+1102079: Will 1. FC Nürnberg vs. SV 07 Elversberg end in a draw?
+1102080: Will Leicester City FC vs. Charlton Athletic FC end in a draw?
+1102081: Will SV 07 Elversberg win on 2026-01-17?
+1102083: Will Charlton Athletic FC win on 2026-01-31?
+1102084: Will Toulouse FC win on 2026-01-17?
+1102085: Will Toulouse FC vs. OGC Nice end in a draw?
+1102086: Will OGC Nice win on 2026-01-17?
+1102087: Will SSC Napoli win on 2026-01-17?
+1102088: Will Liverpool FC win on 2026-01-17?
+1102089: Will TSG 1899 Hoffenheim win on 2026-01-17?
+1102090: Will SSC Napoli vs. US Sassuolo Calcio end in a draw?
+1102091: Will Liverpool FC vs. Burnley FC end in a draw?
+1102092: Will TSG 1899 Hoffenheim vs. Bayer 04 Leverkusen end in a draw?
+1102093: Will US Sassuolo Calcio win on 2026-01-17?
+1102094: Will Burnley FC win on 2026-01-17?
+1102095: Will Bayer 04 Leverkusen win on 2026-01-17?
+1102097: Will SG Dynamo Dresden win on 2026-01-17?
+1102098: Will SG Dynamo Dresden vs. SpVgg Greuther Fürth end in a draw?
+1102099: Will Sheffield Wednesday FC win on 2026-01-31?
+1102100: Will Sheffield Wednesday FC vs. Wrexham AFC end in a draw?
+1102101: Will SpVgg Greuther Fürth win on 2026-01-17?
+1102102: Will Wrexham AFC win on 2026-01-31?
+1102103: Will Angers SCO win on 2026-01-17?
+1102104: Will Angers SCO vs. Olympique de Marseille end in a draw?
+1102105: Will Olympique de Marseille win on 2026-01-17?
+1102106: Will Cagliari Calcio win on 2026-01-17?
+1102107: Will Cagliari Calcio vs. Juventus FC end in a draw?
+1102108: Will Juventus FC win on 2026-01-17?
+1102109: Will 1. FC Köln win on 2026-01-17?
+1102110: Will 1. FC Köln vs. 1. FSV Mainz 05 end in a draw?
+1102111: Will 1. FSV Mainz 05 win on 2026-01-17?
+1102112: Will Tottenham Hotspur FC win on 2026-01-17?
+1102113: Will Stoke City FC win on 2026-01-31?
+1102114: Will Tottenham Hotspur FC vs. West Ham United FC end in a draw?
+1102115: Will Stoke City FC vs. Southampton FC end in a draw?
+1102116: Will West Ham United FC win on 2026-01-17?
+1102117: Will Southampton FC win on 2026-01-31?
+1102118: Will Hertha BSC win on 2026-01-17?
+1102119: Will Hertha BSC vs. FC Schalke 04 end in a draw?
+1102120: Will FC Schalke 04 win on 2026-01-17?
+1102121: Will Sunderland AFC win on 2026-01-17?
+1102122: Will VfL Wolfsburg win on 2026-01-17?
+1102123: Will Sunderland AFC vs. Crystal Palace FC end in a draw?
+1102124: Will VfL Wolfsburg vs. 1. FC Heidenheim 1846 end in a draw?
+1102125: Will Crystal Palace FC win on 2026-01-17?
+1102126: Will 1. FC Heidenheim 1846 win on 2026-01-17?
+1102127: Will Middlesbrough FC win on 2026-01-31?
+1102128: Will Middlesbrough FC vs. Norwich City FC end in a draw?
+1102129: Will Norwich City FC win on 2026-01-31?
+1102130: Will Chelsea FC win on 2026-01-17?
+1102131: Will Chelsea FC vs. Brentford FC end in a draw?
+1102132: Will Brentford FC win on 2026-01-17?
+1102133: Will BV Borussia 09 Dortmund win on 2026-01-17?
+1102134: Will Watford FC win on 2026-01-31?
+1102135: Will BV Borussia 09 Dortmund vs. FC St. Pauli 1910 end in a draw?
+1102136: Will Watford FC vs. Swansea City AFC end in a draw?
+1102137: Will FC St. Pauli 1910 win on 2026-01-17?
+1102138: Will Swansea City AFC win on 2026-01-31?
+1102139: Will Portsmouth FC win on 2026-01-31?
+1102140: Will Leeds United FC win on 2026-01-17?
+1102141: Will Leeds United FC vs. Fulham FC end in a draw?
+1102142: Will Portsmouth FC vs. West Bromwich Albion FC end in a draw?
+1102143: Will Fulham FC win on 2026-01-17?
+1102144: Will West Bromwich Albion FC win on 2026-01-31?
+1102145: Will RB Leipzig win on 2026-01-17?
+1102146: Will RB Leipzig vs. FC Bayern München end in a draw?
+1102147: Will FC Bayern München win on 2026-01-17?
+1102148: Will Nottingham Forest FC win on 2026-01-17?
+1102149: Will Blackburn Rovers FC win on 2026-01-31?
+1102150: Will Blackburn Rovers FC vs. Hull City AFC end in a draw?
+1102151: Will Nottingham Forest FC vs. Arsenal FC end in a draw?
+1102152: Will Hull City AFC win on 2026-01-31?
+1102153: Will Arsenal FC win on 2026-01-17?
+1102154: Will Oxford United FC win on 2026-01-31?
+1102155: Will Oxford United FC vs. Birmingham City FC end in a draw?
+1102156: Will Birmingham City FC win on 2026-01-31?
+1102157: Will Millwall FC win on 2026-01-31?
+1102158: Will Millwall FC vs. Sheffield United FC end in a draw?
+1102159: Will Sheffield United FC win on 2026-01-31?
+1102160: Will Ipswich Town FC win on 2026-01-31?
+1102161: Will Ipswich Town FC vs. Preston North End FC end in a draw?
+1102162: Will Preston North End FC win on 2026-01-31?
+1102163: Will Queens Park Rangers FC win on 2026-01-31?
+1102164: Will Queens Park Rangers FC vs. Coventry City FC end in a draw?
+1102165: Will Coventry City FC win on 2026-01-31?
+1102469: Spread: Olympique de Marseille (-1.5)
+1102470: Angers SCO vs. Olympique de Marseille: O/U 1.5
+1102471: Angers SCO vs. Olympique de Marseille: O/U 2.5
+1102472: Angers SCO vs. Olympique de Marseille: O/U 3.5
+1102476: Angers SCO vs. Olympique de Marseille: O/U 4.5
+1102479: Angers SCO vs. Olympique de Marseille: Both Teams to Score
+1102483: RB Leipzig vs. FC Bayern München: O/U 1.5
+1102484: RB Leipzig vs. FC Bayern München: O/U 2.5
+1102486: RB Leipzig vs. FC Bayern München: O/U 3.5
+1102487: RB Leipzig vs. FC Bayern München: O/U 4.5
+1102488: RB Leipzig vs. FC Bayern München: Both Teams to Score
+1102495: Spread: Toulouse FC (-1.5)
+1102498: Toulouse FC vs. OGC Nice: O/U 1.5
+1102499: Toulouse FC vs. OGC Nice: O/U 2.5
+1102500: Nottingham Forest FC vs. Arsenal FC: O/U 1.5
+1102501: Toulouse FC vs. OGC Nice: O/U 3.5
+1102502: Nottingham Forest FC vs. Arsenal FC: O/U 2.5
+1102503: Toulouse FC vs. OGC Nice: O/U 4.5
+1102504: Nottingham Forest FC vs. Arsenal FC: O/U 3.5
+1102505: Cagliari Calcio vs. Juventus FC: O/U 1.5
+1102506: Toulouse FC vs. OGC Nice: Both Teams to Score
+1102507: Nottingham Forest FC vs. Arsenal FC: O/U 4.5
+1102508: Cagliari Calcio vs. Juventus FC: O/U 2.5
+1102509: BV Borussia 09 Dortmund vs. FC St. Pauli 1910: O/U 1.5

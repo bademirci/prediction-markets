@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1152467: Bitcoin Up or Down - January 11, 8:50AM-8:55AM ET
+1152468: XRP Up or Down - January 11, 8:50AM-8:55AM ET
+1152469: Ethereum Up or Down - January 11, 8:50AM-8:55AM ET
+1152487: Game Handicap: FX (-1.5)
+1152488: FearX to win 1 games?
+1152489: FearX to win 2 games?
+1152490: Soul's Heart Esport to win 1 games?
+1152491: Soul's Heart Esport to win 2 games?
+1152540: Solana Up or Down - January 11, 9:00AM-9:15AM ET
+1152541: XRP Up or Down - January 11, 8:55AM-9:00AM ET
+1152542: Ethereum Up or Down - January 11, 9:00AM-9:15AM ET
+1152543: Ethereum Up or Down - January 11, 8:55AM-9:00AM ET
+1152544: Bitcoin Up or Down - January 11, 8:55AM-9:00AM ET
+1152545: XRP Up or Down - January 11, 9:00AM-9:15AM ET
+1152546: Bitcoin Up or Down - January 11, 9:00AM-9:15AM ET
+1152547: Solana Up or Down - January 11, 8:55AM-9:00AM ET
+1152548: XRP Up or Down - January 11, 9:00AM-9:05AM ET
+1152549: Bitcoin Up or Down - January 11, 9:00AM-9:05AM ET
+1152550: Ethereum Up or Down - January 11, 9:00AM-9:05AM ET
+1152551: Solana Up or Down - January 11, 9:00AM-9:05AM ET
+1152553: Solana Up or Down - January 11, 9:05AM-9:10AM ET
+1152554: XRP Up or Down - January 11, 9:05AM-9:10AM ET
+1152555: Bitcoin Up or Down - January 11, 9:05AM-9:10AM ET
+1152556: Ethereum Up or Down - January 11, 9:05AM-9:10AM ET
+1152557: Ethereum Up or Down - January 11, 9:15AM-9:30AM ET
+1152558: XRP Up or Down - January 11, 9:15AM-9:30AM ET
+1152559: Solana Up or Down - January 11, 9:15AM-9:30AM ET
+1152560: Bitcoin Up or Down - January 11, 9:15AM-9:30AM ET
+1152561: Ethereum Up or Down - January 11, 9:10AM-9:15AM ET
+1152562: XRP Up or Down - January 11, 9:10AM-9:15AM ET
+1152563: Solana Up or Down - January 11, 9:10AM-9:15AM ET
+1152564: Bitcoin Up or Down - January 11, 9:10AM-9:15AM ET
+1152731: Solana Up or Down - January 11, 9:15AM-9:20AM ET
+1152734: Bitcoin Up or Down - January 11, 9:15AM-9:20AM ET
+1152735: Ethereum Up or Down - January 11, 9:15AM-9:20AM ET
+1152736: XRP Up or Down - January 11, 9:15AM-9:20AM ET
+1152738: XRP Up or Down - January 11, 9:20AM-9:25AM ET
+1152739: Bitcoin Up or Down - January 11, 9:20AM-9:25AM ET
+1152740: Solana Up or Down - January 11, 9:20AM-9:25AM ET
+1152741: Ethereum Up or Down - January 11, 9:20AM-9:25AM ET
+1152742: DSC Arminia Bielefeld vs. Holstein Kiel: O/U 1.5
+1152743: DSC Arminia Bielefeld vs. Holstein Kiel: O/U 2.5
+1152744: DSC Arminia Bielefeld vs. Holstein Kiel: O/U 3.5
+1152745: DSC Arminia Bielefeld vs. Holstein Kiel: O/U 4.5
+1152746: DSC Arminia Bielefeld vs. Holstein Kiel: Both Teams to Score
+1152747: SV Darmstadt 98 vs. 1. FC Nürnberg: O/U 1.5
+1152748: SV Darmstadt 98 vs. 1. FC Nürnberg: O/U 2.5
+1152749: SV Darmstadt 98 vs. 1. FC Nürnberg: O/U 3.5
+1152750: SV Darmstadt 98 vs. 1. FC Nürnberg: O/U 4.5
+1152751: SV Darmstadt 98 vs. 1. FC Nürnberg: Both Teams to Score
+1152753: Solana Up or Down - January 11, 9:25AM-9:30AM ET
+1152754: Bitcoin Up or Down - January 11, 9:25AM-9:30AM ET
+1152755: Ethereum Up or Down - January 11, 9:25AM-9:30AM ET
+1152756: XRP Up or Down - January 11, 9:25AM-9:30AM ET
+1152757: Ethereum Up or Down - January 11, 9:30AM-9:45AM ET
+1152758: XRP Up or Down - January 11, 9:30AM-9:45AM ET
+1152759: Solana Up or Down - January 11, 9:30AM-9:45AM ET
+1152760: Bitcoin Up or Down - January 11, 9:30AM-9:45AM ET
+1152761: Series Team Falcons Rounds Handicap (-10.5)
+1152762: XRP Up or Down - January 11, 9:30AM-9:35AM ET
+1152763: Bitcoin Up or Down - January 11, 9:30AM-9:35AM ET
+1152764: Solana Up or Down - January 11, 9:30AM-9:35AM ET
+1152765: Ethereum Up or Down - January 11, 9:30AM-9:35AM ET
+1152766: XRP Up or Down - January 11, 9:35AM-9:40AM ET
+1152767: Solana Up or Down - January 11, 9:35AM-9:40AM ET
+1152768: Bitcoin Up or Down - January 11, 9:35AM-9:40AM ET
+1152769: Ethereum Up or Down - January 11, 9:35AM-9:40AM ET
+1152771: Bitcoin Up or Down - January 11, 9:40AM-9:45AM ET
+1152772: XRP Up or Down - January 11, 9:40AM-9:45AM ET
+1152773: Ethereum Up or Down - January 11, 9:40AM-9:45AM ET
+1152774: Solana Up or Down - January 11, 9:40AM-9:45AM ET
+1152775: XRP Up or Down - January 11, 9:45AM-10:00AM ET
+1152776: Ethereum Up or Down - January 11, 9:45AM-10:00AM ET
+1152777: Solana Up or Down - January 11, 9:45AM-10:00AM ET
+1152778: Bitcoin Up or Down - January 11, 9:45AM-10:00AM ET
+1152779: Bitcoin Up or Down - January 11, 9:45AM-9:50AM ET
+1152780: Ethereum Up or Down - January 11, 9:45AM-9:50AM ET
+1152781: XRP Up or Down - January 11, 9:45AM-9:50AM ET
+1152782: Solana Up or Down - January 11, 9:45AM-9:50AM ET
+1152783: Solana Up or Down - January 11, 9:50AM-9:55AM ET
+1152784: Ethereum Up or Down - January 11, 9:50AM-9:55AM ET
+1152785: Bitcoin Up or Down - January 11, 9:50AM-9:55AM ET
+1152786: XRP Up or Down - January 11, 9:50AM-9:55AM ET
+1152787: Bitcoin Up or Down - January 12, 10AM ET
+1152788: Ethereum Up or Down - January 12, 10AM ET
+1152789: ASVEL Lyon-Villeurbanne vs. Hapoel Tel Aviv
+1152790: Solana Up or Down - January 12, 10AM ET
+1152791: Fenerbahce vs. Valencia
+1152792: Real Madrid vs. Barcelona
+1152793: XRP Up or Down - January 12, 10AM ET
+1152794: Bulls vs. Nets
+1152795: Pelicans vs. Pacers
+1152796: UIC Flames vs. Evansville Aces (W)
+1152797: Cavaliers vs. 76ers
+1152798: Bradley Braves vs. Drake Bulldogs (W)
+1152799: Creighton Bluejays vs. Providence Friars
+1152800: Clippers vs. Raptors
+1152801: Campbell Fighting Camels vs. Northeastern Huskies (W)
+1152802: Marquette Golden Eagles vs. DePaul Blue Demons
+1152804: Timberwolves vs. Rockets
+1152805: Drexel Dragons vs. Charleston Cougars (W)
+1152807: Baylor Bears vs. Kansas Jayhawks
+1152808: Monmouth Hawks vs. Towson Tigers (W)
+1152809: Wizards vs. Kings
+1152810: Boise State Broncos vs. Utah State Aggies
+1152811: Stony Brook Seawolves vs. Hofstra Pride (W)
+1152812: Loyola Chicago Ramblers vs. Dayton Flyers
+1152813: UTSA Roadrunners vs. Florida Atlantic Owls (W)
+1152814: Colorado State Rams vs. Boise State Broncos
+1152815: Elon Phoenix vs. UNCW Seahawks (W)
+1152816: Hampton Pirates vs. William & Mary Tribe (W)
+1152817: Toledo Rockets vs. Kent State Golden Flashes
+1152818: Ohio Bobcats vs. Ball State Cardinals
+1152866: Bitcoin Up or Down - January 11, 9:55AM-10:00AM ET
+1152867: XRP Up or Down - January 11, 9:55AM-10:00AM ET
+1152868: Solana Up or Down - January 11, 9:55AM-10:00AM ET
+1152869: Solana Up or Down - January 11, 10:00AM-10:15AM ET
+1152870: Ethereum Up or Down - January 11, 9:55AM-10:00AM ET
+1152871: Ethereum Up or Down - January 11, 10:00AM-10:15AM ET
+1152872: Bitcoin Up or Down - January 11, 10:00AM-10:15AM ET
+1152873: XRP Up or Down - January 11, 10:00AM-10:15AM ET
+1152874: Bitcoin Up or Down - January 11, 10:00AM-10:05AM ET
+1152875: Solana Up or Down - January 11, 10:00AM-10:05AM ET
+1152876: Ethereum Up or Down - January 11, 10:00AM-10:05AM ET
+1152877: XRP Up or Down - January 11, 10:00AM-10:05AM ET
+1152880: Bitcoin Up or Down - January 11, 10:05AM-10:10AM ET
+1152881: Ethereum Up or Down - January 11, 10:05AM-10:10AM ET
+1152882: XRP Up or Down - January 11, 10:05AM-10:10AM ET
+1152883: Solana Up or Down - January 11, 10:05AM-10:10AM ET
+1152884: Solana Up or Down - January 11, 10:10AM-10:15AM ET
+1152885: Ethereum Up or Down - January 11, 10:15AM-10:30AM ET
+1152886: XRP Up or Down - January 11, 10:10AM-10:15AM ET
+1152887: Bitcoin Up or Down - January 11, 10:10AM-10:15AM ET
+1152888: Ethereum Up or Down - January 11, 10:10AM-10:15AM ET
+1152889: Solana Up or Down - January 11, 10:15AM-10:30AM ET
+1152890: XRP Up or Down - January 11, 10:15AM-10:30AM ET
+1152891: Bitcoin Up or Down - January 11, 10:15AM-10:30AM ET
+1153055: Bitcoin Up or Down - January 11, 10:15AM-10:20AM ET
+1153060: Solana Up or Down - January 11, 10:15AM-10:20AM ET
+1153062: XRP Up or Down - January 11, 10:15AM-10:20AM ET
+1153063: Ethereum Up or Down - January 11, 10:15AM-10:20AM ET
+1153064: Ethereum Up or Down - January 11, 10:20AM-10:25AM ET
+1153065: Bitcoin Up or Down - January 11, 10:20AM-10:25AM ET
+1153066: XRP Up or Down - January 11, 10:20AM-10:25AM ET
+1153067: Solana Up or Down - January 11, 10:20AM-10:25AM ET
+1153068: Will NAC Breda win on 2026-02-06?
+1153069: Will NAC Breda vs. SBV Excelsior end in a draw?
+1153070: Will SBV Excelsior win on 2026-02-06?
+1153071: Will NEC win on 2026-02-07?
+1153072: Will NEC vs. Heracles Almelo end in a draw?
+1153073: Will Heracles Almelo win on 2026-02-07?
+1153074: Solana Up or Down - January 11, 10:30AM-10:45AM ET
+1153075: Bitcoin Up or Down - January 11, 10:25AM-10:30AM ET
+1153076: Ethereum Up or Down - January 11, 10:25AM-10:30AM ET
+1153077: Bitcoin Up or Down - January 11, 10:30AM-10:45AM ET
+1153078: XRP Up or Down - January 11, 10:25AM-10:30AM ET
+1153079: XRP Up or Down - January 11, 10:30AM-10:45AM ET
+1153080: Solana Up or Down - January 11, 10:25AM-10:30AM ET
+1153081: Ethereum Up or Down - January 11, 10:30AM-10:45AM ET
+1153082: Solana Up or Down - January 11, 10:30AM-10:35AM ET
+1153083: XRP Up or Down - January 11, 10:30AM-10:35AM ET
+1153084: Bitcoin Up or Down - January 11, 10:30AM-10:35AM ET
+1153085: Ethereum Up or Down - January 11, 10:30AM-10:35AM ET
+1153086: Solana Up or Down - January 11, 10:35AM-10:40AM ET
+1153087: XRP Up or Down - January 11, 10:35AM-10:40AM ET
+1153088: Ethereum Up or Down - January 11, 10:35AM-10:40AM ET
+1153089: Bitcoin Up or Down - January 11, 10:35AM-10:40AM ET
+1153090: XRP Up or Down - January 11, 10:45AM-11:00AM ET
+1153091: Solana Up or Down - January 11, 10:40AM-10:45AM ET
+1153092: Solana Up or Down - January 11, 10:45AM-11:00AM ET
+1153093: Bitcoin Up or Down - January 11, 10:45AM-11:00AM ET
+1153094: Ethereum Up or Down - January 11, 10:45AM-11:00AM ET
+1153095: Ethereum Up or Down - January 11, 10:40AM-10:45AM ET
+1153096: XRP Up or Down - January 11, 10:40AM-10:45AM ET
+1153097: Bitcoin Up or Down - January 11, 10:40AM-10:45AM ET
+1153098: Solana Up or Down - January 11, 10:45AM-10:50AM ET
+1153099: Ethereum Up or Down - January 11, 10:45AM-10:50AM ET
+1153100: Bitcoin Up or Down - January 11, 10:45AM-10:50AM ET
+1153101: XRP Up or Down - January 11, 10:45AM-10:50AM ET
+1153102: Solana Up or Down - January 11, 10:50AM-10:55AM ET
+1153103: XRP Up or Down - January 11, 10:50AM-10:55AM ET
+1153104: Bitcoin Up or Down - January 11, 10:50AM-10:55AM ET
+1153105: Ethereum Up or Down - January 11, 10:50AM-10:55AM ET
+1153106: Bitcoin Up or Down - January 12, 11AM ET
+1153107: Ethereum Up or Down - January 12, 11AM ET
+1153108: Solana Up or Down - January 12, 11AM ET
+1153109: XRP Up or Down - January 12, 11AM ET
+1153160: XRP Up or Down - January 11, 10:55AM-11:00AM ET
+1153161: Solana Up or Down - January 11, 10:55AM-11:00AM ET
+1153162: Ethereum Up or Down - January 11, 10:55AM-11:00AM ET
+1153163: Bitcoin Up or Down - January 11, 10:55AM-11:00AM ET
+1153164: Solana Up or Down - January 11, 11:00AM-11:15AM ET
+1153165: Ethereum Up or Down - January 11, 11:00AM-11:15AM ET
+1153166: Bitcoin Up or Down - January 11, 11:00AM-11:15AM ET
+1153167: XRP Up or Down - January 11, 11:00AM-11:15AM ET
+1153168: Ethereum Up or Down - January 11, 11:00AM-11:05AM ET
+1153169: Bitcoin Up or Down - January 11, 11:00AM-11:05AM ET
+1153170: XRP Up or Down - January 11, 11:00AM-11:05AM ET
+1153171: Solana Up or Down - January 11, 11:00AM-11:05AM ET
+1153174: Ethereum Up or Down - January 11, 11:05AM-11:10AM ET
+1153175: Bitcoin Up or Down - January 11, 11:05AM-11:10AM ET
+1153176: XRP Up or Down - January 11, 11:05AM-11:10AM ET
+1153177: Solana Up or Down - January 11, 11:05AM-11:10AM ET
+1153178: Ethereum Up or Down - January 11, 11:10AM-11:15AM ET
+1153179: XRP Up or Down - January 11, 11:10AM-11:15AM ET
+1153180: Bitcoin Up or Down - January 11, 11:10AM-11:15AM ET
+1153181: Solana Up or Down - January 11, 11:10AM-11:15AM ET
+1153182: Solana Up or Down - January 11, 11:15AM-11:30AM ET
+1153183: Bitcoin Up or Down - January 11, 11:15AM-11:30AM ET
+1153184: Ethereum Up or Down - January 11, 11:15AM-11:30AM ET
+1153185: XRP Up or Down - January 11, 11:15AM-11:30AM ET
+1153186: Spread: Golden Knights (-1.5)
+1153187: Golden Knights vs. Sharks: O/U 6.5
+1153188: Spread: Capitals (-1.5)
+1153189: Capitals vs. Predators: O/U 5.5
+1153190: Spread: Utah (-1.5)
+1153191: Blue Jackets vs. Utah: O/U 6.5
+1153192: Spread: Penguins (-1.5)
+1153193: Penguins vs. Bruins: O/U 6.5
+1153194: Spread: Jets (-1.5)
+1153195: Devils vs. Jets: O/U 5.5
+1153365: XRP Up or Down - January 11, 11:15AM-11:20AM ET
+1153366: Ethereum Up or Down - January 11, 11:15AM-11:20AM ET
+1153367: Solana Up or Down - January 11, 11:15AM-11:20AM ET
+1153368: Bitcoin Up or Down - January 11, 11:15AM-11:20AM ET
+1153369: Ethereum Up or Down - January 11, 11:20AM-11:25AM ET
+1153370: XRP Up or Down - January 11, 11:20AM-11:25AM ET
+1153371: Bitcoin Up or Down - January 11, 11:20AM-11:25AM ET
+1153372: Solana Up or Down - January 11, 11:20AM-11:25AM ET
+1153373: SNHL: Kloten Flyers vs. Lausanne
+1153374: DEL: Adler Mannheim vs. Nurnberg Ice Tigers
+1153375: CEHL: Mlada Boleslav vs. Dynamo Pardubice
+1153376: SNHL: Rapperswil-Jona Lakers vs. ZSC Lions
+1153377: KHL: SKA St. Petersburg vs. HC Sochi
+1153378: DEL: Augsburger Panther vs. Loewen Frankfurt
+1153379: CEHL: Motor Ceske Budejovice vs. Plzen
+1153380: SNHL: SCL Tigers vs. Geneve-Servette
+1153381: DEL: Bremerhaven vs. Koelner Haie
+1153382: CEHL: Liberec vs. Trinec
+1153383: SNHL: Zug vs. Ajoie
+1153384: DEL: ERC Ingolstadt vs. Straubing Tigers
+1153385: CEHL: Mountfield HK vs. HC Kladno
+1153386: SNHL: Bern vs. Lugano
+1153387: DEL: Iserlohn Roosters vs. Grizzlys Wolfsburg
+1153388: CEHL: Vitkovice vs. Litvinov
+1153389: CEHL: Olomouc vs. Karlovy Vary
+1153390: DEL: EHC Red Bull Muenchen vs. Dresdner Eisloewen
+1153391: Bitcoin Up or Down - January 11, 11:30AM-11:45AM ET
+1153392: Ethereum Up or Down - January 11, 11:30AM-11:45AM ET
+1153393: Bitcoin Up or Down - January 11, 11:25AM-11:30AM ET
+1153394: XRP Up or Down - January 11, 11:25AM-11:30AM ET
+1153395: Solana Up or Down - January 11, 11:25AM-11:30AM ET
+1153396: Ethereum Up or Down - January 11, 11:25AM-11:30AM ET
+1153397: Solana Up or Down - January 11, 11:30AM-11:45AM ET
+1153398: XRP Up or Down - January 11, 11:30AM-11:45AM ET
+1153399: Series FUT Esports Rounds Handicap (-5.5)
+1153400: Ethereum Up or Down - January 11, 11:30AM-11:35AM ET
+1153401: XRP Up or Down - January 11, 11:30AM-11:35AM ET
+1153402: Solana Up or Down - January 11, 11:30AM-11:35AM ET
+1153403: Bitcoin Up or Down - January 11, 11:30AM-11:35AM ET
+1153404: XRP Up or Down - January 11, 11:35AM-11:40AM ET
+1153405: Bitcoin Up or Down - January 11, 11:35AM-11:40AM ET
+1153406: Solana Up or Down - January 11, 11:35AM-11:40AM ET
+1153407: Ethereum Up or Down - January 11, 11:35AM-11:40AM ET
+1153408: Ethereum Up or Down - January 11, 11:40AM-11:45AM ET
+1153409: Bitcoin Up or Down - January 11, 11:40AM-11:45AM ET
+1153410: Ethereum Up or Down - January 11, 11:45AM-12:00PM ET
+1153411: Solana Up or Down - January 11, 11:40AM-11:45AM ET
+1153412: XRP Up or Down - January 11, 11:40AM-11:45AM ET
+1153413: Solana Up or Down - January 11, 11:45AM-12:00PM ET
+1153414: XRP Up or Down - January 11, 11:45AM-12:00PM ET
+1153415: Bitcoin Up or Down - January 11, 11:45AM-12:00PM ET
+1153416: Spread: Boston College Eagles (-1.5)
+1153417: Boston College Eagles vs. Clemson Tigers: O/U 132.5
+1153446: XRP Up or Down - January 11, 11:45AM-11:50AM ET
+1153447: Bitcoin Up or Down - January 11, 11:45AM-11:50AM ET
+1153448: Ethereum Up or Down - January 11, 11:45AM-11:50AM ET
+1153449: Solana Up or Down - January 11, 11:45AM-11:50AM ET
+1153509: Barça eSports to win 1 maps?
+1153510: Barça eSports to win 2 maps?
+1153511: DNSTY to win 1 maps?
+1153512: DNSTY to win 2 maps?
+1153513: KPI Gaming to win 1 maps?
+1153514: KPI Gaming to win 2 maps?
+1153515: Ramboot Club to win 1 maps?
+1153516: Ramboot Club to win 2 maps?
+1153517: NOVO Esports to win 1 maps?
+1153518: NOVO Esports to win 2 maps?
+1153519: FALKE ESPORTS to win 1 maps?
+1153520: FALKE ESPORTS to win 2 maps?
+1153521: Bitcoin Up or Down - January 11, 11:50AM-11:55AM ET
+1153522: Ethereum Up or Down - January 11, 11:50AM-11:55AM ET
+1153523: Solana Up or Down - January 11, 11:50AM-11:55AM ET
+1153524: XRP Up or Down - January 11, 11:50AM-11:55AM ET
+1153525: Bitcoin Up or Down on January 12?
+1153526: Bitcoin Up or Down - January 12, 12PM ET
+1153527: Will the price of Bitcoin be less than $82,000 on January 17?
+1153528: Will the price of Ethereum be above $2,600 on January 17?
+1153529: Will the price of Bitcoin be between $82,000 and $84,000 on January 17?
+1153530: Will Elon Musk post <40 tweets from January 12 to January 14, 2026?
+1153531: Will the price of Ethereum be above $2,700 on January 17?
+1153532: Will the price of Ethereum be above $2,800 on January 17?
+1153533: Will Elon Musk post 40-64 tweets from January 12 to January 14, 2026?
+1153534: Will the price of Bitcoin be between $84,000 and $86,000 on January 17?
+1153535: Will the price of Ethereum be above $2,900 on January 17?
+1153536: Will Elon Musk post 65-89 tweets from January 12 to January 14, 2026?
+1153537: Will the price of Bitcoin be between $86,000 and $88,000 on January 17?
+1153538: Will the price of Ethereum be above $3,000 on January 17?
+1153539: Will Elon Musk post 90-114 tweets from January 12 to January 14, 2026?
+1153540: Will the price of Bitcoin be between $88,000 and $90,000 on January 17?
+1153541: Will the price of Ethereum be above $3,100 on January 17?
+1153542: Will Elon Musk post 115-139 tweets from January 12 to January 14, 2026?
+1153543: Will the price of Bitcoin be between $90,000 and $92,000 on January 17?
+1153544: Will the price of Ethereum be above $3,200 on January 17?
+1153545: Will Elon Musk post 140-164 tweets from January 12 to January 14, 2026?
+1153546: Will the price of Bitcoin be between $92,000 and $94,000 on January 17?
+1153548: Will Elon Musk post 165-189 tweets from January 12 to January 14, 2026?
+1153549: Will the price of Bitcoin be between $94,000 and $96,000 on January 17?
+1153552: Ethereum Up or Down on January 12?
+1153553: Ethereum Up or Down - January 12, 12PM ET
+1153554: Will the price of Bitcoin be between $96,000 and $98,000 on January 17?
+1153556: Will Elon Musk post 190-214 tweets from January 12 to January 14, 2026?
+1153558: Will the price of Bitcoin be between $98,000 and $100,000 on January 17?
+1153559: Will Elon Musk post 215-239 tweets from January 12 to January 14, 2026?
+1153561: Will the price of Bitcoin be greater than $100,000 on January 17?
+1153562: Will Elon Musk post 240+ tweets from January 12 to January 14, 2026?
+1153570: Will the price of Ethereum be above $3,400 on January 17?
+1153571: Solana Up or Down on January 12?
+1153572: Will the price of Ethereum be above $3,500 on January 17?
+1153573: Will the price of Ethereum be above $3,600 on January 17?
+1153574: Solana Up or Down - January 12, 12PM ET
+1153575: Will the price of Ethereum be less than $2,600 on January 17?
+1153576: XRP Up or Down on January 12?
+1153577: Will the price of Ethereum be between $2,600 and $2,700 on January 17?
+1153578: Will the price of Ethereum be between $2,700 and $2,800 on January 17?
+1153579: Will the price of Ethereum be between $2,800 and $2,900 on January 17?
+1153580: Will the price of Ethereum be between $2,900 and $3,000 on January 17?
+1153581: Will the price of Ethereum be between $3,000 and $3,100 on January 17?
+1153582: Will the price of Ethereum be between $3,100 and $3,200 on January 17?
+1153583: Will the price of Ethereum be between $3,200 and $3,300 on January 17?
+1153584: Will the price of Ethereum be between $3,300 and $3,400 on January 17?
+1153585: Will the price of Ethereum be between $3,400 and $3,500 on January 17?
+1153587: Will the price of Ethereum be greater than $3,500 on January 17?
+1153588: XRP Up or Down - January 12, 12PM ET
+1153589: Will the price of Bitcoin be above $80,000 on January 17?
+1153590: Will the price of Bitcoin be above $82,000 on January 17?
+1153591: Will the price of Bitcoin be above $84,000 on January 17?
+1153592: Will the price of Bitcoin be above $86,000 on January 17?
+1153593: Will the price of Bitcoin be above $88,000 on January 17?
+1153594: Will the price of Bitcoin be above $90,000 on January 17?
+1153595: Will the price of Bitcoin be above $92,000 on January 17?
+1153596: Will the price of Bitcoin be above $94,000 on January 17?
+1153597: Will the price of Bitcoin be above $96,000 on January 17?
+1153598: Will the price of Bitcoin be above $98,000 on January 17?
+1153599: Will the price of Bitcoin be above $100,000 on January 17?
+1153600: Will the price of Solana be less than $90 on January 17?
+1153601: Will the price of Solana be between $90 and $100 on January 17?
+1153602: Will the price of Solana be between $100 and $110 on January 17?
+1153603: Will the price of Solana be between $110 and $120 on January 17?
+1153604: Will the price of Solana be between $120 and $130 on January 17?
+1153605: Will the price of Solana be between $130 and $140 on January 17?
+1153606: Will the price of Solana be between $140 and $150 on January 17?
+1153607: Will the price of Solana be between $150 and $160 on January 17?
+1153608: Will the price of Solana be between $160 and $170 on January 17?
+1153609: Will the price of Solana be between $170 and $180 on January 17?
+1153610: Will the price of Solana be greater than $180 on January 17?
+1153611: Will the price of XRP be less than $1.60 on January 17?
+1153612: Will the price of XRP be between $1.60 and $1.70 on January 17?
+1153613: Will the price of XRP be between $1.70 and $1.80 on January 17?
+1153614: Will the price of XRP be between $1.80 and $1.90 on January 17?
+1153615: Will the price of XRP be between $1.90 and $2.00 on January 17?
+1153616: Will the price of XRP be between $2.00 and $2.10 on January 17?
+1153617: Will the price of XRP be between $2.10 and $2.20 on January 17?
+1153618: Will the price of XRP be between $2.20 and $2.30 on January 17?
+1153619: Will the price of Solana be above $90 on January 17?
+1153620: Will the price of XRP be between $2.30 and $2.40 on January 17?
+1153621: Will the price of Solana be above $100 on January 17?
+1153622: Will the price of XRP be between $2.40 and $2.50 on January 17?
+1153623: Map Handicap: MSC (-1.5)
+1153624: Will the price of Solana be above $110 on January 17?
+1153625: Will the price of XRP be greater than $2.50 on January 17?
+1153626: Will the price of Solana be above $120 on January 17?
+1153627: Will the price of Solana be above $130 on January 17?
+1153628: Will the price of Solana be above $140 on January 17?
+1153629: Will the price of Solana be above $150 on January 17?
+1153630: Will the price of Solana be above $160 on January 17?
+1153631: Will the price of Solana be above $170 on January 17?
+1153632: Will the price of Solana be above $180 on January 17?
+1153637: Will the price of XRP be above $1.60 on January 17?
+1153638: Will the price of XRP be above $1.70 on January 17?
+1153639: Will the price of XRP be above $1.80 on January 17?
+1153640: Will the price of XRP be above $1.90 on January 17?
+1153641: Will the price of XRP be above $2.00 on January 17?
+1153642: Will the price of XRP be above $2.10 on January 17?
+1153643: Will the price of XRP be above $2.20 on January 17?
+1153644: Will the price of XRP be above $2.30 on January 17?
+1153645: Will the price of XRP be above $2.40 on January 17?
+1153646: Will the price of XRP be above $2.50 on January 17?
+1153647: Will the price of XRP be above $2.60 on January 17?
+1153650: UCAM Esports Club to win 1 maps?
+1153651: UCAM Esports Club to win 2 maps?
+1153652: Otakar Esports to win 1 maps?
+1153653: Otakar Esports to win 2 maps?
+1153656: Solana Up or Down - January 11, 12:00PM-12:15PM ET
+1153657: XRP Up or Down - January 11, 12:00PM-12:15PM ET
+1153658: Solana Up or Down - January 11, 11:55AM-12:00PM ET
+1153659: Ethereum Up or Down - January 11, 11:55AM-12:00PM ET
+1153660: Bitcoin Up or Down - January 11, 12:00PM-12:15PM ET
+1153661: Ethereum Up or Down - January 11, 12:00PM-12:15PM ET
+1153662: Bitcoin Up or Down - January 11, 11:55AM-12:00PM ET
+1153663: XRP Up or Down - January 11, 11:55AM-12:00PM ET
+1153664: Ethereum Up or Down - January 11, 12:00PM-12:05PM ET
+1153665: XRP Up or Down - January 11, 12:00PM-12:05PM ET
+1153666: Bitcoin Up or Down - January 11, 12:00PM-4:00PM ET
+1153667: Bitcoin Up or Down - January 11, 12:00PM-12:05PM ET
+1153668: Ethereum Up or Down - January 11, 12:00PM-4:00PM ET
+1153669: Solana Up or Down - January 11, 12:00PM-4:00PM ET
+1153670: Solana Up or Down - January 11, 12:00PM-12:05PM ET
+1153671: XRP Up or Down - January 11, 12:00PM-4:00PM ET
+1153682: Bitcoin Up or Down - January 11, 12:05PM-12:10PM ET
+1153683: Solana Up or Down - January 11, 12:05PM-12:10PM ET
+1153684: XRP Up or Down - January 11, 12:05PM-12:10PM ET
+1153685: Ethereum Up or Down - January 11, 12:05PM-12:10PM ET
+1153686: XRP Up or Down - January 11, 12:15PM-12:30PM ET
+1153687: Solana Up or Down - January 11, 12:10PM-12:15PM ET
+1153688: Bitcoin Up or Down - January 11, 12:15PM-12:30PM ET
+1153689: XRP Up or Down - January 11, 12:10PM-12:15PM ET
+1153690: Ethereum Up or Down - January 11, 12:15PM-12:30PM ET
+1153691: Ethereum Up or Down - January 11, 12:10PM-12:15PM ET
+1153692: Solana Up or Down - January 11, 12:15PM-12:30PM ET
+1153693: Bitcoin Up or Down - January 11, 12:10PM-12:15PM ET
+1153714: Capitals vs. Predators: O/U 6.5
+1153735: Spread: Bruins (-1.5)
+1153854: Bitcoin Up or Down - January 11, 12:15PM-12:20PM ET
+1153855: Ethereum Up or Down - January 11, 12:15PM-12:20PM ET
+1153857: Solana Up or Down - January 11, 12:15PM-12:20PM ET
+1153862: XRP Up or Down - January 11, 12:15PM-12:20PM ET
+1153924: Bitcoin Up or Down - January 11, 12:20PM-12:25PM ET
+1153925: XRP Up or Down - January 11, 12:20PM-12:25PM ET
+1153926: Ethereum Up or Down - January 11, 12:20PM-12:25PM ET
+1153927: Solana Up or Down - January 11, 12:20PM-12:25PM ET
+1153928: Dota 2: Team Falcons vs Virtus.pro (BO3)
+1153929: Dota 2: Team Falcons vs Virtus.pro - Game 1 Winner
+1153930: Dota 2: Team Falcons vs Virtus.pro - Game 2 Winner
+1153931: Games Total: O/U 2.5
+1153932: Virtus.pro to win 1 games?
+1153933: Virtus.pro to win 2 games?
+1153934: Team Falcons to win 1 games?
+1153935: Team Falcons to win 2 games?
+1153936: Series: Team Falcons Kill Handicap (-22.5)
+1153937: Series: Team Falcons Kill Handicap (-23.5)
+1153938: Series: Team Falcons Kill Handicap (-21.5)
+1153939: Series: Most kills?
+1153940: Game Handicap: FLC (-1.5)
+1153941: Ethereum Up or Down - January 11, 12:25PM-12:30PM ET
+1153942: XRP Up or Down - January 11, 12:25PM-12:30PM ET
+1153943: Bitcoin Up or Down - January 11, 12:25PM-12:30PM ET
+1153944: Ethereum Up or Down - January 11, 12:30PM-12:45PM ET
+1153945: Bitcoin Up or Down - January 11, 12:30PM-12:45PM ET
+1153946: Solana Up or Down - January 11, 12:30PM-12:45PM ET
+1153947: Solana Up or Down - January 11, 12:25PM-12:30PM ET
+1153948: XRP Up or Down - January 11, 12:30PM-12:45PM ET
+1153949: Virtus.pro to win 1 games?
+1153950: Virtus.pro to win 2 games?
+1153951: Ethereum Up or Down - January 11, 12:30PM-12:35PM ET
+1153952: Bitcoin Up or Down - January 11, 12:30PM-12:35PM ET
+1153953: XRP Up or Down - January 11, 12:30PM-12:35PM ET
+1153954: Solana Up or Down - January 11, 12:30PM-12:35PM ET
+1153955: Ethereum Up or Down - January 11, 12:35PM-12:40PM ET
+1153956: Bitcoin Up or Down - January 11, 12:35PM-12:40PM ET
+1153957: XRP Up or Down - January 11, 12:35PM-12:40PM ET
+1153958: Solana Up or Down - January 11, 12:35PM-12:40PM ET
+1153959: Will Tigres de la UANL win on 2026-02-06?
+1153960: Will Tigres de la UANL vs. Club Santos Laguna end in a draw?
+1153961: Will Club Santos Laguna win on 2026-02-06?
+1153962: Will Club Necaxa win on 2026-02-06?
+1153963: Will Club Necaxa vs. Atlético San Luis end in a draw?
+1153964: Will Atlético San Luis win on 2026-02-06?
+1153965: Will Club Tijuana win on 2026-02-06?
+1153966: Will Club Tijuana vs. Club Puebla end in a draw?
+1153967: Will Club Puebla win on 2026-02-06?
+1153968: Will Mazatlán FC win on 2026-02-06?
+1153969: Will Mazatlán FC vs. CD Guadalajara end in a draw?
+1153970: Will CD Guadalajara win on 2026-02-06?
+1153971: Series: Team Falcons Kill Handicap (-24.5)
+1153972: Series: Team Falcons Kill Handicap (-25.5)
+1153974: XRP Up or Down - January 11, 12:40PM-12:45PM ET
+1153975: Solana Up or Down - January 11, 12:40PM-12:45PM ET
+1153976: Ethereum Up or Down - January 11, 12:40PM-12:45PM ET
+1153977: XRP Up or Down - January 11, 12:45PM-1:00PM ET
+1153986: Will Tread launch a token by March 31, 2026?
+1153987: Will Tread launch a token by June 30, 2026?
+1153988: Will Tread launch a token by September 30, 2026?
+1153989: Will Tread launch a token by December 31, 2026?
+1153990: Solana Up or Down - January 11, 12:50PM-12:55PM ET
+1153991: Bitcoin Up or Down - January 11, 12:50PM-12:55PM ET
+1153992: Ethereum Up or Down - January 11, 12:50PM-12:55PM ET
+1153993: XRP Up or Down - January 11, 12:50PM-12:55PM ET
+1153994: Bitcoin Up or Down - January 12, 1PM ET
+1154000: Ethereum Up or Down - January 12, 1PM ET

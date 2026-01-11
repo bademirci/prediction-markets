@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1016071: Will Palantir reach $198 in January?
+1016076: Will Palantir dip to $162 in January?
+1016077: Will Palantir dip to $150 in January?
+1016078: Will Palantir dip to $135 in January?
+1016082: Will Opendoor reach $11.50 in January?
+1016083: Will Opendoor reach $10.25 in January?
+1016084: Will Opendoor reach $9.25 in January?
+1016085: Will Opendoor reach $8.25 in January?
+1016091: Will Opendoor dip to $5.50 in January?
+1016093: Will Opendoor dip to $5 in January?
+1016095: Will Opendoor dip to $4.25 in January?
+1016096: Will Opendoor dip to $3.50 in January?
+1016097: Will Opendoor dip to $2.50 in January?
+1016098: Will Opendoor dip to $1.25 in January?
+1019689: East Tennessee State Buccaneers vs. The Citadel Bulldogs
+1020421: Red Wings vs. Maple Leafs
+1020422: Ducks vs. Avalanche
+1020423: Flyers vs. Utah
+1020424: Penguins vs. Flames
+1020425: Islanders vs. Kraken
+1020426: Capitals vs. Canucks
+1020644: Clavicular charged by Jan 31?
+1020864: Clavicular in jail by January 31?
+1020897: Evidence Epstein blackmailed politicians released by Jan 31?
+1021152: Will Morgan Stanley or any of its underwriting affiliates serve as the lead underwriter in SpaceX’s initial public offering?
+1021153: Will Goldman Sachs or any of its underwriting affiliates serve as the lead underwriter in SpaceX’s initial public offering?
+1021154: Will JPMorgan Chase or any of its underwriting affiliates serve as the lead underwriter in SpaceX’s initial public offering?
+1021155: Will Bank of America or any of its underwriting affiliates serve as the lead underwriter in SpaceX’s initial public offering?
+1021156: Will Citigroup or any of its underwriting affiliates serve as the lead underwriter in SpaceX’s initial public offering?
+1021157: Will Barclays or any of its underwriting affiliates serve as the lead underwriter in SpaceX’s initial public offering?
+1021158: Will UBS or any of its underwriting affiliates serve as the lead underwriter in SpaceX’s initial public offering?
+1021159: Will Deutsche Bank or any of its underwriting affiliates serve as the lead underwriter in SpaceX’s initial public offering?
+1021160: Will Wells Fargo or any of its underwriting affiliates serve as the lead underwriter in SpaceX’s initial public offering?
+1022527: Gensyn FDV above $400M one day after launch?
+1028287: UC Riverside Highlanders vs. Hawaii Rainbow Warriors (W)
+1028586: Variational FDV above $500M one day after launch?
+1028588: Pacifica FDV above $300M one day after launch?
+1028903: Stars vs. Blue Jackets
+1028904: Sabres vs. Canadiens
+1028905: Blackhawks vs. Hurricanes
+1028906: Golden Knights vs. Bruins
+1028907: Panthers vs. Jets
+1028908: Senators vs. Predators
+1028909: Penguins vs. Oilers
+1028910: Red Wings vs. Wild
+1029080: Will Trabzonspor win on 2026-01-23?
+1029081: Will Trabzonspor vs. Kasımpaşa SK end in a draw?
+1029082: Will Kasımpaşa SK win on 2026-01-23?
+1029702: U.S. strike on Nigeria by January 31, 2026?
+1029715: Will Trump recognize Somaliland before 2027?
+1029783: Will Oprah Winfrey be named in newly released Epstein files by March 31?
+1029784: Will Jay-Z be named in newly released Epstein files by March 31?
+1029785: Will Joe Biden be named in newly released Epstein files by March 31?
+1029786: Will Kevin Spacey be named in newly released Epstein files by March 31?
+1029787: Will Henry Kissinger be named in newly released Epstein files by March 31?
+1029788: Will Prince Andrew be named in newly released Epstein files by March 31?
+1029789: Will Alan Dershowitz be named in newly released Epstein files by March 31?
+1029790: Will Stephen Hawking be named in newly released Epstein files by March 31?
+1029791: Will Donald Trump be named in newly released Epstein files by March 31?
+1029792: Will Barack Obama be named in newly released Epstein files by March 31?
+1029793: Will Michael Jackson be named in newly released Epstein files by March 31?
+1029794: Will Bill Gates be named in newly released Epstein files by March 31?
+1029795: Will Bill Clinton be named in newly released Epstein files by March 31?
+1029796: Will Hillary Clinton be named in newly released Epstein files by March 31?
+1029797: Will Sean Combs be named in newly released Epstein files by March 31?
+1029798: Will Anderson Cooper be named in newly released Epstein files by March 31?
+1029799: Will Alec Baldwin be named in newly released Epstein files by March 31?
+1029800: Will Leonardo DiCaprio be named in newly released Epstein files by March 31?
+1029801: Will David Copperfield be named in newly released Epstein files by March 31?
+1029802: Will Ehud Barak be named in newly released Epstein files by March 31?
+1029803: Will Justin Trudeau be named in newly released Epstein files by March 31?
+1029804: Will Ellen Degeneres be named in newly released Epstein files by March 31?
+1029805: Will Tom Hanks be named in newly released Epstein files by March 31?
+1029806: Will Chuck Schumer be named in newly released Epstein files by March 31?
+1029807: Will Robert Downey Jr. be named in newly released Epstein files by March 31?
+1029808: Will Alexandria Ocasio-Cortez be named in newly released Epstein files by March 31?
+1029809: Will Quentin Tarantino be named in newly released Epstein files by March 31?
+1029810: Will Bernie Sanders be named in newly released Epstein files by March 31?
+1029811: Will Tony Blair be named in newly released Epstein files by March 31?
+1029812: Will Rachel Maddow be named in newly released Epstein files by March 31?
+1029813: Will Al Gore be named in newly released Epstein files by March 31?
+1029814: Will Stephen Colbert be named in newly released Epstein files by March 31?
+1029815: Will Larry Page be named in newly released Epstein files by March 31?
+1029816: Will David Koch be named in newly released Epstein files by March 31?
+1029817: Will Kirsten Gillibrand be named in newly released Epstein files by March 31?
+1029818: Will Jamie Dimon be named in newly released Epstein files by March 31?
+1029819: Will Piers Morgan be named in newly released Epstein files by March 31?
+1029820: Will Elon Musk be named in newly released Epstein files by March 31?
+1029821: Will Jimmy Kimmel be named in newly released Epstein files by March 31?
+1029822: Will Reid Hoffman be named in newly released Epstein files by March 31?
+1030667: Will Al Hazem SC win on 2026-01-12?
+1030668: Will Al Hazem SC vs. Al Najmah Saudi Club end in a draw?
+1030669: Will Al Najmah Saudi Club win on 2026-01-12?
+1030670: Will Al Ettifaq Saudi Club win on 2026-01-12?
+1030671: Will Al Ettifaq Saudi Club vs. Al Khaleej Saudi Club end in a draw?
+1030672: Will Al Khaleej Saudi Club win on 2026-01-12?
+1030673: Will Al Hilal Saudi Club win on 2026-01-12?
+1030674: Will Al Hilal Saudi Club vs. Al Nassr Saudi Club end in a draw?
+1030675: Will Al Nassr Saudi Club win on 2026-01-12?
+1030676: Will Al Okhdood SC win on 2026-01-13?
+1030677: Will Al Okhdood SC vs. Al Kholood Saudi Club end in a draw?
+1030678: Will Al Kholood Saudi Club win on 2026-01-13?
+1030679: Will Damac Saudi Club win on 2026-01-13?
+1030680: Will Damac Saudi Club vs. Al Ittihad Saudi Club end in a draw?
+1030681: Will Al Ittihad Saudi Club win on 2026-01-13?
+1030682: Will Al Fateh Saudi Club win on 2026-01-13?
+1030683: Will Al Fateh Saudi Club vs. Al Riyadh Saudi Club end in a draw?
+1030684: Will Al Riyadh Saudi Club win on 2026-01-13?
+1030685: Will Al Qadisiyah Saudi Club win on 2026-01-14?
+1030686: Will Al Qadisiyah Saudi Club vs. Al Fayha Saudi Club end in a draw?
+1030687: Will Al Fayha Saudi Club win on 2026-01-14?
+1030688: Will Al Ahli Saudi Club win on 2026-01-14?
+1030689: Will Al Ahli Saudi Club vs. Al Taawoun Saudi Club end in a draw?
+1030690: Will Al Taawoun Saudi Club win on 2026-01-14?
+1030691: Will Al Shabab Saudi Club win on 2026-01-14?
+1030692: Will Al Shabab Saudi Club vs. NEOM SC end in a draw?
+1030693: Will NEOM SC win on 2026-01-14?
+1031076: Will Newcastle United Jets FC win on 2026-01-23?
+1031077: Will Newcastle United Jets FC vs. Wellington Phoenix FC end in a draw?
+1031078: Will Wellington Phoenix FC win on 2026-01-23?
+1031504: Ukraine peace referendum scheduled by January 31?
+1031524: Will Apple (AAPL) close above $210 end of January?
+1031526: Will Apple (AAPL) close above $220 end of January?
+1031527: Will Apple (AAPL) close above $230 end of January?
+1031529: Will Apple (AAPL) close above $240 end of January?
+1031531: Will Apple (AAPL) close above $250 end of January?
+1031532: Will Apple (AAPL) close above $260 end of January?
+1031534: Will Apple (AAPL) close above $270 end of January?
+1031536: Will Apple (AAPL) close above $280 end of January?
+1031538: Will Apple (AAPL) close above $290 end of January?
+1031539: Will Apple (AAPL) close above $300 end of January?
+1031541: Will Apple (AAPL) close above $310 end of January?
+1031543: Will Apple (AAPL) close above $320 end of January?
+1031545: Will Apple (AAPL) close above $330 end of January?
+1031560: Will Microsoft (MSFT) close above $405 end of January?
+1031563: Will Microsoft (MSFT) close above $420 end of January?
+1031567: Will Microsoft (MSFT) close above $435 end of January?
+1031570: Will Microsoft (MSFT) close above $450 end of January?
+1031572: Will Microsoft (MSFT) close above $465 end of January?
+1031574: Will Microsoft (MSFT) close above $480 end of January?
+1031576: Will Microsoft (MSFT) close above $495 end of January?
+1031578: Will Microsoft (MSFT) close above $510 end of January?
+1031580: Will Microsoft (MSFT) close above $525 end of January?
+1031582: Will Microsoft (MSFT) close above $540 end of January?
+1031583: Will Microsoft (MSFT) close above $555 end of January?
+1031584: Will Microsoft (MSFT) close above $570 end of January?
+1031585: Will Microsoft (MSFT) close above $585 end of January?
+1031600: Will Amazon (AMZN) close above $170 end of January?
+1031601: Will Amazon (AMZN) close above $180 end of January?
+1031604: Will Amazon (AMZN) close above $190 end of January?
+1031607: Will Amazon (AMZN) close above $200 end of January?
+1031611: Will Amazon (AMZN) close above $210 end of January?
+1031613: Will Amazon (AMZN) close above $220 end of January?
+1031615: Will Amazon (AMZN) close above $230 end of January?
+1031617: Will Amazon (AMZN) close above $240 end of January?
+1031619: Will Amazon (AMZN) close above $250 end of January?
+1031620: Will Amazon (AMZN) close above $260 end of January?
+1031621: Will Amazon (AMZN) close above $270 end of January?
+1031622: Will Amazon (AMZN) close above $280 end of January?
+1031623: Will Amazon (AMZN) close above $290 end of January?
+1031641: Will Google (GOOGL) close above $250 end of January?
+1031643: Will Google (GOOGL) close above $260 end of January?
+1031645: Will Google (GOOGL) close above $270 end of January?
+1031647: Will Google (GOOGL) close above $280 end of January?
+1031649: Will Google (GOOGL) close above $290 end of January?
+1031651: Will Google (GOOGL) close above $300 end of January?
+1031653: Will Google (GOOGL) close above $310 end of January?
+1031655: Will Google (GOOGL) close above $320 end of January?
+1031656: Will Google (GOOGL) close above $330 end of January?
+1031657: Will Google (GOOGL) close above $340 end of January?
+1031658: Will Google (GOOGL) close above $350 end of January?
+1031659: Will Google (GOOGL) close above $360 end of January?
+1031660: Will Google (GOOGL) close above $370 end of January?
+1031675: Will Meta (META) close above $540 end of January?
+1031677: Will Meta (META) close above $560 end of January?
+1031679: Will Meta (META) close above $580 end of January?
+1031681: Will Meta (META) close above $600 end of January?
+1031683: Will Meta (META) close above $620 end of January?
+1031685: Will Meta (META) close above $640 end of January?
+1031687: Will Meta (META) close above $660 end of January?
+1031689: Will Meta (META) close above $680 end of January?
+1031691: Will Meta (META) close above $700 end of January?
+1031693: Will Meta (META) close above $720 end of January?
+1031695: Will Meta (META) close above $740 end of January?
+1031696: Will Meta (META) close above $760 end of January?
+1031697: Will Meta (META) close above $780 end of January?
+1031711: Will Tesla (TSLA) close above $430 end of January?
+1031713: Will Tesla (TSLA) close above $440 end of January?
+1031715: Will Tesla (TSLA) close above $450 end of January?
+1031717: Will Tesla (TSLA) close above $460 end of January?
+1031719: Will Tesla (TSLA) close above $470 end of January?
+1031720: Will Tesla (TSLA) close above $480 end of January?
+1031723: Will Tesla (TSLA) close above $490 end of January?
+1031725: Will Tesla (TSLA) close above $500 end of January?
+1031727: Will Tesla (TSLA) close above $510 end of January?
+1031729: Will Tesla (TSLA) close above $520 end of January?
+1031731: Will Tesla (TSLA) close above $530 end of January?
+1031733: Will Tesla (TSLA) close above $540 end of January?
+1031734: Will Tesla (TSLA) close above $550 end of January?
+1031746: Will NVIDIA (NVDA) close above $130 end of January?
+1031749: Will NVIDIA (NVDA) close above $140 end of January?
+1031751: Will NVIDIA (NVDA) close above $150 end of January?
+1031753: Will NVIDIA (NVDA) close above $160 end of January?
+1031755: Will NVIDIA (NVDA) close above $170 end of January?
+1031757: Will NVIDIA (NVDA) close above $180 end of January?
+1031759: Will NVIDIA (NVDA) close above $190 end of January?
+1031761: Will NVIDIA (NVDA) close above $200 end of January?
+1031763: Will NVIDIA (NVDA) close above $210 end of January?
+1031765: Will NVIDIA (NVDA) close above $220 end of January?
+1031767: Will NVIDIA (NVDA) close above $230 end of January?
+1031769: Will NVIDIA (NVDA) close above $240 end of January?
+1031771: Will NVIDIA (NVDA) close above $250 end of January?
+1031786: Will Netflix (NFLX) close above $0.00 end of January?
+1031788: Will Netflix (NFLX) close above $20 end of January?
+1031790: Will Netflix (NFLX) close above $40 end of January?
+1031792: Will Netflix (NFLX) close above $60 end of January?
+1031794: Will Netflix (NFLX) close above $80 end of January?
+1031795: Will Netflix (NFLX) close above $100 end of January?
+1031797: Will Netflix (NFLX) close above $120 end of January?
+1031800: Will Netflix (NFLX) close above $140 end of January?
+1031803: Will Netflix (NFLX) close above $160 end of January?
+1031804: Will Netflix (NFLX) close above $180 end of January?
+1031807: Will Netflix (NFLX) close above $200 end of January?
+1031810: Will Netflix (NFLX) close above $220 end of January?
+1031819: Will Palantir (PLTR) close above $182 end of January?
+1031820: Will Palantir (PLTR) close above $184 end of January?
+1031821: Will Palantir (PLTR) close above $186 end of January?
+1031822: Will Palantir (PLTR) close above $188 end of January?
+1031823: Will Palantir (PLTR) close above $190 end of January?
+1031825: Will Palantir (PLTR) close above $192 end of January?
+1031827: Will Palantir (PLTR) close above $194 end of January?
+1031829: Will Palantir (PLTR) close above $196 end of January?
+1031831: Will Palantir (PLTR) close above $198 end of January?
+1031833: Will Palantir (PLTR) close above $200 end of January?
+1031835: Will Palantir (PLTR) close above $202 end of January?
+1031837: Will Palantir (PLTR) close above $204 end of January?
+1031838: Will Palantir (PLTR) close above $206 end of January?
+1031856: Will Opendoor (OPEN) close above $0.00 end of January?
+1031857: Will Opendoor (OPEN) close above $1.00 end of January?
+1031858: Will Opendoor (OPEN) close above $2.00 end of January?
+1031859: Will Opendoor (OPEN) close above $3.00 end of January?
+1031860: Will Opendoor (OPEN) close above $4.00 end of January?
+1031862: Will Opendoor (OPEN) close above $5.00 end of January?
+1031864: Will Opendoor (OPEN) close above $6.00 end of January?
+1031867: Will Opendoor (OPEN) close above $7.00 end of January?
+1031869: Will Opendoor (OPEN) close above $8.00 end of January?
+1031871: Will Opendoor (OPEN) close above $9.00 end of January?
+1031873: Will Opendoor (OPEN) close above $10 end of January?
+1031876: Will Opendoor (OPEN) close above $11 end of January?
+1031878: Will Opendoor (OPEN) close above $12 end of January?
+1031977: Ukraine hits Moscow by January 15?
+1032223: Will Gold (GC) settle at <$4,350 in January?
+1032224: Will Gold (GC) settle at $4,350-$4,475 in January?
+1032225: Will Gold (GC) settle at $4,475-$4,600 in January?
+1032226: Will Gold (GC) settle at $4,600-$4,725 in January?
+1032227: Will Gold (GC) settle at $4,725-$4,850 in January?
+1032228: Will Gold (GC) settle at $4,850-$4,975 in January?
+1032229: Will Gold (GC) settle at $4,975-$5,100 in January?
+1032230: Will Gold (GC) settle at >$5,100 in January?
+1032231: Will Gold (GC) hit (HIGH) $6,000 by end of January?
+1032232: Will Gold (GC) hit (HIGH) $5,500 by end of January?
+1032233: Will Gold (GC) hit (HIGH) $5,000 by end of January?
+1032234: Will Gold (GC) hit (HIGH) $4,900 by end of January?
+1032235: Will Gold (GC) hit (HIGH) $4,700 by end of January?
+1032236: Will Gold (GC) hit (HIGH) $4,600 by end of January?
+1032239: Will Gold (GC) hit (LOW) $4,200 by end of January?
+1032240: Will Gold (GC) hit (LOW) $4,000 by end of January?
+1032241: Will Gold (GC) hit (LOW) $3,600 by end of January?
+1032242: Will Gold (GC) hit (LOW) $3,000 by end of January?
+1032243: Will Gold (GC) settle over $7,000 on the final trading day of January 2026?
+1032244: Will Gold (GC) settle over $6,500 on the final trading day of January 2026?
+1032245: Will Gold (GC) settle over $6,000 on the final trading day of January 2026?
+1032246: Will Gold (GC) settle over $5,500 on the final trading day of January 2026?
+1032247: Will Gold (GC) settle over $5,200 on the final trading day of January 2026?
+1032248: Will Gold (GC) settle over $5,000 on the final trading day of January 2026?
+1032249: Will Gold (GC) settle over $4,800 on the final trading day of January 2026?
+1032250: Will Gold (GC) settle over $4,600 on the final trading day of January 2026?
+1032251: Will Gold (GC) settle over $4,400 on the final trading day of January 2026?
+1032252: Will Gold (GC) settle over $4,200 on the final trading day of January 2026?
+1032253: Will Gold (GC) settle over $4,000 on the final trading day of January 2026?
+1032254: Will Gold (GC) settle over $3,600 on the final trading day of January 2026?
+1032255: Will Gold (GC) settle at <$3,800 in June?
+1032256: Will Gold (GC) settle at $3,800-$4,200 in June?
+1032257: Will Gold (GC) settle at $4,200-$4,600 in June?
+1032259: Will Gold (GC) settle at $4,600-$5,000 in June?
+1032260: Will Gold (GC) settle at $5,000-$5,400 in June?
+1032261: Will Gold (GC) settle at $5,400-$5,800 in June?
+1032262: Will Gold (GC) settle at $5,800-$6,200 in June?
+1032263: Will Gold (GC) settle at >$6,200 in June?
+1032267: Will Gold (GC) hit (HIGH) $8,000 by end of June?
+1032268: Will Gold (GC) hit (HIGH) $7,000 by end of June?
+1032269: Will Gold (GC) hit (HIGH) $6,500 by end of June?
+1032270: Will Gold (GC) hit (HIGH) $6,200 by end of June?
+1032271: Will Gold (GC) hit (HIGH) $6,000 by end of June?
+1032272: Will Gold (GC) hit (HIGH) $5,500 by end of June?
+1032273: Will Gold (GC) hit (HIGH) $5,000 by end of June?
+1032278: Will Gold (GC) hit (LOW) $4,200 by end of June?
+1032279: Will Gold (GC) hit (LOW) $3,800 by end of June?
+1032280: Will Gold (GC) hit (LOW) $3,400 by end of June?
+1032281: Will Gold (GC) settle over $8,000 on the final trading day of June 2026?
+1032282: Will Gold (GC) settle over $7,000 on the final trading day of June 2026?
+1032283: Will Gold (GC) settle over $6,500 on the final trading day of June 2026?
+1032284: Will Gold (GC) settle over $6,200 on the final trading day of June 2026?
+1032285: Will Gold (GC) settle over $6,000 on the final trading day of June 2026?
+1032286: Will Gold (GC) settle over $5,800 on the final trading day of June 2026?
+1032287: Will Gold (GC) settle over $5,600 on the final trading day of June 2026?
+1032288: Will Gold (GC) settle over $5,400 on the final trading day of June 2026?
+1032289: Will Gold (GC) settle over $5,200 on the final trading day of June 2026?
+1032290: Will Gold (GC) settle over $5,000 on the final trading day of June 2026?
+1032291: Will Gold (GC) settle over $4,800 on the final trading day of June 2026?
+1032292: Will Gold (GC) settle over $4,600 on the final trading day of June 2026?
+1032293: Will Silver (SI) settle at <$70 in January?
+1032294: Will Silver (SI) settle at $70-$72.5 in January?
+1032295: Will Silver (SI) settle at $72.5-$75 in January?
+1032296: Will Silver (SI) settle at $75-$77.5 in January?
+1032297: Will Silver (SI) settle at $77.5-$80 in January?
+1032298: Will Silver (SI) settle at $80-$82.5 in January?
+1032299: Will Silver (SI) settle at $82.5-$85 in January?
+1032300: Will Silver (SI) settle at >$85 in January?
+1032301: Will Silver (SI) hit (HIGH) $150 by end of January?
+1032302: Will Silver (SI) hit (HIGH) $120 by end of January?
+1032303: Will Silver (SI) hit (HIGH) $110 by end of January?
+1032304: Will Silver (SI) hit (HIGH) $100 by end of January?
+1032305: Will Silver (SI) hit (HIGH) $90 by end of January?
+1032306: Will Silver (SI) hit (HIGH) $85 by end of January?
+1032309: Will Silver (SI) hit (LOW) $70 by end of January?
+1032310: Will Silver (SI) hit (LOW) $65 by end of January?
+1032311: Will Silver (SI) hit (LOW) $55 by end of January?
+1032312: Will Silver (SI) hit (LOW) $40 by end of January?
+1032313: Will Silver (SI) hit (LOW) $25 by end of January?
+1032314: Will Silver (SI) settle over $120 on the final trading day of January 2026?
+1032315: Will Silver (SI) settle over $110 on the final trading day of January 2026?
+1032316: Will Silver (SI) settle over $100 on the final trading day of January 2026?
+1032317: Will Silver (SI) settle over $95 on the final trading day of January 2026?
+1032318: Will Silver (SI) settle over $90 on the final trading day of January 2026?
+1032319: Will Silver (SI) settle over $85 on the final trading day of January 2026?
+1032320: Will Silver (SI) settle over $80 on the final trading day of January 2026?
+1032321: Will Silver (SI) settle over $75 on the final trading day of January 2026?
+1032322: Will Silver (SI) settle over $70 on the final trading day of January 2026?
+1032323: Will Silver (SI) settle over $65 on the final trading day of January 2026?
+1032324: Will Silver (SI) settle over $55 on the final trading day of January 2026?
+1032325: Will Silver (SI) settle over $40 on the final trading day of January 2026?
+1032326: Will Silver (SI) settle at <$50 in June?
+1032327: Will Silver (SI) settle at $50-$60 in June?
+1032328: Will Silver (SI) settle at $60-$70 in June?
+1032329: Will Silver (SI) settle at $70-$80 in June?
+1032330: Will Silver (SI) settle at $80-$90 in June?
+1032331: Will Silver (SI) settle at $90-$100 in June?
+1032332: Will Silver (SI) settle at $100-$115 in June?
+1032333: Will Silver (SI) settle at >$115 in June?
+1032334: Will Silver (SI) hit (HIGH) $200 by end of June?
+1032335: Will Silver (SI) hit (HIGH) $150 by end of June?
+1032336: Will Silver (SI) hit (HIGH) $120 by end of June?
+1032337: Will Silver (SI) hit (HIGH) $110 by end of June?
+1032338: Will Silver (SI) hit (HIGH) $100 by end of June?
+1032339: Will Silver (SI) hit (HIGH) $90 by end of June?
+1032340: Will Silver (SI) hit (HIGH) $85 by end of June?
+1032343: Will Silver (SI) hit (LOW) $70 by end of June?
+1032344: Will Silver (SI) hit (LOW) $65 by end of June?
+1032345: Will Silver (SI) hit (LOW) $60 by end of June?
+1032346: Will Silver (SI) hit (LOW) $55 by end of June?
+1032347: Will Silver (SI) hit (LOW) $45 by end of June?
+1032348: Will Silver (SI) hit (LOW) $35 by end of June?
+1032349: Will Silver (SI) settle over $140 on the final trading day of June 2026?
+1032350: Will Silver (SI) settle over $120 on the final trading day of June 2026?
+1032351: Will Silver (SI) settle over $110 on the final trading day of June 2026?
+1032352: Will Silver (SI) settle over $100 on the final trading day of June 2026?
+1032353: Will Silver (SI) settle over $95 on the final trading day of June 2026?
+1032354: Will Silver (SI) settle over $90 on the final trading day of June 2026?
+1032355: Will Silver (SI) settle over $85 on the final trading day of June 2026?
+1032356: Will Silver (SI) settle over $80 on the final trading day of June 2026?
+1032357: Will Silver (SI) settle over $75 on the final trading day of June 2026?
+1032358: Will Silver (SI) settle over $70 on the final trading day of June 2026?
+1032359: Will Silver (SI) settle over $65 on the final trading day of June 2026?
+1032360: Will Silver (SI) settle over $60 on the final trading day of June 2026?
+1032361: Will Crude Oil (CL) settle at <$45 in January?
+1032362: Will Crude Oil (CL) settle at $45-$50 in January?
+1032363: Will Crude Oil (CL) settle at $50-$55 in January?
+1032364: Will Crude Oil (CL) settle at $55-$60 in January?
+1032365: Will Crude Oil (CL) settle at $60-$65 in January?
+1032366: Will Crude Oil (CL) settle at $65-$70 in January?
+1032367: Will Crude Oil (CL) settle at $70-$75 in January?
+1032368: Will Crude Oil (CL) settle at >$75 in January?
+1032369: Will Crude Oil (CL) hit (HIGH) $75 by end of January?
+1032370: Will Crude Oil (CL) hit (HIGH) $70 by end of January?
+1032371: Will Crude Oil (CL) hit (HIGH) $65 by end of January?
+1032372: Will Crude Oil (CL) hit (HIGH) $62 by end of January?
+1032373: Will Crude Oil (CL) hit (HIGH) $60 by end of January?
+1032375: Will Crude Oil (CL) hit (LOW) $55 by end of January?
+1032376: Will Crude Oil (CL) hit (LOW) $52 by end of January?
+1032377: Will Crude Oil (CL) hit (LOW) $50 by end of January?
+1032378: Will Crude Oil (CL) hit (LOW) $47 by end of January?
+1032379: Will Crude Oil (CL) hit (LOW) $42 by end of January?
+1032380: Will Crude Oil (CL) hit (LOW) $35 by end of January?
+1032381: Will Crude Oil (CL) settle over $80 on the final trading day of January 2026?
+1032382: Will Crude Oil (CL) settle over $75 on the final trading day of January 2026?
+1032383: Will Crude Oil (CL) settle over $70 on the final trading day of January 2026?
+1032384: Will Crude Oil (CL) settle over $65 on the final trading day of January 2026?
+1032385: Will Crude Oil (CL) settle over $62 on the final trading day of January 2026?
+1032386: Will Crude Oil (CL) settle over $60 on the final trading day of January 2026?
+1032387: Will Crude Oil (CL) settle over $58 on the final trading day of January 2026?
+1032388: Will Crude Oil (CL) settle over $55 on the final trading day of January 2026?
+1032389: Will Crude Oil (CL) settle over $52 on the final trading day of January 2026?
+1032390: Will Crude Oil (CL) settle over $50 on the final trading day of January 2026?
+1032391: Will Crude Oil (CL) settle over $47 on the final trading day of January 2026?
+1032392: Will Crude Oil (CL) settle over $42 on the final trading day of January 2026?
+1032393: Will Crude Oil (CL) settle at <$42 in June?
+1032394: Will Crude Oil (CL) settle at $42-$49 in June?
+1032395: Will Crude Oil (CL) settle at $49-$56 in June?
+1032396: Will Crude Oil (CL) settle at $56-$63 in June?
+1032397: Will Crude Oil (CL) settle at $63-$70 in June?
+1032398: Will Crude Oil (CL) settle at $70-$77 in June?
+1032399: Will Crude Oil (CL) settle at $77-$84 in June?
+1032400: Will Crude Oil (CL) settle at >$84 in June?
+1032401: Will Crude Oil (CL) hit (HIGH) $90 by end of June?
+1032402: Will Crude Oil (CL) hit (HIGH) $80 by end of June?
+1032403: Will Crude Oil (CL) hit (HIGH) $75 by end of June?
+1032404: Will Crude Oil (CL) hit (HIGH) $70 by end of June?
+1032405: Will Crude Oil (CL) hit (HIGH) $65 by end of June?
+1032406: Will Crude Oil (CL) hit (HIGH) $60 by end of June?
+1032408: Will Crude Oil (CL) hit (LOW) $55 by end of June?
+1032409: Will Crude Oil (CL) hit (LOW) $52 by end of June?
+1032410: Will Crude Oil (CL) hit (LOW) $50 by end of June?
+1032411: Will Crude Oil (CL) hit (LOW) $47 by end of June?
+1032412: Will Crude Oil (CL) hit (LOW) $45 by end of June?
+1032413: Will Crude Oil (CL) hit (LOW) $40 by end of June?
+1032414: Will Crude Oil (CL) hit (LOW) $35 by end of June?
+1032415: Will Crude Oil (CL) settle over $90 on the final trading day of June 2026?
+1032416: Will Crude Oil (CL) settle over $85 on the final trading day of June 2026?
+1032417: Will Crude Oil (CL) settle over $80 on the final trading day of June 2026?
+1032418: Will Crude Oil (CL) settle over $75 on the final trading day of June 2026?
+1032419: Will Crude Oil (CL) settle over $70 on the final trading day of June 2026?
+1032420: Will Crude Oil (CL) settle over $65 on the final trading day of June 2026?
+1032421: Will Crude Oil (CL) settle over $63 on the final trading day of June 2026?
+1032422: Will Crude Oil (CL) settle over $60 on the final trading day of June 2026?
+1032423: Will Crude Oil (CL) settle over $56 on the final trading day of June 2026?
+1032424: Will Crude Oil (CL) settle over $55 on the final trading day of June 2026?
+1032425: Will Crude Oil (CL) settle over $52 on the final trading day of June 2026?
+1032426: Will Crude Oil (CL) settle over $50 on the final trading day of June 2026?
+1032869: Ex-FaZe members form new organization by March 31?
+1034491: Will Derby County FC win on 2026-01-23?
+1034492: Will Derby County FC vs. West Bromwich Albion FC end in a draw?
+1034493: Will West Bromwich Albion FC win on 2026-01-23?
+1035359: Spread: NEC (-1.5)
+1035360: NEC vs. FC Utrecht: O/U 1.5
+1035362: NEC vs. FC Utrecht: O/U 2.5
+1035364: NEC vs. FC Utrecht: O/U 3.5
+1035367: NEC vs. FC Utrecht: O/U 4.5
+1035369: NEC vs. FC Utrecht: Both Teams to Score
+1036114: Map Handicap: AAB (-1.5)
+1036115: AaB esport to win 0 maps?
+1036117: AaB esport to win 1 maps?
+1036118: FUT Academy to win 0 maps?
+1036119: FUT Academy to win 2 maps?
+1036120: FUT Academy to win 1 maps?
+1036158: Map Handicap: MISA (-1.5)
+1036159: Misa Esports to win 1 maps?
+1036160: Misa Esports to win 2 maps?
+1036161: Misa Esports to win 0 maps?
+1036163: FOKUS to win 2 maps?
+1036164: FOKUS to win 0 maps?
+1038565: Will Nansen launch a token by March 31, 2026?
+1038566: Will Nansen launch a token by June 30, 2026?
+1038567: Will Nansen launch a token by September 30, 2026?
+1038568: Will Nansen launch a token by December 31, 2026?
+1038580: Will ETHGAS launch a token by March 31, 2026?
+1038581: Will ETHGAS launch a token by June 30, 2026?
+1038582: Will ETHGAS launch a token by September 30, 2026?
+1038584: Will ETHGAS launch a token by December 31, 2026?
+1038640: Will Loopscale launch a token by March 31, 2026?
+1038641: Will Loopscale launch a token by June 30, 2026?
+1038642: Will Loopscale launch a token by September 30, 2026?
+1038643: Will Loopscale launch a token by December 31, 2026?
+1038644: Will Titan launch a token by March 31, 2026?
+1038645: Will Titan launch a token by June 30, 2026?
+1038646: Will Titan launch a token by September 30, 2026?
+1038647: Will Titan launch a token by December 31, 2026?
+1038712: Will Oro launch a token by March 31, 2026?
+1038714: Will Oro launch a token by June 30, 2026?
+1038717: Will Oro launch a token by September 30, 2026?
+1038719: Will Oro launch a token by December 31, 2026?
+1038815: Will Perena launch a token by March 31, 2026?
+1038816: Will Perena launch a token by June 30, 2026?
+1038817: Will Perena launch a token by September 30, 2026?
+1038818: Will Perena launch a token by December 31, 2026?
+1038874: Will Exponent launch a token by March 31, 2026?
+1038876: Will Exponent launch a token by June 30, 2026?
+1038877: Will Exponent launch a token by September 30, 2026?
+1038880: Will Exponent launch a token by December 31, 2026?
+1038906: Up Only podcast released by January 31, 2026?
+1038907: Up Only podcast released by February 28, 2026?
+1038908: Will AFC Ajax win on 2026-01-24?
+1038909: Will AFC Ajax vs. FC Volendam end in a draw?
+1038910: Will FC Volendam win on 2026-01-24?
+1038919: Will Gainzy appear on the UpOnly podcast by December 31?
+1038920: Will SBF appear on the UpOnly podcast by December 31?
+1038921: Will ThreadGuy appear on the UpOnly podcast by December 31?
+1038922: Will Jesse Pollak appear on the UpOnly podcast by December 31?
+1038923: Will Michael Saylor appear on the UpOnly podcast by December 31?
+1038924: Will CZ appear on the UpOnly podcast by December 31?

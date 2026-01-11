@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+663402: Will Pittsburgh win the 2025-2026 ACC Men’s Basketball regular season championship?
+663403: Will SMU win the 2025-2026 ACC Men’s Basketball regular season championship?
+663404: Will Stanford win the 2025-2026 ACC Men’s Basketball regular season championship?
+663405: Will Syracuse win the 2025-2026 ACC Men’s Basketball regular season championship?
+663406: Will Virginia win the 2025-2026 ACC Men’s Basketball regular season championship?
+663407: Will Virginia Tech win the 2025-2026 ACC Men’s Basketball regular season championship?
+663408: Will Wake Forest win the 2025-2026 ACC Men’s Basketball regular season championship?
+663409: Will another team win the 2025-2026 ACC Men’s Basketball regular season championship?
+663460: Will Butler win the 2025-2026 Big East Men’s Basketball regular season championship?
+663461: Will Creighton win the 2025-2026 Big East Men’s Basketball regular season championship?
+663462: Will DePaul win the 2025-2026 Big East Men’s Basketball regular season championship?
+663463: Will Georgetown win the 2025-2026 Big East Men’s Basketball regular season championship?
+663464: Will Marquette win the 2025-2026 Big East Men’s Basketball regular season championship?
+663465: Will Providence win the 2025-2026 Big East Men’s Basketball regular season championship?
+663466: Will Seton Hall win the 2025-2026 Big East Men’s Basketball regular season championship?
+663467: Will St. John’s win the 2025-2026 Big East Men’s Basketball regular season championship?
+663468: Will UConn win the 2025-2026 Big East Men’s Basketball regular season championship?
+663469: Will Villanova win the 2025-2026 Big East Men’s Basketball regular season championship?
+663470: Will Xavier win the 2025-2026 Big East Men’s Basketball regular season championship?
+663471: Will another team win the 2025-2026 Big East Men’s Basketball regular season championship?
+663472: Will Trump meet with Putin by March 31, 2026?
+663544: Will the U.S. invade Venezuela by March 31, 2026?
+663545: Will Mamdani make NYC buses free by March 31?
+663583: Will the Iranian regime fall before 2027?
+663912: Mamdani opens city-owned grocery store  by June 30?
+664045: Will Mamdani freeze NYC rents before 2027?
+664748: Israel x Hamas ceasefire cancelled by March 31, 2026?
+664878: Will Consensys IPO by March 31 2026?
+664884: Will Consensys IPO by September 30 2026?
+664885: Will Consensys IPO by December 31 2026?
+664895: Will MetaMask launch a token by September 30, 2026?
+664911: Will the Fed Cut–Pause–Pause in the next three decisions (Dec–Jan–Mar)?
+664912: Will the Fed Cut–Pause–Cut in the next three decisions (Dec–Jan–Mar)?
+664913: Will the Fed Cut–Cut–Pause in the next three decisions (Dec–Jan–Mar)?
+664914: Will the Fed Cut–Cut–Cut in the next three decisions (Dec–Jan–Mar)?
+664919: Will the Fed decide differently in the next three decisions (Dec–Jan–Mar)?
+665205: US national Bitcoin reserve before 2027?
+665207: Will Trump issue a Gold Card by March 31?
+665209: Will Trump be impeached by June 30?
+665217: Israel and Saudi Arabia normalize relations by March 31?
+665218: Israel and Saudi Arabia normalize relations before 2027?
+665223: Ukraine signs peace deal with Russia by March 31?
+665224: Ukraine signs peace deal with Russia before 2027?
+665228: Will Hezbollah disarm by March 31?
+665243: NATO article 5 before 2027?
+665244: NATO Article 5 by March 31?
+665245: Yoon out of custody by March 31?
+665246: Yoon out of custody before 2027?
+665258: Will China unban Bitcoin by 2027?
+665259: Will Donald Trump visit the United Kingdom in 2026?
+665260: Will Donald Trump visit Israel in 2026?
+665261: Will Donald Trump visit Canada in 2026?
+665262: Will Donald Trump visit Mexico in 2026?
+665263: Will Donald Trump visit Saudi Arabia in 2026?
+665264: Will Donald Trump visit Japan in 2026?
+665265: Will Donald Trump visit Germany in 2026?
+665266: Will Donald Trump visit South Korea in 2026?
+665267: Will Donald Trump visit France in 2026?
+665268: Will Donald Trump visit Russia in 2026?
+665269: Will Donald Trump visit Ukraine in 2026?
+665270: Will Donald Trump visit Taiwan in 2026?
+665271: Will Donald Trump visit China in 2026?
+665272: Will Donald Trump visit Italy in 2026?
+665273: Will Donald Trump visit Oman in 2026?
+665274: Will Donald Trump visit India in 2026?
+665275: Will Donald Trump visit Belarus in 2026?
+665276: Will Donald Trump visit Turkey in 2026?
+665291: Will Google Gemini 3 score at least 40% on the FrontierMath Benchmark?
+665292: Will Google Gemini 3 score at least 50% on the FrontierMath Benchmark?
+665293: Will Google Gemini 3 score at least 60% on the FrontierMath Benchmark by?
+665294: Will Google Gemini 3 score at least 70% on the FrontierMath Benchmark?
+665307: Will Iran close the Strait of Hormuz before 2027?
+665316: Will Trump sell 0 Gold Cards in 2026?
+665317: Will Trump sell 1-100 Gold Cards in 2026?
+665318: Will Trump sell 101-1k Gold Cards in 2026?
+665319: Will Trump sell 1k-2.5k Gold Cards in 2026?
+665320: Will Trump sell 2.5k-5k Gold Cards in 2026?
+665321: Will Trump sell 5k-10k Gold Cards in 2026?
+665322: Will Trump sell 10k-25k Gold Cards in 2026?
+665323: Will Trump sell 25k-100k Gold Cards in 2026?
+665324: Will Trump sell over 100k Gold Cards in 2026?
+665325: US-Iran nuclear deal before 2027?
+665326: Will the US recognize Palestine before 2027?
+665327: Will Italy recognize Palestine before 2027?
+665328: Will The Netherlands recognize Palestine before 2027?
+665329: Will Japan recognize Palestine before 2027?
+665330: Will Germany recognize Palestine before 2027?
+665331: Will Belgium recognize Palestine before 2027?
+665332: Will Finland recognize Palestine before 2027?
+665333: Will Austria recognize Palestine before 2027?
+665334: Will Greece recognize Palestine before 2027?
+665335: Will New Zealand recognize Palestine before 2027?
+665340: Will Yoon be sentenced to prison before 2027?
+665353: Ukraine agrees not to join NATO before 2027? 
+665354: Will Elon register any party before 2027?
+665359: Poilievre out as leader of Conservatives before 2027?
+665362: Obama divorce before 2027?
+665363: Lee Jae-myung arrested before 2027?
+665368: Will Trump's approval rating hit 40% in 2026?
+665369: Will Trump's approval rating hit 35% in 2026?
+665370: Will Trump's approval rating hit 30% in 2026?
+665371: Will Trump's approval rating hit 25% in 2026?
+665372: Will Trump's approval rating hit 20% in 2026?
+665373: U.S. recognizes Russian sovereignty over Crimea before 2027? 
+665374: Will the U.S. invade Iran before 2027?
+665375: US national Ethereum reserve before 2027?
+665409: Will Trump cut corporate taxes before 2027?
+665410: Will Ukraine agree to give up the rest of Donbas before 2027?
+665414: Israel and Lebanon normalize relations before 2027?
+665419: Milei out as President of Argentina before 2027?
+665420: Fed abolished before 2027?
+665421: Putin and Zelenskyy shake hands by June 30?
+665426: Will a new country join the Abraham Accords by March 31?
+665427: Will a new country join the Abraham Accords before 2027?
+665449: Trump removed via 25th Amendment before 2027?
+665453: Obama federally charged before 2027?
+665458: Will Russia capture Sloviansk by June 30?
+665459: Will North Korea invade South Korea before 2027?
+665460: Zohran Mamdani citizenship revoked before 2027?
+665464: Kim Jong Un out as Supreme Leader of North Korea before 2027?
+665465: Obama arrested before 2027?
+665470: Will Oman join the Abraham Accords before 2027?
+665471: Will Kuwait join the Abraham Accords before 2027?
+665472: Will Syria join the Abraham Accords before 2027?
+665473: Will Lebanon join the Abraham Accords before 2027?
+665474: Will Saudi Arabia join the Abraham Accords before 2027?
+665475: Will Azerbaijan join the Abraham Accords before 2027?
+665480: Will US withdraw from NATO before 2027?
+665481: US Treasury transactions on blockchain by June 30?
+665482: Will Elon Musk announce Presidential run before 2027?
+665483: Will Trump cut long term capital gains tax before 2027?
+665484: Israel x Turkey military clash before 2027?
+665485: U.S. forces in Gaza before 2027?
+665494: Will Trump reduce the deficit before 2027? 
+665495: Ukraine joins NATO before 2027?
+665501: Will North and South Korea engage in direct talks by June 30?
+665502: Will a province schedule a referendum to leave Canada before 2027?
+665503: Cap on gambling loss deductions repealed by March 31?
+665504: Cap on gambling loss deductions repealed before 2027?
+665506: Lee Jae-myung impeached before 2027?
+665512: Friedrich Merz out as Chancellor of Germany by March 31?
+665513: Friedrich Merz out as Chancellor of Germany before 2027?
+665514: Nord Stream pipeline turned on before 2027?
+665515: Will Israel annex West Bank territory before 2027?
+665517: Will the U.S. national debt hit $39 trillion before 2027?
+665518: Will the U.S. national debt hit $40 trillion before 2027?
+665519: Will the U.S. national debt hit $41 trillion before 2027?
+665520: Will the U.S. national debt hit $42 trillion before 2027?
+665521: Iran nuclear test before 2027?
+665531: Metamask FDV above $700M one day after launch?
+665532: Metamask FDV above $1B one day after launch?
+665533: Metamask FDV above $3B one day after launch?
+665535: Will Google Gemini 3 score at least 40% on Humanity’s Last Exam by January 31?
+665727: Will Iran withdraw from the NPT before 2027?
+665728: US defaults on debt by 2027?
+665729: US congress stock trading ban before 2027?
+665734: Will Trump establish a Gaza “Board of Peace” by March 31?
+665735: Another US debt downgrade before 2027?
+665736: Foreign intervention in Gaza by March 31?
+665737: Weed rescheduled by March 31?
+665738: Ahmed al-Sharaa out as leader of Syria before 2027?
+665740: Will TikTok be banned by March 31?
+666494: EdgeX FDV above $1B one day after launch?
+666495: EdgeX FDV above $2B one day after launch?
+666496: EdgeX FDV above $3B one day after launch?
+666497: EdgeX FDV above $4B one day after launch?
+666498: EdgeX FDV above $5B one day after launch?
+666579: Will Trump deport less than 200k people?
+666580: Will Trump deport 200-300k people?
+666581: Will Trump deport 300-400k people?
+666582: Will Trump deport 400-500k people?
+666583: Will Trump deport 500-600k people?
+666584: Will Trump deport 600-700k people?
+666585: Will Trump deport 700-800k people?
+666586: Will Trump deport 800-900k people?
+666587: Will Trump deport 900k-1m people?
+666588: Will Trump deport more than 1m people?
+666593: Will Trump meet with Kim Jong Un in 2026?
+666594: Will Trump meet with Volodymyr Zelenskyy in 2026?
+666595: Will Trump meet with Xi Jinping in 2026?
+666596: Will Trump meet with Mohammed bin Salman in 2026?
+666597: Will Trump meet with Ali Khamenei in 2026?
+666598: Will Trump meet with Keir Starmer in 2026?
+666599: Will Trump meet with Lai Ching-te in 2026?
+666600: Will Trump meet with Lula da Silva in 2026?
+666601: Will Trump meet with Javier Milei in 2026?
+666602: Will Trump meet with MrBeast in 2026?
+666603: Will Trump meet with Jair Bolsonaro in 2026?
+666604: Will Trump meet with Yoon Suk Yeol in 2026?
+666605: Will Trump meet with Abdel Fattah El-Sisi in 2026?
+666606: Will Trump meet with iShowSpeed in 2026?
+666607: Will Trump meet with Ahmed al-Sharaa in 2026?
+666608: Will Trump meet with Vladimir Putin in 2026?
+666609: Will Trump meet with Friedrich Merz in 2026?
+666610: Will Trump meet with Pope Leo XIV in 2026?
+666611: Will Trump meet with Aleksandr Lukashenko in 2026?
+666612: Will Trump meet with Changpeng Zhao in 2026?
+666613: Will Trump meet with Nicolás Maduro in 2026?
+666614: MegaETH market cap (FDV) >$3B one day after launch?
+666655: Starmer out by December 31, 2026?
+666656: Will Pump.fun perform an airdrop by March 31? 
+666657: Will Robert F. Kennedy Jr. leave the Trump administration before 2027?
+666658: Will Karoline Leavitt leave the Trump administration before 2027?
+666659: Will Pete Hegseth leave the Trump administration before 2027?
+666660: Will Marco Rubio leave the Trump administration before 2027?
+666661: Will Scott Bessent leave the Trump administration before 2027?
+666662: Will Tulsi Gabbard leave the Trump administration before 2027?
+666663: Will Pam Bondi leave the Trump administration before 2027?
+666664: Will Lee Zeldin leave the Trump administration before 2027?
+666665: Will Howard Lutnick leave the Trump administration before 2027?
+666667: Will Kash Patel leave the Trump administration before 2027?
+666696: Israel x Iran ceasefire broken by March 31, 2026?
+666697: Will USD.AI launch a token by March 31?
+666711: Will the U.S. test a nuclear weapon by March 31 2026?
+666720: Will Russia test a nuclear weapon by March 31 2026?
+666817: U.S. agrees to a new trade deal with "European Union" before 2027?
+666818: U.S. agrees to a new trade deal with "India" before 2027?
+666819: U.S. agrees to a new trade deal with "Canada" before 2027?
+666820: U.S. agrees to a new trade deal with "Brazil" before 2027?
+666821: U.S. agrees to a new trade deal with "Japan" before 2027?
+666822: U.S. agrees to a new trade deal with "Indonesia" before 2027?
+666823: U.S. agrees to a new trade deal with "Argentina" before 2027?
+666824: U.S. agrees to a new trade deal with "Vietnam" before 2027?
+666825: U.S. agrees to a new trade deal with "Australia" before 2027?
+666826: U.S. agrees to a new trade deal with "Mexico" before 2027?
+666827: U.S. agrees to a new trade deal with "South Korea" before 2027?
+666828: U.S. agrees to a new trade deal with "Israel" before 2027?
+666829: U.S. agrees to a new trade deal with "Pakistan" before 2027?
+666830: U.S. agrees to a new trade deal with "United Kingdom" before 2027?
+666831: U.S. agrees to a new trade deal with "Russia" before 2027?
+666832: U.S. agrees to a new trade deal with "South Africa" before 2027?
+666857: Zohran Mamdani out as mayor of NYC before 2027?
+666860: Trump out as President by March 31?
+666861: Trump out as President before 2027?
+667004: Metamask FDV above $2B one day after launch?
+667005: Metamask FDV above $4B one day after launch?
+667026: Will Mamdani raise the minimum wage to $30 before 2027?
+667068: Will Trump resign before 2027?
+667073: Consensys IPO closing market cap above $1B?
+667074: Consensys IPO closing market cap above $2B?
+667075: Consensys IPO closing market cap above $3B?
+667076: Will Zelenskyy and Putin meet next in Turkey before 2027?
+667077: Will Zelenskyy and Putin meet next in Russia before 2027?
+667078: Will Zelenskyy and Putin meet next in Italy / Vatican before 2027?
+667079: Will Zelenskyy and Putin meet next in Ukraine before 2027?
+667080: Will Zelenskyy and Putin meet next in China before 2027?
+667081: Will Zelenskyy and Putin meet next in Qatar / UAE before 2027?
+667082: Will Zelenskyy and Putin meet next in Saudi Arabia before 2027?
+667083: Will Zelenskyy and Putin meet next in US before 2027?
+667084: Will Zelenskyy and Putin meet next in Hungary before 2027?
+667085: Will Zelenskyy  and Putin meet next in Belarus before 2027?
+667086: Will Zelenskyy and Putin not meet before 2027?
+667088: Will Zelenskyy and Putin meet next in Switzerland before 2027?
+667089: Will Zelenskyy and Putin meet next in India before 2027?
+667091: Will Zelenskyy and Putin meet next in Kazakhstan before 2027?
+667115: duplicate Will J.D. Vance be the first to leave the Trump Cabinet before 2027?
+667116: duplicate Will Marco Rubio be the first to leave the Trump Cabinet before 2027?
+667117: duplicate Will Scott Bessent be the first to leave the Trump Cabinet before 2027?
+667118: duplicate Will Pete Hegseth be the first to leave the Trump Cabinet before 2027?
+667119: duplicate Will Pam Bondi be the first to leave the Trump Cabinet before 2027?
+667120: duplicate Will Doug Burgum be the first to leave the Trump Cabinet before 2027?
+667121: duplicate Will Brooke Rollins be the first to leave the Trump Cabinet before 2027?
+667122: duplicate Will Howard Lutnick be the first to leave the Trump Cabinet before 2027?
+667123: duplicate Will Lori Chavez-DeRemer be the first to leave the Trump Cabinet before 2027?
+667124: duplicate Will Robert F. Kennedy Jr. be the first to leave the Trump Cabinet before 2027?
+667125: duplicate Will Scott Turner be the first to leave the Trump Cabinet before 2027?
+667126: duplicate Will Sean Duffy be the first to leave the Trump Cabinet before 2027?
+667127: duplicate Will Chris Wright be the first to leave the Trump Cabinet before 2027?
+667128: duplicate Will Linda McMahon be the first to leave the Trump Cabinet before 2027?
+667129: duplicate Will Doug Collins be the first to leave the Trump Cabinet before 2027?
+667130: duplicate Will Kristi Noem be the first to leave the Trump Cabinet before 2027?
+667131: duplicate Will Lee Zeldin be the first to leave the Trump Cabinet before 2027?
+667132: duplicate Will Susie Wiles be the first to leave the Trump Cabinet before 2027?
+667133: duplicate Will Tulsi Gabbard be the first to leave the Trump Cabinet before 2027?
+667134: duplicate Will Russell T. Vought be the first to leave the Trump Cabinet before 2027?
+667135: duplicate Will John Ratcliffe be the first to leave the Trump Cabinet before 2027?
+667136: duplicate Will Jamieson Greer be the first to leave the Trump Cabinet before 2027?
+667137: duplicate Will Mike Waltz be the first to leave the Trump Cabinet before 2027?
+667138: duplicate Will Stephen Miran be the first to leave the Trump Cabinet before 2027?
+667139: duplicate Will Kelly Loeffler be the first to leave the Trump Cabinet before 2027?
+667209: Will Mamdani pass the 2% Millionaire Tax before 2027?
+667722: Penn State Nittany Lions vs. Akron Zips
+667749: Virginia Cavaliers vs. VMI Keydets
+668328: Will Umaro Sissoco Embaló win the 2025 Guinea-Bissau presidential election?
+668329: Will Mamadu Iaia Djaló win the 2025 Guinea-Bissau presidential election?
+668330: Will Honório Augusto Lopes win the 2025 Guinea-Bissau presidential election?
+668331: Will João Bernardo Vieira win the 2025 Guinea-Bissau presidential election?
+668332: Will João de Deus Mendes win the 2025 Guinea-Bissau presidential election?
+668333: Will Fernando Dias da Costa win the 2025 Guinea-Bissau presidential election?
+668334: Will Mário da Silva Júnior win the 2025 Guinea-Bissau presidential election?
+668335: Will Herculano Armando Bequinsa win the 2025 Guinea-Bissau presidential election?
+668336: Will Siga Batista win the 2025 Guinea-Bissau presidential election?
+668337: Will José Mário Vaz win the 2025 Guinea-Bissau presidential election?
+668338: Will Baciro Djá win the 2025 Guinea-Bissau presidential election?
+668339: Will Gabriel Fernando Indi win the 2025 Guinea-Bissau presidential election?
+668591: GTA 6 launch postponed again?
+668657: Sam Altman in jail by June 30?
+668680: Will FLING win the most seats in the 2025 Guinea-Bissau National People’s Assembly election?
+668681: Will FREPASNA win the most seats in the 2025 Guinea-Bissau National People’s Assembly election?
+668682: Will PS win the most seats in the 2025 Guinea-Bissau National People’s Assembly election?
+668683: Will PT win the most seats in the 2025 Guinea-Bissau National People’s Assembly election?
+668684: Will MUNDO-GB  win the most seats in the 2025 Guinea-Bissau National People’s Assembly election?
+668685: Will Platforma Reupblicana “Nô Kumpu Guiné” win the most seats in the 2025 Guinea-Bissau National People’s Assembly election?
+669455: EdgeX FDV above $10B one day after launch?
+669488: Will BLɅϽKPIИK release an album by February 28?
+669660: Will the Fed decrease interest rates by 50+ bps after the April 2026 meeting?
+669661: Will the Fed decrease interest rates by 25 bps after the April 2026 meeting?
+669662: Will there be no change in Fed interest rates after the April 2026 meeting?
+669663: Will the Fed increase interest rates by 25+ bps after the April 2026 meeting?
+669799: Will Lionel Messi play in the 2026 FIFA World Cup?
+669975: Will an FBI top ten most wanted fugitive be captured by June 2026?
+669979: Will the Bank of Canada announce a 50+ bps decrease at the January meeting?
+669980: Will the Bank of Canada announce a 25 bps decrease at the January meeting?
+669981: Will the Bank of Canada announce no change at the January meeting?
+669982: Will the Bank of Canada announce an increase at the January meeting?
+669991: Bank of England decreases interest rates by 50+ bps after February 2026 meeting?
+669992: Bank of England decreases interest rates by 25 bps after February 2026 meeting?
+669993: No change in Bank of England's interest rates after February 2026 meeting?
+669994: Bank of England increases interest rates after February 2026 meeting?
+669998: Bank of Japan decreases interest rates after January 2026 meeting?
+669999: No change in Bank of Japan's interest rates after January 2026 meeting?
+670000: Bank of Japan increases interest rates by 25 bps after January 2026 meeting?
+670001: Bank of Japan increases interest rates by 50+ bps after January 2026 meeting?
+670037: Will 50PLUS be part of the next Government of the Netherlands?
+670058: NYSE marketwide circuit breaker before 2027?
+670098: Canada recession before 2027?
+670188: Will PLN win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670189: Will PUSC win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670190: Will PLP win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670191: Will PNR win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670192: Will FA win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670193: Will UP win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670194: Will PPSO win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670195: Will PPSD win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670196: Will PIN win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670197: Will PNG win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670198: Will PJSC win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670199: Will PT win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670200: Will PENAC win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670201: Will PEL win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670202: Will CR1 win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670203: Will UCD win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670204: Will CDS win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670205: Will AVANZA win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670206: Will ACRM win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670207: Will Agenda Ciudadana win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670208: Will AY win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670209: Will PACOR win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670210: Will COMPA win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670211: Will PCU win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670212: Will UG win the most seats in the 2026 Costa Rican Legislative Assembly election?
+670370: OpenAI receives federal backstop for infrastructure before July?
+671103: Central Baptist College Mustangs vs. Louisiana-Monroe Warhawks (W)
+672157: Will Charlton Athletic FC win on 2025-12-06?
+672160: Will Charlton Athletic FC vs. Portsmouth FC end in a draw?
+672162: Will Portsmouth FC win on 2025-12-06?
+672167: Will Blackburn Rovers FC win on 2025-12-06?
+672169: Will Blackburn Rovers FC vs. Sheffield Wednesday FC end in a draw?
+672171: Will Sheffield Wednesday FC win on 2025-12-06?
+674419: Nicolas Sarkozy in jail by March 31?
+674924: Japanese Snap Election Called by June 30, 2026?
+674929: Will Bill Belichick be the next Giants Head Coach?
+674930: Will Matt Nagy be the next Giants Head Coach?
+674931: Will Lane Kiffin be the next Giants Head Coach?
+674932: Will Jesse Minter be the next Giants Head Coach?
+674933: Will Joe Brady be the next Giants Head Coach?
+674934: Will Kliff Kingsbury be the next Giants Head Coach?
+674935: Will Chris Shula be the next Giants Head Coach?
+674936: Will Brian Flores be the next Giants Head Coach?
+674937: Will Anthony Campanile be the next Giants Head Coach?
+674938: Will Klint Kubiak be the next Giants Head Coach?
+674939: Will Mike Kafka be the next Giants Head Coach?
+674940: Will Antonio Brown be the next Giants Head Coach?
+674941: Will James Franklin be the next Giants Head Coach?
+674942: Will Jeff Hafley be the next Giants Head Coach?
+674943: Will John Harbaugh be the next Giants Head Coach?
+674944: Will Kevin Stefanski be the next Giants Head Coach?
+674945: Will Mike McDaniel be the next Giants Head Coach?
+675030: Based FDV above $1B one day after launch?
+675031: Based FDV above $2B one day after launch?
+675032: Based FDV above $3B one day after launch?
+675033: Based FDV above $4B one day after launch?
+675435: Will Kim Kardashian pass the bar exam by May 3?
+675595: Will Waymo launch in New York City by June 30 2026?
+675596: Will Waymo launch in Washington DC by June 30 2026?
+675597: Will Waymo launch in Miami by June 30 2026?
+675598: Will Waymo launch in Nashville by June 30 2026?
+675599: Will Waymo launch in Dallas by June 30 2026?
+675600: Will Waymo launch in Denver by June 30 2026?
+675601: Will Waymo launch in Detroit by June 30 2026?
+675602: Will Waymo launch in Las Vegas by June 30 2026?
+675604: Will Waymo operate in 5 cities or less on June 30 2026?
+675605: Will Waymo operate in 6 cities on June 30 2026?
+675606: Will Waymo operate in 7 cities on June 30 2026?
+675607: Will Waymo operate in 8 cities on June 30 2026?
+675608: Will Waymo operate in 9 cities on June 30 2026?
+675609: Will Waymo operate in 10 cities on June 30 2026?
+675610: Will Waymo operate in 11 cities on June 30 2026?
+675611: Will Waymo operate in 12 or more cities on June 30 2026?
+675662: Washington Commanders agree to name stadium after Trump?
+675756: Will Dan Auerbach win Producer of the Year, Non-Classical at the 68th annual GRAMMY Awards?
+675757: Will Cirkut win Producer of the Year, Non-Classical at the 68th annual GRAMMY Awards?
+675758: Will Dijon win Producer of the Year, Non-Classical at the 68th annual GRAMMY Awards?
+675759: Will Blake Mills win Producer of the Year, Non-Classical at the 68th annual GRAMMY Awards?
+675760: Will Sounwave win Producer of the Year, Non-Classical at the 68th annual GRAMMY Awards?
+675788: Israel x Syria security agreement by January 31?
+676385: Based FDV above $800M one day after launch?
+676387: Will Trump create a tariff dividend by March 31?
+676390: Based FDV above $500M one day after launch?
+676450: Will Stephen Miller leave the Trump administration before 2027?
+676451: Will Waymo launch in London by June 30 2026?
+676452: Will Claudia Vanessa Dobles Camargo win the 2026 Costa Rican presidential election?
+676453: Will Douglas Caamaño Quirós win the 2026 Costa Rican presidential election?
+676454: Will David Hernández Brenes win the 2026 Costa Rican presidential election?
+676455: Will Claudio Alberto Alpízar Otoya win the 2026 Costa Rican presidential election?
+676456: Will Marco David Rodríguez Badilla win the 2026 Costa Rican presidential election?
+676457: Will Andrés Ariel Robles Barrantes win the 2026 Costa Rican presidential election?
+676458: Will Luis Esteban Amador Jiménez win the 2026 Costa Rican presidential election?
+676459: Will Walter Rubén Hernández Juárez win the 2026 Costa Rican presidential election?
+676460: Will Álvaro Roberto Ramos Chaves win the 2026 Costa Rican presidential election?
+676461: Will Eliécer Feinzaig Mintz win the 2026 Costa Rican presidential election?
+676462: Will Fernando Zamora Castellanos win the 2026 Costa Rican presidential election?
+676463: Will Gerardo Fabricio Alvarado Muñoz win the 2026 Costa Rican presidential election?
+676464: Will Laura Virginia Fernández Delgado win the 2026 Costa Rican presidential election?
+676465: Will Juan Carlos Hidalgo Bogantes win the 2026 Costa Rican presidential election?
+676466: Will Natalia Díaz Quintana win the 2026 Costa Rican presidential election?
+676467: Will Boris Molina Acevedo win the 2026 Costa Rican presidential election?
+676516: Will StandX launch a token by March 31?
+676517: StandX FDV above $800M one day after launch?
+676518: StandX FDV above $1B one day after launch?
+676519: StandX FDV above $2B one day after launch?
+676520: StandX FDV above $3B one day after launch?
+676710: Will NVIDIA be the largest company in the world by market cap on March 31?
+676711: Will Microsoft be the largest company in the world by market cap on March 31?
+676712: Will Apple be the largest company in the world by market cap on March 31?
+676713: Will Alphabet be the largest company in the world by market cap on March 31?
+676714: Will Tesla be the largest company in the world by market cap on March 31?
+676715: Will Saudi Aramco be the largest company in the world by market cap on March 31?
+676716: Will Amazon be the largest company in the world by market cap on March 31?
+676738: Will $PUP receive a perp listing by March 31?
+676739: Will NVIDIA be the largest company in the world by market cap on December 31?
+676740: Will Microsoft be the largest company in the world by market cap on December 31?
+676741: Will Apple be the largest company in the world by market cap on December 31?
+676742: Will Alphabet be the largest company in the world by market cap on December 31?
+676743: Will Tesla be the largest company in the world by market cap on December 31?
+676744: Will Saudi Aramco be the largest company in the world by market cap on December 31?
+676745: Will Amazon be the largest company in the world by market cap on December 31?
+676777: Discord IPO before 2027?
+676778: Stripe IPO before 2027?
+676779: Ripple Labs IPO before 2027?
+676780: Cerebras IPO before 2027?
+676781: Ramp IPO before 2027?
+676782: Celonis IPO before 2027?
+676783: Vanta IPO before 2027?
+676784: Anduril IPO before 2027?
+676785: OpenAI IPO before 2027?
+676786: Brex IPO before 2027?
+676787: Rippling IPO before 2027?
+676788: Anysphere (Cursor) IPO before 2027?
+676789: Remote IPO before 2027?
+676790: Mistral AI IPO before 2027?
+676791: Deel IPO before 2027?
+676792: Anthropic IPO before 2027?
+676793: Glean IPO before 2027?
+676794: xAI IPO before 2027?
+676795: SpaceX (Space Exploration Technologies Corp.) IPO before 2027?
+676796: Databricks IPO before 2027?
+676797: Applied Intuition IPO before 2027?
+676798: Fannie Mae IPO before 2027?
+676799: Freddie Mac IPO before 2027?
+676801: Once Upon a Farm IPO before 2027?
+676802: Musk out as Tesla CEO before 2027?
+676803: Will a Chinese AI model become #1 by June 30? 
+676804: Will OpenAI launch a new consumer hardware product by December 31, 2026?
+676812: SpaceX Starship fully reusable before 2027?
+676817: Will Tesla launch robotaxis in California by June 30?
+676827: OpenAI acquired before 2027?
+676828: Will GPT-6 be released by June 30, 2026?
+676829: Will GPT-6 be released by December 31, 2026?
+676830: Will MicroStrategy announce bankruptcy before 2027?
+676837: AI wins IMO gold medal in 2026?
+676842: U.S. enacts AI safety bill before 2027?
+676843: Will OpenAI launch a token before 2027?
+676844: Bitcoin more valuable than any company before 2027?
+676845: Will Sam Altman get OpenAI equity by June 30?
+676846: Anthropic acquired before 2027?
+676847: AI model scores ≥ 90% on FrontierMath Benchmark before 2027?
+676900: Will Elon Musk be richest person on March 31?
+676901: Will Larry Ellison be richest person on March 31?
+676902: Will Mark Zuckerberg be richest person on March 31?
+676903: Will Bernard Arnault be richest person on March 31?
+676904: Will Jeff Bezos be richest person on March 31?
+676905: Will Jensen Huang be richest person on March 31?
+676906: Will Warren Buffett be richest person on March 31?
+676907: Will Steve Ballmer be richest person on March 31?
+676908: Will Larry Page be richest person on March 31?
+676909: Will Sergey Brin be richest person on March 31?
+676937: Will Elon Musk be richest person on December 31?
+676938: Will Larry Ellison be richest person on December 31?
+676939: Will Mark Zuckerberg be richest person on December 31?

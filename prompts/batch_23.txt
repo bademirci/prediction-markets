@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1069512: Al Okhdood SC vs. Al Kholood Saudi Club: Both Teams to Score
+1071139: Will VfB Stuttgart win on 2026-01-13?
+1071140: Will VfB Stuttgart vs. Eintracht Frankfurt end in a draw?
+1071141: Will Eintracht Frankfurt win on 2026-01-13?
+1071144: Will Hamburger SV win on 2026-01-13?
+1071145: Will Hamburger SV vs. Bayer 04 Leverkusen end in a draw?
+1071146: Will Bayer 04 Leverkusen win on 2026-01-13?
+1071147: Will BV Borussia 09 Dortmund win on 2026-01-13?
+1071148: Will BV Borussia 09 Dortmund vs. SV Werder Bremen end in a draw?
+1071149: Will SV Werder Bremen win on 2026-01-13?
+1071150: Will 1. FSV Mainz 05 win on 2026-01-13?
+1071151: Will 1. FSV Mainz 05 vs. 1. FC Heidenheim 1846 end in a draw?
+1071152: Will 1. FC Heidenheim 1846 win on 2026-01-13?
+1071463: Spread: 1. FSV Mainz 05 (-1.5)
+1071464: 1. FSV Mainz 05 vs. 1. FC Heidenheim 1846: O/U 1.5
+1071465: 1. FSV Mainz 05 vs. 1. FC Heidenheim 1846: O/U 2.5
+1071466: 1. FSV Mainz 05 vs. 1. FC Heidenheim 1846: O/U 3.5
+1071467: 1. FSV Mainz 05 vs. 1. FC Heidenheim 1846: O/U 4.5
+1071468: 1. FSV Mainz 05 vs. 1. FC Heidenheim 1846: Both Teams to Score
+1071470: Spread: BV Borussia 09 Dortmund (-1.5)
+1071471: BV Borussia 09 Dortmund vs. SV Werder Bremen: O/U 1.5
+1071472: BV Borussia 09 Dortmund vs. SV Werder Bremen: O/U 2.5
+1071473: BV Borussia 09 Dortmund vs. SV Werder Bremen: O/U 3.5
+1071474: BV Borussia 09 Dortmund vs. SV Werder Bremen: O/U 4.5
+1071475: BV Borussia 09 Dortmund vs. SV Werder Bremen: Both Teams to Score
+1071477: Spread: Bayer 04 Leverkusen (-1.5)
+1071478: Hamburger SV vs. Bayer 04 Leverkusen: O/U 1.5
+1071479: Hamburger SV vs. Bayer 04 Leverkusen: O/U 2.5
+1071480: Hamburger SV vs. Bayer 04 Leverkusen: O/U 3.5
+1071481: Hamburger SV vs. Bayer 04 Leverkusen: O/U 4.5
+1071482: Hamburger SV vs. Bayer 04 Leverkusen: Both Teams to Score
+1071483: Spread: VfB Stuttgart (-1.5)
+1071484: VfB Stuttgart vs. Eintracht Frankfurt: O/U 1.5
+1071485: VfB Stuttgart vs. Eintracht Frankfurt: O/U 2.5
+1071486: VfB Stuttgart vs. Eintracht Frankfurt: O/U 3.5
+1071487: VfB Stuttgart vs. Eintracht Frankfurt: O/U 4.5
+1071488: VfB Stuttgart vs. Eintracht Frankfurt: Both Teams to Score
+1072353: CF Cruz Azul vs. Atlas FC: O/U 1.5
+1072354: CF Cruz Azul vs. Atlas FC: O/U 2.5
+1072355: CF Cruz Azul vs. Atlas FC: O/U 3.5
+1072356: CF Cruz Azul vs. Atlas FC: O/U 4.5
+1072357: CF Cruz Azul vs. Atlas FC: Both Teams to Score
+1072359: FC Juárez vs. CD Guadalajara: O/U 1.5
+1072360: FC Juárez vs. CD Guadalajara: O/U 2.5
+1072361: FC Juárez vs. CD Guadalajara: O/U 3.5
+1072362: FC Juárez vs. CD Guadalajara: O/U 4.5
+1072363: FC Juárez vs. CD Guadalajara: Both Teams to Score
+1072365: Club Puebla vs. Mazatlán FC: O/U 1.5
+1072366: Club Puebla vs. Mazatlán FC: O/U 2.5
+1072367: Club Puebla vs. Mazatlán FC: O/U 3.5
+1072368: Club Puebla vs. Mazatlán FC: O/U 4.5
+1072369: Club Puebla vs. Mazatlán FC: Both Teams to Score
+1072370: CF Pachuca vs. Club León FC: O/U 1.5
+1072371: CF Pachuca vs. Club León FC: O/U 2.5
+1072372: CF Pachuca vs. Club León FC: O/U 3.5
+1072373: CF Pachuca vs. Club León FC: O/U 4.5
+1072374: CF Pachuca vs. Club León FC: Both Teams to Score
+1072375: Club Necaxa vs. CF Monterrey: O/U 1.5
+1072376: Club Necaxa vs. CF Monterrey: O/U 2.5
+1072377: Club Necaxa vs. CF Monterrey: O/U 3.5
+1072378: Club Necaxa vs. CF Monterrey: O/U 4.5
+1072379: Club Necaxa vs. CF Monterrey: Both Teams to Score
+1073076: Will xQc beat Forsen's Minecraft speedrun record by January 31?
+1073247: Stefon Diggs suspended this season?
+1073248: Stefon Diggs arrested by March 31?
+1073385: Stefon Diggs in jail by March 31?
+1073738: Major meteor strike (10kt+) in 2026?
+1073747: 5kt meteor strike in 2026?
+1073770: Another 7.0 or above earthquake by January 31, 2026?
+1073771: Another 7.0 or above earthquake by March 31, 2026?
+1073788: Will there be fewer than 5 earthquakes of magnitude 7.0 or higher worldwide in 2026?
+1073789: Will there be between 5 and 7 earthquakes of magnitude 7.0 or higher worldwide in 2026?
+1073790: Will there be between 8 and 10 earthquakes of magnitude 7.0 or higher worldwide in 2026?
+1073791: Will there be between 11 and 13 earthquakes of magnitude 7.0 or higher worldwide in 2026?
+1073792: Will there be between 14 and 16 earthquakes of magnitude 7.0 or higher worldwide in 2026?
+1073793: Will there be between 17 and 19 earthquakes of magnitude 7.0 or higher worldwide in 2026?
+1073794: Will there be 20 or more earthquakes of magnitude 7.0 or higher worldwide in 2026?
+1074058: Will any Category 5 hurricane make landfall in the US in before 2027?
+1074081: Bayeux FC vs. Olympique de Marseille: O/U 1.5
+1074082: Bayeux FC vs. Olympique de Marseille: O/U 2.5
+1074083: Bayeux FC vs. Olympique de Marseille: O/U 3.5
+1074084: Bayeux FC vs. Olympique de Marseille: O/U 4.5
+1074085: Bayeux FC vs. Olympique de Marseille: Both Teams to Score
+1074107: Missouri Tigers vs. Kentucky Wildcats
+1074113: Oklahoma Sooners vs. Mississippi State Bulldogs
+1074123: California Golden Bears vs. Virginia Cavaliers
+1074131: Grand Canyon Antelopes vs. Boise State Broncos
+1074449: Will UAE strike Yemen by January 31?
+1074466: CS2 market cap reaches 6 billion again by January 31, 2026?
+1074798: Utah vs. Panthers
+1074799: Sabres vs. Maple Leafs
+1074800: Jets vs. Devils
+1074801: Golden Knights vs. Canadiens
+1074802: Kings vs. Red Wings
+1074803: Predators vs. Bruins
+1074804: Blackhawks vs. Wild
+1074805: Stars vs. Blues
+1074806: Capitals vs. Kraken
+1074807: Sharks vs. Canucks
+1074820: Will the median home value in New York City be less than $560,000 by February 1?
+1074821: Will the median home value in New York City be between $560,000 and $570,000 by February 1?
+1074822: Will the median home value in New York City be between $570,000 and $580,000 by February 1?
+1074823: Will the median home value in New York City be between $580,000 and $590,000 by February 1?
+1074824: Will the median home value in New York City be between $590,000 and $600,000 by February 1?
+1074825: Will the median home value in New York City be greater than $600,000 by February 1?
+1074954: Will the median home value in Miami be less than $975,000 by February 1?
+1074955: Will the median home value in Miami be between $975,000 and $1,000,000 by February 1?
+1074956: Will the median home value in Miami be between $1,000,000 and $1,025,000 by February 1?
+1074957: Will the median home value in Miami be between $1,025,000 and $1,050,000 by February 1?
+1074958: Will the median home value in Miami be between $1,050,000 and $1,075,000 by February 1?
+1074959: Will the median home value in Miami be between $1,075,000 and $1,100,000 by February 1?
+1074960: Will the median home value in Miami be greater than $1,100,000 by February 1?
+1075290: Will there be exactly 0 confirmed VEI 4 or higher volcanic eruptions worldwide in 2026?
+1075291: Will there be exactly 1 confirmed VEI 4 or higher volcanic eruption worldwide in 2026?
+1075292: Will there be exactly 2 confirmed VEI 4 or higher volcanic eruptions worldwide in 2026?
+1075293: Will there be exactly 3 confirmed VEI 4 or higher volcanic eruptions worldwide in 2026?
+1075294: Will there be exactly 4 confirmed VEI 4 or higher volcanic eruptions worldwide in 2026?
+1075295: Will there be 5 or more confirmed VEI 4 or higher volcanic eruptions worldwide in 2026?
+1075326: Will the total number of TSA passengers for January 2 be less than 1,750,000?
+1075327: Will the total number of TSA passengers for January 2 be between 1,750,000 and 2,000,000?
+1075328: Will the total number of TSA passengers for January 2 be between 2,000,000 and 2,250,000?
+1075329: Will the total number of TSA passengers for January 2 be between 2,250,000 and 2,500,000?
+1076108: Will CryptoPunks floor price reach 50 ETH before 2027?
+1076110: Will CryptoPunks floor price dip to 20 ETH before 2027?
+1076111: Will CryptoPunks floor price dip to 10 ETH before 2027?
+1076131: Will Pudgy Penguins floor price reach 10 ETH before 2027?
+1076132: Will Pudgy Penguins floor price dip to 2 ETH before 2027?
+1076408: Will Al Najmah Saudi Club win on 2026-01-28?
+1076409: Will Al Najmah Saudi Club vs. Al Riyadh Saudi Club end in a draw?
+1076410: Will Al Riyadh Saudi Club win on 2026-01-28?
+1076411: Will Al Ahli Saudi Club win on 2026-01-28?
+1076412: Will Al Ahli Saudi Club vs. Al Ettifaq Saudi Club end in a draw?
+1076413: Will Al Ettifaq Saudi Club win on 2026-01-28?
+1076414: Will Al Fayha Saudi Club win on 2026-01-28?
+1076415: Will Al Fayha Saudi Club vs. Al Khaleej Saudi Club end in a draw?
+1076416: Will Al Khaleej Saudi Club win on 2026-01-28?
+1076685: US recognize Somaliland by June 30, 2026?
+1076686: Will Somaliland join the Abraham Accords before 2027?
+1076750: Will Mike McCoy be fired by February 28?
+1076751: Will Mike Kafka be fired by February 28?
+1076752: Will Jim Harbaugh be fired by February 28?
+1076753: Will Mike Tomlin be fired by February 28?
+1076766: Will the median home value in the San Francisco Metro area be less than $1,060,000 by February 1?
+1076767: Will the median home value in the San Francisco Metro area be between $1,060,000 and $1,070,000 by February 1?
+1076768: Will the median home value in the San Francisco Metro area be between $1,070,000 and $1,080,000 by February 1?
+1076769: Will the median home value in the San Francisco Metro area be between $1,080,000 and $1,090,000 by February 1?
+1076770: Will the median home value in the San Francisco Metro area be between $1,090,000 and $1,100,000 by February 1?
+1076771: Will the median home value in the San Francisco Metro area be greater than $1,100,000 by February 1?
+1076888: Will the median home value in the Austin, Texas metro area be less than $412,000 by February 1?
+1076891: Will the median home value in the Austin, Texas metro area be between $412,000 and $414,000 by February 1?
+1076893: Will the median home value in the Austin, Texas metro area be between $414,000 and $416,000 by February 1?
+1076896: Will the median home value in the Austin, Texas metro area be between $416,000 and $418,000 by February 1?
+1076898: Will the median home value in the Austin, Texas metro area be between $418,000 and $420,000 by February 1?
+1076900: Will the median home value in the Austin, Texas metro area be greater than $420,000 by February 1?
+1077432: Al Shabab Saudi Club vs. NEOM SC: O/U 1.5
+1077433: Al Shabab Saudi Club vs. NEOM SC: O/U 2.5
+1077435: Al Shabab Saudi Club vs. NEOM SC: O/U 3.5
+1077436: Al Shabab Saudi Club vs. NEOM SC: O/U 4.5
+1077437: Al Shabab Saudi Club vs. NEOM SC: Both Teams to Score
+1077438: Al Ahli Saudi Club vs. Al Taawoun Saudi Club: O/U 1.5
+1077439: Al Ahli Saudi Club vs. Al Taawoun Saudi Club: O/U 2.5
+1077440: Al Ahli Saudi Club vs. Al Taawoun Saudi Club: O/U 3.5
+1077441: Al Ahli Saudi Club vs. Al Taawoun Saudi Club: O/U 4.5
+1077442: Al Ahli Saudi Club vs. Al Taawoun Saudi Club: Both Teams to Score
+1077443: Al Qadisiyah Saudi Club vs. Al Fayha Saudi Club: O/U 1.5
+1077444: Al Qadisiyah Saudi Club vs. Al Fayha Saudi Club: O/U 2.5
+1077445: Al Qadisiyah Saudi Club vs. Al Fayha Saudi Club: O/U 3.5
+1077446: Al Qadisiyah Saudi Club vs. Al Fayha Saudi Club: O/U 4.5
+1077447: Al Qadisiyah Saudi Club vs. Al Fayha Saudi Club: Both Teams to Score
+1078717: Will VfL Wolfsburg win on 2026-01-14?
+1078718: Will VfL Wolfsburg vs. FC St. Pauli 1910 end in a draw?
+1078719: Will FC St. Pauli 1910 win on 2026-01-14?
+1078720: Will SSC Napoli win on 2026-01-14?
+1078721: Will SSC Napoli vs. Parma Calcio 1913 end in a draw?
+1078722: Will Parma Calcio 1913 win on 2026-01-14?
+1078724: Will RB Leipzig win on 2026-01-14?
+1078725: Will RB Leipzig vs. SC Freiburg end in a draw?
+1078726: Will SC Freiburg win on 2026-01-14?
+1078727: Will FC Internazionale Milano win on 2026-01-14?
+1078728: Will FC Internazionale Milano vs. US Lecce end in a draw?
+1078729: Will US Lecce win on 2026-01-14?
+1078730: Will TSG 1899 Hoffenheim win on 2026-01-14?
+1078731: Will TSG 1899 Hoffenheim vs. Borussia Mönchengladbach end in a draw?
+1078732: Will Borussia Mönchengladbach win on 2026-01-14?
+1078733: Will 1. FC Köln win on 2026-01-14?
+1078734: Will 1. FC Köln vs. FC Bayern München end in a draw?
+1078735: Will FC Bayern München win on 2026-01-14?
+1079086: Spread: FC Bayern München (-2.5)
+1079087: 1. FC Köln vs. FC Bayern München: O/U 1.5
+1079088: 1. FC Köln vs. FC Bayern München: O/U 2.5
+1079089: 1. FC Köln vs. FC Bayern München: O/U 3.5
+1079090: 1. FC Köln vs. FC Bayern München: O/U 4.5
+1079091: 1. FC Köln vs. FC Bayern München: Both Teams to Score
+1079092: FC Internazionale Milano vs. US Lecce: O/U 1.5
+1079093: FC Internazionale Milano vs. US Lecce: O/U 2.5
+1079094: FC Internazionale Milano vs. US Lecce: O/U 3.5
+1079095: FC Internazionale Milano vs. US Lecce: O/U 4.5
+1079096: FC Internazionale Milano vs. US Lecce: Both Teams to Score
+1079097: SSC Napoli vs. Parma Calcio 1913: O/U 1.5
+1079098: SSC Napoli vs. Parma Calcio 1913: O/U 2.5
+1079099: SSC Napoli vs. Parma Calcio 1913: O/U 3.5
+1079100: SSC Napoli vs. Parma Calcio 1913: O/U 4.5
+1079101: SSC Napoli vs. Parma Calcio 1913: Both Teams to Score
+1079102: Spread: TSG 1899 Hoffenheim (-1.5)
+1079103: TSG 1899 Hoffenheim vs. Borussia Mönchengladbach: O/U 1.5
+1079104: TSG 1899 Hoffenheim vs. Borussia Mönchengladbach: O/U 2.5
+1079105: TSG 1899 Hoffenheim vs. Borussia Mönchengladbach: O/U 3.5
+1079106: TSG 1899 Hoffenheim vs. Borussia Mönchengladbach: O/U 4.5
+1079107: TSG 1899 Hoffenheim vs. Borussia Mönchengladbach: Both Teams to Score
+1079108: Spread: RB Leipzig (-1.5)
+1079109: RB Leipzig vs. SC Freiburg: O/U 1.5
+1079110: RB Leipzig vs. SC Freiburg: O/U 2.5
+1079111: RB Leipzig vs. SC Freiburg: O/U 3.5
+1079112: RB Leipzig vs. SC Freiburg: O/U 4.5
+1079113: RB Leipzig vs. SC Freiburg: Both Teams to Score
+1079114: Spread: VfL Wolfsburg (-1.5)
+1079115: VfL Wolfsburg vs. FC St. Pauli 1910: O/U 1.5
+1079116: VfL Wolfsburg vs. FC St. Pauli 1910: O/U 2.5
+1079117: VfL Wolfsburg vs. FC St. Pauli 1910: O/U 3.5
+1079118: VfL Wolfsburg vs. FC St. Pauli 1910: O/U 4.5
+1079119: VfL Wolfsburg vs. FC St. Pauli 1910: Both Teams to Score
+1079853: Tigres de la UANL vs. Pumas de la UNAM: O/U 1.5
+1079854: Tigres de la UANL vs. Pumas de la UNAM: O/U 2.5
+1079855: Tigres de la UANL vs. Pumas de la UNAM: O/U 3.5
+1079856: Tigres de la UANL vs. Pumas de la UNAM: O/U 4.5
+1079857: Tigres de la UANL vs. Pumas de la UNAM: Both Teams to Score
+1079858: Deportivo Toluca FC vs. Club Santos Laguna: O/U 1.5
+1079859: Deportivo Toluca FC vs. Club Santos Laguna: O/U 2.5
+1079860: Deportivo Toluca FC vs. Club Santos Laguna: O/U 3.5
+1079861: Deportivo Toluca FC vs. Club Santos Laguna: O/U 4.5
+1079862: Deportivo Toluca FC vs. Club Santos Laguna: Both Teams to Score
+1079863: CF América vs. Atlético San Luis: O/U 1.5
+1079864: CF América vs. Atlético San Luis: O/U 2.5
+1079865: CF América vs. Atlético San Luis: O/U 3.5
+1079866: CF América vs. Atlético San Luis: O/U 4.5
+1079867: CF América vs. Atlético San Luis: Both Teams to Score
+1079868: Querétaro FC vs. Club Tijuana: O/U 1.5
+1079869: Querétaro FC vs. Club Tijuana: O/U 2.5
+1079870: Querétaro FC vs. Club Tijuana: O/U 3.5
+1079871: Querétaro FC vs. Club Tijuana: O/U 4.5
+1079872: Querétaro FC vs. Club Tijuana: Both Teams to Score
+1080094: Will Falkirk FC win on 2026-01-14?
+1080095: Will Falkirk FC vs. Celtic FC end in a draw?
+1080096: Will Celtic FC win on 2026-01-14?
+1080098: Will Heart of Midlothian FC win on 2026-01-14?
+1080099: Will Heart of Midlothian FC vs. St Mirren FC end in a draw?
+1080100: Will St Mirren FC win on 2026-01-14?
+1081373: Will Hyperliquid hit $46 in January?
+1081374: Will Hyperliquid hit $42 in January?
+1081375: Will Hyperliquid hit $38 in January?
+1081376: Will Hyperliquid hit $34 in January?
+1081377: Will Hyperliquid hit $30 in January?
+1081380: Will Hyperliquid dip to $20 in January?
+1081381: Will Hyperliquid dip to $16 in January?
+1081382: Will Hyperliquid dip to $12 in January?
+1081383: Will Hyperliquid dip to $8 in January?
+1081392: Will Ethena hit $0.41 in January?
+1081393: Will Ethena hit $0.37 in January?
+1081394: Will Ethena hit $0.33 in January?
+1081395: Will Ethena hit $0.29 in January?
+1081398: Will Ethena dip to $0.20 in January?
+1081399: Will Ethena dip to $0.16 in January?
+1081400: Will Ethena dip to $0.12 in January?
+1081401: Will Ethena dip to $0.08 in January?
+1081480: Utah State Aggies vs. Grand Canyon Antelopes
+1081528: Will BNB reach $1300 in January?
+1081529: Will BNB reach $1200 in January?
+1081530: Will BNB reach $1100 in January?
+1081531: Will BNB reach $1000 in January?
+1081533: Will BNB dip to $800 in January?
+1081534: Will BNB dip to $700 in January?
+1081535: Will BNB dip to $600 in January?
+1081536: Will BNB dip to $500 in January?
+1081537: Will BNB dip to $400 in January?
+1081542: Will Chainlink hit $23 in January?
+1081543: Will Chainlink hit $21 in January?
+1081544: Will Chainlink hit $19 in January?
+1081545: Will Chainlink hit $17 in January?
+1081546: Will Chainlink hit $15 in January?
+1081548: Will Chainlink dip to $12 in January?
+1081549: Will Chainlink dip to $10 in January?
+1081550: Will Chainlink dip to $8 in January?
+1081551: Will Chainlink dip to $6 in January?
+1082016: CEHL: Mlada Boleslav vs. Mountfield HK
+1082017: CEHL: Liberec vs. Motor Ceske Budejovice
+1082019: Flyers vs. Blue Jackets
+1082020: Avalanche vs. Senators
+1082021: Rangers vs. Islanders
+1082328: Will Trump say "Fuck" or "Fucking" or "Fucked" in January?
+1082332: Will Trump say "Heart Attack" in January?
+1082334: Will Trump say "Breaking News" in January?
+1082335: Will Trump say "N Word" in January?
+1082339: Will Trump say "Rolex" in January?
+1082340: Will Trump say "Banana Republic" in January?
+1082342: Will Trump say "TrumpRx.gov" or "TrumpRx.com" or "TrumpRx" in January?
+1082343: Will Trump say "Martin Luther King" in January?
+1082347: Will Trump say "Trump Derangement Syndrome" in January?
+1082349: Will Trump say "Ego" in January?
+1082350: Will Trump say "Bitcoin" in January?
+1082356: Will Trump say "Skyrocket" or "Skyrocketed" in January?
+1082357: Will Trump say "Jerome Too Late Powell" in January?
+1082360: Will Trump say "McDonald's" in January?
+1082364: Will Trump say "Dell computer" in January?
+1082366: Will Trump say "F-47" in January?
+1082369: Will Trump say "Truth Social" in January?
+1082371: Will Trump say "Food stamps" in January?
+1082746: Will Dogecoin reach $0.25 in January?
+1082747: Will Solana reach $210 in January?
+1082748: Will Bitcoin reach $150,000 in January?
+1082749: Will Ethereum reach $6,000 in January?
+1082750: Will XRP reach $4.00 in January?
+1082751: Will Solana reach $200 in January?
+1082752: Will Dogecoin reach $0.20 in January?
+1082753: Will Bitcoin reach $130,000 in January?
+1082754: Will Ethereum reach $4,600 in January?
+1082755: Will XRP reach $3.60 in January?
+1082757: Will Bitcoin reach $125,000 in January?
+1082759: Will XRP reach $3.40 in January?
+1082760: Will Ethereum reach $4,400 in January?
+1082762: Will Dogecoin dip to $0.10 in January?
+1082763: Will Bitcoin reach $120,000 in January?
+1082764: Will XRP reach $3.20 in January?
+1082766: Will Ethereum reach $4,200 in January?
+1082767: Will Dogecoin dip to $0.05 in January?
+1082768: Will Bitcoin reach $115,000 in January?
+1082769: Will XRP reach $3.00 in January?
+1082770: Will Ethereum reach $4,000 in January?
+1082772: Will Bitcoin reach $110,000 in January?
+1082774: Will XRP reach $2.80 in January?
+1082775: Will Solana reach $190 in January?
+1082776: Will Ethereum reach $3,800 in January?
+1082777: Will Bitcoin reach $105,000 in January?
+1082778: Will XRP reach $2.60 in January?
+1082779: Will Solana reach $180 in January?
+1082780: Will Ethereum reach $3,600 in January?
+1082781: Will Bitcoin reach $100,000 in January?
+1082783: Will Solana reach $170 in January?
+1082784: Will Ethereum reach $3,400 in January?
+1082785: Will Bitcoin reach $95,000 in January?
+1082787: Will Solana reach $160 in January?
+1082791: Will Solana reach $150 in January?
+1082793: Will Bitcoin dip to $85,000 in January?
+1082795: Will XRP dip to $1.80 in January?
+1082796: Will Bitcoin dip to $80,000 in January?
+1082797: Will Ethereum dip to $2,800 in January?
+1082799: Will XRP dip to $1.60 in January?
+1082800: Will Ethereum dip to $2,600 in January?
+1082801: Will Bitcoin dip to $75,000 in January?
+1082802: Will Solana dip to $120 in January?
+1082803: Will XRP dip to $1.40 in January?
+1082804: Will Ethereum dip to $2,400 in January?
+1082805: Will Bitcoin dip to $70,000 in January?
+1082806: Will Solana dip to $110 in January?
+1082807: Will XRP dip to $1.20 in January?
+1082808: Will Ethereum dip to $2,200 in January?
+1082809: Will Bitcoin dip to $65,000 in January?
+1082810: Will Solana dip to $100 in January?
+1082811: Will XRP dip to $1.00 in January?
+1082812: Will Ethereum dip to $2,000 in January?
+1082813: Will Bitcoin dip to $60,000 in January?
+1082814: Will Solana dip to $90 in January?
+1082815: Will XRP dip to $0.80 in January?
+1082816: Will Ethereum dip to $1,800 in January?
+1082817: Will Bitcoin dip to $55,000 in January?
+1082818: Will Solana dip to $80 in January?
+1082819: Will XRP dip to $0.60 in January?
+1082820: Will Ethereum dip to $1,600 in January?
+1082821: Will Bitcoin dip to $50,000 in January?
+1082822: Will Solana dip to $70 in January?
+1082823: Will XRP dip to $0.40 in January?
+1082824: Will Ethereum dip to $1,400 in January?
+1082825: Will Bitcoin dip to $45,000 in January?
+1082826: Will Solana dip to $60 in January?
+1082827: Will XRP dip to $0.20 in January?
+1082828: Will Ethereum dip to $1,200 in January?
+1082829: Will Bitcoin dip to $40,000 in January?
+1082830: Will Solana dip to $50 in January?
+1082832: Will Ethereum dip to $1,000 in January?
+1082833: Will Solana dip to $40 in January?
+1082834: Will Solana dip to $30 in January?
+1083016: Will the median home value in the US be less than $410,000 by February 1?
+1083017: Will the median home value in the US be between $410,000 and $412,000 by February 1?
+1083018: Will the median home value in the US be between $412,000 and $414,000 by February 1?
+1083019: Will the median home value in the US be between $414,000 and $416,000 by February 1?
+1083020: Will the median home value in the US be between $416,000 and $418,000 by February 1?
+1083021: Will the median home value in the US be greater than $418,000 by February 1?
+1083030: Will Cardi B and Stefon Diggs get engaged in 2026?
+1083039: Will Trump say "America" or "American" 25+ times during the 2026 State of the Union address?
+1083040: Will Trump say "Job" 20+ times during the 2026 State of the Union address?
+1083041: Will Trump say "Million" or "Billion" or "Trillion" 15+ times during the 2026 State of the Union address?
+1083042: Will Trump say "Biden" 10+ times during the 2026 State of the Union address?
+1083043: Will Trump say "Border" 7+ times during the 2026 State of the Union address?
+1083044: Will Trump say "AI" or "Artificial Intelligence" 2+ times during the 2026 State of the Union address?
+1083045: Will Trump say "Hottest" during the 2026 State of the Union address?
+1083046: Will Trump say "Kamala" or "Harris" during the 2026 State of the Union address?
+1083047: Will Trump say "Kennedy" or "Autism" during the 2026 State of the Union address?
+1083048: Will Trump say "Middle East" during the 2026 State of the Union address?
+1083049: Will Trump say "Crypto" or "Bitcoin" during the 2026 State of the Union address?
+1083050: Will Trump say "Israel" or "Gaza" during the 2026 State of the Union address?
+1083051: Will Trump say "MAGA" or "Make American Great Again" during the 2026 State of the Union address?
+1083052: Will Trump say "Black" or "Hispanic" during the 2026 State of the Union address?
+1083053: Will Trump say "Gold Card" or "Trump card" during the 2026 State of the Union address?
+1083303: Will Al Fateh Saudi Club win on 2026-01-29?
+1083304: Will Al Fateh Saudi Club vs. Al Ittihad Saudi Club end in a draw?
+1083305: Will Al Ittihad Saudi Club win on 2026-01-29?
+1083306: Will Al Qadisiyah Saudi Club win on 2026-01-29?
+1083307: Will Al Qadisiyah Saudi Club vs. Al Hilal Saudi Club end in a draw?
+1083308: Will Al Hilal Saudi Club win on 2026-01-29?
+1083309: Will Al Hazem SC win on 2026-01-29?
+1083310: Will Al Hazem SC vs. Al Shabab Saudi Club end in a draw?
+1083311: Will Al Shabab Saudi Club win on 2026-01-29?
+1083341: Will Donald Trump announce a new nominee for Chair of the Federal Reserve by January 16, 2026?
+1083346: Will the Logan Paul 1st Edition Charizard sale price be over 600k?
+1083347: Will the Logan Paul 1st Edition Charizard sale price be over 800k?
+1083826: Valorant: Team Envy vs Evil Geniuses (BO3)
+1083827: Valorant: Team Envy vs Evil Geniuses - Map 1 Winner
+1083828: Valorant: Team Envy vs Evil Geniuses - Map 2 Winner
+1083829: Games Total: O/U 2.5
+1084226: Heart of Midlothian FC vs. St Mirren FC: O/U 1.5
+1084227: Heart of Midlothian FC vs. St Mirren FC: O/U 2.5
+1084228: Heart of Midlothian FC vs. St Mirren FC: O/U 3.5
+1084229: Heart of Midlothian FC vs. St Mirren FC: O/U 4.5
+1084230: Heart of Midlothian FC vs. St Mirren FC: Both Teams to Score
+1084231: Falkirk FC vs. Celtic FC: O/U 1.5
+1084232: Falkirk FC vs. Celtic FC: O/U 2.5
+1084233: Falkirk FC vs. Celtic FC: O/U 3.5
+1084234: Falkirk FC vs. Celtic FC: O/U 4.5
+1084235: Falkirk FC vs. Celtic FC: Both Teams to Score
+1084270: Valorant: LOUD vs Cloud9 (BO3)
+1084271: Valorant: LOUD vs Cloud9 - Map 1 Winner
+1084272: Valorant: LOUD vs Cloud9 - Map 2 Winner
+1084273: Games Total: O/U 2.5
+1085075: Will FC Augsburg win on 2026-01-15?
+1085076: Will FC Augsburg vs. 1. FC Union Berlin end in a draw?
+1085077: Will 1. FC Union Berlin win on 2026-01-15?
+1085079: Will Hellas Verona FC win on 2026-01-15?
+1085080: Will Hellas Verona FC vs. Bologna FC 1909 end in a draw?
+1085081: Will Bologna FC 1909 win on 2026-01-15?
+1085083: Will Como 1907 win on 2026-01-15?
+1085084: Will Como 1907 vs. AC Milan end in a draw?
+1085085: Will AC Milan win on 2026-01-15?
+1085298: Spread: FC Augsburg (-1.5)
+1085300: FC Augsburg vs. 1. FC Union Berlin: O/U 1.5
+1085301: FC Augsburg vs. 1. FC Union Berlin: O/U 2.5
+1085302: FC Augsburg vs. 1. FC Union Berlin: O/U 3.5
+1085303: FC Augsburg vs. 1. FC Union Berlin: O/U 4.5
+1085304: FC Augsburg vs. 1. FC Union Berlin: Both Teams to Score
+1085314: Como 1907 vs. AC Milan: O/U 1.5
+1085315: Como 1907 vs. AC Milan: O/U 2.5
+1085316: Como 1907 vs. AC Milan: O/U 3.5
+1085317: Como 1907 vs. AC Milan: O/U 4.5
+1085318: Como 1907 vs. AC Milan: Both Teams to Score
+1085328: Hellas Verona FC vs. Bologna FC 1909: O/U 1.5
+1085329: Hellas Verona FC vs. Bologna FC 1909: O/U 2.5
+1085330: Hellas Verona FC vs. Bologna FC 1909: O/U 3.5
+1085331: Hellas Verona FC vs. Bologna FC 1909: O/U 4.5
+1085332: Hellas Verona FC vs. Bologna FC 1909: Both Teams to Score
+1086970: VEO 4 released by January 31, 2026?
+1086971: VEO 4 released by February 28, 2026?
+1086972: VEO 4 released by March 31, 2026?
+1087073: Will any AI model reach a Chatbot Arena score of at least 1500 by December 31?
+1087074: Will any AI model reach a Chatbot Arena score of at least 1550 by December 31?
+1087075: Will any AI model reach a Chatbot Arena score of at least 1600 by December 31?
+1087104: Will Dune 3 or Avengers: Doomsday gross more on their opening weekend?
+1087124: Heat vs. Bulls
+1087228: UNLV Runnin' Rebels vs. Utah State Aggies
+1087309: Will US unemployment reach at least 5.0% in 2026?
+1087310: Will US unemployment reach at least 5.5% in 2026?
+1087311: Will US unemployment reach at least 6.0% in 2026?
+1087312: Will US unemployment reach at least 7.0% in 2026?
+1087313: Will US unemployment reach at least 10.0% in 2026?
+1087422: Will Aryna Sabalenka win the 2026 Women's Australian Open?
+1087423: Will Iga Świątek win the 2026 Women's Australian Open?
+1087424: Will Elena Rybakina win the 2026 Women's Australian Open?
+1087425: Will Coco Gauff win the 2026 Women's Australian Open?
+1087426: Will Amanda Anisimova win the 2026 Women's Australian Open?
+1087427: Will Mirra Andreeva win the 2026 Women's Australian Open?
+1087428: Will Naomi Osaka win the 2026 Women's Australian Open?
+1087429: Will Madison Keys win the 2026 Women's Australian Open?
+1087430: Will Qinwen Zheng win the 2026 Women's Australian Open?
+1087431: Will Jessica Pegula win the 2026 Women's Australian Open?
+1087432: Will Karolína Muchová win the 2026 Women's Australian Open?
+1087433: Will Victoria Mboko win the 2026 Women's Australian Open?
+1087434: Will Jasmine Paolini win the 2026 Women's Australian Open?
+1087435: Will Clara Tauson win the 2026 Women's Australian Open?
+1087436: Will Linda Nosková win the 2026 Women's Australian Open?
+1087437: Will Belinda Bencic win the 2026 Women's Australian Open?
+1087438: Will Elina Svitolina win the 2026 Women's Australian Open?
+1087439: Will Leylah Fernandez win the 2026 Women's Australian Open?
+1087440: Will Diana Shnaider win the 2026 Women's Australian Open?
+1087441: Will Anna Kalinskaya win the 2026 Women's Australian Open?
+1087442: Will Emma Navarro win the 2026 Women's Australian Open?
+1087443: Will Jelena Ostapenko win the 2026 Women's Australian Open?
+1087444: Will Emma Raducanu win the 2026 Women's Australian Open?
+1087445: Will Barbora Krejčíková win the 2026 Women's Australian Open?
+1087446: Will Marta Kostyuk win the 2026 Women's Australian Open?
+1087447: Will Maria Sakkari win the 2026 Women's Australian Open?
+1087448: Will Markéta Vondroušová win the 2026 Women's Australian Open?
+1087449: Will Alexandra Eala win the 2026 Women's Australian Open?
+1087450: Will Peyton Stearns win the 2026 Women's Australian Open?

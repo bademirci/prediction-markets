@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1143965: SHL: Djurgaarden vs. Vaexjoe
+1143966: SHL: Timraa vs. Froelunda HC
+1143967: AHL: Ontario Reign vs. Colorado Eagles
+1143968: AHL: Belleville Senators vs. Laval Rocket
+1143969: Predators vs. Capitals
+1143970: Panthers vs. Lightning
+1143971: Senators vs. Flyers
+1143972: Hurricanes vs. Rangers
+1143973: Islanders vs. Devils
+1143974: Penguins vs. Sabres
+1143975: Kings vs. Golden Knights
+1144023: U.S. anti-cartel ground operation in Mexico by January 31?
+1144024: Bitcoin Up or Down on January 11?
+1144025: Bitcoin Up or Down - January 11, 12PM ET
+1144026: Will the price of Bitcoin be less than $82,000 on January 16?
+1144027: Will the price of Ethereum be above $2,600 on January 16?
+1144028: Will the price of Bitcoin be between $82,000 and $84,000 on January 16?
+1144029: Will the price of Ethereum be above $2,700 on January 16?
+1144030: Will the price of Bitcoin be between $84,000 and $86,000 on January 16?
+1144031: Will the price of Ethereum be above $2,800 on January 16?
+1144032: Will the price of Bitcoin be between $86,000 and $88,000 on January 16?
+1144033: Will the price of Ethereum be above $2,900 on January 16?
+1144034: Will the price of Bitcoin be between $88,000 and $90,000 on January 16?
+1144035: Will the price of Ethereum be above $3,000 on January 16?
+1144036: Will the price of Bitcoin be between $90,000 and $92,000 on January 16?
+1144037: Will the price of Ethereum be above $3,100 on January 16?
+1144038: Will the price of Bitcoin be between $92,000 and $94,000 on January 16?
+1144039: Will the price of Ethereum be above $3,200 on January 16?
+1144040: Will the price of Bitcoin be between $94,000 and $96,000 on January 16?
+1144041: Will the price of Ethereum be above $3,300 on January 16?
+1144042: Will the price of Bitcoin be between $96,000 and $98,000 on January 16?
+1144043: Will the price of Ethereum be above $3,400 on January 16?
+1144044: Will the price of Bitcoin be between $98,000 and $100,000 on January 16?
+1144045: Will the price of Ethereum be above $3,500 on January 16?
+1144046: Will the price of Bitcoin be greater than $100,000 on January 16?
+1144047: Will the price of Ethereum be above $3,600 on January 16?
+1144048: Ethereum Up or Down on January 11?
+1144049: Ethereum Up or Down - January 11, 12PM ET
+1144051: Will the price of Ethereum be less than $2,700 on January 16?
+1144052: Will the price of Ethereum be between $2,700 and $2,800 on January 16?
+1144053: Will the price of Ethereum be between $2,800 and $2,900 on January 16?
+1144054: Will the price of Ethereum be between $2,900 and $3,000 on January 16?
+1144055: Will the price of Ethereum be between $3,000 and $3,100 on January 16?
+1144056: Will the price of Ethereum be between $3,100 and $3,200 on January 16?
+1144057: Will the price of Ethereum be between $3,200 and $3,300 on January 16?
+1144058: Will the price of Ethereum be between $3,300 and $3,400 on January 16?
+1144059: Will the price of Ethereum be between $3,400 and $3,500 on January 16?
+1144060: Will the price of Ethereum be between $3,500 and $3,600 on January 16?
+1144061: Will the price of Ethereum be greater than $3,600 on January 16?
+1144063: Will the price of Bitcoin be above $82,000 on January 16?
+1144064: Solana Up or Down - January 11, 12PM ET
+1144065: Will the price of Bitcoin be above $84,000 on January 16?
+1144066: Will the price of Bitcoin be above $86,000 on January 16?
+1144067: Solana Up or Down on January 11?
+1144068: Will the price of Bitcoin be above $88,000 on January 16?
+1144069: Will the price of Bitcoin be above $90,000 on January 16?
+1144070: Will the price of Bitcoin be above $92,000 on January 16?
+1144071: Will the price of Bitcoin be above $94,000 on January 16?
+1144072: Will the price of Bitcoin be above $96,000 on January 16?
+1144073: Will the price of Bitcoin be above $98,000 on January 16?
+1144074: Will the price of Bitcoin be above $100,000 on January 16?
+1144075: Will the price of Bitcoin be above $102,000 on January 16?
+1144076: XRP Up or Down - January 11, 12PM ET
+1144077: Will the price of Solana be less than $90 on January 16?
+1144078: Will the price of Solana be between $90 and $100 on January 16?
+1144079: Will the price of Solana be between $100 and $110 on January 16?
+1144080: XRP Up or Down on January 11?
+1144081: Will the price of Solana be between $110 and $120 on January 16?
+1144082: Will the price of Solana be between $120 and $130 on January 16?
+1144083: Will the price of Solana be between $130 and $140 on January 16?
+1144084: Will the price of Solana be between $140 and $150 on January 16?
+1144085: Will the price of Solana be between $150 and $160 on January 16?
+1144086: Will the price of Solana be between $160 and $170 on January 16?
+1144087: Will the price of Solana be between $170 and $180 on January 16?
+1144088: Will the price of Solana be greater than $180 on January 16?
+1144089: Will the price of Solana be above $90 on January 16?
+1144090: Will the price of Solana be above $100 on January 16?
+1144091: Will the price of Solana be above $110 on January 16?
+1144092: Will the price of Solana be above $120 on January 16?
+1144093: Will the price of Solana be above $130 on January 16?
+1144094: Will the price of Solana be above $140 on January 16?
+1144095: Will the price of Solana be above $150 on January 16?
+1144096: Will the price of Solana be above $160 on January 16?
+1144097: Will the price of Solana be above $170 on January 16?
+1144098: Will the price of Solana be above $180 on January 16?
+1144099: Will the price of Solana be above $190 on January 16?
+1144100: Will the price of XRP be less than $1.70 on January 16?
+1144101: Will the price of XRP be between $1.70 and $1.80 on January 16?
+1144102: Will the price of XRP be between $1.80 and $1.90 on January 16?
+1144103: Will the price of XRP be between $1.90 and $2.00 on January 16?
+1144104: Will the price of XRP be between $2.00 and $2.10 on January 16?
+1144105: Will the price of XRP be between $2.10 and $2.20 on January 16?
+1144106: Will the price of XRP be between $2.20 and $2.30 on January 16?
+1144107: Will the price of XRP be between $2.30 and $2.40 on January 16?
+1144108: Will the price of XRP be between $2.40 and $2.50 on January 16?
+1144109: Will the price of XRP be between $2.50 and $2.60 on January 16?
+1144110: Will the price of XRP be greater than $2.60 on January 16?
+1144111: Will the price of XRP be above $1.60 on January 16?
+1144112: Will the price of XRP be above $1.70 on January 16?
+1144113: Will the price of XRP be above $1.80 on January 16?
+1144114: Will the price of XRP be above $1.90 on January 16?
+1144115: Will the price of XRP be above $2.00 on January 16?
+1144116: Will the price of XRP be above $2.10 on January 16?
+1144117: Will the price of XRP be above $2.20 on January 16?
+1144118: Will the price of XRP be above $2.30 on January 16?
+1144119: Will the price of XRP be above $2.40 on January 16?
+1144120: Will the price of XRP be above $2.50 on January 16?
+1144121: Will the price of XRP be above $2.60 on January 16?
+1144153: Russia strike on Kyiv municipality by January 11?
+1144154: Russia strike on Kyiv municipality by January 17?
+1144320: Will the January 2026 unemployment rate be ≤4.2%?
+1144321: Will the January 2026 unemployment rate be 4.3%?
+1144322: Will the January 2026 unemployment rate be 4.4%?
+1144323: Will the January 2026 unemployment rate be 4.5%?
+1144324: Will the January 2026 unemployment rate be 4.6%?
+1144325: Will the January 2026 unemployment rate be ≥4.7%?
+1144338: Will FC Barcelona win on 2026-01-11?
+1144339: Will FC Barcelona vs. Real Madrid CF end in a draw?
+1144340: Will Real Madrid CF win on 2026-01-11?
+1144341: Will the US lose jobs in January?
+1144342: Will the US add between 0 and 25k jobs in January?
+1144343: Will the US add between 25k and 50k jobs in January?
+1144344: Will the US add between 50k and 75k jobs in January?
+1144345: Will the US add between 75k and 100k jobs in January?
+1144346: Will the US add between 100k and 125k jobs in January?
+1144347: Will the US add more than 125k jobs in January?
+1144352: FC Barcelona vs. Real Madrid CF: O/U 1.5
+1144353: FC Barcelona vs. Real Madrid CF: O/U 2.5
+1144354: FC Barcelona vs. Real Madrid CF: O/U 3.5
+1144355: FC Barcelona vs. Real Madrid CF: O/U 4.5
+1144356: FC Barcelona vs. Real Madrid CF: Both Teams to Score
+1144366: Spread: Akron Zips (-4.5)
+1144367: Akron Zips vs. Bowling Green Falcons: O/U 163.5
+1144403: Will there be at least 150 measles cases in the U.S. by January 31, 2026?
+1144408: Will there be at least 175 measles cases in the U.S. by January 31, 2026?
+1144409: Will there be at least 200 measles cases in the U.S. by January 31, 2026?
+1144414: Bitcoin Up or Down - January 11, 1PM ET
+1144415: Ethereum Up or Down - January 11, 1PM ET
+1144416: Newcastle United Jets FC vs. Wellington Phoenix FC: O/U 1.5
+1144417: Newcastle United Jets FC vs. Wellington Phoenix FC: O/U 2.5
+1144418: Newcastle United Jets FC vs. Wellington Phoenix FC: O/U 3.5
+1144419: Newcastle United Jets FC vs. Wellington Phoenix FC: O/U 4.5
+1144420: Newcastle United Jets FC vs. Wellington Phoenix FC: Both Teams to Score
+1144421: Solana Up or Down - January 11, 1PM ET
+1144431: XRP Up or Down - January 11, 1PM ET
+1144471: Will Satoshi move any Bitcoin in 2026?
+1144503: Odds Trump acquires Greenland before 2027 hit 50% by March 31?
+1144504: Odds Trump acquires Greenland before 2027 hit 30% by March 31?
+1144762: Will Ja Morant be traded before the 2026 trade deadline?
+1144792: Bitcoin Up or Down - January 11, 2PM ET
+1144793: Ethereum Up or Down - January 11, 2PM ET
+1144794: Solana Up or Down - January 11, 2PM ET
+1144795: XRP Up or Down - January 11, 2PM ET
+1144900: Jamal Murray: Assists Over 8.5
+1145118: Will RC Celta de Vigo win on 2026-01-22?
+1145119: Will RC Celta de Vigo vs. Lille OSC end in a draw?
+1145120: Will Lille OSC win on 2026-01-22?
+1145121: Will OGC Nice win on 2026-01-22?
+1145122: Will OGC Nice vs. Go Ahead Eagles end in a draw?
+1145123: Will Go Ahead Eagles win on 2026-01-22?
+1145124: Will FC Utrecht win on 2026-01-22?
+1145125: Will FC Utrecht vs. KRC Genk end in a draw?
+1145126: Will KRC Genk win on 2026-01-22?
+1145127: Will Rangers FC win on 2026-01-22?
+1145128: Will Rangers FC vs. PFK Ludogorets 1945 Razgrad end in a draw?
+1145129: Will PFK Ludogorets 1945 Razgrad win on 2026-01-22?
+1145130: Will Ferencvárosi TC win on 2026-01-22?
+1145131: Will Ferencvárosi TC vs. Panathinaikós AO end in a draw?
+1145132: Will Panathinaikós AO win on 2026-01-22?
+1145133: Will SC Braga win on 2026-01-22?
+1145134: Will SC Braga vs. Nottingham Forest FC end in a draw?
+1145135: Will Nottingham Forest FC win on 2026-01-22?
+1145136: Will GNK Dinamo Zagreb win on 2026-01-22?
+1145137: Will GNK Dinamo Zagreb vs. FCSB end in a draw?
+1145138: Will FCSB win on 2026-01-22?
+1145139: Will FC Red Bull Salzburg win on 2026-01-22?
+1145140: Will FC Red Bull Salzburg vs. FC Basel 1893 end in a draw?
+1145141: Will FC Basel 1893 win on 2026-01-22?
+1145142: Will AS Roma win on 2026-01-22?
+1145143: Will AS Roma vs. VfB Stuttgart end in a draw?
+1145144: Will VfB Stuttgart win on 2026-01-22?
+1145184: Spread: AS Roma (-1.5)
+1145185: AS Roma vs. VfB Stuttgart: O/U 1.5
+1145186: AS Roma vs. VfB Stuttgart: O/U 2.5
+1145187: AS Roma vs. VfB Stuttgart: O/U 3.5
+1145188: AS Roma vs. VfB Stuttgart: O/U 4.5
+1145189: AS Roma vs. VfB Stuttgart: Both Teams to Score
+1145190: Spread: RC Celta de Vigo (-1.5)
+1145191: RC Celta de Vigo vs. Lille OSC: O/U 1.5
+1145192: RC Celta de Vigo vs. Lille OSC: O/U 2.5
+1145193: RC Celta de Vigo vs. Lille OSC: O/U 3.5
+1145194: RC Celta de Vigo vs. Lille OSC: O/U 4.5
+1145195: RC Celta de Vigo vs. Lille OSC: Both Teams to Score
+1145196: Spread: OGC Nice (-1.5)
+1145197: OGC Nice vs. Go Ahead Eagles: O/U 1.5
+1145198: OGC Nice vs. Go Ahead Eagles: O/U 2.5
+1145199: OGC Nice vs. Go Ahead Eagles: O/U 3.5
+1145200: OGC Nice vs. Go Ahead Eagles: O/U 4.5
+1145201: OGC Nice vs. Go Ahead Eagles: Both Teams to Score
+1145202: Spread: FC Utrecht (-1.5)
+1145203: FC Utrecht vs. KRC Genk: O/U 1.5
+1145204: FC Utrecht vs. KRC Genk: O/U 2.5
+1145205: FC Utrecht vs. KRC Genk: O/U 3.5
+1145206: FC Utrecht vs. KRC Genk: O/U 4.5
+1145207: FC Utrecht vs. KRC Genk: Both Teams to Score
+1145208: Spread: Rangers FC (-1.5)
+1145209: Rangers FC vs. PFK Ludogorets 1945 Razgrad: O/U 1.5
+1145210: Rangers FC vs. PFK Ludogorets 1945 Razgrad: O/U 2.5
+1145211: Rangers FC vs. PFK Ludogorets 1945 Razgrad: O/U 3.5
+1145212: Rangers FC vs. PFK Ludogorets 1945 Razgrad: O/U 4.5
+1145213: Rangers FC vs. PFK Ludogorets 1945 Razgrad: Both Teams to Score
+1145214: Spread: Ferencvárosi TC (-1.5)
+1145215: Ferencvárosi TC vs. Panathinaikós AO: O/U 1.5
+1145216: Ferencvárosi TC vs. Panathinaikós AO: O/U 2.5
+1145217: Ferencvárosi TC vs. Panathinaikós AO: O/U 3.5
+1145218: Ferencvárosi TC vs. Panathinaikós AO: O/U 4.5
+1145219: Ferencvárosi TC vs. Panathinaikós AO: Both Teams to Score
+1145220: Spread: Nottingham Forest FC (-1.5)
+1145221: SC Braga vs. Nottingham Forest FC: O/U 1.5
+1145222: SC Braga vs. Nottingham Forest FC: O/U 2.5
+1145223: SC Braga vs. Nottingham Forest FC: O/U 3.5
+1145224: SC Braga vs. Nottingham Forest FC: O/U 4.5
+1145225: SC Braga vs. Nottingham Forest FC: Both Teams to Score
+1145226: Spread: GNK Dinamo Zagreb (-1.5)
+1145228: GNK Dinamo Zagreb vs. FCSB: O/U 2.5
+1145229: GNK Dinamo Zagreb vs. FCSB: O/U 3.5
+1145230: GNK Dinamo Zagreb vs. FCSB: O/U 4.5
+1145231: GNK Dinamo Zagreb vs. FCSB: Both Teams to Score
+1145232: Spread: FC Red Bull Salzburg (-1.5)
+1145233: FC Red Bull Salzburg vs. FC Basel 1893: O/U 1.5
+1145234: FC Red Bull Salzburg vs. FC Basel 1893: O/U 2.5
+1145235: FC Red Bull Salzburg vs. FC Basel 1893: O/U 3.5
+1145236: FC Red Bull Salzburg vs. FC Basel 1893: O/U 4.5
+1145237: FC Red Bull Salzburg vs. FC Basel 1893: Both Teams to Score
+1145266: Bitcoin Up or Down - January 11, 3PM ET
+1145267: Ethereum Up or Down - January 11, 3PM ET
+1145268: Solana Up or Down - January 11, 3PM ET
+1145269: XRP Up or Down - January 11, 3PM ET
+1145481: Tulsi Gabbard out by March 31?
+1145482: Will Al Fayha Saudi Club win on 2026-02-05?
+1145483: Will Al Fayha Saudi Club vs. Al Najmah Saudi Club end in a draw?
+1145484: Will Al Najmah Saudi Club win on 2026-02-05?
+1145485: Will Al Ahli Saudi Club win on 2026-02-05?
+1145486: Will Al Ahli Saudi Club vs. Al Hazem SC end in a draw?
+1145487: Will Al Hazem SC win on 2026-02-05?
+1145488: Will Al Okhdood SC win on 2026-02-05?
+1145489: Will Al Okhdood SC vs. Al Hilal Saudi Club end in a draw?
+1145490: Will Al Hilal Saudi Club win on 2026-02-05?
+1145491: Will NEOM SC win on 2026-02-06?
+1145492: Will NEOM SC vs. Al Riyadh Saudi Club end in a draw?
+1145493: Will Al Riyadh Saudi Club win on 2026-02-06?
+1145494: Will Al Ettifaq Saudi Club win on 2026-02-06?
+1145495: Will Al Ettifaq Saudi Club vs. Damac Saudi Club end in a draw?
+1145496: Will Damac Saudi Club win on 2026-02-06?
+1145497: Will Al Nassr Saudi Club win on 2026-02-06?
+1145498: Will Al Nassr Saudi Club vs. Al Ittihad Saudi Club end in a draw?
+1145499: Will Al Ittihad Saudi Club win on 2026-02-06?
+1145508: Flying Tulip FDV above $800M one day after launch?
+1145509: Flying Tulip FDV above $1B one day after launch?
+1145510: Flying Tulip FDV above $1.5B one day after launch?
+1145511: Flying Tulip FDV above $2B one day after launch?
+1145512: Flying Tulip FDV above $2.5B one day after launch?
+1145521: Immunefi FDV above $200M one day after launch?
+1145522: Immunefi FDV above $400M one day after launch?
+1145523: Immunefi FDV above $600M one day after launch?
+1145524: Immunefi FDV above $800M one day after launch?
+1145525: Immunefi FDV above $1B one day after launch?
+1145526: Immunefi FDV above $1.2B one day after launch?
+1145527: Immunefi FDV above $1.4B one day after launch?
+1145544: Kristi Noem out by March 31?
+1145545: Bitcoin Up or Down - January 11, 4PM ET
+1145546: Will Aarhus GF win on 2026-02-06?
+1145547: Will Aarhus GF vs. Odense BK end in a draw?
+1145548: Will Odense BK win on 2026-02-06?
+1145549: Ethereum Up or Down - January 11, 4PM ET
+1145559: Solana Up or Down - January 11, 4PM ET
+1145561: XRP Up or Down - January 11, 4PM ET
+1145575: Will Trump meet with Reza Pahlavi by January 31?
+1145587: Will Khamenei leave Iran by Jan 16?
+1145960: Will Wellington Phoenix FC win on 2026-02-06?
+1145961: Will Wellington Phoenix FC vs. Melbourne Victory FC end in a draw?
+1145962: Will Melbourne Victory FC win on 2026-02-06?
+1145963: Will Macarthur FC win on 2026-02-06?
+1145964: Will Macarthur FC vs. Perth Glory FC end in a draw?
+1145965: Will Perth Glory FC win on 2026-02-06?
+1145990: Will LAR/CHI/BUF/SF/LAC/HOU win their 2026 NFL Wild Card round games?
+1145991: Will LAR/CHI/BUF/SF/LAC/PIT win their 2026 NFL Wild Card round games?
+1145992: Will LAR/CHI/BUF/SF/NE/HOU win their 2026 NFL Wild Card round games?
+1145993: Will LAR/CHI/BUF/SF/NE/PIT win their 2026 NFL Wild Card round games?
+1145994: Will LAR/CHI/BUF/PHI/LAC/HOU win their 2026 NFL Wild Card round games?
+1145995: Will LAR/CHI/BUF/PHI/LAC/PIT win their 2026 NFL Wild Card round games?
+1145996: Will LAR/CHI/BUF/PHI/NE/HOU win their 2026 NFL Wild Card round games?
+1145997: Will LAR/CHI/BUF/PHI/NE/PIT win their 2026 NFL Wild Card round games?
+1145998: Will LAR/CHI/JAX/SF/LAC/HOU win their 2026 NFL Wild Card round games?
+1145999: Will LAR/CHI/JAX/SF/LAC/PIT win their 2026 NFL Wild Card round games?
+1146000: Will LAR/CHI/JAX/SF/NE/HOU win their 2026 NFL Wild Card round games?
+1146001: Will LAR/CHI/JAX/SF/NE/PIT win their 2026 NFL Wild Card round games?
+1146002: Will LAR/CHI/JAX/PHI/LAC/HOU win their 2026 NFL Wild Card round games?
+1146003: Will LAR/CHI/JAX/PHI/LAC/PIT win their 2026 NFL Wild Card round games?
+1146004: Will LAR/CHI/JAX/PHI/NE/HOU win their 2026 NFL Wild Card round games?
+1146005: Will LAR/CHI/JAX/PHI/NE/PIT win their 2026 NFL Wild Card round games?
+1146043: Will 0 judges rule in favor of Trump's Tarriffs?
+1146044: Will 1 judge rule in favor of Trump's Tarriffs?
+1146045: Will 2 judges rule in favor of Trump's Tarriffs?
+1146046: Will 3 judges rule in favor of Trump's Tarriffs?
+1146047: Will 4 judges rule in favor of Trump's Tarriffs?
+1146048: Will 5 judges rule in favor of Trump's Tarriffs?
+1146049: Will 6 judges rule in favor of Trump's Tarriffs?
+1146050: Will 7 judges rule in favor of Trump's Tarriffs?
+1146051: Will 8 judges rule in favor of Trump's Tarriffs?
+1146052: Will 9 judges rule in favor of Trump's Tarriffs?
+1146117: Bitcoin Up or Down - January 11, 5PM ET
+1146123: Ethereum Up or Down - January 11, 5PM ET
+1146137: Solana Up or Down - January 11, 5PM ET
+1146143: XRP Up or Down - January 11, 5PM ET
+1146185: Will Trump meet with Machado by January 16?
+1146192: Will the Supreme Court rule on Trump's tarriff's by January 14?
+1146193: Will the Supreme Court rule on Trump's tarriff's by January 31?
+1146453: Bitcoin Up or Down - January 11, 6PM ET
+1146454: Will Apple (AAPL) finish week of January 12 above $230?
+1146455: Will Apple (AAPL) close at <$235 on the final day of trading of the week of Jan 12 – Jan 16?
+1146456: Will Apple (AAPL) finish week of January 12 above $235?
+1146457: Will Apple (AAPL) close at $235-$240 on the final day of trading of the week of Jan 12 – Jan 16?
+1146458: Will Apple (AAPL) finish week of January 12 above $240?
+1146459: Will Apple (AAPL) close at $240-$245 on the final day of trading of the week of Jan 12 – Jan 16?
+1146460: Will Apple (AAPL) finish week of January 12 above $245?
+1146461: Will Apple (AAPL) finish week of January 12 above $250?
+1146462: Will Apple (AAPL) close at $245-$250 on the final day of trading of the week of Jan 12 – Jan 16?
+1146463: Will Apple (AAPL) finish week of January 12 above $255?
+1146464: Will Apple (AAPL) close at $250-$255 on the final day of trading of the week of Jan 12 – Jan 16?
+1146465: Will Apple (AAPL) finish week of January 12 above $260?
+1146466: Will Apple (AAPL) close at $255-$260 on the final day of trading of the week of Jan 12 – Jan 16?
+1146467: Will Apple (AAPL) finish week of January 12 above $265?
+1146468: Will Apple (AAPL) close at $260-$265 on the final day of trading of the week of Jan 12 – Jan 16?
+1146469: Will Apple (AAPL) finish week of January 12 above $270?
+1146470: Will Apple (AAPL) close at $265-$270 on the final day of trading of the week of Jan 12 – Jan 16?
+1146471: Will Apple (AAPL) finish week of January 12 above $275?
+1146472: Will Apple (AAPL) close at $270-$275 on the final day of trading of the week of Jan 12 – Jan 16?
+1146473: Will Apple (AAPL) close at $275-$280 on the final day of trading of the week of Jan 12 – Jan 16?
+1146474: Will Apple (AAPL) finish week of January 12 above $280?
+1146475: Will Apple (AAPL) close at >$280 on the final day of trading of the week of Jan 12 – Jan 16?
+1146476: Will Apple (AAPL) finish week of January 12 above $285?
+1146477: Will Apple (AAPL) finish week of January 12 above $290?
+1146478: Ethereum Up or Down - January 11, 6PM ET
+1146480: Will Microsoft (MSFT) close at <$430 on the final day of trading of the week of Jan 12 – Jan 16?
+1146481: Solana Up or Down - January 11, 6PM ET
+1146482: UFC 324: Fugitt vs. Miller (Welterweight, Early Prelims)
+1146483: Will Microsoft (MSFT) close at $430-$440 on the final day of trading of the week of Jan 12 – Jan 16?
+1146484: Will Microsoft (MSFT) close at $440-$450 on the final day of trading of the week of Jan 12 – Jan 16?
+1146485: Fight to Go the Distance?
+1146486: Will Microsoft (MSFT) close at $450-$460 on the final day of trading of the week of Jan 12 – Jan 16?
+1146487: Will Microsoft (MSFT) close at $460-$470 on the final day of trading of the week of Jan 12 – Jan 16?
+1146488: Will the fight be won by KO or TKO?
+1146489: Will Microsoft (MSFT) close at $470-$480 on the final day of trading of the week of Jan 12 – Jan 16?
+1146490: Will Microsoft (MSFT) close at $480-$490 on the final day of trading of the week of Jan 12 – Jan 16?
+1146491: Will Adam Fugitt win by KO or TKO?
+1146492: Will Microsoft (MSFT) close at $490-$500 on the final day of trading of the week of Jan 12 – Jan 16?
+1146494: Will Ty Miller win by KO or TKO?
+1146495: Will Microsoft (MSFT) close at $500-$510 on the final day of trading of the week of Jan 12 – Jan 16?
+1146496: Will Microsoft (MSFT) close at $510-$520 on the final day of trading of the week of Jan 12 – Jan 16?
+1146497: Will the fight be won by submission?
+1146498: Will Microsoft (MSFT) close at >$520 on the final day of trading of the week of Jan 12 – Jan 16?
+1146499: O/U 0.5 Rounds
+1146500: O/U 1.5 Rounds
+1146501: O/U 2.5 Rounds
+1146502: Will Microsoft (MSFT) finish week of January 12 above $420?
+1146503: Will Microsoft (MSFT) finish week of January 12 above $430?
+1146504: Will Microsoft (MSFT) finish week of January 12 above $440?
+1146505: Will Microsoft (MSFT) finish week of January 12 above $450?
+1146506: Will Microsoft (MSFT) finish week of January 12 above $460?
+1146507: Will Microsoft (MSFT) finish week of January 12 above $470?
+1146508: Will Microsoft (MSFT) finish week of January 12 above $480?
+1146509: XRP Up or Down - January 11, 6PM ET
+1146510: Will Microsoft (MSFT) finish week of January 12 above $490?
+1146511: Will Microsoft (MSFT) finish week of January 12 above $500?
+1146512: Will Microsoft (MSFT) finish week of January 12 above $510?
+1146513: Will Microsoft (MSFT) finish week of January 12 above $520?
+1146514: Will Microsoft (MSFT) finish week of January 12 above $530?
+1146515: Will Microsoft (MSFT) finish week of January 12 above $540?
+1146517: Will Amazon (AMZN) close at <$225 on the final day of trading of the week of Jan 12 – Jan 16?
+1146518: Will Amazon (AMZN) close at $225-$230 on the final day of trading of the week of Jan 12 – Jan 16?
+1146519: Will Amazon (AMZN) close at $230-$235 on the final day of trading of the week of Jan 12 – Jan 16?
+1146520: Will Amazon (AMZN) close at $235-$240 on the final day of trading of the week of Jan 12 – Jan 16?
+1146521: Will Amazon (AMZN) close at $240-$245 on the final day of trading of the week of Jan 12 – Jan 16?
+1146522: Will Amazon (AMZN) close at $245-$250 on the final day of trading of the week of Jan 12 – Jan 16?
+1146523: Will Amazon (AMZN) close at $250-$255 on the final day of trading of the week of Jan 12 – Jan 16?
+1146524: Will Amazon (AMZN) close at $255-$260 on the final day of trading of the week of Jan 12 – Jan 16?
+1146525: Will Amazon (AMZN) close at $260-$265 on the final day of trading of the week of Jan 12 – Jan 16?
+1146526: Will Amazon (AMZN) close at $265-$270 on the final day of trading of the week of Jan 12 – Jan 16?
+1146527: Will Amazon (AMZN) close at >$270 on the final day of trading of the week of Jan 12 – Jan 16?
+1146528: Will Amazon (AMZN) finish week of January 12 above $215?
+1146529: Will Amazon (AMZN) finish week of January 12 above $220?
+1146530: Will Amazon (AMZN) finish week of January 12 above $225?
+1146531: Will Amazon (AMZN) finish week of January 12 above $230?
+1146532: Will Amazon (AMZN) finish week of January 12 above $235?
+1146533: Will Amazon (AMZN) finish week of January 12 above $240?
+1146534: Will Amazon (AMZN) finish week of January 12 above $245?
+1146535: Will Amazon (AMZN) finish week of January 12 above $250?
+1146536: Will Amazon (AMZN) finish week of January 12 above $255?
+1146537: Will Amazon (AMZN) finish week of January 12 above $260?
+1146538: Will Amazon (AMZN) finish week of January 12 above $265?
+1146539: Will Amazon (AMZN) finish week of January 12 above $270?
+1146540: Will Amazon (AMZN) finish week of January 12 above $275?
+1146541: Will Google (GOOGL) close at <$305 on the final day of trading of the week of Jan 12 – Jan 16?
+1146542: Will Google (GOOGL) close at $305-$310 on the final day of trading of the week of Jan 12 – Jan 16?
+1146543: Will Google (GOOGL) close at $310-$315 on the final day of trading of the week of Jan 12 – Jan 16?
+1146544: Will Google (GOOGL) close at $315-$320 on the final day of trading of the week of Jan 12 – Jan 16?
+1146545: Will Google (GOOGL) close at $320-$325 on the final day of trading of the week of Jan 12 – Jan 16?
+1146546: Will Google (GOOGL) close at $325-$330 on the final day of trading of the week of Jan 12 – Jan 16?
+1146547: Will Google (GOOGL) close at $330-$335 on the final day of trading of the week of Jan 12 – Jan 16?
+1146548: Will Google (GOOGL) close at $335-$340 on the final day of trading of the week of Jan 12 – Jan 16?
+1146549: Will Google (GOOGL) close at $340-$345 on the final day of trading of the week of Jan 12 – Jan 16?
+1146550: Will Google (GOOGL) close at $345-$350 on the final day of trading of the week of Jan 12 – Jan 16?
+1146551: Will Google (GOOGL) close at >$350 on the final day of trading of the week of Jan 12 – Jan 16?
+1146552: Will Google (GOOGL) finish week of January 12 above $295?
+1146553: Will Google (GOOGL) finish week of January 12 above $300?
+1146554: Will Google (GOOGL) finish week of January 12 above $305?
+1146555: Will Google (GOOGL) finish week of January 12 above $310?
+1146556: Will Google (GOOGL) finish week of January 12 above $315?
+1146557: Will Google (GOOGL) finish week of January 12 above $320?
+1146558: Will Google (GOOGL) finish week of January 12 above $325?
+1146559: Will Google (GOOGL) finish week of January 12 above $330?
+1146560: Will Google (GOOGL) finish week of January 12 above $335?
+1146561: Will Google (GOOGL) finish week of January 12 above $340?
+1146562: Will Meta (META) close at <$600 on the final day of trading of the week of Jan 12 – Jan 16?
+1146563: Will Google (GOOGL) finish week of January 12 above $345?
+1146564: Will Meta (META) close at $600-$610 on the final day of trading of the week of Jan 12 – Jan 16?
+1146565: Will Google (GOOGL) finish week of January 12 above $350?
+1146566: Will Meta (META) close at $610-$620 on the final day of trading of the week of Jan 12 – Jan 16?
+1146567: Will Meta (META) close at $620-$630 on the final day of trading of the week of Jan 12 – Jan 16?
+1146568: Will Google (GOOGL) finish week of January 12 above $355?
+1146569: Will Meta (META) close at $630-$640 on the final day of trading of the week of Jan 12 – Jan 16?
+1146570: Will Meta (META) close at $640-$650 on the final day of trading of the week of Jan 12 – Jan 16?
+1146571: Will Meta (META) close at $650-$660 on the final day of trading of the week of Jan 12 – Jan 16?
+1146572: Will Meta (META) close at $660-$670 on the final day of trading of the week of Jan 12 – Jan 16?
+1146573: Will Meta (META) close at $670-$680 on the final day of trading of the week of Jan 12 – Jan 16?
+1146574: Will Meta (META) close at $680-$690 on the final day of trading of the week of Jan 12 – Jan 16?
+1146575: Will Meta (META) close at >$690 on the final day of trading of the week of Jan 12 – Jan 16?
+1146576: Will Tesla (TSLA) close at <$415 on the final day of trading of the week of Jan 12 – Jan 16?
+1146577: Will Tesla (TSLA) close at $415-$420 on the final day of trading of the week of Jan 12 – Jan 16?
+1146578: Will Tesla (TSLA) close at $420-$425 on the final day of trading of the week of Jan 12 – Jan 16?
+1146579: Will Tesla (TSLA) close at $425-$430 on the final day of trading of the week of Jan 12 – Jan 16?
+1146580: Will Meta (META) finish week of January 12 above $590?
+1146581: Will Tesla (TSLA) close at $430-$435 on the final day of trading of the week of Jan 12 – Jan 16?
+1146582: Will Meta (META) finish week of January 12 above $600?
+1146583: Will Tesla (TSLA) close at $435-$440 on the final day of trading of the week of Jan 12 – Jan 16?
+1146584: Will Meta (META) finish week of January 12 above $610?
+1146585: Will Tesla (TSLA) close at $440-$445 on the final day of trading of the week of Jan 12 – Jan 16?
+1146586: Will Meta (META) finish week of January 12 above $620?
+1146587: Will Tesla (TSLA) close at $445-$450 on the final day of trading of the week of Jan 12 – Jan 16?
+1146588: Will Meta (META) finish week of January 12 above $630?
+1146589: Will Tesla (TSLA) close at $450-$455 on the final day of trading of the week of Jan 12 – Jan 16?
+1146590: Will Tesla (TSLA) close at $455-$460 on the final day of trading of the week of Jan 12 – Jan 16?
+1146591: Will Meta (META) finish week of January 12 above $640?
+1146592: Will Tesla (TSLA) close at >$460 on the final day of trading of the week of Jan 12 – Jan 16?
+1146593: Will Meta (META) finish week of January 12 above $650?
+1146594: Will Meta (META) finish week of January 12 above $660?
+1146595: Will Meta (META) finish week of January 12 above $670?
+1146596: Will Meta (META) finish week of January 12 above $680?
+1146597: Will Meta (META) finish week of January 12 above $690?
+1146598: Will Meta (META) finish week of January 12 above $700?
+1146599: Will Meta (META) finish week of January 12 above $710?
+1146600: Will NVIDIA (NVDA) close at <$165 on the final day of trading of the week of Jan 12 – Jan 16?
+1146601: Will NVIDIA (NVDA) close at $165-$170 on the final day of trading of the week of Jan 12 – Jan 16?
+1146602: Will NVIDIA (NVDA) close at $170-$175 on the final day of trading of the week of Jan 12 – Jan 16?
+1146603: Will NVIDIA (NVDA) close at $175-$180 on the final day of trading of the week of Jan 12 – Jan 16?
+1146604: Will NVIDIA (NVDA) close at $180-$185 on the final day of trading of the week of Jan 12 – Jan 16?
+1146605: Will NVIDIA (NVDA) close at $185-$190 on the final day of trading of the week of Jan 12 – Jan 16?
+1146606: Will NVIDIA (NVDA) close at $190-$195 on the final day of trading of the week of Jan 12 – Jan 16?
+1146607: Will NVIDIA (NVDA) close at $195-$200 on the final day of trading of the week of Jan 12 – Jan 16?
+1146608: Will NVIDIA (NVDA) close at $200-$205 on the final day of trading of the week of Jan 12 – Jan 16?
+1146609: Will NVIDIA (NVDA) close at $205-$210 on the final day of trading of the week of Jan 12 – Jan 16?
+1146610: Will NVIDIA (NVDA) close at >$210 on the final day of trading of the week of Jan 12 – Jan 16?
+1146611: Will Tesla (TSLA) finish week of January 12 above $405?
+1146612: Will Tesla (TSLA) finish week of January 12 above $410?
+1146613: Will Tesla (TSLA) finish week of January 12 above $415?
+1146614: Will Tesla (TSLA) finish week of January 12 above $420?
+1146615: Will Tesla (TSLA) finish week of January 12 above $425?
+1146616: Will Tesla (TSLA) finish week of January 12 above $430?
+1146617: Will Tesla (TSLA) finish week of January 12 above $435?
+1146618: Will Tesla (TSLA) finish week of January 12 above $440?
+1146619: Will Tesla (TSLA) finish week of January 12 above $445?
+1146620: Will Tesla (TSLA) finish week of January 12 above $450?
+1146621: Will Tesla (TSLA) finish week of January 12 above $455?
+1146622: Will Tesla (TSLA) finish week of January 12 above $460?
+1146623: Will Tesla (TSLA) finish week of January 12 above $465?
+1146624: Will Netflix (NFLX) close at <$50 on the final day of trading of the week of Jan 12 – Jan 16?
+1146625: Will Netflix (NFLX) close at $50-$60 on the final day of trading of the week of Jan 12 – Jan 16?
+1146626: Will Netflix (NFLX) close at $60-$70 on the final day of trading of the week of Jan 12 – Jan 16?
+1146627: Will Netflix (NFLX) close at $70-$80 on the final day of trading of the week of Jan 12 – Jan 16?
+1146628: Will Netflix (NFLX) close at $80-$90 on the final day of trading of the week of Jan 12 – Jan 16?
+1146629: Will Netflix (NFLX) close at $90-$100 on the final day of trading of the week of Jan 12 – Jan 16?
+1146630: Will Netflix (NFLX) close at $100-$110 on the final day of trading of the week of Jan 12 – Jan 16?
+1146631: Will Netflix (NFLX) close at $110-$120 on the final day of trading of the week of Jan 12 – Jan 16?
+1146632: Will Netflix (NFLX) close at $120-$130 on the final day of trading of the week of Jan 12 – Jan 16?
+1146633: Will Netflix (NFLX) close at $130-$140 on the final day of trading of the week of Jan 12 – Jan 16?
+1146634: Will Netflix (NFLX) close at >$140 on the final day of trading of the week of Jan 12 – Jan 16?
+1146635: Will NVIDIA (NVDA) finish week of January 12 above $155?
+1146636: Will NVIDIA (NVDA) finish week of January 12 above $160?
+1146637: Will NVIDIA (NVDA) finish week of January 12 above $165?

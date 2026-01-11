@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+821612: Will Yolanda Flowers win the 2026 Alabama Governor Democratic primary election?
+821613: Will Doug Jones win the 2026 Alabama Governor Democratic primary election?
+821614: Will Chad Chig Martin win the 2026 Alabama Governor Democratic primary election?
+822004: Will Ken McFeeters win the 2026 Alabama Governor Republican primary election?
+822005: Will Tommy Tuberville win the 2026 Alabama Governor Republican primary election?
+822236: US tariff revenue up in Q4 2025?
+822237: Will Andy Biggs win the 2026 Arizona Governor Republican primary election?
+822238: Will David Schweikert win the 2026 Arizona Governor Republican primary election?
+822239: Will Karrin Taylor Robson win the 2026 Arizona Governor Republican primary election?
+822267: Russian strike on a NATO member by March 31?
+822850: Will there be exactly 2 earthquakes of magnitude 7.0 or higher worldwide by June 30?
+822851: Will there be exactly 3 earthquakes of magnitude 7.0 or higher worldwide by June 30?
+822852: Will there be exactly 4 earthquakes of magnitude 7.0 or higher worldwide by June 30?
+822853: Will there be exactly 5 earthquakes of magnitude 7.0 or higher worldwide by June 30?
+822854: Will there be 8 or more earthquakes of magnitude 7.0 or higher worldwide by June 30?
+822866: Will Trump pardon Ryan Salame before 2027?
+823411: Will there be exactly 6 earthquakes of magnitude 7.0 or higher worldwide by June 30?
+823412: Will there be exactly 7 earthquakes of magnitude 7.0 or higher worldwide by June 30?
+823496: Will Jim Pillen win the 2026 Nebraska Governor Republican primary election?
+823497: Will Jacy Todd win the 2026 Nebraska Governor Republican primary election?
+823498: Will Charles Herbster win the 2026 Nebraska Governor Republican primary election?
+823568: Named storm forms before hurricane season?
+824179: Will Aaron Ford win the 2026 Nevada Governor Democratic primary election?
+824180: Will Alexis Hill win the 2026 Nevada Governor Democratic primary election?
+824198: Will Kelly Ayotte win the 2026 New Hampshire Governor Republican primary election?
+824199: Will Corey Lewandowski win the 2026 New Hampshire Governor Republican primary election?
+824220: Will John Kiper win the 2026 New Hampshire Governor Democratic primary election?
+824221: Will Tom Sherman win the 2026 New Hampshire Governor Democratic primary election?
+824222: Will Deaglan McEachern win the 2026 New Hampshire Governor Democratic primary election?
+824223: Will Donovan Fenton win the 2026 New Hampshire Governor Democratic primary election?
+824224: Will Cinde Warmington win the 2026 New Hampshire Governor Democratic primary election?
+824241: Will Sam Bregman win the 2026 New Mexico Governor Democratic primary election?
+824242: Will Deb Haaland win the 2026 New Mexico Governor Democratic primary election?
+824243: Will Ken Miyagishima win the 2026 New Mexico Governor Democratic primary election?
+824260: Will Greg Hull win the 2026 New Mexico Governor Republican primary election?
+824261: Will Steve Lanier win the 2026 New Mexico Governor Republican primary election?
+824262: Will Brian Cillessen win the 2026 New Mexico Governor Republican primary election?
+824263: Will Belinda Robertson win the 2026 New Mexico Governor Republican primary election?
+824264: Will Duke Rodriguez win the 2026 New Mexico Governor Republican primary election?
+824265: Will Mark Murphy win the 2026 New Mexico Governor Republican primary election?
+824266: Will Judith Nakamura win the 2026 New Mexico Governor Republican primary election?
+824267: Will Susana Martinez win the 2026 New Mexico Governor Republican primary election?
+824268: Will John Sanchez win the 2026 New Mexico Governor Republican primary election?
+824319: Will Elise Stefanik win the 2026 New York Governor Republican primary election?
+824320: Will Pat Hahn win the 2026 New York Governor Republican primary election?
+824321: Will David Tulley win the 2026 New York Governor Republican primary election?
+824322: Will Betsy McCaughey win the 2026 New York Governor Republican primary election?
+824323: Will Bruce Blakeman win the 2026 New York Governor Republican primary election?
+824818: Will Fredrick Love win the 2026 Arkansas Governor Democratic primary election?
+824819: Will Supha Xayprasith-Mays win the 2026 Arkansas Governor Democratic primary election?
+824952: MicroStrategy sells any Bitcoin by December 31, 2026?
+824965: Will Cyndi Munson win the 2026 Oklahoma Governor Democratic primary election?
+824966: Will Arya Azma win the 2026 Oklahoma Governor Democratic primary election?
+825091: Will Genter Drummond win the 2026 Oklahoma Governor Republican primary election?
+825092: Will Chip Keating win the 2026 Oklahoma Governor Republican primary election?
+825093: Will Leisa Mitchell Haynes win the 2026 Oklahoma Governor Republican primary election?
+825094: Will Mike Mazzei win the 2026 Oklahoma Governor Republican primary election?
+825095: Will Charles McCall win the 2026 Oklahoma Governor Republican primary election?
+825096: Will Jake Merrick win the 2026 Oklahoma Governor Republican primary election?
+825097: Will Ryan Walters win the 2026 Oklahoma Governor Republican primary election?
+825098: Will Matt Pinnell win the 2026 Oklahoma Governor Republican primary election?
+825441: Will Derek Grasty advance from the 2026 California Governor primary election?
+825442: Will Ethan Agarwal advance from the 2026 California Governor primary election?
+825443: Will Xavier Becerra advance from the 2026 California Governor primary election?
+825444: Will Carolina Buhler advance from the 2026 California Governor primary election?
+825445: Will Ian Calderon advance from the 2026 California Governor primary election?
+825446: Will Zoltan Istvan advance from the 2026 California Governor primary election?
+825447: Will Thunder Parley advance from the 2026 California Governor primary election?
+825448: Will Katie Porter advance from the 2026 California Governor primary election?
+825449: Will Raji Rab advance from the 2026 California Governor primary election?
+825450: Will Tom Steyer advance from the 2026 California Governor primary election?
+825451: Will Eric Swalwell advance from the 2026 California Governor primary election?
+825452: Will Tony Thurmond advance from the 2026 California Governor primary election?
+825453: Will Antonio Villaraigosa advance from the 2026 California Governor primary election?
+825454: Will Betty Yee advance from the 2026 California Governor primary election?
+825455: Will Dylan Colbert advance from the 2026 California Governor primary election?
+825456: Will Ché Ahn advance from the 2026 California Governor primary election?
+825457: Will Chad Bianco advance from the 2026 California Governor primary election?
+825458: Will Sophia Brink advance from the 2026 California Governor primary election?
+825459: Will Sharifah Hardie advance from the 2026 California Governor primary election?
+825460: Will Steve Hilton advance from the 2026 California Governor primary election?
+825461: Will Brandon Jones advance from the 2026 California Governor primary election?
+825462: Will Kyle Langford advance from the 2026 California Governor primary election?
+825463: Will Daniel Mercuri advance from the 2026 California Governor primary election?
+825464: Will Jimmy Parker advance from the 2026 California Governor primary election?
+825465: Will David Serpa advance from the 2026 California Governor primary election?
+825466: Will Leo Zacky advance from the 2026 California Governor primary election?
+825467: Will Javen Allen advance from the 2026 California Governor primary election?
+825468: Will Ryan Tillman advance from the 2026 California Governor primary election?
+825469: Will David Thelen advance from the 2026 California Governor primary election?
+825470: Will Leonard Jackson advance from the 2026 California Governor primary election?
+825471: Will Ramsey Robinson advance from the 2026 California Governor primary election?
+825472: Will Nicholas Thompson advance from the 2026 California Governor primary election?
+825473: Will Butch Ware advance from the 2026 California Governor primary election?
+825531: Will Danielle Bethell win the 2026 Oregon Governor Republican primary election?
+825532: Will Kyle Duyck win the 2026 Oregon Governor Republican primary election?
+825533: Will Christine Drazan win the 2026 Oregon Governor Republican primary election?
+825534: Will Robert Neuman win the 2026 Oregon Governor Republican primary election?
+825535: Will Chris Dudley win the 2026 Oregon Governor Republican primary election?
+825536: Will Chael Sonnen win the 2026 Oregon Governor Republican primary election?
+825558: Will Michael Bennet win the 2026 Colorado Governor Democratic primary election?
+825559: Will Phil Weiser win the 2026 Colorado Governor Democratic primary election?
+825596: Will David Hughes win the 2026 Colorado Governor Democratic primary election?
+825597: Will William Moses win the 2026 Colorado Governor Democratic primary election?
+825852: Will Mark Baisley win the 2026 Colorado Governor Republican primary election?
+825853: Will Scott Bottoms win the 2026 Colorado Governor Republican primary election?
+825854: Will Jason Clark win the 2026 Colorado Governor Republican primary election?
+825855: Will Joshua Griffin win the 2026 Colorado Governor Republican primary election?
+825856: Will Barbara Kirkmeyer win the 2026 Colorado Governor Republican primary election?
+825857: Will Greg Lopez win the 2026 Colorado Governor Republican primary election?
+825858: Will Victor Marx win the 2026 Colorado Governor Republican primary election?
+825859: Will Will McBride win the 2026 Colorado Governor Republican primary election?
+825860: Will Jason Mikesell win the 2026 Colorado Governor Republican primary election?
+825861: Will Stevan Gess win the 2026 Colorado Governor Republican primary election?
+825862: Will Jon Gray-Ginsberg win the 2026 Colorado Governor Republican primary election?
+825863: Will Brycen Garrison win the 2026 Colorado Governor Republican primary election?
+825864: Will Bob Brinkerhoff win the 2026 Colorado Governor Republican primary election?
+825865: Will Daniel Thomas win the 2026 Colorado Governor Republican primary election?
+825866: Will Robert Moore win the 2026 Colorado Governor Republican primary election?
+826114: Will Josh Elliott win the 2026 Connecticut Governor Democratic primary election?
+826115: Will Ned Lamont win the 2026 Connecticut Governor Democratic primary election?
+826143: Will Erin Stewart win the 2026 Connecticut Governor Republican primary election?
+826144: Will Ryan Fazio win the 2026 Connecticut Governor Republican primary election?
+826145: Will Timothy Wilcox win the 2026 Connecticut Governor Republican primary election?
+826181: Will Amy Acton win the 2026 Ohio Governor Democratic primary election?
+826182: Will Jacob Chiara win the 2026 Ohio Governor Democratic primary election?
+826825: Will Chris Paul sign with or be traded to the Los Angeles Lakers?
+826826: Will Chris Paul sign with or be traded to the Minnesota Timberwolves?
+826827: Will Chris Paul sign with or be traded to the Sacramento Kings?
+826828: Will Chris Paul sign with or be traded to the New Orleans Pelicans?
+826829: Will Chris Paul sign with or be traded to the Houston Rockets?
+826830: Will Chris Paul sign with or be traded to the Denver Nuggets?
+826831: Will Chris Paul sign with or be traded to the Phoenix Suns?
+826832: Will Chris Paul sign with or be traded to the Oklahoma City Thunder?
+826833: Will Chris Paul sign with or be traded to the New York Knicks?
+826834: Will Chris Paul sign with or be traded to the Dallas Mavericks?
+826835: Will Chris Paul not sign with or be traded to a new team?
+829310: Katy Perry and Justin Trudeau engaged by end of 2026?
+833210: Will annual inflation increase by ≤2.8% in December?
+833211: Will annual inflation increase by 2.9% in December?
+833212: Will annual inflation increase by 3.0% in December?
+833213: Will annual inflation increase by 3.1% in December?
+833214: Will annual inflation increase by ≥3.2% in December?
+833215: Will monthly inflation increase by 0.1% or less in December?
+833216: Will monthly inflation increase by 0.2% in December?
+833217: Will monthly inflation increase by 0.3% in December?
+833218: Will monthly inflation increase by 0.4% in December?
+833219: Will monthly inflation increase by 0.5% or more in December?
+834278: GPT ads by March 31?
+834851: Maduro exiled to Qatar by March 31?
+834856: USD.AI FDV above $4B one day after launch?
+834857: USD.AI FDV above $6B one day after launch?
+835892: Ukraine officially agrees to a US backed ceasefire framework by January 31?
+835893: Ukraine officially agrees to a US backed ceasefire framework by March 31?
+836162: Elon Musk trillionaire before 2027?
+836181: Will Vivek Ramaswamy win the 2026 Ohio Governor Republican primary election?
+836182: Will Philip Funderburg win the 2026 Ohio Governor Republican primary election?
+836184: Will Casey Putsch win the 2026 Ohio Governor Republican primary election?
+837709: Will Benicio Del Toro be nominated for Best Supporting Actor at the 98th Academy Awards?
+837726: Will Chris Carr win the 2026 Georgia Governor Republican primary election?
+837727: Will Clark Dean win the 2026 Georgia Governor Republican primary election?
+837728: Will Burt Jones win the 2026 Georgia Governor Republican primary election?
+837729: Will Brad Raffensperger win the 2026 Georgia Governor Republican primary election?
+837730: Will Ken Yasger win the 2026 Georgia Governor Republican primary election?
+837731: Will Gregg Kirkpatrick win the 2026 Georgia Governor Republican primary election?
+837732: Will Leland Olinger II win the 2026 Georgia Governor Republican primary election?
+837767: Will Olujimi Brown win the 2026 Georgia Governor Democratic primary election?
+837768: Will Geoff Duncan win the 2026 Georgia Governor Democratic primary election?
+837769: Will Jason Esteves win the 2026 Georgia Governor Democratic primary election?
+837770: Will Derrick Jackson win the 2026 Georgia Governor Democratic primary election?
+837771: Will Keisha Lance Bottoms win the 2026 Georgia Governor Democratic primary election?
+837772: Will Ruwa Romman win the 2026 Georgia Governor Democratic primary election?
+837773: Will Mike Thurmond win the 2026 Georgia Governor Democratic primary election?
+838479: Meloni out as Prime Minister of Italy by June 30?
+838511: Will Stephen Heidt win the 2026 Idaho Governor Democratic primary election?
+838512: Will Terri Pickens win the 2026 Idaho Governor Democratic primary election?
+838544: Will no one leave the Trump Cabinet before 2027?
+838545: Will J.D. Vance be the first to leave the Trump Cabinet before 2027?
+838546: Will Marco Rubio be the first to leave the Trump Cabinet before 2027?
+838547: Will Scott Bessent be the first to leave the Trump Cabinet before 2027?
+838548: Will Pete Hegseth be the first to leave the Trump Cabinet before 2027?
+838549: Will Pam Bondi be the first to leave the Trump Cabinet before 2027?
+838550: Will Doug Burgum be the first to leave the Trump Cabinet before 2027?
+838551: Will Brooke Rollins be the first to leave the Trump Cabinet before 2027?
+838552: Will Howard Lutnick be the first to leave the Trump Cabinet before 2027?
+838553: Will Lori Chavez-DeRemer be the first to leave the Trump Cabinet before 2027?
+838554: Will Robert F. Kennedy Jr. be the first to leave the Trump Cabinet before 2027?
+838555: Will Scott Turner be the first to leave the Trump Cabinet before 2027?
+838556: Will Sean Duffy be the first to leave the Trump Cabinet before 2027?
+838557: Will Chris Wright be the first to leave the Trump Cabinet before 2027?
+838558: Will Linda McMahon be the first to leave the Trump Cabinet before 2027?
+838559: Will Doug Collins be the first to leave the Trump Cabinet before 2027?
+838560: Will Kristi Noem be the first to leave the Trump Cabinet before 2027?
+838561: Will Lee Zeldin be the first to leave the Trump Cabinet before 2027?
+838562: Will Susie Wiles be the first to leave the Trump Cabinet before 2027?
+838563: Will Tulsi Gabbard be the first to leave the Trump Cabinet before 2027?
+838564: Will Russell T. Vought be the first to leave the Trump Cabinet before 2027?
+838565: Will John Ratcliffe be the first to leave the Trump Cabinet before 2027?
+838566: Will Jamieson Greer be the first to leave the Trump Cabinet before 2027?
+838567: Will Mike Waltz be the first to leave the Trump Cabinet before 2027?
+838568: Will Stephen Miran be the first to leave the Trump Cabinet before 2027?
+838569: Will Kelly Loeffler be the first to leave the Trump Cabinet before 2027?
+839357: Will Mexico win Group A in the 2026 FIFA World Cup?
+839358: Will South Africa win Group A in the 2026 FIFA World Cup?
+839359: Will South Korea win Group A in the 2026 FIFA World Cup?
+839360: Will the winner of the Czechia/Denmark/North Macedonia/Republic of Ireland playoff win Group A in the 2026 FIFA World Cup?
+839394: Will Canada win Group B in the 2026 FIFA World Cup?
+839395: Will the winner of the Bosnia and Herzegovina/Italy/Northern Ireland/Wales playoff win Group B in the 2026 FIFA World Cup?
+839396: Will Qatar win Group B in the 2026 FIFA World Cup?
+839397: Will Switzerland win Group B in the 2026 FIFA World Cup?
+839399: Will Brazil win Group C in the 2026 FIFA World Cup?
+839400: Will Morocco win Group C in the 2026 FIFA World Cup?
+839401: Will Haiti win Group C in the 2026 FIFA World Cup?
+839402: Will Scotland win Group C in the 2026 FIFA World Cup?
+839420: Will USA win Group D in the 2026 FIFA World Cup?
+839421: Will Paraguay win Group D in the 2026 FIFA World Cup?
+839422: Will Australia win Group D in the 2026 FIFA World Cup?
+839423: Will the winner of the Kosovo/Romania/Slovakia/Türkiye playoff win Group D in the 2026 FIFA World Cup?
+839429: Will Germany win Group E in the 2026 FIFA World Cup?
+839430: Will Curaçao win Group E in the 2026 FIFA World Cup?
+839431: Will Côte d'Ivoire win Group E in the 2026 FIFA World Cup?
+839432: Will Ecuador win Group E in the 2026 FIFA World Cup?
+839434: Will Netherlands win Group F in the 2026 FIFA World Cup?
+839435: Will Japan win Group F in the 2026 FIFA World Cup?
+839436: Will the winner of the Albania/Poland/Sweden/Ukraine playoff win Group F in the 2026 FIFA World Cup?
+839437: Will Tunisia win Group F in the 2026 FIFA World Cup?
+839439: Will Belgium win Group G in the 2026 FIFA World Cup?
+839440: Will Egypt win Group G in the 2026 FIFA World Cup?
+839441: Will Iran win Group G in the 2026 FIFA World Cup?
+839442: Will New Zealand win Group G in the 2026 FIFA World Cup?
+839561: Will Spain win Group H in the 2026 FIFA World Cup?
+839562: Will Cape Verde win Group H in the 2026 FIFA World Cup?
+839563: Will Saudi Arabia win Group H in the 2026 FIFA World Cup?
+839564: Will Uruguay win Group H in the 2026 FIFA World Cup?
+839959: Will France win Group I in the 2026 FIFA World Cup?
+839960: Will Senegal win Group I in the 2026 FIFA World Cup?
+839961: Will the winner of the Bolivia/Iraq/Suriname playoff win Group I in the 2026 FIFA World Cup?
+839962: Will Norway win Group I in the 2026 FIFA World Cup?
+839969: Will Argentina win Group J in the 2026 FIFA World Cup?
+839970: Will Algeria win Group J in the 2026 FIFA World Cup?
+839971: Will Austria win Group J in the 2026 FIFA World Cup?
+840171: Will Portugal win Group K in the 2026 FIFA World Cup?
+840172: Will the winner of the Democratic Republic of Congo/Jamaica/New Caledonia playoff win Group K in the 2026 FIFA World Cup?
+840173: Will Uzbekistan win Group K in the 2026 FIFA World Cup?
+840174: Will Colombia win Group K in the 2026 FIFA World Cup?
+840394: Will England win Group L in the 2026 FIFA World Cup?
+840396: Will Croatia win Group L in the 2026 FIFA World Cup?
+840398: Will Ghana win Group L in the 2026 FIFA World Cup?
+840402: Will Panama win Group L in the 2026 FIFA World Cup?
+840927: Will Africa win the 2026 FIFA World Cup?
+840928: Will Asia win the 2026 FIFA World Cup?
+840929: Will Europe win the 2026 FIFA World Cup?
+840930: Will North America win the 2026 FIFA World Cup?
+840931: Will South America win the 2026 FIFA World Cup?
+840932: Will Oceania win the 2026 FIFA World Cup?
+840942: Will Anthony Vaccarello be named the next creative director of Versace?
+840943: Will Pieter Mulier be named the next creative director of Versace?
+840944: Will Hedi Slimane be named the next creative director of Versace?
+840945: Will Pierpaolo Piccioli be named the next creative director of Versace?
+840946: Will John Galliano be named the next creative director of Versace?
+842004: Will Albania win Eurovision 2026?
+842005: Will Australia win Eurovision 2026?
+842006: Will Austria win Eurovision 2026?
+842007: Will Azerbaijan win Eurovision 2026?
+842008: Will Belgium win Eurovision 2026?
+842009: Will Bulgaria win Eurovision 2026?
+842010: Will Croatia win Eurovision 2026?
+842011: Will Cyprus win Eurovision 2026?
+842012: Will Czechia win Eurovision 2026?
+842013: Will Denmark win Eurovision 2026?
+842014: Will Estonia win Eurovision 2026?
+842015: Will Finland win Eurovision 2026?
+842016: Will France win Eurovision 2026?
+842017: Will Georgia win Eurovision 2026?
+842018: Will Germany win Eurovision 2026?
+842019: Will Greece win Eurovision 2026?
+842020: Will Israel win Eurovision 2026?
+842021: Will Italy win Eurovision 2026?
+842022: Will Latvia win Eurovision 2026?
+842023: Will Lithuania win Eurovision 2026?
+842024: Will Luxembourg win Eurovision 2026?
+842025: Will Malta win Eurovision 2026?
+842026: Will Moldova win Eurovision 2026?
+842027: Will Montenegro win Eurovision 2026?
+842028: Will Norway win Eurovision 2026?
+842029: Will Poland win Eurovision 2026?
+842030: Will Portugal win Eurovision 2026?
+842031: Will Romania win Eurovision 2026?
+842032: Will San Marino win Eurovision 2026?
+842033: Will Serbia win Eurovision 2026?
+842034: Will Sweden win Eurovision 2026?
+842035: Will Switzerland win Eurovision 2026?
+842036: Will Ukraine win Eurovision 2026?
+842037: Will United Kingdom win Eurovision 2026?
+842086: Will SpaceX's market cap be less than $500B at market close on IPO day?
+842087: Will SpaceX's market cap be between $500B and $600B at market close on IPO day?
+842088: Will SpaceX's market cap be between $600B and $700B at market close on IPO day?
+842089: Will SpaceX's market cap be between $700B and $800B at market close on IPO day?
+842090: Will SpaceX's market cap be between $800B and $900B at market close on IPO day?
+842091: Will SpaceX's market cap be between $900B and $1T at market close on IPO day?
+842092: Will SpaceX's market cap be greater than $1T at market close on IPO day?
+842093: Will SpaceX not IPO by December 31, 2027?
+871847: Nick Fuentes sex tape released by March 31?
+883108: Rider Broncs vs. Delaware Fightin' Blue Hens
+884888: Tim Walz charged by March 31, 2026?
+890754: Will Netanyahu visit NYC by March 31?
+890828: Netanyahu arrested by March 31?
+891191: Will Netflix close Warner Bros. acquisition by end of 2026?  
+891408: EU dissolves before 2027?
+891579: Any country withdraws from EU before 2027?
+893329: Will Sheffield United FC win on 2026-01-04?
+893330: Will Sheffield United FC vs. Oxford United FC end in a draw?
+893331: Will Oxford United FC win on 2026-01-04?
+893353: Will Portsmouth FC win on 2026-01-04?
+893354: Will Portsmouth FC vs. Ipswich Town FC end in a draw?
+893355: Will Ipswich Town FC win on 2026-01-04?
+893365: Will Hull City AFC win on 2026-01-04?
+893366: Will Hull City AFC vs. Watford FC end in a draw?
+893367: Will Watford FC win on 2026-01-04?
+895964: Paramount x Warner Bros. acquisition announced by June 30?
+896056: Will Paramount close Warner Bros. acquisition by end of 2026?
+896773: Will Austria win the most gold medals in the 2026 Winter Olympics?
+896774: Will Canada win the most gold medals in the 2026 Winter Olympics?
+896775: Will China win the most gold medals in the 2026 Winter Olympics?
+896776: Will France win the most gold medals in the 2026 Winter Olympics?
+896777: Will Germany win the most gold medals in the 2026 Winter Olympics?
+896778: Will Italy win the most gold medals in the 2026 Winter Olympics?
+896779: Will Japan win the most gold medals in the 2026 Winter Olympics?
+896780: Will Netherlands win the most gold medals in the 2026 Winter Olympics?
+896781: Will Norway win the most gold medals in the 2026 Winter Olympics?
+896782: Will Sweden win the most gold medals in the 2026 Winter Olympics?
+896783: Will Switzerland win the most gold medals in the 2026 Winter Olympics?
+896784: Will the United States win the most gold medals in the 2026 Winter Olympics?
+896978: Will Austria win the second most gold medals in the 2026 Winter Olympics?
+896979: Will Canada win the second most gold medals in the 2026 Winter Olympics?
+896980: Will China win the second most gold medals in the 2026 Winter Olympics?
+896981: Will France win the second most gold medals in the 2026 Winter Olympics?
+896982: Will Germany win the second most gold medals in the 2026 Winter Olympics?
+896983: Will Italy win the second most gold medals in the 2026 Winter Olympics?
+896984: Will Japan win the second most gold medals in the 2026 Winter Olympics?
+896985: Will Netherlands win the second most gold medals in the 2026 Winter Olympics?
+896986: Will Norway win the second most gold medals in the 2026 Winter Olympics?
+896987: Will Sweden win the second most gold medals in the 2026 Winter Olympics?
+896988: Will Switzerland win the second most gold medals in the 2026 Winter Olympics?
+896989: Will the United States win the second most gold medals in the 2026 Winter Olympics?
+897017: Will Netflix close Warner Bros acquisition?
+897018: Will Comcast close Warner Bros acquisition?
+897019: Will Paramount close Warner Bros acquisition?
+897030: No listed company closes Warner Bros acquisition by June 30, 2027
+897032: Will Austria win the third most gold medals in the 2026 Winter Olympics?
+897033: Will Canada win the third most gold medals in the 2026 Winter Olympics?
+897034: Will China win the third most gold medals in the 2026 Winter Olympics?
+897035: Will France win the third most gold medals in the 2026 Winter Olympics?
+897036: Will Germany win the third most gold medals in the 2026 Winter Olympics?
+897037: Will Italy win the third most gold medals in the 2026 Winter Olympics?
+897038: Will Japan win the third most gold medals in the 2026 Winter Olympics?
+897039: Will Netherlands win the third most gold medals in the 2026 Winter Olympics?
+897040: Will Norway win the third most gold medals in the 2026 Winter Olympics?
+897041: Will Sweden win the third most gold medals in the 2026 Winter Olympics?
+897042: Will Switzerland win the third most gold medals in the 2026 Winter Olympics?
+897043: Will the United States win the third most gold medals in the 2026 Winter Olympics?
+897188: Will Merab Dvalishvili fight Petr Yan next?
+897189: Will Merab Dvalishvili fight Cory Sandhagen next?
+897190: Will Merab Dvalishvili fight Umar Nurmagomedov next?
+897191: Will Merab Dvalishvili fight Song Yadong next?
+897192: Will Merab Dvalishvili fight Aiemann Zahabi next?
+897193: Will Merab Dvalishvili fight Payton Talbott next?
+897194: Will Merab Dvalishvili fight Rob Font next?
+897195: Will Merab Dvalishvili fight Deiveson Figueiredo next?
+897196: Will Merab Dvalishvili fight Alexandre Pantoja next?
+897197: Will Merab Dvalishvili fight Alexander Volkanovski next?
+897198: Will Merab Dvalishvili fight Ricky Simón next?
+897199: Will Merab Dvalishvili fight Pedro Munhoz next?
+897227: Will Donald Trump visit Syria in 2026?
+897228: Tabi FDV above $500M one day after launch?
+897229: Tabi FDV above $1B one day after launch?
+897230: Tabi FDV above $2B one day after launch?
+897231: Tabi FDV above $3B one day after launch?
+897235: Will Merab Dvalishvili fight Sean O'Malley next?
+897241: Will Petr Yan fight Merab Dvalishvili next?
+897242: Will Petr Yan fight Sean O’Malley next?
+897243: Will Petr Yan fight Cory Sandhagen next?
+897244: Will Petr Yan fight Umar Nurmagomedov next?
+897245: Will Petr Yan fight Song Yadong next?
+897246: Will Petr Yan fight Deiveson Figueiredo next?
+897247: Will Petr Yan fight Rob Font next?
+897248: Will Petr Yan fight Ricky Simón next?
+897249: Will Petr Yan fight Pedro Munhoz next?
+897250: Will Petr Yan fight Payton Talbott next?
+897251: Will Petr Yan fight Dominick Cruz next?
+897252: Will Petr Yan fight Henry Cejudo next?
+897253: Will Petr Yan fight Alexandre Pantoja next?
+897254: Will Petr Yan fight Alexander Volkanovski next?
+897530: Israel strike on Damascus by March 31, 2026?
+897571: Lisa Cook out as Fed Governor by February 28?
+897776: Will Canada win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?
+897777: Will United States win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?
+897778: Will Finland win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?
+897779: Will Sweden win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?
+897780: Will Germany win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?
+897781: Will Switzerland win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?
+897782: Will Czech Republic win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?
+897783: Will Italy win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?
+897784: Will Slovakia win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?
+897785: Will Latvia win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?
+897786: Will Denmark win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?
+897787: Will France win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?
+897843: 9.0 or above earthquake before 2027?
+897844: 10.0 or above earthquake before 2027?
+898158: Will Donald Trump announce a new nominee for Chair of the Federal Reserve by January 31, 2026?
+898159: Trump cabinet member out by March 31, 2026?
+898160: Will Donald Trump announce a new nominee for Chair of the Federal Reserve by March 31, 2026?
+898161: Trump cabinet member out by June 30, 2026?
+898162: Will Donald Trump announce a new nominee for Chair of the Federal Reserve by June 30, 2026?
+898163: Trump cabinet member out by December 31, 2026?
+898176: Will Canada win the Men's Ice Hockey silver medal at the 2026 Winter Olympics?
+898177: Will United States win the Men's Ice Hockey silver medal at the 2026 Winter Olympics?
+898178: Will Finland win the Men's Ice Hockey silver medal at the 2026 Winter Olympics?
+898179: Will Sweden win the Men's Ice Hockey silver medal at the 2026 Winter Olympics?
+898180: Will Germany win the Men's Ice Hockey silver medal at the 2026 Winter Olympics?
+898181: Will Switzerland win the Men's Ice Hockey silver medal at the 2026 Winter Olympics?
+898182: Will Czech Republic win the Men's Ice Hockey silver medal at the 2026 Winter Olympics?
+898183: Will Italy win the Men's Ice Hockey silver medal at the 2026 Winter Olympics?
+898184: Will Slovakia win the Men's Ice Hockey silver medal at the 2026 Winter Olympics?
+898185: Will Latvia win the Men's Ice Hockey silver medal at the 2026 Winter Olympics?
+898186: Will Denmark win the Men's Ice Hockey silver medal at the 2026 Winter Olympics?
+898187: Will France win the Men's Ice Hockey silver medal at the 2026 Winter Olympics?
+898189: Will Canada win the Men's Ice Hockey bronze medal at the 2026 Winter Olympics?
+898190: Will United States win the Men's Ice Hockey bronze medal at the 2026 Winter Olympics?
+898191: Will Finland win the Men's Ice Hockey bronze medal at the 2026 Winter Olympics?
+898192: Will Sweden win the Men's Ice Hockey bronze medal at the 2026 Winter Olympics?
+898193: Will Germany win the Men's Ice Hockey bronze medal at the 2026 Winter Olympics?
+898194: Will Switzerland win the Men's Ice Hockey bronze medal at the 2026 Winter Olympics?
+898195: Will Czech Republic win the Men's Ice Hockey bronze medal at the 2026 Winter Olympics?
+898196: Will Italy win the Men's Ice Hockey bronze medal at the 2026 Winter Olympics?
+898197: Will Slovakia win the Men's Ice Hockey bronze medal at the 2026 Winter Olympics?
+898198: Will Latvia win the Men's Ice Hockey bronze medal at the 2026 Winter Olympics?
+898199: Will Denmark win the Men's Ice Hockey bronze medal at the 2026 Winter Olympics?
+898200: Will France win the Men's Ice Hockey bronze medal at the 2026 Winter Olympics?
+898366: Will Austria win the most medal points in the 2026 Winter Olympics?
+898367: Will Canada win the most medal points in the 2026 Winter Olympics?
+898368: Will China win the most medal points in the 2026 Winter Olympics?
+898369: Will France win the most medal points in the 2026 Winter Olympics?
+898370: Will Germany win the most medal points in the 2026 Winter Olympics?
+898371: Will Italy win the most medal points in the 2026 Winter Olympics?
+898372: Will Japan win the most medal points in the 2026 Winter Olympics?
+898373: Will Netherlands win the most medal points in the 2026 Winter Olympics?
+898374: Will Norway win the most medal points in the 2026 Winter Olympics?
+898375: Will Sweden win the most medal points in the 2026 Winter Olympics?
+898376: Will Switzerland win the most medal points in the 2026 Winter Olympics?
+898377: Will the United States win the most medal points in the 2026 Winter Olympics?
+898409: Will Lando Norris be the 2026 F1 Drivers' Champion?
+898410: Will Oscar Piastri be the 2026 F1 Drivers' Champion?
+898411: Will George Russell be the 2026 F1 Drivers' Champion?
+898412: Will Kimi Antonelli be the 2026 F1 Drivers' Champion?
+898413: Will Max Verstappen be the 2026 F1 Drivers' Champion?
+898414: Will Isack Hadjar be the 2026 F1 Drivers' Champion?
+898415: Will Charles Leclerc be the 2026 F1 Drivers' Champion?
+898416: Will Lewis Hamilton be the 2026 F1 Drivers' Champion?
+898417: Will Fernando Alonso be the 2026 F1 Drivers' Champion?
+898418: Will Lance Stroll be the 2026 F1 Drivers' Champion?
+898419: Will Esteban Ocon be the 2026 F1 Drivers' Champion?
+898420: Will Oliver Bearman be the 2026 F1 Drivers' Champion?
+898421: Will Nico Hülkenberg be the 2026 F1 Drivers' Champion?
+898422: Will Gabriel Bortoleto be the 2026 F1 Drivers' Champion?
+898423: Will Pierre Gasly be the 2026 F1 Drivers' Champion?
+898424: Will Franco Colapinto be the 2026 F1 Drivers' Champion?
+898425: Will Liam Lawson be the 2026 F1 Drivers' Champion?
+898426: Will Arvid Lindblad be the 2026 F1 Drivers' Champion?
+898427: Will Alexander Albon be the 2026 F1 Drivers' Champion?
+898428: Will Carlos Sainz Jr. be the 2026 F1 Drivers' Champion?
+898429: Will Valtteri Bottas be the 2026 F1 Drivers' Champion?
+898430: Will Sergio Pérez be the 2026 F1 Drivers' Champion?
+898654: Will Flavio Bolsonaro qualify for Brazil's presidential runoff?
+898659: Will McLaren be the 2026 F1 Constructors' Champion?
+898660: Will Mercedes be the 2026 F1 Constructors' Champion?
+898661: Will Red Bull Racing be the 2026 F1 Constructors' Champion?
+898662: Will Ferrari be the 2026 F1 Constructors' Champion?
+898663: Will Williams be the 2026 F1 Constructors' Champion?
+898664: Will Racing Bulls be the 2026 F1 Constructors' Champion?
+898665: Will Aston Martin be the 2026 F1 Constructors' Champion?
+898666: Will Haas be the 2026 F1 Constructors' Champion?
+898667: Will Audi be the 2026 F1 Constructors' Champion?
+898668: Will Alpine be the 2026 F1 Constructors' Champion?
+898669: Will Cadillac be the 2026 F1 Constructors' Champion?
+898678: Will Russia capture Kostyantynivka by January 31?
+898683: Will Russia enter Druzkhivka by January 31?
+898684: Will Russia enter Dobropillia by January 31?
+898685: Israel x Hamas Ceasefire Phase II by March 31?
+898884: Will Albania qualify for the 2026 FIFA World Cup?
+902004: Will Bolivia qualify for the 2026 FIFA World Cup?
+902014: Will Bosnia and Herzegovina qualify for the 2026 FIFA World Cup?
+902015: Will Czechia qualify for the 2026 FIFA World Cup?
+902020: Will Denmark qualify for the 2026 FIFA World Cup?
+902021: Will DR Congo qualify for the 2026 FIFA World Cup?
+902022: Will Ireland qualify for the 2026 FIFA World Cup?
+902122: Will Iraq qualify for the 2026 FIFA World Cup?
+902144: Will Jamaica qualify for the 2026 FIFA World Cup?
+902145: Will Kosovo qualify for the 2026 FIFA World Cup?
+902154: Will New Caledonia qualify for the 2026 FIFA World Cup?

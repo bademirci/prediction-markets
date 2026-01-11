@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1158626: XRP Up or Down - January 12, 4:25AM-4:30AM ET
+1158627: Bitcoin Up or Down - January 12, 4:25AM-4:30AM ET
+1158628: Ethereum Up or Down - January 12, 4:25AM-4:30AM ET
+1158629: Solana Up or Down - January 12, 4:25AM-4:30AM ET
+1158630: Bitcoin Up or Down - January 12, 4:30AM-4:45AM ET
+1158631: Ethereum Up or Down - January 12, 4:30AM-4:45AM ET
+1158632: XRP Up or Down - January 12, 4:30AM-4:45AM ET
+1158633: Ethereum Up or Down - January 12, 4:30AM-4:35AM ET
+1158634: Solana Up or Down - January 12, 4:30AM-4:35AM ET
+1158635: Bitcoin Up or Down - January 12, 4:30AM-4:35AM ET
+1158636: XRP Up or Down - January 12, 4:30AM-4:35AM ET
+1158637: XRP Up or Down - January 12, 4:35AM-4:40AM ET
+1158638: Solana Up or Down - January 12, 4:35AM-4:40AM ET
+1158639: Ethereum Up or Down - January 12, 4:35AM-4:40AM ET
+1158640: Bitcoin Up or Down - January 12, 4:35AM-4:40AM ET
+1158641: Bitcoin Up or Down - January 12, 4:45AM-5:00AM ET
+1158642: Ethereum Up or Down - January 12, 4:40AM-4:45AM ET
+1158643: XRP Up or Down - January 12, 4:40AM-4:45AM ET
+1158644: XRP Up or Down - January 12, 4:45AM-5:00AM ET
+1158645: Bitcoin Up or Down - January 12, 4:40AM-4:45AM ET
+1158646: Solana Up or Down - January 12, 4:40AM-4:45AM ET
+1158647: Ethereum Up or Down - January 12, 4:45AM-5:00AM ET
+1158648: Ethereum Up or Down - January 12, 4:45AM-4:50AM ET
+1158649: Bitcoin Up or Down - January 12, 4:45AM-4:50AM ET
+1158650: Solana Up or Down - January 12, 4:45AM-4:50AM ET
+1158651: XRP Up or Down - January 12, 4:45AM-4:50AM ET
+1158652: XRP Up or Down - January 12, 4:50AM-4:55AM ET
+1158653: Solana Up or Down - January 12, 4:50AM-4:55AM ET
+1158654: Ethereum Up or Down - January 12, 4:50AM-4:55AM ET
+1158655: Bitcoin Up or Down - January 12, 4:50AM-4:55AM ET
+1158656: Bitcoin Up or Down - January 13, 5AM ET
+1158657: Will Dundee United FC win on 2026-01-24?
+1158658: Will Dundee United FC vs. St Mirren FC end in a draw?
+1158659: Will St Mirren FC win on 2026-01-24?
+1158660: Ethereum Up or Down - January 13, 5AM ET
+1158661: Solana Up or Down - January 13, 5AM ET
+1158662: Will Aberdeen FC win on 2026-01-24?
+1158663: Will Aberdeen FC vs. Livingston FC end in a draw?
+1158664: Will Livingston FC win on 2026-01-24?
+1158665: XRP Up or Down - January 13, 5AM ET
+1158666: Will Falkirk FC win on 2026-01-24?
+1158667: Will Falkirk FC vs. Hibernian FC end in a draw?
+1158668: Will Hibernian FC win on 2026-01-24?
+1158669: Will Motherwell FC win on 2026-01-24?
+1158670: Will Motherwell FC vs. Kilmarnock FC end in a draw?
+1158671: Will Kilmarnock FC win on 2026-01-24?
+1158672: Niagara Purple Eagles vs. Manhattan Jaspers: O/U 142.5
+1158673: Solana Up or Down - January 12, 4:55AM-5:00AM ET
+1158674: XRP Up or Down - January 12, 5:00AM-5:15AM ET
+1158675: Ethereum Up or Down - January 12, 5:00AM-5:15AM ET
+1158676: XRP Up or Down - January 12, 4:55AM-5:00AM ET
+1158677: Ethereum Up or Down - January 12, 4:55AM-5:00AM ET
+1158678: Bitcoin Up or Down - January 12, 4:55AM-5:00AM ET
+1158679: Bitcoin Up or Down - January 12, 5:00AM-5:15AM ET
+1158680: XRP Up or Down - January 12, 5:00AM-5:05AM ET
+1158681: Solana Up or Down - January 12, 5:00AM-5:05AM ET
+1158682: Bitcoin Up or Down - January 12, 5:00AM-5:05AM ET
+1158683: Ethereum Up or Down - January 12, 5:00AM-5:05AM ET
+1158684: Solana Up or Down - January 12, 5:05AM-5:10AM ET
+1158685: Ethereum Up or Down - January 12, 5:05AM-5:10AM ET
+1158686: Bitcoin Up or Down - January 12, 5:05AM-5:10AM ET
+1158687: XRP Up or Down - January 12, 5:05AM-5:10AM ET
+1158688: XRP Up or Down - January 12, 5:10AM-5:15AM ET
+1158689: Bitcoin Up or Down - January 12, 5:10AM-5:15AM ET
+1158690: Ethereum Up or Down - January 12, 5:10AM-5:15AM ET
+1158691: Solana Up or Down - January 12, 5:10AM-5:15AM ET
+1158692: Ethereum Up or Down - January 12, 5:15AM-5:30AM ET
+1158693: Bitcoin Up or Down - January 12, 5:15AM-5:30AM ET
+1158694: XRP Up or Down - January 12, 5:15AM-5:30AM ET
+1158755: Bitcoin Up or Down - January 12, 5:15AM-5:20AM ET
+1158756: Solana Up or Down - January 12, 5:15AM-5:20AM ET
+1158757: Ethereum Up or Down - January 12, 5:15AM-5:20AM ET
+1158758: XRP Up or Down - January 12, 5:15AM-5:20AM ET
+1158763: Series: Natus Vincere Kill Handicap (-23.5)
+1158764: Ethereum Up or Down - January 12, 5:20AM-5:25AM ET
+1158765: XRP Up or Down - January 12, 5:20AM-5:25AM ET
+1158766: Bitcoin Up or Down - January 12, 5:20AM-5:25AM ET
+1158767: Solana Up or Down - January 12, 5:20AM-5:25AM ET
+1158768: XRP Up or Down - January 12, 5:30AM-5:45AM ET
+1158769: Ethereum Up or Down - January 12, 5:30AM-5:45AM ET
+1158770: Bitcoin Up or Down - January 12, 5:30AM-5:45AM ET
+1158771: Bitcoin Up or Down - January 12, 5:25AM-5:30AM ET
+1158772: Ethereum Up or Down - January 12, 5:25AM-5:30AM ET
+1158773: XRP Up or Down - January 12, 5:25AM-5:30AM ET
+1158774: Solana Up or Down - January 12, 5:25AM-5:30AM ET
+1158775: Solana Up or Down - January 12, 5:30AM-5:35AM ET
+1158776: Bitcoin Up or Down - January 12, 5:30AM-5:35AM ET
+1158777: Ethereum Up or Down - January 12, 5:30AM-5:35AM ET
+1158778: XRP Up or Down - January 12, 5:30AM-5:35AM ET
+1158779: XRP Up or Down - January 12, 5:35AM-5:40AM ET
+1158780: Bitcoin Up or Down - January 12, 5:35AM-5:40AM ET
+1158781: Ethereum Up or Down - January 12, 5:35AM-5:40AM ET
+1158782: Solana Up or Down - January 12, 5:35AM-5:40AM ET
+1158783: Solana Up or Down - January 12, 5:40AM-5:45AM ET
+1158784: Ethereum Up or Down - January 12, 5:40AM-5:45AM ET
+1158785: XRP Up or Down - January 12, 5:40AM-5:45AM ET
+1158786: Bitcoin Up or Down - January 12, 5:40AM-5:45AM ET
+1158787: Bitcoin Up or Down - January 12, 5:45AM-6:00AM ET
+1158788: XRP Up or Down - January 12, 5:45AM-6:00AM ET
+1158789: Ethereum Up or Down - January 12, 5:45AM-6:00AM ET
+1158790: Map Handicap: SNG (-1.5)
+1158791: Bitcoin Up or Down - January 12, 5:45AM-5:50AM ET
+1158792: Solana Up or Down - January 12, 5:45AM-5:50AM ET
+1158793: XRP Up or Down - January 12, 5:45AM-5:50AM ET
+1158794: Ethereum Up or Down - January 12, 5:45AM-5:50AM ET
+1158795: Game Handicap: RE (-1.5)
+1158796: Solana Up or Down - January 12, 5:50AM-5:55AM ET
+1158797: Bitcoin Up or Down - January 12, 5:50AM-5:55AM ET
+1158798: Ethereum Up or Down - January 12, 5:50AM-5:55AM ET
+1158799: XRP Up or Down - January 12, 5:50AM-5:55AM ET
+1158800: Bitcoin Up or Down - January 13, 6AM ET
+1158801: Will the highest temperature in London be 7°C or below on January 13?
+1158802: Will the highest temperature in London be 8°C on January 13?
+1158803: Will the highest temperature in London be 9°C on January 13?
+1158804: Will the highest temperature in London be 10°C on January 13?
+1158805: Will the highest temperature in London be 11°C on January 13?
+1158806: Will the highest temperature in London be 12°C on January 13?
+1158807: Will the highest temperature in London be 13°C or higher on January 13?
+1158808: Ethereum Up or Down - January 13, 6AM ET
+1158809: ASB Classic: Adrian Mannarino vs Eliot Spizzirri
+1158810: Hobart International: Renata Zarazua vs Hailey Baptiste
+1158811: Spread: CA Rosario Central (-1.5)
+1158812: Solana Up or Down - January 13, 6AM ET
+1158813: CA Rosario Central vs. CA Belgrano: O/U 1.5
+1158814: CA Rosario Central vs. CA Belgrano: O/U 2.5
+1158815: CA Rosario Central vs. CA Belgrano: O/U 3.5
+1158816: CA Rosario Central vs. CA Belgrano: O/U 4.5
+1158817: CA Rosario Central vs. CA Belgrano: Both Teams to Score
+1158818: Hobart International: Oksana Selekhmeteva vs Magda Linette
+1158819: XRP Up or Down - January 13, 6AM ET
+1158820: Will the highest temperature in Buenos Aires be 31°C or below on January 13?
+1158821: Will the highest temperature in Buenos Aires be 32°C on January 13?
+1158822: Will the highest temperature in Buenos Aires be 33°C on January 13?
+1158823: Will the highest temperature in Buenos Aires be 34°C on January 13?
+1158824: Will the highest temperature in Buenos Aires be 35°C on January 13?
+1158825: Will the highest temperature in Buenos Aires be 36°C on January 13?
+1158826: Will the highest temperature in Buenos Aires be 37°C or higher on January 13?
+1158827: Adelaide International, Qualification: Thiago Agustin Tirante vs Andrea Vavassori
+1158828: Spread: Racing Club (-1.5)
+1158829: Gimnasia y Esgrima de La Plata vs. Racing Club: O/U 1.5
+1158830: Gimnasia y Esgrima de La Plata vs. Racing Club: O/U 2.5
+1158831: Hobart International: Anna Bondar vs Ella Seidel
+1158832: Gimnasia y Esgrima de La Plata vs. Racing Club: O/U 3.5
+1158833: Gimnasia y Esgrima de La Plata vs. Racing Club: O/U 4.5
+1158834: Gimnasia y Esgrima de La Plata vs. Racing Club: Both Teams to Score
+1158835: Adelaide International, Qualification: Adam Walton vs Quentin Halys
+1158836: Hobart International: Ayano Shimizu vs Elisabetta Cocciaretto
+1158837: Spread: CA River Plate (-1.5)
+1158838: CA Barracas Central vs. CA River Plate: O/U 1.5
+1158839: CA Barracas Central vs. CA River Plate: O/U 2.5
+1158840: CA Barracas Central vs. CA River Plate: O/U 3.5
+1158841: CA Barracas Central vs. CA River Plate: O/U 4.5
+1158842: CA Barracas Central vs. CA River Plate: Both Teams to Score
+1158843: ASB Classic: Emilio Nava vs Sebastian Baez
+1158844: Hobart International: Katie Volynets vs Ann Li
+1158845: ASB Classic: Cameron Norrie vs Hugo Gaston
+1158846: Hobart International: Caty McNally vs Solana Sierra
+1158847: ASB Classic: Hamad Medjedovic vs Aleksandar Kovacevic
+1158848: Adelaide International: Paula Badosa vs Marie Bouzkova
+1158849: Adelaide International: Jaqueline Cristian vs Ekaterina Alexandrova
+1158850: Adelaide International: Anna Kalinskaya vs Gabriela Ruse
+1158851: Adelaide International: Diana Shnaider vs Leylah Fernandez
+1158852: Will the highest temperature in Seoul be -5°C or below on January 13?
+1158853: Will the highest temperature in Seoul be -4°C on January 13?
+1158854: Game Handicap: WB (-1.5)
+1158855: Will the highest temperature in Seoul be -3°C on January 13?
+1158856: Will the highest temperature in Seoul be -2°C on January 13?
+1158857: Will the highest temperature in Seoul be -1°C on January 13?
+1158858: Will the highest temperature in Seoul be 0°C on January 13?
+1158859: Will the highest temperature in Seoul be 1°C or higher on January 13?
+1158860: Adelaide International: Sorana Cirstea vs Dayana Yastremska
+1158861: Adelaide International: Yulia Putintseva vs Dalma Galfi
+1158862: Adelaide International: Kimberly Birrell vs Anastasia Potapova
+1158863: Adelaide International: Jelena Ostapenko vs Tereza Valentova
+1158864: Will the highest temperature in Toronto be 0°C or below on January 13?
+1158865: Will the highest temperature in Toronto be 1°C on January 13?
+1158866: Will the highest temperature in Toronto be 2°C on January 13?
+1158867: Will the highest temperature in Toronto be 3°C on January 13?
+1158868: Will the highest temperature in Toronto be 4°C on January 13?
+1158869: Will the highest temperature in Toronto be 5°C on January 13?
+1158870: Will the highest temperature in Toronto be 6°C or higher on January 13?
+1158871: Will the highest temperature in Seattle be 47°F or below on January 13?
+1158872: Will the highest temperature in Seattle be between 48-49°F on January 13?
+1158873: Will the highest temperature in Seattle be between 50-51°F on January 13?
+1158874: Will the highest temperature in Seattle be between 52-53°F on January 13?
+1158875: Will the highest temperature in Seattle be between 54-55°F on January 13?
+1158876: Will the highest temperature in Seattle be between 56-57°F on January 13?
+1158877: Will the highest temperature in Seattle be 58°F or higher on January 13?
+1158878: Will the highest temperature in New York City be 41°F or below on January 13?
+1158879: Will the highest temperature in New York City be between 42-43°F on January 13?
+1158880: Will the highest temperature in New York City be between 44-45°F on January 13?
+1158881: Will the highest temperature in New York City be between 46-47°F on January 13?
+1158882: Will the highest temperature in New York City be between 48-49°F on January 13?
+1158883: Will the highest temperature in New York City be between 50-51°F on January 13?
+1158884: Will the highest temperature in New York City be 52°F or higher on January 13?
+1158885: Will the highest temperature in Dallas be 63°F or below on January 13?
+1158886: Will the highest temperature in Dallas be between 64-65°F on January 13?
+1158887: Will the highest temperature in Dallas be between 66-67°F on January 13?
+1158888: Will the highest temperature in Dallas be between 68-69°F on January 13?
+1158889: Will the highest temperature in Dallas be between 70-71°F on January 13?
+1158890: Will the highest temperature in Dallas be between 72-73°F on January 13?
+1158891: Will the highest temperature in Dallas be 74°F or higher on January 13?
+1158892: Will the highest temperature in Atlanta be 55°F or below on January 13?
+1158893: Will the highest temperature in Atlanta be between 56-57°F on January 13?
+1158894: Will the highest temperature in Atlanta be between 58-59°F on January 13?
+1158895: Will the highest temperature in Atlanta be between 60-61°F on January 13?
+1158896: Will the highest temperature in Atlanta be between 62-63°F on January 13?
+1158897: Will the highest temperature in Atlanta be between 64-65°F on January 13?
+1158898: Will the highest temperature in Atlanta be 66°F or higher on January 13?
+1158899: Ethereum Up or Down - January 12, 5:55AM-6:00AM ET
+1158900: XRP Up or Down - January 12, 6:00AM-6:15AM ET
+1158901: Ethereum Up or Down - January 12, 6:00AM-6:15AM ET
+1158902: Solana Up or Down - January 12, 5:55AM-6:00AM ET
+1158903: XRP Up or Down - January 12, 5:55AM-6:00AM ET
+1158904: Bitcoin Up or Down - January 12, 6:00AM-6:15AM ET
+1158905: Bitcoin Up or Down - January 12, 5:55AM-6:00AM ET
+1158906: Ethereum Up or Down - January 12, 6:00AM-6:05AM ET
+1158907: Bitcoin Up or Down - January 12, 6:00AM-6:05AM ET
+1158908: XRP Up or Down - January 12, 6:00AM-6:05AM ET
+1158909: Solana Up or Down - January 12, 6:00AM-6:05AM ET
+1158910: Heat vs. Thunder: O/U 231.5
+1158911: Bitcoin Up or Down - January 12, 6:05AM-6:10AM ET
+1158912: Solana Up or Down - January 12, 6:05AM-6:10AM ET
+1158913: Ethereum Up or Down - January 12, 6:05AM-6:10AM ET
+1158914: XRP Up or Down - January 12, 6:05AM-6:10AM ET
+1158915: Ethereum Up or Down - January 12, 6:15AM-6:30AM ET
+1158916: XRP Up or Down - January 12, 6:15AM-6:30AM ET
+1158917: Ethereum Up or Down - January 12, 6:10AM-6:15AM ET
+1158918: XRP Up or Down - January 12, 6:10AM-6:15AM ET
+1158919: Solana Up or Down - January 12, 6:10AM-6:15AM ET
+1158920: Bitcoin Up or Down - January 12, 6:10AM-6:15AM ET
+1158921: Bitcoin Up or Down - January 12, 6:15AM-6:30AM ET
+1158982: Solana Up or Down - January 12, 6:15AM-6:20AM ET
+1158983: Ethereum Up or Down - January 12, 6:15AM-6:20AM ET
+1158984: Bitcoin Up or Down - January 12, 6:15AM-6:20AM ET
+1158985: XRP Up or Down - January 12, 6:15AM-6:20AM ET
+1158990: Bitcoin Up or Down - January 12, 6:20AM-6:25AM ET
+1158991: Ethereum Up or Down - January 12, 6:20AM-6:25AM ET
+1158992: XRP Up or Down - January 12, 6:20AM-6:25AM ET
+1158993: Solana Up or Down - January 12, 6:20AM-6:25AM ET
+1158994: XRP Up or Down - January 12, 6:30AM-6:45AM ET
+1158995: Ethereum Up or Down - January 12, 6:30AM-6:45AM ET
+1158996: XRP Up or Down - January 12, 6:25AM-6:30AM ET
+1158997: Bitcoin Up or Down - January 12, 6:25AM-6:30AM ET
+1158998: Solana Up or Down - January 12, 6:25AM-6:30AM ET
+1158999: Bitcoin Up or Down - January 12, 6:30AM-6:45AM ET
+1159000: Ethereum Up or Down - January 12, 6:25AM-6:30AM ET
+1159001: Solana Up or Down - January 12, 6:30AM-6:35AM ET
+1159002: Ethereum Up or Down - January 12, 6:30AM-6:35AM ET
+1159003: Bitcoin Up or Down - January 12, 6:30AM-6:35AM ET
+1159004: XRP Up or Down - January 12, 6:30AM-6:35AM ET
+1159005: Solana Up or Down - January 12, 6:35AM-6:40AM ET
+1159006: XRP Up or Down - January 12, 6:35AM-6:40AM ET
+1159007: Ethereum Up or Down - January 12, 6:35AM-6:40AM ET
+1159008: Bitcoin Up or Down - January 12, 6:35AM-6:40AM ET
+1159009: Solana Up or Down - January 12, 6:40AM-6:45AM ET
+1159010: Ethereum Up or Down - January 12, 6:40AM-6:45AM ET
+1159011: Bitcoin Up or Down - January 12, 6:40AM-6:45AM ET
+1159012: XRP Up or Down - January 12, 6:40AM-6:45AM ET
+1159013: Bitcoin Up or Down - January 12, 6:45AM-7:00AM ET
+1159014: Ethereum Up or Down - January 12, 6:45AM-7:00AM ET
+1159015: XRP Up or Down - January 12, 6:45AM-7:00AM ET
+1159016: Series BetBoom Team Rounds Handicap (-4.5)
+1159017: Bitcoin Up or Down - January 12, 6:45AM-6:50AM ET
+1159018: XRP Up or Down - January 12, 6:45AM-6:50AM ET
+1159019: Solana Up or Down - January 12, 6:45AM-6:50AM ET
+1159020: Ethereum Up or Down - January 12, 6:45AM-6:50AM ET
+1159021: Pigeons to win 1 maps?
+1159022: Pigeons to win 2 maps?
+1159023: Bitcoin Up or Down - January 12, 6:50AM-6:55AM ET
+1159024: Solana Up or Down - January 12, 6:50AM-6:55AM ET
+1159025: XRP Up or Down - January 12, 6:50AM-6:55AM ET
+1159026: Ethereum Up or Down - January 12, 6:50AM-6:55AM ET
+1159027: Bitcoin Up or Down - January 13, 7AM ET
+1159028: Ethereum Up or Down - January 13, 7AM ET
+1159029: Solana Up or Down - January 13, 7AM ET
+1159030: XRP Up or Down - January 13, 7AM ET
+1159031: Ostapenko vs. Valentova: Match O/U 21.5
+1159032: Set 1 Winner: Ostapenko vs Valentova
+1159033: Ostapenko vs. Valentova: Set 1 Games O/U 8.5
+1159034: Ostapenko vs. Valentova: Total Sets O/U 2.5
+1159035: Ostapenko vs. Valentova: Match O/U 22.5
+1159036: Ostapenko vs. Valentova: Set 1 Games O/U 9.5
+1159037: Ostapenko vs. Valentova: Match O/U 23.5
+1159038: Ostapenko vs. Valentova: Set 1 Games O/U 10.5
+1159039: Birrell vs. Potapova: Match O/U 21.5
+1159040: Birrell vs. Potapova: Total Sets O/U 2.5
+1159041: Set 1 Winner: Birrell vs Potapova
+1159042: Birrell vs. Potapova: Set 1 Games O/U 8.5
+1159043: Birrell vs. Potapova: Match O/U 22.5
+1159044: Birrell vs. Potapova: Match O/U 23.5
+1159045: Birrell vs. Potapova: Set 1 Games O/U 9.5
+1159046: Birrell vs. Potapova: Set 1 Games O/U 10.5
+1159047: Shnaider vs. Fernandez: Set 1 Games O/U 8.5
+1159048: Shnaider vs. Fernandez: Total Sets O/U 2.5
+1159049: Set 1 Winner: Shnaider vs Fernandez
+1159050: Shnaider vs. Fernandez: Match O/U 21.5
+1159051: Shnaider vs. Fernandez: Set 1 Games O/U 9.5
+1159052: Shnaider vs. Fernandez: Set 1 Games O/U 10.5
+1159053: Shnaider vs. Fernandez: Match O/U 22.5
+1159054: Shnaider vs. Fernandez: Match O/U 23.5
+1159055: Portsmouth FC vs. Southampton FC: O/U 1.5
+1159056: Portsmouth FC vs. Southampton FC: O/U 2.5
+1159057: Portsmouth FC vs. Southampton FC: O/U 3.5
+1159058: Portsmouth FC vs. Southampton FC: O/U 4.5
+1159059: Portsmouth FC vs. Southampton FC: Both Teams to Score
+1159060: Putintseva vs. Galfi: Total Sets O/U 2.5
+1159061: Putintseva vs. Galfi: Set 1 Games O/U 8.5
+1159062: Set 1 Winner: Putintseva vs Galfi
+1159063: Putintseva vs. Galfi: Match O/U 21.5
+1159064: Putintseva vs. Galfi: Set 1 Games O/U 9.5
+1159065: Putintseva vs. Galfi: Match O/U 22.5
+1159066: Putintseva vs. Galfi: Match O/U 23.5
+1159067: Putintseva vs. Galfi: Set 1 Games O/U 10.5
+1159068: Birmingham City FC vs. Stoke City FC: O/U 1.5
+1159069: Birmingham City FC vs. Stoke City FC: O/U 2.5
+1159070: Birmingham City FC vs. Stoke City FC: O/U 3.5
+1159071: Birmingham City FC vs. Stoke City FC: O/U 4.5
+1159072: Birmingham City FC vs. Stoke City FC: Both Teams to Score
+1159073: Cirstea vs. Yastremska: Total Sets O/U 2.5
+1159074: Set 1 Winner: Cirstea vs Yastremska
+1159075: Cirstea vs. Yastremska: Match O/U 21.5
+1159076: Cirstea vs. Yastremska: Set 1 Games O/U 8.5
+1159077: Cirstea vs. Yastremska: Match O/U 22.5
+1159078: Cirstea vs. Yastremska: Match O/U 23.5
+1159079: Cirstea vs. Yastremska: Set 1 Games O/U 9.5
+1159080: Cirstea vs. Yastremska: Set 1 Games O/U 10.5
+1159081: Hull City AFC vs. Swansea City AFC: O/U 1.5
+1159082: Hull City AFC vs. Swansea City AFC: O/U 2.5
+1159083: Hull City AFC vs. Swansea City AFC: O/U 3.5
+1159084: Hull City AFC vs. Swansea City AFC: O/U 4.5
+1159085: Selekhmeteva vs. Linette: Total Sets O/U 2.5
+1159086: Selekhmeteva vs. Linette: Set 1 Games O/U 8.5
+1159087: Set 1 Winner: Selekhmeteva vs Linette
+1159088: Selekhmeteva vs. Linette: Match O/U 21.5
+1159089: Hull City AFC vs. Swansea City AFC: Both Teams to Score
+1159090: Selekhmeteva vs. Linette: Set 1 Games O/U 9.5
+1159091: Selekhmeteva vs. Linette: Match O/U 22.5
+1159092: Selekhmeteva vs. Linette: Set 1 Games O/U 10.5
+1159093: Selekhmeteva vs. Linette: Match O/U 23.5
+1159094: Set Handicap: Linette (-1.5) vs Selekhmeteva (+1.5)
+1159095: Blackburn Rovers FC vs. Watford FC: O/U 1.5
+1159096: Blackburn Rovers FC vs. Watford FC: O/U 2.5
+1159097: Blackburn Rovers FC vs. Watford FC: O/U 3.5
+1159098: Blackburn Rovers FC vs. Watford FC: O/U 4.5
+1159099: Blackburn Rovers FC vs. Watford FC: Both Teams to Score
+1159100: Bondar vs. Seidel: Match O/U 21.5
+1159101: Set 1 Winner: Bondar vs Seidel
+1159102: Bondar vs. Seidel: Total Sets O/U 2.5
+1159103: Bondar vs. Seidel: Set 1 Games O/U 8.5
+1159104: Bondar vs. Seidel: Match O/U 22.5
+1159105: Bondar vs. Seidel: Match O/U 23.5
+1159106: Bondar vs. Seidel: Set 1 Games O/U 9.5
+1159107: Bondar vs. Seidel: Set 1 Games O/U 10.5
+1159108: Set Handicap: Seidel (-1.5) vs Bondar (+1.5)
+1159109: Medjedovic vs. Kovacevic: Total Sets O/U 2.5
+1159110: Medjedovic vs. Kovacevic: Set 1 Games O/U 8.5
+1159111: Medjedovic vs. Kovacevic: Match O/U 21.5
+1159112: Set 1 Winner: Medjedovic vs Kovacevic
+1159113: Medjedovic vs. Kovacevic: Set 1 Games O/U 9.5
+1159114: Medjedovic vs. Kovacevic: Set 1 Games O/U 10.5
+1159115: Medjedovic vs. Kovacevic: Match O/U 22.5
+1159116: Medjedovic vs. Kovacevic: Match O/U 23.5
+1159117: Queens Park Rangers FC vs. Wrexham AFC: O/U 1.5
+1159118: Queens Park Rangers FC vs. Wrexham AFC: O/U 2.5
+1159119: Queens Park Rangers FC vs. Wrexham AFC: O/U 3.5
+1159120: Queens Park Rangers FC vs. Wrexham AFC: O/U 4.5
+1159121: Queens Park Rangers FC vs. Wrexham AFC: Both Teams to Score
+1159122: Bristol City FC vs. Sheffield Wednesday FC: O/U 1.5
+1159123: Bristol City FC vs. Sheffield Wednesday FC: O/U 2.5
+1159124: Bristol City FC vs. Sheffield Wednesday FC: O/U 3.5
+1159125: Bristol City FC vs. Sheffield Wednesday FC: O/U 4.5
+1159126: Bristol City FC vs. Sheffield Wednesday FC: Both Teams to Score
+1159127: Set Handicap: Medjedovic (-1.5) vs Kovacevic (+1.5)
+1159128: Sheffield United FC vs. Ipswich Town FC: O/U 1.5
+1159129: Nava vs. Baez: Total Sets O/U 2.5
+1159130: Nava vs. Baez: Set 1 Games O/U 8.5
+1159131: Nava vs. Baez: Match O/U 21.5
+1159132: Set 1 Winner: Nava vs Baez
+1159133: Sheffield United FC vs. Ipswich Town FC: O/U 2.5
+1159134: Nava vs. Baez: Set 1 Games O/U 9.5
+1159135: Nava vs. Baez: Match O/U 22.5
+1159136: Nava vs. Baez: Set 1 Games O/U 10.5
+1159137: Nava vs. Baez: Match O/U 23.5
+1159138: Sheffield United FC vs. Ipswich Town FC: O/U 3.5
+1159139: Sheffield United FC vs. Ipswich Town FC: O/U 4.5
+1159140: Set Handicap: Nava (-1.5) vs Baez (+1.5)
+1159141: Sheffield United FC vs. Ipswich Town FC: Both Teams to Score
+1159142: Norrie vs. Gaston: Set 1 Games O/U 8.5
+1159143: Norrie vs. Gaston: Match O/U 21.5
+1159144: Set 1 Winner: Norrie vs Gaston
+1159145: Norrie vs. Gaston: Total Sets O/U 2.5
+1159146: Norrie vs. Gaston: Set 1 Games O/U 9.5
+1159147: Norrie vs. Gaston: Match O/U 22.5
+1159148: Norrie vs. Gaston: Set 1 Games O/U 10.5
+1159149: Norrie vs. Gaston: Match O/U 23.5
+1159150: Set Handicap: Norrie (-1.5) vs Gaston (+1.5)
+1159151: Cristian vs. Alexandrova: Set 1 Games O/U 8.5
+1159152: Cristian vs. Alexandrova: Match O/U 21.5
+1159153: Cristian vs. Alexandrova: Total Sets O/U 2.5
+1159154: Set 1 Winner: Cristian vs Alexandrova
+1159155: Cristian vs. Alexandrova: Set 1 Games O/U 9.5
+1159156: Cristian vs. Alexandrova: Match O/U 22.5
+1159157: Cristian vs. Alexandrova: Set 1 Games O/U 10.5
+1159158: Cristian vs. Alexandrova: Match O/U 23.5
+1159159: Leicester City FC vs. Oxford United FC: O/U 1.5
+1159160: Leicester City FC vs. Oxford United FC: O/U 2.5
+1159161: Leicester City FC vs. Oxford United FC: O/U 3.5
+1159162: Leicester City FC vs. Oxford United FC: O/U 4.5
+1159163: Leicester City FC vs. Oxford United FC: Both Teams to Score
+1159164: Set Handicap: Alexandrova (-1.5) vs Cristian (+1.5)
+1159165: McNally vs. Sierra: Total Sets O/U 2.5
+1159166: Set 1 Winner: McNally vs Sierra
+1159167: McNally vs. Sierra: Set 1 Games O/U 8.5
+1159168: McNally vs. Sierra: Match O/U 21.5
+1159169: Millwall FC vs. Charlton Athletic FC: O/U 1.5
+1159170: McNally vs. Sierra: Match O/U 22.5
+1159171: McNally vs. Sierra: Set 1 Games O/U 9.5
+1159172: Millwall FC vs. Charlton Athletic FC: O/U 2.5
+1159173: McNally vs. Sierra: Match O/U 23.5
+1159174: McNally vs. Sierra: Set 1 Games O/U 10.5
+1159175: Millwall FC vs. Charlton Athletic FC: O/U 3.5
+1159176: Millwall FC vs. Charlton Athletic FC: O/U 4.5
+1159177: Millwall FC vs. Charlton Athletic FC: Both Teams to Score
+1159178: Set Handicap: McNally (-1.5) vs Sierra (+1.5)
+1159179: Volynets vs. Li: Set 1 Games O/U 8.5
+1159180: Set 1 Winner: Volynets vs Li
+1159181: Volynets vs. Li: Match O/U 21.5
+1159182: Volynets vs. Li: Total Sets O/U 2.5
+1159183: Volynets vs. Li: Set 1 Games O/U 9.5
+1159184: Volynets vs. Li: Match O/U 22.5
+1159185: Volynets vs. Li: Set 1 Games O/U 10.5
+1159186: Volynets vs. Li: Match O/U 23.5
+1159187: Middlesbrough FC vs. Preston North End FC: O/U 1.5
+1159188: Middlesbrough FC vs. Preston North End FC: O/U 2.5
+1159189: Middlesbrough FC vs. Preston North End FC: O/U 3.5
+1159190: Middlesbrough FC vs. Preston North End FC: O/U 4.5
+1159191: Middlesbrough FC vs. Preston North End FC: Both Teams to Score
+1159192: Set Handicap: Li (-1.5) vs Volynets (+1.5)
+1159193: Badosa vs. Bouzkova: Total Sets O/U 2.5
+1159194: Badosa vs. Bouzkova: Match O/U 21.5
+1159195: Badosa vs. Bouzkova: Set 1 Games O/U 8.5
+1159196: Set 1 Winner: Badosa vs Bouzkova
+1159197: Badosa vs. Bouzkova: Match O/U 22.5
+1159198: Badosa vs. Bouzkova: Match O/U 23.5
+1159199: Badosa vs. Bouzkova: Set 1 Games O/U 9.5
+1159200: Badosa vs. Bouzkova: Set 1 Games O/U 10.5
+1159201: Set Handicap: Badosa (-1.5) vs Bouzkova (+1.5)
+1159202: Tirante vs. Vavassori: Total Sets O/U 2.5
+1159203: Tirante vs. Vavassori: Set 1 Games O/U 8.5
+1159204: Tirante vs. Vavassori: Match O/U 21.5
+1159205: Set 1 Winner: Tirante vs Vavassori
+1159206: Tirante vs. Vavassori: Set 1 Games O/U 9.5
+1159207: Tirante vs. Vavassori: Match O/U 22.5
+1159208: Tirante vs. Vavassori: Set 1 Games O/U 10.5
+1159209: Tirante vs. Vavassori: Match O/U 23.5
+1159210: Kalinskaya vs. Ruse: Set 1 Games O/U 8.5
+1159211: Kalinskaya vs. Ruse: Match O/U 21.5
+1159212: Kalinskaya vs. Ruse: Total Sets O/U 2.5
+1159213: Set 1 Winner: Kalinskaya vs Ruse
+1159214: Kalinskaya vs. Ruse: Set 1 Games O/U 9.5
+1159215: Kalinskaya vs. Ruse: Match O/U 22.5
+1159216: Kalinskaya vs. Ruse: Set 1 Games O/U 10.5
+1159217: Kalinskaya vs. Ruse: Match O/U 23.5
+1159218: Set Handicap: Kalinskaya (-1.5) vs Ruse (+1.5)
+1159219: Walton vs. Halys: Total Sets O/U 2.5
+1159220: Walton vs. Halys: Set 1 Games O/U 8.5
+1159221: Set 1 Winner: Walton vs Halys
+1159222: Walton vs. Halys: Match O/U 21.5
+1159223: Walton vs. Halys: Set 1 Games O/U 9.5
+1159224: Walton vs. Halys: Match O/U 22.5
+1159240: Zarazua vs. Baptiste: Set 1 Games O/U 9.5
+1159241: Zarazua vs. Baptiste: Set 1 Games O/U 10.5
+1159242: Zarazua vs. Baptiste: Match O/U 22.5
+1159243: Zarazua vs. Baptiste: Match O/U 23.5
+1159244: Set Handicap: Zarazua (-1.5) vs Baptiste (+1.5)
+1159245: Mannarino vs. Spizzirri: Total Sets O/U 2.5
+1159246: Mannarino vs. Spizzirri: Match O/U 21.5
+1159247: Set 1 Winner: Mannarino vs Spizzirri
+1159248: Mannarino vs. Spizzirri: Set 1 Games O/U 8.5
+1159249: Mannarino vs. Spizzirri: Match O/U 22.5
+1159250: Mannarino vs. Spizzirri: Match O/U 23.5
+1159251: Mannarino vs. Spizzirri: Set 1 Games O/U 9.5
+1159252: Mannarino vs. Spizzirri: Set 1 Games O/U 10.5
+1159253: Set Handicap: Spizzirri (-1.5) vs Mannarino (+1.5)
+1159254: Ethereum Up or Down - January 12, 6:55AM-7:00AM ET
+1159255: Solana Up or Down - January 12, 6:55AM-7:00AM ET
+1159256: Bitcoin Up or Down - January 12, 6:55AM-7:00AM ET
+1159257: XRP Up or Down - January 12, 6:55AM-7:00AM ET
+1159258: Ethereum Up or Down - January 12, 7:00AM-7:15AM ET
+1159259: XRP Up or Down - January 12, 7:00AM-7:15AM ET
+1159260: Bitcoin Up or Down - January 12, 7:00AM-7:15AM ET
+1159261: Solana Up or Down - January 12, 7:00AM-7:05AM ET
+1159262: Bitcoin Up or Down - January 12, 7:00AM-7:05AM ET
+1159263: Ethereum Up or Down - January 12, 7:00AM-7:05AM ET
+1159264: XRP Up or Down - January 12, 7:00AM-7:05AM ET
+1159265: 76ers vs. Raptors: O/U 221.5
+1159266: Knicks vs. Trail Blazers: 1H O/U 118.5
+1159267: Ethereum Up or Down - January 12, 7:05AM-7:10AM ET
+1159268: Solana Up or Down - January 12, 7:05AM-7:10AM ET

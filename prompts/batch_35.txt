@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1138358: Juventus FC vs. Sport Lisboa e Benfica: Both Teams to Score
+1138359: Spread: Atalanta BC (-1.5)
+1138360: Atalanta BC vs. Athletic Club: O/U 1.5
+1138361: Atalanta BC vs. Athletic Club: O/U 2.5
+1138362: Atalanta BC vs. Athletic Club: O/U 3.5
+1138363: Atalanta BC vs. Athletic Club: O/U 4.5
+1138364: Atalanta BC vs. Athletic Club: Both Teams to Score
+1138365: Spread: Newcastle United FC (-1.5)
+1138366: Newcastle United FC vs. PSV: O/U 1.5
+1138367: Newcastle United FC vs. PSV: O/U 2.5
+1138368: Newcastle United FC vs. PSV: O/U 3.5
+1138369: Newcastle United FC vs. PSV: O/U 4.5
+1138370: Newcastle United FC vs. PSV: Both Teams to Score
+1138371: Spread: FC Barcelona (-1.5)
+1138372: SK Slavia Praha vs. FC Barcelona: O/U 1.5
+1138373: SK Slavia Praha vs. FC Barcelona: O/U 2.5
+1138374: SK Slavia Praha vs. FC Barcelona: O/U 3.5
+1138375: SK Slavia Praha vs. FC Barcelona: O/U 4.5
+1138376: SK Slavia Praha vs. FC Barcelona: Both Teams to Score
+1138377: Spread: Liverpool FC (-1.5)
+1138378: Olympique de Marseille vs. Liverpool FC: O/U 1.5
+1138379: Olympique de Marseille vs. Liverpool FC: O/U 2.5
+1138380: Olympique de Marseille vs. Liverpool FC: O/U 3.5
+1138381: Olympique de Marseille vs. Liverpool FC: O/U 4.5
+1138382: Olympique de Marseille vs. Liverpool FC: Both Teams to Score
+1138587: Will Fenerbahçe SK win on 2026-01-22?
+1138588: Will Fenerbahçe SK vs. Aston Villa FC end in a draw?
+1138589: Will Aston Villa FC win on 2026-01-22?
+1138590: Will Bologna FC 1909 win on 2026-01-22?
+1138591: Will Bologna FC 1909 vs. Celtic FC end in a draw?
+1138592: Will Celtic FC win on 2026-01-22?
+1138593: Will SK Brann win on 2026-01-22?
+1138594: Will SK Brann vs. FC Midtjylland end in a draw?
+1138595: Will FC Midtjylland win on 2026-01-22?
+1138596: Will FC Viktoria Plzeň win on 2026-01-22?
+1138597: Will FC Viktoria Plzeň vs. FC Porto end in a draw?
+1138598: Will FC Porto win on 2026-01-22?
+1138599: Will SC Freiburg win on 2026-01-22?
+1138600: Will SC Freiburg vs. MH Maccabi Tel Aviv end in a draw?
+1138601: Will MH Maccabi Tel Aviv win on 2026-01-22?
+1138602: Will BSC Young Boys win on 2026-01-22?
+1138603: Will BSC Young Boys vs. Olympique Lyonnais end in a draw?
+1138604: Will Olympique Lyonnais win on 2026-01-22?
+1138605: Will Malmö FF win on 2026-01-22?
+1138606: Will Malmö FF vs. FK Crvena zvezda end in a draw?
+1138607: Will FK Crvena zvezda win on 2026-01-22?
+1138608: Will PAOK win on 2026-01-22?
+1138609: Will PAOK vs. Real Betis Balompié end in a draw?
+1138610: Will Real Betis Balompié win on 2026-01-22?
+1138611: Will Feyenoord Rotterdam win on 2026-01-22?
+1138612: Will Feyenoord Rotterdam vs. SK Puntigamer Sturm Graz end in a draw?
+1138613: Will SK Puntigamer Sturm Graz win on 2026-01-22?
+1138614: Will Mariah Carey have a #1 song on the Billboard Hot 100 in 2026?
+1138636: Spread: Bologna FC 1909 (-1.5)
+1138637: Bologna FC 1909 vs. Celtic FC: O/U 1.5
+1138638: Bologna FC 1909 vs. Celtic FC: O/U 2.5
+1138639: Bologna FC 1909 vs. Celtic FC: O/U 3.5
+1138640: Bologna FC 1909 vs. Celtic FC: O/U 4.5
+1138642: Bologna FC 1909 vs. Celtic FC: Both Teams to Score
+1138652: Spread: Aston Villa FC (-1.5)
+1138653: Fenerbahçe SK vs. Aston Villa FC: O/U 1.5
+1138654: Fenerbahçe SK vs. Aston Villa FC: O/U 2.5
+1138655: Fenerbahçe SK vs. Aston Villa FC: O/U 3.5
+1138656: Fenerbahçe SK vs. Aston Villa FC: O/U 4.5
+1138657: Fenerbahçe SK vs. Aston Villa FC: Both Teams to Score
+1138668: Spread: Feyenoord Rotterdam (-1.5)
+1138669: Feyenoord Rotterdam vs. SK Puntigamer Sturm Graz: O/U 1.5
+1138670: Feyenoord Rotterdam vs. SK Puntigamer Sturm Graz: O/U 2.5
+1138671: Feyenoord Rotterdam vs. SK Puntigamer Sturm Graz: O/U 3.5
+1138672: Feyenoord Rotterdam vs. SK Puntigamer Sturm Graz: O/U 4.5
+1138673: Feyenoord Rotterdam vs. SK Puntigamer Sturm Graz: Both Teams to Score
+1138679: Spread: Real Betis Balompié (-1.5)
+1138680: PAOK vs. Real Betis Balompié: O/U 1.5
+1138681: PAOK vs. Real Betis Balompié: O/U 2.5
+1138682: PAOK vs. Real Betis Balompié: O/U 3.5
+1138683: PAOK vs. Real Betis Balompié: O/U 4.5
+1138684: PAOK vs. Real Betis Balompié: Both Teams to Score
+1138685: Spread: FK Crvena zvezda (-1.5)
+1138686: Malmö FF vs. FK Crvena zvezda: O/U 1.5
+1138687: Malmö FF vs. FK Crvena zvezda: O/U 2.5
+1138688: Malmö FF vs. FK Crvena zvezda: O/U 3.5
+1138689: Malmö FF vs. FK Crvena zvezda: O/U 4.5
+1138690: Malmö FF vs. FK Crvena zvezda: Both Teams to Score
+1138691: Game Handicap: T1 (-1.5)
+1138692: DRX to win 1 games?
+1138693: DRX to win 2 games?
+1138694: T1 to win 1 games?
+1138695: T1 to win 2 games?
+1138696: Spread: Olympique Lyonnais (-1.5)
+1138697: BSC Young Boys vs. Olympique Lyonnais: O/U 1.5
+1138698: BSC Young Boys vs. Olympique Lyonnais: O/U 2.5
+1138699: BSC Young Boys vs. Olympique Lyonnais: O/U 3.5
+1138700: BSC Young Boys vs. Olympique Lyonnais: O/U 4.5
+1138701: BSC Young Boys vs. Olympique Lyonnais: Both Teams to Score
+1138702: Hanwha Life Esports to win 1 games?
+1138703: Hanwha Life Esports to win 2 games?
+1138704: Nongshim Red Force to win 1 games?
+1138705: Nongshim Red Force to win 2 games?
+1138706: Game Handicap: HLE (-1.5)
+1138707: Game Handicap: GEN (-1.5)
+1138708: KT Rolster to win 1 games?
+1138709: KT Rolster to win 2 games?
+1138710: Gen.G to win 1 games?
+1138711: Gen.G to win 2 games?
+1138712: Spread: SC Freiburg (-2.5)
+1138713: SC Freiburg vs. MH Maccabi Tel Aviv: O/U 1.5
+1138714: SC Freiburg vs. MH Maccabi Tel Aviv: O/U 2.5
+1138715: SC Freiburg vs. MH Maccabi Tel Aviv: O/U 3.5
+1138716: SC Freiburg vs. MH Maccabi Tel Aviv: O/U 4.5
+1138717: SC Freiburg vs. MH Maccabi Tel Aviv: Both Teams to Score
+1138718: HANJIN BRION to win 1 games?
+1138719: HANJIN BRION to win 2 games?
+1138720: Game Handicap: FOX (-1.5)
+1138721: BNK FEARX to win 1 games?
+1138722: BNK FEARX to win 2 games?
+1138723: T1 to win 1 games?
+1138724: T1 to win 2 games?
+1138725: Game Handicap: T1 (-1.5)
+1138726: Hanwha Life Esports to win 1 games?
+1138727: Hanwha Life Esports to win 2 games?
+1138728: Spread: FC Porto (-1.5)
+1138729: FC Viktoria Plzeň vs. FC Porto: O/U 1.5
+1138730: FC Viktoria Plzeň vs. FC Porto: O/U 2.5
+1138731: FC Viktoria Plzeň vs. FC Porto: O/U 3.5
+1138732: FC Viktoria Plzeň vs. FC Porto: O/U 4.5
+1138733: FC Viktoria Plzeň vs. FC Porto: Both Teams to Score
+1138734: DN SOOPers to win 1 games?
+1138735: DN SOOPers to win 2 games?
+1138736: Game Handicap: DK (-1.5)
+1138737: Dplus KIA to win 1 games?
+1138738: Dplus KIA to win 2 games?
+1138739: Game Handicap: FOX (-1.5)
+1138740: Nongshim Red Force to win 1 games?
+1138741: Nongshim Red Force to win 2 games?
+1138742: BNK FEARX to win 1 games?
+1138743: BNK FEARX to win 2 games?
+1138744: Spread: FC Midtjylland (-1.5)
+1138745: SK Brann vs. FC Midtjylland: O/U 1.5
+1138746: SK Brann vs. FC Midtjylland: O/U 2.5
+1138747: SK Brann vs. FC Midtjylland: O/U 3.5
+1138748: SK Brann vs. FC Midtjylland: O/U 4.5
+1138749: SK Brann vs. FC Midtjylland: Both Teams to Score
+1138750: Game Handicap: GEN (-1.5)
+1138751: DRX to win 1 games?
+1138752: DRX to win 2 games?
+1138753: Gen.G to win 1 games?
+1138754: Gen.G to win 2 games?
+1138755: Game Handicap: DK (-1.5)
+1138756: HANJIN BRION to win 1 games?
+1138757: HANJIN BRION to win 2 games?
+1138758: Dplus KIA to win 1 games?
+1138759: Dplus KIA to win 2 games?
+1138760: KT Rolster to win 1 games?
+1138761: KT Rolster to win 2 games?
+1138762: DN SOOPers to win 1 games?
+1138763: DN SOOPers to win 2 games?
+1138764: Game Handicap: KT (-1.5)
+1138765: Game Handicap: TSW (-1.5)
+1138766: Fukuoka SoftBank Hawks Gaming to win 1 games?
+1138767: Fukuoka SoftBank Hawks Gaming to win 2 games?
+1138768: Team Secret Whales to win 1 games?
+1138769: Team Secret Whales to win 2 games?
+1138770: Game Handicap: DCG (-1.5)
+1138771: Deep Cross Gaming to win 1 games?
+1138772: Deep Cross Gaming to win 2 games?
+1138773: Ground Zero Gaming to win 1 games?
+1138774: Ground Zero Gaming to win 2 games?
+1138775: Game Handicap: MVK (-1.5)
+1138776: DetonatioN FocusMe to win 1 games?
+1138777: DetonatioN FocusMe to win 2 games?
+1138778: MVK Esports to win 1 games?
+1138779: MVK Esports to win 2 games?
+1138780: Game Handicap: CFO (-1.5)
+1138781: GAM Esports to win 1 games?
+1138782: GAM Esports to win 2 games?
+1138783: CTBC Flying Oyster to win 1 games?
+1138784: CTBC Flying Oyster to win 2 games?
+1138785: Game Handicap: DCG (-1.5)
+1138786: Fukuoka SoftBank Hawks Gaming to win 1 games?
+1138787: Fukuoka SoftBank Hawks Gaming to win 2 games?
+1138788: Deep Cross Gaming to win 1 games?
+1138789: Deep Cross Gaming to win 2 games?
+1138790: Game Handicap: TSW (-1.5)
+1138791: Ground Zero Gaming to win 1 games?
+1138792: Ground Zero Gaming to win 2 games?
+1138793: Team Secret Whales to win 1 games?
+1138794: Team Secret Whales to win 2 games?
+1138795: Bilibili Gaming to win 1 games?
+1138796: Bilibili Gaming to win 2 games?
+1138797: Top Esports to win 1 games?
+1138798: Top Esports to win 2 games?
+1138799: JD Gaming to win 1 games?
+1138800: JD Gaming to win 2 games?
+1138801: Game Handicap: JDG (-1.5)
+1138802: Invictus Gaming to win 1 games?
+1138803: Invictus Gaming to win 2 games?
+1138804: Bilibili Gaming to win 1 games?
+1138805: Bilibili Gaming to win 2 games?
+1138806: Anyone's Legend to win 1 games?
+1138807: Anyone's Legend to win 2 games?
+1138808: Game Handicap: BLG (-1.5)
+1138809: Game Handicap: EDG (-1.5)
+1138810: EDward Gaming to win 1 games?
+1138811: EDward Gaming to win 2 games?
+1138812: Team WE to win 1 games?
+1138813: Team WE to win 2 games?
+1138814: LNG Esports to win 1 games?
+1138815: LNG Esports to win 2 games?
+1138816: Game Handicap: LNG (-1.5)
+1138817: Ultra Prime to win 1 games?
+1138818: Ultra Prime to win 2 games?
+1138819: Weibo Gaming to win 1 games?
+1138820: Weibo Gaming to win 2 games?
+1138821: Game Handicap: BLG (-1.5)
+1138822: Bilibili Gaming to win 1 games?
+1138823: Bilibili Gaming to win 2 games?
+1138824: Game Handicap: AL (-1.5)
+1138825: Invictus Gaming to win 1 games?
+1138826: Invictus Gaming to win 2 games?
+1138827: Anyone's Legend to win 1 games?
+1138828: Anyone's Legend to win 2 games?
+1138829: Game Handicap: LGD (-1.5)
+1138830: LGD Gaming to win 1 games?
+1138831: LGD Gaming to win 2 games?
+1138832: Ultra Prime to win 1 games?
+1138833: Ultra Prime to win 2 games?
+1138834: Top Esports to win 1 games?
+1138835: Top Esports to win 2 games?
+1138836: Game Handicap: JDG (-1.5)
+1138837: JD Gaming to win 1 games?
+1138838: JD Gaming to win 2 games?
+1138839: Invictus Gaming to win 1 games?
+1138840: Invictus Gaming to win 2 games?
+1138841: Game Handicap: IG (-1.5)
+1138842: Game Handicap: WB (-1.5)
+1138843: Weibo Gaming to win 1 games?
+1138844: Weibo Gaming to win 2 games?
+1138845: FUT Esports to win 1 maps?
+1138846: FUT Esports to win 2 maps?
+1138847: Gentle Mates to win 1 maps?
+1138848: Gentle Mates to win 2 maps?
+1138849: Karmine Corp to win 1 maps?
+1138850: Karmine Corp to win 2 maps?
+1138851: Natus Vincere to win 1 maps?
+1138852: Natus Vincere to win 2 maps?
+1138858: Series Leviatán Esports Rounds Handicap (-2.5)
+1138859: Leviatán Esports to win 1 maps?
+1138860: Leviatán Esports to win 2 maps?
+1138861: Map Handicap: 100T (-1.5)
+1138862: Total Rounds Over/Under 52.5
+1138863: Total Rounds Over/Under 53.5
+1138864: Total Rounds Over/Under 54.5
+1138865: 100 Thieves to win 1 maps?
+1138866: 100 Thieves to win 2 maps?
+1138867: Map Handicap: LEV (-1.5)
+1138868: Total Rounds Over/Under 51.5
+1138869: Total Rounds Over/Under 50.5
+1138870: Total Rounds Over/Under 49.5
+1138871: KRÜ Esports to win 1 maps?
+1138872: KRÜ Esports to win 2 maps?
+1138873: FURIA Esports to win 1 maps?
+1138874: FURIA Esports to win 2 maps?
+1138875: Map Handicap: KRÜ (-1.5)
+1138876: Series KRÜ Esports Rounds Handicap (-5.5)
+1138877: Cloud9 to win 1 maps?
+1138878: Cloud9 to win 2 maps?
+1138879: LOUD to win 1 maps?
+1138880: LOUD to win 2 maps?
+1138881: Total Rounds Over/Under 54.5
+1138882: Total Rounds Over/Under 53.5
+1138883: Series Cloud9 Rounds Handicap (-2.5)
+1138884: Map Handicap: C9 (-1.5)
+1138885: Total Rounds Over/Under 52.5
+1138886: Total Rounds Over/Under 52.5
+1138887: Total Rounds Over/Under 54.5
+1138888: Total Rounds Over/Under 53.5
+1138889: Team Envy to win 1 maps?
+1138890: Team Envy to win 2 maps?
+1138891: Evil Geniuses to win 1 maps?
+1138892: Evil Geniuses to win 2 maps?
+1138893: Series Team Envy Rounds Handicap (-2.5)
+1138894: Map Handicap: NV (-1.5)
+1138907: Masoud Pezeshkian out by March 31?
+1138908: Masoud Pezeshkian out by June 30?
+1138909: Masoud Pezeshkian out by December 31?
+1138936: Heat vs. Bulls: 1H O/U 120.5
+1139269: Will Anna Leigh Waters win the 2026 Carvana Masters Women's Singles tournament?
+1139270: Will Catherine Parenteau win the 2026 Carvana Masters Women's Singles tournament?
+1139271: Will Kaitlyn Christian win the 2026 Carvana Masters Women's Singles tournament?
+1139272: Will Lea Jansen win the 2026 Carvana Masters Women's Singles tournament?
+1139273: Will Brooke Buckner win the 2026 Carvana Masters Women's Singles tournament?
+1139274: Will Kate Fahey win the 2026 Carvana Masters Women's Singles tournament?
+1139275: Will Genie Bouchard win the 2026 Carvana Masters Women's Singles tournament?
+1139293: Will Reza Pahlavi enter Iran by January 31?
+1139302: Will Ben Johns / Gabe Tardio win the 2026 Carvana Masters Men's Doubles tournament?
+1139303: Will Federico Staksrud / Andrei Daescu win the 2026 Carvana Masters Men's Doubles tournament?
+1139304: Will Christian Alshon / Hayden Patriquin win the 2026 Carvana Masters Men's Doubles tournament?
+1139305: Will CJ Klinger / JW Johnson win the 2026 Carvana Masters Men's Doubles tournament?
+1139306: Will Eric Oncins / Dylan Frazier win the 2026 Carvana Masters Men's Doubles tournament?
+1139307: Will Matt Wright / Jaume Martinez win the 2026 Carvana Masters Men's Doubles tournament?
+1139368: Will American Airlines (AAL) beat quarterly earnings?
+1139412: Will Anna Bright / Anna Leigh Waters win the 2026 Carvana Masters Women's Doubles tournament?
+1139414: Will Lucy Kovalova / Milan Rane win the 2026 Carvana Masters Women's Doubles tournament?
+1139415: Will Jorja Johnson / Tyra Hurricane Black win the 2026 Carvana Masters Women's Doubles tournament?
+1139418: Will Rachel Rohrabacher / Catherine Parenteau win the 2026 Carvana Masters Women's Doubles tournament?
+1139420: Will Tina Pisnik / Kate Fahey win the 2026 Carvana Masters Women's Doubles tournament?
+1139422: Will Jade Kawamoto / Jackie Kawamoto win the 2026 Carvana Masters Women's Doubles tournament?
+1139533: Will Ben Johns / Anna Leigh Waters win the 2026 Carvana Masters Mixed Doubles tournament?
+1139534: Will Federico Staksrud / Catherine Parenteau win the 2026 Carvana Masters Mixed Doubles tournament?
+1139535: Will Gabe Tardio / Catherine Parenteau win the 2026 Carvana Masters Mixed Doubles tournament?
+1139536: Will Anna Bright / Hayden Patriquin win the 2026 Carvana Masters Mixed Doubles tournament?
+1139537: Will Tyra Hurricane Black / Christian Alshon win the 2026 Carvana Masters Mixed Doubles tournament?
+1139538: Will JW Johnson / Jorja Johnson win the 2026 Carvana Masters Mixed Doubles tournament?
+1139539: Will Will Howells / Rachel Rohrabacher win the 2026 Carvana Masters Mixed Doubles tournament?
+1139540: Will Lacy Schneemann / Andrei Daescu win the 2026 Carvana Masters Mixed Doubles tournament?
+1139580: Will Procter & Gamble (PG) beat quarterly earnings?
+1139585: Over $20M committed to the Trove public sale?
+1139590: US strikes Iran by January 11, 2026?
+1139591: Over $15M committed to the Trove public sale?
+1139592: Over $25M committed to the Trove public sale?
+1139593: Over $30M committed to the Trove public sale?
+1139616: Map Handicap: LK (-1.5)
+1139617: los kogutos to win 1 maps?
+1139618: los kogutos to win 2 maps?
+1139619: Universe to win 1 maps?
+1139620: Universe to win 2 maps?
+1139628: Will Player 42 win Beast Games: Season 2?
+1139629: Will Player 126 win Beast Games: Season 2?
+1139630: Will Player 952 win Beast Games: Season 2?
+1139631: Will Player 112 win Beast Games: Season 2?
+1139632: Will Player 31 win Beast Games: Season 2?
+1139633: Will Player 173 win Beast Games: Season 2?
+1139634: Will Player 152 win Beast Games: Season 2?
+1139635: Will Player 38 win Beast Games: Season 2?
+1139636: Will Player 99 win Beast Games: Season 2?
+1139637: Will Player 566 win Beast Games: Season 2?
+1139638: Will Player 191 win Beast Games: Season 2?
+1139639: Will Player 831 win Beast Games: Season 2?
+1139640: Will Player 91 win Beast Games: Season 2?
+1139641: Will Player 45 win Beast Games: Season 2?
+1139642: Will Player 195 win Beast Games: Season 2?
+1139643: Will Player 118 win Beast Games: Season 2?
+1139644: Will Player 58 win Beast Games: Season 2?
+1139645: Will Player 167 win Beast Games: Season 2?
+1139646: Will Player 172 win Beast Games: Season 2?
+1139647: Will Player 157 win Beast Games: Season 2?
+1139648: Will Player 162 win Beast Games: Season 2?
+1139649: Will Player 174 win Beast Games: Season 2?
+1139650: Will Player 148 win Beast Games: Season 2?
+1139651: Will Player 21 win Beast Games: Season 2?
+1139652: Will Player 194 win Beast Games: Season 2?
+1139710: Over $140B wagered on US sports betting in 2026?
+1139711: Over $160B wagered on US sports betting in 2026?
+1139712: Over $180B wagered on US sports betting in 2026?
+1139713: Over $200B wagered on US sports betting in 2026?
+1139906: Will Capital One (COF) beat quarterly earnings?
+1139922: Will US or Israel strike Iran by January 11, 2026?
+1139923: Will US or Israel strike Iran by January 12, 2026?
+1139942: Will US or Israel strike Iran by January 31, 2026?
+1139951: Will McCormick & Company (MKC) beat quarterly earnings?
+1140275: Will the Chicago Bears be eliminated in the Divisional Round?
+1140276: Will the Chicago Bears be eliminated in the Conference Championship Round?
+1140277: Will the Chicago Bears be eliminated in the Super Bowl?
+1140278: Will the Chicago Bears win the Super Bowl?
+1140292: Will MrBeast's next video get less than 25 million views on day 1?
+1140293: Will MrBeast's next video get between 25 and 30 million views on day 1?
+1140294: Will MrBeast's next video get between 30 and 35 million views on day 1?
+1140295: Will MrBeast's next video get between 35 and 40 million views on day 1?
+1140296: Will MrBeast's next video get between 40 and 45 million views on day 1?
+1140297: Will MrBeast's next video get between 45 and 50 million views on day 1?
+1140298: Will MrBeast's next video get between 50 and 55 million views on day 1?
+1140299: Will MrBeast's next video get 55 million or more views on day 1?
+1140308: Odds of Khamenei out by January 31 over 30% on Sunday?
+1140317: Will the San Francisco 49ers be eliminated in the Wild Card Round?
+1140318: Will the San Francisco 49ers be eliminated in the Divisional Round?
+1140319: Will the San Francisco 49ers be eliminated in the Conference Championship Round?
+1140320: Will the San Francisco 49ers be eliminated in the Super Bowl?
+1140321: Will the San Francisco 49ers win the Super Bowl?
+1140331: Will the New England Patriots be eliminated in the Wild Card Round?
+1140332: Will the New England Patriots be eliminated in the Divisional Round?
+1140333: Will the New England Patriots be eliminated in the Conference Championship Round?
+1140334: Will the New England Patriots be eliminated in the Super Bowl?
+1140335: Will the New England Patriots win the Super Bowl?
+1140337: Will the Jacksonville Jaguars be eliminated in the Wild Card Round?
+1140338: Will the Jacksonville Jaguars be eliminated in the Divisional Round?
+1140339: Will the Jacksonville Jaguars be eliminated in the Conference Championship Round?
+1140340: Will the Jacksonville Jaguars be eliminated in the Super Bowl?
+1140341: Will the Jacksonville Jaguars win the Super Bowl?
+1140343: Will the Pittsburgh Steelers be eliminated in the Wild Card Round?
+1140344: Will the Pittsburgh Steelers be eliminated in the Divisional Round?
+1140345: Will the Pittsburgh Steelers be eliminated in the Conference Championship Round?
+1140346: Will the Pittsburgh Steelers be eliminated in the Super Bowl?
+1140347: Will the Pittsburgh Steelers win the Super Bowl?
+1140356: Will the Houston Texans be eliminated in the Wild Card Round?
+1140357: Will the Houston Texans be eliminated in the Divisional Round?
+1140358: Will the Houston Texans be eliminated in the Conference Championship Round?
+1140359: Will the Houston Texans be eliminated in the Super Bowl?
+1140360: Will the Houston Texans win the Super Bowl?
+1140366: Will the Los Angeles Chargers be eliminated in the Wild Card Round?
+1140367: Will the Los Angeles Chargers be eliminated in the Divisional Round?
+1140368: Will the Los Angeles Chargers be eliminated in the Conference Championship Round?
+1140369: Will the Los Angeles Chargers be eliminated in the Super Bowl?
+1140370: Will the Los Angeles Chargers win the Super Bowl?
+1140372: Will the US embassy in Venezuela reopen by March 31?
+1140373: Will the Philadelphia Eagles be eliminated in the Wild Card Round?
+1140374: Will the Philadelphia Eagles be eliminated in the Divisional Round?
+1140375: Will the Philadelphia Eagles be eliminated in the Conference Championship Round?
+1140376: Will the Philadelphia Eagles be eliminated in the Super Bowl?
+1140377: Will the Philadelphia Eagles win the Super Bowl?
+1140382: Al Hilal Saudi Club vs. Al Fayha Saudi Club: O/U 1.5
+1140384: Al Hilal Saudi Club vs. Al Fayha Saudi Club: O/U 2.5
+1140385: Al Hilal Saudi Club vs. Al Fayha Saudi Club: O/U 3.5
+1140386: Al Hilal Saudi Club vs. Al Fayha Saudi Club: O/U 4.5
+1140387: Al Hilal Saudi Club vs. Al Fayha Saudi Club: Both Teams to Score
+1140388: Al Qadisiyah Saudi Club vs. Al Ittihad Saudi Club: O/U 1.5
+1140389: Al Qadisiyah Saudi Club vs. Al Ittihad Saudi Club: O/U 2.5
+1140390: Al Qadisiyah Saudi Club vs. Al Ittihad Saudi Club: O/U 3.5
+1140391: Al Qadisiyah Saudi Club vs. Al Ittihad Saudi Club: O/U 4.5
+1140392: Al Qadisiyah Saudi Club vs. Al Ittihad Saudi Club: Both Teams to Score
+1140393: Al Taawoun Saudi Club vs. Al Hazem SC: O/U 1.5
+1140394: Al Taawoun Saudi Club vs. Al Hazem SC: O/U 2.5
+1140395: Al Taawoun Saudi Club vs. Al Hazem SC: O/U 3.5
+1140396: Al Taawoun Saudi Club vs. Al Hazem SC: O/U 4.5
+1140397: Al Taawoun Saudi Club vs. Al Hazem SC: Both Teams to Score
+1140398: Odds of Khamenei out as Supreme Leader of Iran by January 31 over 50% by January 16?
+1140414: Will the Los Angeles Rams be eliminated in the Divisional Round?
+1140415: Will the Los Angeles Rams be eliminated in the Conference Championship Round?
+1140416: Will the Los Angeles Rams be eliminated in the Super Bowl?
+1140417: Will the Los Angeles Rams win the Super Bowl?
+1140419: Will the Seattle Seahawks be eliminated in the Divisional Round?
+1140420: Will the Seattle Seahawks be eliminated in the Conference Championship Round?
+1140421: Will the Seattle Seahawks be eliminated in the Super Bowl?
+1140422: Will the Seattle Seahawks win the Super Bowl?
+1140428: Will the Denver Broncos be eliminated in the Divisional Round?
+1140429: Will the Denver Broncos be eliminated in the Conference Championship Round?
+1140430: Will the Denver Broncos be eliminated in the Super Bowl?
+1140431: Will the Denver Broncos win the Super Bowl?
+1140637: Ackman vs. S&P - January
+1140681: Pelosi vs. S&P - January
+1140686: Will Khamenei visit Russia by March 31?
+1140687: Will Khamenei visit Russia by June 30?
+1140709: Gen.G to win 1 games?
+1140710: Gen.G to win 2 games?
+1140711: Gen.G to win 1 games?
+1140712: Gen.G to win 2 games?
+1140727: Marvin Bagley III: Points Over 10.5
+1140732: Marvin Bagley III: Rebounds Over 5.5
+1140751: Nicolas Claxton: Points Over 10.5
+1140754: Nicolas Claxton: Rebounds Over 7.5
+1140768: Nicolas Claxton: Assists Over 3.5
+1140898: Wuerzburg vs. Levicki Patrioti
+1140899: Szolnoki Olaj vs. Pallacanestro Trieste
+1140900: Manresa vs. CB Breogan Lugo
+1140901: Basket Zaragoza vs. Gran Canaria
+1140902: La Laguna Tenerife vs. Forca Lleida CE
+1140903: Burgos vs. Joventut
+1140904: Bilbao Basket vs. CB Murcia
+1140905: Valencia vs. Unicaja
+1140906: Basquet Club Andorra vs. Real Madrid
+1140907: Basquet Girona vs. Saski Baskonia
+1140908: Barcelona vs. Granada
+1140909: Pallacanestro Brescia vs. Derthona Basket
+1140910: Pallacanestro Trieste vs. Pallacanestro Cantu
+1140911: Universo Treviso Basket vs. Pallacanestro Varese
+1140912: Reyer Venezia vs. Virtus Bologna
+1140913: Pallacanestro Reggiana vs. Dinamo Sassari
+1140914: Amici Pallacanestro Udinese vs. Vanoli Basket Cremona
+1140915: Napoli Basket vs. Olimpia Milano
+1140916: Trapani vs. Aquila Basket Trento
+1140918: Cairns Taipans vs. Brisbane Bullets
+1140919: South East Melbourne Phoenix vs. Perth Wildcats
+1140920: Sydney Kings vs. Melbourne United
+1140921: Sydney Kings vs. Brisbane Bullets
+1140922: Illawarra Hawks vs. New Zealand Breakers
+1140928: Fujian Sturgeons vs. Tianjin Pioneers
+1140929: Guangzhou Loong Lions vs. Sichuan Blue Whales
+1140930: Xinjiang Flying Tigers vs. Jiangsu Dragons
+1140931: Ningbo Rockets vs. Zhejiang Lions
+1140932: Shenzhen Leopards vs. Beijing Ducks
+1140933: Shanghai Sharks vs. Shanxi Loongs
+1140934: Shandong Hi-Speed Kirin vs. Nanjing Monkey King
+1140935: Liaoning Flying Leopards vs. Guangdong Southern Tigers
+1140936: Jilin Northeast Tigers vs. Qingdao Eagles
+1140937: Zhejiang Golden Bulls vs. Beijing Royal Fighters
+1140940: BCM Gravelines Dunkerque vs. Cholet
+1140944: Nancy vs. Monaco
+1140945: ASVEL Lyon-Villeurbanne vs. Paris Basketball
+1140946: La Union vs. Quimsa
+1140947: Regatas vs. Independiente de Oliva
+1140948: Obera TC vs. Platense
+1140949: Obras vs. Gimnasia
+1140950: Atenas vs. Olimpico
+1140951: Union De Santa Fe vs. Gimnasia
+1140952: Regatas vs. Racing de Chivilcoy
+1140953: San Martin de Corientes vs. Racing de Chivilcoy
+1141135: LoL: Nongshim Esports Academy vs Dplus KIA Challengers (BO3)
+1141136: LoL: Nongshim Esports Academy vs Dplus KIA Challengers - Game 1 Winner
+1141137: LoL: Nongshim Esports Academy vs Dplus KIA Challengers - Game 2 Winner
+1141138: Games Total: O/U 2.5
+1141139: Game Handicap: NS.EA (-1.5)

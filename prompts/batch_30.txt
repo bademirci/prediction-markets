@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1119711: SS Lazio vs. Como 1907: O/U 3.5
+1119712: SS Lazio vs. Como 1907: O/U 4.5
+1119713: SS Lazio vs. Como 1907: Both Teams to Score
+1119731: US Cremonese vs. Hellas Verona FC: O/U 1.5
+1119732: US Cremonese vs. Hellas Verona FC: O/U 2.5
+1119733: US Cremonese vs. Hellas Verona FC: O/U 3.5
+1119734: US Cremonese vs. Hellas Verona FC: O/U 4.5
+1119735: US Cremonese vs. Hellas Verona FC: Both Teams to Score
+1119969: Will Elche CF win on 2026-01-19?
+1119970: Will Elche CF vs. Sevilla FC end in a draw?
+1119972: Will Sevilla FC win on 2026-01-19?
+1119973: Will Granada CF win on 2026-01-19?
+1119974: Will Granada CF vs. SD Eibar end in a draw?
+1119975: Will SD Eibar win on 2026-01-19?
+1120168: LoL: KT Rolster vs DN Freecs (BO3)
+1120169: LoL: KT Rolster vs DN Freecs - Game 1 Winner
+1120170: LoL: KT Rolster vs DN Freecs - Game 2 Winner
+1120171: Games Total: O/U 2.5
+1120172: LoL: Dplus KIA vs OKSavingsBank BRION (BO3)
+1120173: LoL: Dplus KIA vs OKSavingsBank BRION - Game 1 Winner
+1120174: LoL: Dplus KIA vs OKSavingsBank BRION - Game 2 Winner
+1120175: Games Total: O/U 2.5
+1120176: LoL: Gen.G vs DRX (BO3)
+1120177: LoL: Gen.G vs DRX - Game 1 Winner
+1120178: LoL: Gen.G vs DRX - Game 2 Winner
+1120179: Games Total: O/U 2.5
+1120180: LoL: BNK FEARX vs Nongshim Red Force (BO3)
+1120181: LoL: BNK FEARX vs Nongshim Red Force - Game 1 Winner
+1120182: LoL: BNK FEARX vs Nongshim Red Force - Game 2 Winner
+1120183: Games Total: O/U 2.5
+1120184: LoL: DN Freecs vs Dplus KIA (BO3)
+1120185: LoL: DN Freecs vs Dplus KIA - Game 1 Winner
+1120186: LoL: DN Freecs vs Dplus KIA - Game 2 Winner
+1120187: Games Total: O/U 2.5
+1120188: LoL: Hanwha Life Esports vs T1 (BO3)
+1120189: LoL: Hanwha Life Esports vs T1 - Game 1 Winner
+1120190: LoL: Hanwha Life Esports vs T1 - Game 2 Winner
+1120191: Games Total: O/U 2.5
+1120192: LoL: OKSavingsBank BRION vs BNK FEARX (BO3)
+1120193: LoL: OKSavingsBank BRION vs BNK FEARX - Game 1 Winner
+1120194: LoL: OKSavingsBank BRION vs BNK FEARX - Game 2 Winner
+1120195: Games Total: O/U 2.5
+1120196: LoL: Gen.G vs KT Rolster (BO3)
+1120197: LoL: Gen.G vs KT Rolster - Game 1 Winner
+1120198: LoL: Gen.G vs KT Rolster - Game 2 Winner
+1120199: Games Total: O/U 2.5
+1120200: LoL: Nongshim Red Force vs Hanwha Life Esports (BO3)
+1120201: LoL: Nongshim Red Force vs Hanwha Life Esports - Game 1 Winner
+1120202: LoL: Nongshim Red Force vs Hanwha Life Esports - Game 2 Winner
+1120203: Games Total: O/U 2.5
+1120204: LoL: DRX vs T1 (BO3)
+1120205: LoL: DRX vs T1 - Game 1 Winner
+1120206: LoL: DRX vs T1 - Game 2 Winner
+1120207: Games Total: O/U 2.5
+1120218: Will AS Nancy-Lorraine win on 2026-01-19?
+1120219: Will AS Nancy-Lorraine vs. En Avant Guingamp end in a draw?
+1120220: Elche CF vs. Sevilla FC: O/U 1.5
+1120221: Will En Avant Guingamp win on 2026-01-19?
+1120222: Elche CF vs. Sevilla FC: O/U 2.5
+1120223: Elche CF vs. Sevilla FC: O/U 3.5
+1120224: Elche CF vs. Sevilla FC: O/U 4.5
+1120225: Elche CF vs. Sevilla FC: Both Teams to Score
+1120394: LoL: Anyone's Legend vs Weibo Gaming (BO3)
+1120395: LoL: Anyone's Legend vs Weibo Gaming - Game 1 Winner
+1120396: LoL: Anyone's Legend vs Weibo Gaming - Game 2 Winner
+1120397: Games Total: O/U 2.5
+1120451: Valorant: Nobles vs AlQadsiah Esports (BO3)
+1120452: Valorant: Nobles vs AlQadsiah Esports - Map 1 Winner
+1120453: Valorant: Nobles vs AlQadsiah Esports - Map 2 Winner
+1120454: Games Total: O/U 2.5
+1120459: Valorant: BAAM Esports vs Vibranium Esports (BO3)
+1120460: Valorant: BAAM Esports vs Vibranium Esports - Map 1 Winner
+1120461: Valorant: BAAM Esports vs Vibranium Esports - Map 2 Winner
+1120462: Games Total: O/U 2.5
+1120463: Valorant: One More Esports vs Gamax Esports (BO3)
+1120464: Valorant: One More Esports vs Gamax Esports - Map 1 Winner
+1120465: Valorant: One More Esports vs Gamax Esports - Map 2 Winner
+1120466: Games Total: O/U 2.5
+1120467: Valorant: Team RA'AD vs GnG Amazigh (BO3)
+1120468: Valorant: Team RA'AD vs GnG Amazigh - Map 1 Winner
+1120469: Valorant: Team RA'AD vs GnG Amazigh - Map 2 Winner
+1120470: Games Total: O/U 2.5
+1120471: Valorant: RAFHA eSPORTS vs Ghools Esports (BO3)
+1120472: Valorant: RAFHA eSPORTS vs Ghools Esports - Map 1 Winner
+1120473: Valorant: RAFHA eSPORTS vs Ghools Esports - Map 2 Winner
+1120474: Games Total: O/U 2.5
+1120475: Valorant: Mayhem vs AlQadsiah Esports (BO3)
+1120476: Valorant: Mayhem vs AlQadsiah Esports - Map 1 Winner
+1120477: Valorant: Mayhem vs AlQadsiah Esports - Map 2 Winner
+1120478: Games Total: O/U 2.5
+1120479: Valorant: Stallions Esports vs yung (BO3)
+1120480: Valorant: Stallions Esports vs yung - Map 1 Winner
+1120481: Valorant: Stallions Esports vs yung - Map 2 Winner
+1120482: Games Total: O/U 2.5
+1120483: Valorant: Howlers vs Fraggerz (BO3)
+1120484: Valorant: Howlers vs Fraggerz - Map 1 Winner
+1120485: Valorant: Howlers vs Fraggerz - Map 2 Winner
+1120486: Games Total: O/U 2.5
+1120487: Valorant: VillianArc vs Nobles (BO3)
+1120488: Valorant: VillianArc vs Nobles - Map 1 Winner
+1120489: Valorant: VillianArc vs Nobles - Map 2 Winner
+1120490: Games Total: O/U 2.5
+1120491: Valorant: RAFHA eSPORTS vs GnG Amazigh (BO3)
+1120492: Valorant: RAFHA eSPORTS vs GnG Amazigh - Map 1 Winner
+1120493: Valorant: RAFHA eSPORTS vs GnG Amazigh - Map 2 Winner
+1120494: Games Total: O/U 2.5
+1120495: Valorant: Gamax Esports vs Ghools Esports (BO3)
+1120496: Valorant: Gamax Esports vs Ghools Esports - Map 1 Winner
+1120497: Valorant: Gamax Esports vs Ghools Esports - Map 2 Winner
+1120498: Games Total: O/U 2.5
+1120499: Valorant: One More Esports vs BAAM Esports (BO3)
+1120500: Valorant: One More Esports vs BAAM Esports - Map 1 Winner
+1120501: Valorant: One More Esports vs BAAM Esports - Map 2 Winner
+1120502: Games Total: O/U 2.5
+1120503: Valorant: Team RA'AD vs Vibranium Esports (BO3)
+1120504: Valorant: Team RA'AD vs Vibranium Esports - Map 1 Winner
+1120505: Valorant: Team RA'AD vs Vibranium Esports - Map 2 Winner
+1120506: Games Total: O/U 2.5
+1120860: Valorant: Erah Esport vs WIP Esports (BO3)
+1120861: Valorant: Erah Esport vs WIP Esports - Map 1 Winner
+1120862: Valorant: Erah Esport vs WIP Esports - Map 2 Winner
+1120863: Games Total: O/U 2.5
+1120865: Valorant: Mandatory vs Galions (BO3)
+1120866: Valorant: Mandatory vs Galions - Map 1 Winner
+1120867: Valorant: Mandatory vs Galions - Map 2 Winner
+1120868: Games Total: O/U 2.5
+1120872: LoL: GOAL vs Gamespace Mediterranean College Esports (BO2)
+1120877: LoL: HMBLE vs Deacoy (BO1)
+1120878: Valorant: Joblife vs Caldya Esport (BO3)
+1120879: Valorant: Joblife vs Caldya Esport - Map 1 Winner
+1120880: Valorant: Joblife vs Caldya Esport - Map 2 Winner
+1120881: Games Total: O/U 2.5
+1120882: LoL: WLGaming Esports vs Team Insidious (BO2)
+1120883: Valorant: Esprit Shōnen vs F9 EICAR (BO3)
+1120884: Valorant: Esprit Shōnen vs F9 EICAR - Map 1 Winner
+1120885: Valorant: Esprit Shōnen vs F9 EICAR - Map 2 Winner
+1120886: Games Total: O/U 2.5
+1120887: LoL: Axolotl vs EKO Esports (BO1)
+1120888: Valorant: Mandatory vs Joblife (BO3)
+1120889: Valorant: Mandatory vs Joblife - Map 1 Winner
+1120890: Valorant: Mandatory vs Joblife - Map 2 Winner
+1120891: Games Total: O/U 2.5
+1120892: LoL: Zena Esports vs GMBLERS ESPORTS (BO1)
+1120893: Valorant: Esprit Shōnen vs WIP Esports (BO3)
+1120894: Valorant: Esprit Shōnen vs WIP Esports - Map 1 Winner
+1120895: Valorant: Esprit Shōnen vs WIP Esports - Map 2 Winner
+1120896: Games Total: O/U 2.5
+1120897: LoL: Colossal Gaming vs P11 Esports (BO1)
+1120898: Valorant: Galions vs Caldya Esport (BO3)
+1120899: Valorant: Galions vs Caldya Esport - Map 1 Winner
+1120900: Valorant: Galions vs Caldya Esport - Map 2 Winner
+1120901: Games Total: O/U 2.5
+1120909: Valorant: Joblife vs Erah Esport (BO3)
+1120910: Valorant: Joblife vs Erah Esport - Map 1 Winner
+1120911: Valorant: Joblife vs Erah Esport - Map 2 Winner
+1120912: Games Total: O/U 2.5
+1120913: LoL: ALMO Players vs Team Phantasma (BO2)
+1120914: Valorant: WIP Esports vs Caldya Esport (BO3)
+1120915: Valorant: WIP Esports vs Caldya Esport - Map 1 Winner
+1120916: Valorant: WIP Esports vs Caldya Esport - Map 2 Winner
+1120917: Games Total: O/U 2.5
+1120918: LoL: Axolotl vs Zena Esports (BO1)
+1120919: Valorant: Mandatory vs F9 EICAR (BO3)
+1120920: Valorant: Mandatory vs F9 EICAR - Map 1 Winner
+1120921: LoL: HOWL Esports vs Team Paradox (BO2)
+1120922: Valorant: Mandatory vs F9 EICAR - Map 2 Winner
+1120923: Games Total: O/U 2.5
+1120924: LoL: Colossal Gaming vs Deacoy (BO1)
+1120925: Valorant: Galions vs Erah Esport (BO3)
+1120926: Valorant: Galions vs Erah Esport - Map 1 Winner
+1120927: Valorant: Galions vs Erah Esport - Map 2 Winner
+1120928: Games Total: O/U 2.5
+1120929: LoL: HMBLE vs EKO Esports (BO1)
+1120937: LoL: P11 Esports vs GMBLERS ESPORTS (BO1)
+1120938: LoL: P11 Esports vs Deacoy (BO1)
+1120939: LoL: HMBLE vs Zena Esports (BO1)
+1120940: LoL: Axolotl vs GMBLERS ESPORTS (BO1)
+1120941: LoL: Colossal Gaming vs EKO Esports (BO1)
+1120942: Will the highest temperature in New York City be 41°F or below on January 8?
+1120949: LoL: Invictus Gaming vs Bilibili Gaming (BO3)
+1120950: LoL: Invictus Gaming vs Bilibili Gaming - Game 1 Winner
+1120951: LoL: Invictus Gaming vs Bilibili Gaming - Game 2 Winner
+1120952: Games Total: O/U 2.5
+1121538: Will sports prediction markets be banned in any U.S. state by March 31?
+1121539: Ukraine hits Moscow by January 31?
+1121549: Nothing Ever Happens: MicroStrategy
+1121713: Valorant: FALKE ESPORTS vs NOVO Esports (BO2)
+1121716: Valorant: Ramboot Club vs KPI Gaming (BO2)
+1121717: Valorant: UCAM Esports Club vs Otakar Esports (BO2)
+1121718: Valorant: Barça eSports vs DNSTY (BO2)
+1121719: Valorant: DNSTY vs FALKE ESPORTS (BO2)
+1121720: Valorant: KPI Gaming vs Barça eSports (BO2)
+1121721: Valorant: NOVO Esports vs UCAM Esports Club (BO2)
+1121722: Valorant: Otakar Esports vs Ramboot Club (BO2)
+1121723: Valorant: NOVO Esports vs Otakar Esports (BO2)
+1121724: Valorant: DNSTY vs Ramboot Club (BO2)
+1121725: Valorant: FALKE ESPORTS vs Barça eSports (BO2)
+1121726: Valorant: KPI Gaming vs UCAM Esports Club (BO2)
+1121727: Valorant: Ramboot Club vs UCAM Esports Club (BO2)
+1121728: Valorant: Barça eSports vs Otakar Esports (BO2)
+1121729: Valorant: FALKE ESPORTS vs KPI Gaming (BO2)
+1121730: Valorant: DNSTY vs NOVO Esports (BO2)
+1121731: Jazz vs. Cavaliers
+1121732: Valorant: Otakar Esports vs KPI Gaming (BO2)
+1121733: Celtics vs. Pacers
+1121734: Valorant: UCAM Esports Club vs DNSTY (BO2)
+1121735: Valorant: Ramboot Club vs FALKE ESPORTS (BO2)
+1121736: 76ers vs. Raptors
+1121737: Incarnate Word Cardinals vs. Stephen F. Austin Lumberjacks
+1121738: Valorant: Barça eSports vs NOVO Esports (BO2)
+1121739: Alabama Crimson Tide vs. Missouri Tigers (W)
+1121740: Nets vs. Mavericks
+1121741: Texas-Rio Grande Valley Vaqueros vs. Northwestern State Demons
+1121742: Lakers vs. Kings
+1121743: New Orleans Privateers vs. Southeastern Louisiana Lions
+1121744: Hornets vs. Clippers
+1121745: Nicholls Colonels vs. McNeese State Cowboys
+1121746: Texas A&M-Corpus Christi Islanders vs. East Texas A&M Lions
+1121747: Navy Midshipmen vs. American Eagles
+1121748: Houston Christian Huskies vs. Lamar Cardinals
+1121749: Maryland Eastern Shore Hawks vs. Norfolk State Spartans
+1121750: South Carolina State Bulldogs vs. Coppin State Eagles
+1121751: Grambling State Tigers vs. Florida A&M Rattlers
+1121752: Southern Jaguars vs. Bethune-Cookman Wildcats
+1121753: Alcorn State Braves vs. Alabama State Hornets
+1121754: Arkansas-Pine Bluff Golden Lions vs. Prairie View A&M Panthers
+1121755: Jackson State Tigers vs. Alabama A&M Bulldogs
+1121756: Utah State Aggies vs. New Mexico Lobos
+1121757: North Carolina Central Eagles vs. Morgan State Bears
+1121758: Mississippi Valley State Delta Devils vs. Texas Southern Tigers
+1121759: Delaware State Hornets vs. Howard Bison
+1121884: Israel strike on Yemen by March 31, 2026?
+1121887: Israel strike on Yemen by June 30, 2026?
+1121971: Hyperliquid listed on Binance in 2026?
+1122016: Will Infinex launch a token by January 31, 2026?
+1122017: Will Infinex launch a token by February 28, 2026?
+1122018: Will David Portnoy give another 9+ pizza review by April 30?
+1122051: Will US annex any territory in 2026?
+1122084: OKX IPO in 2026?
+1122253: Will "Primate" Opening Weekend Box Office be less than 9m?
+1122254: Will "Primate" Opening Weekend Box Office be between 9m and 11m?
+1122255: Will "Primate" Opening Weekend Box Office be between 11m and 13m?
+1122256: Will "Primate" Opening Weekend Box Office be greater than 13m?
+1122325: Will Trump talk to María Corina Machado in January?
+1122555: U.S. x Iran Military Engagement by March 31, 2026?
+1122556: U.S. x Iran Military Engagement by June 30, 2026?
+1122565: Will Hong Wang win the 2026 Fields Medal?
+1122566: Will Jacob Tsimerman win the 2026 Fields Medal?
+1122567: Will John Pardon win the 2026 Fields Medal?
+1122568: Will Julian Sahasrabudhe win the 2026 Fields Medal?
+1122569: Will Yu Deng win the 2026 Fields Medal?
+1122570: Will Jack Thorne win the 2026 Fields Medal?
+1122571: Will Sam Raskin win the 2026 Fields Medal?
+1122572: Will Will Sawin win the 2026 Fields Medal?
+1122573: Will Aleksandr Logunov win the 2026 Fields Medal?
+1122574: Will Alexander Efimov win the 2026 Fields Medal?
+1122609: Will André Ventura win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122610: Will Luís Marques Mendes win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122611: Will António José Seguro win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122612: Will Henrique Gouveia e Melo win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122613: Will João Cotrim Figueiredo win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122614: Will Paulo Portas win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122615: Will Manuela Magno win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122616: Will Pedro Tinoco de Faria win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122617: Will Raul Perestrello win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122618: Will Pedro Passos Coelho win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122619: Will Catarina Martins win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122620: Will Joana Amaral Dias win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122621: Will Aristides Teixeira win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122622: Will Vitorino Silva win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122623: Will António Filipe win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122624: Will José Cardoso win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122625: Will Jorge Pinto win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122626: Will Humberto Correia win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122627: Will Tim Vieira win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122628: Will André Pestana win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122629: Will Orlando Cruz win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122630: Will Ângela Maryah win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122631: Will Manuel João Vieira win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122632: Will Rui Moreira win the 1st round of the 2026 Portugal presidential election in the Lisbon district?
+1122656: Any EU nation's debt downgraded before 2027?
+1122657: KHL: Lada Togliatti vs. SKA St. Petersburg
+1122658: CEHL: Plzen vs. Olomouc
+1122659: AHL: Ontario Reign vs. Bakersfield Condors
+1122660: KHL: HC Dynamo Moscow vs. Torpedo
+1122661: KHL: Shanghai Dragons vs. HC Sochi
+1122662: KHL: Dinamo Minsk vs. Admiral Vladivostok
+1122663: KHL: Avtomobilist Yekaterinburg vs. Barys Astana
+1122664: Sabres vs. Panthers
+1122665: Islanders vs. Capitals
+1122666: Senators vs. Penguins
+1122667: Canadiens vs. Wild
+1122668: Blues vs. Predators
+1122669: Jets vs. Stars
+1122670: Sharks vs. Blackhawks
+1122671: Red Wings vs. Avalanche
+1122672: Canucks vs. Utah
+1122673: Maple Leafs vs. Flames
+1122711: Israel strikes Iran by January 16, 2026?
+1122724: Will Israel strike Iraq by January 31?
+1122725: Will Jannik Sinner win a calendar Grand Slam in 2026?
+1122726: Will Carlos Alcaraz win a calendar Grand Slam in 2026?
+1122727: Will Novak Djokovic win a calendar Grand Slam in 2026?
+1122728: Will Alexander Zverev win a calendar Grand Slam in 2026?
+1122729: Will Taylor Fritz win a calendar Grand Slam in 2026?
+1122730: Will Daniil Medvedev win a calendar Grand Slam in 2026?
+1122731: Will Ben Shelton win a calendar Grand Slam in 2026?
+1122732: Will Nick Kyrgios win a calendar Grand Slam in 2026?
+1122733: Will any other male player win a calendar Grand Slam in 2026?
+1122734: Will no male player win a calendar Grand Slam in 2026?
+1122747: Deel IPO by March 31?
+1122759: Will the total number of TSA passengers for January 9 be less than 1,800,000?
+1122760: Will the total number of TSA passengers for January 9 be between 1,800,000 and 1,900,000?
+1122761: Will the total number of TSA passengers for January 9 be between 1,900,000 and 2,000,000?
+1122762: Will the total number of TSA passengers for January 9 be between 2,000,000 and 2,100,000?
+1122763: Will the total number of TSA passengers for January 9 be between 2,100,000 and 2,200,000?
+1122764: Will the total number of TSA passengers for January 9 be greater than 2,200,000?
+1122768: Will the price of Bitcoin be less than $84,000 on January 13?
+1122769: Will the price of Bitcoin be between $84,000 and $86,000 on January 13?
+1122770: Will the price of Ethereum be above $2,800 on January 13?
+1122771: Will the price of Bitcoin be between $86,000 and $88,000 on January 13?
+1122772: Will the price of Ethereum be above $2,900 on January 13?
+1122773: Will the price of Bitcoin be between $88,000 and $90,000 on January 13?
+1122774: Will the price of Ethereum be above $3,000 on January 13?
+1122775: Will the price of Ethereum be above $3,100 on January 13?
+1122776: Will the price of Bitcoin be between $90,000 and $92,000 on January 13?
+1122777: Will the price of Ethereum be above $3,200 on January 13?
+1122778: Will the price of Bitcoin be between $92,000 and $94,000 on January 13?
+1122779: Will the price of Bitcoin be between $94,000 and $96,000 on January 13?
+1122780: Will the price of Ethereum be above $3,300 on January 13?
+1122781: Will the price of Bitcoin be between $96,000 and $98,000 on January 13?
+1122782: Will the price of Ethereum be above $3,400 on January 13?
+1122784: Will the price of Bitcoin be between $98,000 and $100,000 on January 13?
+1122785: Will the price of Ethereum be above $3,500 on January 13?
+1122786: Will the price of Bitcoin be between $100,000 and $102,000 on January 13?
+1122787: Will the price of Ethereum be above $3,600 on January 13?
+1122789: Will the price of Bitcoin be greater than $102,000 on January 13?
+1122790: Will the price of Ethereum be above $3,700 on January 13?
+1122793: Will the price of Ethereum be above $3,800 on January 13?
+1122797: Hong Kong Tennis Open: Lorenzo Sonego vs Juncheng Shang
+1122798: Will the price of Ethereum be less than $2,800 on January 13?
+1122799: Will the price of Ethereum be between $2,800 and $2,900 on January 13?
+1122800: Will the price of Ethereum be between $2,900 and $3,000 on January 13?
+1122801: Will the price of Ethereum be between $3,000 and $3,100 on January 13?
+1122802: Will the price of Ethereum be between $3,100 and $3,200 on January 13?
+1122803: Will the price of Ethereum be between $3,200 and $3,300 on January 13?
+1122804: Will the price of Ethereum be between $3,300 and $3,400 on January 13?
+1122806: Will the price of Ethereum be between $3,400 and $3,500 on January 13?
+1122808: Will the price of Ethereum be between $3,500 and $3,600 on January 13?
+1122809: Will the price of Ethereum be between $3,600 and $3,700 on January 13?
+1122810: Will the price of Bitcoin be above $82,000 on January 13?
+1122811: Will the price of Ethereum be greater than $3,700 on January 13?
+1122812: Will the price of Bitcoin be above $84,000 on January 13?
+1122813: Will the price of Bitcoin be above $86,000 on January 13?
+1122814: Will the price of Bitcoin be above $88,000 on January 13?
+1122815: Will the price of Bitcoin be above $90,000 on January 13?
+1122816: Will the price of Bitcoin be above $92,000 on January 13?
+1122817: Will the price of Bitcoin be above $94,000 on January 13?
+1122818: Will the price of Bitcoin be above $96,000 on January 13?
+1122819: Will the price of Bitcoin be above $98,000 on January 13?
+1122820: Will the price of Bitcoin be above $100,000 on January 13?
+1122821: Will the price of Bitcoin be above $102,000 on January 13?
+1122822: Will the price of Solana be less than $90 on January 13?
+1122823: Will the price of Solana be between $90 and $100 on January 13?
+1122824: Valorant: Natus Vincere vs Karmine Corp (BO3)
+1122825: Will the price of Solana be between $100 and $110 on January 13?
+1122826: Valorant: Natus Vincere vs Karmine Corp - Map 1 Winner
+1122827: Will the price of Solana be between $110 and $120 on January 13?
+1122828: Valorant: Natus Vincere vs Karmine Corp - Map 2 Winner
+1122829: Will the price of Solana be between $120 and $130 on January 13?
+1122830: Games Total: O/U 2.5
+1122831: Will the price of Solana be between $130 and $140 on January 13?
+1122832: Will the price of Solana be between $140 and $150 on January 13?
+1122833: Will the price of Solana be between $150 and $160 on January 13?
+1122834: Will the price of Solana be between $160 and $170 on January 13?
+1122835: Will the price of Solana be between $170 and $180 on January 13?
+1122836: Will the price of Solana be greater than $180 on January 13?
+1122837: Total Rounds Over/Under 53.5
+1122838: Total Rounds Over/Under 54.5
+1122839: Total Rounds Over/Under 52.5
+1122840: Natus Vincere to win 0 maps?
+1122841: Natus Vincere to win 1 maps?
+1122842: Natus Vincere to win 2 maps?
+1122843: Karmine Corp to win 1 maps?
+1122844: Karmine Corp to win 2 maps?
+1122845: Karmine Corp to win 0 maps?
+1122846: Map Handicap: KC (-1.5)
+1122847: Karmine Corp Rounds Handicap (-2.5)
+1122848: Will the price of Solana be above $90 on January 13?
+1122849: Will the price of Solana be above $100 on January 13?
+1122850: Will the price of Solana be above $110 on January 13?
+1122851: Will the price of Solana be above $120 on January 13?
+1122852: Will the price of Solana be above $130 on January 13?
+1122853: Will the price of Solana be above $140 on January 13?
+1122854: Will the price of Solana be above $150 on January 13?
+1122855: Will the price of Solana be above $160 on January 13?
+1122856: Will the price of Solana be above $170 on January 13?
+1122857: Will the price of Solana be above $180 on January 13?
+1122858: Will the price of Solana be above $190 on January 13?
+1122859: Will the price of XRP be less than $1.80 on January 13?
+1122860: Will the price of XRP be between $1.80 and $1.90 on January 13?
+1122861: Will the price of XRP be between $1.90 and $2.00 on January 13?
+1122862: Will the price of XRP be between $2.00 and $2.10 on January 13?
+1122863: Will the price of XRP be between $2.10 and $2.20 on January 13?
+1122864: Will the price of XRP be between $2.20 and $2.30 on January 13?
+1122865: Will the price of XRP be between $2.30 and $2.40 on January 13?
+1122866: Will the price of XRP be between $2.40 and $2.50 on January 13?
+1122867: Will the price of XRP be between $2.50 and $2.60 on January 13?
+1122868: Will the price of XRP be between $2.60 and $2.70 on January 13?
+1122869: Will the price of XRP be greater than $2.70 on January 13?
+1122870: Will the price of XRP be above $1.80 on January 13?
+1122871: Will the price of XRP be above $1.90 on January 13?
+1122872: Will the price of XRP be above $2.00 on January 13?
+1122873: Will the price of XRP be above $2.10 on January 13?
+1122874: Will the price of XRP be above $2.20 on January 13?
+1122875: Will the price of XRP be above $2.30 on January 13?
+1122876: Will the price of XRP be above $2.40 on January 13?
+1122877: Will the price of XRP be above $2.50 on January 13?
+1122878: Will the price of XRP be above $2.60 on January 13?
+1122879: Will the price of XRP be above $2.70 on January 13?
+1122880: Will the price of XRP be above $2.80 on January 13?
+1122883: Will Iván Arias win the 2026 La Paz mayoral election?
+1122886: Will César Dockweiler win the 2026 La Paz mayoral election?
+1122887: Will Xavier Iturralde win the 2026 La Paz mayoral election?
+1122888: Will Rodrigo Rivera win the 2026 La Paz mayoral election?
+1122889: Will Pierre Chain win the 2026 La Paz mayoral election?
+1122890: Will Jhonny Plata win the 2026 La Paz mayoral election?
+1122891: Will Paul Coca win the 2026 La Paz mayoral election?
+1122892: Will Miguel Roca win the 2026 La Paz mayoral election?
+1122893: Will Alejandro Reyes win the 2026 La Paz mayoral election?
+1122912: Will the total number of TSA passengers for January 10 be less than 1,800,000?
+1122913: Will the total number of TSA passengers for January 10 be between 1,800,000 and 1,900,000?
+1122914: Will the total number of TSA passengers for January 10 be between 1,900,000 and 2,000,000?
+1122915: Will the total number of TSA passengers for January 10 be between 2,000,000 and 2,100,000?
+1122916: Will the total number of TSA passengers for January 10 be between 2,100,000 and 2,200,000?
+1122917: Will the total number of TSA passengers for January 10 be greater than 2,200,000?
+1122924: Over $14M committed to the Space public sale?
+1122925: Over $16M committed to the Space public sale?
+1122926: Over $18M committed to the Space public sale?
+1122927: Over $20M committed to the Space public sale?
+1122928: Over $22M committed to the Space public sale?
+1122932: Will the total number of TSA passengers for January 11 be less than 1,900,000?
+1122933: Will the total number of TSA passengers for January 11 be between 1,900,000 and 2,000,000?
+1122934: Will the total number of TSA passengers for January 11 be between 2,000,000 and 2,100,000?
+1122935: Will the total number of TSA passengers for January 11 be between 2,100,000 and 2,200,000?
+1122936: Will the total number of TSA passengers for January 11 be between 2,200,000 and 2,300,000?
+1122937: Will the total number of TSA passengers for January 11 be greater than 2,300,000?
+1122939: Space FDV above $40M one day after launch?
+1122940: Space FDV above $60M one day after launch?
+1122941: Space FDV above $80M one day after launch?
+1122942: Space FDV above $100M one day after launch?
+1122943: Space FDV above $120M one day after launch?
+1122948: Will the total number of TSA passengers for January 12 be less than 1,800,000?
+1122949: Will the total number of TSA passengers for January 12 be between 1,800,000 and 2,000,000?
+1122950: Will the total number of TSA passengers for January 12 be between 2,000,000 and 2,200,000?
+1122951: Will the total number of TSA passengers for January 12 be between 2,200,000 and 2,400,000?
+1122952: Will the total number of TSA passengers for January 12 be between 2,400,000 and 2,600,000?
+1122953: Will the total number of TSA passengers for January 12 be greater than 2,600,000?
+1122955: Will Jhonny Fernández win the 2026 Santa Cruz de la Sierra mayoral election?
+1122956: Will Angélica Sosa win the 2026 Santa Cruz de la Sierra mayoral election?
+1122957: Will Soo Hyun Chung win the 2026 Santa Cruz de la Sierra mayoral election?
+1122969: Will the total number of TSA passengers for January 13 be less than 1,900,000?
+1122970: Will the total number of TSA passengers for January 13 be between 1,900,000 and 2,000,000?
+1122971: Will the total number of TSA passengers for January 13 be between 2,000,000 and 2,100,000?
+1122972: Will the total number of TSA passengers for January 13 be between 2,100,000 and 2,200,000?
+1122973: Will the total number of TSA passengers for January 13 be between 2,200,000 and 2,300,000?
+1122974: Will the total number of TSA passengers for January 13 be greater than 2,300,000?
+1123008: International T20 Series: Sri Lanka vs Pakistan (Game 3)
+1123009: International T20 Series: Sri Lanka vs Pakistan (Game 3) - Who wins the toss?
+1123010: International T20 Series: Sri Lanka vs Pakistan (Game 3) - Completed match?
+1123011: International T20 Series: Sri Lanka vs Pakistan (Game 3) - Toss Match Double Sri Lanka Winner
+1123012: International T20 Series: Sri Lanka vs Pakistan (Game 3) - Toss Match Double Draw
+1123013: International T20 Series: Sri Lanka vs Pakistan (Game 3) - Toss Match Double Pakistan Winner
+1123014: International T20 Series: Sri Lanka vs Pakistan (Game 3) - Most Sixes Sri Lanka Winner
+1123015: International T20 Series: Sri Lanka vs Pakistan (Game 3) - Most Sixes Draw
+1123016: International T20 Series: Sri Lanka vs Pakistan (Game 3) - Most Sixes Pakistan Winner
+1123017: International T20 Series: Sri Lanka vs Pakistan (Game 3) - Team Top Batter Sri Lanka Winner
+1123018: International T20 Series: Sri Lanka vs Pakistan (Game 3) - Team Top Batter Draw
+1123019: International T20 Series: Sri Lanka vs Pakistan (Game 3) - Team Top Batter Pakistan Winner
+1123086: Will Trump meet with King Mohammed VI of Morocco in January 2026?
+1123144: Big Bash League: Melbourne Stars vs Adelaide Strikers (Game 1)
+1123151: Big Bash League: Melbourne Stars vs Adelaide Strikers (Game 1) - Who wins the toss?
+1123152: Big Bash League: Melbourne Stars vs Adelaide Strikers (Game 1) - Completed match?
+1123158: Big Bash League: Melbourne Stars vs Adelaide Strikers (Game 1) - Toss Match Double Melbourne Stars Winner
+1123159: Big Bash League: Melbourne Stars vs Adelaide Strikers (Game 1) - Toss Match Double Draw
+1123162: Big Bash League: Melbourne Stars vs Adelaide Strikers (Game 1) - Toss Match Double Adelaide Strikers Winner
+1123169: Big Bash League: Melbourne Stars vs Adelaide Strikers (Game 1) - Most Sixes Melbourne Stars Winner
+1123170: Big Bash League: Melbourne Stars vs Adelaide Strikers (Game 1) - Most Sixes Draw
+1123173: Big Bash League: Melbourne Stars vs Adelaide Strikers (Game 1) - Most Sixes Adelaide Strikers Winner
+1123180: Big Bash League: Melbourne Stars vs Adelaide Strikers (Game 1) - Team Top Batter Melbourne Stars Winner
+1123181: Big Bash League: Melbourne Stars vs Adelaide Strikers (Game 1) - Team Top Batter Draw
+1123184: Big Bash League: Melbourne Stars vs Adelaide Strikers (Game 1) - Team Top Batter Adelaide Strikers Winner
+1123196: SA20: Paarl Royals vs Durban's Super Giants (Game 1)
+1123197: SA20: Paarl Royals vs Durban's Super Giants (Game 1) - Who wins the toss?
+1123198: SA20: Paarl Royals vs Durban's Super Giants (Game 1) - Completed match?
+1123199: SA20: Paarl Royals vs Durban's Super Giants (Game 1) - Toss Match Double Paarl Royals Winner
+1123200: SA20: Paarl Royals vs Durban's Super Giants (Game 1) - Toss Match Double Draw
+1123201: SA20: Paarl Royals vs Durban's Super Giants (Game 1) - Toss Match Double Durban's Super Giants Winner
+1123202: SA20: Paarl Royals vs Durban's Super Giants (Game 1) - Most Sixes Paarl Royals Winner
+1123203: SA20: Paarl Royals vs Durban's Super Giants (Game 1) - Most Sixes Draw

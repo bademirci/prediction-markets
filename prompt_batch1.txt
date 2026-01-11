@@ -1,0 +1,126 @@
+You are a market categorization expert. I will give you 100 prediction market titles from Polymarket.
+
+Categorize each one into EXACTLY ONE of these 5 categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, budget)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain)
+- **Sports** (NFL, NBA, soccer, tennis, any sports betting)
+- **Other** (entertainment, weather, science, tech companies, celebrities, everything else)
+
+IMPORTANT RULES:
+1. Government budget/spending → Finance (not Politics)
+2. Tariffs and trade policy → Politics
+3. Trump deportation → Politics
+4. Climate/weather → Other
+5. Tech companies (OpenAI, Tesla, SpaceX) → Other
+6. Gaming (GTA, video games) → Other
+
+Return ONLY a valid JSON object in this exact format:
+{
+  "market_id": "category",
+  "market_id": "category",
+  ...
+}
+
+Here are the 100 markets to categorize:
+
+516938: Will 2025 be the hottest year on record?
+517310: Will Trump deport less than 250,000?
+517311: Will Trump deport 250,000-500,000 people?
+517313: Will Trump deport 500,000-750,000- people?
+517314: Will Trump deport 750,000-1,000,000 people?
+517315: Will Trump deport 1,000,000-1,250,000 people?
+517316: Will Trump deport 1,250,000-1,500,000 people?
+517317: Will Trump deport 1,500,000-1,750,000 people?
+517318: Will Trump deport 1,750,000-2,000,000 people?
+517319: Will Trump deport 2,000,000 or more people?
+517321: Will Trump deport 750,000 or more people in 2025?
+521255: Will Trump & Elon reduce the deficit in 2025? 
+521944: Will Elon and DOGE cut less than $50b in federal spending in 2025?
+521945: Will Elon and DOGE cut between $50-100b in federal spending in 2025?
+521946: Will Elon and DOGE cut between $100-150b in federal spending in 2025?
+521947: Will Elon and DOGE cut between $150-200b in federal spending in 2025?
+521948: Will Elon and DOGE cut between $200-250b in federal spending in 2025?
+521949: Will Elon and DOGE cut more than $250b in federal spending in 2025?
+521963: Will Elon cut the budget by at least 10% in 2025?
+521964: Will Elon cut the budget by at least 5% in 2025?
+521993: Will Elon and DOGE cut less than 50k employees in 2025?
+521994: Will Elon and DOGE cut 50-100k employees in 2025?
+521995: Will Elon and DOGE cut 100-150k employees in 2025?
+521996: Will Elon and DOGE cut 150-200k employees in 2025?
+521997: Will Elon and DOGE cut more than 200k employees in 2025?
+522145: Will inflation reach more than 3% in 2025?
+522146: Will inflation reach more than 4% in 2025?
+522147: Will inflation reach more than 5% in 2025?
+522148: Will inflation reach more than 6% in 2025?
+522149: Will inflation reach more than 8% in 2025?
+522150: Will inflation reach more than 10% in 2025?
+526939: Brazil unemployment below 6.3% for Q4 2025?
+527079: Will GTA 6 cost $100+?
+528788: Rojas guilty in Texas illegal abortion case?
+528820: Senator Eichorn guilty of soliciting a child?
+531202: BitBoy convicted?
+533851: Negative GDP growth in 2025?
+537484: Will the U.S. collect less than $100b in revenue in 2025?
+537485: Will the U.S. collect between $100b and $200b in revenue in 2025?
+537486: Will the U.S. collect between $200b and $500b in revenue in 2025?
+537487: Will the U.S. collect between $500b and $1t in revenue in 2025?
+537488: Will the U.S. collect between $1t and $2t in revenue in 2025?
+537489: Will the U.S. collect more than $2t in revenue in 2025?
+537490: Will tariffs generate >$250b in 2025?
+540209: Will the Buffalo Bills win Super Bowl 2026?
+540211: Will the Chicago Bears win Super Bowl 2026?
+540215: Will the Denver Broncos win Super Bowl 2026?
+540218: Will the Houston Texans win Super Bowl 2026?
+540220: Will the Jacksonville Jaguars win Super Bowl 2026?
+540223: Will the Los Angeles Chargers win Super Bowl 2026?
+540224: Will the Los Angeles Rams win Super Bowl 2026?
+540227: Will the New England Patriots win Super Bowl 2026?
+540231: Will the Philadelphia Eagles win Super Bowl 2026?
+540232: Will the Pittsburgh Steelers win Super Bowl 2026?
+540233: Will the San Francisco 49ers win Super Bowl 2026?
+540234: Will the Seattle Seahawks win Super Bowl 2026?
+540241: Will the Bears win the NFC Championship?
+540245: Will the Rams win the NFC Championship?
+540249: Will the Eagles win the 2026 NFC Championship?
+540250: Will the 49ers win the 2026 NFC Championship?
+540251: Will the Seahawks win the 2026 NFC Championship?
+540254: Will the Bills win the AFC Championship?
+540256: Will the Patriots win the AFC Championship?
+540261: Will the Steelers win the AFC Championship?
+540262: Will the Texans win the AFC Championship?
+540264: Will the Jaguars win the AFC Championship?
+540266: Will the Broncos win the AFC Championship?
+540269: Will the Chargers win the AFC Championship?
+540816: Russia-Ukraine Ceasefire before GTA VI?
+540817: New Rihanna Album before GTA VI?
+540818: New Playboi Carti Album before GTA VI?
+540819: Will Jesus Christ return before GTA VI?
+540820: Trump out as President before GTA VI?
+540843: Will China invades Taiwan before GTA VI?
+540844: Will bitcoin hit $1m before GTA VI?
+540881: GTA VI released before June 2026?
+541516: Will Aidan Hutchinson be the 2025-2026 NFL Comeback Player of the Year?
+541517: Will Christian McCaffrey be the 2025-2026 NFL Comeback Player of the Year?
+541518: Will Dak Prescott be the 2025-2026 NFL Comeback Player of the Year?
+541519: Will Trevor Lawrence be the 2025-2026 NFL Comeback Player of the Year?
+541520: Will J.J. McCarthy be the 2025-2026 NFL Comeback Player of the Year?
+541521: Will Rashee Rice be the 2025-2026 NFL Comeback Player of the Year?
+541522: Will Maxx Crosby be the 2025-2026 NFL Comeback Player of the Year?
+541523: Will Brandon Aiyuk be the 2025-2026 NFL Comeback Player of the Year?
+541524: Will Tank Dell be the 2025-2026 NFL Comeback Player of the Year?
+541525: Will Derek Carr be the 2025-2026 NFL Comeback Player of the Year?
+541526: Will Tua Tagovailoa be the 2025-2026 NFL Comeback Player of the Year?
+541527: Will Chris Godwin be the 2025-2026 NFL Comeback Player of the Year?
+541528: Will Stefon Diggs be the 2025-2026 NFL Comeback Player of the Year?
+541529: Will Anthony Richardson be the 2025-2026 NFL Comeback Player of the Year?
+541530: Will Chris Olave be the 2025-2026 NFL Comeback Player of the Year?
+541531: Will Cooper Kupp be the 2025-2026 NFL Comeback Player of the Year?
+541532: Will Rashid Shaheed be the 2025-2026 NFL Comeback Player of the Year?
+541533: Will Deshaun Watson be the 2025-2026 NFL Comeback Player of the Year?
+541534: Will Kenneth Walker be the 2025-2026 NFL Comeback Player of the Year?
+541535: Will Tyler Higbee be the 2025-2026 NFL Comeback Player of the Year?
+541536: Will Dre Greenlaw be the 2025-2026 NFL Comeback Player of the Year?
+541537: Will L'Jarius Sneed be the 2025-2026 NFL Comeback Player of the Year?
+541538: Will Hollywood Brown be the 2025-2026 NFL Comeback Player of the Year?
+541539: Will Jaire Alexander be the 2025-2026 NFL Comeback Player of the Year?

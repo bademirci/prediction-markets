@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1114203: Will Russia capture all of Stepnohirsk by February 28, 2026?
+1114211: Will Russia capture all of Prymorske by February 28, 2026?
+1114224: Pelicans vs. Magic
+1114225: Nets vs. Grizzlies
+1114226: Canisius Golden Griffins vs. Iona Gaels
+1114227: Louisiana Tech Bulldogs vs. Liberty Flames (W)
+1114228: Marist Red Foxes vs. Rider Broncs
+1114229: 76ers vs. Raptors
+1114230: Niagara Purple Eagles vs. Manhattan Jaspers
+1114231: Mississippi State Bulldogs vs. Ole Miss Rebels (W)
+1114232: Knicks vs. Trail Blazers
+1114233: Siena Saints vs. Mount St. Mary's Mountaineers
+1114234: Spurs vs. Timberwolves
+1114235: Texas Longhorns vs. LSU Tigers (W)
+1114236: Cleveland State Vikings vs. Detroit Titans
+1114237: Oklahoma Sooners vs. Kentucky Wildcats (W)
+1114238: Wright State Raiders vs. Oakland Golden Grizzlies
+1114239: Heat vs. Thunder
+1114240: Georgia Bulldogs vs. South Carolina Gamecocks (W)
+1114241: Northern Kentucky Norse vs. Green Bay Phoenix
+1114242: Florida Gators vs. Auburn Tigers (W)
+1114243: Bucks vs. Nuggets
+1114244: Purdue Fort Wayne Mastodons vs. Robert Morris Colonials
+1114245: Arkansas Razorbacks vs. Tennessee Volunteers (W)
+1114246: Wizards vs. Suns
+1114247: IU Indy Jaguars vs. Milwaukee Panthers
+1114248: Vanderbilt Commodores vs. Texas A&M Aggies (W)
+1114249: Hawks vs. Warriors
+1114250: Quinnipiac Bobcats vs. Sacred Heart Pioneers
+1114251: Ohio State Buckeyes vs. Maryland Terrapins (W)
+1114252: Rockets vs. Kings
+1114253: Merrimack College Warriors vs. Saint Peter's Peacocks
+1114254: Wisconsin Badgers vs. Michigan Wolverines (W)
+1114255: Ohio State Buckeyes vs. Washington Huskies
+1114256: West Virginia Mountaineers vs. Iowa State Cyclones (W)
+1114257: Northwestern Wildcats vs. Rutgers Scarlet Knights
+1114258: Kansas Jayhawks vs. Baylor Bears (W)
+1114259: Illinois Fighting Illini vs. Iowa Hawkeyes
+1114260: Arizona State Sun Devils vs. TCU Horned Frogs (W)
+1114261: Arkansas-Pine Bluff Golden Lions vs. Texas Southern Tigers
+1114262: USC Trojans vs. Minnesota Golden Gophers (W)
+1114263: Cincinnati Bearcats vs. UCF Knights
+1114264: Pittsburgh Panthers vs. Louisville Cardinals (W)
+1114265: San Diego State Aztecs vs. Utah State Aggies
+1114266: Colorado Buffaloes vs. Oklahoma State Cowboys (W)
+1114267: Saint Joseph's Hawks vs. Richmond Spiders
+1114268: North Texas Mean Green vs. Wichita State Shockers
+1114269: Michigan State Spartans vs. Oregon Ducks (W)
+1114270: Evansville Aces vs. Illinois State Redbirds (W)
+1114271: Memphis Tigers vs. Florida Atlantic Owls
+1114272: Drake Bulldogs vs. Murray State Racers (W)
+1114273: Charlotte 49ers vs. Rice Owls
+1114274: Indiana State Sycamores vs. Bradley Braves (W)
+1114275: UAB Blazers vs. East Carolina Pirates
+1114276: Northern Iowa Panthers vs. Belmont Bruins (W)
+1114277: George Mason Patriots vs. George Washington Revolutionaries (W)
+1114278: Duquesne Dukes vs. VCU Rams (W)
+1114279: Washington Huskies vs. Purdue Boilermakers (W)
+1114280: UNCW Seahawks vs. Towson Tigers (W)
+1114281: North Carolina A&T Aggies vs. Stony Brook Seawolves (W)
+1114282: Monmouth Hawks vs. Northeastern Huskies (W)
+1114283: Villanova Wildcats vs. Providence Friars (W)
+1114284: Boston College Eagles vs. Virginia Tech Hokies (W)
+1114285: North Carolina Tar Heels vs. Notre Dame Fighting Irish (W)
+1114286: Wright State Raiders vs. IU Indy Jaguars (W)
+1114287: Connecticut Huskies vs. Creighton Bluejays (W)
+1114288: Charleston Cougars vs. Hampton Pirates (W)
+1114289: William & Mary Tribe vs. Campbell Fighting Camels (W)
+1114290: Hofstra Pride vs. Drexel Dragons (W)
+1114291: Syracuse Orange vs. Virginia Cavaliers (W)
+1114292: Florida State Seminoles vs. Miami Hurricanes (W)
+1114293: Saint Louis Billikens vs. Loyola Chicago Ramblers (W)
+1114294: Rutgers Scarlet Knights vs. Northwestern Wildcats (W)
+1114295: Illinois Fighting Illini vs. Penn State Nittany Lions (W)
+1114296: Clemson Tigers vs. Georgia Tech Yellow Jackets (W)
+1114297: Duke Blue Devils vs. Stanford Cardinal (W)
+1114298: Iowa Hawkeyes vs. Indiana Hoosiers (W)
+1114299: Wake Forest Demon Deacons vs. California Golden Bears (W)
+1114300: SMU Mustangs vs. North Carolina State Wolfpack (W)
+1114301: UCLA Bruins vs. Nebraska Cornhuskers (W)
+1114326: Delcy Rodríguez out as leader of Venezuela by March 31, 2026?
+1114327: Delcy Rodríguez out as leader of Venezuela by December 31, 2026?
+1114429: Will SC Heerenveen win on 2026-02-01?
+1114430: Will SC Heerenveen vs. FC Utrecht end in a draw?
+1114431: Will FC Utrecht win on 2026-02-01?
+1114432: Will FC Volendam win on 2026-02-01?
+1114433: Will FC Volendam vs. Go Ahead Eagles end in a draw?
+1114434: Will Go Ahead Eagles win on 2026-02-01?
+1114460: Will the median home value in the Los Angeles Metro area be less than $1,130,000 by February 1?
+1114461: Will the median home value in the Los Angeles Metro area be between $1,130,000 and $1,230,000 by February 1?
+1114462: Will the median home value in the Los Angeles Metro area be between $1,230,000 and $1,330,000 by February 1?
+1114463: Will the median home value in the Los Angeles Metro area be between $1,330,000 and $1,430,000 by February 1?
+1114464: Will the median home value in the Los Angeles Metro area be greater than $1,430,000 by February 1?
+1114508: LoL: Ground Zero Gaming vs Team Secret Whales (BO3)
+1114509: LoL: Ground Zero Gaming vs Team Secret Whales - Game 1 Winner
+1114510: LoL: Ground Zero Gaming vs Team Secret Whales - Game 2 Winner
+1114511: Games Total: O/U 2.5
+1114513: LoL: Deep Cross Gaming vs Fukuoka SoftBank Hawks Gaming (BO3)
+1114514: LoL: Deep Cross Gaming vs Fukuoka SoftBank Hawks Gaming - Game 1 Winner
+1114515: LoL: Deep Cross Gaming vs Fukuoka SoftBank Hawks Gaming - Game 2 Winner
+1114516: Games Total: O/U 2.5
+1114518: LoL: GAM Esports vs CTBC Flying Oyster (BO3)
+1114519: LoL: GAM Esports vs CTBC Flying Oyster - Game 1 Winner
+1114520: LoL: GAM Esports vs CTBC Flying Oyster - Game 2 Winner
+1114521: Games Total: O/U 2.5
+1114522: LoL: DetonatioN FocusMe vs MVK Esports (BO3)
+1114523: LoL: DetonatioN FocusMe vs MVK Esports - Game 1 Winner
+1114524: LoL: DetonatioN FocusMe vs MVK Esports - Game 2 Winner
+1114525: Games Total: O/U 2.5
+1114526: LoL: Ground Zero Gaming vs Deep Cross Gaming (BO3)
+1114527: LoL: Ground Zero Gaming vs Deep Cross Gaming - Game 1 Winner
+1114528: LoL: Ground Zero Gaming vs Deep Cross Gaming - Game 2 Winner
+1114529: Games Total: O/U 2.5
+1114530: LoL: Team Secret Whales vs Fukuoka SoftBank Hawks Gaming (BO3)
+1114531: LoL: Team Secret Whales vs Fukuoka SoftBank Hawks Gaming - Game 1 Winner
+1114532: LoL: Team Secret Whales vs Fukuoka SoftBank Hawks Gaming - Game 2 Winner
+1114533: Games Total: O/U 2.5
+1114534: LoL: Natus Vincere vs Fnatic (BO1)
+1114717: Will "Avatar: Fire and Ash" 4th Weekend Box Office be less than 27m?
+1114718: Will "Avatar: Fire and Ash" 4th Weekend Box Office be between 27m and 30m?
+1114719: Will "Avatar: Fire and Ash" 4th Weekend Box Office be greater than 30m?
+1114728: UFC 324: Gaethje vs. Pimblett (Lightweight, Main Card)
+1114729: Fight to Go the Distance?
+1114730: Will the fight be won by KO or TKO?
+1114731: Will Justin Gaethje win by KO or TKO?
+1114732: Will Paddy Pimblett win by KO or TKO?
+1114733: Will the fight be won by submission?
+1114734: O/U 0.5 Rounds
+1114735: O/U 1.5 Rounds
+1114736: O/U 2.5 Rounds
+1114737: O/U 3.5 Rounds
+1114738: O/U 4.5 Rounds
+1114739: UFC 324: Nunes vs. Harrison (Women's Bantamweight, Main Card)
+1114740: Fight to Go the Distance?
+1114741: Will the fight be won by KO or TKO?
+1114742: Will Amanda Nunes win by KO or TKO?
+1114743: Will Kayla Harrison win by KO or TKO?
+1114744: Will the fight be won by submission?
+1114745: O/U 0.5 Rounds
+1114746: O/U 1.5 Rounds
+1114747: O/U 2.5 Rounds
+1114748: O/U 3.5 Rounds
+1114749: O/U 4.5 Rounds
+1114754: UFC 324: Yadong vs. O'Malley (Bantamweight, Main Card)
+1114755: Fight to Go the Distance?
+1114756: Will the fight be won by KO or TKO?
+1114757: Will Song Yadong win by KO or TKO?
+1114758: Will Sean O'Malley win by KO or TKO?
+1114759: Will the fight be won by submission?
+1114760: O/U 0.5 Rounds
+1114761: O/U 1.5 Rounds
+1114762: O/U 2.5 Rounds
+1114763: UFC 324: Lewis vs. Cortes-Acosta (Heavyweight, Main Card)
+1114764: Fight to Go the Distance?
+1114765: Will the fight be won by KO or TKO?
+1114766: Will Derrick Lewis win by KO or TKO?
+1114767: Will Waldo Cortes-Acosta win by KO or TKO?
+1114768: Will the fight be won by submission?
+1114769: O/U 0.5 Rounds
+1114770: O/U 1.5 Rounds
+1114771: O/U 2.5 Rounds
+1114772: UFC 324: Allen vs. Silva (Featherweight, Main Card)
+1114773: Fight to Go the Distance?
+1114774: Will the fight be won by KO or TKO?
+1114775: Will Arnold Allen win by KO or TKO?
+1114776: Will Jean Silva win by KO or TKO?
+1114777: Will the fight be won by submission?
+1114778: O/U 0.5 Rounds
+1114779: O/U 1.5 Rounds
+1114780: O/U 2.5 Rounds
+1114781: UFC 324: Namajunas vs. Silva (Women's Flyweight, Prelims)
+1114782: Fight to Go the Distance?
+1114783: Will the fight be won by KO or TKO?
+1114784: Will Rose Namajunas win by KO or TKO?
+1114785: Will Natalia Silva win by KO or TKO?
+1114786: Will the fight be won by submission?
+1114787: O/U 0.5 Rounds
+1114788: O/U 1.5 Rounds
+1114789: O/U 2.5 Rounds
+1114790: UFC 324: Figueiredo vs. Nurmagomedov (Bantamweight, Prelims)
+1114791: Fight to Go the Distance?
+1114792: Will the fight be won by KO or TKO?
+1114793: Will Deiveson Figueiredo win by KO or TKO?
+1114794: Will Umar Nurmagomedov win by KO or TKO?
+1114795: Will the fight be won by submission?
+1114796: O/U 0.5 Rounds
+1114797: O/U 1.5 Rounds
+1114798: O/U 2.5 Rounds
+1114799: UFC 324: Pulyaev vs. Gautier (Middleweight, Prelims)
+1114800: Fight to Go the Distance?
+1114801: Will the fight be won by KO or TKO?
+1114802: Will Andrey Pulyaev win by KO or TKO?
+1114803: Will Ateba Gautier win by KO or TKO?
+1114804: Will the fight be won by submission?
+1114805: O/U 0.5 Rounds
+1114806: O/U 1.5 Rounds
+1114807: O/U 2.5 Rounds
+1114808: UFC 324: Johnson vs. Hernandez (Lightweight, Prelims)
+1114809: Fight to Go the Distance?
+1114810: Will the fight be won by KO or TKO?
+1114811: Will Michael Johnson win by KO or TKO?
+1114812: Will Alexander Hernandez win by KO or TKO?
+1114813: Will the fight be won by submission?
+1114814: O/U 0.5 Rounds
+1114815: O/U 1.5 Rounds
+1114816: O/U 2.5 Rounds
+1114817: UFC 324: Krylov vs. Bukauskas (Light Heavyweight, Prelims)
+1114818: Fight to Go the Distance?
+1114819: Will the fight be won by KO or TKO?
+1114820: Will Nikita Krylov win by KO or TKO?
+1114821: Will Modestas Bukauskas win by KO or TKO?
+1114822: Will the fight be won by submission?
+1114823: O/U 0.5 Rounds
+1114824: O/U 1.5 Rounds
+1114825: O/U 2.5 Rounds
+1114826: UFC 324: Perez vs. Johnson (Flyweight, Prelims)
+1114827: Fight to Go the Distance?
+1114828: Will the fight be won by KO or TKO?
+1114829: Will Alex Perez win by KO or TKO?
+1114830: Will Charles Johnson win by KO or TKO?
+1114831: Will the fight be won by submission?
+1114832: O/U 0.5 Rounds
+1114833: O/U 1.5 Rounds
+1114834: O/U 2.5 Rounds
+1114835: UFC 324: Hokit vs. Freeman (Heavyweight, Prelims)
+1114836: Fight to Go the Distance?
+1114837: Will the fight be won by KO or TKO?
+1114838: Will Josh Hokit win by KO or TKO?
+1114839: Will Denzel Freeman win by KO or TKO?
+1114840: Will the fight be won by submission?
+1114841: O/U 0.5 Rounds
+1114842: O/U 1.5 Rounds
+1114843: O/U 2.5 Rounds
+1114844: UFC 324: Turcios vs. Smotherman (Bantamweight, Prelims)
+1114845: Fight to Go the Distance?
+1114846: Will the fight be won by KO or TKO?
+1114847: Will Ricky Turcios win by KO or TKO?
+1114848: Will Cameron Smotherman win by KO or TKO?
+1114849: Will the fight be won by submission?
+1114850: O/U 0.5 Rounds
+1114851: O/U 1.5 Rounds
+1114852: O/U 2.5 Rounds
+1114853: CEHL: Kometa vs. Mlada Boleslav
+1114854: DEL: Nurnberg Ice Tigers vs. ERC Ingolstadt
+1114855: SNHL: ZSC Lions vs. Kloten Flyers
+1114856: KHL: CSKA Moscow vs. Spartak Moscow
+1114858: CEHL: Trinec vs. Sparta Prague
+1114859: DEL: Grizzlys Wolfsburg vs. Loewen Frankfurt
+1114860: KHL: Traktor vs. Sibir Novosibirsk
+1114861: CEHL: Dynamo Pardubice vs. Liberec
+1114862: DEL: Augsburger Panther vs. Koelner Haie
+1114863: AHL: Manitoba Moose vs. Chicago Wolves
+1114864: CEHL: Karlovy Vary vs. Litvinov
+1114865: DEL: EHC Red Bull Muenchen vs. Iserlohn Roosters
+1114867: DEL: Adler Mannheim vs. Bremerhaven
+1114869: CEHL: HC Kladno vs. Vitkovice
+1114870: DEL: Schwenninger Wild Wings vs. Straubing Tigers
+1114871: CEHL: Motor Ceske Budejovice vs. Mountfield HK
+1114872: AHL: Bakersfield Condors vs. San Jose Barracuda
+1114873: AHL: Calgary Wranglers vs. Abbotsford Canucks
+1114875: AHL: Hartford Wolf Pack vs. Bridgeport Islanders
+1114876: AHL: Lehigh Valley Phantoms vs. Providence Bruins
+1114879: AHL: Rochester Americans vs. Belleville Senators
+1114882: Bruins vs. Lightning
+1114883: Kings vs. Hurricanes
+1114884: Golden Knights vs. Ducks
+1114885: Will there be exactly 0 earthquakes of magnitude 6.5 or higher worldwide by January 11?
+1114886: Will there be exactly 1 earthquake of magnitude 6.5 or higher worldwide by January 11?
+1114887: Will there be exactly 2 earthquakes of magnitude 6.5 or higher worldwide by January 11?
+1114888: Will there be exactly 3 earthquakes of magnitude 6.5 or higher worldwide by January 11?
+1114889: Will there be exactly 4 earthquakes of magnitude 6.5 or higher worldwide by January 11?
+1114890: Will there be exactly 5 earthquakes of magnitude 6.5 or higher worldwide by January 11?
+1114891: Will there be more than 5 earthquakes of magnitude 6.5 or higher worldwide by January 11?
+1114909: Will Taiwan Semiconductor (TSM) beat quarterly earnings?
+1114940: Will FalleN retire by June 1? 
+1114948: Will the price of Ethereum be above $2,700 on January 12?
+1114949: Will the price of Ethereum be above $2,800 on January 12?
+1114950: Will the price of Bitcoin be less than $84,000 on January 12?
+1114951: Will the price of Ethereum be above $2,900 on January 12?
+1114952: Will the price of Bitcoin be between $84,000 and $86,000 on January 12?
+1114953: Will the price of Ethereum be above $3,000 on January 12?
+1114954: Will the price of Bitcoin be between $86,000 and $88,000 on January 12?
+1114956: Will the price of Ethereum be above $3,100 on January 12?
+1114957: Will the price of Bitcoin be between $88,000 and $90,000 on January 12?
+1114959: Will the price of Ethereum be above $3,200 on January 12?
+1114960: Will the price of Bitcoin be between $90,000 and $92,000 on January 12?
+1114963: Will the price of Ethereum be above $3,300 on January 12?
+1114966: Will the price of Bitcoin be between $92,000 and $94,000 on January 12?
+1114967: Will the price of Ethereum be above $3,400 on January 12?
+1114969: Will the price of Bitcoin be between $94,000 and $96,000 on January 12?
+1114970: Will the price of Ethereum be above $3,500 on January 12?
+1114972: Will the price of Bitcoin be between $96,000 and $98,000 on January 12?
+1114973: Will the price of Ethereum be above $3,600 on January 12?
+1114975: Will the price of Bitcoin be between $98,000 and $100,000 on January 12?
+1114976: Will the price of Ethereum be above $3,700 on January 12?
+1114978: Will the price of Bitcoin be between $100,000 and $102,000 on January 12?
+1114980: Will the price of Bitcoin be greater than $102,000 on January 12?
+1114986: LoL: Team Vitality vs Karmine Corp Blue (BO1)
+1114987: Will the price of Ethereum be less than $2,700 on January 12?
+1114989: Will the price of Ethereum be between $2,700 and $2,800 on January 12?
+1114990: Will the price of Ethereum be between $2,800 and $2,900 on January 12?
+1114991: Will the price of Ethereum be between $2,900 and $3,000 on January 12?
+1114992: Will the price of Ethereum be between $3,000 and $3,100 on January 12?
+1114993: Will the price of Ethereum be between $3,100 and $3,200 on January 12?
+1114996: Will the price of Ethereum be between $3,200 and $3,300 on January 12?
+1114997: Will the price of Ethereum be between $3,300 and $3,400 on January 12?
+1114998: Will the price of Ethereum be between $3,400 and $3,500 on January 12?
+1114999: Will the price of Ethereum be between $3,500 and $3,600 on January 12?
+1115000: Will the price of Ethereum be greater than $3,600 on January 12?
+1115001: Will the price of Bitcoin be above $84,000 on January 12?
+1115002: Will the price of Bitcoin be above $86,000 on January 12?
+1115003: Will the price of Bitcoin be above $88,000 on January 12?
+1115004: Will the price of Bitcoin be above $90,000 on January 12?
+1115005: Will the price of Bitcoin be above $92,000 on January 12?
+1115006: Will the price of Bitcoin be above $94,000 on January 12?
+1115007: Will the price of Bitcoin be above $96,000 on January 12?
+1115008: Will the price of Bitcoin be above $98,000 on January 12?
+1115009: Will the price of Bitcoin be above $100,000 on January 12?
+1115010: Will the price of Bitcoin be above $102,000 on January 12?
+1115011: Will the price of Bitcoin be above $104,000 on January 12?
+1115013: Will the price of Solana be less than $90 on January 12?
+1115014: Will the price of Solana be between $90 and $100 on January 12?
+1115015: Will the price of Solana be between $100 and $110 on January 12?
+1115016: Will the price of Solana be between $110 and $120 on January 12?
+1115017: Will the price of Solana be between $120 and $130 on January 12?
+1115018: Will the price of Solana be between $130 and $140 on January 12?
+1115019: Will the price of Solana be between $140 and $150 on January 12?
+1115020: Will the price of Solana be between $150 and $160 on January 12?
+1115021: Will the price of Solana be between $160 and $170 on January 12?
+1115022: Will the price of Solana be between $170 and $180 on January 12?
+1115023: Will the price of Solana be greater than $180 on January 12?
+1115024: Will the price of Solana be above $90 on January 12?
+1115025: Will the price of Solana be above $100 on January 12?
+1115026: Will the price of Solana be above $110 on January 12?
+1115027: Will the price of Solana be above $120 on January 12?
+1115028: Will the price of Solana be above $130 on January 12?
+1115029: Will the price of Solana be above $140 on January 12?
+1115030: Will the price of Solana be above $150 on January 12?
+1115031: Will the price of Solana be above $160 on January 12?
+1115032: Will the price of Solana be above $170 on January 12?
+1115033: Will the price of Solana be above $180 on January 12?
+1115034: Will the price of Solana be above $190 on January 12?
+1115035: Will the price of XRP be less than $1.70 on January 12?
+1115036: Will the price of XRP be between $1.70 and $1.80 on January 12?
+1115037: Will the price of XRP be between $1.80 and $1.90 on January 12?
+1115038: Will the price of XRP be between $1.90 and $2.00 on January 12?
+1115039: Will the price of XRP be between $2.00 and $2.10 on January 12?
+1115040: Will the price of XRP be between $2.10 and $2.20 on January 12?
+1115041: Will the price of XRP be between $2.20 and $2.30 on January 12?
+1115042: Will the price of XRP be between $2.30 and $2.40 on January 12?
+1115043: Will the price of XRP be between $2.40 and $2.50 on January 12?
+1115044: Will the price of XRP be between $2.50 and $2.60 on January 12?
+1115045: Will the price of XRP be greater than $2.60 on January 12?
+1115046: Will the price of XRP be above $1.70 on January 12?
+1115047: Will the price of XRP be above $1.80 on January 12?
+1115048: Will the price of XRP be above $1.90 on January 12?
+1115049: Will the price of XRP be above $2.00 on January 12?
+1115050: Will the price of XRP be above $2.10 on January 12?
+1115051: Will the price of XRP be above $2.20 on January 12?
+1115052: Will the price of XRP be above $2.30 on January 12?
+1115053: Will the price of XRP be above $2.40 on January 12?
+1115054: Will the price of XRP be above $2.50 on January 12?
+1115055: Will the price of XRP be above $2.60 on January 12?
+1115056: Will the price of XRP be above $2.70 on January 12?
+1115092: Delcy Rodríguez out as leader of Venezuela by January 31, 2026?
+1115274: North Korea missile launch by January 31?
+1115287: LoL: Team Heretics vs GIANTX (BO1)
+1115288: US recognizes Reza Pahlavi as leader of Iran in 2026?
+1115301: Will the U.S. invade Greenland in 2026?
+1115306: Will Querétaro FC win on 2026-02-01?
+1115307: Will Querétaro FC vs. CF Pachuca end in a draw?
+1115308: Will CF Pachuca win on 2026-02-01?
+1115309: Will Atlético San Luis win on 2026-02-01?
+1115310: Will Atlético San Luis vs. CD Guadalajara end in a draw?
+1115311: Will CD Guadalajara win on 2026-02-01?
+1115419: Will a coin launched in 2026 end the year above $20B FDV?
+1115625: LoL: Shifters vs Movistar KOI (BO1)
+1115638: Will the US capture another world leader in 2026?
+1115663: LoL: Los Ratones vs Karmine Corp (BO1)
+1115676: Jerome Powell out from Fed Board by May 30?
+1115677: Jerome Powell out from Fed Board by December 31?
+1115921: Will Lighter reach $5.50 in January?
+1115922: Will Lighter reach $5.00 in January?
+1115923: Will Lighter reach $4.50 in January?
+1115924: Will Lighter reach $4.00 in January?
+1115925: Will Lighter reach $3.50 in January?
+1115926: Will Lighter dip to $2.00 in January?
+1115927: Will Lighter dip to $1.50 in January?
+1115928: Will Lighter dip to $1.00 in January?
+1115929: Will Perplexity’s market cap be less than $20B at market close on IPO day?
+1115930: Will Perplexity’s market cap be between $20B and $30B at market close on IPO day?
+1115931: Will Perplexity’s market cap be between $30B and $40B at market close on IPO day?
+1115932: Will Perplexity’s market cap be between $40B and $50B at market close on IPO day?
+1115933: Will Perplexity’s market cap be between $50B and $75B at market close on IPO day?
+1115934: Will Perplexity’s market cap be between $75B and $100B at market close on IPO day?
+1115935: Will Perplexity’s market cap be greater than $100B at market close on IPO day?
+1115936: Will Perplexity not IPO by December 31, 2027?
+1115960: Córdoba CF vs. Málaga CF: O/U 1.5
+1115961: LoL: SK Gaming vs G2 Esports (BO1)
+1115962: Córdoba CF vs. Málaga CF: O/U 2.5
+1115963: Córdoba CF vs. Málaga CF: O/U 3.5
+1115964: Córdoba CF vs. Málaga CF: O/U 4.5
+1115965: Córdoba CF vs. Málaga CF: Both Teams to Score
+1115971: Albacete Balompié vs. Cádiz CF: O/U 1.5
+1115972: Albacete Balompié vs. Cádiz CF: O/U 2.5
+1115973: Albacete Balompié vs. Cádiz CF: O/U 3.5
+1115974: Albacete Balompié vs. Cádiz CF: O/U 4.5
+1115975: Albacete Balompié vs. Cádiz CF: Both Teams to Score
+1115980: Burgos CF vs. SD Huesca: O/U 1.5
+1115981: Burgos CF vs. SD Huesca: O/U 2.5
+1115982: Burgos CF vs. SD Huesca: O/U 3.5
+1115983: Burgos CF vs. SD Huesca: O/U 4.5
+1115984: Burgos CF vs. SD Huesca: Both Teams to Score
+1115985: Real Racing Club vs. UD Las Palmas: O/U 1.5
+1115986: Real Racing Club vs. UD Las Palmas: O/U 2.5
+1115987: Real Racing Club vs. UD Las Palmas: O/U 3.5
+1115988: Real Racing Club vs. UD Las Palmas: O/U 4.5
+1115989: Real Racing Club vs. UD Las Palmas: Both Teams to Score
+1115990: CD Mirandés vs. FC Andorra: O/U 1.5
+1115991: CD Mirandés vs. FC Andorra: O/U 2.5
+1115992: CD Mirandés vs. FC Andorra: O/U 3.5
+1115993: CD Mirandés vs. FC Andorra: O/U 4.5
+1115994: CD Mirandés vs. FC Andorra: Both Teams to Score
+1116023: Will Emmanuel Macron be the next leader out before 2027?
+1116024: Will Recep Tayyip Erdoğan be the next leader out before 2027?
+1116025: Will Kim Jong Un be the next leader out before 2027?
+1116026: Will Xi Jinping be the next leader out before 2027?
+1116027: Will Ali Khamenei be the next leader out before 2027?
+1116028: Will Benjamin Netanyahu be the next leader out before 2027?
+1116029: Will Anthony Albanese be the next leader out before 2027?
+1116030: Will Gavin Newsom be the next leader out before 2027?
+1116031: Will Javier Milei be the next leader out before 2027?
+1116032: Will Keir Starmer be the next leader out before 2027?
+1116033: Will Donald Trump be the next leader out before 2027?
+1116034: Will Volodymyr Zelenskyy be the next leader out before 2027?
+1116035: Will Vladimir Putin be the next leader out before 2027?
+1116036: Will Luiz Inácio Lula da Silva be the next leader out before 2027?
+1116037: Will Sébastien Lecornu be the next leader out before 2027?
+1116038: Will Sanae Takaichi be the next leader out before 2027?
+1116039: Will Dick Schoof be the next leader out before 2027?
+1116040: Will Mahmoud Abbas be the next leader out before 2027?
+1116041: Will Friedrich Merz be the next leader out before 2027?
+1116042: Will Pedro Sánchez be the next leader out before 2027?
+1116043: Will Claudia Sheinbaum be the next leader out before 2027?
+1116044: Will Miguel Díaz-Canel be the next leader out before 2027?
+1116045: Will Gustavo Petro be the next leader out before 2027?
+1116046: Will Viktor Orbán be the next leader out before 2027?
+1116047: Will Delcy Rodríguez be the next leader out before 2027?
+1116048: Will Ahmed al-Sharaa be the next leader out before 2027?
+1116049: Will no listed leader be out before 2027?
+1116062: Will Trump endorse María Corina Machado for Venezuela president in 2026?
+1116257: Will Trump's approval rating be less than 41.0 on January 16, 2026?
+1116258: Will Trump's approval rating be between 41.0 and 41.4 on January 16, 2026?
+1116259: Will Trump's approval rating be between 41.5 and 41.9 on January 16, 2026?
+1116260: Will Trump's approval rating be between 42.0 and 42.4 on January 16, 2026?
+1116261: Will Trump's approval rating be between 42.5 and 42.9 on January 16, 2026?
+1116262: Will Trump's approval rating be at least 43.0 on January 16, 2026?
+1116263: Trump approval Up or Down this week?
+1116264: Will Al Riyadh Saudi Club win on 2026-02-02?
+1116265: Will Al Riyadh Saudi Club vs. Al Nassr Saudi Club end in a draw?
+1116266: Will Al Nassr Saudi Club win on 2026-02-02?
+1116267: Will Al Hilal Saudi Club win on 2026-02-02?
+1116268: Will Al Hilal Saudi Club vs. Al Ahli Saudi Club end in a draw?
+1116269: Will Al Ahli Saudi Club win on 2026-02-02?
+1116270: Will Al Okhdood SC win on 2026-02-02?
+1116271: Will Al Okhdood SC vs. NEOM SC end in a draw?
+1116272: Will NEOM SC win on 2026-02-02?
+1116334: Will the Bank of Israel decrease the Bank of Israel Interest Rate after the February decision?
+1116335: Will the Bank of Israel make no change to the Bank of Israel Interest Rate after the February decision?
+1116336: Will the Bank of Israel increase the Bank of Israel Interest Rate after the February decision?
+1116442: Chargers vs. Patriots
+1116452: 49ers vs. Eagles
+1116482: Bills vs. Jaguars
+1116492: Texans vs. Steelers
+1116538: Will the Bank of Israel decrease the Bank of Israel Interest Rate after the March decision?
+1116539: Will the Bank of Israel make no change to the Bank of Israel Interest Rate after the March decision?
+1116540: Will the Bank of Israel increase the Bank of Israel Interest Rate after the March decision?
+1116570: Will Harlequins win?
+1116571: Will the match end in a draw?
+1116572: Will Leicester Tigers win?
+1116581: Will the U.S. invade Colombia in 2026?
+1116586: Will Gloucester win?
+1116587: Will the match end in a draw?
+1116588: Will Bath win?
+1116589: Will Exeter Chiefs win?
+1116590: Will the match end in a draw?
+1116591: Will Bristol Bears win?
+1116592: Will Saracens win?
+1116593: Will the match end in a draw?
+1116594: Will Newcastle Red Bulls win?
+1116595: Will Sale Sharks win?
+1116596: Will the match end in a draw?
+1116597: Will Northampton Saints win?
+1116598: Will ASM Clermont Auvergne win?
+1116599: Will the match end in a draw?
+1116600: Will La Rochelle win?
+1116601: Will Bayonne win?
+1116602: Will the match end in a draw?
+1116603: Will Castres Olympique win?
+1116604: Will Racing 92 win?

@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1155470: Ethereum Up or Down - January 11, 4:45PM-4:50PM ET
+1155471: Solana Up or Down - January 11, 4:45PM-4:50PM ET
+1155472: Ethereum Up or Down - January 11, 4:50PM-4:55PM ET
+1155473: XRP Up or Down - January 11, 4:50PM-4:55PM ET
+1155474: Bitcoin Up or Down - January 11, 4:50PM-4:55PM ET
+1155475: Solana Up or Down - January 11, 4:50PM-4:55PM ET
+1155476: Bitcoin Up or Down - January 12, 5PM ET
+1155479: Ethereum Up or Down - January 12, 5PM ET
+1155482: Solana Up or Down - January 12, 5PM ET
+1155483: Dota 2: Rune Eaters vs Aurora (BO3)
+1155485: Dota 2: Rune Eaters vs Aurora - Game 2 Winner
+1155486: Games Total: O/U 2.5
+1155487: Game Handicap: AUR (-1.5)
+1155488: XRP Up or Down - January 12, 5PM ET
+1155489: Rune Eaters to win 1 games?
+1155490: Rune Eaters to win 2 games?
+1155491: Aurora to win 1 games?
+1155492: Aurora to win 2 games?
+1155493: Carrarese Calcio vs. Empoli FC: O/U 1.5
+1155494: Carrarese Calcio vs. Empoli FC: O/U 2.5
+1155495: Carrarese Calcio vs. Empoli FC: O/U 3.5
+1155496: Carrarese Calcio vs. Empoli FC: O/U 4.5
+1155497: Carrarese Calcio vs. Empoli FC: Both Teams to Score
+1155498: Invictus Gaming to win 1 games?
+1155499: Invictus Gaming to win 2 games?
+1155500: Invictus Gaming to win 1 games?
+1155501: Invictus Gaming to win 2 games?
+1155502: Invictus Gaming to win 1 games?
+1155503: Invictus Gaming to win 2 games?
+1155504: Spread: Iowa Hawkeyes (-1.5)
+1155505: Illinois Fighting Illini vs. Iowa Hawkeyes: O/U 140.5
+1155510: XRP Up or Down - January 11, 4:55PM-5:00PM ET
+1155511: Ethereum Up or Down - January 11, 4:55PM-5:00PM ET
+1155512: Solana Up or Down - January 11, 4:55PM-5:00PM ET
+1155513: XRP Up or Down - January 11, 5:00PM-5:15PM ET
+1155514: Solana Up or Down - January 11, 5:00PM-5:15PM ET
+1155515: Bitcoin Up or Down - January 11, 4:55PM-5:00PM ET
+1155516: Bitcoin Up or Down - January 11, 5:00PM-5:15PM ET
+1155517: Ethereum Up or Down - January 11, 5:00PM-5:15PM ET
+1155518: Ethereum Up or Down - January 11, 5:00PM-5:05PM ET
+1155519: Solana Up or Down - January 11, 5:00PM-5:05PM ET
+1155520: XRP Up or Down - January 11, 5:00PM-5:05PM ET
+1155521: Bitcoin Up or Down - January 11, 5:00PM-5:05PM ET
+1155525: Spread: Grizzlies (-7.5)
+1155526: Nets vs. Grizzlies: O/U 222.5
+1155527: Spread: 76ers (-3.5)
+1155528: 76ers vs. Raptors: O/U 224.5
+1155529: Knicks vs. Trail Blazers: O/U 232.5
+1155530: Bitcoin Up or Down - January 11, 5:05PM-5:10PM ET
+1155531: XRP Up or Down - January 11, 5:05PM-5:10PM ET
+1155532: Ethereum Up or Down - January 11, 5:05PM-5:10PM ET
+1155533: Solana Up or Down - January 11, 5:05PM-5:10PM ET
+1155536: Bitcoin Up or Down - January 11, 5:15PM-5:30PM ET
+1155537: Solana Up or Down - January 11, 5:10PM-5:15PM ET
+1155538: Ethereum Up or Down - January 11, 5:15PM-5:30PM ET
+1155539: XRP Up or Down - January 11, 5:10PM-5:15PM ET
+1155540: Bitcoin Up or Down - January 11, 5:10PM-5:15PM ET
+1155541: Solana Up or Down - January 11, 5:15PM-5:30PM ET
+1155542: Ethereum Up or Down - January 11, 5:10PM-5:15PM ET
+1155543: XRP Up or Down - January 11, 5:15PM-5:30PM ET
+1155716: Solana Up or Down - January 11, 5:15PM-5:20PM ET
+1155717: Bitcoin Up or Down - January 11, 5:15PM-5:20PM ET
+1155721: XRP Up or Down - January 11, 5:15PM-5:20PM ET
+1155722: Ethereum Up or Down - January 11, 5:15PM-5:20PM ET
+1155733: Ethereum Up or Down - January 11, 5:20PM-5:25PM ET
+1155734: Solana Up or Down - January 11, 5:20PM-5:25PM ET
+1155735: Bitcoin Up or Down - January 11, 5:20PM-5:25PM ET
+1155736: XRP Up or Down - January 11, 5:20PM-5:25PM ET
+1155737: Dota 2: Zero Tenacity vs Natus Vincere (BO3)
+1155739: Dota 2: Zero Tenacity vs Natus Vincere - Game 2 Winner
+1155740: Games Total: O/U 2.5
+1155741: Game Handicap: Na`Vi (-1.5)
+1155742: Natus Vincere to win 1 games?
+1155743: Natus Vincere to win 2 games?
+1155744: Zero Tenacity to win 1 games?
+1155745: Zero Tenacity to win 2 games?
+1155746: Solana Up or Down - January 11, 5:25PM-5:30PM ET
+1155747: XRP Up or Down - January 11, 5:25PM-5:30PM ET
+1155748: Bitcoin Up or Down - January 11, 5:25PM-5:30PM ET
+1155749: Ethereum Up or Down - January 11, 5:25PM-5:30PM ET
+1155750: Bitcoin Up or Down - January 11, 5:30PM-5:45PM ET
+1155751: Ethereum Up or Down - January 11, 5:30PM-5:45PM ET
+1155752: Solana Up or Down - January 11, 5:30PM-5:45PM ET
+1155753: XRP Up or Down - January 11, 5:30PM-5:45PM ET
+1155754: Natus Vincere to win 1 games?
+1155755: Natus Vincere to win 2 games?
+1155756: Ethereum Up or Down - January 11, 5:30PM-5:35PM ET
+1155757: XRP Up or Down - January 11, 5:30PM-5:35PM ET
+1155758: Bitcoin Up or Down - January 11, 5:30PM-5:35PM ET
+1155759: Solana Up or Down - January 11, 5:30PM-5:35PM ET
+1155760: Ethereum Up or Down - January 11, 5:35PM-5:40PM ET
+1155761: Bitcoin Up or Down - January 11, 5:35PM-5:40PM ET
+1155762: XRP Up or Down - January 11, 5:35PM-5:40PM ET
+1155763: Solana Up or Down - January 11, 5:35PM-5:40PM ET
+1155764: XRP Up or Down - January 11, 5:40PM-5:45PM ET
+1155765: Ethereum Up or Down - January 11, 5:40PM-5:45PM ET
+1155766: Solana Up or Down - January 11, 5:40PM-5:45PM ET
+1155767: Bitcoin Up or Down - January 11, 5:40PM-5:45PM ET
+1155768: XRP Up or Down - January 11, 5:45PM-6:00PM ET
+1155769: Ethereum Up or Down - January 11, 5:45PM-6:00PM ET
+1155770: Bitcoin Up or Down - January 11, 5:45PM-6:00PM ET
+1155771: Solana Up or Down - January 11, 5:45PM-6:00PM ET
+1155772: Map Handicap: REGAIN (-1.5)
+1155773: Solana Up or Down - January 11, 5:45PM-5:50PM ET
+1155774: Ethereum Up or Down - January 11, 5:45PM-5:50PM ET
+1155775: Bitcoin Up or Down - January 11, 5:45PM-5:50PM ET
+1155776: XRP Up or Down - January 11, 5:45PM-5:50PM ET
+1155777: Bitcoin Up or Down - January 11, 5:50PM-5:55PM ET
+1155778: Solana Up or Down - January 11, 5:50PM-5:55PM ET
+1155779: Ethereum Up or Down - January 11, 5:50PM-5:55PM ET
+1155780: XRP Up or Down - January 11, 5:50PM-5:55PM ET
+1155781: Bitcoin Up or Down - January 12, 6PM ET
+1155782: Ethereum Up or Down - January 12, 6PM ET
+1155783: Solana Up or Down - January 12, 6PM ET
+1155784: UFC 325: Volkanovski vs. Lopes (Featherweight, Main Card)
+1155785: Fight to Go the Distance?
+1155786: Will the fight be won by KO or TKO?
+1155787: Will Alexander Volkanovski win by KO or TKO?
+1155788: Will Diego Lopes win by KO or TKO?
+1155789: Will the fight be won by submission?
+1155790: O/U 0.5 Rounds
+1155791: O/U 1.5 Rounds
+1155792: O/U 2.5 Rounds
+1155793: O/U 3.5 Rounds
+1155794: O/U 4.5 Rounds
+1155795: XRP Up or Down - January 12, 6PM ET
+1155796: UFC 325: Hooker vs. Saint Denis (Lightweight, Main Card)
+1155797: Fight to Go the Distance?
+1155798: Will the fight be won by KO or TKO?
+1155799: Will Dan Hooker win by KO or TKO?
+1155800: Will Benoît Saint Denis win by KO or TKO?
+1155801: Will the fight be won by submission?
+1155802: O/U 0.5 Rounds
+1155803: O/U 1.5 Rounds
+1155804: O/U 2.5 Rounds
+1155805: UFC 325: Fiziev vs. Ruffy (Lightweight, Main Card)
+1155806: Fight to Go the Distance?
+1155807: Will the fight be won by KO or TKO?
+1155808: Will Rafael Fiziev win by KO or TKO?
+1155809: Will Mauricio Ruffy win by KO or TKO?
+1155810: Will the fight be won by submission?
+1155811: O/U 0.5 Rounds
+1155812: O/U 1.5 Rounds
+1155813: O/U 2.5 Rounds
+1155814: UFC 325: Tuivasa vs. Teixeira (Heavyweight, Main Card)
+1155815: Fight to Go the Distance?
+1155816: Will the fight be won by KO or TKO?
+1155817: Will Tai Tuivasa win by KO or TKO?
+1155818: Will Tallison Teixeira win by KO or TKO?
+1155819: Will the fight be won by submission?
+1155820: O/U 0.5 Rounds
+1155821: O/U 1.5 Rounds
+1155822: O/U 2.5 Rounds
+1155823: UFC 325: Jacoby vs. Crute (Light Heavyweight, Main Card)
+1155824: Fight to Go the Distance?
+1155825: Will the fight be won by KO or TKO?
+1155826: Will Dustin Jacoby win by KO or TKO?
+1155827: Will Jimmy Crute win by KO or TKO?
+1155828: Will the fight be won by submission?
+1155829: O/U 0.5 Rounds
+1155830: O/U 1.5 Rounds
+1155831: O/U 2.5 Rounds
+1155832: Spread: UAB Blazers (-7.5)
+1155833: UAB Blazers vs. East Carolina Pirates: O/U 146.5
+1155834: Spread: Charlotte 49ers (-1.5)
+1155835: Charlotte 49ers vs. Rice Owls: O/U 139.5
+1155836: Spread: Florida Atlantic Owls (-1.5)
+1155837: Memphis Tigers vs. Florida Atlantic Owls: O/U 151.5
+1155838: Spread: Wichita State Shockers (-5.5)
+1155839: North Texas Mean Green vs. Wichita State Shockers: O/U 125.5
+1155840: Spread: Richmond Spiders (-8.5)
+1155841: Saint Joseph's Hawks vs. Richmond Spiders: O/U 151.5
+1155842: Spread: UCF Knights (-3.5)
+1155843: Cincinnati Bearcats vs. UCF Knights: O/U 149.5
+1155844: Illinois Fighting Illini vs. Iowa Hawkeyes: O/U 145.5
+1155845: Illinois Fighting Illini vs. Iowa Hawkeyes: O/U 143.5
+1155846: Spread: Northwestern Wildcats (-4.5)
+1155847: Northwestern Wildcats vs. Rutgers Scarlet Knights: O/U 144.5
+1155848: Spread: Washington Huskies (-2.5)
+1155849: Ohio State Buckeyes vs. Washington Huskies: O/U 152.5
+1155850: Spread: Saint Peter's Peacocks (-1.5)
+1155851: Merrimack College Warriors vs. Saint Peter's Peacocks: O/U 130.5
+1155852: Spread: Quinnipiac Bobcats (-5.5)
+1155853: Quinnipiac Bobcats vs. Sacred Heart Pioneers: O/U 152.5
+1155854: Spread: Milwaukee Panthers (-11.5)
+1155855: IU Indy Jaguars vs. Milwaukee Panthers: O/U 164.5
+1155856: Spread: Robert Morris Colonials (-4.5)
+1155857: Purdue Fort Wayne Mastodons vs. Robert Morris Colonials: O/U 145.5
+1155858: Spread: Northern Kentucky Norse (-2.5)
+1155859: Northern Kentucky Norse vs. Green Bay Phoenix: O/U 146.5
+1155860: Spread: Oakland Golden Grizzlies (-3.5)
+1155861: Wright State Raiders vs. Oakland Golden Grizzlies: O/U 159.5
+1155862: Spread: Detroit Titans (-7.5)
+1155863: Cleveland State Vikings vs. Detroit Titans: O/U 159.5
+1155864: Spread: Detroit Titans (-8.5)
+1155865: Spread: Siena Saints (-3.5)
+1155866: Siena Saints vs. Mount St. Mary's Mountaineers: O/U 137.5
+1155867: Spread: Manhattan Jaspers (-6.5)
+1155868: Niagara Purple Eagles vs. Manhattan Jaspers: O/U 144.5
+1155869: Spread: Marist Red Foxes (-10.5)
+1155870: Marist Red Foxes vs. Rider Broncs: O/U 127.5
+1155871: Spread: Iona Gaels (-11.5)
+1155872: Canisius Golden Griffins vs. Iona Gaels: O/U 141.5
+1155873: Spread: Iona Gaels (-12.5)
+1155874: Ethereum Up or Down - January 11, 6:00PM-6:15PM ET
+1155875: Solana Up or Down - January 11, 6:00PM-6:15PM ET
+1155876: Ethereum Up or Down - January 11, 5:55PM-6:00PM ET
+1155877: XRP Up or Down - January 11, 6:00PM-6:15PM ET
+1155878: XRP Up or Down - January 11, 5:55PM-6:00PM ET
+1155879: Solana Up or Down - January 11, 5:55PM-6:00PM ET
+1155880: Bitcoin Up or Down - January 11, 5:55PM-6:00PM ET
+1155881: Bitcoin Up or Down - January 11, 6:00PM-6:15PM ET
+1155885: XRP Up or Down - January 11, 6:00PM-6:05PM ET
+1155886: Bitcoin Up or Down - January 11, 6:00PM-6:05PM ET
+1155887: Solana Up or Down - January 11, 6:00PM-6:05PM ET
+1155888: Ethereum Up or Down - January 11, 6:00PM-6:05PM ET
+1155889: Series: Aurora Kill Handicap (-17.5)
+1155890: Series: Aurora Kill Handicap (-19.5)
+1155891: Series: Aurora Kill Handicap (-18.5)
+1155892: Series: Most kills?
+1155894: Ayo Dosunmu: Assists Over 3.5
+1155895: Kevin Huerter: Assists Over 2.5
+1155896: Spread: Grizzlies (-6.5)
+1155897: 76ers vs. Raptors: O/U 223.5
+1155898: Spread: Bucks (-1.5)
+1155899: Bucks vs. Nuggets: O/U 222.5
+1155900: Bitcoin Up or Down - January 11, 6:05PM-6:10PM ET
+1155901: Solana Up or Down - January 11, 6:05PM-6:10PM ET
+1155902: Ethereum Up or Down - January 11, 6:05PM-6:10PM ET
+1155903: XRP Up or Down - January 11, 6:05PM-6:10PM ET
+1155904: Bitcoin Up or Down - January 11, 6:10PM-6:15PM ET
+1155905: Solana Up or Down - January 11, 6:10PM-6:15PM ET
+1155906: Ethereum Up or Down - January 11, 6:10PM-6:15PM ET
+1155907: XRP Up or Down - January 11, 6:10PM-6:15PM ET
+1155908: XRP Up or Down - January 11, 6:15PM-6:30PM ET
+1155909: Ethereum Up or Down - January 11, 6:15PM-6:30PM ET
+1155910: Solana Up or Down - January 11, 6:15PM-6:30PM ET
+1155911: Bitcoin Up or Down - January 11, 6:15PM-6:30PM ET
+1156091: Ethereum Up or Down - January 11, 6:15PM-6:20PM ET
+1156092: Bitcoin Up or Down - January 11, 6:15PM-6:20PM ET
+1156093: XRP Up or Down - January 11, 6:15PM-6:20PM ET
+1156094: Solana Up or Down - January 11, 6:15PM-6:20PM ET
+1156098: Series FUT Esports Rounds Handicap (-6.5)
+1156101: Ethereum Up or Down - January 11, 6:20PM-6:25PM ET
+1156102: Bitcoin Up or Down - January 11, 6:20PM-6:25PM ET
+1156103: Solana Up or Down - January 11, 6:20PM-6:25PM ET
+1156104: XRP Up or Down - January 11, 6:20PM-6:25PM ET
+1156105: XRP Up or Down - January 11, 6:30PM-6:45PM ET
+1156106: Bitcoin Up or Down - January 11, 6:25PM-6:30PM ET
+1156107: Solana Up or Down - January 11, 6:30PM-6:45PM ET
+1156108: Ethereum Up or Down - January 11, 6:25PM-6:30PM ET
+1156109: Ethereum Up or Down - January 11, 6:30PM-6:45PM ET
+1156110: Bitcoin Up or Down - January 11, 6:30PM-6:45PM ET
+1156111: XRP Up or Down - January 11, 6:25PM-6:30PM ET
+1156112: Solana Up or Down - January 11, 6:25PM-6:30PM ET
+1156113: Ethereum Up or Down - January 11, 6:30PM-6:35PM ET
+1156114: XRP Up or Down - January 11, 6:30PM-6:35PM ET
+1156115: Bitcoin Up or Down - January 11, 6:30PM-6:35PM ET
+1156116: Solana Up or Down - January 11, 6:30PM-6:35PM ET
+1156117: Solana Up or Down - January 11, 6:35PM-6:40PM ET
+1156118: Ethereum Up or Down - January 11, 6:35PM-6:40PM ET
+1156119: XRP Up or Down - January 11, 6:35PM-6:40PM ET
+1156120: Bitcoin Up or Down - January 11, 6:35PM-6:40PM ET
+1156121: XRP Up or Down - January 11, 6:40PM-6:45PM ET
+1156122: Solana Up or Down - January 11, 6:40PM-6:45PM ET
+1156123: Bitcoin Up or Down - January 11, 6:40PM-6:45PM ET
+1156124: Ethereum Up or Down - January 11, 6:40PM-6:45PM ET
+1156125: Ethereum Up or Down - January 11, 6:45PM-7:00PM ET
+1156126: Bitcoin Up or Down - January 11, 6:45PM-7:00PM ET
+1156127: XRP Up or Down - January 11, 6:45PM-7:00PM ET
+1156128: Solana Up or Down - January 11, 6:45PM-7:00PM ET
+1156129: Series: Most kills?
+1156130: Series: Natus Vincere Kill Handicap (-21.5)
+1156131: Series: Natus Vincere Kill Handicap (-20.5)
+1156132: Series: Natus Vincere Kill Handicap (-19.5)
+1156133: Bitcoin Up or Down - January 11, 6:45PM-6:50PM ET
+1156134: Ethereum Up or Down - January 11, 6:45PM-6:50PM ET
+1156135: Solana Up or Down - January 11, 6:45PM-6:50PM ET
+1156136: XRP Up or Down - January 11, 6:45PM-6:50PM ET
+1156137: Bitcoin Up or Down - January 11, 6:50PM-6:55PM ET
+1156138: Ethereum Up or Down - January 11, 6:50PM-6:55PM ET
+1156139: Solana Up or Down - January 11, 6:50PM-6:55PM ET
+1156140: XRP Up or Down - January 11, 6:50PM-6:55PM ET
+1156141: Bitcoin Up or Down - January 12, 7PM ET
+1156142: Ethereum Up or Down - January 12, 7PM ET
+1156143: Solana Up or Down - January 12, 7PM ET
+1156144: Set Handicap: Kasatkina (-1.5) vs Sakkari (+1.5)
+1156145: XRP Up or Down - January 12, 7PM ET
+1156146: NEOM SC vs. Al Ahli Saudi Club: O/U 1.5
+1156147: NEOM SC vs. Al Ahli Saudi Club: O/U 2.5
+1156148: NEOM SC vs. Al Ahli Saudi Club: O/U 3.5
+1156149: NEOM SC vs. Al Ahli Saudi Club: O/U 4.5
+1156150: NEOM SC vs. Al Ahli Saudi Club: Both Teams to Score
+1156151: Set Handicap: Tauson (-1.5) vs Tomljanovic (+1.5)
+1156152: Set Handicap: Andreeva (-1.5) vs Fernandez (+1.5)
+1156153: Al Kholood Saudi Club vs. Al Ettifaq Saudi Club: O/U 1.5
+1156154: Al Kholood Saudi Club vs. Al Ettifaq Saudi Club: O/U 2.5
+1156155: Al Kholood Saudi Club vs. Al Ettifaq Saudi Club: O/U 3.5
+1156156: Al Kholood Saudi Club vs. Al Ettifaq Saudi Club: O/U 4.5
+1156157: Al Kholood Saudi Club vs. Al Ettifaq Saudi Club: Both Teams to Score
+1156158: Set Handicap: Joint (-1.5) vs Kenin (+1.5)
+1156159: Al Khaleej Saudi Club vs. Al Shabab Saudi Club: O/U 1.5
+1156160: Al Khaleej Saudi Club vs. Al Shabab Saudi Club: O/U 2.5
+1156161: Al Khaleej Saudi Club vs. Al Shabab Saudi Club: O/U 3.5
+1156162: Al Khaleej Saudi Club vs. Al Shabab Saudi Club: O/U 4.5
+1156163: Al Khaleej Saudi Club vs. Al Shabab Saudi Club: Both Teams to Score
+1156164: Set Handicap: Mboko (-1.5) vs Maia (+1.5)
+1156165: Set Handicap: Shnaider (-1.5) vs Birrell (+1.5)
+1156166: Set Handicap: Samsonova (-1.5) vs Vondrousova (+1.5)
+1156167: Set Handicap: Navarro (-1.5) vs Jones (+1.5)
+1156168: Spread: UAB Blazers (-8.5)
+1156169: UAB Blazers vs. East Carolina Pirates: O/U 145.5
+1156170: Charlotte 49ers vs. Rice Owls: O/U 140.5
+1156171: Spread: Rice Owls (-0.5)
+1156172: Spread: Florida Atlantic Owls (-2.5)
+1156173: Spread: Wichita State Shockers (-6.5)
+1156174: North Texas Mean Green vs. Wichita State Shockers: O/U 126.5
+1156175: Saint Joseph's Hawks vs. Richmond Spiders: O/U 150.5
+1156176: Cincinnati Bearcats vs. UCF Knights: O/U 150.5
+1156177: Illinois Fighting Illini vs. Iowa Hawkeyes: O/U 144.5
+1156178: Quinnipiac Bobcats vs. Sacred Heart Pioneers: O/U 151.5
+1156179: IU Indy Jaguars vs. Milwaukee Panthers: O/U 165.5
+1156180: Spread: Robert Morris Colonials (-5.5)
+1156181: Spread: Oakland Golden Grizzlies (-4.5)
+1156182: Spread: Detroit Titans (-6.5)
+1156183: Cleveland State Vikings vs. Detroit Titans: O/U 160.5
+1156184: Siena Saints vs. Mount St. Mary's Mountaineers: O/U 139.5
+1156185: Spread: Marist Red Foxes (-11.5)
+1156186: Marist Red Foxes vs. Rider Broncs: O/U 128.5
+1156187: XRP Up or Down - January 11, 6:55PM-7:00PM ET
+1156188: Solana Up or Down - January 11, 6:55PM-7:00PM ET
+1156189: Ethereum Up or Down - January 11, 6:55PM-7:00PM ET
+1156190: Bitcoin Up or Down - January 11, 6:55PM-7:00PM ET
+1156191: Bitcoin Up or Down - January 11, 7:00PM-7:15PM ET
+1156192: Solana Up or Down - January 11, 7:00PM-7:15PM ET
+1156193: Ethereum Up or Down - January 11, 7:00PM-7:15PM ET
+1156194: XRP Up or Down - January 11, 7:00PM-7:15PM ET
+1156195: XRP Up or Down - January 11, 7:00PM-7:05PM ET
+1156196: Solana Up or Down - January 11, 7:00PM-7:05PM ET
+1156197: Bitcoin Up or Down - January 11, 7:00PM-7:05PM ET
+1156198: Ethereum Up or Down - January 11, 7:00PM-7:05PM ET
+1156199: Ausar Thompson: Assists Over 3.5
+1156200: Paul Reed: Assists Over 2.5
+1156202: Max Christie: Assists Over 2.5
+1156204: Zion Williamson: Points Over 23.5
+1156205: Paolo Banchero: Points Over 23.5
+1156206: Trey Murphy III: Points Over 21.5
+1156207: Desmond Bane: Points Over 19.5
+1156208: Anthony Black: Points Over 18.5
+1156209: Jeremiah Fears: Points Over 13.5
+1156210: Derik Queen: Points Over 13.5
+1156211: Wendell Carter Jr.: Points Over 13.5
+1156212: Jordan Poole: Points Over 11.5
+1156213: Tristan da Silva: Points Over 10.5
+1156214: Derik Queen: Rebounds Over 8.5
+1156215: Paolo Banchero: Rebounds Over 8.5
+1156216: Wendell Carter Jr.: Rebounds Over 7.5
+1156217: Trey Murphy III: Rebounds Over 5.5
+1156218: Zion Williamson: Rebounds Over 5.5
+1156219: Yves Missi: Rebounds Over 4.5
+1156220: Desmond Bane: Rebounds Over 4.5
+1156221: Anthony Black: Rebounds Over 4.5
+1156222: Goga Bitadze: Rebounds Over 4.5
+1156223: Jeremiah Fears: Rebounds Over 3.5
+1156224: Paolo Banchero: Assists Over 5.5
+1156225: Derik Queen: Assists Over 4.5
+1156226: Desmond Bane: Assists Over 4.5
+1156227: Anthony Black: Assists Over 4.5
+1156228: Trey Murphy III: Assists Over 3.5
+1156229: Jeremiah Fears: Assists Over 3.5
+1156230: Zion Williamson: Assists Over 3.5
+1156231: Jordan Poole: Assists Over 2.5
+1156232: Spread: Bucks (-2.5)
+1156233: Hawks vs. Warriors: O/U 234.5
+1156234: Spread: Rockets (-13.5)
+1156235: Rockets vs. Kings: O/U 223.5
+1156236: Kevin Durant: Points Over 28.5
+1156237: Amen Thompson: Points Over 20.5
+1156238: Jabari Smith Jr.: Points Over 15.5
+1156239: Reed Sheppard: Points Over 13.5
+1156240: Steven Adams: Points Over 7.5
+1156241: Steven Adams: Rebounds Over 8.5
+1156242: Jabari Smith Jr.: Rebounds Over 7.5
+1156243: Amen Thompson: Rebounds Over 7.5
+1156244: Kevin Durant: Rebounds Over 5.5
+1156245: Reed Sheppard: Rebounds Over 2.5
+1156246: Kevin Durant: Assists Over 5.5
+1156247: Amen Thompson: Assists Over 5.5
+1156248: Reed Sheppard: Assists Over 3.5
+1156249: Jabari Smith Jr.: Assists Over 2.5
+1156250: XRP Up or Down - January 11, 7:05PM-7:10PM ET
+1156251: Ethereum Up or Down - January 11, 7:05PM-7:10PM ET
+1156252: Solana Up or Down - January 11, 7:05PM-7:10PM ET
+1156253: Bitcoin Up or Down - January 11, 7:05PM-7:10PM ET
+1156254: Bitcoin Up or Down - January 11, 7:15PM-7:30PM ET
+1156255: Solana Up or Down - January 11, 7:10PM-7:15PM ET
+1156256: Ethereum Up or Down - January 11, 7:15PM-7:30PM ET
+1156257: Ethereum Up or Down - January 11, 7:10PM-7:15PM ET
+1156258: XRP Up or Down - January 11, 7:10PM-7:15PM ET
+1156259: Solana Up or Down - January 11, 7:15PM-7:30PM ET
+1156260: XRP Up or Down - January 11, 7:15PM-7:30PM ET
+1156261: Bitcoin Up or Down - January 11, 7:10PM-7:15PM ET
+1156262: Map Handicap: SR (-1.5)
+1156371: Bitcoin Up or Down - January 11, 7:15PM-7:20PM ET
+1156372: Ethereum Up or Down - January 11, 7:15PM-7:20PM ET
+1156373: Solana Up or Down - January 11, 7:15PM-7:20PM ET
+1156374: XRP Up or Down - January 11, 7:15PM-7:20PM ET
+1156379: XRP Up or Down - January 11, 7:20PM-7:25PM ET
+1156380: Ethereum Up or Down - January 11, 7:20PM-7:25PM ET
+1156381: Solana Up or Down - January 11, 7:20PM-7:25PM ET
+1156382: Bitcoin Up or Down - January 11, 7:20PM-7:25PM ET
+1156383: Bitcoin Up or Down - January 11, 7:30PM-7:45PM ET
+1156384: Ethereum Up or Down - January 11, 7:25PM-7:30PM ET
+1156385: Ethereum Up or Down - January 11, 7:30PM-7:45PM ET
+1156386: XRP Up or Down - January 11, 7:25PM-7:30PM ET
+1156387: XRP Up or Down - January 11, 7:30PM-7:45PM ET
+1156388: Solana Up or Down - January 11, 7:30PM-7:45PM ET
+1156389: Bitcoin Up or Down - January 11, 7:25PM-7:30PM ET
+1156390: Solana Up or Down - January 11, 7:25PM-7:30PM ET
+1156391: Ethereum Up or Down - January 11, 7:30PM-7:35PM ET
+1156392: Bitcoin Up or Down - January 11, 7:30PM-7:35PM ET
+1156393: XRP Up or Down - January 11, 7:30PM-7:35PM ET
+1156394: Solana Up or Down - January 11, 7:30PM-7:35PM ET
+1156395: Ethereum Up or Down - January 11, 7:35PM-7:40PM ET
+1156396: Bitcoin Up or Down - January 11, 7:35PM-7:40PM ET
+1156397: Solana Up or Down - January 11, 7:35PM-7:40PM ET
+1156398: XRP Up or Down - January 11, 7:35PM-7:40PM ET
+1156399: Solana Up or Down - January 11, 7:40PM-7:45PM ET
+1156400: Bitcoin Up or Down - January 11, 7:45PM-8:00PM ET
+1156401: XRP Up or Down - January 11, 7:40PM-7:45PM ET
+1156402: Ethereum Up or Down - January 11, 7:40PM-7:45PM ET
+1156403: XRP Up or Down - January 11, 7:45PM-8:00PM ET
+1156404: Bitcoin Up or Down - January 11, 7:40PM-7:45PM ET
+1156405: Ethereum Up or Down - January 11, 7:45PM-8:00PM ET
+1156406: Solana Up or Down - January 11, 7:45PM-8:00PM ET
+1156407: Solana Up or Down - January 11, 7:45PM-7:50PM ET
+1156408: Bitcoin Up or Down - January 11, 7:45PM-7:50PM ET
+1156409: XRP Up or Down - January 11, 7:45PM-7:50PM ET
+1156410: Ethereum Up or Down - January 11, 7:45PM-7:50PM ET
+1156411: Bitcoin Up or Down - January 11, 7:50PM-7:55PM ET
+1156412: XRP Up or Down - January 11, 7:50PM-7:55PM ET
+1156413: Ethereum Up or Down - January 11, 7:50PM-7:55PM ET
+1156414: Solana Up or Down - January 11, 7:50PM-7:55PM ET
+1156415: Bitcoin Up or Down - January 12, 8PM ET
+1156416: Ethereum Up or Down - January 12, 8PM ET
+1156417: Solana Up or Down - January 12, 8PM ET
+1156418: XRP Up or Down - January 12, 8PM ET
+1156419: North Texas Mean Green vs. Wichita State Shockers: O/U 128.5
+1156420: Illinois Fighting Illini vs. Iowa Hawkeyes: O/U 142.5
+1156421: Spread: Washington Huskies (-1.5)
+1156422: Northern Kentucky Norse vs. Green Bay Phoenix: O/U 145.5
+1156423: Northern Kentucky Norse vs. Green Bay Phoenix: O/U 144.5
+1156424: Spread: Siena Saints (-2.5)
+1156425: Spread: Manhattan Jaspers (-7.5)
+1156426: Niagara Purple Eagles vs. Manhattan Jaspers: O/U 143.5
+1156427: Canisius Golden Griffins vs. Iona Gaels: O/U 142.5
+1156428: Bitcoin Up or Down - January 11, 8:00PM-8:15PM ET
+1156429: Solana Up or Down - January 11, 7:55PM-8:00PM ET
+1156430: Solana Up or Down - January 11, 8:00PM-8:15PM ET
+1156431: Ethereum Up or Down - January 11, 8:00PM-8:15PM ET
+1156432: XRP Up or Down - January 11, 7:55PM-8:00PM ET
+1156433: Bitcoin Up or Down - January 11, 7:55PM-8:00PM ET
+1156434: Ethereum Up or Down - January 11, 7:55PM-8:00PM ET
+1156435: XRP Up or Down - January 11, 8:00PM-8:15PM ET
+1156436: Team WE to win 1 games?
+1156437: Team WE to win 2 games?
+1156438: Bitcoin Up or Down - January 11, 8:00PM-12:00AM ET
+1156439: Ethereum Up or Down - January 11, 8:00PM-12:00AM ET
+1156440: Ethereum Up or Down - January 11, 8:00PM-8:05PM ET
+1156441: XRP Up or Down - January 11, 8:00PM-12:00AM ET
+1156442: XRP Up or Down - January 11, 8:00PM-8:05PM ET
+1156443: Bitcoin Up or Down - January 11, 8:00PM-8:05PM ET
+1156444: Solana Up or Down - January 11, 8:00PM-8:05PM ET
+1156445: Solana Up or Down - January 11, 8:00PM-12:00AM ET
+1156446: Jordan Poole: Assists Over 3.5
+1156447: Spread: 76ers (-4.5)
+1156448: Spread: Thunder (-14.5)
+1156449: Heat vs. Thunder: O/U 233.5
+1156450: Bucks vs. Nuggets: O/U 223.5
+1156451: Stephen Curry: Points Over 28.5
+1156452: Jalen Johnson: Points Over 21.5
+1156453: Jimmy Butler III: Points Over 19.5
+1156454: Nickeil Alexander-Walker: Points Over 18.5
+1156455: Onyeka Okongwu: Points Over 14.5
+1156456: CJ McCollum: Points Over 13.5
+1156457: Kristaps Porzingis: Points Over 12.5
+1156458: Dyson Daniels: Points Over 12.5
+1156459: De'Anthony Melton: Points Over 10.5
+1156460: Brandin Podziemski: Points Over 9.5
+1156461: Jalen Johnson: Rebounds Over 9.5
+1156472: Dyson Daniels: Assists Over 5.5
+1156473: Draymond Green: Assists Over 5.5
+1156474: Jimmy Butler III: Assists Over 4.5
+1156475: Stephen Curry: Assists Over 4.5
+1156476: Nickeil Alexander-Walker: Assists Over 3.5
+1156477: Brandin Podziemski: Assists Over 2.5
+1156478: CJ McCollum: Assists Over 2.5
+1156479: Onyeka Okongwu: Assists Over 2.5
+1156480: Alperen Sengün: Points Over 20.5
+1156481: DeMar DeRozan: Points Over 19.5

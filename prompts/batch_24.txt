@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1087451: Will Paula Badosa win the 2026 Women's Australian Open?
+1087452: Will Ekaterina Alexandrova win the 2026 Women's Australian Open?
+1087453: Will McCartney Kessler win the 2026 Women's Australian Open?
+1087454: Will Veronika Kudermetova win the 2026 Women's Australian Open?
+1087455: Will Elise Mertens win the 2026 Women's Australian Open?
+1087456: Will Tereza Valentová win the 2026 Women's Australian Open?
+1087496: Tim Walz in jail by March 31?
+1087497: Tim Walz in jail by December 31?
+1087498: Will Trump sue Powell by March 31?
+1087512: Will Carlos Alcaraz win the 2026 Men's French Open?
+1087513: Will Jannik Sinner win the 2026 Men's French Open?
+1087514: Will Alexander Zverev win the 2026 Men's French Open?
+1087515: Will Novak Djokovic win the 2026 Men's French Open?
+1087516: Will Joao Fonseca win the 2026 Men's French Open?
+1087517: Will Arthur Fils win the 2026 Men's French Open?
+1087518: Will Jack Draper win the 2026 Men's French Open?
+1087519: Will Lorenzo Musetti win the 2026 Men's French Open?
+1087520: Will Casper Ruud win the 2026 Men's French Open?
+1087521: Will Jakub Mensik win the 2026 Men's French Open?
+1087522: Will Stefanos Tsitsipas win the 2026 Men's French Open?
+1087523: Will Taylor Fritz win the 2026 Men's French Open?
+1087524: Will Ben Shelton win the 2026 Men's French Open?
+1087525: Will Francisco Cerundolo win the 2026 Men's French Open?
+1087526: Will Cameron Norrie win the 2026 Men's French Open?
+1087527: Will Karen Khachanov win the 2026 Men's French Open?
+1087528: Will Sebastian Korda win the 2026 Men's French Open?
+1087529: Will Hubert Hurkacz win the 2026 Men's French Open?
+1087530: Will Daniil Medvedev win the 2026 Men's French Open?
+1087531: Will Alex De Minaur win the 2026 Men's French Open?
+1087532: Will Andrey Rublev win the 2026 Men's French Open?
+1087533: Will Jan-Lennard Struff win the 2026 Men's French Open?
+1087534: Will Tommy Paul win the 2026 Men's French Open?
+1087535: Will Grigor Dimitrov win the 2026 Men's French Open?
+1087536: Will Reilly Opelka win the 2026 Men's French Open?
+1087537: Will Tomas Machac win the 2026 Men's French Open?
+1087538: Will Flavio Cobolli win the 2026 Men's French Open?
+1087539: Will Alexander Bublik win the 2026 Men's French Open?
+1087540: Will Jiri Lehecka win the 2026 Men's French Open?
+1087541: Will Matteo Berrettini win the 2026 Men's French Open?
+1087542: Will Marin Cilic win the 2026 Men's French Open?
+1087543: Will Learner Tien win the 2026 Men's French Open?
+1087544: Will Alex Michelsen win the 2026 Men's French Open?
+1087545: Will Felix Auger Aliassime win the 2026 Men's French Open?
+1087546: Will Frances Tiafoe win the 2026 Men's French Open?
+1087547: Will Ugo Humbert win the 2026 Men's French Open?
+1087548: Will Denis Shapovalov win the 2026 Men's French Open?
+1087549: Will Alexei Popyrin win the 2026 Men's French Open?
+1087550: Will Alejandro Tabilo win the 2026 Men's French Open?
+1087551: Will Alejandro Davidovich Fokina win the 2026 Men's French Open?
+1087759: Will Iga Świątek win the 2026 Women’s French Open?
+1087760: Will Aryna Sabalenka win the 2026 Women’s French Open?
+1087761: Will Coco Gauff win the 2026 Women’s French Open?
+1087762: Will Mirra Andreeva win the 2026 Women’s French Open?
+1087763: Will Elena Rybakina win the 2026 Women’s French Open?
+1087764: Will Qinwen Zheng win the 2026 Women’s French Open?
+1087765: Will Madison Keys win the 2026 Women’s French Open?
+1087766: Will Amanda Anisimova win the 2026 Women’s French Open?
+1087767: Will Jasmine Paolini win the 2026 Women’s French Open?
+1087768: Will Elina Svitolina win the 2026 Women’s French Open?
+1087769: Will Karolína Muchová win the 2026 Women’s French Open?
+1087770: Will Barbora Krejčíková win the 2026 Women’s French Open?
+1087771: Will Paula Badosa win the 2026 Women’s French Open?
+1087772: Will Victoria Mboko win the 2026 Women’s French Open?
+1087773: Will Marta Kostyuk win the 2026 Women’s French Open?
+1087774: Will Jessica Pegula win the 2026 Women’s French Open?
+1087775: Will Jelena Ostapenko win the 2026 Women’s French Open?
+1087776: Will Daria Kasatkina win the 2026 Women’s French Open?
+1087777: Will Emma Navarro win the 2026 Women’s French Open?
+1087778: Will Diana Shnaider win the 2026 Women’s French Open?
+1087779: Will Naomi Osaka win the 2026 Women’s French Open?
+1087780: Will Linda Nosková win the 2026 Women’s French Open?
+1087781: Will Anastasia Potapova win the 2026 Women’s French Open?
+1087782: Will Bianca Andreescu win the 2026 Women’s French Open?
+1087783: Will Ekaterina Alexandrova win the 2026 Women’s French Open?
+1087784: Will Markéta Vondroušová win the 2026 Women’s French Open?
+1087785: Will Beatriz Haddad Maia win the 2026 Women’s French Open?
+1087786: Will Liudmila Samsonova win the 2026 Women’s French Open?
+1087787: Will Alexandra Eala win the 2026 Women’s French Open?
+1087788: Will Belinda Bencic win the 2026 Women’s French Open?
+1087789: Will Loïs Boisson win the 2026 Women’s French Open?
+1087790: Will Maria Sakkari win the 2026 Women’s French Open?
+1087791: Will Leylah Fernandez win the 2026 Women’s French Open?
+1087792: Will Victoria Azarenka win the 2026 Women’s French Open?
+1087793: Will Emma Raducanu win the 2026 Women’s French Open?
+1087794: Will Yulia Putintseva win the 2026 Women’s French Open?
+1087795: Will Clara Tauson win the 2026 Women’s French Open?
+1087796: Will Sofia Kenin win the 2026 Women’s French Open?
+1087797: Will Donna Vekić win the 2026 Women’s French Open?
+1087798: Will Anna Kalinskaya win the 2026 Women’s French Open?
+1087799: Will Dayana Yastremska win the 2026 Women’s French Open?
+1087800: Will Karolína Plíšková win the 2026 Women’s French Open?
+1087801: Will Danielle Collins win the 2026 Women’s French Open?
+1087802: Will Katie Boulter win the 2026 Women’s French Open?
+1087803: Will Ons Jabeur win the 2026 Women’s French Open?
+1087804: Will Veronika Kudermetova win the 2026 Women’s French Open?
+1087805: Will Maya Joint win the 2026 Women’s French Open?
+1087858: Blackhawks vs. Penguins
+1087859: Jets vs. Lightning
+1087860: Predators vs. Devils
+1087861: Islanders vs. Rangers
+1087862: Avalanche vs. Canadiens
+1087863: Utah vs. Hurricanes
+1087864: Capitals vs. Red Wings
+1087865: Kings vs. Sabres
+1087866: Flyers vs. Bruins
+1087867: Flames vs. Wild
+1087868: Panthers vs. Blues
+1087869: Sharks vs. Oilers
+1087870: Maple Leafs vs. Kraken
+1087871: Stars vs. Golden Knights
+1087872: Ducks vs. Canucks
+1087890: Will Jannik Sinner be the 2026 Men’s Wimbledon winner?
+1087891: Will Carlos Alcaraz be the 2026 Men’s Wimbledon winner?
+1087892: Will Novak Djokovic be the 2026 Men’s Wimbledon winner?
+1087893: Will Jack Draper be the 2026 Men’s Wimbledon winner?
+1087894: Will Alexander Zverev be the 2026 Men’s Wimbledon winner?
+1087895: Will Taylor Fritz be the 2026 Men’s Wimbledon winner?
+1087896: Will Ben Shelton be the 2026 Men’s Wimbledon winner?
+1087897: Will João Fonseca be the 2026 Men’s Wimbledon winner?
+1087898: Will Jakub Menšík be the 2026 Men’s Wimbledon winner?
+1087899: Will Daniil Medvedev be the 2026 Men’s Wimbledon winner?
+1087900: Will Arthur Fils be the 2026 Men’s Wimbledon winner?
+1087901: Will Tommy Paul be the 2026 Men’s Wimbledon winner?
+1087902: Will Alex de Minaur be the 2026 Men’s Wimbledon winner?
+1087903: Will Grigor Dimitrov be the 2026 Men’s Wimbledon winner?
+1087904: Will Alexander Bublik be the 2026 Men’s Wimbledon winner?
+1087905: Will Lorenzo Musetti be the 2026 Men’s Wimbledon winner?
+1087906: Will Matteo Berrettini be the 2026 Men’s Wimbledon winner?
+1087907: Will Stefanos Tsitsipas be the 2026 Men’s Wimbledon winner?
+1087908: Will Sebastian Korda be the 2026 Men’s Wimbledon winner?
+1087909: Will Gabriel Diallo be the 2026 Men’s Wimbledon winner?
+1087910: Will Félix Auger-Aliassime be the 2026 Men’s Wimbledon winner?
+1087911: Will Andrey Rublev be the 2026 Men’s Wimbledon winner?
+1087912: Will Hubert Hurkacz be the 2026 Men’s Wimbledon winner?
+1087913: Will Giovanni Mpetshi Perricard be the 2026 Men’s Wimbledon winner?
+1087914: Will Lorenzo Sonego be the 2026 Men’s Wimbledon winner?
+1087915: Will Alex Michelsen be the 2026 Men’s Wimbledon winner?
+1087916: Will Frances Tiafoe be the 2026 Men’s Wimbledon winner?
+1087917: Will Cameron Norrie be the 2026 Men’s Wimbledon winner?
+1087918: Will Alexei Popyrin be the 2026 Men’s Wimbledon winner?
+1087919: Will Tallon Griekspoor be the 2026 Men’s Wimbledon winner?
+1087920: Will Jiří Lehečka be the 2026 Men’s Wimbledon winner?
+1087921: Will Francisco Cerúndolo be the 2026 Men’s Wimbledon winner?
+1087922: Will Ugo Humbert be the 2026 Men’s Wimbledon winner?
+1087923: Will Alejandro Davidovich Fokina be the 2026 Men’s Wimbledon winner?
+1087924: Will Casper Ruud be the 2026 Men’s Wimbledon winner?
+1087925: Will Flavio Cobolli be the 2026 Men’s Wimbledon winner?
+1087926: Will Karen Khachanov be the 2026 Men’s Wimbledon winner?
+1087927: Will Tomáš Macháč be the 2026 Men’s Wimbledon winner?
+1087928: Will Nicolás Jarry be the 2026 Men’s Wimbledon winner?
+1087929: Will Marin Čilić be the 2026 Men’s Wimbledon winner?
+1088105: Will Iga Świątek be the 2026 Women’s Wimbledon Winner?
+1088106: Will Aryna Sabalenka be the 2026 Women’s Wimbledon Winner?
+1088107: Will Elena Rybakina be the 2026 Women’s Wimbledon Winner?
+1088108: Will Coco Gauff be the 2026 Women’s Wimbledon Winner?
+1088109: Will Amanda Anisimova be the 2026 Women’s Wimbledon Winner?
+1088110: Will Emma Raducanu be the 2026 Women’s Wimbledon Winner?
+1088111: Will Mirra Andreeva be the 2026 Women’s Wimbledon Winner?
+1088112: Will Madison Keys be the 2026 Women’s Wimbledon Winner?
+1088113: Will Jasmine Paolini be the 2026 Women’s Wimbledon Winner?
+1088114: Will Markéta Vondroušová be the 2026 Women’s Wimbledon Winner?
+1088115: Will Qinwen Zheng be the 2026 Women’s Wimbledon Winner?
+1088116: Will Belinda Bencic be the 2026 Women’s Wimbledon Winner?
+1088117: Will Liudmila Samsonova be the 2026 Women’s Wimbledon Winner?
+1088118: Will Elina Svitolina be the 2026 Women’s Wimbledon Winner?
+1088119: Will Jessica Pegula be the 2026 Women’s Wimbledon Winner?
+1088120: Will Victoria Mboko be the 2026 Women’s Wimbledon Winner?
+1088121: Will Emma Navarro be the 2026 Women’s Wimbledon Winner?
+1088122: Will Linda Nosková be the 2026 Women’s Wimbledon Winner?
+1088123: Will Naomi Osaka be the 2026 Women’s Wimbledon Winner?
+1088124: Will Barbora Krejčíková be the 2026 Women’s Wimbledon Winner?
+1088125: Will Ons Jabeur be the 2026 Women’s Wimbledon Winner?
+1088126: Will Karolína Muchová be the 2026 Women’s Wimbledon Winner?
+1088127: Will Marta Kostyuk be the 2026 Women’s Wimbledon Winner?
+1088128: Will Ekaterina Alexandrova be the 2026 Women’s Wimbledon Winner?
+1088129: Will Paula Badosa be the 2026 Women’s Wimbledon Winner?
+1088130: Will Tatjana Maria be the 2026 Women’s Wimbledon Winner?
+1088131: Will Maya Joint be the 2026 Women’s Wimbledon Winner?
+1088132: Will Clara Tauson be the 2026 Women’s Wimbledon Winner?
+1088133: Will Olga Danilović be the 2026 Women’s Wimbledon Winner?
+1088134: Will McCartney Kessler be the 2026 Women’s Wimbledon Winner?
+1088135: Will Solana Sierra be the 2026 Women’s Wimbledon Winner?
+1088136: Will Ashlyn Krueger be the 2026 Women’s Wimbledon Winner?
+1088137: Will Sonay Kartal be the 2026 Women’s Wimbledon Winner?
+1088138: Will Dayana Yastremska be the 2026 Women’s Wimbledon Winner?
+1088139: Will Leylah Fernandez be the 2026 Women’s Wimbledon Winner?
+1088140: Will Beatriz Haddad Maia be the 2026 Women’s Wimbledon Winner?
+1088141: Will Laura Siegemund be the 2026 Women’s Wimbledon Winner?
+1088142: Will Elise Mertens be the 2026 Women’s Wimbledon Winner?
+1088143: Will Donna Vekić be the 2026 Women’s Wimbledon Winner?
+1088144: Will Xinyu Wang be the 2026 Women’s Wimbledon Winner?
+1088145: Will Anastasia Pavlyuchenkova be the 2026 Women’s Wimbledon Winner?
+1088146: Will Yulia Putintseva be the 2026 Women’s Wimbledon Winner?
+1088147: Will Jelena Ostapenko be the 2026 Women’s Wimbledon Winner?
+1088148: Will Maria Sakkari be the 2026 Women’s Wimbledon Winner?
+1088149: Will Marie Bouzková be the 2026 Women’s Wimbledon Winner?
+1088150: Will Anna Kalinskaya be the 2026 Women’s Wimbledon Winner?
+1088151: Will Diana Shnaider be the 2026 Women’s Wimbledon Winner?
+1088219: Will the winner of Beast Games: Season 2 be Strong or Smart?
+1088344: Fogo FDV above $500M one day after launch?
+1088471: Will Jannik Sinner win the 2026 Men's US Open?
+1088472: Will Carlos Alcaraz win the 2026 Men's US Open?
+1088473: Will Novak Djokovic win the 2026 Men's US Open?
+1088474: Will Jack Draper win the 2026 Men's US Open?
+1088475: Will Alexander Zverev win the 2026 Men's US Open?
+1088476: Will Ben Shelton win the 2026 Men's US Open?
+1088477: Will Taylor Fritz win the 2026 Men's US Open?
+1088478: Will Daniil Medvedev win the 2026 Men's US Open?
+1088479: Will Joao Fonseca win the 2026 Men's US Open?
+1088480: Will Felix Auger Aliassime win the 2026 Men's US Open?
+1088481: Will Jakub Mensik win the 2026 Men's US Open?
+1088482: Will Alexander Bublik win the 2026 Men's US Open?
+1088483: Will Lorenzo Musetti win the 2026 Men's US Open?
+1088484: Will Holger Rune win the 2026 Men's US Open?
+1088485: Will Arthur Fils win the 2026 Men's US Open?
+1088486: Will Jiri Lehecka win the 2026 Men's US Open?
+1088487: Will Flavio Cobolli win the 2026 Men's US Open?
+1088488: Will Matteo Berrettini win the 2026 Men's US Open?
+1088489: Will Andrey Rublev win the 2026 Men's US Open?
+1088490: Will Frances Tiafoe win the 2026 Men's US Open?
+1088491: Will Hubert Hurkacz win the 2026 Men's US Open?
+1088492: Will Grigor Dimitrov win the 2026 Men's US Open?
+1088513: Perth Glory FC vs. Brisbane Roar FC: O/U 1.5
+1088514: Perth Glory FC vs. Brisbane Roar FC: O/U 2.5
+1088515: Perth Glory FC vs. Brisbane Roar FC: O/U 3.5
+1088516: Perth Glory FC vs. Brisbane Roar FC: O/U 4.5
+1088517: Perth Glory FC vs. Brisbane Roar FC: Both Teams to Score
+1088529: Melbourne City FC vs. Auckland FC: O/U 1.5
+1088530: Melbourne City FC vs. Auckland FC: O/U 2.5
+1088531: Melbourne City FC vs. Auckland FC: O/U 3.5
+1088532: Melbourne City FC vs. Auckland FC: O/U 4.5
+1088533: Melbourne City FC vs. Auckland FC: Both Teams to Score
+1088652: Will Aryna Sabalenka win the 2026 Women’s US Open?
+1088653: Will Iga Swiatek win the 2026 Women’s US Open?
+1088654: Will Coco Gauff win the 2026 Women’s US Open?
+1088655: Will Mirra Andreeva win the 2026 Women’s US Open?
+1088656: Will Elena Rybakina win the 2026 Women’s US Open?
+1088657: Will Amanda Anisimova win the 2026 Women’s US Open?
+1088658: Will Naomi Osaka win the 2026 Women’s US Open?
+1088659: Will Qinwen Zheng win the 2026 Women’s US Open?
+1088660: Will Madison Keys win the 2026 Women’s US Open?
+1088661: Will Jessica Pegula win the 2026 Women’s US Open?
+1088662: Will Barbora Krejcikova win the 2026 Women’s US Open?
+1088663: Will Karolina Muchova win the 2026 Women’s US Open?
+1088664: Will Marketa Vondrousova win the 2026 Women’s US Open?
+1088665: Will Victoria Mboko win the 2026 Women’s US Open?
+1088666: Will Emma Navarro win the 2026 Women’s US Open?
+1088667: Will Clara Tauson win the 2026 Women’s US Open?
+1088668: Will Belinda Bencic win the 2026 Women’s US Open?
+1088669: Will Emma Raducanu win the 2026 Women’s US Open?
+1088670: Will Linda Noskova win the 2026 Women’s US Open?
+1088671: Will Jasmine Paolini win the 2026 Women’s US Open?
+1088672: Will Paula Badosa win the 2026 Women’s US Open?
+1088673: Will Maya Joint win the 2026 Women’s US Open?
+1088674: Will Diana Shnaider win the 2026 Women’s US Open?
+1088675: Will Ekaterina Alexandrova win the 2026 Women’s US Open?
+1088676: Will Jelena Ostapenko win the 2026 Women’s US Open?
+1088677: Will Daria Kasatkina win the 2026 Women’s US Open?
+1088678: Will Elina Svitolina win the 2026 Women’s US Open?
+1088679: Will Tereza Valentova win the 2026 Women’s US Open?
+1088680: Will Anastasia Potapova win the 2026 Women’s US Open?
+1088681: Will Donna Vekic win the 2026 Women’s US Open?
+1088682: Will Dayana Yastremska win the 2026 Women’s US Open?
+1088683: Will Liudmila Samsonova win the 2026 Women’s US Open?
+1088684: Will Xiyu Wang win the 2026 Women’s US Open?
+1088685: Will Ashlyn Krueger win the 2026 Women’s US Open?
+1088686: Will Marie Bouzkova win the 2026 Women’s US Open?
+1088687: Will Alexandra Eala win the 2026 Women’s US Open?
+1088688: Will Beatriz Haddad Maia win the 2026 Women’s US Open?
+1088689: Will Elise Mertens win the 2026 Women’s US Open?
+1088690: Will Sofia Kenin win the 2026 Women’s US Open?
+1088691: Will Katie Boulter win the 2026 Women’s US Open?
+1088781: Will turnout in the first round of the 2026 Portuguese presidential election be less than 45%?
+1088782: Will turnout in the first round of the 2026 Portuguese presidential election be between 45% and 46%?
+1088783: Will turnout in the first round of the 2026 Portuguese presidential election be between 46% and 47%?
+1088784: Will turnout in the first round of the 2026 Portuguese presidential election be between 47% and 48%?
+1088785: Will turnout in the first round of the 2026 Portuguese presidential election be between 48% and 49%?
+1088786: Will turnout in the first round of the 2026 Portuguese presidential election be between 49% and 50%?
+1088787: Will turnout in the first round of the 2026 Portuguese presidential election be at least 50%?
+1088788: 100kt meteor strike in 2026?
+1088912: 1 megaton meteor strike in 2026?
+1089011: Will Tesla deliver less than 350000 vehicles in Q1 2026
+1089012: Will Tesla deliver between 350000 and 375000 vehicles in Q1 2026
+1089013: Will Tesla deliver between 375000 and 400000 vehicles in Q1 2026
+1089014: Will Tesla deliver between 400000 and 425000 vehicles in Q1 2026
+1089015: Will Tesla deliver between 425000 and 450000 vehicles in Q1 2026
+1089016: Will Tesla deliver between 450000 and 475000 vehicles in Q1 2026
+1089017: Will Tesla deliver between 475000 and 500000 vehicles in Q1 2026
+1089018: Will Tesla deliver 500000 or more vehicles in Q1 2026
+1089035: Will Alcaraz or Sinner win more Grand Slams in 2026?
+1089366: Will Luka Dončić be a 2026 NBA All-Star?
+1089367: Will Nikola Jokić be a 2026 NBA All-Star?
+1089368: Will Stephen Curry be a 2026 NBA All-Star?
+1089369: Will Shai Gilgeous-Alexander be a 2026 NBA All-Star?
+1089370: Will Victor Wembanyama be a 2026 NBA All-Star?
+1089371: Will Anthony Edwards be a 2026 NBA All-Star?
+1089372: Will Deni Avdija be a 2026 NBA All-Star?
+1089373: Will Kevin Durant be a 2026 NBA All-Star?
+1089374: Will LeBron James be a 2026 NBA All-Star?
+1089375: Will Austin Reaves be a 2026 NBA All-Star?
+1089376: Will Alperen Şengün be a 2026 NBA All-Star?
+1089377: Will James Harden be a 2026 NBA All-Star?
+1089378: Will Anthony Davis be a 2026 NBA All-Star?
+1089379: Will Jamal Murray be a 2026 NBA All-Star?
+1089380: Will Devin Booker be a 2026 NBA All-Star?
+1089381: Will Lauri Markkanen be a 2026 NBA All-Star?
+1089382: Will Jimmy Butler III be a 2026 NBA All-Star?
+1089383: Will Stephon Castle be a 2026 NBA All-Star?
+1089384: Will Chet Holmgren be a 2026 NBA All-Star?
+1089385: Will Kawhi Leonard be a 2026 NBA All-Star?
+1089386: Will Giannis Antetokounmpo be a 2026 NBA All-Star?
+1089387: Will Tyrese Maxey be a 2026 NBA All-Star?
+1089388: Will Jalen Brunson be a 2026 NBA All-Star?
+1089389: Will Cade Cunningham be a 2026 NBA All-Star?
+1089390: Will Donovan Mitchell be a 2026 NBA All-Star?
+1089391: Will Jaylen Brown be a 2026 NBA All-Star?
+1089392: Will Karl-Anthony Towns be a 2026 NBA All-Star?
+1089393: Will Jalen Johnson be a 2026 NBA All-Star?
+1089394: Will Pascal Siakam be a 2026 NBA All-Star?
+1089395: Will Michael Porter Jr. be a 2026 NBA All-Star?
+1089396: Will LaMelo Ball be a 2026 NBA All-Star?
+1089397: Will Brandon Ingram be a 2026 NBA All-Star?
+1089398: Will OG Anunoby be a 2026 NBA All-Star?
+1089399: Will Josh Giddey be a 2026 NBA All-Star?
+1089400: Will Mikal Bridges be a 2026 NBA All-Star?
+1089401: Will Josh Hart be a 2026 NBA All-Star?
+1089402: Will Joel Embiid be a 2026 NBA All-Star?
+1089403: Will Norman Powell be a 2026 NBA All-Star?
+1089404: Will Paolo Banchero be a 2026 NBA All-Star?
+1089405: Will Franz Wagner be a 2026 NBA All-Star?
+1089443: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 11, 2026?
+1089444: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 12, 2026?
+1089445: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 13, 2026?
+1089446: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 14, 2026?
+1089447: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 15, 2026?
+1089448: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 16, 2026?
+1089449: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 17, 2026?
+1089450: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 18, 2026?
+1089451: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 19, 2026?
+1089452: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 20, 2026?
+1089453: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 21, 2026?
+1089454: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 22, 2026?
+1089455: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 23, 2026?
+1089456: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 24, 2026?
+1089457: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 25, 2026?
+1089458: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 26, 2026?
+1089459: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 27, 2026?
+1089460: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 28, 2026?
+1089461: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 29, 2026?
+1089462: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 30, 2026?
+1089463: Will Donald Trump announce a new nominee for Chair of the Federal Reserve on January 31, 2026?
+1089464: Will Donald Trump not announce a new nominee for Chair of the Federal Reserve before February 2026?
+1089465: Will Bitcoin hit $80k or $100k first?
+1089563: Will OpenAI acquire Pinterest in 2026?
+1089802: Will Al Taawoun Saudi Club win on 2026-01-30?
+1089803: Will Al Taawoun Saudi Club vs. Al Okhdood SC end in a draw?
+1089804: Will Al Okhdood SC win on 2026-01-30?
+1089805: Will NEOM SC win on 2026-01-30?
+1089806: Will NEOM SC vs. Damac Saudi Club end in a draw?
+1089807: Will Damac Saudi Club win on 2026-01-30?
+1089808: Will Al Kholood Saudi Club win on 2026-01-30?
+1089809: Will Al Kholood Saudi Club vs. Al Nassr Saudi Club end in a draw?
+1089810: Will Al Nassr Saudi Club win on 2026-01-30?
+1089847: Ethereum flipped in 2026?
+1089886: Will Joshua Van be the UFC Flyweight Champion on December 31, 2026?
+1089888: Will Alexandre Pantoja be the UFC Flyweight Champion on December 31, 2026?
+1089890: Will Manel Kape be the UFC Flyweight Champion on December 31, 2026?
+1089892: Will Tatsuro Taira be the UFC Flyweight Champion on December 31, 2026?
+1089894: Will Brandon Royval be the UFC Flyweight Champion on December 31, 2026?
+1089896: Will Brandon Moreno be the UFC Flyweight Champion on December 31, 2026?
+1089898: Will Amir Albazi be the UFC Flyweight Champion on December 31, 2026?
+1089900: Will Asu Almabayev be the UFC Flyweight Champion on December 31, 2026?
+1089901: Will Kyoji Horiguchi be the UFC Flyweight Champion on December 31, 2026?
+1089902: Will Tim Elliott be the UFC Flyweight Champion on December 31, 2026?
+1089903: Will Steve Erceg be the UFC Flyweight Champion on December 31, 2026?
+1089925: Will Petr Yan be the UFC Bantamweight Champion on December 31, 2026?
+1089926: Will Merab Dvalishvili be the UFC Bantamweight Champion on December 31, 2026?
+1089927: Will Umar Nurmagomedov be the UFC Bantamweight Champion on December 31, 2026?
+1089928: Will Sean O'Malley be the UFC Bantamweight Champion on December 31, 2026?
+1089929: Will Cory Sandhagen be the UFC Bantamweight Champion on December 31, 2026?
+1089930: Will Song Yadong be the UFC Bantamweight Champion on December 31, 2026?
+1089931: Will Deiveson Figueiredo be the UFC Bantamweight Champion on December 31, 2026?
+1089932: Will Aiemann Zahabi be the UFC Bantamweight Champion on December 31, 2026?
+1089933: Will Marlon Vera be the UFC Bantamweight Champion on December 31, 2026?
+1089934: Will Mario Bautista be the UFC Bantamweight Champion on December 31, 2026?
+1089935: Will David Martinez be the UFC Bantamweight Champion on December 31, 2026?
+1089948: Will Alexander Volkanovski be the UFC Featherweight Champion on December 31, 2026?
+1089949: Will Movsar Evloev be the UFC Featherweight Champion on December 31, 2026?
+1089950: Will Diego Lopes be the UFC Featherweight Champion on December 31, 2026?
+1089951: Will Yair Rodriguez be the UFC Featherweight Champion on December 31, 2026?
+1089952: Will Lerone Murphy be the UFC Featherweight Champion on December 31, 2026?
+1089953: Will Aljamain Sterling be the UFC Featherweight Champion on December 31, 2026?
+1089954: Will Arnold Allen be the UFC Featherweight Champion on December 31, 2026?
+1089955: Will Youssef Zalal be the UFC Featherweight Champion on December 31, 2026?
+1089956: Will Steve Garcia be the UFC Featherweight Champion on December 31, 2026?
+1089957: Will Brian Ortega be the UFC Featherweight Champion on December 31, 2026?
+1089958: Will Jean Silva be the UFC Featherweight Champion on December 31, 2026?
+1090000: New Coronavirus Pandemic in 2026?
+1090001: Will Ilia Topuria be the UFC Lightweight Champion on December 31, 2026?
+1090002: Will Arman Tsarukyan be the UFC Lightweight Champion on December 31, 2026?
+1090003: Will Charles Oliveira be the UFC Lightweight Champion on December 31, 2026?
+1090004: Will Max Holloway be the UFC Lightweight Champion on December 31, 2026?
+1090005: Will Justin Gaethje be the UFC Lightweight Champion on December 31, 2026?
+1090006: Will Paddy Pimblett be the UFC Lightweight Champion on December 31, 2026?
+1090007: Will Dan Hooker be the UFC Lightweight Champion on December 31, 2026?
+1090008: Will Mateusz Gamrot be the UFC Lightweight Champion on December 31, 2026?
+1090009: Will Benoît Saint Denis be the UFC Lightweight Champion on December 31, 2026?
+1090010: Will Rafael Fiziev be the UFC Lightweight Champion on December 31, 2026?
+1090011: Will Renato Moicano be the UFC Lightweight Champion on December 31, 2026?
+1090024: Will Islam Makhachev be the UFC Welterweight Champion on December 31, 2026?
+1090025: Will Jack Della Maddalena be the UFC Welterweight Champion on December 31, 2026?
+1090026: Will Shavkat Rakhmonov be the UFC Welterweight Champion on December 31, 2026?
+1090027: Will Ian Machado Garry be the UFC Welterweight Champion on December 31, 2026?
+1090028: Will Michael Morales be the UFC Welterweight Champion on December 31, 2026?
+1090029: Will Belal Muhammad be the UFC Welterweight Champion on December 31, 2026?
+1090030: Will Carlos Prates be the UFC Welterweight Champion on December 31, 2026?
+1090031: Will Sean Brady be the UFC Welterweight Champion on December 31, 2026?
+1090032: Will Kamaru Usman be the UFC Welterweight Champion on December 31, 2026?
+1090033: Will Leon Edwards be the UFC Welterweight Champion on December 31, 2026?
+1090034: Will Joaquin Buckley be the UFC Welterweight Champion on December 31, 2026?
+1090043: Will Khamzat Chimaev be the UFC Middleweight Champion on December 31, 2026?
+1090044: Will Dricus Du Plessis be the UFC Middleweight Champion on December 31, 2026?
+1090045: Will Nassourdine Imavov be the UFC Middleweight Champion on December 31, 2026?
+1090046: Will Sean Strickland be the UFC Middleweight Champion on December 31, 2026?
+1090047: Will Anthony Hernandez be the UFC Middleweight Champion on December 31, 2026?
+1090048: Will Brendan Allen be the UFC Middleweight Champion on December 31, 2026?
+1090049: Will Israel Adesanya be the UFC Middleweight Champion on December 31, 2026?
+1090050: Will Caio Borralho be the UFC Middleweight Champion on December 31, 2026?
+1090051: Will Reinier de Ridder be the UFC Middleweight Champion on December 31, 2026?
+1090052: Will Robert Whittaker be the UFC Middleweight Champion on December 31, 2026?
+1090053: Will Jared Cannonier be the UFC Middleweight Champion on December 31, 2026?
+1090062: Will the total number of TSA passengers for January 5 - January 11 be less than 13,750,000?
+1090063: Will the total number of TSA passengers for January 5 - January 11 be between 13,750,000 and 14,000,000?
+1090064: Will the total number of TSA passengers for January 5 - January 11 be between 14,000,000 and 14,250,000?
+1090065: Will the total number of TSA passengers for January 5 - January 11 be between 14,250,000 and 14,500,000?
+1090066: Will the total number of TSA passengers for January 5 - January 11 be between 14,500,000 and 14,750,000?
+1090067: Will the total number of TSA passengers for January 5 - January 11 be greater than 14,750,000?
+1090069: Will Alex Pereira be the UFC Light Heavyweight Champion on December 31, 2026?
+1090070: Will Jiří Procházka be the UFC Light Heavyweight Champion on December 31, 2026?
+1090071: Will Magomed Ankalaev be the UFC Light Heavyweight Champion on December 31, 2026?
+1090072: Will Carlos Ulberg be the UFC Light Heavyweight Champion on December 31, 2026?
+1090073: Will Khalil Rountree Jr. be the UFC Light Heavyweight Champion on December 31, 2026?
+1090074: Will Jan Błachowicz be the UFC Light Heavyweight Champion on December 31, 2026?
+1090075: Will Azamat Murzakanov be the UFC Light Heavyweight Champion on December 31, 2026?
+1090076: Will Jamahal Hill be the UFC Light Heavyweight Champion on December 31, 2026?
+1090077: Will Volkan Oezdemir be the UFC Light Heavyweight Champion on December 31, 2026?
+1090078: Will Dominick Reyes be the UFC Light Heavyweight Champion on December 31, 2026?
+1090079: Will Bogdan Guskov be the UFC Light Heavyweight Champion on December 31, 2026?
+1090097: Will Tom Aspinall be the UFC Heavyweight Champion on December 31, 2026?
+1090098: Will Ciryl Gane be the UFC Heavyweight Champion on December 31, 2026?
+1090099: Will Alexander Volkov be the UFC Heavyweight Champion on December 31, 2026?
+1090100: Will Sergei Pavlovich be the UFC Heavyweight Champion on December 31, 2026?
+1090101: Will Curtis Blaydes be the UFC Heavyweight Champion on December 31, 2026?
+1090102: Will Waldo Cortes Acosta be the UFC Heavyweight Champion on December 31, 2026?
+1090103: Will Jailton Almeida be the UFC Heavyweight Champion on December 31, 2026?
+1090104: Will Serghei Spivac be the UFC Heavyweight Champion on December 31, 2026?
+1090105: Will Derrick Lewis be the UFC Heavyweight Champion on December 31, 2026?
+1090106: Will Ante Delija be the UFC Heavyweight Champion on December 31, 2026?
+1090107: Will Marcin Tybura be the UFC Heavyweight Champion on December 31, 2026?
+1090116: Will Coca Cola run an Ad during Super Bowl LX?
+1090117: Will Coinbase run an Ad during Super Bowl LX?
+1090118: Will Apple run an Ad during Super Bowl LX?
+1090119: Will Verizon/Visible run an Ad during Super Bowl LX?
+1090120: Will Anthropic run an Ad during Super Bowl LX?
+1090121: Will OpenAI run an Ad during Super Bowl LX?
+1090122: Will Perplexity run an Ad during Super Bowl LX?
+1090123: Will Hyundai run an Ad during Super Bowl LX?
+1090124: Will Toyota run an Ad during Super Bowl LX?
+1090125: Will Progressive run an Ad during Super Bowl LX?
+1090126: Will State Farm run an Ad during Super Bowl LX?
+1090127: Will Allstate run an Ad during Super Bowl LX?
+1090128: Will xAI or X run an Ad during Super Bowl LX?
+1090129: Will Nvidia run an Ad during Super Bowl LX?
+1090130: Will Ripple run an Ad during Super Bowl LX?
+1090131: Will Robinhood run an Ad during Super Bowl LX?
+1090134: Will Salesforce run an Ad during Super Bowl LX?
+1090136: Will Amazon run an Ad during Super Bowl LX?
+1090137: Will Google run an Ad during Super Bowl LX?
+1090143: Will DeepSeek run an Ad during Super Bowl LX?
+1090144: Will Solana run an Ad during Super Bowl LX?
+1090145: Will Kraken run an Ad during Super Bowl LX?
+1090146: Will Gemini run an Ad during Super Bowl LX?
+1090149: Will Crypto.com run an Ad during Super Bowl LX?
+1090190: GOP uses 'Nuclear Option' to break filibuster by December 31, 2026?
+1090199: Will Reza Pahlavi enter Iran by June 30?
+1090200: Will 6+ coins launched in 2026 end the year above $1B FDV?
+1090201: Will Islam Makhachev be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090202: Will Ilia Topuria be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090203: Will Khamzat Chimaev be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090204: Will Alex Pereira be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090205: Will Alexander Volkanovski be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090206: Will Petr Yan be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090207: Will Merab Dvalishvili be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090208: Will Tom Aspinall be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090209: Will Alexandre Pantoja be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090210: Will Max Holloway be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090211: Will Dricus Du Plessis be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090212: Will Joshua Van be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090213: Will Magomed Ankalaev be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?
+1090214: Will Jack Della Maddalena be ranked first in the UFC Pound-For-Pound Rankings at the end of 2026?

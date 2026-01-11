@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+921193: Will Bitmine announce that it holds more than 9M ETH before 2027?
+921637: Will Apple release a new version of the Apple TV by March 31?
+921660: Nguesso out as President of the Republic of the Congo by end of 2026?
+921661: Tshisekedi out as President of the DRC by end of 2026?
+921685: Will Apple release AirTag 2 by June 30?
+921693: Will the number of Republican Senate members who retire in 2026 be exactly 11?
+921697: Will Apple release Homepod Mini Successor by June 30?
+921809: Apple Vision Pro 2 released before 2027?
+921939: Grok 4.20 released by January 15?
+921940: Grok 4.20 released by January 31?
+921941: Grok 4.20 released by April 20?
+921947: Will Apple release iPhone 18 in 2026?
+921948: Liberal majority in Canadian Parliament by June 30?
+921956: Will the average monthly Ethereum gas price hit 5 Gwei before 2027?
+921957: Will the average monthly Ethereum gas price hit 10 Gwei before 2027?
+921958: Will the average monthly Ethereum gas price hit 15 Gwei before 2027?
+921959: Will the average monthly Ethereum gas price hit 20 Gwei before 2027?
+921960: Will the average monthly Ethereum gas price hit 25 Gwei before 2027?
+921961: Will the average monthly Ethereum gas price hit 40 Gwei before 2027?
+921962: Joe Burrow traded to the Jets?
+922346: Will Welsh Labour win the most seats in the 2026 Welsh Senedd election?
+922347: Will Plaid Cymru win the most seats in the 2026 Welsh Senedd election?
+922348: Will Welsh Conservatives win the most seats in the 2026 Welsh Senedd election?
+922349: Will Reform UK win the most seats in the 2026 Welsh Senedd election?
+922350: Will Welsh Liberal Democrats win the most seats in the 2026 Welsh Senedd election?
+922351: Will the Welsh Green Party win the most seats in the 2026 Welsh Senedd election?
+922766: Will Scottish National Party win the most seats in the 2026 Scottish Parliament election?
+922767: Will Scottish Labour win the most seats in the 2026 Scottish Parliament election?
+922768: Will Scottish Conservatives win the most seats in the 2026 Scottish Parliament election?
+922769: Will Scottish Green Party win the most seats in the 2026 Scottish Parliament election?
+922770: Will Scottish Liberal Democrats win the most seats in the 2026 Scottish Parliament election?
+922771: Will Reform UK win the most seats in the 2026 Scottish Parliament election?
+922772: Will Alba Party win the most seats in the 2026 Scottish Parliament election?
+922773: Will Sovereignty Party win the most seats in the 2026 Scottish Parliament election?
+923035: Will the number of Republican Senate members who retire in 2026 be exactly 5?
+923041: Will People’s Party (PPLE) win the most seats in the 2026 Thai legislative election?
+923042: Will Bhumjaithai Party (BJT) win the most seats in the 2026 Thai legislative election?
+923043: Will Pheu Thai Party (PT) win the most seats in the 2026 Thai legislative election?
+923044: Will Palang Pracharath Party (PPRP) win the most seats in the 2026 Thai legislative election?
+923045: Will United Thai Nation Party (UTN) win the most seats in the 2026 Thai legislative election?
+923046: Will Democrat Party (DP) win the most seats in the 2026 Thai legislative election?
+923047: Will Chart Thai Pattana Party (CTPP) win the most seats in the 2026 Thai legislative election?
+923048: Will Prachachat Party (PCC) win the most seats in the 2026 Thai legislative election?
+923049: Will Kla Tham Party (KT) win the most seats in the 2026 Thai legislative election?
+923366: Will Anutin Charnvirakul be the next prime minister of Thailand?
+923367: Will Paetongtarn Shinawatra be the next prime minister of Thailand?
+923368: Will Natthaphong Ruengpanyawut be the next prime minister of Thailand?
+923369: Will Chaikasem Nitisiri be the next prime minister of Thailand?
+923373: Will Julapun Amornvivat be the next prime minister of Thailand?
+923374: Will Prawit Wongsuwan be the next prime minister of Thailand?
+923376: Will Yodchanan Wongsawat be the next prime minister of Thailand?
+923647: Chubb and AIG merger announced by January 31?
+927337: Norfolk State Spartans vs. Grambling State Tigers
+927345: Jackson State Tigers vs. Hampton Pirates
+927628: Will NEC win on 2026-01-09?
+927629: Will NEC vs. FC Utrecht end in a draw?
+927630: Will FC Utrecht win on 2026-01-09?
+928801: Will Swansea City AFC win on 2026-01-10?
+928802: Will Swansea City AFC vs. West Bromwich Albion FC end in a draw?
+928803: Will West Bromwich Albion FC win on 2026-01-10?
+928810: Will Sheffield United FC win on 2026-01-10?
+928811: Will Sheffield United FC vs. Mansfield Town FC end in a draw?
+928812: Will Mansfield Town FC win on 2026-01-10?
+928819: Will Hull City AFC win on 2026-01-10?
+928820: Will Hull City AFC vs. Blackburn Rovers FC end in a draw?
+928821: Will Blackburn Rovers FC win on 2026-01-10?
+928843: Will West Ham United FC win on 2026-01-10?
+928844: Will West Ham United FC vs. Queens Park Rangers FC end in a draw?
+928845: Will Queens Park Rangers FC win on 2026-01-10?
+928849: Will Salford City FC win on 2026-01-10?
+928850: Will Salford City FC vs. Swindon Town FC end in a draw?
+928851: Will Swindon Town FC win on 2026-01-10?
+928852: Will Norwich City FC win on 2026-01-10?
+928853: Will Norwich City FC vs. Walsall FC end in a draw?
+928854: Will Walsall FC win on 2026-01-10?
+929402: Will Dan Crenshaw sue Shawn Ryan by Jan 31?
+929424: Will Russia capture all of Kupiansk by January 31?
+929425: Will Russia capture all of Kupiansk by March 31?
+929491: Will SpaceX's public ticker be $SPAX?
+929492: Will SpaceX's public ticker be $X?
+929493: Will SpaceX's public ticker be $SX?
+929494: Will SpaceX's public ticker be $SEX?
+929495: Will SpaceX's public ticker be $MARS?
+929496: Will SpaceX's public ticker be $SPC?
+929497: Will SpaceX's public ticker be $STAR?
+929498: Will SpaceX's public ticker be $SPACE?
+929711: Josh Allen x Hailee Steinfeld baby: Boy or Girl?
+933178: Will SC Heerenveen win on 2026-01-11?
+933179: Will SC Heerenveen vs. Feyenoord Rotterdam end in a draw?
+933180: Will Feyenoord Rotterdam win on 2026-01-11?
+933181: Will Telstar 1963 win on 2026-01-11?
+933182: Will Telstar 1963 vs. AFC Ajax end in a draw?
+933183: Will AFC Ajax win on 2026-01-11?
+933184: Will Go Ahead Eagles win on 2026-01-11?
+933185: Will Go Ahead Eagles vs. Fortuna Sittard end in a draw?
+933186: Will Fortuna Sittard win on 2026-01-11?
+934380: Will CD Nacional win on 2026-01-11?
+934381: Will CD Nacional vs. CD Santa Clara end in a draw?
+934382: Will CD Santa Clara win on 2026-01-11?
+934383: Will Moreirense FC win on 2026-01-11?
+934384: Will Moreirense FC vs. CD Tondela end in a draw?
+934385: Will CD Tondela win on 2026-01-11?
+934559: Will Derby County FC win on 2026-01-11?
+934560: Will Derby County FC vs. Leeds United FC end in a draw?
+934561: Will Leeds United FC win on 2026-01-11?
+934562: Will Portsmouth FC win on 2026-01-11?
+934563: Will Portsmouth FC vs. Arsenal FC end in a draw?
+934564: Will Arsenal FC win on 2026-01-11?
+934565: Will Manchester United FC win on 2026-01-11?
+934566: Will Manchester United FC vs. Brighton & Hove Albion FC end in a draw?
+934567: Will Brighton & Hove Albion FC win on 2026-01-11?
+936450: Opensea FDV above $2B one day after launch?
+940669: Will XRP reach $2.00 December 15-21?
+940810: University of Texas at Dallas Comets vs. Stephen F. Austin Lumberjacks
+940833: University of the Virgin Islands Buccaneers vs. Arkansas-Pine Bluff Golden Lions (W)
+940834: US civil war before 2027?
+940839: Tesla launches unsupervised full self driving (FSD) by March 31?
+941088: Will Sparta Rotterdam win on 2026-01-11?
+941089: Will Sparta Rotterdam vs. Heracles Almelo end in a draw?
+941090: Will Heracles Almelo win on 2026-01-11?
+941126: Will Jasmeet Bains advance from the CA-22 Primary?
+941132: Supreme Court vacancy in 2026?
+941406: Devils vs. Jets
+941407: Penguins vs. Bruins
+941408: Blue Jackets vs. Utah
+941409: Capitals vs. Predators
+941410: Golden Knights vs. Sharks
+941544: José Luís Rodríguez Zapatero arrested by March 31?
+941750: Next Thai Prime Minister Chosen by March 31?
+941755: Will Jack Antonoff attend Taylor Swift's wedding?
+941756: Will Selena Gomez attend Taylor Swift's wedding?
+941757: Will Brittany Mahomes attend Taylor Swift's wedding?
+941758: Will Gracie Abrams attend Taylor Swift's wedding?
+941759: Will Patrick Mahomes attend Taylor Swift's wedding?
+941760: Will Este Haim attend Taylor Swift's wedding?
+941761: Will Danielle Haim attend Taylor Swift's wedding?
+941762: Will Sabrina Carpenter attend Taylor Swift's wedding?
+941763: Will Alana Haim attend Taylor Swift's wedding?
+941764: Will Phoebe Bridgers attend Taylor Swift's wedding?
+941765: Will Max Martin attend Taylor Swift's wedding?
+941766: Will Lana Del Rey attend Taylor Swift's wedding?
+941767: Will Blake Lively attend Taylor Swift's wedding?
+941768: Will Jared Goff attend Taylor Swift's wedding?
+942040: Will Civil Contract win the most seats in the 2026 Armenian National Assembly election?
+942041: Will Armenia Alliance win the most seats in the 2026 Armenian National Assembly election?
+942042: Will I Have Honor Alliance win the most seats in the 2026 Armenian National Assembly election?
+942043: Will Armenian National Congress win the most seats in the 2026 Armenian National Assembly election?
+942044: Will Hanrapetutyun Party win the most seats in the 2026 Armenian National Assembly election?
+942045: Will Heritage win the most seats in the 2026 Armenian National Assembly election?
+942046: Will Orinats Yerkir win the most seats in the 2026 Armenian National Assembly election?
+942047: Will Prosperous Armenia win the most seats in the 2026 Armenian National Assembly election?
+942048: Will Bright Armenia win the most seats in the 2026 Armenian National Assembly election?
+942082: Will the Republican Party win the AZ-01 House seat?
+942084: Will the Democratic Party win the AZ-01 House seat?
+942116: Will the Republican Party win the AZ-02 House seat?
+942117: Will the Democratic Party win the AZ-02 House seat?
+942159: Will the Republican Party win the AZ-06 House seat?
+942162: Will the Democratic Party win the AZ-06 House seat?
+942273: Will the Republican Party win the CA-13 House seat?
+942274: Will the Democratic Party win the CA-13 House seat?
+942301: Will the Republican Party win the CO-03 House seat?
+942304: Will the Democratic Party win the CO-03 House seat?
+942324: Will the Republican Party win the CO-08 House seat?
+942325: Will the Democratic Party win the CO-08 House seat?
+942354: Will the Republican Party win the CT-05 House seat?
+942356: Will the Democratic Party win the CT-05 House seat?
+942369: Will the highest temperature in Toronto be 3°C on December 17?
+942381: Will the highest temperature in New York City be between 40-41°F on December 17?
+942400: Will the Republican Party win the FL-13 House seat?
+942401: Will the Democratic Party win the FL-13 House seat?
+942408: Will the Republican Party win the FL-23 House seat?
+942409: Will the Democratic Party win the FL-23 House seat?
+942416: Will the Republican Party win the IL-17 House seat?
+942417: Will the Democratic Party win the IL-17 House seat?
+942424: Will the Republican Party win the IN-01 House seat?
+942425: Will the Democratic Party win the IN-01 House seat?
+942432: Will the Republican Party win the IA-01 House seat?
+942433: Will the Democratic Party win the IA-01 House seat?
+942444: Will the Republican Party win the IA-03 House seat?
+942445: Will the Democratic Party win the IA-03 House seat?
+942701: Will the Republican Party win the MI-03 House seat?
+942702: Will the Democratic Party win the MI-03 House seat?
+942709: Will the Republican Party win the MI-04 House seat?
+942710: Will the Democratic Party win the MI-04 House seat?
+942721: Will the Republican Party win the MI-07 House seat?
+942722: Will the Democratic Party win the MI-07 House seat?
+942764: Will the Republican Party win the MI-08 House seat?
+942765: Will the Democratic Party win the MI-08 House seat?
+942774: Will the Republican Party win the MI-10 House seat?
+942776: Will the Democratic Party win the MI-10 House seat?
+942819: Will the Republican Party win the MN-02 House seat?
+942820: Will the Democratic Party win the MN-02 House seat?
+942831: Will the Republican Party win the MO-05 House seat?
+942832: Will the Democratic Party win the MO-05 House seat?
+942841: Will the Republican Party win the MT-01 House seat?
+942843: Will the Democratic Party win the MT-01 House seat?
+942877: Will the Republican Party win the NE-02 House seat?
+942878: Will the Democratic Party win the NE-02 House seat?
+942885: Will the Republican Party win the NV-01 House seat?
+942886: Will the Democratic Party win the NV-01 House seat?
+942893: Will the Republican Party win the NV-03 House seat?
+942894: Will the Democratic Party win the NV-03 House seat?
+942901: Will the Republican Party win the NV-04 House seat?
+942902: Will the Democratic Party win the NV-04 House seat?
+942909: Will the Republican Party win the NH-01 House seat?
+942910: Will the Democratic Party win the NH-01 House seat?
+942927: Will the Republican Party win the NH-02 House seat?
+942928: Will the Democratic Party win the NH-02 House seat?
+942970: Will the Republican Party win the NJ-05 House seat?
+942971: Will the Democratic Party win the NJ-05 House seat?
+942978: Will the Republican Party win the NJ-07 House seat?
+942979: Will the Democratic Party win the NJ-07 House seat?
+942986: Will the Republican Party win the NJ-09 House seat?
+942987: Will the Democratic Party win the NJ-09 House seat?
+942994: Will the Republican Party win the NM-02 House seat?
+942995: Will the Democratic Party win the NM-02 House seat?
+943002: Will the Republican Party win the NY-03 House seat?
+943003: Will the Democratic Party win the NY-03 House seat?
+943316: Will Roy Cooper be the Democratic nominee for Senate in North Carolina?
+943317: Will Orrick Quick be the Democratic nominee for Senate in North Carolina?
+943318: Will Justin Dues be the Democratic nominee for Senate in North Carolina?
+943319: Will Daryl Farrow be the Democratic nominee for Senate in North Carolina?
+943320: Will Marcus Williams be the Democratic nominee for Senate in North Carolina?
+943348: Octra FDV above $100M one day after launch?
+943349: Octra FDV above $200M one day after launch?
+943350: Octra FDV above $300M one day after launch?
+943351: Octra FDV above $400M one day after launch?
+943395: Will Troy Green be the Democratic nominee for Senate in Oklahoma?
+943396: Will N’Kiyla “Jasmine” Thomas be the Democratic nominee for Senate in Oklahoma?
+943432: Will the Republican Party win the NY-04 House seat?
+943433: Will the Democratic Party win the NY-04 House seat?
+943440: Will the Republican Party win the NY-17 House seat?
+943441: Will the Democratic Party win the NY-17 House seat?
+943448: Will the Republican Party win the NY-18 House seat?
+943449: Will the Democratic Party win the NY-18 House seat?
+943456: Will the Republican Party win the NY-19 House seat?
+943457: Will the Democratic Party win the NY-19 House seat?
+943468: Will the Republican Party win the NY-22 House seat?
+943469: Will the Democratic Party win the NY-22 House seat?
+943476: Will the Republican Party win the NC-01 House seat?
+943477: Will the Democratic Party win the NC-01 House seat?
+943484: Will Joe Johnson be the Republican nominee for Senate in Oregon?
+943486: Will Douglas T. Muck Jr. be the Republican nominee for Senate in Oregon?
+943487: Will Tim Skelton be the Republican nominee for Senate in Oregon?
+943522: Will Daylight launch a token by March 31, 2026?
+943523: Will Daylight launch a token by June 30, 2026?
+943524: Will Daylight launch a token by September 30, 2026?
+943525: Will Daylight launch a token by December 31, 2026?
+943539: Will the Republican Party win the NC-11 House seat?
+943542: Will the Democratic Party win the NC-11 House seat?
+943558: Will the Republican Party win the OH-01 House seat?
+943559: Will the Democratic Party win the OH-01 House seat?
+943570: Will the Republican Party win the OH-09 House seat?
+943571: Will the Democratic Party win the OH-09 House seat?
+943578: Will the Republican Party win the OH-13 House seat?
+943579: Will the Democratic Party win the OH-13 House seat?
+943740: Will the Republican Party win the OR-05 House seat?
+943741: Will the Democratic Party win the OR-05 House seat?
+943748: Will the Republican Party win the PA-01 House seat?
+943749: Will the Democratic Party win the PA-01 House seat?
+943796: Will the Republican Party win the PA-07 House seat?
+943797: Will the Democratic Party win the PA-07 House seat?
+943819: Will the Republican Party hold 47 or fewer Senate seats after the 2026 midterm elections?
+943820: Will the Republican Party hold exactly 48 Senate seats after the 2026 midterm elections?
+943821: Will the Republican Party hold exactly 49 Senate seats after the 2026 midterm elections?
+943822: Will the Republican Party hold exactly 50 Senate seats after the 2026 midterm elections?
+943823: Will the Republican Party hold exactly 51 Senate seats after the 2026 midterm elections?
+943824: Will the Republican Party hold exactly 52 Senate seats after the 2026 midterm elections?
+943825: Will the Republican Party hold exactly 53 Senate seats after the 2026 midterm elections?
+943826: Will the Republican Party hold exactly 54 Senate seats after the 2026 midterm elections?
+943827: Will the Republican Party hold exactly 55 Senate seats after the 2026 midterm elections?
+943828: Will the Republican Party hold exactly 56 Senate seats after the 2026 midterm elections?
+943829: Will the Republican Party hold 57 or more Senate seats after the 2026 midterm elections?
+943853: Will Rio Phillips be the Democratic nominee for Senate in West Virginia?
+943854: Will Zachary Shrewsbury be the Democratic nominee for Senate in West Virginia?
+943942: Will the Republican Party win the PA-08 House seat?
+943943: Will the Democratic Party win the PA-08 House seat?
+943954: Will the Republican Party win the PA-10 House seat?
+943955: Will the Democratic Party win the PA-10 House seat?
+943962: Will the Republican Party win the PA-17 House seat?
+943963: Will the Democratic Party win the PA-17 House seat?
+944152: Will the Republican Party win the TX-09 House seat?
+944153: Will the Democratic Party win the TX-09 House seat?
+944199: Will the Republican Party win the TX-15 House seat?
+944201: Will the Democratic Party win the TX-15 House seat?
+944213: Will the Republican Party win the TX-18 House seat?
+944214: Will the Democratic Party win the TX-18 House seat?
+944221: Will the Republican Party win the TX-28 House seat?
+944222: Will the Democratic Party win the TX-28 House seat?
+944229: Will the Republican Party win the TX-32 House seat?
+944230: Will the Democratic Party win the TX-32 House seat?
+944237: Will the Republican Party win the TX-34 House seat?
+944238: Will the Democratic Party win the TX-34 House seat?
+944249: Will the Republican Party win the TX-35 House seat?
+944250: Will the Democratic Party win the TX-35 House seat?
+944257: Will the Republican Party win the UT-01 House seat?
+944258: Will the Democratic Party win the UT-01 House seat?
+944265: Will the Republican Party win the UT-02 House seat?
+944266: Will the Democratic Party win the UT-02 House seat?
+944273: Will the Republican Party win the UT-03 House seat?
+944274: Will the Democratic Party win the UT-03 House seat?
+944281: Will the Republican Party win the VA-01 House seat?
+944282: Will the Democratic Party win the VA-01 House seat?
+944289: Will the Republican Party win the VA-02 House seat?
+944290: Will the Democratic Party win the VA-02 House seat?
+944297: Will the Republican Party win the VA-07 House seat?
+944298: Will the Democratic Party win the VA-07 House seat?
+944305: Will the Republican Party win the VA-10 House seat?
+944306: Will the Democratic Party win the VA-10 House seat?
+944313: Will the Republican Party win the WA-03 House seat?
+944314: Will the Democratic Party win the WA-03 House seat?
+944325: Will the Republican Party win the WA-08 House seat?
+944326: Will the Democratic Party win the WA-08 House seat?
+944333: Will the Republican Party win the WI-01 House seat?
+944334: Will the Democratic Party win the WI-01 House seat?
+944341: Will the Republican Party win the WI-03 House seat?
+944342: Will the Democratic Party win the WI-03 House seat?
+944588: Nasdaq round-the-clock trading by June 30?
+944593: Will Canada's monthly inflation increase by ≤0.0% in December?
+944594: Will Canada's monthly inflation increase by 0.1% in December?
+944595: Will Canada's monthly inflation increase by 0.2% in December?
+944596: Will Canada's monthly inflation increase by 0.3% in December?
+944597: Will Canada's monthly inflation increase by ≥0.4% in December?
+944818: Will Canada's annual inflation increase by ≤2.0% in December?
+944819: Will Canada's annual inflation increase by 2.1% in December?
+944820: Will Canada's annual inflation increase by 2.2% in December?
+944821: Will Canada's annual inflation increase by 2.3% in December?
+944822: Will Canada's annual inflation increase by ≥2.4% in December?
+947220: Will Fuerza Popular (FP) win the most seats in the 2026 Peruvian Senate election?
+947221: Will Perú Libre (PL) win the most seats in the 2026 Peruvian Senate election?
+947222: Will Acción Popular (AP) win the most seats in the 2026 Peruvian Senate election?
+947223: Will Alianza para el Progreso (APP) win the most seats in the 2026 Peruvian Senate election?
+947224: Will Avanza País – Partido de Integración Social (AvP) win the most seats in the 2026 Peruvian Senate election?
+947225: Will Renovación Popular (RP) win the most seats in the 2026 Peruvian Senate election?
+947226: Will Somos Perú (SP) win the most seats in the 2026 Peruvian Senate election?
+947227: Will Podemos Perú (PP) win the most seats in the 2026 Peruvian Senate election?
+947228: Will Juntos por el Perú (JP) win the most seats in the 2026 Peruvian Senate election?
+947240: Will Fuerza Popular (FP) win the most seats in the 2026 Peruvian Chamber of Deputies election?
+947241: Will Perú Libre (PL) win the most seats in the 2026 Peruvian Chamber of Deputies election?
+947242: Will Acción Popular (AP) win the most seats in the 2026 Peruvian Chamber of Deputies election?
+947243: Will Alianza para el Progreso (APP) win the most seats in the 2026 Peruvian Chamber of Deputies election?
+947244: Will Avanza País – Partido de Integración Social (AvP) win the most seats in the 2026 Peruvian Chamber of Deputies election?
+947245: Will Renovación Popular (RP) win the most seats in the 2026 Peruvian Chamber of Deputies election?
+947246: Will Somos Perú (SP) win the most seats in the 2026 Peruvian Chamber of Deputies election?
+947247: Will Podemos Perú (PP) win the most seats in the 2026 Peruvian Chamber of Deputies election?
+947248: Will Juntos por el Perú (JP) win the most seats in the 2026 Peruvian Chamber of Deputies election?
+947268: Will Rafael López Aliaga win the 2026 Peruvian presidential election?
+947269: Will Keiko Fujimori win the 2026 Peruvian presidential election?
+947270: Will Mario Vizcarra win the 2026 Peruvian presidential election?
+947271: Will Carlos Álvarez win the 2026 Peruvian presidential election?
+947272: Will César Acuña win the 2026 Peruvian presidential election?
+947273: Will Alfonso López Chau win the 2026 Peruvian presidential election?
+947274: Will Vladimir Cerrón win the 2026 Peruvian presidential election?
+947275: Will José Luna win the 2026 Peruvian presidential election?
+947276: Will George Forsyth win the 2026 Peruvian presidential election?
+947277: Will Roberto Chiabra win the 2026 Peruvian presidential election?
+947278: Will Enrique Valderrama win the 2026 Peruvian presidential election?
+947279: Will José Williams win the 2026 Peruvian presidential election?
+947280: Will Fiorella Molinelli win the 2026 Peruvian presidential election?
+947281: Will Ricardo Belmont win the 2026 Peruvian presidential election?
+947282: Will Fernando Olivera win the 2026 Peruvian presidential election?
+947283: Will Carlos Espá win the 2026 Peruvian presidential election?
+947284: Will Rafael Belaúnde Llosa win the 2026 Peruvian presidential election?
+947285: Will Yonhy Lescano win the 2026 Peruvian presidential election?
+947286: Will Mesías Guevara win the 2026 Peruvian presidential election?
+947287: Will Marisol Pérez Tello win the 2026 Peruvian presidential election?
+947288: Will Jorge Nieto win the 2026 Peruvian presidential election?
+947289: Will Roberto Sánchez Palomino win the 2026 Peruvian presidential election?
+948038: Will Fidesz – Hungarian Civic Alliance (Fidesz) win the most seats in the next Hungarian parliamentary election?
+948039: Will the Christian Democratic People’s Party (KDNP) win the most seats in the next Hungarian parliamentary election?
+948040: Will the Democratic Coalition (DK) win the most seats in the next Hungarian parliamentary election?
+948041: Will the Hungarian Socialist Party (MSZP) win the most seats in the next Hungarian parliamentary election?
+948042: Will Dialogue for Hungary (Párbeszéd) win the most seats in the next Hungarian parliamentary election?
+948043: Will TISZA – Respect and Freedom Party (TISZA) win the most seats in the next Hungarian parliamentary election?
+948044: Will the Momentum Movement (Momentum) win the most seats in the next Hungarian parliamentary election?
+948045: Will Movement for a Better Hungary (Jobbik) win the most seats in the next Hungarian parliamentary election?
+948046: Will LMP – Hungary’s Green Party (LMP) win the most seats in the next Hungarian parliamentary election?
+948047: Will Our Homeland Movement (Mi Hazánk) win the most seats in the next Hungarian parliamentary election?
+948387: Will Susie Wiles leave the Trump administration before 2027?
+948388: Will Andrew Tate attend Taylor Swift's wedding?
+948391: Will there be no Somaliland parliamentary election before 2027?
+948392: Will the Kulmiye Party (Peace, Unity, and Development Party) win the most seats in the next Somaliland parliamentary election?
+948393: Will the Waddani Party (Somaliland National Party) win the most seats in the next Somaliland parliamentary election?
+948394: Will the Justice and Welfare Party (UCID) win the most seats in the next Somaliland parliamentary election?
+948610: Will Dan Scavino leave the Trump administration before 2027?
+948639: Will David Sacks leave the Trump administration before 2027?
+948640: Will Russell Vought leave the Trump administration before 2027?
+948641: Will Tom Homan leave the Trump administration before 2027?
+948642: Will John Ratcliffe leave the Trump administration before 2027?
+948731: Will Trump meet with Maria Corina Machado in 2026?
+948955: Bitcoin all time high by March 31, 2026?
+948956: Bitcoin all time high by June 30, 2026?
+948957: Bitcoin all time high by September 30, 2026?
+948958: Bitcoin all time high by December 31, 2026?
+949259: Lightning vs. Flyers
+949260: Kraken vs. Rangers
+949261: Hurricanes vs. Red Wings
+949262: Panthers vs. Sabres
+949263: Canucks vs. Canadiens
+949264: Devils vs. Wild
+949265: Oilers vs. Blackhawks
+949266: Maple Leafs vs. Avalanche
+949267: Stars vs. Kings
+949276: Will MrBeast hit 108 billion views by January 31?
+949277: Will MrBeast hit 109 billion views by January 31?
+949278: Will MrBeast hit 110 billion views by January 31?
+949279: Susie Wiles out as White House Chief of Staff by March 31?
+949284: Will National Citizen Party win the most seats in the Bangladesh parliamentary election?
+949285: Will Bangladesh Jamaat-e-Islami win the most seats in the Bangladesh parliamentary election?
+949286: Will Jatiya Party win the most seats in the Bangladesh parliamentary election?
+949287: Will Bangladesh Nationalist Party win the most seats in the Bangladesh parliamentary election?
+949288: Will Jatiya Samajtantrik Dal win the most seats in the Bangladesh parliamentary election?
+949289: Will Islami Andolan Bangladesh win the most seats in the bangladesh parliamentary Election?
+949290: Will Gono Odhikar Parishad win the most seats in the Bangladesh parliamentary election?
+949291: Will Workers’ Party of Bangladesh win the most seats in the Bangladesh parliamentary election?
+949424: Will a contestant numbered 1 - 25 win Beast Games: Season 2?
+949425: Will a contestant numbered 26 - 50 win Beast Games: Season 2?
+949426: Will a contestant numbered 51 - 75 win Beast Games: Season 2?
+949427: Will a contestant numbered 76 - 100 win Beast Games: Season 2?
+949428: Will a contestant numbered 101 - 125 win Beast Games: Season 2?
+949429: Will a contestant numbered 126 - 150 win Beast Games: Season 2?
+949430: Will a contestant numbered 151 - 175 win Beast Games: Season 2?
+949431: Will a contestant numbered 176 - 200 win Beast Games: Season 2?
+949492: Fed rate cut by January 2026 meeting?
+949493: Fed rate cut by March 2026 meeting?
+949494: Fed rate cut by April 2026 meeting?
+949495: Fed rate cut by June 2026 meeting?
+949705: Will Kamala Harris announce a 2028 run for President by June 30?
+949727: Will Pumas de la UNAM win on 2026-01-11?
+949728: Will Pumas de la UNAM vs. Querétaro FC end in a draw?
+949729: Will Querétaro FC win on 2026-01-11?
+949730: Will Atlético San Luis win on 2026-01-11?
+949731: Will Atlético San Luis vs. Tigres de la UANL end in a draw?
+949732: Will Tigres de la UANL win on 2026-01-11?
+949747: Jimmy Lai released by January 31?
+949810: Will Gardner Minshew start Week 1 for the Chiefs in 2026?
+949811: Will Patrick Mahomes start Week 1 for the Chiefs in 2026?
+949814: Will Chris Oladokun start Week 1 for the Chiefs in 2026?
+949816: Will Joe Flacco start Week 1 for the Chiefs in 2026?
+950001: Naim Qassem out as Hezbollah’s secretary-general by March 31, 2026?
+950061: Will the Fed Cut–Pause–Pause in the next three decisions (Jan–Mar–Apr)?
+950062: Will the Fed Cut–Pause–Cut in the next three decisions (Jan–Mar–Apr)?
+950063: Will the Fed Cut–Cut–Pause in the next three decisions (Jan–Mar–Apr)?
+950064: Will the Fed Cut–Cut–Cut in the next three decisions (Jan–Mar–Apr)?
+950065: Will the Fed Pause–Pause–Pause in the next three decisions (Jan–Mar–Apr)?
+950066: Will the Fed Pause–Pause–Cut in the next three decisions (Jan–Mar–Apr)?
+950067: Will the Fed Pause–Cut–Pause in the next three decisions (Jan–Mar–Apr)?
+950068: Will the Fed Pause–Cut–Cut in the next three decisions (Jan–Mar–Apr)?
+950069: Will the Fed decide differently in the next three decisions (Jan–Mar–Apr)?
+950074: Will Liverpool FC win on 2026-01-12?
+950075: Will Liverpool FC vs. Barnsley FC end in a draw?
+950076: Will Barnsley FC win on 2026-01-12?
+950081: Will MrBeast hit 115 billion views by January 31?
+950082: Will MrBeast hit 120 billion views by January 31?
+950083: Will MrBeast hit 125 billion views by January 31?
+950084: Will MrBeast hit 110 billion views by March 31?
+950085: Will MrBeast hit 115 billion views by March 31?
+950086: Will MrBeast hit 125 billion views by March 31?
+950087: Will MrBeast hit 120 billion views by March 31?
+950123: Trump, Putin, and Zelensky seen together before 2027?
+950145: Trump, Putin, and Zelensky meet together before 2027?
+950187: Will the US officially declare war on Venezuela by June 30, 2026?
+950428: Will Jaunā Vienotība (JV) win the most seats in the 2026 Latvian parliamentary election?
+950429: Will Zaļo un Zemnieku Savienība (ZZS) win the most seats in the 2026 Latvian parliamentary election?
+950430: Will Apvienotais Saraksts (AS) win the most seats in the 2026 Latvian parliamentary election?
+950431: Will Nacionālā Apvienība (NA) win the most seats in the 2026 Latvian parliamentary election?
+950432: Will Stabilitātei! (ST!) win the most seats in the 2026 Latvian parliamentary election?
+950433: Will Latvija Pirmajā Vietā (LPV) win the most seats in the 2026 Latvian parliamentary election?
+950434: Will Progresīvie (PRO) win the most seats in the 2026 Latvian parliamentary election?
+950435: Will Suverēnā Vara (SV) win the most seats in the 2026 Latvian parliamentary election?
+950436: Will Sociāldemokrātiskā Partija “Saskaņa” (S) win the most seats in the 2026 Latvian parliamentary election?
+950458: Will the Prosperity Party (Prosperity) win the most seats in the 2026 Ethiopian general election?
+950460: Will the National Movement of Amhara (NaMA) win the most seats in the 2026 Ethiopian general election?
+950462: Will the Ethiopian Citizens for Social Justice (EZEMA) win the most seats in the 2026 Ethiopian general election?
+950464: Will the Gedeo People’s Democratic Party (GPDP) win the most seats in the 2026 Ethiopian general election?
+950466: Will the Tigray People’s Liberation Front (TPLF) win the most seats in the 2026 Ethiopian general election?
+950852: Will Bitcoin have the best performance in 2026?
+950853: Will Gold have the best performance in 2026?
+950854: Will the S&P 500 have the best performance in 2026?
+951178: Ethereum all time high by March 31, 2026?
+951179: Ethereum all time high by June 30, 2026?
+951180: Ethereum all time high by September 30, 2026?
+951181: Ethereum all time high by December 31, 2026?
+951182: Will the All India Trinamool Congress (AITC) win the most seats in the 2026 West Bengal Legislative Assembly election?
+951183: Will the Bharatiya Janata Party (BJP) win the most seats in the 2026 West Bengal Legislative Assembly election?
+951184: Will the Communist Party of India (CPI) win the most seats in the 2026 West Bengal Legislative Assembly election?
+951185: Will the Communist Party of India (Marxist) (CPI(M)) win the most seats in the 2026 West Bengal Legislative Assembly election?
+951186: Will the Indian National Congress (INC) win the most seats in the 2026 West Bengal Legislative Assembly election?
+951187: Will the Bharatiya Gorkha Prajatantrik Morcha (BGPM) win the most seats in the 2026 West Bengal Legislative Assembly election?
+951215: Solana all time high by March 31, 2026?
+951216: Solana all time high by June 30, 2026?
+951217: Solana all time high by September 30, 2026?
+951218: Solana all time high by December 31, 2026?
+951223: Will Jasmine Crockett win the 2026 Texas Senate Democratic Primary and General Elections?
+951224: Will Jasmine Crockett win the 2026 Texas Senate Democratic Primary Election and lose the 2026 Texas Senate General Election?
+951225: Will Jasmine Crockett lose the 2026 Texas Senate Democratic Primary Election?
+951551: Will Trump pardon Keonne Rodriguez before 2027?
+952023: Trump suspends U.S. entry for more countries by by June 30?
+952024: Trump suspends U.S. entry for more countries by December 31, 2026?
+954194: Will Vertiv Holdings (VRT) be added to the S&P 500 by March 31, 2026?

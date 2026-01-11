@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+902155: Will North Macedonia qualify for the 2026 FIFA World Cup?
+902156: Will Northern Ireland qualify for the 2026 FIFA World Cup?
+902157: Will Romania qualify for the 2026 FIFA World Cup?
+902158: Will Slovakia qualify for the 2026 FIFA World Cup?
+902159: Will Suriname qualify for the 2026 FIFA World Cup?
+902160: Will Turkey qualify for the 2026 FIFA World Cup?
+902161: Will Wales qualify for the 2026 FIFA World Cup?
+902253: Will the 10-year treasury yield hit 4.3% by March 31?
+902255: Will the 10-year treasury yield hit 4.4% by March 31?
+902258: Will the 10-year treasury yield hit 4.5% by March 31?
+902260: Will the 10-year treasury yield hit 4.6% by March 31?
+902263: Will the 10-year treasury yield hit 4.8% by March 31?
+902265: Will the 10-year treasury yield hit 5.0% by March 31?
+902298: Will the 10-year Treasury yield hit 4.4% before 2027?
+902299: Will the 10-year Treasury yield hit 4.3% before 2027?
+902938: Honduras presidential election annulled by February 28?
+902970: Will ACA premium tax credits not be extended and will the Democratic Party win the House in 2026?
+902971: Will ACA premium tax credits not be extended and will the Republican Party win the House in 2026?
+902977: Will there be another US government shutdown by January 31 and will the Democratic Party win the House in 2026?
+902978: Will there be another US government shutdown by January 31 and will the Republican Party win the House in 2026?
+902979: Will there be no US government shutdown by January 31 and will the Democratic Party win the House in 2026?
+902980: Will there be no US government shutdown by January 31 and will the Republican Party win the House in 2026?
+903202: Will Austria win the most medals in the 2026 Winter Olympics?
+903203: Will Canada win the most medals in the 2026 Winter Olympics?
+903204: Will China win the most medals in the 2026 Winter Olympics?
+903205: Will France win the most medals in the 2026 Winter Olympics?
+903206: Will Germany win the most medals in the 2026 Winter Olympics?
+903207: Will Italy win the most medals in the 2026 Winter Olympics?
+903208: Will Japan win the most medals in the 2026 Winter Olympics?
+903209: Will Netherlands win the most medals in the 2026 Winter Olympics?
+903210: Will Norway win the most medals in the 2026 Winter Olympics?
+903211: Will Sweden win the most medals in the 2026 Winter Olympics?
+903212: Will Switzerland win the most medals in the 2026 Winter Olympics?
+903213: Will the United States win the most medals in the 2026 Winter Olympics?
+903256: Will MrBeast hit 460 Million subscribers by January 31?
+903257: Will MrBeast hit 470 Million subscribers by January 31?
+903258: Will MrBeast hit 480 Million subscribers by January 31?
+903259: Will MrBeast hit 490 Million subscribers by January 31?
+903260: Will MrBeast hit 500 Million subscribers by January 31?
+903262: Will MrBeast hit 470 Million subscribers by March 31?
+903263: Will MrBeast hit 480 Million subscribers by March 31?
+903264: Will MrBeast hit 490 Million subscribers by March 31?
+903265: Will MrBeast hit 500 Million subscribers by March 31?
+903266: Will Austria win the second most medals in the 2026 Winter Olympics?
+903267: Will Canada win the second most medals in the 2026 Winter Olympics?
+903268: Will China win the second most medals in the 2026 Winter Olympics?
+903269: Will France win the second most medals in the 2026 Winter Olympics?
+903270: Will Germany win the second most medals in the 2026 Winter Olympics?
+903271: Will Italy win the second most medals in the 2026 Winter Olympics?
+903272: Will Japan win the second most medals in the 2026 Winter Olympics?
+903273: Will Netherlands win the second most medals in the 2026 Winter Olympics?
+903274: Will Norway win the second most medals in the 2026 Winter Olympics?
+903275: Will Sweden win the second most medals in the 2026 Winter Olympics?
+903276: Will Switzerland win the second most medals in the 2026 Winter Olympics?
+903277: Will the United States win the second most medals in the 2026 Winter Olympics?
+903308: Will MrBeast hit 106.5 billion views by January 31?
+903309: Will MrBeast hit 107 billion views by January 31?
+903310: Will Austria win the third most medals in the 2026 Winter Olympics?
+903311: Will Canada win the third most medals in the 2026 Winter Olympics?
+903312: Will China win the third most medals in the 2026 Winter Olympics?
+903313: Will France win the third most medals in the 2026 Winter Olympics?
+903314: Will Germany win the third most medals in the 2026 Winter Olympics?
+903315: Will Italy win the third most medals in the 2026 Winter Olympics?
+903316: Will Japan win the third most medals in the 2026 Winter Olympics?
+903317: Will Netherlands win the third most medals in the 2026 Winter Olympics?
+903318: Will Norway win the third most medals in the 2026 Winter Olympics?
+903319: Will Sweden win the third most medals in the 2026 Winter Olympics?
+903320: Will Switzerland win the third most medals in the 2026 Winter Olympics?
+903321: Will the United States win the third most medals in the 2026 Winter Olympics?
+903330: Will MrBeast hit 106.5 billion views by March 31?
+903332: Will MrBeast hit 107 billion views by March 31?
+903334: Will MrBeast hit 107.5 billion views by March 31?
+903336: Will MrBeast hit 108 billion views by March 31?
+903572: Will Han Duck Soo be sentenced to no prison time?
+903573: Will Han Duck Soo be sentenced to 0–5 years in prison?
+903574: Will Han Duck Soo be sentenced to 5–10 years in prison?
+903575: Will Han Duck Soo be sentenced to 10–15 years in prison?
+903576: Will Han Duck Soo be sentenced to 15–20 years in prison?
+903577: Will Han Duck Soo be sentenced to at least 20 years in prison?
+903723: Will Mills flip Platner for Maine Dem Senate Primary Winner by January 31?
+903798: Will Cornyn flip Paxton for Texas Rep Senate Primary Winner by Jan 31?
+903822: Taylor Swift x Travis Kelce get married by June 30?
+904027: Football.Fun FDV above $70M one day after launch?
+904059: Will Medline not IPO by December 31, 2025?
+904281: Will Darren Bailey win the 2026 Illinois Governor Republican primary election?
+904282: Will Ted Dabrowski win the 2026 Illinois Governor Republican primary election?
+904283: Will Rick Heidner win the 2026 Illinois Governor Republican primary election?
+904284: Will James Mendrick win the 2026 Illinois Governor Republican primary election?
+904285: Will Gregg Moore win the 2026 Illinois Governor Republican primary election?
+904286: Will Joseph Severino win the 2026 Illinois Governor Republican primary election?
+904287: Will Max Solomon win the 2026 Illinois Governor Republican primary election?
+904315: Will Eddie Andrews win the 2026 Iowa Governor Republican primary election?
+904316: Will Randy Feenstra win the 2026 Iowa Governor Republican primary election?
+904317: Will Zach Lahn win the 2026 Iowa Governor Republican primary election?
+904318: Will Brad Sherman win the 2026 Iowa Governor Republican primary election?
+904319: Will Adam Steen win the 2026 Iowa Governor Republican primary election?
+904351: Will Paul Dahl win the 2026 Iowa Governor Democratic primary election?
+904352: Will Rob Sand win the 2026 Iowa Governor Democratic primary election?
+904353: Will Julie Stauch win the 2026 Iowa Governor Democratic primary election?
+904391: Will Jeff Colyer win the 2026 Kansas Governor Republican primary election?
+904392: Will Joy Eakins win the 2026 Kansas Governor Republican primary election?
+904393: Will Ty Masterson win the 2026 Kansas Governor Republican primary election?
+904394: Will Charlotte O’Hara win the 2026 Kansas Governor Republican primary election?
+904395: Will Stacy Rogers win the 2026 Kansas Governor Republican primary election?
+904396: Will Philip Sarnecki win the 2026 Kansas Governor Republican primary election?
+904397: Will Vicki Schmidt win the 2026 Kansas Governor Republican primary election?
+904398: Will Scott Schwab win the 2026 Kansas Governor Republican primary election?
+904437: Will Ethan Corson win the 2026 Kansas Governor Democratic primary election?
+904438: Will Marty Tuley win the 2026 Kansas Governor Democratic primary election?
+904439: Will Cindy Holscher win the 2026 Kansas Governor Democratic primary election?
+904649: Will Shenna Bellows win the 2026 Maine Governor Democratic primary election?
+904650: Will Jason Cherry win the 2026 Maine Governor Democratic primary election?
+904651: Will Troy Jackson win the 2026 Maine Governor Democratic primary election?
+904652: Will Angus King III win the 2026 Maine Governor Democratic primary election?
+904653: Will Kenneth Pinet win the 2026 Maine Governor Democratic primary election?
+904654: Will Hannah Pingree win the 2026 Maine Governor Democratic primary election?
+904655: Will Nirav Shah win the 2026 Maine Governor Democratic primary election?
+904691: Will Jonathan Bush win the 2026 Maine Governor Republican primary election?
+904692: Will Ken Capron win the 2026 Maine Governor Republican primary election?
+904693: Will Robert Charles win the 2026 Maine Governor Republican primary election?
+904694: Will David Jones win the 2026 Maine Governor Republican primary election?
+904695: Will James Libby win the 2026 Maine Governor Republican primary election?
+904696: Will Owen McCarthy win the 2026 Maine Governor Republican primary election?
+904697: Will Ben Midgely win the 2026 Maine Governor Republican primary election?
+904698: Will Robert Wessels win the 2026 Maine Governor Republican primary election?
+904730: U.S. x Russia Nuclear deal by February 4?
+904731: U.S. x Russia Nuclear deal by June 30?
+904737: Extended FDV above $300M one day after launch?
+904738: Based FDV above $300M one day after launch?
+904739: Will Aaron Rodgers retire before next season?
+906596: Gensyn FDV above $600M one day after launch?
+906597: Gensyn FDV above $800M one day after launch?
+906598: Gensyn FDV above $1B one day after launch?
+906599: Gensyn FDV above $1.5B one day after launch?
+906600: Gensyn FDV above $2B one day after launch?
+906830: Will Stacy Garrity win the 2026 Pennsylvania Governor Republican primary election?
+906831: Will John Ventre win the 2026 Pennsylvania Governor Republican primary election?
+906832: Will Doug Mastriano win the 2026 Pennsylvania Governor Republican primary election?
+906867: Will Helena Foulkes win the 2026 Rhode Island Governor Democratic primary election?
+906868: Will Dan McKee win the 2026 Rhode Island Governor Democratic primary election?
+906869: Will Gregory Stevens win the 2026 Rhode Island Governor Democratic primary election?
+906870: Will Joe Shekarchi win the 2026 Rhode Island Governor Democratic primary election?
+906891: Will Aaron Guckian win the 2026 Rhode Island Governor Republican primary election?
+906892: Will Elaine Pelino win the 2026 Rhode Island Governor Republican primary election?
+906893: Will Robert Raimondo win the 2026 Rhode Island Governor Republican primary election?
+906894: Will Jessica de la Cruz win the 2026 Rhode Island Governor Republican primary election?
+906895: Will Ashley Kalus win the 2026 Rhode Island Governor Republican primary election?
+906912: Will Jermaine Johnson win the 2026 South Carolina Governor Democratic primary election?
+906913: Will Mullins McLeod win the 2026 South Carolina Governor Democratic primary election?
+906945: Will Pamela Evette win the 2026 South Carolina Governor Republican primary election?
+906946: Will Josh Kimbrell win the 2026 South Carolina Governor Republican primary election?
+906947: Will Nancy Mace win the 2026 South Carolina Governor Republican primary election?
+906948: Will Ralph Norman win the 2026 South Carolina Governor Republican primary election?
+906949: Will Alan Wilson win the 2026 South Carolina Governor Republican primary election?
+906972: Will the Fed decrease interest rates by 50+ bps after the June 2026 meeting?
+906973: Will the Fed decrease interest rates by 25 bps after the June 2026 meeting?
+906974: Will there be no change in Fed interest rates after the June 2026 meeting?
+906975: Will the Fed increase interest rates by 25 bps after the June 2026 meeting?
+906976: Will the Fed increase interest rates by 50+ bps after the June 2026 meeting?
+906977: Will Toby Doeden win the 2026 South Dakota Governor Republican primary election?
+906978: Will Jon Hansen win the 2026 South Dakota Governor Republican primary election?
+906979: Will Dusty Johnson win the 2026 South Dakota Governor Republican primary election?
+906980: Will Larry Rhoden win the 2026 South Dakota Governor Republican primary election?
+907101: Will Marsha Blackburn win the 2026 Tennessee Governor Republican primary election?
+907102: Will Monty Fritts win the 2026 Tennessee Governor Republican primary election?
+907103: Will John Rose win the 2026 Tennessee Governor Republican primary election?
+907120: Will Carnita Atwater win the 2026 Tennessee Governor Democratic primary election?
+907121: Will Tim Cyr win the 2026 Tennessee Governor Democratic primary election?
+907122: Will Jerri Green win the 2026 Tennessee Governor Democratic primary election?
+907123: Will Adam Kurtz win the 2026 Tennessee Governor Democratic primary election?
+907350: Will Carl Brunner win the 2026 Maryland Governor Republican primary election?
+907351: Will Ed Hale win the 2026 Maryland Governor Republican primary election?
+907352: Will John Myrick win the 2026 Maryland Governor Republican primary election?
+907353: Will Kurt Wedekind win the 2026 Maryland Governor Republican primary election?
+907354: Will Christopher Bouchat win the 2026 Maryland Governor Republican primary election?
+907355: Will Steve Hershey win the 2026 Maryland Governor Republican primary election?
+907356: Will Larry Hogan win the 2026 Maryland Governor Republican primary election?
+907392: Will Greg Abbott win the 2026 Texas Governor Republican primary election?
+907393: Will Pete Chambers win the 2026 Texas Governor Republican primary election?
+907394: Will Mark Goloby win the 2026 Texas Governor Republican primary election?
+907411: Will Chris Bell win the 2026 Texas Governor Democratic primary election?
+907412: Will Bobby Cole win the 2026 Texas Governor Democratic primary election?
+907413: Will Gina Hinojosa win the 2026 Texas Governor Democratic primary election?
+907414: Will Andrew White win the 2026 Texas Governor Democratic primary election?
+907415: Will Beto O'Rourke win the 2026 Texas Governor Democratic primary election?
+907436: Will Mike Kennealy win the 2026 Massachusetts Governor Republican primary election?
+907437: Will Michael Minogue win the 2026 Massachusetts Governor Republican primary election?
+907438: Will Brian Shortsleeve win the 2026 Massachusetts Governor Republican primary election?
+907475: Will Charity Clark win the 2026 Vermont Governor Democratic primary election?
+907476: Will Mike Pieciak win the 2026 Vermont Governor Democratic primary election?
+907493: Will Phil Scott win the 2026 Vermont Governor Republican primary election?
+907494: Will John Rodgers win the 2026 Vermont Governor Republican primary election?
+907511: Will Mandela Barnes win the 2026 Wisconsin Governor Democratic primary election?
+907512: Will David Crowley win the 2026 Wisconsin Governor Democratic primary election?
+907513: Will Francesca Hong win the 2026 Wisconsin Governor Democratic primary election?
+907514: Will Missy Hughes win the 2026 Wisconsin Governor Democratic primary election?
+907515: Will Brett Hulsey win the 2026 Wisconsin Governor Democratic primary election?
+907516: Will Sara Rodriguez win the 2026 Wisconsin Governor Democratic primary election?
+907517: Will Zachary Roper win the 2026 Wisconsin Governor Democratic primary election?
+907518: Will Kelda Roys win the 2026 Wisconsin Governor Democratic primary election?
+907519: Will Tim Jacobson win the 2026 Wisconsin Governor Democratic primary election?
+907520: Will Joel Brennan win the 2026 Wisconsin Governor Democratic primary election?
+907521: Will Melissa Agard win the 2026 Wisconsin Governor Democratic primary election?
+907522: Will Chris Larson win the 2026 Wisconsin Governor Democratic primary election?
+907523: Will Tom Nelson win the 2026 Wisconsin Governor Democratic primary election?
+907544: Will Jocelyn Benson win the 2026 Michigan Governor Democratic primary election?
+907545: Will Garlin Gilchrist win the 2026 Michigan Governor Democratic primary election?
+907546: Will Marni Sawicki win the 2026 Michigan Governor Democratic primary election?
+907547: Will Chris Swanson win the 2026 Michigan Governor Democratic primary election?
+907575: Will Andy Manske win the 2026 Wisconsin Governor Republican primary election?
+907576: Will Josh Schoemann win the 2026 Wisconsin Governor Republican primary election?
+907577: Will Tom Tiffany win the 2026 Wisconsin Governor Republican primary election?
+907578: Will Tommy Thompson win the 2026 Wisconsin Governor Republican primary election?
+907579: Will Sean Duffy win the 2026 Wisconsin Governor Republican primary election?
+907580: Will Eric Hovde win the 2026 Wisconsin Governor Republican primary election?
+907581: Will Rebecca Kleefisch win the 2026 Wisconsin Governor Republican primary election?
+907582: Will Tim Michels win the 2026 Wisconsin Governor Republican primary election?
+907599: Will Eric Barlow win the 2026 Wyoming Governor Republican primary election?
+907600: Will Brent Bien win the 2026 Wyoming Governor Republican primary election?
+907601: Will Joseph Kibler win the 2026 Wyoming Governor Republican primary election?
+907602: Will Reid Rasner win the 2026 Wyoming Governor Republican primary election?
+907603: Will Bo Biteman win the 2026 Wyoming Governor Republican primary election?
+907604: Will Megan Degenfelder win the 2026 Wyoming Governor Republican primary election?
+907605: Will Chuck Gray win the 2026 Wyoming Governor Republican primary election?
+907606: Will Chip Neiman win the 2026 Wyoming Governor Republican primary election?
+907607: Will Ogen Driskill win the 2026 Wyoming Governor Republican primary election?
+907608: Will Mark Gordon win the 2026 Wyoming Governor Republican primary election?
+907609: Will Harriet Hageman win the 2026 Wyoming Governor Republican primary election?
+907610: Will Curt Meier win the 2026 Wyoming Governor Republican primary election?
+907611: Will Tara Nethercott win the 2026 Wyoming Governor Republican primary election?
+907612: Will Cheri Steinmetz win the 2026 Wyoming Governor Republican primary election?
+907613: Will Paul Ulrich win the 2026 Wyoming Governor Republican primary election?
+907686: Will the Republican Party hold fewer than 22 governorships after the 2026 midterm elections?
+907687: Will the Republican Party hold exactly 22 or 23 governorships after the 2026 midterm elections?
+907688: Will the Republican Party hold exactly 24 or 25 governorships after the 2026 midterm elections?
+907689: Will the Republican Party hold exactly 26 or 27 governorships after the 2026 midterm elections?
+907690: Will the Republican Party hold exactly 28 or 29 governorships after the 2026 midterm elections?
+907691: Will the Republican Party hold exactly 30 or 31 governorships after the 2026 midterm elections?
+907692: Will the Republican Party hold 32 or more governorships after the 2026 midterm elections?
+907693: Will Joe S. San Agustin win the 2026 Guam Governor Democratic primary election?
+907694: Will Josh Tenorio win the 2026 Guam Governor Democratic primary election?
+907724: Will Vicente Ada win the 2026 Guam Governor Republican primary election?
+907725: Will Frank F. Blas Jr. win the 2026 Guam Governor Republican primary election?
+907726: Will Marcel Camacho win the 2026 Guam Governor Republican primary election?
+907727: Will Charlie Hermosa win the 2026 Guam Governor Republican primary election?
+907728: Will Douglas Moylan win the 2026 Guam Governor Republican primary election?
+907781: Will Mike Cox win the 2026 Michigan Governor Republican primary election?
+907784: Will Anthony Hudson win the 2026 Michigan Governor Republican primary election?
+907785: Will John James win the 2026 Michigan Governor Republican primary election?
+907787: Will Tom Leonard win the 2026 Michigan Governor Republican primary election?
+907788: Will Aric Nesbitt win the 2026 Michigan Governor Republican primary election?
+907789: Will William Null win the 2026 Michigan Governor Republican primary election?
+907790: Will Ralph Rebandt win the 2026 Michigan Governor Republican primary election?
+907791: Will Karla Wagner win the 2026 Michigan Governor Republican primary election?
+907983: Will Lisa Demuth win the 2026 Minnesota Governor Republican primary election?
+907984: Will Scott Jensen win the 2026 Minnesota Governor Republican primary election?
+907985: Will Jeff Johnson win the 2026 Minnesota Governor Republican primary election?
+907986: Will Patrick Knight win the 2026 Minnesota Governor Republican primary election?
+907987: Will Brad Kohler win the 2026 Minnesota Governor Republican primary election?
+907988: Will Chris Madel win the 2026 Minnesota Governor Republican primary election?
+907989: Will Phil Parrish win the 2026 Minnesota Governor Republican primary election?
+907990: Will Kendall Qualls win the 2026 Minnesota Governor Republican primary election?
+907991: Will Kristin Robbins win the 2026 Minnesota Governor Republican primary election?
+907993: Will Mike Lindell win the 2026 Minnesota Governor Republican primary election?
+908000: Another Elon baby by June 30?
+908029: Will Elon Musk unfollow Grimes by January 31?
+908034: Will Click Bishop advance from the 2026 Alaska Governor primary election?
+908035: Will Dave Bronson advance from the 2026 Alaska Governor primary election?
+908036: Will Adam Crum advance from the 2026 Alaska Governor primary election?
+908037: Will Nancy Dahlstrom advance from the 2026 Alaska Governor primary election?
+908038: Will Edna DeVries advance from the 2026 Alaska Governor primary election?
+908039: Will Matt Heilala advance from the 2026 Alaska Governor primary election?
+908040: Will Shelley Hughes advance from the 2026 Alaska Governor primary election?
+908041: Will Hank Kroll advance from the 2026 Alaska Governor primary election?
+908042: Will James Parkin advance from the 2026 Alaska Governor primary election?
+908043: Will Treg Taylor advance from the 2026 Alaska Governor primary election?
+908044: Will Bernadette Wilson advance from the 2026 Alaska Governor primary election?
+908045: Will Tom Begich advance from the 2026 Alaska Governor primary election?
+908046: Will Matt Claman advance from the 2026 Alaska Governor primary election?
+908047: Will December 2025 be the 1st hottest on record?
+908048: Will December 2025 be the 2nd hottest on record?
+908049: Will December 2025 be the 3rd hottest on record?
+908050: Will December 2025 be the 4th or lower hottest on record?
+908137: Will global temperature increase by less than 1.00ºC in December 2025?
+908138: Will global temperature increase by between 1.00ºC and 1.04ºC in December 2025?
+908139: Will global temperature increase by between 1.05ºC and 1.09ºC in December 2025?
+908140: Will global temperature increase by between 1.10ºC and 1.14ºC in December 2025?
+908141: Will global temperature increase by between 1.15ºC and 1.19ºC in December 2025?
+908142: Will global temperature increase by more than 1.19ºC in December 2025?
+908713: Fed rate hike in 2026?
+908956: Will Rami leave Babymonster?
+909055: Will the number of Republican House members who retire in 2026 be fewer than 24?
+909056: Will the number of Republican House members who retire in 2026 be between 24 and 27 inclusive?
+909057: Will the number of Republican House members who retire in 2026 be between 28 and 31 inclusive?
+909058: Will the number of Republican House members who retire in 2026 be between 32 and 35 inclusive?
+909059: Will the number of Republican House members who retire in 2026 be between 36 and 39 inclusive?
+909060: Will the number of Republican House members who retire in 2026 be between 40 and 43 inclusive?
+909061: Will the number of Republican House members who retire in 2026 be 44 or more?
+909070: Will the number of Democratic House members who retire in 2026 be fewer than 20?
+909071: Will the number of Democratic House members who retire in 2026 be between 20 and 23 inclusive?
+909072: Will the number of Democratic House members who retire in 2026 be between 24 and 27 inclusive?
+909073: Will the number of Democratic House members who retire in 2026 be between 28 and 31 inclusive?
+909074: Will the number of Democratic House members who retire in 2026 be between 32 and 35 inclusive?
+909075: Will the number of Democratic House members who retire in 2026 be between 36 and 39 inclusive?
+909076: Will the number of Democratic House members who retire in 2026 be 40 or more?
+909077: Will the number of Republican Senate members who retire in 2026 be less than 5?
+909078: Will the number of Republican Senate members who retire in 2026 be exactly 6?
+909079: Will the number of Republican Senate members who retire in 2026 be exactly 7?
+909080: Will the number of Republican Senate members who retire in 2026 be exactly 8?
+909081: Will the number of Republican Senate members who retire in 2026 be exactly 9?
+909082: Will the number of Republican Senate members who retire in 2026 be exactly 10?
+909083: Will the number of Republican Senate members who retire in 2026 be 12 or more?
+909453: Will turnout in the 2025 Honduran general election be less than 56%?
+909454: Will turnout in the 2025 Honduran general election be between 56% and 57%?
+909455: Will turnout in the 2025 Honduran general election be between 57% and 58%?
+909456: Will turnout in the 2025 Honduran general election be between 58% and 59%?
+909457: Will turnout in the 2025 Honduran general election be between 59% and 60%?
+909458: Will turnout in the 2025 Honduran general election be between 60% and 61%?
+909459: Will turnout in the 2025 Honduran general election be between 61% and 62%?
+909460: Will turnout in the 2025 Honduran general election be greater than 62%?
+909466: SpaceX IPO closing market cap above $1T?
+909467: SpaceX IPO closing market cap above $1.4T?
+909468: SpaceX IPO closing market cap above $1.2T?
+909765: Solstice FDV above $50M one day after launch?
+909766: Solstice FDV above $100M one day after launch?
+909767: Solstice FDV above $200M one day after launch?
+909768: Solstice FDV above $300M one day after launch?
+909769: Solstice FDV above $400M one day after launch?
+910093: Will David Choquehuanca be the next Secretary General of the United Nations?
+910094: Will Michelle Bachelet be the next Secretary General of the United Nations?
+910095: Will Rebeca Grynspan be the next Secretary General of the United Nations?
+910096: Will Colombe Cahen-Salvador be the next Secretary General of the United Nations?
+910097: Will Bruno Donat be the next Secretary General of the United Nations?
+910098: Will Rafael Grossi be the next Secretary General of the United Nations?
+910099: Will Jacinda Ardern be the next Secretary General of the United Nations?
+910100: Will Alicia Bárcena be the next Secretary General of the United Nations?
+910101: Will Maria Fernanda Espinosa Garcés be the next Secretary General of the United Nations?
+910102: Will Kristalina Georgieva be the next Secretary General of the United Nations?
+910103: Will Vuk Jeremić be the next Secretary General of the United Nations?
+910104: Will Amina Mohammed be the next Secretary General of the United Nations?
+910105: Will Mia Mottley be the next Secretary General of the United Nations?
+910106: Will Achim Steiner be the next Secretary General of the United Nations?
+913600: Claudio Tapia out as AFA President by July 19, 2026?
+913814: US bank failure by January 31?
+913819: Will another MrBeast video get 100m+ week 1 views by January 31?
+914240: Will New Glenn Flight 3 launch by January 31, 2026?
+914241: Will New Glenn Flight 3 launch by February 15, 2026?
+914578: Will Based Polymarket revenue hit $1M before 2027?
+914579: Will Based Polymarket revenue hit $2M before 2027?
+914580: Will Based Polymarket revenue hit $3M before 2027?
+914581: Will Based Polymarket revenue hit $4M before 2027?
+914582: Will Based Polymarket revenue hit $5M before 2027?
+915045: Maduro exiled to Russia by March 31?
+915352: Will Powell say "Inflation" 40+ times during January press conference?
+915353: Will Powell say "Inflation" 50+ times during January press conference?
+915354: Will Powell say "Inflation" 60+ times during January press conference?
+915355: Will Powell say "Percent" 25+ times during January press conference?
+915356: Will Powell say "Job" 15+ times during January press conference?
+915357: Will Powell say "Tariff" 13+ times during January press conference?
+915359: Will Powell say "Trump" during January press conference?
+915360: Will Powell say "Median" during January press conference?
+915361: Will Powell say "Stock Market" during January press conference?
+915362: Will Powell say "Good afternoon" during January press conference?
+915363: Will Powell say "Sorry" during January press conference?
+915365: Will Powell say "Probability" during January press conference?
+915366: Will Powell say "Not our job" during January press conference?
+915367: Will Powell say "Too late" during January press conference?
+915368: Will Powell say "Assumption" during January press conference?
+915373: Will no one dissent the January Fed decision?
+915374: Will one person dissent the January Fed decision?
+915375: Will two people dissent the January Fed decision?
+915376: Will three people dissent the January Fed decision?
+915377: Will four or more people dissent the January Fed decision?
+915378: Will Powell say "SEP" 4+ times during January press conference?
+915769: SpaceX IPO closing market cap above $1.6T?
+915770: SpaceX IPO closing market cap above $2T?
+915771: SpaceX IPO closing market cap above $1.8T?
+916079: Will Trump's approval rating hit 44% in 2026?
+916080: Will Trump's approval rating hit 45% in 2026?
+916081: Will Trump's approval rating hit 46% in 2026?
+916082: Will Trump's approval rating hit 47% in 2026?
+916083: Will Trump's approval rating hit 48% in 2026?
+916084: Will Trump's approval rating hit 49% in 2026?
+916085: Will Trump's approval rating hit 50% in 2026?
+916390: Ink FDV above $2B one day after launch?
+916391: Will André Maestrini be the next CEO of Lululemon?
+916392: Will Meghan Frank be the next CEO of Lululemon?
+916393: Will Marti Morfitt be the next CEO of Lululemon?
+916394: Will Emily White be the next CEO of Lululemon?
+916395: Will Jon McNeill be the next CEO of Lululemon?
+916396: Will Alison Loehnis be the next CEO of Lululemon?
+916397: Will Teri List be the next CEO of Lululemon?
+916398: Will Stephanie Linnartz be the next CEO of Lululemon?
+916399: Will Jane Nielsen be the next CEO of Lululemon?
+916432: AWS service disrupted by January 31?
+916437: Ink FDV above $3B one day after launch?
+916715: Will less than 5 SpaceX Starship launches successfully reach Space in 2026?
+916716: Will 5-6 SpaceX Starship launches successfully reach Space in 2026?
+916717: Will 7-8 SpaceX Starship launches successfully reach Space in 2026?
+916718: Will 9-10 SpaceX Starship launches successfully reach Space in 2026?
+916719: Will 11-12 SpaceX Starship launches successfully reach Space in 2026?
+916720: Will 13-14 SpaceX Starship launches successfully reach Space in 2026?
+916721: Will 15-16 SpaceX Starship launches successfully reach Space in 2026?
+916722: Will more than 16 SpaceX Starship launches successfully reach Space in 2026?
+916732: Khamenei out as Supreme Leader of Iran by March 31?
+916733: Will Putin meet with Zelenskyy by March 31, 2026?
+918248: Will Chris Coons be the Democratic nominee for Senate in Delaware?
+918249: Will Christopher Beardsley be the Democratic nominee for Senate in Delaware?
+919489: Will the Republican Party hold below 190 House seats after the 2026 midterm elections?
+919490: Will the Republican Party hold between 190 and 194 House seats after the 2026 midterm elections?
+919491: Will the Republican Party hold between 195 and 199 House seats after the 2026 midterm elections?
+919492: Will the Republican Party hold between 200 and 204 House seats after the 2026 midterm elections?
+919493: Will the Republican Party hold between 205 and 209 House seats after the 2026 midterm elections?
+919494: Will the Republican Party hold between 210 and 214 House seats after the 2026 midterm elections?
+919495: Will the Republican Party hold between 215 and 219 House seats after the 2026 midterm elections?
+919496: Will the Republican Party hold between 220 and 224 House seats after the 2026 midterm elections?
+919497: Will the Republican Party hold between 225 and 229 House seats after the 2026 midterm elections?
+919498: Will the Republican Party hold 230 or more House seats after the 2026 midterm elections?
+919767: Will Russia capture all of Pokrovsk by January 15?
+919772: Will Russia capture all of Myrnohrad by January 31?
+920033: Will another country boycott Eurovision 2026 by March 31, 2026?
+920116: Will Armchair Expert with Dax Shepard win Best Podcast at the 83rd Golden Globes?
+920117: Will Call Her Daddy win Best Podcast at the 83rd Golden Globes?
+920118: Will Good Hang with Amy Poehler win Best Podcast at the 83rd Golden Globes?
+920119: Will Smartless win Best Podcast at the 83rd Golden Globes?
+920120: Will Up First win Best Podcast at the 83rd Golden Globes?
+920121: Will The Mel Robbins Podcast win Best Podcast at the 83rd Golden Globes?
+920142: Will Google have the best AI model for math on March 31?
+920143: Will Anthropic have the best AI model for math on March 31?
+920144: Will OpenAI have the best AI model for math on March 31?
+920145: Will Alibaba have the best AI model for math on March 31?
+920146: Will Z.ai have the best AI model for math on March 31?
+920147: Will xAI have the best AI model for math on March 31?
+920148: Will DeepSeek have the best AI model for math on March 31?
+920149: Will Moonshot have the best AI model for math on March 31?
+920150: Will Mistral have the best AI model for math on March 31?
+920210: Will Apple release a new product line before 2027?
+920283: Will Google have the best AI model for coding on March 31?
+920284: Will Anthropic have the best AI model for coding on March 31?
+920285: Will OpenAI have the best AI model for coding on March 31?
+920286: Will Alibaba have the best AI model for coding on March 31?
+920287: Will Z.ai have the best AI model for coding on March 31?
+920288: Will xAI have the best AI model for coding on March 31?
+920289: Will DeepSeek have the best AI model for coding on March 31?
+920290: Will Moonshot have the best AI model for coding on March 31?
+920291: Will Mistral have the best AI model for coding on March 31?
+920342: Will Trump meet with Kim Jong Un in January 2026?
+920343: Will Trump meet with Volodymyr Zelenskyy in January 2026?
+920344: Will Trump meet with Xi Jinping in January 2026?
+920345: Will Trump meet with Mohammed bin Salman in January 2026?
+920346: Will Trump meet with MrBeast in January 2026?
+920347: Will Trump meet with Vladimir Putin in January 2026?
+920348: Will Trump meet with Pope Leo XIV in January 2026?
+920349: Will Trump meet with Nicolás Maduro in January 2026?
+920350: Will Trump meet with Ursula von der Leyen in January 2026?
+920351: Will Trump meet with Kaja Kallas in January 2026?
+920352: Will Trump meet with Friedrich Merz in January 2026?
+920353: Will Trump meet with Keir Starmer in January 2026?
+920354: Will Trump meet with Emmanuel Macron in January 2026?
+920355: Will Trump meet with Giorgia Meloni in January 2026?
+920356: Will Trump meet with Satya Nadella in January 2026?
+920357: Will Trump meet with Jensen Huang in January 2026?
+920384: Will Trump talk to Kim Jong Un in January?
+920385: Will Trump talk to Volodymyr Zelenskyy in January?
+920386: Will Trump talk to Xi Jinping in January?
+920387: Will Trump talk to Mohammed bin Salman in January?
+920388: Will Trump talk to MrBeast in January?
+920389: Will Trump talk to Vladimir Putin in January?
+920390: Will Trump talk to Pope Leo XIV in January?
+920391: Will Trump talk to Nicolás Maduro in January?
+920392: Will Trump talk to Ursula von der Leyen in January?
+920393: Will Trump talk to Kaja Kallas in January?
+920394: Will Trump talk to Friedrich Merz in January?
+920396: Will Trump talk to Emmanuel Macron in January?
+920397: Will Trump talk to Giorgia Meloni in January?
+920398: Will Trump talk to Satya Nadella in January?
+920399: Will Trump talk to Jensen Huang in January?
+920400: Will Trump talk to Jerome Powell in January?
+920401: Will Apple release a foldable iPhone before 2027?
+920402: Variational FDV above $800M one day after launch?
+920403: Variational FDV above $1B one day after launch?
+920404: Variational FDV above $2B one day after launch?
+920405: Variational FDV above $3B one day after launch?
+920406: Variational FDV above $4B one day after launch?
+920407: Variational FDV above $5B one day after launch?
+920681: Will Germany GDP growth in Q4 2025 be below 0.0%?
+920682: Will Germany GDP growth in Q4 2025 be exactly 0.0%?
+920683: Will Germany GDP growth in Q4 2025 be exactly 0.1%?
+920684: Will Germany GDP growth in Q4 2025 be exactly 0.2%?
+920685: Will Germany GDP growth in Q4 2025 be exactly 0.3%?
+920686: Will Germany GDP growth in Q4 2025 be exactly 0.4%?
+920687: Will Germany GDP growth in Q4 2025 be above 0.4%?
+920846: Gemini 4.0 released by June 30, 2026?
+921186: Will the total domestic gross for Avatar: Fire and Ash be less than 400m by January 31?
+921187: Will the total domestic gross for Avatar: Fire and Ash be between 400m and 440m by January 31?
+921188: Will the total domestic gross for Avatar: Fire and Ash be between 440m and 480m by January 31?
+921189: Will the total domestic gross for Avatar: Fire and Ash be between 480m and 520m by January 31?
+921190: Will the total domestic gross for Avatar: Fire and Ash be greater than 520m by January 31?
+921191: Will Bitmine announce that it holds more than 5M ETH before 2027?
+921192: Will Bitmine announce that it holds more than 7M ETH before 2027?

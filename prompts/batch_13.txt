@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+787707: Will Zach Beecher be the Democratic nominee for the NJ-11 special election?
+787708: Will Dean Dafis be the Democratic nominee for the NJ-11 special election?
+787709: Will Cammie Croft be the Democratic nominee for the NJ-11 special election?
+787710: Will Jeff Grayzel be the Democratic nominee for the NJ-11 special election?
+787711: Will Justin Strickland be the Democratic nominee for the NJ-11 special election?
+787712: Will Marc Chaaban be the Democratic nominee for the NJ-11 special election?
+788061: Will Kim Keon Hee be sentenced to prison by March 31?
+788171: Will Paradex launch a token by March 31 2026?
+788172: Will Paradex launch a token by June 30 2026?
+788173: Will Paradex launch a token by September 30 2026?
+788174: Will Paradex launch a token by December 31 2026?
+788403: Jang Dong-hyeok out as PPP Leader by March 31, 2026?
+788408: Will Jack Reed be the Democratic nominee for Senate in Rhode Island?
+788409: Will Connor Burbridge be the Democratic nominee for Senate in Rhode Island?
+788434: Will Logan Forsythe be the Democratic nominee for Senate in Kentucky?
+788435: Will Jared Randall be the Democratic nominee for Senate in Kentucky?
+788436: Will Dale Romans be the Democratic nominee for Senate in Kentucky?
+788437: Will Pamela Stevenson be the Democratic nominee for Senate in Kentucky?
+788438: Will Vincent Thompson be the Democratic nominee for Senate in Kentucky?
+788439: Will Joel Willett be the Democratic nominee for Senate in Kentucky?
+788440: Will Charles Booker be the Democratic nominee for Senate in Kentucky?
+788441: Will Amy McGrath be the Democratic nominee for Senate in Kentucky?
+788460: Will Andy Barr be the Republican nominee for Senate in Kentucky?
+788461: Will Daniel Cameron be the Republican nominee for Senate in Kentucky?
+788462: Will Mike Faris be the Republican nominee for Senate in Kentucky?
+788463: Will Wende Kennedy be the Republican nominee for Senate in Kentucky?
+788464: Will Nate Morris be the Republican nominee for Senate in Kentucky?
+788465: Will Andrew Shelley be the Republican nominee for Senate in Kentucky?
+788518: New pandemic in 2026?
+788676: Will Netanyahu be pardoned by February 28?
+788826: Will Yoon Suk Yeol be sentenced to no prison time?
+788827: Will Yoon Suk Yeol be sentenced to less than 5 years in prison?
+788828: Will Yoon Suk Yeol be sentenced to 5–10 years in prison?
+788829: Will Yoon Suk Yeol be sentenced to 10–15 years in prison?
+788830: Will Yoon Suk Yeol be sentenced to 15–20 years in prison?
+788831: Will Yoon Suk Yeol be sentenced to 20–30 years in prison?
+788832: Will Yoon Suk Yeol be sentenced to at least 30 years in prison?
+788833: Will BAILE INOLVIDABLE be played at the Super Bowl halftime show?
+788834: Will Tití Me Preguntó be played at the Super Bowl halftime show?
+788835: Will DtMF be played at the Super Bowl halftime show?
+788836: Will LA MUDANZA be played at the Super Bowl halftime show?
+788837: Will DÁKITI be played at the Super Bowl halftime show?
+788838: Will I Like It be played at the Super Bowl halftime show?
+788839: Will NUEVAYOL be played at the Super Bowl halftime show?
+788840: Will Efecto be played at the Super Bowl halftime show?
+788841: Will LA CANCIÓN be played at the Super Bowl halftime show?
+788842: Will PERRO NEGRO be played at the Super Bowl halftime show?
+788843: Will un x100to be played at the Super Bowl halftime show?
+788844: Will Yonaguni be played at the Super Bowl halftime show?
+788845: Will MIA be played at the Super Bowl halftime show?
+788846: Will Te Boté - Remix be played at the Super Bowl halftime show?
+788847: Will Ojitos Lindos be played at the Super Bowl halftime show?
+788848: Will La Jumpa be played at the Super Bowl halftime show?
+788849: Will Me Porto Bonito be played at the Super Bowl halftime show?
+788850: Will Callaita be played at the Super Bowl halftime show?
+788851: Will No Me Conoce - Remix be played at the Super Bowl halftime show?
+788852: Will La Santa be played at the Super Bowl halftime show?
+788853: Will Neverita be played at the Super Bowl halftime show?
+788854: Will Safaera be played at the Super Bowl halftime show?
+788856: Will Elon Musk go on Joe Rogan before June 30?
+788934: Will Donald Trump visit Switzerland in 2026?
+789404: Reya FDV above $1B one day after launch?
+789405: Will Paradex launch a token by February 28, 2026?
+789406: Will Coalition Avenir Québec win the most seats in the 2026 Quebec general election?
+789407: Will Parti Québécois win the most seats in the 2026 Quebec general election?
+789408: Will Parti libéral du Québec win the most seats in the 2026 Quebec general election?
+789409: Will Québec solidaire win the most seats in the 2026 Quebec general election?
+789410: Will Parti conservateur du Québec win the most seats in the 2026 Quebec general election?
+789411: Will Parti vert du Québec win the most seats in the 2026 Quebec general election?
+789439: Will Paradex launch a token by April 30 2026?
+789484: Will Paradex launch a token by May 31, 2026?
+789540: Will Thomas Massie be the Republican nominee for KY-04?
+789541: Will Nicole Lee Ethington be the Republican nominee for KY-04?
+789542: Will Ed Gallrein be the Republican nominee for KY-04?
+789543: Will Robert Wells Jr. be the Republican nominee for KY-04?
+789950: Will CDU/CSU–SPD German federal coalition break before 2027?
+789951: Will s1mple retire by June 30?
+789952: Will CDU win the most seats in the 2026 Berlin state elections?
+789953: Will AfD win the most seats in the 2026 Berlin state elections?
+789954: Will Grüne win the most seats in the 2026 Berlin state elections?
+789955: Will SPD win the most seats in the 2026 Berlin state elections?
+789956: Will FDP win the most seats in the 2026 Berlin state elections?
+789957: Will Linke win the most seats in the 2026 Berlin state elections?
+789958: Will FW win the most seats in the 2026 Berlin state elections?
+789959: Will BSW win the most seats in the 2026 Berlin state elections?
+790375: Nocries signs for a pro CS2 organization by June 30?
+791216: Mamdani removes Jessica Tisch as NYC Police Commissioner by March 31?
+791703: Israel strikes Iran by June 30, 2026?
+791705: Israel strikes Iran by March 31, 2026?
+794965: Spread: Villarreal CF (-1.5)
+794966: Levante UD vs. Villarreal CF: O/U 1.5
+794967: Levante UD vs. Villarreal CF: O/U 2.5
+794968: Levante UD vs. Villarreal CF: O/U 3.5
+794969: Levante UD vs. Villarreal CF: Both Teams to Score
+796945: 2026 U.S. House election: Republicans flip the Democrats by March 31?
+798868: Will Cameron Boozer win the 2025-2026 Naismith Men's College Player of the Year Award?
+798869: Will Braden Smith win the 2025-2026 Naismith Men's College Player of the Year Award?
+798870: Will JT Toppin win the 2025-2026 Naismith Men's College Player of the Year Award?
+798871: Will Yaxel Lendeborg win the 2025-2026 Naismith Men's College Player of the Year Award?
+798872: Will AJ Dybantsa win the 2025-2026 Naismith Men's College Player of the Year Award?
+798873: Will Labaron Philon win the 2025-2026 Naismith Men's College Player of the Year Award?
+798874: Will Bennett Stirtz win the 2025-2026 Naismith Men's College Player of the Year Award?
+798875: Will Mikel Brown Jr win the 2025-2026 Naismith Men's College Player of the Year Award?
+798876: Will Darryn Peterson win the 2025-2026 Naismith Men's College Player of the Year Award?
+798877: Will Caleb Wilson win the 2025-2026 Naismith Men's College Player of the Year Award?
+798878: Will Trey Kaufman-Renn win the 2025-2026 Naismith Men's College Player of the Year Award?
+799331: Will Michael Whatley be the Republican nominee for Senate in North Carolina?
+799332: Will Thomas Tillis be the Republican nominee for Senate in North Carolina?
+799333: Will Pat Harrigan be the Republican nominee for Senate in North Carolina?
+799334: Will Mark Robinson be the Republican nominee for Senate in North Carolina?
+799335: Will Michele Morrow be the Republican nominee for Senate in North Carolina?
+799336: Will Lara Trump be the Republican nominee for Senate in North Carolina?
+799357: Will Royce White be the Republican nominee for Senate in Minnesota?
+799358: Will Julia Coleman be the Republican nominee for Senate in Minnesota?
+799359: Will Kristin Robbins be the Republican nominee for Senate in Minnesota?
+799360: Will Tom Weiler be the Republican nominee for Senate in Minnesota?
+799361: Will Adam Schwarze be the Republican nominee for Senate in Minnesota?
+799362: Will Mike Ruoho be the Republican nominee for Senate in Minnesota?
+799363: Will Raymond Petersen be the Republican nominee for Senate in Minnesota?
+799364: Will David Hann be the Republican nominee for Senate in Minnesota?
+799365: Will Alycia Gruenhagen be the Republican nominee for Senate in Minnesota?
+799366: Will Christopher Brooks be the Republican nominee for Senate in Minnesota?
+799385: Will Faustin-Archange Touadéra win the 2025 Central African Republic presidential election?
+799386: Will Anicet-Georges Dologuélé win the 2025 Central African Republic presidential election?
+799387: Will Henri-Marie Dondra win the 2025 Central African Republic presidential election?
+799388: Will Serge Ghislaine Djouri win the 2025 Central African Republic presidential election?
+799389: Will Aristide Brian Riboa win the 2025 Central African Republic presidential election?
+799390: Will Eddy Simforian Kabarakoti win the 2025 Central African Republic presidential election?
+799391: Will Marcelin Yalimendi win the 2025 Central African Republic presidential election?
+799419: Will Peggy Flanagan be the Democratic nominee for Senate in Minnesota?
+799420: Will Angie Craig be the Democratic nominee for Senate in Minnesota?
+799421: Will Melisa López Franzen be the Democratic nominee for Senate in Minnesota?
+799422: Will Ilhan Omar be the Democratic nominee for Senate in Minnesota?
+799423: Will Keith Ellison be the Democratic nominee for Senate in Minnesota?
+799424: Will Melisa Hortman be the Democratic nominee for Senate in Minnesota?
+799425: Will Jacob Frey be the Democratic nominee for Senate in Minnesota?
+799426: Will Betty McCollum be the Democratic nominee for Senate in Minnesota?
+799427: Will Steve Simon be the Democratic nominee for Senate in Minnesota?
+799428: Will David Wellstone be the Democratic nominee for Senate in Minnesota?
+799453: Will John E. Sununu be the Republican nominee for Senate in New Hampshire?
+799454: Will Scott Brown be the Republican nominee for Senate in New Hampshire?
+799455: Will Chris Sununu be the Republican nominee for Senate in New Hampshire?
+799456: Will Dan Innis be the Republican nominee for Senate in New Hampshire?
+799646: Will Ayanna Pressley be the Democratic nominee for Senate in Massachusetts?
+799651: Will Ed Markey be the Democratic nominee for Senate in Massachusetts?
+799654: Will Seth Moulton be the Democratic nominee for Senate in Massachusetts?
+799656: Will Alexander Rikleen be the Democratic nominee for Senate in Massachusetts?
+799683: Will Hallie Shoffner be the Democratic nominee for Senate in Arkansas?
+799684: Will Dan Whitfield be the Democratic nominee for Senate in Arkansas?
+799876: Will Jared Moskowitz be the Democratic nominee for Senate in Florida?
+799877: Will Josh Weil be the Democratic nominee for Senate in Florida?
+799878: Will Charlie Crist be the Democratic nominee for Senate in Florida?
+799879: Will Alexander Vindman be the Democratic nominee for Senate in Florida?
+799880: Will Alan Grayson be the Democratic nominee for Senate in Florida?
+799881: Will Jennifer Jenkins be the Democratic nominee for Senate in Florida?
+799882: Will Joey Atkins be the Democratic nominee for Senate in Florida?
+799883: Will Angie Nixon be the Democratic nominee for Senate in Florida?
+799937: Will Sherrod Brown be the Democratic nominee for Senate in Ohio?
+799938: Will Tim Ryan be the Democratic nominee for Senate in Ohio?
+799939: Will Greg Landsman be the Democratic nominee for Senate in Ohio?
+799940: Will Allison Russo be the Democratic nominee for Senate in Ohio?
+799957: Will Cindy Hyde-Smith be the Republican nominee for Senate from Mississippi?
+799958: Will Sarah Adlakha be the Republican nominee for Senate from Mississippi?
+799982: Will the United Hearts Movement win the most seats in the 2025 Central African Republic National Assembly election?
+799983: Will the Union for Central African Renewal win the most seats in the 2025 Central African Republic National Assembly election?
+799984: Will the National Movement of Independents win the most seats in the 2025 Central African Republic National Assembly election?
+799985: Will the Movement for the Liberation of the Central African People win the most seats in the 2025 Central African Republic National Assembly election?
+799986: Will the Central African Democratic Rally win the most seats in the 2025 Central African Republic National Assembly election?
+799987: Will Kwa Na Kwa win the most seats in the 2025 Central African Republic National Assembly election?
+799988: Will the National Union for Democracy and Progress win the most seats in the 2025 Central African Republic National Assembly election?
+800439: Will Google have the top AI model at the end of January 2026?
+800440: Will Anthropic have the top AI model at the end of January 2026?
+800441: Will OpenAI have the top AI model at the end of January 2026?
+800442: Will Alibaba have the top AI model at the end of January 2026?
+800443: Will Z.ai have the top AI model at the end of January 2026?
+800444: Will xAI have the top AI model at the end of January 2026?
+800446: Will DeepSeek have the top AI model at the end of January 2026?
+800448: Will Moonshot have the top AI model at the end of January 2026?
+800450: Will Mistral have the top AI model at the end of January 2026?
+800452: Will Meituan have the top AI model at the end of January 2026?
+800482: Will Google have the top AI model at the end of March 2026?
+800483: Will Anthropic have the top AI model at the end of March 2026?
+800484: Will OpenAI have the top AI model at the end of March 2026?
+800485: Will Alibaba have the top AI model at the end of March 2026?
+800486: Will Z.ai have the top AI model at the end of March 2026?
+800487: Will xAI have the top AI model at the end of March 2026?
+800488: Will DeepSeek have the top AI model at the end of March 2026?
+800489: Will Moonshot have the top AI model at the end of March 2026?
+800490: Will Mistral have the top AI model at the end of March 2026?
+800491: Will Meituan have the top AI model at the end of March 2026?
+800771: Will Mark Warner be the Democratic nominee for Senate in Virginia?
+800772: Will Jason Reynolds be the Democratic nominee for Senate in Virginia?
+801047: Will Google have the #2 AI model at the end of January 2026?
+801048: Will Anthropic have the #2 AI model at the end of January 2026?
+801049: Will OpenAI have the #2 AI model at the end of January 2026?
+801050: Will Alibaba have the #2 AI model at the end of January 2026?
+801051: Will Z.ai have the #2 AI model at the end of January 2026?
+801052: Will xAI have the #2 AI model at the end of January 2026?
+801053: Will DeepSeek have the #2 AI model at the end of January 2026?
+801054: Will Moonshot have the #2 AI model at the end of January 2026?
+801055: Will Mistral have the #2 AI model at the end of January 2026?
+801056: Will Meituan have the #2 AI model at the end of January 2026?
+801084: Will Google have the #2 AI model at the end of March 2026?
+801085: Will Anthropic have the #2 AI model at the end of March 2026?
+801086: Will OpenAI have the #2 AI model at the end of March 2026?
+801087: Will Alibaba have the #2 AI model at the end of March 2026?
+801088: Will Z.ai have the #2 AI model at the end of March 2026?
+801089: Will xAI have the #2 AI model at the end of March 2026?
+801090: Will DeepSeek have the #2 AI model at the end of March 2026?
+801091: Will Moonshot have the #2 AI model at the end of March 2026?
+801092: Will Mistral have the #2 AI model at the end of March 2026?
+801093: Will Meituan have the #2 AI model at the end of March 2026?
+801142: Will Google have the #3 AI model at the end of January 2026?
+801143: Will Anthropic have the #3 AI model at the end of January 2026?
+801144: Will OpenAI have the #3 AI model at the end of January 2026?
+801145: Will Alibaba have the #3 AI model at the end of January 2026?
+801146: Will Z.ai have the #3 AI model at the end of January 2026?
+801147: Will xAI have the #3 AI model at the end of January 2026?
+801148: Will DeepSeek have the #3 AI model at the end of January 2026?
+801149: Will Moonshot have the #3 AI model at the end of January 2026?
+801150: Will Mistral have the #3 AI model at the end of January 2026?
+801151: Will Meituan have the #3 AI model at the end of January 2026?
+801165: Will Alexander Gaasserud be the Republican nominee for Senate in West Virginia?
+801166: Will Tom Willis be the Republican nominee for Senate in West Virginia?
+801167: Will Shelley Moore Capito be the Republican nominee for Senate in West Virginia?
+801184: Will Google have the #3 AI model at the end of March 2026?
+801185: Will Anthropic have the #3 AI model at the end of March 2026?
+801186: Will OpenAI have the #3 AI model at the end of March 2026?
+801187: Will Alibaba have the #3 AI model at the end of March 2026?
+801188: Will Z.ai have the #3 AI model at the end of March 2026?
+801189: Will xAI have the #3 AI model at the end of March 2026?
+801190: Will DeepSeek have the #3 AI model at the end of March 2026?
+801191: Will Moonshot have the #3 AI model at the end of March 2026?
+801192: Will Mistral have the #3 AI model at the end of March 2026?
+801193: Will Meituan have the #3 AI model at the end of March 2026?
+801279: Will Google have the best AI model at the end of January 2026?
+801280: Will Anthropic have the best AI model at the end of January 2026?
+801281: Will OpenAI have the best AI model at the end of January 2026?
+801282: Will Alibaba have the best AI model at the end of January 2026?
+801283: Will Baidu have the best AI model at the end of January 2026?
+801284: Will Z.ai have the best AI model at the end of January 2026?
+801285: Will xAI have the best AI model at the end of January 2026?
+801286: Will DeepSeek have the best AI model at the end of January 2026?
+801287: Will Moonshot have the best AI model at the end of January 2026?
+801288: Will Mistral have the best AI model at the end of January 2026?
+801289: Will Meituan have the best AI model at the end of January 2026?
+801448: Will Google have the best AI model at the end of March 2026?
+801449: Will Anthropic have the best AI model at the end of March 2026?
+801450: Will OpenAI have the best AI model at the end of March 2026?
+801451: Will Alibaba have the best AI model at the end of March 2026?
+801452: Will Baidu have the best AI model at the end of March 2026?
+801453: Will Z.ai have the best AI model at the end of March 2026?
+801454: Will xAI have the best AI model at the end of March 2026?
+801455: Will DeepSeek have the best AI model at the end of March 2026?
+801456: Will Moonshot have the best AI model at the end of March 2026?
+801457: Will Mistral have the best AI model at the end of March 2026?
+801458: Will Meituan have the best AI model at the end of March 2026?
+801650: Will Scott Colom be the Democratic nominee for Senate in Mississippi?
+801651: Will Albert Littell be the Democratic nominee for Senate in Mississippi?
+801669: Will Google have the second-best AI model at the end of January 2026?
+801672: Will Anthropic have the second-best AI model at the end of January 2026?
+801673: Will OpenAI have the second-best AI model at the end of January 2026?
+801675: Will Alibaba have the second-best AI model at the end of January 2026?
+801678: Will Baidu have the second-best AI model at the end of January 2026?
+801680: Will Z.ai have the second-best AI model at the end of January 2026?
+801681: Will xAI have the second-best AI model at the end of January 2026?
+801685: Will DeepSeek have the second-best AI model at the end of January 2026?
+801687: Will Moonshot have the second-best AI model at the end of January 2026?
+801689: Will Mistral have the second-best AI model at the end of January 2026?
+801690: Will Meituan have the second-best AI model at the end of January 2026?
+801730: Will Google have the second-best AI model at the end of March 2026?
+801731: Will Anthropic have the second-best AI model at the end of March 2026?
+801732: Will OpenAI have the second-best AI model at the end of March 2026?
+801733: Will Alibaba have the second-best AI model at the end of March 2026?
+801734: Will Baidu have the second-best AI model at the end of March 2026?
+801735: Will Z.ai have the second-best AI model at the end of March 2026?
+801736: Will xAI have the second-best AI model at the end of March 2026?
+801737: Will DeepSeek have the second-best AI model at the end of March 2026?
+801738: Will Moonshot have the second-best AI model at the end of March 2026?
+801739: Will Mistral have the second-best AI model at the end of March 2026?
+801740: Will Meituan have the second-best AI model at the end of March 2026?
+801767: Will Pete Ricketts be the Republican nominee for Senate in Nebraska?
+801768: Will Edward Dunn be the Republican nominee for Senate in Nebraska?
+801810: Will Google have the third-best AI model at the end of January 2026?
+801811: Will Anthropic have the third-best AI model at the end of January 2026?
+801812: Will OpenAI have the third-best AI model at the end of January 2026?
+801813: Will Alibaba have the third-best AI model at the end of January 2026?
+801814: Will Baidu have the third-best AI model at the end of January 2026?
+801815: Will Z.ai have the third-best AI model at the end of January 2026?
+801816: Will xAI have the third-best AI model at the end of January 2026?
+801817: Will DeepSeek have the third-best AI model at the end of January 2026?
+801818: Will Moonshot have the third-best AI model at the end of January 2026?
+801819: Will Mistral have the third-best AI model at the end of January 2026?
+801820: Will Meituan have the third-best AI model at the end of January 2026?
+801835: Will Google have the third-best AI model at the end of March 2026?
+801836: Will Anthropic have the third-best AI model at the end of March 2026?
+801837: Will OpenAI have the third-best AI model at the end of March 2026?
+801838: Will Alibaba have the third-best AI model at the end of March 2026?
+801839: Will Baidu have the third-best AI model at the end of March 2026?
+801840: Will Z.ai have the third-best AI model at the end of March 2026?
+801841: Will xAI have the third-best AI model at the end of March 2026?
+801842: Will DeepSeek have the third-best AI model at the end of March 2026?
+801843: Will Moonshot have the third-best AI model at the end of March 2026?
+801844: Will Mistral have the third-best AI model at the end of March 2026?
+801845: Will Meituan have the third-best AI model at the end of March 2026?
+801860: Will Annie Andrews be the Democratic nominee for Senate in North Carolina?
+801861: Will Catherine Fleming Bruce be the Democratic nominee for Senate in North Carolina?
+801862: Will Kyle Freeman be the Democratic nominee for Senate in North Carolina?
+801879: Will Mathys Tel sign with a new club during the winter transfer window?
+801884: Will Sergio Ramos sign with a new club during the winter transfer window?
+801885: Will Scott McTominay sign with a new club during the winter transfer window?
+801886: Will James Ward-Prowse sign with a new club during the winter transfer window?
+801887: Will Adama Traore sign with a new club during the winter transfer window?
+801888: Will Jim Risch be the Republican nominee for Senate in Idaho?
+801889: Will Joe Evans be the Republican nominee for Senate in Idaho?
+801896: Will Jean-Philippe Mateta sign with a new club during the winter transfer window?
+801907: Will Carlos Baleba sign with a new club during the winter transfer window?
+801909: Will Federico Chiesa sign with a new club during the winter transfer window?
+801910: Will Allen Waters be the Republican nominee for Senate in Rhode Island?
+801911: Will Raymond McKay be the Republican nominee for Senate in Rhode Island?
+801932: Will Tesla open orders for the Robovan before 2027?
+801937: Will Michael Hummert be the Democratic nominee for Senate in Montana?
+801938: Will Reilly Neill be the Democratic nominee for Senate in Montana?
+802372: Costco increases hotdog price before 2027?
+802373: Pedro Sánchez out as PM of Spain by June 30, 2026?
+802374: Pedro Sánchez out as PM of Spain by December 31, 2026?
+802375: Will LaMelo Ball be traded this season?
+802376: Will Anthony Davis be traded this season?
+802377: Will Jonathan Kuminga be traded this season?
+802378: Will Lauri Markkanen be traded this season?
+802379: Will Ja Morant be traded this season?
+802380: Will Domantas Sabonis be traded this season?
+802381: Will Giannis Antetokounmpo be traded this season?
+802384: Will Keon Ellis be traded this season?
+802389: Will Bryan Johnson propose to his co-founder before 2027?
+805594: Spread: AZ (-1.5)
+805595: AZ vs. SBV Excelsior: O/U 1.5
+805596: AZ vs. SBV Excelsior: O/U 2.5
+805597: AZ vs. SBV Excelsior: O/U 3.5
+805598: AZ vs. SBV Excelsior: Both Teams to Score
+809034: Bismarck State Mystics vs. North Dakota Fighting Hawks (W)
+809533: Will Tim Vieira win the 1st round of the 2026 Portugal presidential election?
+809534: Will Joana Amaral Dias win the 1st round of the 2026 Portugal presidential election?
+809535: Will André Pestana win the 1st round of the 2026 Portugal presidential election?
+809536: Will André Ventura win the 1st round of the 2026 Portugal presidential election?
+809537: Will Orlando Cruz win the 1st round of the 2026 Portugal presidential election?
+809538: Will Aristides Teixeira win the 1st round of the 2026 Portugal presidential election?
+809539: Will Manuela Magno win the 1st round of the 2026 Portugal presidential election?
+809540: Will Luís Marques Mendes win the 1st round of the 2026 Portugal presidential election?
+809541: Will Pedro Tinoco de Faria win the 1st round of the 2026 Portugal presidential election?
+809542: Will Henrique Gouveia e Melo win the 1st round of the 2026 Portugal presidential election?
+809543: Will António José Seguro win the 1st round of the 2026 Portugal presidential election?
+809544: Will Vitorino Silva win the 1st round of the 2026 Portugal presidential election?
+809545: Will Ângela Maryah win the 1st round of the 2026 Portugal presidential election?
+809546: Will António Filipe win the 1st round of the 2026 Portugal presidential election?
+809547: Will Raul Perestrello win the 1st round of the 2026 Portugal presidential election?
+809548: Will José Cardoso win the 1st round of the 2026 Portugal presidential election?
+809549: Will Pedro Passos Coelho win the 1st round of the 2026 Portugal presidential election?
+809550: Will Jorge Pinto win the 1st round of the 2026 Portugal presidential election?
+809551: Will Manuel João Vieira win the 1st round of the 2026 Portugal presidential election?
+809552: Will Humberto Correia win the 1st round of the 2026 Portugal presidential election?
+809562: Will João Cotrim Figueiredo win the 1st round of the 2026 Portugal presidential election?
+809563: Will Rui Moreira win the 1st round of the 2026 Portugal presidential election?
+809564: Will Paulo Portas win the 1st round of the 2026 Portugal presidential election?
+809565: Will Catarina Martins win the 1st round of the 2026 Portugal presidential election?
+809900: Will Tim Vieira win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809901: Will Joana Amaral Dias win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809902: Will André Pestana win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809903: Will André Ventura win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809904: Will Orlando Cruz win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809905: Will Aristides Teixeira win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809906: Will Manuela Magno win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809907: Will Luís Marques Mendes win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809908: Will Pedro Tinoco de Faria win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809909: Will Henrique Gouveia e Melo win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809910: Will António José Seguro win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809911: Will Vitorino Silva win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809912: Will Ângela Maryah win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809913: Will António Filipe win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809914: Will Raul Perestrello win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809915: Will José Cardoso win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809916: Will Pedro Passos Coelho win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809917: Will Jorge Pinto win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809918: Will João Cotrim Figueiredo win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809919: Will Rui Moreira win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809920: Will Paulo Portas win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809921: Will Catarina Martins win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809922: Will Manuel João Vieira win 2nd place in the 1st round of the 2026 Portugal presidential election?
+809923: Will Humberto Correia win 2nd place in the 1st round of the 2026 Portugal presidential election?
+810179: Will AI be charged with a crime before 2027?
+810185: Will Union Progressiste pour le Renouveau (UPR) win the most seats in the 2026 Benin parliamentary election?
+810186: Will Bloc Républicain (BR) win the most seats in the 2026 Benin parliamentary election?
+810187: Will Les Démocrates (LD) win the most seats in the 2026 Benin parliamentary election?
+810188: Will Forces Cauris pour un Bénin Émergent (FCBE) win the most seats in the 2026 Benin parliamentary election?
+810189: Will Mouvement des Élites Engagées pour l’Émancipation du Bénin (MOELE-Benin) win the most seats in the 2026 Benin parliamentary election?
+810593: Will turnout in the first round of the 2026 Portuguese presidential election be less than 34%?
+810594: Will turnout in the first round of the 2026 Portuguese presidential election be between 34% and 36%?
+810595: Will turnout in the first round of the 2026 Portuguese presidential election be between 36% and 38%?
+810596: Will turnout in the first round of the 2026 Portuguese presidential election be between 38% and 40%?
+810597: Will turnout in the first round of the 2026 Portuguese presidential election be between 40% and 42%?
+810598: Will turnout in the first round of the 2026 Portuguese presidential election be between 42% and 44%?
+810599: Will turnout in the first round of the 2026 Portuguese presidential election be at least 44%?
+810786: Will fewer than 30 tornadoes occur in the United States in December?
+810787: Will 30 to 59 tornadoes occur in the United States in December?
+810788: Will 60 to 89 tornadoes occur in the United States in December?
+810789: Will 90 to 119 tornadoes occur in the United States in December?
+810790: Will 120 or more tornadoes occur in the United States in December?
+810795: Will fewer than 1550 tornadoes occur in the United States in 2025?
+810796: Will 1550 to 1599 tornadoes occur in the United States in 2025?
+810797: Will 1600 to 1649 tornadoes occur in the United States in 2025?
+810798: Will 1650 to 1699 tornadoes occur in the United States in 2025?
+810799: Will 1700 to 1749 tornadoes occur in the United States in 2025?
+810800: Will 1750 or more tornadoes occur in the United States in 2025?
+811287: Will turnout in the first round of the 2026 Costa Rican Presidential Election be less than 55%?
+811288: Will turnout in the first round of the 2026 Costa Rican Presidential Election be between 55% and 58%?
+811289: Will turnout in the first round of the 2026 Costa Rican Presidential Election be between 58% and 60%?
+811290: Will turnout in the first round of the 2026 Costa Rican Presidential Election be between 60% and 62%?
+811291: Will turnout in the first round of the 2026 Costa Rican Presidential Election be between 62% and 64%?
+811292: Will turnout in the first round of the 2026 Costa Rican Presidential Election be between 64% and 66%?
+811293: Will turnout in the first round of the 2026 Costa Rican Presidential Election be between 66% and 68%?
+811294: Will turnout in the first round of the 2026 Costa Rican Presidential Election be between 68% and 70%?
+811295: Will turnout in the first round of the 2026 Costa Rican Presidential Election be between 70% and 72%?
+811296: Will turnout in the first round of the 2026 Costa Rican Presidential Election be at least 72%?
+811719: Will the Swedish Social Democratic Party (S) win the most seats in the 2026 Swedish parliamentary election?
+811720: Will the Sweden Democrats (SD) win the most seats in the 2026 Swedish parliamentary election?
+811721: Will the Moderate Party (M) win the most seats in the 2026 Swedish parliamentary election?
+811722: Will the Centre Party (C) win the most seats in the 2026 Swedish parliamentary election?
+811723: Will the Left Party (V) win the most seats in the 2026 Swedish parliamentary election?
+811724: Will the Christian Democrats (KD) win the most seats in the 2026 Swedish parliamentary election?
+811725: Will the Green Party (MP) win the most seats in the 2026 Swedish parliamentary election?
+811726: Will the Liberals (L) win the most seats in the 2026 Swedish parliamentary election?
+811727: Will the Citizens' Coalition (MED) win the most seats in the 2026 Swedish parliamentary election?
+811809: Taliban blackmail of D.C. shooter confirmed by March 31?
+811828: Will "BAILE INOLVIDABLE" be played first at the Super Bowl halftime show?
+811829: Will "Tití Me Preguntó" be played first at the Super Bowl halftime show?
+811830: Will "DtMF" be played first at the Super Bowl halftime show?
+811831: Will "LA MUDANZA" be played first at the Super Bowl halftime show?
+811832: Will "DÁKITI" be played first at the Super Bowl halftime show?
+811833: Will "I Like It" be played first at the Super Bowl halftime show?
+811834: Will "NUEVAYOL" be played first at the Super Bowl halftime show?
+811835: Will "Efecto" be played first at the Super Bowl halftime show?
+811836: Will "LA CANCIÓN" be played first at the Super Bowl halftime show?
+811837: Will "PERRO NEGRO" be played first at the Super Bowl halftime show?
+811838: Will "un x100to" be played first at the Super Bowl halftime show?
+811839: Will "Yonaguni" be played first at the Super Bowl halftime show?
+811840: Will "MIA" be played first at the Super Bowl halftime show?
+811841: Will "Te Boté - Remix" be played first at the Super Bowl halftime show?
+811842: Will "Ojitos Lindos" be played first at the Super Bowl halftime show?
+811843: Will "La Jumpa" be played first at the Super Bowl halftime show?
+811844: Will "Me Porto Bonito" be played first at the Super Bowl halftime show?
+811845: Will "Callaita" be played first at the Super Bowl halftime show?
+811846: Will "No Me Conoce - Remix" be played first at the Super Bowl halftime show?
+811847: Will "La Santa" be played first at the Super Bowl halftime show?
+811848: Will "Neverita" be played first at the Super Bowl halftime show?
+811849: Will "Safaera" be played first at the Super Bowl halftime show?
+812976: 2026 U.S. Senate Election: Democrats flip Republicans by March 31?
+813123: Microstrategy delisted from MSCI index by March 31?
+813505: Mike Johnson out as Speaker by June 30?
+813506: Mike Johnson out as Speaker by December 31?
+813507: Lecornu  out as French PM by June 30, 2026?
+813508: Lecornu  out as French PM by December 31, 2026?
+813509: Will PLN win the second most seats in the 2026 Costa Rican Legislative Assembly election?
+813511: Will FA win the second most seats in the 2026 Costa Rican Legislative Assembly election?
+813512: Will PPSO win the second most seats in the 2026 Costa Rican Legislative Assembly election?
+813513: Will PPSD win the second most seats in the 2026 Costa Rican Legislative Assembly election?
+813514: Will PENAC win the second most seats in the 2026 Costa Rican Legislative Assembly election?
+813535: 2026 U.S. House Election: Republican Odds over 60% by March 31?
+813536: 2026 U.S. House Election: Republican Odds over 50% by March 31?
+813537: 2026 U.S. House Election: Republican Odds over 40% by March 31?
+813538: 2026 U.S. House Election: Republican Odds over 30% by March 31?
+813540: 2026 U.S. House Election: Republican Odds under 15% by March 31?
+813541: 2026 U.S. House Election: Republican Odds under 10% by March 31?
+814087: Will Giannis Antetokounmpo be traded to the New York Knicks?
+814088: Will Giannis Antetokounmpo be traded to the Atlanta Hawks?
+814089: Will Giannis Antetokounmpo be traded to the San Antonio Spurs?
+814090: Will Giannis Antetokounmpo be traded to the Detroit Pistons?
+814091: Will Giannis Antetokounmpo be traded to the Toronto Raptors?
+814092: Will Giannis Antetokounmpo be traded to the Houston Rockets?
+814093: Will Giannis Antetokounmpo be traded to the Los Angeles Lakers?
+814094: Will Giannis Antetokounmpo not be traded?
+814096: Will Giannis Antetokounmpo be traded to the Miami Heat?
+814097: Will Giannis Antetokounmpo be traded to the Golden State Warriors?
+814098: Will Giannis Antetokounmpo be traded to the Oklahoma City Thunder?
+814119: 2026 U.S. Senate Election: Republican Odds over 90% by March 31?
+814120: 2026 U.S. Senate Election: Republican Odds over 80% by March 31?
+814121: 2026 U.S. Senate Election: Republican Odds over 75% by March 31?
+814122: 2026 U.S. Senate Election: Republican Odds over 70% by March 31?
+814123: 2026 U.S. Senate Election: Republican Odds under 60% by March 31?
+814124: 2026 U.S. Senate Election: Republican Odds under 55% by March 31?
+814125: 2026 U.S. Senate Election: Republican Odds under 50% by March 31?
+814126: 2026 U.S. Senate Election: Republican Odds under 40% by March 31?
+814612: Will Kuomintang (KMT) win the most head of local government elections in the 2026 Taiwan local elections?
+814613: Will the Democratic Progressive Party (DPP) win the most head of local government elections in the 2026 Taiwan local elections?
+814614: Will the Taiwan People’s Party (TPP) win the most head of local government elections in the 2026 Taiwan local elections?
+820350: Will a hurricane make landfall in the US by May 31?
+820351: Will a hurricane form by May 31?
+821114: MH370 underwater wreckage found by June 30, 2026?
+821172: Will Base launch a token by June 30, 2026?
+821610: Will Will Boyd win the 2026 Alabama Governor Democratic primary election?
+821611: Will Ja’Mel Brown win the 2026 Alabama Governor Democratic primary election?

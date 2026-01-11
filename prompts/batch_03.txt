@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+576801: Will Union Berlin be relegated from the Bundesliga after the 2025–26 season?
+576803: Will FC Augsburg be relegated from the Bundesliga after the 2025–26 season?
+576804: Will Hamburger SV be relegated from the Bundesliga after the 2025–26 season?
+576805: Will FC Heidenheim be relegated from the Bundesliga after the 2025–26 season?
+576806: Will St. Pauli be relegated from the Bundesliga after the 2025–26 season?
+576807: Will FC Koln be relegated from the Bundesliga after the 2025–26 season?
+576809: Will Espanyol be relegated from La Liga after the 2025–26 season?
+576810: Will Getafe be relegated from La Liga after the 2025–26 season?
+576811: Will Osasuna be relegated from La Liga after the 2025–26 season?
+576812: Will Alavés be relegated from La Liga after the 2025–26 season?
+576813: Will Oviedo be relegated from La Liga after the 2025–26 season?
+576814: Will Valencia be relegated from La Liga after the 2025–26 season?
+576815: Will Sevilla be relegated from La Liga after the 2025–26 season?
+576816: Will Mallorca be relegated from La Liga after the 2025–26 season?
+576820: Will Lorient be relegated from Ligue 1 after the 2025–26 season?
+576821: Will Metz be relegated from Ligue 1 after the 2025–26 season?
+576822: Will Le Havre be relegated from Ligue 1 after the 2025–26 season?
+576823: Will Angers be relegated from Ligue 1 after the 2025–26 season?
+576824: Will Paris FC be relegated from Ligue 1 after the 2025–26 season?
+576825: Will Brest be relegated from Ligue 1 after the 2025–26 season?
+576865: Will 2025 be the second hottest year on record?
+576876: Will US GDP growth in 2025 be less than 0.5%?
+576877: Will US GDP growth in 2025 be between 0.5% and 1.0%?
+576878: Will US GDP growth in 2025 be between 1.0% and 1.5%?
+576879: Will US GDP growth in 2025 be between 1.5% and 2.0%?
+576880: Will US GDP growth in 2025 be between 2.0% and 2.5%?
+576881: Will US GDP growth in 2025 be greater than 2.5%?
+577160: Will Erling Haaland be the top goal scorer in the 2025–26 English Premier League season?
+577161: Will Mohamed Salah be the top goal scorer in the 2025–26 English Premier League season?
+577162: Will Viktor Gyokeres be the top goal scorer in the 2025–26 English Premier League season?
+577163: Will Alexander Isak be the top goal scorer in the 2025–26 English Premier League season?
+577164: Will Joao Pedro be the top goal scorer in the 2025–26 English Premier League season?
+577165: Will Hugo Ekitike be the top goal scorer in the 2025–26 English Premier League season?
+577166: Will Cole Palmer be the top goal scorer in the 2025–26 English Premier League season?
+577167: Will Benjamin Sesko be the top goal scorer in the 2025–26 English Premier League season?
+577168: Will Ollie Watkins be the top goal scorer in the 2025–26 English Premier League season?
+577169: Will Richarlison be the top goal scorer in the 2025–26 English Premier League season?
+577170: Will Dominic Solanke be the top goal scorer in the 2025–26 English Premier League season?
+577171: Will Omar Marmoush be the top goal scorer in the 2025–26 English Premier League season?
+577172: Will Jean-Philippe Mateta be the top goal scorer in the 2025–26 English Premier League season?
+577173: Will Yoane Wissa be the top goal scorer in the 2025–26 English Premier League season?
+577174: Will Matheus Cunha be the top goal scorer in the 2025–26 English Premier League season?
+577175: Will Liam Delap be the top goal scorer in the 2025–26 English Premier League season?
+577176: Will Bukayo Saka be the top goal scorer in the 2025–26 English Premier League season?
+577177: Will Bryan Mbeumo be the top goal scorer in the 2025–26 English Premier League season?
+577178: Will Jarrod Bowen be the top goal scorer in the 2025–26 English Premier League season?
+577179: Will Evanilson be the top goal scorer in the 2025–26 English Premier League season?
+577180: Will Charalambos Kostoulas be the top goal scorer in the 2025–26 English Premier League season?
+577181: Will Bruno Fernandes be the top goal scorer in the 2025–26 English Premier League season?
+577182: Will Chris Wood be the top goal scorer in the 2025–26 English Premier League season?
+577183: Will Morgan Rogers be the top goal scorer in the 2025–26 English Premier League season?
+577184: Will Thierno Barry be the top goal scorer in the 2025–26 English Premier League season?
+577185: Will Mohammed Kudus be the top goal scorer in the 2025–26 English Premier League season?
+577186: Will Nicolas Jackson be the top goal scorer in the 2025–26 English Premier League season?
+577187: Will Brennan Johnson be the top goal scorer in the 2025–26 English Premier League season?
+577188: Will Cody Gakpo be the top goal scorer in the 2025–26 English Premier League season?
+577189: Will Kai Havertz be the top goal scorer in the 2025–26 English Premier League season?
+577190: Will Florian Wirtz be the top goal scorer in the 2025–26 English Premier League season?
+577218: Will Kylian Mbappe be the top goal scorer in the 2025–26 La Liga season?
+577219: Will Robert Lewandowski be the top goal scorer in the 2025–26 La Liga season?
+577220: Will Alexander Sorloth be the top goal scorer in the 2025–26 La Liga season?
+577221: Will Raphinha be the top goal scorer in the 2025–26 La Liga season?
+577222: Will Ante Budimir be the top goal scorer in the 2025–26 La Liga season?
+577223: Will Julian Alvarez be the top goal scorer in the 2025–26 La Liga season?
+577224: Will Gonzalo Garcia be the top goal scorer in the 2025–26 La Liga season?
+577225: Will Oihan Sancet be the top goal scorer in the 2025–26 La Liga season?
+577226: Will Ferran Torres be the top goal scorer in the 2025–26 La Liga season?
+577227: Will Lamine Yamal be the top goal scorer in the 2025–26 La Liga season?
+577228: Will Marcus Rashford be the top goal scorer in the 2025–26 La Liga season?
+577229: Will Broja Iglesias be the top goal scorer in the 2025–26 La Liga season?
+577230: Will Vinicius Junior be the top goal scorer in the 2025–26 La Liga season?
+577231: Will Mikel Oyarzabal be the top goal scorer in the 2025–26 La Liga season?
+577232: Will Hugo Duro be the top goal scorer in the 2025–26 La Liga season?
+577233: Will Ayoze Perez be the top goal scorer in the 2025–26 La Liga season?
+577234: Will Vedat Muriqi be the top goal scorer in the 2025–26 La Liga season?
+577235: Will Dodi Lukebakio be the top goal scorer in the 2025–26 La Liga season?
+577236: Will Gorka Guruzeta be the top goal scorer in the 2025–26 La Liga season?
+577237: Will Javi Puado be the top goal scorer in the 2025–26 La Liga season?
+577238: Will Dani Olmo be the top goal scorer in the 2025–26 La Liga season?
+577239: Will Daniel Raba be the top goal scorer in the 2025–26 La Liga season?
+577240: Will Iago Aspas be the top goal scorer in the 2025–26 La Liga season?
+577241: Will Cristhian Stuani be the top goal scorer in the 2025–26 La Liga season?
+577242: Will Cyle Larin be the top goal scorer in the 2025–26 La Liga season?
+577243: Will Abel Ruiz be the top goal scorer in the 2025–26 La Liga season?
+577244: Will Inaki Williams be the top goal scorer in the 2025–26 La Liga season?
+577245: Will Alex Baena be the top goal scorer in the 2025–26 La Liga season?
+577246: Will Antoine Griezmann be the top goal scorer in the 2025–26 La Liga season?
+577247: Will Jude Bellingham be the top goal scorer in the 2025–26 La Liga season?
+577248: Will Roberto Fernandez be the top goal scorer in the 2025–26 La Liga season?
+577276: Will Harry Kane be the top goal scorer in the 2025–26 Bundesliga season?
+577277: Will Serhou Guirassy be the top goal scorer in the 2025–26 Bundesliga season?
+577278: Will Patrik Schick be the top goal scorer in the 2025–26 Bundesliga season?
+577279: Will Michael Olise be the top goal scorer in the 2025–26 Bundesliga season?
+577280: Will Jonathan Burkardt be the top goal scorer in the 2025–26 Bundesliga season?
+577281: Will Lois Openda be the top goal scorer in the 2025–26 Bundesliga season?
+577282: Will Luis Diaz be the top goal scorer in the 2025–26 Bundesliga season?
+577283: Will Victor Boniface be the top goal scorer in the 2025–26 Bundesliga season?
+577284: Will Nick Woltemade be the top goal scorer in the 2025–26 Bundesliga season?
+577285: Will Jamal Musiala be the top goal scorer in the 2025–26 Bundesliga season?
+577286: Will Maximilian Beier be the top goal scorer in the 2025–26 Bundesliga season?
+577287: Will Tim Kleindienst be the top goal scorer in the 2025–26 Bundesliga season?
+577288: Will Michy Batshuayi be the top goal scorer in the 2025–26 Bundesliga season?
+577289: Will Karim Adeyemi be the top goal scorer in the 2025–26 Bundesliga season?
+577290: Will Ermedin Demirovic be the top goal scorer in the 2025–26 Bundesliga season?
+577291: Will Deniz Undav be the top goal scorer in the 2025–26 Bundesliga season?
+577292: Will Robert Glatzel be the top goal scorer in the 2025–26 Bundesliga season?
+577293: Will Andrej Kramaric be the top goal scorer in the 2025–26 Bundesliga season?
+577294: Will Jonas Wind be the top goal scorer in the 2025–26 Bundesliga season?
+577295: Will Mohammed Amoura be the top goal scorer in the 2025–26 Bundesliga season?
+577296: Will Yussuf Poulsen be the top goal scorer in the 2025–26 Bundesliga season?
+578157: Will any 2026 FIFA World Cup game scheduled in the U.S. be relocated abroad?
+578398: Will Cremonese be relegated from Serie A after the 2025-26 season?
+578399: Will Pisa be relegated from Serie A after the 2025-26 season?
+578400: Will Verona be relegated from Serie A after the 2025-26 season?
+578401: Will Lecce be relegated from Serie A after the 2025-26 season?
+578402: Will Sassuolo be relegated from Serie A after the 2025-26 season?
+578403: Will Cagliari be relegated from Serie A after the 2025-26 season?
+578404: Will Parma be relegated from Serie A after the 2025-26 season?
+578405: Will Genoa be relegated from Serie A after the 2025-26 season?
+578406: Will Udinese be relegated from Serie A after the 2025-26 season?
+578407: Will Torino be relegated from Serie A after the 2025-26 season?
+578408: Will Ousmane Dembele be the top goal scorer in the 2025-26 Ligue 1 season?
+578409: Will Mason Greenwood be the top goal scorer in the 2025-26 Ligue 1 season?
+578410: Will Khvicha Kvaratskhelia be the top goal scorer in the 2025-26 Ligue 1 season?
+578411: Will Matias Goncalo Ramos be the top goal scorer in the 2025-26 Ligue 1 season?
+578412: Will Bradley Barcola be the top goal scorer in the 2025-26 Ligue 1 season?
+578413: Will Desire Doue be the top goal scorer in the 2025-26 Ligue 1 season?
+578414: Will Mika Biereth be the top goal scorer in the 2025-26 Ligue 1 season?
+578415: Will Georges Mikautadze be the top goal scorer in the 2025-26 Ligue 1 season?
+578416: Will Arnaud Kalimuendo be the top goal scorer in the 2025-26 Ligue 1 season?
+578417: Will Pierre-Emerick Aubameyang be the top goal scorer in the 2025-26 Ligue 1 season?
+578418: Will Amine Gouiri be the top goal scorer in the 2025-26 Ligue 1 season?
+578419: Will Olivier Giroud be the top goal scorer in the 2025-26 Ligue 1 season?
+578420: Will Emanuel Emegha be the top goal scorer in the 2025-26 Ligue 1 season?
+578421: Will Terem Moffi be the top goal scorer in the 2025-26 Ligue 1 season?
+578422: Will Ludovic Ajorque be the top goal scorer in the 2025-26 Ligue 1 season?
+578423: Will Breel Embolo be the top goal scorer in the 2025-26 Ligue 1 season?
+578424: Will Achraf Hakimi be the top goal scorer in the 2025-26 Ligue 1 season?
+578425: Will Folarin Balogun be the top goal scorer in the 2025-26 Ligue 1 season?
+578426: Will Matthis Abline be the top goal scorer in the 2025-26 Ligue 1 season?
+578427: Will Fabian Ruiz be the top goal scorer in the 2025-26 Ligue 1 season?
+578428: Will Jean Philippe Krasso be the top goal scorer in the 2025-26 Ligue 1 season?
+578429: Will Anssumane Fati be the top goal scorer in the 2025-26 Ligue 1 season?
+578430: Will Mostafa Mohamed be the top goal scorer in the 2025-26 Ligue 1 season?
+578431: Will Igor Paixao be the top goal scorer in the 2025-26 Ligue 1 season?
+578432: Will Esteban Lepaul be the top goal scorer in the 2025-26 Ligue 1 season?
+578433: Will Cheikh Sabaly be the top goal scorer in the 2025-26 Ligue 1 season?
+578434: Will Frank Magri be the top goal scorer in the 2025-26 Ligue 1 season?
+578435: Will Wesley Said be the top goal scorer in the 2025-26 Ligue 1 season?
+578436: Will Joaquin Panichelli be the top goal scorer in the 2025-26 Ligue 1 season?
+578437: Will Sambou Soumano be the top goal scorer in the 2025-26 Ligue 1 season?
+578438: Will Lassine Sinayoko be the top goal scorer in the 2025-26 Ligue 1 season?
+578439: Will Ferreira Vitinha be the top goal scorer in the 2025-26 Ligue 1 season?
+578440: Will Gauthier Hein be the top goal scorer in the 2025-26 Ligue 1 season?
+578441: Will Moses Simon be the top goal scorer in the 2025-26 Ligue 1 season?
+578442: Will Santiago Hidalgo be the top goal scorer in the 2025-26 Ligue 1 season?
+578443: Will Martin Satriano be the top goal scorer in the 2025-26 Ligue 1 season?
+578444: Will Abdoulaye Toure be the top goal scorer in the 2025-26 Ligue 1 season?
+578527: Will Aston Villa win the 2025-26 UEFA Europa League?
+578528: Will Bologna win the 2025-26 UEFA Europa League?
+578529: Will Celta win the 2025-26 UEFA Europa League?
+578530: Will Freiburg win the 2025-26 UEFA Europa League?
+578531: Will GNK Dinamo win the 2025-26 UEFA Europa League?
+578532: Will Go Ahead Eagles win the 2025-26 UEFA Europa League?
+578533: Will Lille win the 2025-26 UEFA Europa League?
+578534: Will Lyon win the 2025-26 UEFA Europa League?
+578535: Will Nott'm Forest win the 2025-26 UEFA Europa League?
+578536: Will Porto win the 2025-26 UEFA Europa League?
+578537: Will Real Betis win the 2025-26 UEFA Europa League?
+578538: Will Roma win the 2025-26 UEFA Europa League?
+578539: Will Stuttgart win the 2025-26 UEFA Europa League?
+578542: Will Braga win the 2025-26 UEFA Europa League?
+578543: Will Brann win the 2025-26 UEFA Europa League?
+578545: Will FCSB win the 2025-26 UEFA Europa League?
+578546: Will Genk win the 2025-26 UEFA Europa League?
+578550: Will Ludogorets win the 2025-26 UEFA Europa League?
+578553: Will Midtjylland win the 2025-26 UEFA Europa League?
+578554: Will Panathinaikos win the 2025-26 UEFA Europa League?
+578555: Will PAOK win the 2025-26 UEFA Europa League?
+578562: Will Young Boys win the 2025-26 UEFA Europa League?
+578565: Will Basel win the 2025-26 UEFA Europa League?
+578566: Will Celtic win the 2025-26 UEFA Europa League?
+578567: Will Red Star Belgrade win the 2025-26 UEFA Europa League?
+578568: Will Fenerbahçe win the 2025-26 UEFA Europa League?
+578569: Will Ferencváros win the 2025-26 UEFA Europa League?
+578570: Will Feyenoord win the 2025-26 UEFA Europa League?
+578702: Apple AirTags 2 priced below $30 USD at release?
+579357: Will Napoli finish in the top 4 in the 2025-26 Serie A season?
+579358: Will Inter finish in the top 4 in the 2025-26 Serie A season?
+579359: Will AC Milan finish in the top 4 in the 2025-26 Serie A season?
+579360: Will Juventus finish in the top 4 in the 2025-26 Serie A season?
+579361: Will Roma finish in the top 4 in the 2025-26 Serie A season?
+579362: Will Atalanta finish in the top 4 in the 2025-26 Serie A season?
+579363: Will Lazio finish in the top 4 in the 2025-26 Serie A season?
+579364: Will Fiorentina finish in the top 4 in the 2025-26 Serie A season?
+579365: Will Bologna finish in the top 4 in the 2025-26 Serie A season?
+579366: Will Como finish in the top 4 in the 2025-26 Serie A season?
+579367: Will Torino finish in the top 4 in the 2025-26 Serie A season?
+579368: Will Pisa finish in the top 4 in the 2025-26 Serie A season?
+579369: Will Cagliari finish in the top 4 in the 2025-26 Serie A season?
+579370: Will Verona finish in the top 4 in the 2025-26 Serie A season?
+579371: Will US Cremonese finish in the top 4 in the 2025-26 Serie A season?
+579372: Will Lecce finish in the top 4 in the 2025-26 Serie A season?
+579373: Will Parma finish in the top 4 in the 2025-26 Serie A season?
+579374: Will Udinese finish in the top 4 in the 2025-26 Serie A season?
+579375: Will Genoa finish in the top 4 in the 2025-26 Serie A season?
+579376: Will Sassuolo finish in the top 4 in the 2025-26 Serie A season?
+579377: Will Lautaro Martinez be the top goal scorer in the 2025-26 Serie A season?
+579378: Will Moise Kean be the top goal scorer in the 2025-26 Serie A season?
+579379: Will Jonathan David be the top goal scorer in the 2025-26 Serie A season?
+579380: Will Marcus Thuram be the top goal scorer in the 2025-26 Serie A season?
+579381: Will Ademola Lookman be the top goal scorer in the 2025-26 Serie A season?
+579382: Will Dusan Vlahovic be the top goal scorer in the 2025-26 Serie A season?
+579383: Will Santiago Gimenez be the top goal scorer in the 2025-26 Serie A season?
+579384: Will Artem Dovbyk be the top goal scorer in the 2025-26 Serie A season?
+579385: Will Ciro Immobile be the top goal scorer in the 2025-26 Serie A season?
+579386: Will Evan Ferguson be the top goal scorer in the 2025-26 Serie A season?
+579387: Will Lorenzo Lucca be the top goal scorer in the 2025-26 Serie A season?
+579388: Will Gianluca Scamacca be the top goal scorer in the 2025-26 Serie A season?
+579389: Will Valentin Castellanos be the top goal scorer in the 2025-26 Serie A season?
+579390: Will Riccardo Orsolini be the top goal scorer in the 2025-26 Serie A season?
+579391: Will Romelu Lukaku be the top goal scorer in the 2025-26 Serie A season?
+579392: Will Kenan Yildiz be the top goal scorer in the 2025-26 Serie A season?
+579393: Will Christian Pulisic be the top goal scorer in the 2025-26 Serie A season?
+579394: Will Kevin De Bruyne be the top goal scorer in the 2025-26 Serie A season?
+579395: Will Assane Diao be the top goal scorer in the 2025-26 Serie A season?
+579396: Will Mehdi Taremi be the top goal scorer in the 2025-26 Serie A season?
+579397: Will Edin Dzeko be the top goal scorer in the 2025-26 Serie A season?
+579398: Will Paulo Dybala be the top goal scorer in the 2025-26 Serie A season?
+579399: Will Francesco Camarda be the top goal scorer in the 2025-26 Serie A season?
+579400: Will Rafael Leao be the top goal scorer in the 2025-26 Serie A season?
+579401: Will Andrea Pinamonti be the top goal scorer in the 2025-26 Serie A season?
+579402: Will Santiago Castro be the top goal scorer in the 2025-26 Serie A season?
+579978: Super Bowl - Winning Conference 
+579979: Will the team that wins the 2025-26 Super Bowl be from California?
+579980: Will the team that wins the 2025-26 Super Bowl be from Florida?
+579982: Will the team that wins the 2025-26 Super Bowl be from New York/New Jersey?
+579984: Will the team that wins the 2025-26 Super Bowl be from Pennsylvania?
+579985: Will the team that wins the 2025-26 Super Bowl be from Texas?
+579986: Will the team that wins the 2025-26 Super Bowl be from any Other state?
+580001: Will the team that wins the 2025-26 Super Bowl play in the AFC East?
+580002: Will the team that wins the 2025-26 Super Bowl play in the NFC East?
+580003: Will the team that wins the 2025-26 Super Bowl play in the AFC South?
+580005: Will the team that wins the 2025-26 Super Bowl play in the AFC North?
+580006: Will the team that wins the 2025-26 Super Bowl play in the NFC North?
+580007: Will the team that wins the 2025-26 Super Bowl play in the AFC West?
+580008: Will the team that wins the 2025-26 Super Bowl play in the NFC West?
+580081: Will Garrett Nussmeier be the first pick of the 2026 NFL Draft?
+580082: Will LaNorris Sellers be the first pick of the 2026 NFL Draft?
+580083: Will Cade Klubnik be the first pick of the 2026 NFL Draft?
+580084: Will Arch Manning be the first pick of the 2026 NFL Draft?
+580085: Will Drew Allar be the first pick of the 2026 NFL Draft?
+580086: Will Sam Leavitt be the first pick of the 2026 NFL Draft?
+580087: Will Fernando Mendoza be the first pick of the 2026 NFL Draft?
+580088: Will Peter Woods be the first pick of the 2026 NFL Draft?
+580089: Will Keldric Faulk be the first pick of the 2026 NFL Draft?
+580090: Will T.J. Parker be the first pick of the 2026 NFL Draft?
+580091: Will Kadyn Proctor be the first pick of the 2026 NFL Draft?
+580092: Will Carson Beck be the first pick of the 2026 NFL Draft?
+580093: Will John Mateer be the first pick of the 2026 NFL Draft?
+580094: Will Spencer Fano be the first pick of the 2026 NFL Draft?
+580095: Will LT Overton be the first pick of the 2026 NFL Draft?
+580096: Will Sawyer Robertson be the first pick of the 2026 NFL Draft?
+580097: Will Caleb Lomu be the first pick of the 2026 NFL Draft?
+580098: Will Jayden Maiava be the first pick of the 2026 NFL Draft?
+580099: Will Rueben Bain Jr be the first pick of the 2026 NFL Draft?
+580100: Will Matayo Uiagalelei be the first pick of the 2026 NFL Draft?
+580101: Will Miller Moss be the first pick of the 2026 NFL Draft?
+580102: Will Francis Mauigoa be the first pick of the 2026 NFL Draft?
+580103: Will Caleb Downs be the first pick of the 2026 NFL Draft?
+580104: Will Kyron Drones be the first pick of the 2026 NFL Draft?
+580105: Will Jordyn Tyson be the first pick of the 2026 NFL Draft?
+580106: Will Aidan Chiles be the first pick of the 2026 NFL Draft?
+580107: Will Ty Simpson be the first pick of the 2026 NFL Draft?
+580108: Will Jalon Daniels be the first pick of the 2026 NFL Draft?
+580109: Will Nico Iamaleava be the first pick of the 2026 NFL Draft?
+580110: Will David Bailey be the first pick of the 2026 NFL Draft?
+580111: Will Raylen Wilson be the first pick of the 2026 NFL Draft?
+580112: Will Taylen Green be the first pick of the 2026 NFL Draft?
+580113: Will Conner Weigman be the first pick of the 2026 NFL Draft?
+580115: Will Dante Moore be the first pick of the 2026 NFL Draft?
+580116: Will Arvell Reese be the first pick of the 2026 NFL Draft?
+580117: Will Cashius Howell be the first pick of the 2026 NFL Draft?
+580141: Will the 2025-26 College Football Champion come from the ACC?
+580142: Will the 2025-26 College Football Champion come from the Big 10?
+581138: College Football: Undefeated 15-0 team?
+581559: Will Manchester City win the 2025–26 Carabao Cup?
+581560: Will Arsenal win the 2025–26 Carabao Cup?
+581561: Will Chelsea win the 2025–26 Carabao Cup?
+581562: Will Newcastle win the 2025–26 Carabao Cup?
+582133: Will Arsenal finish in the top 4 of the EPL 2025–26 standings?
+582134: Will Liverpool finish in the top 4 of the EPL 2025–26 standings?
+582135: Will Manchester City finish in the top 4 of the EPL 2025–26 standings?
+582136: Will Chelsea finish in the top 4 of the EPL 2025–26 standings?
+582137: Will Tottenham finish in the top 4 of the EPL 2025–26 standings?
+582138: Will Manchester United finish in the top 4 of the EPL 2025–26 standings?
+582139: Will Aston Villa finish in the top 4 of the EPL 2025–26 standings?
+582140: Will Newcastle finish in the top 4 of the EPL 2025–26 standings?
+582141: Will Nottingham Forest finish in the top 4 of the EPL 2025–26 standings?
+582142: Will Everton finish in the top 4 of the EPL 2025–26 standings?
+582143: Will Brentford finish in the top 4 of the EPL 2025–26 standings?
+582144: Will Bournemouth finish in the top 4 of the EPL 2025–26 standings?
+582145: Will Crystal Palace finish in the top 4 of the EPL 2025–26 standings?
+582146: Will Brighton finish in the top 4 of the EPL 2025–26 standings?
+582147: Will West Ham finish in the top 4 of the EPL 2025–26 standings?
+582148: Will Wolves finish in the top 4 of the EPL 2025–26 standings?
+582149: Will Burnley finish in the top 4 of the EPL 2025–26 standings?
+582150: Will Leeds finish in the top 4 of the EPL 2025–26 standings?
+582151: Will Fulham finish in the top 4 of the EPL 2025–26 standings?
+582152: Will Sunderland finish in the top 4 of the EPL 2025–26 standings?
+582153: Will Barcelona finish in the top 4 of the La Liga 2025–26 standings?
+582154: Will Real Madrid finish in the top 4 of the La Liga 2025–26 standings?
+582155: Will Atletico Madrid finish in the top 4 of the La Liga 2025–26 standings?
+582156: Will Athletic Bilbao finish in the top 4 of the La Liga 2025–26 standings?
+582157: Will Villarreal finish in the top 4 of the La Liga 2025–26 standings?
+582158: Will Betis finish in the top 4 of the La Liga 2025–26 standings?
+582159: Will Real Sociedad finish in the top 4 of the La Liga 2025–26 standings?
+582160: Will Espanyol finish in the top 4 of the La Liga 2025–26 standings?
+582161: Will Celta Vigo finish in the top 4 of the La Liga 2025–26 standings?
+582162: Will Valencia finish in the top 4 of the La Liga 2025–26 standings?
+582163: Will Sevilla finish in the top 4 of the La Liga 2025–26 standings?
+582164: Will Levante finish in the top 4 of the La Liga 2025–26 standings?
+582165: Will Rayo Vallecano finish in the top 4 of the La Liga 2025–26 standings?
+582166: Will Girona finish in the top 4 of the La Liga 2025–26 standings?
+582167: Will Elche finish in the top 4 of the La Liga 2025–26 standings?
+582168: Will Getafe finish in the top 4 of the La Liga 2025–26 standings?
+582169: Will Osasuna finish in the top 4 of the La Liga 2025–26 standings?
+582170: Will Alaves finish in the top 4 of the La Liga 2025–26 standings?
+582171: Will Oviedo finish in the top 4 of the La Liga 2025–26 standings?
+582172: Will Mallorca finish in the top 4 of the La Liga 2025–26 standings?
+582173: Will Bayern Munich finish in the top 4 of the Bundesliga 2025–26 standings?
+582174: Will Leverkusen finish in the top 4 of the Bundesliga 2025–26 standings?
+582175: Will Dortmund finish in the top 4 of the Bundesliga 2025–26 standings?
+582176: Will Eintracht Frankfurt finish in the top 4 of the Bundesliga 2025–26 standings?
+582177: Will Stuttgart finish in the top 4 of the Bundesliga 2025–26 standings?
+582178: Will RB Leipzig finish in the top 4 of the Bundesliga 2025–26 standings?
+582179: Will Freiburg finish in the top 4 of the Bundesliga 2025–26 standings?
+582180: Will Mainz finish in the top 4 of the Bundesliga 2025–26 standings?
+582181: Will Mgladbach finish in the top 4 of the Bundesliga 2025–26 standings?
+582182: Will VfL Wolfsburg finish in the top 4 of the Bundesliga 2025–26 standings?
+582183: Will Werder Bremen finish in the top 4 of the Bundesliga 2025–26 standings?
+582184: Will Hoffenheim finish in the top 4 of the Bundesliga 2025–26 standings?
+582185: Will Union Berlin finish in the top 4 of the Bundesliga 2025–26 standings?
+582186: Will FC Koln finish in the top 4 of the Bundesliga 2025–26 standings?
+582187: Will FC Augsburg finish in the top 4 of the Bundesliga 2025–26 standings?
+582188: Will Hamburger SV finish in the top 4 of the Bundesliga 2025–26 standings?
+582189: Will FC Heidenheim finish in the top 4 of the Bundesliga 2025–26 standings?
+582190: Will St Pauli finish in the top 4 of the Bundesliga 2025–26 standings?
+582314: Will Paris St-Germain finish in the top 4 of the Ligue 1 2025–26 standings?
+582315: Will Monaco finish in the top 4 of the Ligue 1 2025–26 standings?
+582316: Will Marseille finish in the top 4 of the Ligue 1 2025–26 standings?
+582317: Will Lyon finish in the top 4 of the Ligue 1 2025–26 standings?
+582318: Will Lille finish in the top 4 of the Ligue 1 2025–26 standings?
+582319: Will Nice finish in the top 4 of the Ligue 1 2025–26 standings?
+582320: Will Rennes finish in the top 4 of the Ligue 1 2025–26 standings?
+582321: Will Lens finish in the top 4 of the Ligue 1 2025–26 standings?
+582322: Will Strasbourg finish in the top 4 of the Ligue 1 2025–26 standings?
+582323: Will Toulouse finish in the top 4 of the Ligue 1 2025–26 standings?
+582324: Will Auxerre finish in the top 4 of the Ligue 1 2025–26 standings?
+582325: Will Lorient finish in the top 4 of the Ligue 1 2025–26 standings?
+582326: Will Metz finish in the top 4 of the Ligue 1 2025–26 standings?
+582327: Will Le Havre finish in the top 4 of the Ligue 1 2025–26 standings?
+582328: Will Angers finish in the top 4 of the Ligue 1 2025–26 standings?
+582329: Will Paris FC finish in the top 4 of the Ligue 1 2025–26 standings?
+582330: Will Nantes finish in the top 4 of the Ligue 1 2025–26 standings?
+582331: Will Brest finish in the top 4 of the Ligue 1 2025–26 standings?
+582717: Taylor Swift pregnant before marriage?
+583414: Will Micah Parsons win the 2025-26 NFL DPOY?
+583415: Will Aidan Hutchinson win the 2025-26 NFL DPOY?
+583416: Will Myles Garrett win the 2025-26 NFL DPOY?
+583417: Will T.J. Watt win the 2025-26 NFL DPOY?
+583418: Will Will Anderson win the 2025-26 NFL DPOY?
+583419: Will Maxx Crosby win the 2025-26 NFL DPOY?
+583420: Will Nick Bosa win the 2025-26 NFL DPOY?
+583421: Will Jared Verse win the 2025-26 NFL DPOY?
+583422: Will Jalen Carter win the 2025-26 NFL DPOY?
+583423: Will Trey Hendrickson win the 2025-26 NFL DPOY?
+583424: Will Nik Bonitto win the 2025-26 NFL DPOY?
+583425: Will Pat Surtain win the 2025-26 NFL DPOY?
+583426: Will Kyle Hamilton win the 2025-26 NFL DPOY?
+583427: Will Cooper DeJean win the 2025-26 NFL DPOY?
+583428: Will Christian Gonzalez win the 2025-26 NFL DPOY?
+583429: Will Quinyon Mitchell win the 2025-26 NFL DPOY?
+583430: Will Chris Jones win the 2025-26 NFL DPOY?
+583431: Will Derek Stingley win the 2025-26 NFL DPOY?
+583432: Will Dexter Lawrence win the 2025-26 NFL DPOY?
+583433: Will Leonard Williams win the 2025-26 NFL DPOY?
+583434: Will Josh Hines-Allen win the 2025-26 NFL DPOY?
+583435: Will Fred Warner win the 2025-26 NFL DPOY?
+583436: Will Sauce Gardner win the 2025-26 NFL DPOY?
+583437: Will Nolan Smith win the 2025-26 NFL DPOY?
+583438: Will Zack Baun win the 2025-26 NFL DPOY?
+583439: Will Jonathan Greenard win the 2025-26 NFL DPOY?
+583441: Will Danielle Hunter win the 2025-26 NFL DPOY?
+583467: Will Saquon Barkley win the 2025–26 NFL OPOY?
+583468: Will Ja'Marr Chase win the 2025–26 NFL OPOY?
+583469: Will Jahmyr Gibbs win the 2025–26 NFL OPOY?
+583470: Will Derrick Henry win the 2025–26 NFL OPOY?
+583471: Will Bijan Robinson win the 2025–26 NFL OPOY?
+583472: Will Justin Jefferson win the 2025–26 NFL OPOY?
+583473: Will Puka Nacua win the 2025–26 NFL OPOY?
+583474: Will CeeDee Lamb win the 2025–26 NFL OPOY?
+583475: Will Nico Collins win the 2025–26 NFL OPOY?
+583476: Will Christian McCaffrey win the 2025–26 NFL OPOY?
+583477: Will Amon-Ra St. Brown win the 2025–26 NFL OPOY?
+583478: Will Malik Nabers win the 2025–26 NFL OPOY?
+583479: Will Brian Thomas win the 2025–26 NFL OPOY?
+583480: Will Tyreek Hill win the 2025–26 NFL OPOY?
+583481: Will Jonathan Taylor win the 2025–26 NFL OPOY?
+583482: Will Jayden Daniels win the 2025–26 NFL OPOY?
+583483: Will Lamar Jackson win the 2025–26 NFL OPOY?
+583484: Will Bucky Irving win the 2025–26 NFL OPOY?
+583485: Will Josh Allen win the 2025–26 NFL OPOY?
+583486: Will De'Von Achane win the 2025–26 NFL OPOY?
+583487: Will Marvin Harrison win the 2025–26 NFL OPOY?
+583488: Will A.J. Brown win the 2025–26 NFL OPOY?
+583489: Will Joe Burrow win the 2025–26 NFL OPOY?
+583490: Will Drake London win the 2025–26 NFL OPOY?
+583491: Will Brock Bowers win the 2025–26 NFL OPOY?
+583492: Will Ashton Jeanty win the 2025–26 NFL OPOY?
+583494: Will Jaxon Smith-Njigba win the 2025–26 NFL OPOY?
+583495: Will Drake Maye win the 2025–26 NFL OPOY?
+583496: Will Matthew Stafford win the 2025–26 NFL OPOY?
+583497: Will George Pickens win the 2025–26 NFL OPOY?
+583498: Will James Cook win the 2025–26 NFL OPOY?
+583627: Will João Cotrim Figueiredo win the 2026 Portugal presidential election?
+583628: Will Rui Moreira win the 2026 Portugal presidential election?
+583629: Will Paulo Portas win the 2026 Portugal presidential election?
+583630: Will Catarina Martins win the 2026 Portugal presidential election?
+585978: Will Amanda Edwards win TX-18 Special Election?
+585983: Will Christian Menefee win TX-18 Special Election?
+586301: Supreme Court rules in favor of Trump's tariffs?
+586570: Will PVV be part of the next Government of the Netherlands?
+586571: Will GL/PvdA be part of the next Government of the Netherlands?
+586572: Will CDA be part of the next Government of the Netherlands?
+586573: Will VVD be part of the next Government of the Netherlands?
+586574: Will JA21 be part of the next Government of the Netherlands?
+586575: Will D66 be part of the next Government of the Netherlands?
+586576: Will BBB be part of the next Government of the Netherlands?
+586577: Will SP be part of the next Government of the Netherlands?
+586578: Will FvD be part of the next Government of the Netherlands?
+586579: Will NSC be part of the next Government of the Netherlands?
+586580: Will Denk be part of the next Government of the Netherlands?
+586581: Will PvdD be part of the next Government of the Netherlands?
+586582: Will SGP be part of the next Government of the Netherlands?
+586583: Will CU be part of the next Government of the Netherlands?
+586584: Will Volt be part of the next Government of the Netherlands?
+592882: Nuclear weapon detonation by June 30?
+593972: Will Bernie endorse James Talarico for TX-Sen by Nov 2 2026 ET?
+593973: Will Bernie endorse Kshama Sawant for WA-09 by Nov 2 2026 ET?
+593974: Will Bernie endorse Dan Osborn for NE-Sen by Nov 2 2026 ET?
+593975: Will Bernie endorse Antonio Delgado for NY-Gov by Nov 2 2026 ET?
+593977: Will Bernie endorse Alan Grayson for FL-Sen Nov 2 2026 ET?
+593978: Will Bernie endorse Zach Wahls for IA-Sen Nov 2 2026 ET?
+593983: Will Trump endorse John Cornyn for TX-Sen by Nov 2 2026 ET?
+593984: Will Trump endorse Ken Paxton for TX-Sen by Nov 2 2026 ET?
+593985: Will Trump endorse Andy Barr for KY-Sen by Nov 2 2026 ET?
+593987: Will Trump endorse Steve Hilton in CA-Gov for Nov 2 2026 ET?
+593988: Will Trump endorse Susan Collins for ME-Sen by Nov 2 2026 ET?
+597964: Macron out by June 30, 2026?
+597967: Starmer out by June 30, 2026?
+598936: Will the next UK election be called by June 30, 2026?
+599303: Will Mallory McMorrow win the 2026 Michigan Democratic Primary?
+599304: Will Haley Stevens win the 2026 Michigan Democratic Primary?
+599305: Will Abdul El-Sayed win the 2026 Michigan Democratic Primary?
+599306: Will Dana Nessel win the 2026 Michigan Democratic Primary?
+599307: Will Rashida Tlaib win the 2026 Michigan Democratic Primary?
+599308: Will Sarah Anthony win the 2026 Michigan Democratic Primary?
+599309: Will Kristen McDonald Rivet win the 2026 Michigan Democratic Primary?
+599310: Will Andy Levin win the 2026 Michigan Democratic Primary?
+599311: Will Matt Sahr win the 2026 Michigan Democratic Primary?
+599323: Will Graham Platner be the Democratic nominee for Senate in Maine?
+599324: Will Janet Mills be the Democratic nominee for Senate in Maine?
+599325: Will Dan Kleban be the Democratic nominee for Senate in Maine?
+599326: Will Chellie Pingree be the Democratic nominee for Senate in Maine?
+599327: Will Jordan Wood be the Democratic nominee for Senate in Maine?
+599328: Will Troy Jackson be the Democratic nominee for Senate in Maine?
+599329: Will Jared Golden be the Democratic nominee for Senate in Maine?
+599354: Will Lindsey Graham be the Republican nominee for Senate in South Carolina?
+599355: Will Paul Dans be the Republican nominee for Senate in South Carolina?
+599356: Will Mark Lynch be the Republican nominee for Senate in South Carolina?
+599357: Will Thomas Murphy be the Republican nominee for Senate in South Carolina?
+599831: Will AppLovin acquire TikTok?
+599832: Will Microsoft acquire TikTok?
+599833: Will Amazon acquire TikTok?
+599834: Will Meta acquire TikTok?
+599835: Will Walmart acquire TikTok?
+599836: Will Elon Musk / X (Twitter) acquire TikTok?
+601697: Fed decreases interest rates by 50+ bps after January 2026 meeting?
+601698: Fed decreases interest rates by 25 bps after January 2026 meeting?
+601699: No change in Fed interest rates after January 2026 meeting?
+601700: Fed increases interest rates by 25+ bps after January 2026 meeting?
+601818: Will Tarcisio de Freitas win the 2026 Brazilian presidential election?
+601819: Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?
+601820: Will Jair Bolsonaro win the 2026 Brazilian presidential election?
+601821: Will Fernando Haddad win the 2026 Brazilian presidential election?
+601822: Will Michelle Bolsonaro win the 2026 Brazilian presidential election?
+601823: Will Eduardo Bolsonaro win the 2026 Brazilian presidential election?
+601824: Will Carlos Roberto Massa Júnior win the 2026 Brazilian presidential election?
+601825: Will Renan Santos win the 2026 Brazilian presidential election?

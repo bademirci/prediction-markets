@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+616904: Will 2 Fed rate cuts happen in 2026?
+616905: Will 3 Fed rate cuts happen in 2026?
+616906: Will 4 Fed rate cuts happen in 2026?
+616907: Will 5 Fed rate cuts happen in 2026?
+616908: Will 6 Fed rate cuts happen in 2026?
+616909: Will 7 Fed rate cuts happen in 2026?
+616910: Will 8 Fed rate cuts happen in 2026?
+616911: Will 9 Fed rate cuts happen in 2026?
+616912: Will 10 Fed rate cuts happen in 2026?
+616913: Will 11 Fed rate cuts happen in 2026?
+616914: Will 12 or more Fed rate cuts happen in 2026?
+617186: US fertility rate up in Q3 2025?
+618071: Will the Fed Cut–Cut–Pause in the next three decisions (Oct–Dec–Jan)?
+618072: Will the Fed Cut–Cut–Cut in the next three decisions (Oct–Dec–Jan)?
+618077: Will the Fed decide differently in the next three decisions (Oct–Dec–Jan)?
+618442: Will Kathryn Bigelow be nominated for Best Director at the 98th Academy Awards?
+618454: Opensea FDV above $500M one day after launch?
+618455: Opensea FDV above $1B one day after launch?
+618456: Opensea FDV above $3B one day after launch?
+618496: Will Trump and Putin meet next in Belarus?
+618497: Will Trump and Putin meet next in Turkey?
+618498: Will Trump and Putin meet next in Finland?
+618499: Will Trump and Putin meet next in Switzerland?
+618500: Will Trump and Putin meet next in Russia?
+618501: Will Trump and Putin meet next in a Gulf country?
+618503: Will Trump and Putin meet next in South Korea?
+618504: Will Trump and Putin meet next in Japan?
+618505: Will Trump and Putin meet next in Australia?
+618506: Will Trump and Putin meet next in United States?
+618507: Will Trump and Putin meet next in another EU country?
+618508: Will Trump and Putin meet next in another country?
+618509: Will Trump and Putin not meet?
+618510: Will Trump and Putin meet next in China?
+618511: Will Trump and Putin meet next in Ukraine?
+618531: Will Ethan Hawke be nominated for Best Actor at the 98th Academy Awards?
+620335: Aziz Akhannouch out as Morocco Prime Minister by December 31, 2026?
+620682: Opensea FDV above $5B one day after launch?
+621123: Will OpenAI be the first company to have an AI model hit 1500 on Chatbot Arena by June 30 2026?
+621124: Will xAI be the first company to have an AI model hit 1500 on Chatbot Arena by June 30 2026?
+621125: Will Anthropic be the first company to have an AI model hit 1500 on Chatbot Arena by June 30 2026?
+621126: Will Google be the first company to have an AI model hit 1500 on Chatbot Arena by June 30 2026?
+621127: Will DeepSeek be the first company to have an AI model hit 1500 on Chatbot Arena by June 30 2026?
+621128: Will no company have an AI model hit 1500 on Chatbot Arena by June 30 2026?
+621130: Will Alibaba be the first company to have an AI model hit 1500 on Chatbot Arena by June 30 2026?
+621131: Will Z.ai be the first company to have an AI model hit 1500 on Chatbot Arena by June 30 2026?
+621132: Will Mistral be the first company to have an AI model hit 1500 on Chatbot Arena by June 30 2026?
+622738: Will Hyperliquid perform an airdrop by December 31, 2026? 
+623964: Mike Johnson out as Speaker by March 31?
+626693: Any US state legislature votes on secession by June 30, 2026?
+627450: First to 5k: Gold or ETH?
+627628: Football.Fun FDV above $500M one day after launch?
+627629: Football.Fun FDV above $1B one day after launch?
+628012: Will Debí Tirar Más Fotos (Bad Bunny) win Album of the Year at the 68th Annual GRAMMY Awards?
+628013: Will GNX (Kendrick Lamar) win Album of the Year at the 68th Annual GRAMMY Awards?
+628014: Will Mayhem (Lady Gaga) win Album of the Year at the 68th Annual GRAMMY Awards?
+628017: Will Chromakopia (Tyler the Creator) win Album of the Year at the 68th Annual GRAMMY Awards?
+628018: Will Man's Best Friend (Sabrina Carpenter) win Album of the Year at the 68th Annual GRAMMY Awards?
+628021: Will SWAG (Justin Bieber) win Album of the Year at the 68th Annual GRAMMY Awards?
+628024: Will Let God Sort Em Out (Clipse Pusha T Malice) win Album of the Year at the 68th Annual GRAMMY Awards?
+628031: Will MUTT (Leon Thomas) win Album of the Year at the 68th Annual GRAMMY Awards?
+628066: Will Sombr win Best New Artist at the 68th Annual GRAMMY Awards?
+628067: Will Lola Young win Best New Artist at the 68th Annual GRAMMY Awards?
+628070: Will Addison Rae win Best New Artist at the 68th Annual GRAMMY Awards?
+628071: Will The Marías win Best New Artist at the 68th Annual GRAMMY Awards?
+628072: Will Leon Thomas win Best New Artist at the 68th Annual GRAMMY Awards?
+628074: Will Olivia Dean win Best New Artist at the 68th Annual GRAMMY Awards?
+628077: Will KATSEYE win Best New Artist at the 68th Annual GRAMMY Awards?
+628085: Will Alex Warren win Best New Artist at the 68th Annual GRAMMY Awards?
+628111: Will Luther (Kendrick Lamar and SZA) win Song of the Year at the 68th Annual GRAMMY Awards?
+628112: Will DTMF (Bad Bunny) win Song of the Year at the 68th Annual GRAMMY Awards?
+628113: Will Abracadabra (Lady Gaga) win Song of the Year at the 68th Annual GRAMMY Awards?
+628114: Will Wildflower (Billie Eilish) win Song of the Year at the 68th Annual GRAMMY Awards?
+628115: Will Manchild (Sabrina Carpenter) win Song of the Year at the 68th Annual GRAMMY Awards?
+628116: Will APT (Rosé and Bruno Mars) win Song of the Year at the 68th Annual GRAMMY Awards?
+628118: Will Anxiety (Doechii) win Song of the Year at the 68th Annual GRAMMY Awards?
+628122: Will Golden (Ejae and Mark Sonnenblick) win Song of the Year at the 68th Annual GRAMMY Awards?
+628155: Will GNX (Kendrick Lamar) win Best Rap Album at the 68th Annual GRAMMY Awards?
+628156: Will Chromakopia (Tyler the Creator) win Best Rap Album at the 68th Annual GRAMMY Awards?
+628157: Will Let God Sort Em Out (Clipse Pusha T Malice) win Best Rap Album at the 68th Annual GRAMMY Awards?
+628167: Will God Does Like Ugly (JID) win Best Rap Album at the 68th Annual GRAMMY Awards?
+628195: Will Luther (Kendrick Lamar and SZA) win Record of the Year at the 68th Annual GRAMMY Awards?
+628196: Will Abracadabra (Lady Gaga) win Record of the Year at the 68th Annual GRAMMY Awards?
+628197: Will DTMF (Bad Bunny) win Record of the Year at the 68th Annual GRAMMY Awards?
+628198: Will APT (Rosé and Bruno Mars) win Record of the Year at the 68th Annual GRAMMY Awards?
+628199: Will Wildflower (Billie Eilish) win Record of the Year at the 68th Annual GRAMMY Awards?
+628201: Will Anxiety (Doechii) win Record of the Year at the 68th Annual GRAMMY Awards?
+628209: Will Manchild (Sabrina Carpenter) win Record of the Year at the 68th Annual GRAMMY Awards?
+628210: Will The Subway (Chappell Roan) win Record of the Year at the 68th Annual GRAMMY Awards?
+628935: NATO x Russia military clash by March 31, 2026?
+628936: Will Rick Caruso win the California Governor Election in 2026?
+628937: Will Alex Padilla win the California Governor Election in 2026?
+628938: Will Katie Porter win the California Governor Election in 2026?
+628939: Will Antonio Villaraigosa win the California Governor Election in 2026?
+628940: Will Steve Hilton win the California Governor Election in 2026?
+628941: Will Xavier Becerra win the California Governor Election in 2026?
+628942: Will Stephen Cloobeck win the California Governor Election in 2026?
+628943: Will Butch Ware win the California Governor Election in 2026?
+628944: Will Betty Yee win the California Governor Election in 2026?
+628945: Will Toni Atkins win the California Governor Election in 2026?
+628946: Will Kyle Langford win the California Governor Election in 2026?
+628947: Will Chad Bianco win the California Governor Election in 2026?
+628948: Will Eleni Kounalakis win the California Governor Election in 2026?
+628949: Will Daniel Mercuri win the California Governor Election in 2026?
+628950: Will Tony Thurmond win the California Governor Election in 2026?
+628951: Will Michael Younger win the California Governor Election in 2026?
+628952: Will Leo Zacky win the California Governor Election in 2026?
+628953: Will Nicole Shanahan win the California Governor Election in 2026?
+628954: Will Eric Swalwell win the California Governor Election in 2026?
+628955: Will Tom Steyer win the California Governor Election in 2026?
+628956: Will Kamala Harris win the California Governor Election in 2026?
+629030: Will Karen Bass win the 2026 Los Angeles mayoral election?
+629031: Will Rick Caruso win the 2026 Los Angeles mayoral election?
+629032: Will Asaad Alnajjar win the 2026 Los Angeles mayoral election?
+629033: Will Gina Viola win the 2026 Los Angeles mayoral election?
+629052: Will the Anaheim Ducks win the Pacific Division?
+629053: Will the Calgary Flames win the Pacific Division?
+629054: Will the Edmonton Oilers win the Pacific Division?
+629055: Will the Los Angeles Kings win the Pacific Division?
+629056: Will the San Jose Sharks win the Pacific Division?
+629057: Will the Seattle Kraken win the Pacific Division?
+629058: Will the Vancouver Canucks win the Pacific Division?
+629059: Will the Vegas Golden Knights win the Pacific Division?
+629061: Will the Arizona Coyotes win the Central Division?
+629062: Will the Chicago Blackhawks win the Central Division?
+629063: Will the Colorado Avalanche win the Central Division?
+629064: Will the Dallas Stars win the Central Division?
+629065: Will the Minnesota Wild win the Central Division?
+629066: Will the Nashville Predators win the Central Division?
+629067: Will the St. Louis Blues win the Central Division?
+629068: Will the Winnipeg Jets win the Central Division?
+629070: Will the Carolina Hurricanes win the Metropolitan Division?
+629071: Will the Columbus Blue Jackets win the Metropolitan Division?
+629072: Will the New Jersey Devils win the Metropolitan Division?
+629073: Will the New York Islanders win the Metropolitan Division?
+629074: Will the New York Rangers win the Metropolitan Division?
+629075: Will the Philadelphia Flyers win the Metropolitan Division?
+629076: Will the Pittsburgh Penguins win the Metropolitan Division?
+629077: Will the Washington Capitals win the Metropolitan Division?
+629079: Will the Boston Bruins win the Atlantic Division?
+629080: Will the Buffalo Sabres win the Atlantic Division?
+629081: Will the Detroit Red Wings win the Atlantic Division?
+629082: Will the Florida Panthers win the Atlantic Division?
+629083: Will the Montreal Canadiens win the Atlantic Division?
+629084: Will the Ottawa Senators win the Atlantic Division?
+629085: Will the Tampa Bay Lightning win the Atlantic Division?
+629086: Will the Toronto Maple Leafs win the Atlantic Division?
+629090: Will the Boston Bruins win the Eastern Conference?
+629091: Will the Buffalo Sabres win the Eastern Conference?
+629092: Will the Detroit Red Wings win the Eastern Conference?
+629095: Will the Florida Panthers win the Eastern Conference?
+629096: Will the Montreal Canadiens win the Eastern Conference?
+629097: Will the Ottawa Senators win the Eastern Conference?
+629098: Will the Tampa Bay Lightning win the Eastern Conference?
+629099: Will the Toronto Maple Leafs win the Eastern Conference?
+629100: Will the Carolina Hurricanes win the Eastern Conference?
+629101: Will the Columbus Blue Jackets win the Eastern Conference?
+629102: Will the New Jersey Devils win the Eastern Conference?
+629103: Will the New York Islanders win the Eastern Conference?
+629104: Will the New York Rangers win the Eastern Conference?
+629105: Will the Philadelphia Flyers win the Eastern Conference?
+629106: Will the Pittsburgh Penguins win the Eastern Conference?
+629107: Will the Washington Capitals win the Eastern Conference?
+629109: Will the Utah Mammoth win the Western Conference?
+629110: Will the Chicago Blackhawks win the Western Conference?
+629111: Will the Colorado Avalanche win the Western Conference?
+629112: Will the Dallas Stars win the Western Conference?
+629113: Will the Minnesota Wild win the Western Conference?
+629114: Will the Nashville Predators win the Western Conference?
+629115: Will the St. Louis Blues win the Western Conference?
+629116: Will the Winnipeg Jets win the Western Conference?
+629117: Will the Anaheim Ducks win the Western Conference?
+629118: Will the Calgary Flames win the Western Conference?
+629119: Will the Edmonton Oilers win the Western Conference?
+629120: Will the Los Angeles Kings win the Western Conference?
+629121: Will the San Jose Sharks win the Western Conference?
+629122: Will the Seattle Kraken win the Western Conference?
+629123: Will the Vancouver Canucks win the Western Conference?
+629124: Will the Vegas Golden Knights win the Western Conference?
+629126: Will Alanyaspor win the Süper Lig?
+629127: Will Antalyaspor win the Süper Lig?
+629128: Will Başakşehir win the Süper Lig?
+629129: Will Beşiktaş win the Süper Lig?
+629130: Will Eyüpspor win the Süper Lig?
+629131: Will Fatih Karagümrük win the Süper Lig?
+629132: Will Fenerbahçe win the Süper Lig?
+629133: Will Galatasaray win the Süper Lig?
+629134: Will Gaziantep win the Süper Lig?
+629135: Will Gençlerbirliği win the Süper Lig?
+629136: Will Kasımpaşa win the Süper Lig?
+629137: Will Kocaelispor win the Süper Lig?
+629138: Will Trabzonspor win the Süper Lig?
+629139: Will Rizespor win the Süper Lig?
+629140: Will Göztepe win the Süper Lig?
+629141: Will Samsunspor win the Süper Lig?
+629142: Will Sivasspor win the Süper Lig?
+629143: Will Hatayspor win the Süper Lig?
+629183: Will the Democrats win the Arizona governor race in 2026?
+629184: Will the Republicans win the Arizona governor race in 2026?
+629223: Will Michael B. Jordan (Sinners) win Best Actor – Drama at the 83rd Golden Globes?
+629225: Will Jeremy Allen White (Springsteen: Deliver Me from Nowhere) win Best Actor – Drama at the 83rd Golden Globes?
+629226: Will Wagner Moura (The Secret Agent) win Best Actor – Drama at the 83rd Golden Globes?
+629227: Will Dwayne Johnson (The Smashing Machine) win Best Actor – Drama at the 83rd Golden Globes?
+629229: Will Oscar Isaac (Frankenstein) win Best Actor – Drama at the 83rd Golden Globes?
+629234: Will Joel Edgerton (Train Dreams) win Best Actor – Drama at the 83rd Golden Globes?
+629267: Will any country leave NATO by June 30, 2026?
+629270: Will the Democrats win the Alabama governor race in 2026?
+629271: Will the Republicans win the Alabama governor race in 2026?
+629283: Will the Democrats win the Arkansas governor race in 2026?
+629284: Will the Republicans win the Arkansas governor race in 2026?
+629296: Will the Democrats win the Colorado governor race in 2026?
+629297: Will the Republicans win the Colorado governor race in 2026?
+629311: Will the Democrats win the Connecticut governor race in 2026?
+629312: Will the Republicans win the Connecticut governor race in 2026?
+629324: Will the Democrats win the Florida governor race in 2026?
+629325: Will the Republicans win the Florida governor race in 2026?
+629337: Will the Democrats win the Georgia governor race in 2026?
+629338: Will the Republicans win the Georgia governor race in 2026?
+629350: Will the Democrats win the Hawaii governor race in 2026?
+629351: Will the Republicans win the Hawaii governor race in 2026?
+629363: Will the Democrats win the Idaho governor race in 2026?
+629364: Will the Republicans win the Idaho governor race in 2026?
+629376: Will the Democrats win the Illinois governor race in 2026?
+629377: Will the Republicans win the Illinois governor race in 2026?
+629397: Will the Democrats win the Iowa governor race in 2026?
+629398: Will the Republicans win the Iowa governor race in 2026?
+629412: Will the Democrats win the Kansas governor race in 2026?
+629413: Will the Republicans win the Kansas governor race in 2026?
+629425: Will the Democrats win the Maine governor race in 2026?
+629426: Will the Republicans win the Maine governor race in 2026?
+629438: Will the Democrats win the Maryland governor race in 2026?
+629439: Will the Republicans win the Maryland governor race in 2026?
+629451: Will the Democrats win the Massachusetts governor race in 2026?
+629452: Will the Republicans win the Massachusetts governor race in 2026?
+629464: Will the Democrats win the Michigan governor race in 2026?
+629465: Will the Republicans win the Michigan governor race in 2026?
+629477: Will the Democrats win the Minnesota governor race in 2026?
+629478: Will the Republicans win the Minnesota governor race in 2026?
+629490: Will the Democrats win the Nebraska governor race in 2026?
+629491: Will the Republicans win the Nebraska governor race in 2026?
+629505: Will the Democrats win the Nevada governor race in 2026?
+629506: Will the Republicans win the Nevada governor race in 2026?
+629518: Will the Democrats win the New Hampshire governor race in 2026?
+629519: Will the Republicans win the New Hampshire governor race in 2026?
+629531: Will the Democrats win the New Mexico governor race in 2026?
+629532: Will the Republicans win the New Mexico governor race in 2026?
+629544: Will the Democrats win the New York governor race in 2026?
+629545: Will the Republicans win the New York governor race in 2026?
+629557: Will the Democrats win the Ohio governor race in 2026?
+629558: Will the Republicans win the Ohio governor race in 2026?
+629570: Will the Democrats win the Oklahoma governor race in 2026?
+629571: Will the Republicans win the Oklahoma governor race in 2026?
+629583: Will the Democrats win the Oregon governor race in 2026?
+629584: Will the Republicans win the Oregon governor race in 2026?
+629614: Will the Democrats win the Pennsylvania governor race in 2026?
+629615: Will the Republicans win the Pennsylvania governor race in 2026?
+629627: Will the Democrats win the Rhode Island governor race in 2026?
+629628: Will the Republicans win the Rhode Island governor race in 2026?
+629640: Will the Democrats win the South Carolina governor race in 2026?
+629641: Will the Republicans win the South Carolina governor race in 2026?
+629653: Will the Democrats win the South Dakota governor race in 2026?
+629654: Will the Republicans win the South Dakota governor race in 2026?
+629666: Will the Democrats win the Tennessee governor race in 2026?
+629667: Will the Republicans win the Tennessee governor race in 2026?
+629690: Will the Democrats win the Texas governor race in 2026?
+629691: Will the Republicans win the Texas governor race in 2026?
+629707: Will the Democrats win the Vermont governor race in 2026?
+629708: Will the Republicans win the Vermont governor race in 2026?
+629720: Will the Democrats win the Wisconsin governor race in 2026?
+629721: Will the Republicans win the Wisconsin governor race in 2026?
+629733: Will the Democrats win the Wyoming governor race in 2026?
+629734: Will the Republicans win the Wyoming governor race in 2026?
+630627: Will the Democrats win the Alabama Senate race in 2026?
+630628: Will the Republicans win the Alabama Senate race in 2026?
+630653: Will the Democrats win the Arkansas Senate race in 2026?
+630654: Will the Republicans win the Arkansas Senate race in 2026?
+630666: Will the Democrats win the Colorado Senate race in 2026?
+630667: Will the Republicans win the Colorado Senate race in 2026?
+630679: Will the Democrats win the Delaware Senate race in 2026?
+630680: Will the Republicans win the Delaware Senate race in 2026?
+630692: Will the Democrats win the Georgia Senate race in 2026?
+630693: Will the Republicans win the Georgia Senate race in 2026?
+630705: Will the Democrats win the Idaho Senate race in 2026?
+630706: Will the Republicans win the Idaho Senate race in 2026?
+630720: Will the Democrats win the Illinois Senate race in 2026?
+630721: Will the Republicans win the Illinois Senate race in 2026?
+630733: Will the Democrats win the Iowa Senate race in 2026?
+630734: Will the Republicans win the Iowa Senate race in 2026?
+630746: Will the Democrats win the Kansas Senate race in 2026?
+630747: Will the Republicans win the Kansas Senate race in 2026?
+630759: Will the Democrats win the Kentucky Senate race in 2026?
+630760: Will the Republicans win the Kentucky Senate race in 2026?
+630772: Will the Democrats win the Maine Senate race in 2026?
+630773: Will the Republicans win the Maine Senate race in 2026?
+630790: Will the Democrats win the Massachusetts Senate race in 2026?
+630791: Will the Republicans win the Massachusetts Senate race in 2026?
+630805: Will the Democrats win the Michigan Senate race in 2026?
+630806: Will the Republicans win the Michigan Senate race in 2026?
+630818: Will the Democrats win the Minnesota Senate race in 2026?
+630819: Will the Republicans win the Minnesota Senate race in 2026?
+630831: Will the Democrats win the Montana Senate race in 2026?
+630832: Will the Republicans win the Montana Senate race in 2026?
+630844: Will the Democrats win the New Hampshire Senate race in 2026?
+630845: Will the Republicans win the New Hampshire Senate race in 2026?
+630857: Will the Democrats win the New Jersey Senate race in 2026?
+630858: Will the Republicans win the New Jersey Senate race in 2026?
+630870: Will the Democrats win the New Mexico Senate race in 2026?
+630871: Will the Republicans win the New Mexico Senate race in 2026?
+630883: Will the Democrats win the North Carolina Senate race in 2026?
+630884: Will the Republicans win the North Carolina Senate race in 2026?
+630898: Will the Democrats win the Oregon Senate race in 2026?
+630899: Will the Republicans win the Oregon Senate race in 2026?
+630911: Will the Democrats win the Rhode Island Senate race in 2026?
+630912: Will the Republicans win the Rhode Island Senate race in 2026?
+630924: Will the Democrats win the South Carolina Senate race in 2026?
+630925: Will the Republicans win the South Carolina Senate race in 2026?
+630937: Will the Democrats win the South Dakota Senate race in 2026?
+630938: Will the Republicans win the South Dakota Senate race in 2026?
+630950: Will the Democrats win the Tennessee Senate race in 2026?
+630951: Will the Republicans win the Tennessee Senate race in 2026?
+630963: Will the Democrats win the Texas Senate race in 2026?
+630964: Will the Republicans win the Texas Senate race in 2026?
+630976: Will the Democrats win the Virginia Senate race in 2026?
+630977: Will the Republicans win the Virginia Senate race in 2026?
+630989: Will the Democrats win the West Virginia Senate race in 2026?
+630990: Will the Republicans win the West Virginia Senate race in 2026?
+631002: Will the Democrats win the Wyoming Senate race in 2026?
+631003: Will the Republicans win the Wyoming Senate race in 2026?
+631017: Will the Democrats win the Mississippi Senate race in 2026?
+631018: Will the Republicans win the Mississippi Senate race in 2026?
+631030: Will the Democrats win the Oklahoma Senate race in 2026?
+631031: Will the Republicans win the Oklahoma Senate race in 2026?
+631044: Will the Democrats win the Florida Senate race in 2026?
+631045: Will the Republicans win the Florida Senate race in 2026?
+631057: Will the Democrats win the Ohio Senate race in 2026?
+631058: Will the Republicans win the Ohio Senate race in 2026?
+631120: Will Google have the top AI model at the end of June 2026?
+631121: Will Anthropic have the top AI model at the end of June 2026?
+631122: Will OpenAI have the top AI model at the end of June 2026?
+631123: Will Alibaba have the top AI model at the end of June 2026?
+631124: Will Z.ai have the top AI model at the end of June 2026?
+631125: Will xAI have the top AI model at the end of June 2026?
+631126: Will DeepSeek have the top AI model at the end of June 2026?
+631127: Will Moonshot have the top AI model at the end of June 2026?
+631128: Will Mistral have the top AI model at the end of June 2026?
+631129: Will Meituan have the top AI model at the end of June 2026?
+631139: Will Google have the best AI model at the end of June 2026?
+631140: Will Anthropic have the best AI model at the end of June 2026?
+631141: Will OpenAI have the best AI model at the end of June 2026?
+631142: Will Alibaba have the best AI model at the end of June 2026?
+631143: Will Z.ai have the best AI model at the end of June 2026?
+631144: Will xAI have the best AI model at the end of June 2026?
+631145: Will DeepSeek have the best AI model at the end of June 2026?
+631146: Will Moonshot have the best AI model at the end of June 2026?
+631147: Will Mistral have the best AI model at the end of June 2026?
+631148: Will Meituan have the best AI model at the end of June 2026?
+631160: Will Google have the second best AI model at the end of June 2026?
+631161: Will Anthropic have the second best AI model at the end of June 2026?
+631162: Will OpenAI have the second best AI model at the end of June 2026?
+631163: Will Alibaba have the second best AI model at the end of June 2026?
+631164: Will Z.ai have the second best AI model at the end of June 2026?
+631165: Will xAI have the second best AI model at the end of June 2026?
+631166: Will DeepSeek have the second best AI model at the end of June 2026?
+631167: Will Moonshot have the second best AI model at the end of June 2026?
+631168: Will Mistral have the second best AI model at the end of June 2026?
+631169: Will Meituan have the second best AI model at the end of June 2026?
+631181: Will NVIDIA be the largest company in the world by market cap on June 30?
+631182: Will Microsoft be the largest company in the world by market cap on June 30?
+631183: Will Apple be the largest company in the world by market cap on June 30?
+631184: Will Alphabet be the largest company in the world by market cap on June 30?
+631185: Will Tesla be the largest company in the world by market cap on June 30?
+631186: Will Saudi Aramco be the largest company in the world by market cap on June 30?
+631187: Will Amazon be the largest company in the world by market cap on June 30?
+631371: Will Paul Thomas Anderson (One Battle After Another) win Best Director at the 83rd Golden Globes?
+631372: Will Chloe Zhao (Hamnet) win Best Director at the 83rd Golden Globes?
+631373: Will Joachim Trier (Sentimental Value) win Best Director at the 83rd Golden Globes?
+631374: Will Ryan Coogler (Sinners) win Best Director at the 83rd Golden Globes?
+631377: Will Jafar Panahi (It Was Just an Accident) win Best Director at the 83rd Golden Globes?
+631382: Will Guillermo Del Toro (Frankenstein) win Best Director at the 83rd Golden Globes?
+633363: Will Britt Lower (Severance) win Best Actress – Television Drama at the 83rd Golden Globes?
+633364: Will Kathy Bates (Matlock) win Best Actress – Television Drama at the 83rd Golden Globes?
+633365: Will Rhea Seehorn (Pluribus) win Best Actress – Television Drama at the 83rd Golden Globes?
+633368: Will Bella Ramsey (The Last of Us) win Best Actress – Television Drama at the 83rd Golden Globes?
+633369: Will Keri Russell (The Diplomat) win Best Actress – Television Drama at the 83rd Golden Globes?
+633374: Will Helen Mirren (Mobland) win Best Actress – Television Drama at the 83rd Golden Globes?
+633400: Will Noah Wyle (The Pitt) win Best Actor – Television Drama at the 83rd Golden Globes?
+633401: Will Adam Scott (Severance) win Best Actor – Television Drama at the 83rd Golden Globes?
+633402: Will Gary Oldman (Slow Horses) win Best Actor – Television Drama at the 83rd Golden Globes?
+633403: Will Diego Luna (Andor) win Best Actor – Television Drama at the 83rd Golden Globes?
+633406: Will Sterling K. Brown (Paradise) win Best Actor – Television Drama at the 83rd Golden Globes?
+633411: Will Mark Ruffalo (Task) win Best Actor – Television Drama at the 83rd Golden Globes?
+633437: Will Jessie Buckley (Hamnet) win Best Actress – Drama at the 83rd Golden Globes?
+633439: Will Renate Reinsve (Sentimental Value) win Best Actress – Drama at the 83rd Golden Globes?
+633440: Will Julia Roberts (After the Hunt) win Best Actress – Drama at the 83rd Golden Globes?
+633443: Will Jennifer Lawrence (Die My Love) win Best Actress – Drama at the 83rd Golden Globes?
+633444: Will Tessa Thompson (Hedda) win Best Actress – Drama at the 83rd Golden Globes?
+633453: Will Eva Victor (Sorry, Baby) win Best Actress – Drama at the 83rd Golden Globes?
+633515: Will Ariana Grande (Wicked: For Good) win Best Supporting Actress – Motion Picture at the 83rd Golden Globes?
+633516: Will Teyana Taylor (One Battle After Another) win Best Supporting Actress – Motion Picture at the 83rd Golden Globes?
+633518: Will Inga Ibsdotter Lilleaas (Sentimental Value) win Best Supporting Actress – Motion Picture at the 83rd Golden Globes?
+633519: Will Amy Madigan (Weapons) win Best Supporting Actress – Motion Picture at the 83rd Golden Globes?
+633520: Will Elle Fanning (Sentimental Value) win Best Supporting Actress – Motion Picture at the 83rd Golden Globes?
+633521: Will Emily Blunt (The Smashing Machine) win Best Supporting Actress – Motion Picture at the 83rd Golden Globes?
+633557: Will Sean Penn (One Battle After Another) win Best Supporting Actor – Motion Picture at the 83rd Golden Globes?
+633558: Will Stellan Skarsgard (Sentimental Value) win Best Supporting Actor – Motion Picture at the 83rd Golden Globes?
+633559: Will Adam Sandler (Jay Kelly) win Best Supporting Actor – Motion Picture at the 83rd Golden Globes?
+633560: Will Jacob Elordi (Frankenstein) win Best Supporting Actor – Motion Picture at the 83rd Golden Globes?
+633561: Will Benicio Del Toro (One Battle After Another) win Best Supporting Actor – Motion Picture at the 83rd Golden Globes?
+633562: Will Paul Mescal (Hamnet) win Best Supporting Actor – Motion Picture at the 83rd Golden Globes?
+633599: Will Erin Doherty (Adolescence) win Best Supporting Actress – Television at the 83rd Golden Globes?
+633600: Will Hannah Einbinder (Hacks) win Best Supporting Actress – Television at the 83rd Golden Globes?
+633602: Will Carrie Coon (The White Lotus) win Best Supporting Actress – Television at the 83rd Golden Globes?
+633603: Will Parker Posey (The White Lotus) win Best Supporting Actress – Television at the 83rd Golden Globes?
+633605: Will Catherine O'Hara (The Studio) win Best Supporting Actress – Television at the 83rd Golden Globes?
+633607: Will Aimee Lou Wood (The White Lotus) win Best Supporting Actress – Television at the 83rd Golden Globes?
+633636: Will Owen Cooper (Adolescence) win Best Supporting Actor – Television at the 83rd Golden Globes?
+633637: Will Tramell Tillman (Severance) win Best Supporting Actor – Television at the 83rd Golden Globes?
+633641: Will Walton Goggins (The White Lotus) win Best Supporting Actor – Television at the 83rd Golden Globes?
+633642: Will Billy Crudup (The Morning Show) win Best Supporting Actor – Television at the 83rd Golden Globes?
+633644: Will Jason Isaacs (The White Lotus) win Best Supporting Actor – Television at the 83rd Golden Globes?
+633647: Will Ashley Walters (Adolescence) win Best Supporting Actor – Television at the 83rd Golden Globes?
+633708: Will Emma Stone (Bugonia) win Best Actress – Musical or Comedy at the 83rd Golden Globes?
+633709: Will Cynthia Erivo (Wicked: For Good) win Best Actress – Musical or Comedy at the 83rd Golden Globes?
+633710: Will Kate Hudson (Song Sung Blue) win Best Actress – Musical or Comedy at the 83rd Golden Globes?
+633724: Will Rose Byrne (If I Had Legs I'd Kick You) win Best Actress – Musical or Comedy at the 83rd Golden Globes?
+633725: Will Chase Infiniti (One Battle After Another) win Best Actress – Musical or Comedy at the 83rd Golden Globes?
+633726: Will Amanda Seyfried (The Testament of Ann Lee) win Best Actress – Musical or Comedy at the 83rd Golden Globes?
+633750: Will Timothee Chalamet (Marty Supreme) win Best Actor – Musical or Comedy at the 83rd Golden Globes?
+633751: Will Jesse Plemons (Bugonia) win Best Actor – Musical or Comedy at the 83rd Golden Globes?
+633755: Will George Clooney (Jay Kelly) win Best Actor – Musical or Comedy at the 83rd Golden Globes?
+633766: Will Leonardo DiCaprio (One Battle After Another) win Best Actor – Musical or Comedy at the 83rd Golden Globes?
+633767: Will Ethan Hawke (Blue Moon) win Best Actor – Musical or Comedy at the 83rd Golden Globes?
+633768: Will Lee Byung-hun (No Other Choice) win Best Actor – Musical or Comedy at the 83rd Golden Globes?
+633792: Will Jean Smart (Hacks) win Best Actress – Television Musical or Comedy at the 83rd Golden Globes?
+633793: Will Jenna Ortega (Wednesday) win Best Actress – Television Musical or Comedy at the 83rd Golden Globes?
+633795: Will Kristen Bell (Nobody Wants This) win Best Actress – Television Musical or Comedy at the 83rd Golden Globes?
+633796: Will Ayo Edebiri (The Bear) win Best Actress – Television Musical or Comedy at the 83rd Golden Globes?
+633797: Will Selena Gomez (Only Murders in the Building) win Best Actress – Television Musical or Comedy at the 83rd Golden Globes?
+633800: Will Natasha Lyonne (Poker Face) win Best Actress – Television Musical or Comedy at the 83rd Golden Globes?
+633829: Will Seth Rogen (The Studio) win Best Actor – Television Musical or Comedy at the 83rd Golden Globes?
+633830: Will Martin Short (Only Murders in the Building) win Best Actor – Television Musical or Comedy at the 83rd Golden Globes?
+633832: Will Jeremy Allen White (The Bear) win Best Actor – Television Musical or Comedy at the 83rd Golden Globes?
+633833: Will Adam Brody (Nobody Wants This) win Best Actor – Television Musical or Comedy at the 83rd Golden Globes?
+633834: Will Steve Martin (Only Murders in the Building) win Best Actor – Television Musical or Comedy at the 83rd Golden Globes?
+633836: Will Glen Powell (Chad Powers) win Best Actor – Television Musical or Comedy at the 83rd Golden Globes?
+633882: Will Stephen Graham (Adolescence) win Best Actor – Limited Series at the 83rd Golden Globes?
+633885: Will Charlie Hunnam (Monster The Ed Gein Story) win Best Actor – Limited Series at the 83rd Golden Globes?
+633889: Will Paul Giamatti (Black Mirror) win Best Actor – Limited Series at the 83rd Golden Globes?
+633890: Will Jude Law (Black Rabbit) win Best Actor – Limited Series at the 83rd Golden Globes?
+633891: Will Jacob Elordi (The Narrow Road to the Deep North) win Best Actor – Limited Series at the 83rd Golden Globes?
+633893: Will Matthew Rhys (The Beast In Me) win Best Actor – Limited Series at the 83rd Golden Globes?
+633920: Will Michelle Williams (Dying for Sex) win Best Actress – Limited Series at the 83rd Golden Globes?
+633924: Will Rashida Jones (Black Mirror) win Best Actress – Limited Series at the 83rd Golden Globes?
+633925: Will Sarah Snook (All Her Fault) win Best Actress – Limited Series at the 83rd Golden Globes?
+633926: Will Claire Danes (The Beast in Me) win Best Actress – Limited Series at the 83rd Golden Globes?
+633927: Will Amanda Seyfried (Long Bright River) win Best Actress – Limited Series at the 83rd Golden Globes?
+633930: Will Robin Wright (The Girlfriend) win Best Actress – Limited Series at the 83rd Golden Globes?
+633956: Will One Battle After Another win Best Original Score – Motion Picture at the 83rd Golden Globes?
+633957: Will Sinners win Best Original Score – Motion Picture at the 83rd Golden Globes?
+633958: Will Hamnet win Best Original Score – Motion Picture at the 83rd Golden Globes?
+633961: Will Frankenstein win Best Original Score – Motion Picture at the 83rd Golden Globes?
+633964: Will F1 The Movie win Best Original Score – Motion Picture at the 83rd Golden Globes?
+633970: Will Sirat win Best Original Score – Motion Picture at the 83rd Golden Globes?
+633999: Will Hamnet win Best Motion Picture – Drama at the 83rd Golden Globes?
+634000: Will Sinners win Best Motion Picture – Drama at the 83rd Golden Globes?
+634001: Will Sentimental Value win Best Motion Picture – Drama at the 83rd Golden Globes?
+634002: Will It Was Just an Accident win Best Motion Picture – Drama at the 83rd Golden Globes?
+634005: Will The Secret Agent win Best Motion Picture – Drama at the 83rd Golden Globes?
+634009: Will Frankenstein win Best Motion Picture – Drama at the 83rd Golden Globes?
+634066: Will One Battle After Another win Best Screenplay – Motion Picture at the 83rd Golden Globes?
+634067: Will Hamnet win Best Screenplay – Motion Picture at the 83rd Golden Globes?
+634068: Will Sentimental Value win Best Screenplay – Motion Picture at the 83rd Golden Globes?
+634069: Will Sinners win Best Screenplay – Motion Picture at the 83rd Golden Globes?
+634070: Will Marty Supreme win Best Screenplay – Motion Picture at the 83rd Golden Globes?
+634071: Will It Was Just an Accident win Best Screenplay – Motion Picture at the 83rd Golden Globes?
+634108: Will The Studio win Best Television Series – Comedy or Musical at the 83rd Golden Globes?
+634109: Will Hacks win Best Television Series – Comedy or Musical at the 83rd Golden Globes?
+634110: Will Only Murders in the Building win Best Television Series – Comedy or Musical at the 83rd Golden Globes?
+634111: Will Abbott Elementary win Best Television Series – Comedy or Musical at the 83rd Golden Globes?
+634112: Will Nobody Wants This win Best Television Series – Comedy or Musical at the 83rd Golden Globes?
+634113: Will The Bear win Best Television Series – Comedy or Musical at the 83rd Golden Globes?
+634270: Will Adolescence win Best Television Limited Series at the 83rd Golden Globes?
+634274: Will Dying for Sex win Best Television Limited Series at the 83rd Golden Globes?
+634276: Will Black Mirror win Best Television Limited Series at the 83rd Golden Globes?
+634281: Will All Her Fault win Best Television Limited Series at the 83rd Golden Globes?
+634282: Will The Beast In Me win Best Television Limited Series at the 83rd Golden Globes?
+634283: Will The Girlfriend win Best Television Limited Series at the 83rd Golden Globes?
+634310: Will KPop Demon Hunters win Best Motion Picture – Animated at the 83rd Golden Globes?
+634312: Will Arco win Best Motion Picture – Animated at the 83rd Golden Globes?
+634313: Will Demon Slayer Kimetsu No Yaiba win Best Motion Picture – Animated at the 83rd Golden Globes?
+634314: Will Zootopia 2 win Best Motion Picture – Animated at the 83rd Golden Globes?
+634315: Will Little Amelie or the Character of Rain win Best Motion Picture – Animated at the 83rd Golden Globes?
+634317: Will Elio win Best Motion Picture – Animated at the 83rd Golden Globes?
+634381: Will The Pitt win Best Television Series – Drama at the 83rd Golden Globes?
+634382: Will Severance win Best Television Series – Drama at the 83rd Golden Globes?
+634385: Will The White Lotus win Best Television Series – Drama at the 83rd Golden Globes?
+634390: Will Slow Horses win Best Television Series – Drama at the 83rd Golden Globes?
+634392: Will The Diplomat win Best Television Series – Drama at the 83rd Golden Globes?
+634393: Will Pluribus win Best Television Series – Drama at the 83rd Golden Globes?
+634418: Will Marty Supreme win Best Motion Picture – Musical or Comedy at the 83rd Golden Globes?
+634420: Will Bugonia win Best Motion Picture – Musical or Comedy at the 83rd Golden Globes?

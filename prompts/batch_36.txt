@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1141140: Nongshim Esports Academy to win 1 games?
+1141141: Nongshim Esports Academy to win 2 games?
+1141142: Dplus KIA Challengers to win 1 games?
+1141143: Dplus KIA Challengers to win 2 games?
+1141144: LoL: DRX Challengers vs KT Rolster Challengers (BO3)
+1141145: LoL: DRX Challengers vs KT Rolster Challengers - Game 1 Winner
+1141146: LoL: DRX Challengers vs KT Rolster Challengers - Game 2 Winner
+1141147: Games Total: O/U 2.5
+1141148: Game Handicap: KT.C (-1.5)
+1141149: DRX Challengers to win 1 games?
+1141150: DRX Challengers to win 2 games?
+1141151: KT Rolster Challengers to win 1 games?
+1141152: KT Rolster Challengers to win 2 games?
+1141225: Map Handicap: AAB (-1.5)
+1141226: MASONIC to win 1 maps?
+1141227: MASONIC to win 2 maps?
+1141228: AaB esport to win 1 maps?
+1141229: AaB esport to win 2 maps?
+1141230: Counter-Strike: Sangal ALTERS vs NAVI Junior (BO3)
+1141231: Counter-Strike: Sangal ALTERS vs NAVI Junior - Map 1 Winner
+1141232: Counter-Strike: Sangal ALTERS vs NAVI Junior - Map 2 Winner
+1141233: Games Total: O/U 2.5
+1141234: Map Handicap: NAVI.J (-1.5)
+1141235: NAVI Junior to win 1 maps?
+1141236: NAVI Junior to win 2 maps?
+1141237: Sangal ALTERS to win 1 maps?
+1141238: Sangal ALTERS to win 2 maps?
+1141248: Map Handicap: FUT.A (-1.5)
+1141249: Midnight to win 1 maps?
+1141250: Midnight to win 2 maps?
+1141251: FUT Academy to win 1 maps?
+1141252: FUT Academy to win 2 maps?
+1141442: Zaccharie Risacher: Points Over 9.5
+1141448: Zaccharie Risacher: Rebounds Over 3.5
+1141567: Big Bash League: Melbourne Renegades vs Perth Scorchers (Game 1)
+1141568: Big Bash League: Melbourne Renegades vs Perth Scorchers (Game 1) - Who wins the toss?
+1141569: Big Bash League: Melbourne Renegades vs Perth Scorchers (Game 1) - Completed match?
+1141570: Big Bash League: Melbourne Renegades vs Perth Scorchers (Game 1) - Toss Match Double Melbourne Renegades Winner
+1141571: Big Bash League: Melbourne Renegades vs Perth Scorchers (Game 1) - Toss Match Double Draw
+1141572: Big Bash League: Melbourne Renegades vs Perth Scorchers (Game 1) - Toss Match Double Perth Scorchers Winner
+1141573: Big Bash League: Melbourne Renegades vs Perth Scorchers (Game 1) - Most Sixes Melbourne Renegades Winner
+1141574: Big Bash League: Melbourne Renegades vs Perth Scorchers (Game 1) - Most Sixes Draw
+1141575: Big Bash League: Melbourne Renegades vs Perth Scorchers (Game 1) - Most Sixes Perth Scorchers Winner
+1141576: Big Bash League: Melbourne Renegades vs Perth Scorchers (Game 1) - Team Top Batter Melbourne Renegades Winner
+1141577: Big Bash League: Melbourne Renegades vs Perth Scorchers (Game 1) - Team Top Batter Draw
+1141578: Big Bash League: Melbourne Renegades vs Perth Scorchers (Game 1) - Team Top Batter Perth Scorchers Winner
+1141579: SA20: Pretoria Capitals vs Paarl Royals (Game 1)
+1141580: SA20: Pretoria Capitals vs Paarl Royals (Game 1) - Who wins the toss?
+1141581: SA20: Pretoria Capitals vs Paarl Royals (Game 1) - Completed match?
+1141582: SA20: Pretoria Capitals vs Paarl Royals (Game 1) - Toss Match Double Pretoria Capitals Winner
+1141583: SA20: Pretoria Capitals vs Paarl Royals (Game 1) - Toss Match Double Draw
+1141584: SA20: Pretoria Capitals vs Paarl Royals (Game 1) - Toss Match Double Paarl Royals Winner
+1141585: SA20: Pretoria Capitals vs Paarl Royals (Game 1) - Most Sixes Pretoria Capitals Winner
+1141586: SA20: Pretoria Capitals vs Paarl Royals (Game 1) - Most Sixes Draw
+1141587: SA20: Pretoria Capitals vs Paarl Royals (Game 1) - Most Sixes Paarl Royals Winner
+1141588: SA20: Pretoria Capitals vs Paarl Royals (Game 1) - Team Top Batter Pretoria Capitals Winner
+1141589: SA20: Pretoria Capitals vs Paarl Royals (Game 1) - Team Top Batter Draw
+1141590: SA20: Pretoria Capitals vs Paarl Royals (Game 1) - Team Top Batter Paarl Royals Winner
+1141591: BPL: Durbar Rajshahi vs Sylhet Strikers (Game 1)
+1141592: BPL: Durbar Rajshahi vs Sylhet Strikers (Game 1) - Who wins the toss?
+1141593: BPL: Durbar Rajshahi vs Sylhet Strikers (Game 1) - Completed match?
+1141594: BPL: Durbar Rajshahi vs Sylhet Strikers (Game 1) - Toss Match Double Durbar Rajshahi Winner
+1141595: BPL: Durbar Rajshahi vs Sylhet Strikers (Game 1) - Toss Match Double Draw
+1141596: BPL: Durbar Rajshahi vs Sylhet Strikers (Game 1) - Toss Match Double Sylhet Strikers Winner
+1141597: BPL: Durbar Rajshahi vs Sylhet Strikers (Game 1) - Most Sixes Durbar Rajshahi Winner
+1141598: BPL: Durbar Rajshahi vs Sylhet Strikers (Game 1) - Most Sixes Draw
+1141599: BPL: Durbar Rajshahi vs Sylhet Strikers (Game 1) - Most Sixes Sylhet Strikers Winner
+1141600: BPL: Durbar Rajshahi vs Sylhet Strikers (Game 1) - Team Top Batter Durbar Rajshahi Winner
+1141601: BPL: Durbar Rajshahi vs Sylhet Strikers (Game 1) - Team Top Batter Draw
+1141602: BPL: Durbar Rajshahi vs Sylhet Strikers (Game 1) - Team Top Batter Sylhet Strikers Winner
+1141603: BPL: Chattogram Challengers vs Noakhali (Game 1)
+1141604: BPL: Chattogram Challengers vs Noakhali (Game 1) - Who wins the toss?
+1141605: BPL: Chattogram Challengers vs Noakhali (Game 1) - Completed match?
+1141606: BPL: Chattogram Challengers vs Noakhali (Game 1) - Toss Match Double Chattogram Challengers Winner
+1141607: BPL: Chattogram Challengers vs Noakhali (Game 1) - Toss Match Double Draw
+1141608: BPL: Chattogram Challengers vs Noakhali (Game 1) - Toss Match Double Noakhali Winner
+1141609: BPL: Chattogram Challengers vs Noakhali (Game 1) - Most Sixes Chattogram Challengers Winner
+1141610: BPL: Chattogram Challengers vs Noakhali (Game 1) - Most Sixes Draw
+1141611: BPL: Chattogram Challengers vs Noakhali (Game 1) - Most Sixes Noakhali Winner
+1141612: BPL: Chattogram Challengers vs Noakhali (Game 1) - Team Top Batter Chattogram Challengers Winner
+1141613: BPL: Chattogram Challengers vs Noakhali (Game 1) - Team Top Batter Draw
+1141614: BPL: Chattogram Challengers vs Noakhali (Game 1) - Team Top Batter Noakhali Winner
+1141649: Jamal Murray: Points Over 27.5
+1141653: Jamal Murray: Rebounds Over 5.5
+1141656: Kristaps Porzingis: Rebounds Over 4.5
+1141657: Jamal Murray: Assists Over 9.5
+1142034: Map Handicap: STA (-1.5)
+1142035: Universe to win 1 maps?
+1142036: Universe to win 2 maps?
+1142037: STATE to win 1 maps?
+1142038: STATE to win 2 maps?
+1142144: Map Handicap: UVS (-1.5)
+1142356: Will the highest temperature in London be 4°C on January 11?
+1142357: Will the highest temperature in London be 5°C on January 11?
+1142358: Will the highest temperature in London be 6°C on January 11?
+1142359: Will the highest temperature in London be 7°C on January 11?
+1142360: Will the highest temperature in London be 8°C or higher on January 11?
+1142369: Spread: CA Vélez Sarsfield (-1.5)
+1142370: Instituto AC Córdoba vs. CA Vélez Sarsfield: O/U 1.5
+1142371: Will the highest temperature in Buenos Aires be 33°C or below on January 11?
+1142372: Instituto AC Córdoba vs. CA Vélez Sarsfield: O/U 2.5
+1142373: Will the highest temperature in Buenos Aires be 34°C on January 11?
+1142374: Instituto AC Córdoba vs. CA Vélez Sarsfield: O/U 3.5
+1142375: Will the highest temperature in Buenos Aires be 35°C on January 11?
+1142376: Instituto AC Córdoba vs. CA Vélez Sarsfield: O/U 4.5
+1142377: Will the highest temperature in Buenos Aires be 36°C on January 11?
+1142378: Instituto AC Córdoba vs. CA Vélez Sarsfield: Both Teams to Score
+1142380: Will the highest temperature in Buenos Aires be 37°C on January 11?
+1142382: Will the highest temperature in Buenos Aires be 38°C on January 11?
+1142383: Will the highest temperature in Buenos Aires be 39°C or higher on January 11?
+1142386: Spread: CA Central Córdoba (-1.5)
+1142387: CA Central Córdoba vs. CA Gimnasia y Esgrima de Mendoza: O/U 1.5
+1142388: CA Central Córdoba vs. CA Gimnasia y Esgrima de Mendoza: O/U 2.5
+1142389: CA Central Córdoba vs. CA Gimnasia y Esgrima de Mendoza: O/U 3.5
+1142390: CA Central Córdoba vs. CA Gimnasia y Esgrima de Mendoza: O/U 4.5
+1142391: CA Central Córdoba vs. CA Gimnasia y Esgrima de Mendoza: Both Teams to Score
+1142394: Spread: CA Unión (-1.5)
+1142395: CA Unión vs. CA Platense: O/U 1.5
+1142396: CA Unión vs. CA Platense: O/U 2.5
+1142397: CA Unión vs. CA Platense: O/U 3.5
+1142398: CA Unión vs. CA Platense: O/U 4.5
+1142399: CA Unión vs. CA Platense: Both Teams to Score
+1142402: Spread: CA Huracán (-1.5)
+1142403: CA Banfield vs. CA Huracán: O/U 1.5
+1142404: CA Banfield vs. CA Huracán: O/U 2.5
+1142405: CA Banfield vs. CA Huracán: O/U 3.5
+1142406: CA Banfield vs. CA Huracán: O/U 4.5
+1142407: CA Banfield vs. CA Huracán: Both Teams to Score
+1142410: CA Aldosivi vs. CSyD Defensa y Justicia: O/U 1.5
+1142411: CA Aldosivi vs. CSyD Defensa y Justicia: O/U 2.5
+1142412: CA Aldosivi vs. CSyD Defensa y Justicia: O/U 3.5
+1142413: CA Aldosivi vs. CSyD Defensa y Justicia: O/U 4.5
+1142414: CA Aldosivi vs. CSyD Defensa y Justicia: Both Teams to Score
+1142424: Will the highest temperature in Seoul be -3°C on January 11?
+1142425: Will the highest temperature in Seoul be -2°C on January 11?
+1142426: Will the highest temperature in Seoul be -1°C or higher on January 11?
+1142436: Will the highest temperature in Toronto be 2°C on January 11?
+1142437: Will the highest temperature in Toronto be 3°C or higher on January 11?
+1142443: Will the highest temperature in Seattle be between 44-45°F on January 11?
+1142444: Will the highest temperature in Seattle be between 46-47°F on January 11?
+1142445: Will the highest temperature in Seattle be between 48-49°F on January 11?
+1142446: Will the highest temperature in Seattle be between 50-51°F on January 11?
+1142447: Will the highest temperature in Seattle be 52°F or higher on January 11?
+1142454: Will the highest temperature in New York City be between 42-43°F on January 11?
+1142455: Will the highest temperature in New York City be between 44-45°F on January 11?
+1142456: Will the highest temperature in New York City be between 46-47°F on January 11?
+1142457: Will the highest temperature in New York City be between 48-49°F on January 11?
+1142458: Will the highest temperature in New York City be between 50-51°F on January 11?
+1142459: Will the highest temperature in New York City be 52°F or higher on January 11?
+1142465: Will the highest temperature in Dallas be 55°F or below on January 11?
+1142466: Will the highest temperature in Dallas be between 56-57°F on January 11?
+1142467: Will the highest temperature in Dallas be between 58-59°F on January 11?
+1142468: Will the highest temperature in Dallas be between 60-61°F on January 11?
+1142469: Will the highest temperature in Dallas be between 62-63°F on January 11?
+1142470: Will the highest temperature in Dallas be between 64-65°F on January 11?
+1142471: Will the highest temperature in Dallas be 66°F or higher on January 11?
+1142477: Will the highest temperature in Atlanta be between 54-55°F on January 11?
+1142478: Will the highest temperature in Atlanta be 56°F or higher on January 11?
+1142553: Map Handicap: GLS (-1.5)
+1142554: RAFHA eSPORTS to win 1 maps?
+1142555: RAFHA eSPORTS to win 2 maps?
+1142556: Ghools Esports to win 1 maps?
+1142557: Ghools Esports to win 2 maps?
+1142558: Map Handicap: RAAD (-1.5)
+1142559: Team RA'AD to win 1 maps?
+1142560: Team RA'AD to win 2 maps?
+1142561: GnG Amazigh to win 1 maps?
+1142562: GnG Amazigh to win 2 maps?
+1142563: Map Handicap: GMX (-1.5)
+1142564: Gamax Esports to win 1 maps?
+1142565: Gamax Esports to win 2 maps?
+1142566: One More Esports to win 1 maps?
+1142567: One More Esports to win 2 maps?
+1142568: Map Handicap: BAAM (-1.5)
+1142569: BAAM Esports to win 1 maps?
+1142570: BAAM Esports to win 2 maps?
+1142571: Vibranium Esports to win 1 maps?
+1142572: Vibranium Esports to win 2 maps?
+1142578: Map Handicap: QE (-1.5)
+1142579: Nobles to win 1 maps?
+1142580: Nobles to win 2 maps?
+1142581: AlQadsiah Esports to win 1 maps?
+1142582: AlQadsiah Esports to win 2 maps?
+1142609: Map Handicap: Midnight (-1.5)
+1142630: Bitcoin Up or Down - January 11, 7AM ET
+1142635: Ethereum Up or Down - January 11, 7AM ET
+1142648: Solana Up or Down - January 11, 7AM ET
+1142649: Counter-Strike: Acend vs Washington (BO3)
+1142650: Counter-Strike: Acend vs Washington - Map 1 Winner
+1142651: Counter-Strike: Acend vs Washington - Map 2 Winner
+1142652: Games Total: O/U 2.5
+1142653: Map Handicap: ACE (-1.5)
+1142654: Washington to win 1 maps?
+1142655: Washington to win 2 maps?
+1142656: Acend to win 1 maps?
+1142657: XRP Up or Down - January 11, 7AM ET
+1142658: Acend to win 2 maps?
+1142659: Counter-Strike: Fingers Crossed vs 777 (BO3)
+1142660: Counter-Strike: Fingers Crossed vs 777 - Map 1 Winner
+1142661: Counter-Strike: Fingers Crossed vs 777 - Map 2 Winner
+1142662: Games Total: O/U 2.5
+1142663: Map Handicap: Fingers (-1.5)
+1142664: 777 to win 1 maps?
+1142665: 777 to win 2 maps?
+1142666: Fingers Crossed to win 1 maps?
+1142667: Fingers Crossed to win 2 maps?
+1142669: Counter-Strike: ex-CPH Wolves vs Brute (BO3)
+1142670: Counter-Strike: ex-CPH Wolves vs Brute - Map 1 Winner
+1142671: Counter-Strike: ex-CPH Wolves vs Brute - Map 2 Winner
+1142672: Games Total: O/U 2.5
+1142673: Map Handicap: ex-CPH Wolves (-1.5)
+1142674: Brute to win 1 maps?
+1142675: Brute to win 2 maps?
+1142676: ex-CPH Wolves to win 1 maps?
+1142677: ex-CPH Wolves to win 2 maps?
+1142678: Counter-Strike: BIG Academy vs megoshort (BO3)
+1142679: Counter-Strike: BIG Academy vs megoshort - Map 1 Winner
+1142680: Counter-Strike: BIG Academy vs megoshort - Map 2 Winner
+1142681: Games Total: O/U 2.5
+1142682: Map Handicap: megoshort (-1.5)
+1142683: BIG Academy to win 1 maps?
+1142684: BIG Academy to win 2 maps?
+1142685: megoshort to win 1 maps?
+1142686: megoshort to win 2 maps?
+1142687: Counter-Strike: Prestige vs XI Esport (BO3)
+1142688: Counter-Strike: Prestige vs XI Esport - Map 1 Winner
+1142689: Counter-Strike: Prestige vs XI Esport - Map 2 Winner
+1142690: Games Total: O/U 2.5
+1142691: Map Handicap: PRE (-1.5)
+1142692: XI Esport to win 1 maps?
+1142693: XI Esport to win 2 maps?
+1142694: Prestige to win 1 maps?
+1142695: Prestige to win 2 maps?
+1142696: Counter-Strike: los kogutos vs hindsight (BO3)
+1142697: Counter-Strike: los kogutos vs hindsight - Map 1 Winner
+1142698: Counter-Strike: los kogutos vs hindsight - Map 2 Winner
+1142699: Games Total: O/U 2.5
+1142700: Counter-Strike: ex-Imperial Valkyries vs Brute (BO3)
+1142701: Counter-Strike: ex-Imperial Valkyries vs Brute - Map 1 Winner
+1142702: Counter-Strike: ex-Imperial Valkyries vs Brute - Map 2 Winner
+1142703: Games Total: O/U 2.5
+1142704: Map Handicap: BRUTE (-1.5)
+1142705: Brute to win 1 maps?
+1142706: Brute to win 2 maps?
+1142707: ex-Imperial Valkyries to win 1 maps?
+1142708: ex-Imperial Valkyries to win 2 maps?
+1142709: Counter-Strike: Bebop vs STATE (BO3)
+1142710: Counter-Strike: Bebop vs STATE - Map 1 Winner
+1142711: Counter-Strike: Bebop vs STATE - Map 2 Winner
+1142712: Games Total: O/U 2.5
+1142713: Map Handicap: BBP (-1.5)
+1142714: Bebop to win 1 maps?
+1142715: Bebop to win 2 maps?
+1142716: STATE to win 1 maps?
+1142717: STATE to win 2 maps?
+1143134: Bitcoin ETF Flows on January 13?
+1143135: Apple (AAPL) Up or Down on January 12?
+1143136: Gold (GC) Up or Down on January 12?
+1143137: Bitcoin Up or Down - January 11, 8AM ET
+1143138: S&P 500 (SPX) Up or Down on January 12?
+1143139: Microsoft (MSFT) Up or Down on January 12?
+1143141: Ethereum ETF Flows on January 13?
+1143142: Ethereum Up or Down - January 11, 8AM ET
+1143143: Nikkei 225 (NIK) Up or Down on January 12?
+1143144: Crude Oil (CL) Up or Down on January 12?
+1143145: Amazon (AMZN) Up or Down on January 12?
+1143150: Solana Up or Down - January 11, 8AM ET
+1143152: Nasdaq 100 (NDX) Up or Down on January 12?
+1143160: Google (GOOGL) Up or Down on January 12?
+1143162: XRP Up or Down - January 11, 8AM ET
+1143163: Meta (META) Up or Down on January 12?
+1143164: Dow Jones (DJI) Up or Down on January 12?
+1143174: Tesla (TSLA) Up or Down on January 12?
+1143175: FTSE 100 (UKX) Up or Down on January 12?
+1143176: NVIDIA (NVDA) Up or Down on January 12?
+1143177: DAX (DAX) Up or Down on January 12?
+1143178: Netflix (NFLX) Up or Down on January 12?
+1143179: Hang Seng (HSI) Up or Down on January 12?
+1143180: Palantir (PLTR) Up or Down on January 12?
+1143181: Russell 2000 (RUT) Up or Down on January 12?
+1143182: Opendoor (OPEN) Up or Down on January 12?
+1143183: NYA (NYA) Up or Down on January 12?
+1143298: Bitcoin Up or Down - January 11, 9AM ET
+1143299: Ethereum Up or Down - January 11, 9AM ET
+1143300: Solana Up or Down - January 11, 9AM ET
+1143301: XRP Up or Down - January 11, 9AM ET
+1143429: Bitcoin Up or Down - January 11, 10AM ET
+1143431: Ethereum Up or Down - January 11, 10AM ET
+1143444: BC Dubai vs. Virtus Bologna
+1143445: Solana Up or Down - January 11, 10AM ET
+1143446: XRP Up or Down - January 11, 10AM ET
+1143447: Anadolu Efes vs. Saski Baskonia
+1143448: FC Bayern Munchen vs. Panathinaikos
+1143449: Maccabi Tel Aviv vs. Zalgiris Kaunas
+1143450: Olimpia Milano vs. KK Crvena Zvezda
+1143451: Paris Basketball vs. Monaco
+1143452: Grizzlies vs. Magic
+1143453: Suns vs. Pistons
+1143454: UT Arlington Mavericks vs. Utah Tech Trailblazers
+1143455: Tarleton State Texans vs. Southern Utah Thunderbirds
+1143456: Celtics vs. Heat
+1143457: Utah Tech Trailblazers vs. UT Arlington Mavericks (W)
+1143458: California Baptist Lancers vs. Abilene Christian Wildcats
+1143459: Southern Utah Thunderbirds vs. Tarleton State Texans (W)
+1143460: Thunder vs. Rockets
+1143461: UTEP Miners vs. Delaware Fightin' Blue Hens
+1143462: Abilene Christian Wildcats vs. California Baptist Lancers (W)
+1143463: Bucks vs. Spurs
+1143464: Western Kentucky Hilltoppers vs. Sam Houston Bearkats (W)
+1143465: New Mexico State Aggies vs. Liberty Flames
+1143466: Jazz vs. Mavericks
+1143467: Missouri State Bears vs. UTEP Miners (W)
+1143468: Southern Indiana Screaming Eagles vs. Tennessee Tech Golden Eagles
+1143469: Knicks vs. Warriors
+1143471: Middle Tennessee Blue Raiders vs. Louisiana Tech Bulldogs (W)
+1143472: SIUE Cougars vs. UT Martin Skyhawks
+1143473: Hawks vs. Trail Blazers
+1143474: Florida International Golden Panthers vs. New Mexico State Aggies (W)
+1143475: Morehead State Eagles vs. Tennessee State Tigers
+1143476: Hornets vs. Lakers
+1143477: Southern Indiana Screaming Eagles vs. Tennessee Tech Golden Eagles (W)
+1143478: Lindenwood Lions vs. Southeast Missouri State Redhawks
+1143479: SIUE Cougars vs. UT Martin Skyhawks (W)
+1143480: Eastern Illinois Panthers vs. Little Rock Trojans
+1143481: Morehead State Eagles vs. Tennessee State Tigers (W)
+1143482: West Georgia Wolves vs. Stetson Hatters
+1143483: Lindenwood Lions vs. Southeast Missouri State Redhawks (W)
+1143484: Queens (NC) Royals vs. Florida Gulf Coast Eagles
+1143485: Eastern Illinois Panthers vs. Little Rock Trojans (W)
+1143486: North Florida Ospreys vs. North Alabama Lions
+1143487: Portland State Vikings vs. Northern Colorado Bears (W)
+1143488: Jacksonville Dolphins vs. Central Arkansas Bears
+1143489: Weber State Wildcats vs. Eastern Washington Eagles (W)
+1143490: Eastern Kentucky Colonels vs. Austin Peay Governors
+1143491: Stephen F. Austin Lumberjacks vs. Nicholls Colonels (W)
+1143492: Bellarmine Knights vs. Lipscomb Bisons
+1143493: Southeastern Louisiana Lions vs. Texas-Rio Grande Valley Vaqueros (W)
+1143494: Northern Arizona Lumberjacks vs. Sacramento State Hornets
+1143495: McNeese State Cowboys vs. Texas A&M-Corpus Christi Islanders (W)
+1143496: Eastern Washington Eagles vs. Weber State Wildcats
+1143497: Lamar Cardinals vs. New Orleans Privateers (W)
+1143498: Idaho Vandals vs. Idaho State Bengals
+1143499: East Texas A&M Lions vs. Incarnate Word Cardinals (W)
+1143500: Northern Colorado Bears vs. Portland State Vikings
+1143501: Stetson Hatters vs. Queens (NC) Royals (W)
+1143502: Arkansas State Red Wolves vs. South Alabama Jaguars
+1143503: North Alabama Lions vs. North Florida Ospreys (W)
+1143504: Old Dominion Monarchs vs. Georgia Southern Eagles
+1143505: Lipscomb Bisons vs. Eastern Kentucky Colonels (W)
+1143506: James Madison Dukes vs. Appalachian State Mountaineers
+1143507: Florida Gulf Coast Eagles vs. West Georgia Wolves (W)
+1143508: Central Arkansas Bears vs. Jacksonville Dolphins (W)
+1143509: Hawaii Rainbow Warriors vs. Cal Poly Mustangs
+1143510: Austin Peay Governors vs. Bellarmine Knights (W)
+1143511: CSUN Matadors vs. California-San Diego Tritons
+1143512: Texas Longhorns vs. South Carolina Gamecocks (W)
+1143513: Cal State Fullerton Titans vs. UC Davis Aggies
+1143514: Florida Gators vs. Kentucky Wildcats (W)
+1143515: Mercer Bears vs. VMI Keydets
+1143516: The Citadel Bulldogs vs. UNCG Spartans
+1143517: Arkansas Razorbacks vs. Missouri Tigers (W)
+1143518: Vanderbilt Commodores vs. Mississippi State Bulldogs (W)
+1143519: NJIT Highlanders vs. Massachusetts-Lowell River Hawks
+1143520: Alabama Crimson Tide vs. Auburn Tigers (W)
+1143521: UMBC Retrievers vs. Bryant Bulldogs
+1143522: Maine Black Bears vs. Vermont Catamounts
+1143523: Idaho State Bengals vs. Idaho Vandals (W)
+1143524: Binghamton Bearcats vs. Albany Great Danes
+1143525: Marshall Thundering Herd vs. James Madison Dukes (W)
+1143526: Charleston Cougars vs. Towson Tigers
+1143527: Louisiana-Lafayette Ragin' Cajuns vs. Arkansas State Red Wolves (W)
+1143528: Elon Phoenix vs. Northeastern Huskies
+1143529: Sacramento State Hornets vs. Northern Arizona Lumberjacks (W)
+1143530: North Carolina A&T Aggies vs. William & Mary Tribe
+1143531: Northwestern State Demons vs. Houston Christian Huskies (W)
+1143532: Drexel Dragons vs. Monmouth Hawks
+1143533: Miami Hurricanes vs. North Carolina Tar Heels (W)
+1143534: Hofstra Pride vs. Stony Brook Seawolves
+1143535: Oregon Ducks vs. Iowa Hawkeyes (W)
+1143536: Youngstown State Penguins vs. Wright State Raiders
+1143537: Valparaiso Beacons vs. Illinois State Redbirds (W)
+1143538: Oakland Golden Grizzlies vs. Milwaukee Panthers
+1143539: Murray State Racers vs. Southern Illinois Salukis (W)
+1143540: Detroit Titans vs. Northern Kentucky Norse
+1143541: Belmont Bruins vs. Indiana State Sycamores (W)
+1143542: Green Bay Phoenix vs. Cleveland State Vikings
+1143543: Bethune-Cookman Wildcats vs. Arkansas-Pine Bluff Golden Lions (W)
+1143544: Robert Morris Colonials vs. IU Indy Jaguars
+1143545: Portland Pilots vs. Santa Clara Broncos (W)
+1143546: Kansas City Roos vs. South Dakota Coyotes
+1143547: Pacific Tigers vs. Pepperdine Waves (W)
+1143548: St. Thomas (MN) Tommies vs. North Dakota Fighting Hawks
+1143549: Oregon State Beavers vs. Loyola Marymount Lions (W)
+1143550: UC Riverside Highlanders vs. Long Beach State Beach
+1143551: San Francisco Dons vs. Gonzaga Bulldogs (W)
+1143552: UC Santa Barbara Gauchos vs. Bakersfield Roadrunners
+1143553: Wisconsin Badgers vs. Northwestern Wildcats (W)
+1143554: Memphis Tigers vs. Utah State Aggies
+1143555: Prairie View A&M Panthers vs. Alcorn State Braves (W)
+1143556: Wichita State Shockers vs. Florida Atlantic Owls
+1143557: Florida State Seminoles vs. Pittsburgh Panthers (W)
+1143558: Stanford Cardinal vs. Boston College Eagles (W)
+1143559: Gonzaga Bulldogs vs. Washington State Cougars
+1143560: Kansas City Roos vs. Oral Roberts Golden Eagles (W)
+1143561: San Diego Toreros vs. Seattle Redhawks
+1143562: Denver Pioneers vs. South Dakota State Jackrabbits (W)
+1143563: St. Thomas (MN) Tommies vs. Omaha Mavericks (W)
+1143564: IU Indy Jaguars vs. Robert Morris Colonials (W)
+1143565: Western Carolina Catamounts vs. Wofford Terriers (W)
+1143566: UNCG Spartans vs. Furman Paladins (W)
+1143567: California-San Diego Tritons vs. CSUN Matadors (W)
+1143568: UC Davis Aggies vs. Cal State Fullerton Titans (W)
+1143569: Le Moyne Dolphins vs. LIU Sharks (W)
+1143570: Albany Great Danes vs. Binghamton Bearcats (W)
+1143571: Massachusetts-Lowell River Hawks vs. NJIT Highlanders (W)
+1143572: Bryant Bulldogs vs. UMBC Retrievers (W)
+1143573: North Carolina State Wolfpack vs. Wake Forest Demon Deacons (W)
+1143574: Louisville Cardinals vs. Notre Dame Fighting Irish (W)
+1143575: Chicago State Cougars vs. New Haven Chargers (W)
+1143576: California Golden Bears vs. Syracuse Orange (W)
+1143577: St. Francis (PA) Red Flash vs. Stonehill Skyhawks (W)
+1143578: Vermont Catamounts vs. Maine Black Bears (W)
+1143579: Villanova Wildcats vs. Connecticut Huskies (W)
+1143580: Illinois Fighting Illini vs. Michigan Wolverines (W)
+1143581: Nebraska Cornhuskers vs. Michigan State Spartans (W)
+1143582: Mercyhurst Lakers vs. Central Connecticut State Blue Devils (W)
+1143583: Texas Southern Tigers vs. Jackson State Tigers (W)
+1143584: Fairleigh Dickinson Knights vs. Wagner Seahawks (W)
+1143585: Virginia Tech Hokies vs. SMU Mustangs (W)
+1143586: Florida A&M Rattlers vs. Mississippi Valley State Delta Devils (W)
+1143587: Washington State Cougars vs. Saint Mary's Gaels (W)
+1143588: Virginia Cavaliers vs. Duke Blue Devils (W)
+1143589: Maryland Terrapins vs. USC Trojans (W)
+1143590: Long Beach State Beach vs. UC Riverside Highlanders (W)
+1143591: Bakersfield Roadrunners vs. UC Santa Barbara Gauchos (W)
+1143592: Cal Poly Mustangs vs. Hawaii Rainbow Warriors (W)
+1143593: Coppin State Eagles vs. Maryland Eastern Shore Hawks (W)
+1143602: Will "The Fate of Ophelia - Taylor Swift" be the #1 song on Spotify this week?
+1143603: Will "Golden - HUNTR/X" be the #1 song on Spotify this week?
+1143604: Will "End of Beginning - Djo" be the #1 song on Spotify this week?
+1143605: Will "Man I Need - Olivia Dean" be the #1 song on Spotify this week?
+1143606: Will "back to friends - sombr" be the #1 song on Spotify this week?
+1143607: Will "WHERE IS MY HUSBAND! - RAYE" be the #1 song on Spotify this week?
+1143608: Will "So Easy (To Fall In Love) - Olivia Dean" be the #1 song on Spotify this week?
+1143609: Will "Ordinary - Alex Warren" be the #1 song on Spotify this week?
+1143610: Will "Lush Life - Zara Larsson" be the #1 song on Spotify this week?
+1143611: Will "Every Breath You Take - The Police" be the #1 song on Spotify this week?
+1143628: Will "The Fate of Ophelia - Taylor Swift" be the #1 song on US Spotify this week?
+1143629: Will "Golden - HUNTR/X" be the #1 song on US Spotify this week?
+1143630: Will "End of Beginning - Djo" be the #1 song on US Spotify this week?
+1143631: Will "Man I Need - Olivia Dean" be the #1 song on US Spotify this week?
+1143632: Will "back to friends - sombr" be the #1 song on US Spotify this week?
+1143633: Will "4 Raws - EsDeeKid" be the #1 song on US Spotify this week?
+1143634: Will "So Easy (To Fall In Love) - Olivia Dean" be the #1 song on US Spotify this week?
+1143635: Will "Ordinary - Alex Warren" be the #1 song on US Spotify this week?
+1143636: Will "Choosin' Texas - Ella Langley" be the #1 song on US Spotify this week?
+1143637: Will "I Thought I Saw Your Face Today - She & Him" be the #1 song on US Spotify this week?
+1143768: X banned in U.K. by March 31?
+1143769: Bitcoin Up or Down - January 11, 11AM ET
+1143774: Will CA Juventud win on 2026-02-05?
+1143775: Ethereum Up or Down - January 11, 11AM ET
+1143776: Will CA Juventud vs. CD Universidad Católica end in a draw?
+1143778: Will CD Universidad Católica win on 2026-02-05?
+1143783: Solana Up or Down - January 11, 11AM ET
+1143793: XRP Up or Down - January 11, 11AM ET
+1143794: Will Tria launch a token by March 31, 2026?
+1143795: Will Tria launch a token by June 30, 2026?
+1143796: Will Tria launch a token by September 30, 2026?
+1143797: Will Tria launch a token by December 31, 2026?
+1143909: SNHL: Biel vs. Ambri-Piotta
+1143911: SHL: Leksands IF vs. Brynaes
+1143912: CEHL: Sparta Prague vs. Kometa
+1143916: KHL: Lada Togliatti vs. Salavat Yulaev Ufa
+1143917: DEL: Schwenninger Wild Wings vs. Eisbaeren Berlin
+1143923: AHL: Coachella Valley Firebirds vs. Texas Stars
+1143925: KHL: Amur Khabarovsk vs. Ak Bars Kazan
+1143926: SHL: Linkoeping vs. Roegle
+1143927: Counter-Strike: Imperial Academy vs FUT Academy (BO3)
+1143928: Counter-Strike: Imperial Academy vs FUT Academy - Map 1 Winner
+1143929: Counter-Strike: Imperial Academy vs FUT Academy - Map 2 Winner
+1143930: AHL: Abbotsford Canucks vs. San Diego Gulls
+1143931: Games Total: O/U 2.5
+1143932: Map Handicap: Imperial.A (-1.5)
+1143933: Imperial Academy to win 1 maps?
+1143934: Imperial Academy to win 2 maps?
+1143935: FUT Academy to win 1 maps?
+1143936: FUT Academy to win 2 maps?
+1143937: KHL: Avangard Omsk vs. CSKA Moscow
+1143938: SHL: HV 71 vs. Faerjestad
+1143944: AHL: Springfield Thunderbirds vs. Charlotte Checkers
+1143949: Counter-Strike: Misa Esports vs Midnight (BO3)
+1143950: Counter-Strike: Misa Esports vs Midnight - Map 1 Winner
+1143951: Counter-Strike: Misa Esports vs Midnight - Map 2 Winner
+1143952: Games Total: O/U 2.5
+1143953: Map Handicap: MISA (-1.5)
+1143954: Midnight to win 1 maps?
+1143955: Midnight to win 2 maps?
+1143956: Misa Esports to win 1 maps?
+1143957: Misa Esports to win 2 maps?
+1143958: AHL: Hartford Wolf Pack vs. Hershey Bears

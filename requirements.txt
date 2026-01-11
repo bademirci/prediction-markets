@@ -1,0 +1,6 @@
+# Polymarket Ingestion Dependencies
+websockets>=12.0
+httpx>=0.27.0
+clickhouse-connect>=0.7.0
+python-dotenv>=1.0.0
+orjson>=3.9.0

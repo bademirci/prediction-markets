@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1004771: Sabres vs. Hurricanes
+1004772: Capitals vs. Avalanche
+1004773: Penguins vs. Kraken
+1004774: Sharks vs. Panthers
+1004775: Wild vs. Maple Leafs
+1004776: Flyers vs. Golden Knights
+1004777: Jets vs. Blackhawks
+1004778: Devils vs. Flames
+1004779: Rangers vs. Ducks
+1004780: Islanders vs. Canucks
+1004795: Will NVIDIA be the second-largest company in the world by market cap on March 31?
+1004796: Will Microsoft be the second-largest company in the world by market cap on March 31?
+1004797: Will Apple be the second-largest company in the world by market cap on March 31?
+1004798: Will Alphabet be the second-largest company in the world by market cap on March 31?
+1004799: Will Tesla be the second-largest company in the world by market cap on March 31?
+1004800: Will Saudi Aramco be the second-largest company in the world by market cap on March 31?
+1004801: Will Amazon be the second-largest company in the world by market cap on March 31?
+1004840: Will there be five or six announced new U.S. armed forces strikes against drug boats by January 31, 2026?
+1004841: Will there be seven or eight announced new U.S. armed forces strikes against drug boats by January 31, 2026?
+1004842: Will there be nine or ten announced new U.S. armed forces strikes against drug boats by January 31, 2026?
+1004843: Will there be eleven or more announced new U.S. armed forces strikes against drug boats by January 31, 2026?
+1004856: Will NVIDIA be the third-largest company in the world by market cap on January 31?
+1004857: Will Microsoft be the third-largest company in the world by market cap on January 31?
+1004858: Will Apple be the third-largest company in the world by market cap on January 31?
+1004859: Will Alphabet be the third-largest company in the world by market cap on January 31?
+1004860: Will Tesla be the third-largest company in the world by market cap on January 31?
+1004861: Will Saudi Aramco be the third-largest company in the world by market cap on January 31?
+1004862: Will Amazon be the third-largest company in the world by market cap on January 31?
+1004863: Will Oracle be the third-largest company in the world by market cap on January 31?
+1004880: Will NVIDIA be the third-largest company in the world by market cap on March 31?
+1004881: Will Microsoft be the third-largest company in the world by market cap on March 31?
+1004882: Will Apple be the third-largest company in the world by market cap on March 31?
+1004883: Will Alphabet be the third-largest company in the world by market cap on March 31?
+1004884: Will Tesla be the third-largest company in the world by market cap on March 31?
+1004885: Will Saudi Aramco be the third-largest company in the world by market cap on March 31?
+1004886: Will Amazon be the third-largest company in the world by market cap on March 31?
+1004887: Will Oracle be the third-largest company in the world by market cap on March 31?
+1005024: Will the Bank of Canada announce a 50+ bps decrease at the March meeting?
+1005025: Will the Bank of Canada announce a 25 bps decrease at the March meeting?
+1005026: Will the Bank of Canada announce no change at the March meeting?
+1005027: Will the Bank of Canada announce an increase at the March meeting?
+1005032: Will Rams Başakşehir FK win on 2026-01-17?
+1005033: Will Rams Başakşehir FK vs. Fatih Karagümrük SK end in a draw?
+1005034: Will Fatih Karagümrük SK win on 2026-01-17?
+1005035: Will Galatasaray SK win on 2026-01-17?
+1005036: Will Galatasaray SK vs. Gaziantep FK end in a draw?
+1005037: Will Gaziantep FK win on 2026-01-17?
+1005038: Will Kasımpaşa SK win on 2026-01-18?
+1005039: Will Kasımpaşa SK vs. Antalyaspor end in a draw?
+1005040: Will Antalyaspor win on 2026-01-18?
+1005041: Will Gençlerbirliği SK win on 2026-01-18?
+1005042: Will Gençlerbirliği SK vs. Samsunspor end in a draw?
+1005043: Will Samsunspor win on 2026-01-18?
+1005044: Will Kocaelispor win on 2026-01-18?
+1005045: Will Kocaelispor vs. Trabzonspor end in a draw?
+1005046: Will Trabzonspor win on 2026-01-18?
+1005047: Will Alanyaspor win on 2026-01-18?
+1005048: Will Alanyaspor vs. Fenerbahçe SK end in a draw?
+1005049: Will Fenerbahçe SK win on 2026-01-18?
+1005050: Will Konyaspor win on 2026-01-19?
+1005051: Will Konyaspor vs. Eyüpspor end in a draw?
+1005052: Will Eyüpspor win on 2026-01-19?
+1005053: Will Beşiktaş JK win on 2026-01-19?
+1005054: Will Beşiktaş JK vs. Kayserispor end in a draw?
+1005055: Will Kayserispor win on 2026-01-19?
+1005056: Will Göztepe SK win on 2026-01-19?
+1005057: Will Göztepe SK vs. Çaykur Rizespor end in a draw?
+1005058: Will Çaykur Rizespor win on 2026-01-19?
+1005343: Puffpaw FDV above $50M one day after launch?
+1005344: Puffpaw FDV above $100M one day after launch?
+1005345: Puffpaw FDV above $200M one day after launch?
+1005346: Puffpaw FDV above $300M one day after launch?
+1005363: Will DoorDash report less than 800 million total orders in Q4 2025?
+1005364: Will DoorDash report between 800 million and 825 million total orders in Q4 2025?
+1005365: Will DoorDash report between 825 million and 850 million total orders in Q4 2025?
+1005366: Will DoorDash report between 850 million and 875 million total orders in Q4 2025?
+1005367: Will DoorDash report between 875 million and 900 million total orders in Q4 2025?
+1005368: Will DoorDash report 900 million or more total orders in Q4 2025?
+1005381: Will the Bank of Mexico announce a decrease at the March meeting?
+1005382: Will the Bank of Mexico announce no change at the March meeting?
+1005383: Will the Bank of Mexico announce an increase at the March meeting?
+1005412: Will the Central Bank of Colombia announce a decrease at the March meeting?
+1005413: Will the Central Bank of Colombia announce no change at the March meeting?
+1005414: Will the Central Bank of Colombia announce an increase at the March meeting?
+1005725: Will the Bank of Brazil increase the Selic rate after March 2026 meeting?
+1005726: No change in the Selic rate after Bank of Brazil's March 2026 meeting?
+1005727: Will the Bank of Brazil decrease the Selic rate after March 2026 meeting?
+1005732: State of Siege declared in Chile by June 30? 
+1005749: Will Erin Doherty win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005750: Will Michelle Williams win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005751: Will Betty Gilpin win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005752: Will Kaitlyn Dever win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005753: Will Renée Zellweger win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005754: Will Ellen Pompeo win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005755: Will Laurie Metcalf win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005756: Will Patricia Arquette win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005757: Will Meghann Fahy win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005758: Will Jessica Biel win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005759: Will Robin Wright win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005760: Will Claire Danes win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005761: Will Sarah Snook win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005762: Will Christine Tremarco win Best Actress in a Television Movie or Limited Series at the 2026 SAG Awards?
+1005867: Will Noah Wyle win Best Actor in a Drama Series at the 2026 SAG Awards?
+1005868: Will Adam Scott win Best Actor in a Drama Series at the 2026 SAG Awards?
+1005869: Will Billy Crudup win Best Actor in a Drama Series at the 2026 SAG Awards?
+1005870: Will Pedro Pascal win Best Actor in a Drama Series at the 2026 SAG Awards?
+1005871: Will Gary Oldman win Best Actor in a Drama Series at the 2026 SAG Awards?
+1005872: Will Mark Ruffalo win Best Actor in a Drama Series at the 2026 SAG Awards?
+1005873: Will Tramell Tillman win Best Actor in a Drama Series at the 2026 SAG Awards?
+1005874: Will David Harbour win Best Actor in a Drama Series at the 2026 SAG Awards?
+1005875: Will Sterling K. Brown win Best Actor in a Drama Series at the 2026 SAG Awards?
+1005876: Will Walton Goggins win Best Actor in a Drama Series at the 2026 SAG Awards?
+1005877: Will Jason Isaacs win Best Actor in a Drama Series at the 2026 SAG Awards?
+1005913: Will Carrie Coon win Best Actress in a Drama Series at the 2026 SAG Awards?
+1005914: Will Rhea Seehorn win Best Actress in a Drama Series at the 2026 SAG Awards?
+1005915: Will Kathy Bates win Best Actress in a Drama Series at the 2026 SAG Awards?
+1005916: Will Britt Lower win Best Actress in a Drama Series at the 2026 SAG Awards?
+1005917: Will Katherine LaNasa win Best Actress in a Drama Series at the 2026 SAG Awards?
+1005918: Will Jennifer Aniston win Best Actress in a Drama Series at the 2026 SAG Awards?
+1005919: Will Millie Bobby Brown win Best Actress in a Drama Series at the 2026 SAG Awards?
+1005920: Will Parker Posey win Best Actress in a Drama Series at the 2026 SAG Awards?
+1005921: Will Keri Russell win Best Actress in a Drama Series at the 2026 SAG Awards?
+1005922: Will Winona Ryder win Best Actress in a Drama Series at the 2026 SAG Awards?
+1005923: Will Bella Ramsey win Best Actress in a Drama Series at the 2026 SAG Awards?
+1005924: Will Aimee Lou Wood win Best Actress in a Drama Series at the 2026 SAG Awards?
+1005958: Will Seth Rogen win Best Actor in a Comedy Series at the 2026 SAG Awards?
+1005959: Will Martin Short win Best Actor in a Comedy Series at the 2026 SAG Awards?
+1005960: Will Jeremy Allen White win Best Actor in a Comedy Series at the 2026 SAG Awards?
+1005961: Will Adam Brody win Best Actor in a Comedy Series at the 2026 SAG Awards?
+1005962: Will Harrison Ford win Best Actor in a Comedy Series at the 2026 SAG Awards?
+1005963: Will Ike Barinholtz win Best Actor in a Comedy Series at the 2026 SAG Awards?
+1005964: Will Ted Danson win Best Actor in a Comedy Series at the 2026 SAG Awards?
+1005965: Will David Alan Grier win Best Actor in a Comedy Series at the 2026 SAG Awards?
+1005966: Will Danny McBride win Best Actor in a Comedy Series at the 2026 SAG Awards?
+1005967: Will Alexander Skarsgard win Best Actor in a Comedy Series at the 2026 SAG Awards?
+1006073: Will US GDP growth in Q1 2026 be less than 1.0%?
+1006074: Will US GDP growth in Q1 2026 be between 1.0% and 1.5%?
+1006075: Will US GDP growth in Q1 2026 be between 1.5% and 2.0%?
+1006076: Will US GDP growth in Q1 2026 be between 2.0% and 2.5%?
+1006077: Will US GDP growth in Q1 2026 be between 2.5% and 3.0%?
+1006078: Will US GDP growth in Q1 2026 be between 3.0% and 3.5%?
+1006079: Will US GDP growth in Q1 2026 be greater than 3.5%?
+1006302: Will Kristen Bell win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006303: Will Jean Smart win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006304: Will Quinta Brunton win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006305: Will Ayo Edibiri win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006306: Will Carrie Preston win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006307: Will Natasha Lyonne win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006308: Will Rose McIver win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006309: Will Edi Patterson win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006310: Will Jessica Williams win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006311: Will Selena Gomez win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006312: Will Kathryn Hahn win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006313: Will Catherine O'Hara win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006314: Will Jenna Ortega win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006315: Will Kristen Wiig win Best Actress in a Comedy Series at the 2026 SAG Awards?
+1006343: Will MrBeast's next video get less than 60 million views on week 1?
+1006344: Will MrBeast's next video get between 60 and 70 million views on week 1?
+1006345: Will MrBeast's next video get between 70 and 80 million views on week 1?
+1006346: Will MrBeast's next video get between 80 and 90 million views on week 1?
+1006347: Will MrBeast's next video get between 90 and 100 million views on week 1?
+1006348: Will MrBeast's next video get between 100 and 110 million views on week 1?
+1006349: Will MrBeast's next video get 110 million or more views on week 1?
+1006351: Will The White Lotus win Best Ensemble in a Drama Series at the 2026 SAG Awards?
+1006352: Will Severance win Best Ensemble in a Drama Series at the 2026 SAG Awards?
+1006353: Will The Pitt win Best Ensemble in a Drama Series at the 2026 SAG Awards?
+1006354: Will The Morning Show win Best Ensemble in a Drama Series at the 2026 SAG Awards?
+1006355: Will Andor win Best Ensemble in a Drama Series at the 2026 SAG Awards?
+1006356: Will Stranger Things win Best Ensemble in a Drama Series at the 2026 SAG Awards?
+1006357: Will The Diplomat win Best Ensemble in a Drama Series at the 2026 SAG Awards?
+1006358: Will The Gilded Age win Best Ensemble in a Drama Series at the 2026 SAG Awards?
+1006359: Will The Last of Us win Best Ensemble in a Drama Series at the 2026 SAG Awards?
+1006360: Will Slow Horses win Best Ensemble in a Drama Series at the 2026 SAG Awards?
+1006361: Will It: Welcome to Derry win Best Ensemble in a Drama Series at the 2026 SAG Awards?
+1006362: Will Landman win Best Ensemble in a Drama Series at the 2026 SAG Awards?
+1006397: Will Only Murders in the Building win Best Ensemble in a Comedy Series at the 2026 SAG Awards?
+1006398: Will Abbott Elementary win Best Ensemble in a Comedy Series at the 2026 SAG Awards?
+1006399: Will The Studio win Best Ensemble in a Comedy Series at the 2026 SAG Awards?
+1006400: Will Hacks win Best Ensemble in a Comedy Series at the 2026 SAG Awards?
+1006401: Will The Paper win Best Ensemble in a Comedy Series at the 2026 SAG Awards?
+1006402: Will The Bear win Best Ensemble in a Comedy Series at the 2026 SAG Awards?
+1006403: Will Shrinking win Best Ensemble in a Comedy Series at the 2026 SAG Awards?
+1006404: Will The Four Seasons win Best Ensemble in a Comedy Series at the 2026 SAG Awards?
+1006405: Will I Love L.A. win Best Ensemble in a Comedy Series at the 2026 SAG Awards?
+1006406: Will Saturday Night Live win Best Ensemble in a Comedy Series at the 2026 SAG Awards?
+1006407: Will Wednesday win Best Ensemble in a Comedy Series at the 2026 SAG Awards?
+1006439: Zendaya confirmed pregnant by June 30?
+1006465: 100m views on a MrBeast video in the first week by March 31?
+1006467: Will Jannik Sinner win the 2026 Australian Open?
+1006468: Will Carlos Alcaraz win the 2026 Australian Open?
+1006469: Will Novak Djokovic win the 2026 Australian Open?
+1006470: Will Alexander Zverev win the 2026 Australian Open?
+1006471: Will Daniil Medvedev win the 2026 Australian Open?
+1006473: Will Taylor Fritz win the 2026 Australian Open?
+1006474: Will Joao Fonseca win the 2026 Australian Open?
+1006475: Will Alex De Minaur win the 2026 Australian Open?
+1006476: Will Ben Shelton win the 2026 Australian Open?
+1006477: Will Felix Auger Aliassime win the 2026 Australian Open?
+1006478: Will Jakub Mensik win the 2026 Australian Open?
+1006479: Will Learner Tien win the 2026 Australian Open?
+1006480: Will Lorenzo Musetti win the 2026 Australian Open?
+1006481: Will Andrey Rublev win the 2026 Australian Open?
+1006482: Will Casper Ruud win the 2026 Australian Open?
+1006483: Will Tommy Paul win the 2026 Australian Open?
+1006484: Will Hubert Hurkacz win the 2026 Australian Open?
+1006485: Will Tomas Machac win the 2026 Australian Open?
+1006486: Will Alexander Bublik win the 2026 Australian Open?
+1006487: Will Grigor Dimitrov win the 2026 Australian Open?
+1006488: Will Giovanni Mpetshi Perricard win the 2026 Australian Open?
+1006489: Will Denis Shapovalov win the 2026 Australian Open?
+1006490: Will Karen Khachanov win the 2026 Australian Open?
+1006491: Will Arthur Fils win the 2026 Australian Open?
+1006492: Will Jiri Lehecka win the 2026 Australian Open?
+1006493: Will Matteo Berrettini win the 2026 Australian Open?
+1006494: Will Frances Tiafoe win the 2026 Australian Open?
+1006495: Will Stefanos Tsitsipas win the 2026 Australian Open?
+1006496: Will Alex Michelsen win the 2026 Australian Open?
+1006497: Will Tallon Griekspoor win the 2026 Australian Open?
+1006498: Will Alejandro Davidovich Fokina win the 2026 Australian Open?
+1006499: Will Cameron Norrie win the 2026 Australian Open?
+1006500: Will Ugo Humbert win the 2026 Australian Open?
+1006532: 50m views on a MrBeast video in the first day by March 31?
+1006629: Will the Reserve Bank of Australia decrease the target for the cash rate after the February Meeting?
+1006630: Will the Reserve Bank of Australia make no change to the target for the cash rate after the February Meeting?
+1006631: Will the Reserve Bank of Australia increase the target for the cash rate after the February Meeting?
+1006826: Will the Reserve Bank of Australia decrease the target for the cash rate after the March Meeting?
+1006829: Will the Reserve Bank of Australia make no change to the target for the cash rate after the March Meeting?
+1006831: Will the Reserve Bank of Australia increase the target for the cash rate after the March Meeting?
+1006867: Epstein blackmail evidence released by March 31?
+1006891: Will Russia capture Lyman by January 31, 2026?
+1006892: Will Russia capture Lyman by March 31, 2026?
+1006897: Will Manuel João Vieira qualify for the second round of the 2026 Portugal presidential election?
+1006898: Will Humberto Correia qualify for the second round of the 2026 Portugal presidential election?
+1006907: Will Marcus Carter be the Republican nominee for FL-09?
+1006908: Will Thomas Chalifoux be the Republican nominee for FL-09?
+1006909: Will Jorge Malavet be the Republican nominee for FL-09?
+1006910: Will Howard Steven Rance be the Republican nominee for FL-09?
+1006911: Will Justin Story be the Republican nominee for FL-09?
+1006940: Will the Bank of Korea decrease the base rate after the January Meeting?
+1006941: Will the Bank of Korea make no change to the base rate after the January Meeting?
+1006942: Will the Bank of Korea increase the base rate after the January Meeting?
+1007020: Will the Bank of Korea decrease the base rate after the February Meeting?
+1007021: Will the Bank of Korea make no change to the base rate after the February Meeting?
+1007022: Will the Bank of Korea increase the base rate after the February Meeting?
+1007260: Will Russia capture all of Pokrovsk by February 28?
+1007289: Will Valve to add first CS2 operation by January 31, 2026?
+1007357: Will Russia capture all of Vovchansk by March 31?
+1007366: Will Russia capture Rodynske by January 31?
+1007515: Will Russia enter Orikhiv by January 31?
+1007516: Will Russia enter Orikhiv by March 31?
+1007578: Will Russia enter Borova by March 31?
+1007579: Will Russia capture Sumy by March 31, 2027?
+1007584: Will Russia enter Toretske by January 15?
+1007585: Will Russia enter Toretske by January 31?
+1007590: Ventuals FDV above $100M one day after launch?
+1007599: Zama FDV above $600M one day after launch?
+1007628: Will Russia enter Sloviansk by June 30?
+1007630: Will Russia enter Sumy by June 30?
+1007631: Will Russia enter Druzkhivka by June 30?
+1007632: Will Russia enter Dopropillia by June 30?
+1007633: Will Russia enter Kramatorsk by June 30?
+1007634: Will Russia enter Kharkiv by June 30?
+1007635: Will Russia enter Kherson by June 30?
+1007636: Will Russia enter Zaporizhia by June 30?
+1009193: Will Elon Musk post 800-839 tweets in January 2026?
+1009194: Will Elon Musk post 840-879 tweets in January 2026?
+1009196: Will Elon Musk post 880-919 tweets in January 2026?
+1009197: Will Elon Musk post 920-959 tweets in January 2026?
+1009198: Will Elon Musk post 960-999 tweets in January 2026?
+1009199: Will Elon Musk post 1000-1039 tweets in January 2026?
+1009200: Will Arsenal FC win on 2026-01-14?
+1009201: Will Elon Musk post 1040-1079 tweets in January 2026?
+1009202: Will Chelsea FC win on 2026-01-14?
+1009203: Will Elon Musk post 1080-1119 tweets in January 2026?
+1009204: Will Chelsea FC vs. Arsenal FC end in a draw?
+1009205: Will Elon Musk post 1120-1159 tweets in January 2026?
+1009206: Will Elon Musk post 1160-1199 tweets in January 2026?
+1009207: Will Elon Musk post 1200-1239 tweets in January 2026?
+1009208: Will Elon Musk post 1240-1279 tweets in January 2026?
+1009209: Will Elon Musk post 1280-1319 tweets in January 2026?
+1009210: Will Elon Musk post 1320-1359 tweets in January 2026?
+1009211: Will Elon Musk post 1360-1399 tweets in January 2026?
+1009212: Will Elon Musk post 1400+ tweets in January 2026?
+1009213: Will Swansea City AFC win on 2026-01-20?
+1009215: Will Swansea City AFC vs. Blackburn Rovers FC end in a draw?
+1009217: Will Blackburn Rovers FC win on 2026-01-20?
+1009222: Will Sheffield Wednesday FC win on 2026-01-20?
+1009223: Will Sheffield Wednesday FC vs. Birmingham City FC end in a draw?
+1009224: Will Birmingham City FC win on 2026-01-20?
+1009225: Will Preston North End FC win on 2026-01-20?
+1009226: Will Preston North End FC vs. Hull City AFC end in a draw?
+1009227: Will Hull City AFC win on 2026-01-20?
+1009228: Will West Bromwich Albion FC win on 2026-01-20?
+1009229: Will West Bromwich Albion FC vs. Norwich City FC end in a draw?
+1009230: Will Norwich City FC win on 2026-01-20?
+1009231: Will Oxford United FC win on 2026-01-20?
+1009232: Will Oxford United FC vs. Queens Park Rangers FC end in a draw?
+1009233: Will Queens Park Rangers FC win on 2026-01-20?
+1009234: Will Ipswich Town FC win on 2026-01-20?
+1009235: Will Ipswich Town FC vs. Bristol City FC end in a draw?
+1009236: Will Bristol City FC win on 2026-01-20?
+1009237: Will Charlton Athletic FC win on 2026-01-20?
+1009238: Will Charlton Athletic FC vs. Derby County FC end in a draw?
+1009239: Will Derby County FC win on 2026-01-20?
+1009240: Will Coventry City FC win on 2026-01-20?
+1009241: Will Coventry City FC vs. Millwall FC end in a draw?
+1009242: Will Millwall FC win on 2026-01-20?
+1009243: Will Wrexham AFC win on 2026-01-20?
+1009244: Will Wrexham AFC vs. Leicester City FC end in a draw?
+1009245: Will Leicester City FC win on 2026-01-20?
+1010191: Will Livingston FC win on 2026-01-06?
+1010192: Will Livingston FC vs. St Mirren FC end in a draw?
+1010193: Will St Mirren FC win on 2026-01-06?
+1010754: First Touchdown: Tampa Bay Defense
+1011479: Lincoln (PA) Lions vs. Long Beach State Beach
+1011728: Will the Reserve Bank of New Zealand decrease the official cash rate after the February decision?
+1011729: Will the Bank of New Zealand make no change to the official cash rate after the February decision?
+1011730: Will the Bank of New Zealand increase the official cash rate after the February decision?
+1011747: Will the Reserve Bank of New Zealand decrease the official cash rate after the April decision?
+1011748: Will the Bank of New Zealand make no change to the official cash rate after the April decision?
+1011749: Will the Bank of New Zealand increase the official cash rate after the April decision?
+1011869: Will the Bank of Russia decrease the key rate after the February Meeting?
+1011870: Will the Bank of Russia make no change to the key rate after the February Meeting?
+1011871: Will the Bank of Russia increase the key rate after the February Meeting?
+1011905: Will the Bank of Russia decrease the key rate after the March Meeting?
+1011908: Will the Bank of Russia make no change to the key rate after the March Meeting?
+1011910: Will the Bank of Russia increase the key rate after the March Meeting?
+1011961: Senators vs. Blue Jackets
+1011962: Sharks vs. Lightning
+1011963: Wild vs. Canadiens
+1011964: Bruins vs. Stars
+1011965: Blues vs. Jets
+1011966: Sabres vs. Predators
+1011967: Devils vs. Oilers
+1011968: Rangers vs. Kings
+1012311: Will Chennai Super Kings win the 2026 Indian Premier League?
+1012312: Will Delhi Capitals win the 2026 Indian Premier League?
+1012313: Will Gujarat Titans win the 2026 Indian Premier League?
+1012314: Will Kolkata Knight Riders win the 2026 Indian Premier League?
+1012315: Will Lucknow Super Giants win the 2026 Indian Premier League?
+1012316: Will Mumbai Indians win the 2026 Indian Premier League?
+1012317: Will Punjab Kings win the 2026 Indian Premier League?
+1012318: Will Rajasthan Royals win the 2026 Indian Premier League?
+1012319: Will Royal Challengers Bengaluru win the 2026 Indian Premier League?
+1012320: Will Sunrisers Hyderabad win the 2026 Indian Premier League?
+1012622: Will Sporting CP win on 2026-01-16?
+1012623: Will Sporting CP vs. Casa Pia AC end in a draw?
+1012624: Will Casa Pia AC win on 2026-01-16?
+1012625: Will Gil Vicente FC win on 2026-01-17?
+1012626: Will Gil Vicente FC vs. CD Nacional end in a draw?
+1012627: Will CD Nacional win on 2026-01-17?
+1012628: Will AVS Futebol win on 2026-01-17?
+1012629: Will AVS Futebol vs. FC Arouca end in a draw?
+1012630: Will FC Arouca win on 2026-01-17?
+1012631: Will FC Alverca win on 2026-01-17?
+1012632: Will FC Alverca vs. Moreirense FC end in a draw?
+1012633: Will Moreirense FC win on 2026-01-17?
+1012634: Will Rio Ave FC win on 2026-01-17?
+1012635: Will Rio Ave FC vs. Sport Lisboa e Benfica end in a draw?
+1012636: Will Sport Lisboa e Benfica win on 2026-01-17?
+1012637: Will CD Santa Clara win on 2026-01-18?
+1012638: Will CD Santa Clara vs. FC Famalicão end in a draw?
+1012639: Will FC Famalicão win on 2026-01-18?
+1012640: Will CD Tondela win on 2026-01-18?
+1012641: Will CD Tondela vs. SC Braga end in a draw?
+1012642: Will SC Braga win on 2026-01-18?
+1012643: Will Vitória SC win on 2026-01-18?
+1012644: Will Vitória SC vs. FC Porto end in a draw?
+1012645: Will FC Porto win on 2026-01-18?
+1012646: Will CF Estrela da Amadora win on 2026-01-19?
+1012647: Will CF Estrela da Amadora vs. Estoril Praia end in a draw?
+1012648: Will Estoril Praia win on 2026-01-19?
+1013240: Will Playboi Carti release an album in 2026?
+1013241: Will Nettspend release an album in 2026?
+1013242: Will Justin Bieber release an album in 2026?
+1013243: Will Harry Styles release an album in 2026?
+1013244: Will Frank Ocean release an album in 2026?
+1013245: Will Drake release an album in 2026?
+1013246: Will Lana Del Rey release an album in 2026?
+1013247: Will Kanye West release an album in 2026?
+1013248: Will Kendrick Lamar release an album in 2026?
+1013249: Will Olivia Rodrigo release an album in 2026?
+1013250: Will Rihanna release an album in 2026?
+1013251: Will Luke Combs release an album in 2026?
+1013252: Will A$AP Rocky release an album in 2026?
+1013278: Will Nettspend release an album by June 30?
+1013522: Will Logan Paul’s PSA 10 Pokémon Illustrator Sale Price be over $4 million?
+1013523: Will Logan Paul’s PSA 10 Pokémon Illustrator Sale Price be over $5 million?
+1013524: Will Logan Paul’s PSA 10 Pokémon Illustrator Sale Price be over $6 million?
+1013525: Will Logan Paul’s PSA 10 Pokémon Illustrator Sale Price be over $7 million?
+1013526: Will Logan Paul’s PSA 10 Pokémon Illustrator Sale Price be over $8 million?
+1013527: Will Logan Paul’s PSA 10 Pokémon Illustrator Sale Price be over $10 million?
+1013528: Will Logan Paul’s PSA 10 Pokémon Illustrator Sale Price be over $15 million?
+1015906: Will Apple reach $360 in January?
+1015907: Will Apple reach $340 in January?
+1015908: Will Apple reach $324 in January?
+1015909: Will Apple reach $308 in January?
+1015910: Will Apple reach $296 in January?
+1015912: Will Apple reach $288 in January?
+1015913: Will Apple reach $280 in January?
+1015917: Will Apple dip to $244 in January?
+1015918: Will Apple dip to $232 in January?
+1015919: Will Apple dip to $216 in January?
+1015920: Will Apple dip to $196 in January?
+1015925: Will Southampton FC win on 2026-01-21?
+1015928: Will Southampton FC vs. Sheffield United FC end in a draw?
+1015929: Will Sheffield United FC win on 2026-01-21?
+1015931: Will Watford FC win on 2026-01-21?
+1015934: Will Watford FC vs. Portsmouth FC end in a draw?
+1015937: Will Portsmouth FC win on 2026-01-21?
+1015941: Will Microsoft reach $645 in January?
+1015942: Will Microsoft reach $608 in January?
+1015943: Will Microsoft reach $578 in January?
+1015944: Will Microsoft reach $548 in January?
+1015945: Will Microsoft reach $525 in January?
+1015946: Will Microsoft reach $510 in January?
+1015947: Will Microsoft reach $495 in January?
+1015949: Will Microsoft dip to $465 in January?
+1015950: Will Microsoft dip to $450 in January?
+1015951: Will Microsoft dip to $428 in January?
+1015952: Will Microsoft dip to $405 in January?
+1015953: Will Microsoft dip to $375 in January?
+1015954: Will Microsoft dip to $338 in January?
+1015957: Will Stoke City FC win on 2026-01-21?
+1015959: Will Stoke City FC vs. Middlesbrough FC end in a draw?
+1015960: Will Middlesbrough FC win on 2026-01-21?
+1015964: Will Amazon reach $320 in January?
+1015966: Will Amazon reach $300 in January?
+1015968: Will Amazon reach $284 in January?
+1015970: Will Amazon reach $268 in January?
+1015971: Will Amazon reach $256 in January?
+1015972: Will Amazon reach $248 in January?
+1015975: Will Amazon dip to $224 in January?
+1015976: Will Amazon dip to $216 in January?
+1015977: Will Amazon dip to $204 in January?
+1015978: Will Amazon dip to $192 in January?
+1015979: Will Amazon dip to $176 in January?
+1015980: Will Amazon dip to $156 in January?
+1015987: Will Google reach $420 in January?
+1015988: Will Google reach $395 in January?
+1015989: Will Google reach $375 in January?
+1015990: Will Google reach $355 in January?
+1015991: Will Google reach $340 in January?
+1015994: Will Google dip to $310 in January?
+1015995: Will Google dip to $300 in January?
+1015996: Will Google dip to $290 in January?
+1015997: Will Google dip to $275 in January?
+1015998: Will Google dip to $260 in January?
+1015999: Will Google dip to $240 in January?
+1016000: Will Google dip to $215 in January?
+1016007: Will Meta reach $880 in January?
+1016008: Will Meta reach $830 in January?
+1016009: Will Meta reach $790 in January?
+1016010: Will Meta reach $750 in January?
+1016011: Will Meta reach $720 in January?
+1016012: Will Meta reach $700 in January?
+1016013: Will Meta reach $680 in January?
+1016016: Will Meta dip to $620 in January?
+1016017: Will Meta dip to $590 in January?
+1016018: Will Meta dip to $560 in January?
+1016019: Will Meta dip to $520 in January?
+1016020: Will Meta dip to $470 in January?
+1016024: Will Tesla reach $645 in January?
+1016025: Will Tesla reach $608 in January?
+1016026: Will Tesla reach $578 in January?
+1016027: Will Tesla reach $548 in January?
+1016028: Will Tesla reach $525 in January?
+1016029: Will Tesla reach $510 in January?
+1016030: Will Tesla reach $495 in January?
+1016037: Will Tesla dip to $405 in January?
+1016039: Will Tesla dip to $375 in January?
+1016040: Will Tesla dip to $338 in January?
+1016041: Will NVIDIA reach $272 in January?
+1016042: Will NVIDIA reach $252 in January?
+1016043: Will NVIDIA reach $236 in January?
+1016044: Will NVIDIA reach $220 in January?
+1016045: Will NVIDIA reach $208 in January?
+1016046: Will NVIDIA reach $200 in January?
+1016049: Will NVIDIA dip to $176 in January?
+1016050: Will NVIDIA dip to $168 in January?
+1016051: Will NVIDIA dip to $156 in January?
+1016052: Will NVIDIA dip to $144 in January?
+1016053: Will NVIDIA dip to $128 in January?
+1016054: Will NVIDIA dip to $108 in January?
+1016055: Will Netflix reach $455 in January?
+1016056: Will Netflix reach $368 in January?
+1016057: Will Netflix reach $298 in January?
+1016058: Will Netflix reach $228 in January?
+1016059: Will Netflix reach $175 in January?
+1016060: Will Netflix reach $140 in January?
+1016061: Will Netflix reach $105 in January?
+1016062: Will Netflix dip to $70 in January?
+1016063: Will Netflix dip to $35 in January?
+1016064: Will Netflix dip to $0 in January?
+1016065: Will Palantir reach $258 in January?
+1016066: Will Palantir reach $243 in January?
+1016067: Will Palantir reach $231 in January?
+1016068: Will Palantir reach $219 in January?
+1016069: Will Palantir reach $210 in January?
+1016070: Will Palantir reach $204 in January?

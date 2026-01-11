@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1038925: Will Vitalik Buterin appear on the UpOnly podcast by December 31?
+1038926: Will Jeff Yan appear on the UpOnly podcast by December 31?
+1038927: Will Arthur Hayes appear on the UpOnly podcast by December 31?
+1038928: Will Ansem appear on the UpOnly podcast by December 31?
+1038929: Will Martin Shkreli appear on the UpOnly podcast by December 31?
+1038930: Will Su Zhu appear on the UpOnly podcast by December 31?
+1038931: Will Guy Young appear on the UpOnly podcast by December 31?
+1038932: Will Anatoly Yakovenko appear on the UpOnly podcast by December 31?
+1038933: Will Thomas Lee appear on the UpOnly podcast by December 31?
+1038934: Will Brian Armstrong appear on the UpOnly podcast by December 31?
+1038935: Will Javier Milei appear on the UpOnly podcast by December 31?
+1038936: Will Andrew Kang appear on the UpOnly podcast by December 31?
+1038937: Will thiccy appear on the UpOnly podcast by December 31?
+1038938: Will GCR appear on the UpOnly podcast by December 31?
+1038939: Will light appear on the UpOnly podcast by December 31?
+1039344: Golden Knights vs. Maple Leafs
+1039345: Lightning vs. Blackhawks
+1039346: Blues vs. Stars
+1039347: Flyers vs. Avalanche
+1039348: Capitals vs. Flames
+1039349: Ducks vs. Kraken
+1039350: Devils vs. Canucks
+1039351: Rangers vs. Sharks
+1039544: Will Kayserispor win on 2026-01-24?
+1039545: Will Kayserispor vs. Rams Başakşehir FK end in a draw?
+1039546: Will Rams Başakşehir FK win on 2026-01-24?
+1039547: Will Samsunspor win on 2026-01-24?
+1039548: Will Samsunspor vs. Kocaelispor end in a draw?
+1039549: Will Kocaelispor win on 2026-01-24?
+1039550: Will Fatih Karagümrük SK win on 2026-01-24?
+1039551: Will Fatih Karagümrük SK vs. Galatasaray SK end in a draw?
+1039552: Will Galatasaray SK win on 2026-01-24?
+1040340: Will Casa Pia AC win on 2026-01-23?
+1040341: Will Casa Pia AC vs. AVS Futebol end in a draw?
+1040342: Will AVS Futebol win on 2026-01-23?
+1040343: Will Moreirense FC win on 2026-01-24?
+1040344: Will Moreirense FC vs. CD Santa Clara end in a draw?
+1040345: Will CD Santa Clara win on 2026-01-24?
+1040346: Will FC Arouca win on 2026-01-24?
+1040347: Will FC Arouca vs. Sporting CP end in a draw?
+1040348: Will Sporting CP win on 2026-01-24?
+1040793: SA20: Joburg Super Kings vs Sunrisers Eastern Cape (Game 1) - Toss Match Double Joburg Super Kings Winner
+1040794: SA20: Joburg Super Kings vs Sunrisers Eastern Cape (Game 1) - Toss Match Double Draw
+1040795: SA20: Joburg Super Kings vs Sunrisers Eastern Cape (Game 1) - Toss Match Double Sunrisers Eastern Cape Winner
+1040796: SA20: Joburg Super Kings vs Sunrisers Eastern Cape (Game 1) - Most Sixes Joburg Super Kings Winner
+1040797: SA20: Joburg Super Kings vs Sunrisers Eastern Cape (Game 1) - Most Sixes Draw
+1040798: SA20: Joburg Super Kings vs Sunrisers Eastern Cape (Game 1) - Most Sixes Sunrisers Eastern Cape Winner
+1040944: Will Xi Jinping meet with Cheng Li-wun by June 30?
+1041280: Will Al Najmah Saudi Club win on 2026-01-16?
+1041281: Will Al Najmah Saudi Club vs. Al Fateh Saudi Club end in a draw?
+1041282: Will Al Fateh Saudi Club win on 2026-01-16?
+1041283: Will Al Khaleej Saudi Club win on 2026-01-16?
+1041284: Will Al Khaleej Saudi Club vs. Al Okhdood SC end in a draw?
+1041285: Will Al Okhdood SC win on 2026-01-16?
+1041286: Will Al Ittihad Saudi Club win on 2026-01-16?
+1041287: Will Al Ittihad Saudi Club vs. Al Ettifaq Saudi Club end in a draw?
+1041288: Will Al Ettifaq Saudi Club win on 2026-01-16?
+1041289: Will Al Fayha Saudi Club win on 2026-01-17?
+1041290: Will Al Fayha Saudi Club vs. Damac Saudi Club end in a draw?
+1041291: Will Damac Saudi Club win on 2026-01-17?
+1041292: Will Al Kholood Saudi Club win on 2026-01-17?
+1041293: Will Al Kholood Saudi Club vs. Al Ahli Saudi Club end in a draw?
+1041294: Will Al Ahli Saudi Club win on 2026-01-17?
+1041295: Will Al Nassr Saudi Club win on 2026-01-17?
+1041296: Will Al Nassr Saudi Club vs. Al Shabab Saudi Club end in a draw?
+1041297: Will Al Shabab Saudi Club win on 2026-01-17?
+1041298: Will Al Hazem SC win on 2026-01-18?
+1041299: Will Al Hazem SC vs. Al Qadisiyah Saudi Club end in a draw?
+1041300: Will Al Qadisiyah Saudi Club win on 2026-01-18?
+1041301: Will Al Riyadh Saudi Club win on 2026-01-18?
+1041302: Will Al Riyadh Saudi Club vs. Al Taawoun Saudi Club end in a draw?
+1041303: Will Al Taawoun Saudi Club win on 2026-01-18?
+1041304: Will NEOM SC win on 2026-01-18?
+1041305: Will NEOM SC vs. Al Hilal Saudi Club end in a draw?
+1041306: Will Al Hilal Saudi Club win on 2026-01-18?
+1041307: Will Al Shabab Saudi Club win on 2026-01-20?
+1041308: Will Al Shabab Saudi Club vs. Al Najmah Saudi Club end in a draw?
+1041309: Will Al Najmah Saudi Club win on 2026-01-20?
+1041310: Will Al Fateh Saudi Club win on 2026-01-20?
+1041311: Will Al Fateh Saudi Club vs. Al Kholood Saudi Club end in a draw?
+1041312: Will Al Kholood Saudi Club win on 2026-01-20?
+1041313: Will Al Ahli Saudi Club win on 2026-01-20?
+1041314: Will Al Ahli Saudi Club vs. Al Khaleej Saudi Club end in a draw?
+1041315: Will Al Khaleej Saudi Club win on 2026-01-20?
+1041316: Will Al Okhdood SC win on 2026-01-21?
+1041317: Will Al Okhdood SC vs. Al Riyadh Saudi Club end in a draw?
+1041318: Will Al Riyadh Saudi Club win on 2026-01-21?
+1041319: Will Damac Saudi Club win on 2026-01-21?
+1041320: Will Damac Saudi Club vs. Al Nassr Saudi Club end in a draw?
+1041321: Will Al Nassr Saudi Club win on 2026-01-21?
+1041322: Will Al Ettifaq Saudi Club win on 2026-01-21?
+1041323: Will Al Ettifaq Saudi Club vs. NEOM SC end in a draw?
+1041324: Will NEOM SC win on 2026-01-21?
+1041325: Will Al Taawoun Saudi Club win on 2026-01-22?
+1041326: Will Al Taawoun Saudi Club vs. Al Hazem SC end in a draw?
+1041327: Will Al Hazem SC win on 2026-01-22?
+1041328: Will Al Qadisiyah Saudi Club win on 2026-01-22?
+1041329: Will Al Qadisiyah Saudi Club vs. Al Ittihad Saudi Club end in a draw?
+1041330: Will Al Ittihad Saudi Club win on 2026-01-22?
+1041331: Will Al Hilal Saudi Club win on 2026-01-22?
+1041332: Will Al Hilal Saudi Club vs. Al Fayha Saudi Club end in a draw?
+1041333: Will Al Fayha Saudi Club win on 2026-01-22?
+1041726: Will Auckland FC win on 2026-01-23?
+1041727: Will Auckland FC vs. Central Coast Mariners FC end in a draw?
+1041728: Will Central Coast Mariners FC win on 2026-01-23?
+1041729: Will Brisbane Roar FC win on 2026-01-24?
+1041730: Will Brisbane Roar FC vs. Adelaide United FC end in a draw?
+1041731: Will Adelaide United FC win on 2026-01-24?
+1041732: Will Macarthur FC win on 2026-01-24?
+1041733: Will Macarthur FC vs. Melbourne City FC end in a draw?
+1041734: Will Melbourne City FC win on 2026-01-24?
+1042220: Will anyone be charged over Daycare fraud in Minnesota by January 31?
+1044533: Will Middlesbrough FC win on 2026-01-24?
+1044535: Will Middlesbrough FC vs. Preston North End FC end in a draw?
+1044537: Will Preston North End FC win on 2026-01-24?
+1044540: Will Millwall FC win on 2026-01-24?
+1044543: Will Millwall FC vs. Charlton Athletic FC end in a draw?
+1044547: Will Charlton Athletic FC win on 2026-01-24?
+1044549: Will Leicester City FC win on 2026-01-24?
+1044550: Will FC St. Pauli 1910 win on 2026-01-10?
+1044551: Will Leicester City FC vs. Oxford United FC end in a draw?
+1044552: Will FC St. Pauli 1910 vs. RB Leipzig end in a draw?
+1044554: Will Oxford United FC win on 2026-01-24?
+1044555: Will RB Leipzig win on 2026-01-10?
+1044561: Will Sheffield United FC win on 2026-01-24?
+1044562: Will Sheffield United FC vs. Ipswich Town FC end in a draw?
+1044563: Will Ipswich Town FC win on 2026-01-24?
+1044567: Will SV Werder Bremen win on 2026-01-10?
+1044568: Will SV Werder Bremen vs. TSG 1899 Hoffenheim end in a draw?
+1044569: Will TSG 1899 Hoffenheim win on 2026-01-10?
+1044570: Will Bristol City FC win on 2026-01-24?
+1044571: Will Bristol City FC vs. Sheffield Wednesday FC end in a draw?
+1044572: Will Sheffield Wednesday FC win on 2026-01-24?
+1044576: Will Queens Park Rangers FC win on 2026-01-24?
+1044577: Will Queens Park Rangers FC vs. Wrexham AFC end in a draw?
+1044578: Will Wrexham AFC win on 2026-01-24?
+1044579: Will Blackburn Rovers FC win on 2026-01-24?
+1044580: Will Blackburn Rovers FC vs. Watford FC end in a draw?
+1044581: Will Watford FC win on 2026-01-24?
+1044582: Will Hull City AFC win on 2026-01-24?
+1044583: Will Hull City AFC vs. Swansea City AFC end in a draw?
+1044584: Will Swansea City AFC win on 2026-01-24?
+1044585: Will Birmingham City FC win on 2026-01-24?
+1044586: Will Birmingham City FC vs. Stoke City FC end in a draw?
+1044587: Will Stoke City FC win on 2026-01-24?
+1044883: Spread: TSG 1899 Hoffenheim (-1.5)
+1044884: SV Werder Bremen vs. TSG 1899 Hoffenheim: O/U 1.5
+1044885: SV Werder Bremen vs. TSG 1899 Hoffenheim: O/U 2.5
+1044886: SV Werder Bremen vs. TSG 1899 Hoffenheim: O/U 3.5
+1044887: SV Werder Bremen vs. TSG 1899 Hoffenheim: O/U 4.5
+1044888: SV Werder Bremen vs. TSG 1899 Hoffenheim: Both Teams to Score
+1044895: Spread: RB Leipzig (-1.5)
+1044896: FC St. Pauli 1910 vs. RB Leipzig: O/U 1.5
+1044897: FC St. Pauli 1910 vs. RB Leipzig: O/U 2.5
+1044898: FC St. Pauli 1910 vs. RB Leipzig: O/U 3.5
+1044899: FC St. Pauli 1910 vs. RB Leipzig: O/U 4.5
+1044900: FC St. Pauli 1910 vs. RB Leipzig: Both Teams to Score
+1046969: Tim Walz charged by December 31, 2026?
+1046978: Will Tim Walz resign by January 31?
+1046979: Will Tim Walz resign by June 30?
+1046984: Will Ilhan Omar's husband be charged with fraud?
+1046985: Will Ilhan Omar be charged with fraud?
+1047058: Lamar Cardinals vs. McNeese State Cowboys
+1047128: Denver Pioneers vs. St. Thomas (MN) Tommies
+1047161: Michigan State Spartans vs. Maryland Eastern Shore Hawks
+1047225: South Carolina Central Christian Gladiators vs. Western Carolina Catamounts (W)
+1047366: Will Ilhan Omar resign by March 31?
+1047423: Will NEC win on 2026-01-24?
+1047424: Will NEC vs. PEC Zwolle end in a draw?
+1047425: Will PEC Zwolle win on 2026-01-24?
+1047426: Will PSV win on 2026-01-24?
+1047427: Will PSV vs. NAC Breda end in a draw?
+1047428: Will NAC Breda win on 2026-01-24?
+1047429: Will FC Twente '65 win on 2026-01-24?
+1047430: Will FC Twente '65 vs. SBV Excelsior end in a draw?
+1047431: Will SBV Excelsior win on 2026-01-24?
+1047432: Will Telstar 1963 win on 2026-01-25?
+1047433: Will Telstar 1963 vs. AZ end in a draw?
+1047434: Will AZ win on 2026-01-25?
+1047435: Will FC Groningen win on 2026-01-25?
+1047436: Will FC Groningen vs. Fortuna Sittard end in a draw?
+1047437: Will Fortuna Sittard win on 2026-01-25?
+1047446: Will any Minnesota politician be charged with fraud by March 31?
+1047708: Sabres vs. Islanders
+1047709: Utah vs. Predators
+1047710: Lightning vs. Blue Jackets
+1047711: Red Wings vs. Jets
+1047712: Hurricanes vs. Senators
+1047713: Canadiens vs. Bruins
+1047714: Kings vs. Blues
+1047715: Panthers vs. Wild
+1047716: Capitals vs. Oilers
+1047867: Will Gaziantep FK win on 2026-01-25?
+1047868: Will Gaziantep FK vs. Konyaspor end in a draw?
+1047869: Will Konyaspor win on 2026-01-25?
+1047870: Will Çaykur Rizespor win on 2026-01-25?
+1047871: Will Çaykur Rizespor vs. Alanyaspor end in a draw?
+1047872: Will Alanyaspor win on 2026-01-25?
+1047873: Will Antalyaspor win on 2026-01-25?
+1047874: Will Antalyaspor vs. Gençlerbirliği SK end in a draw?
+1047875: Will Gençlerbirliği SK win on 2026-01-25?
+1047876: Will Fenerbahçe SK win on 2026-01-25?
+1047877: Will Fenerbahçe SK vs. Göztepe SK end in a draw?
+1047878: Will Göztepe SK win on 2026-01-25?
+1048118: Will another country recognize Somaliland by March 31?
+1048198: Taylor Swift pregnant by March 31?
+1048199: Taylor Swift pregnant before 2027?
+1048246: EU/NATO country announces peacekeeping force in Ukraine by June 30?
+1048397: U.S. agrees to give Ukraine security guarantee by June 30? 
+1048919: Will Estoril Praia win on 2026-01-24?
+1048920: Will Estoril Praia vs. Vitória SC end in a draw?
+1048921: Will Vitória SC win on 2026-01-24?
+1048922: Will CD Nacional win on 2026-01-25?
+1048923: Will CD Nacional vs. Rio Ave FC end in a draw?
+1048924: Will Rio Ave FC win on 2026-01-25?
+1048925: Will FC Famalicão win on 2026-01-25?
+1048926: Will FC Famalicão vs. CD Tondela end in a draw?
+1048927: Will CD Tondela win on 2026-01-25?
+1048928: Will Sport Lisboa e Benfica win on 2026-01-25?
+1048929: Will Sport Lisboa e Benfica vs. CF Estrela da Amadora end in a draw?
+1048930: Will CF Estrela da Amadora win on 2026-01-25?
+1050793: Will Al Khaleej Saudi Club win on 2026-01-24?
+1050794: Will Al Khaleej Saudi Club vs. Al Shabab Saudi Club end in a draw?
+1050795: Will Al Shabab Saudi Club win on 2026-01-24?
+1050796: Will Al Kholood Saudi Club win on 2026-01-24?
+1050797: Will Al Kholood Saudi Club vs. Al Ettifaq Saudi Club end in a draw?
+1050798: Will Al Ettifaq Saudi Club win on 2026-01-24?
+1050799: Will NEOM SC win on 2026-01-24?
+1050800: Will NEOM SC vs. Al Ahli Saudi Club end in a draw?
+1050801: Will Al Ahli Saudi Club win on 2026-01-24?
+1050802: Will Al Najmah Saudi Club win on 2026-01-25?
+1050803: Will Al Najmah Saudi Club vs. Al Qadisiyah Saudi Club end in a draw?
+1050804: Will Al Qadisiyah Saudi Club win on 2026-01-25?
+1050805: Will Al Fayha Saudi Club win on 2026-01-25?
+1050806: Will Al Fayha Saudi Club vs. Al Fateh Saudi Club end in a draw?
+1050807: Will Al Fateh Saudi Club win on 2026-01-25?
+1050810: Will Al Riyadh Saudi Club win on 2026-01-25?
+1050811: Will Al Riyadh Saudi Club vs. Al Hilal Saudi Club end in a draw?
+1050812: Will Al Hilal Saudi Club win on 2026-01-25?
+1051386: Will Western Sydney Wanderers FC win on 2026-01-25?
+1051387: Will Western Sydney Wanderers FC vs. Perth Glory FC end in a draw?
+1051388: Will Perth Glory FC win on 2026-01-25?
+1052037: European country agrees to give Ukraine security guarantee by June 30? 
+1054449: Will Borussia Mönchengladbach win on 2026-01-11?
+1054451: Will Borussia Mönchengladbach vs. FC Augsburg end in a draw?
+1054452: Will FC Augsburg win on 2026-01-11?
+1054454: Will US Lecce win on 2026-01-11?
+1054455: Will US Lecce vs. Parma Calcio 1913 end in a draw?
+1054456: Will FC Bayern München win on 2026-01-11?
+1054457: Will Parma Calcio 1913 win on 2026-01-11?
+1054458: Will FC Bayern München vs. VfL Wolfsburg end in a draw?
+1054459: Will VfL Wolfsburg win on 2026-01-11?
+1054460: Will Portsmouth FC win on 2026-01-25?
+1054462: Will Portsmouth FC vs. Southampton FC end in a draw?
+1054463: Will Southampton FC win on 2026-01-25?
+1054477: Will ACF Fiorentina win on 2026-01-11?
+1054479: Will ACF Fiorentina vs. AC Milan end in a draw?
+1054480: Will AC Milan win on 2026-01-11?
+1054481: Will Hellas Verona FC win on 2026-01-11?
+1054482: Will Hellas Verona FC vs. SS Lazio end in a draw?
+1054483: Will SS Lazio win on 2026-01-11?
+1054498: Will FC Internazionale Milano win on 2026-01-11?
+1054499: Will FC Internazionale Milano vs. SSC Napoli end in a draw?
+1054500: Will SSC Napoli win on 2026-01-11?
+1054861: Spread: FC Bayern München (-2.5)
+1054862: FC Bayern München vs. VfL Wolfsburg: O/U 1.5
+1054863: FC Bayern München vs. VfL Wolfsburg: O/U 2.5
+1054864: FC Bayern München vs. VfL Wolfsburg: O/U 3.5
+1054865: FC Bayern München vs. VfL Wolfsburg: O/U 4.5
+1054866: FC Bayern München vs. VfL Wolfsburg: Both Teams to Score
+1054868: Spread: Borussia Mönchengladbach (-1.5)
+1054869: Borussia Mönchengladbach vs. FC Augsburg: O/U 1.5
+1054870: Borussia Mönchengladbach vs. FC Augsburg: O/U 2.5
+1054871: Borussia Mönchengladbach vs. FC Augsburg: O/U 3.5
+1054872: Borussia Mönchengladbach vs. FC Augsburg: O/U 4.5
+1054873: Borussia Mönchengladbach vs. FC Augsburg: Both Teams to Score
+1055246: Will CD Leganés win on 2026-01-11?
+1055247: Will CD Leganés vs. Real Valladolid CF end in a draw?
+1055248: Will Rayo Vallecano de Madrid win on 2026-01-11?
+1055249: Will Real Valladolid CF win on 2026-01-11?
+1055250: Will Rayo Vallecano de Madrid vs. RCD Mallorca end in a draw?
+1055251: Will RCD Mallorca win on 2026-01-11?
+1055252: Spread: Sparta Rotterdam (-1.5)
+1055253: Sparta Rotterdam vs. Heracles Almelo: O/U 1.5
+1055254: Sparta Rotterdam vs. Heracles Almelo: O/U 2.5
+1055255: Sparta Rotterdam vs. Heracles Almelo: O/U 3.5
+1055256: Sparta Rotterdam vs. Heracles Almelo: O/U 4.5
+1055257: Sparta Rotterdam vs. Heracles Almelo: Both Teams to Score
+1055258: Will Granada CF win on 2026-01-11?
+1055259: Will Granada CF vs. CD Castellón end in a draw?
+1055260: Will CD Castellón win on 2026-01-11?
+1055262: Will Levante UD win on 2026-01-11?
+1055263: Will Levante UD vs. RCD Espanyol de Barcelona end in a draw?
+1055264: Will RCD Espanyol de Barcelona win on 2026-01-11?
+1055265: Spread: Go Ahead Eagles (-1.5)
+1055266: Go Ahead Eagles vs. Fortuna Sittard: O/U 1.5
+1055267: Go Ahead Eagles vs. Fortuna Sittard: O/U 2.5
+1055268: Go Ahead Eagles vs. Fortuna Sittard: O/U 3.5
+1055269: Go Ahead Eagles vs. Fortuna Sittard: O/U 4.5
+1055270: Go Ahead Eagles vs. Fortuna Sittard: Both Teams to Score
+1055271: Will Málaga CF win on 2026-01-11?
+1055272: Will Málaga CF vs. AD Ceuta FC end in a draw?
+1055274: Will AD Ceuta FC win on 2026-01-11?
+1055275: Spread: AFC Ajax (-1.5)
+1055276: Telstar 1963 vs. AFC Ajax: O/U 1.5
+1055277: Telstar 1963 vs. AFC Ajax: O/U 2.5
+1055278: Telstar 1963 vs. AFC Ajax: O/U 3.5
+1055279: Telstar 1963 vs. AFC Ajax: O/U 4.5
+1055280: Telstar 1963 vs. AFC Ajax: Both Teams to Score
+1055281: Spread: Feyenoord Rotterdam (-1.5)
+1055282: SC Heerenveen vs. Feyenoord Rotterdam: O/U 1.5
+1055283: SC Heerenveen vs. Feyenoord Rotterdam: O/U 2.5
+1055284: SC Heerenveen vs. Feyenoord Rotterdam: O/U 3.5
+1055285: SC Heerenveen vs. Feyenoord Rotterdam: O/U 4.5
+1055286: SC Heerenveen vs. Feyenoord Rotterdam: Both Teams to Score
+1055835: Will Mantova 1911 win on 2026-01-11?
+1055836: Will Mantova 1911 vs. Palermo FC end in a draw?
+1055837: Will Palermo FC win on 2026-01-11?
+1055839: Will Calcio Padova win on 2026-01-11?
+1055840: Will Calcio Padova vs. Modena FC 2018 end in a draw?
+1055841: Will Modena FC 2018 win on 2026-01-11?
+1056107: Will Dundee FC win on 2026-01-11?
+1056108: Will Dundee FC vs. Heart of Midlothian FC end in a draw?
+1056109: Will Heart of Midlothian FC win on 2026-01-11?
+1056111: Will Aberdeen FC win on 2026-01-11?
+1056112: Will Aberdeen FC vs. Rangers FC end in a draw?
+1056113: Will Rangers FC win on 2026-01-11?
+1057348: Jeffrey Epstein foul play confirmed by March 31, 2026?
+1057349: Jeffrey Epstein foul play confirmed by December 31, 2026?
+1057401: Thailand strikes Cambodia by January 31, 2026?
+1057402: Thailand strikes Cambodia by June 30, 2026?
+1057642: Will Grok 4.20 be released on January 11, 2026?
+1057643: Will Grok 4.20 be released on January 12, 2026?
+1057644: Will Grok 4.20 be released on January 13, 2026?
+1057645: Will Grok 4.20 be released on January 14, 2026?
+1057646: Will Grok 4.20 be released on January 15, 2026?
+1057647: Will Grok 4.20 be released on January 16, 2026?
+1057648: Will Grok 4.20 be released on January 17, 2026?
+1057649: Will Grok 4.20 be released on January 18, 2026?
+1057650: Will Grok 4.20 be released on January 19, 2026?
+1057651: Will Grok 4.20 be released on January 20, 2026?
+1057652: Will Grok 4.20 be released on January 21, 2026?
+1057653: Will Grok 4.20 be released on January 22, 2026?
+1057654: Will Grok 4.20 be released on January 23, 2026?
+1057655: Will Grok 4.20 be released on January 24, 2026?
+1057656: Will Grok 4.20 be released on January 25, 2026?
+1057657: Will Grok 4.20 be released on January 26, 2026?
+1057658: Will Grok 4.20 be released on January 27, 2026?
+1057659: Will Grok 4.20 be released on January 28, 2026?
+1057660: Will Grok 4.20 be released on January 29, 2026?
+1057661: Will Grok 4.20 be released on January 30, 2026?
+1057662: Will Grok 4.20 be released on January 31, 2026?
+1057663: Will Grok 4.20 not be released by January 31, 2026?
+1057731: Middle Tennessee Blue Raiders vs. Jacksonville State Gamecocks (W)
+1057734: Liberty Flames vs. UTEP Miners (W)
+1057746: South Carolina Gamecocks vs. Florida Gators (W)
+1057753: Ole Miss Rebels vs. Texas Longhorns (W)
+1057761: California Golden Bears vs. North Carolina State Wolfpack (W)
+1057763: Stanford Cardinal vs. North Carolina Tar Heels (W)
+1057767: Bradley Braves vs. Murray State Racers (W)
+1057769: Indiana State Sycamores vs. UIC Flames (W)
+1057771: Illinois State Redbirds vs. Belmont Bruins (W)
+1057782: Alabama A&M Bulldogs vs. Arkansas-Pine Bluff Golden Lions
+1057784: West Virginia Mountaineers vs. Kansas State Wildcats (W)
+1057786: Kansas Jayhawks vs. UCF Knights (W)
+1057802: Fairleigh Dickinson Knights vs. St. Francis (PA) Red Flash (W)
+1057812: Hofstra Pride vs. UNCW Seahawks (W)
+1057815: Stony Brook Seawolves vs. William & Mary Tribe (W)
+1057817: Xavier Musketeers vs. Georgetown Hoyas (W)
+1057820: Campbell Fighting Camels vs. Drexel Dragons (W)
+1057821: Virginia Cavaliers vs. Florida State Seminoles (W)
+1057823: Wagner Seahawks vs. Stonehill Skyhawks (W)
+1057826: Cleveland State Vikings vs. Milwaukee Panthers (W)
+1057841: Will Eminem release an album in 2026?
+1057877: Will global temperature increase by less than 1.00ºC in January 2026?
+1057878: Will global temperature increase by between 1.00ºC and 1.04ºC in January 2026?
+1057879: Will global temperature increase by between 1.05ºC and 1.09ºC in January 2026?
+1057880: Will global temperature increase by between 1.10ºC and 1.14ºC in January 2026?
+1057881: Will global temperature increase by between 1.15ºC and 1.19ºC in January 2026?
+1057882: Will global temperature increase by more than 1.19ºC in January 2026?
+1057883: Will Bitcoin reach $250,000 by December 31, 2026?
+1057916: Will Bitcoin dip to $15,000 by December 31, 2026?
+1057925: Will January 2026 be the 1st hottest on record?
+1057926: Will January 2026 be the 2nd hottest on record?
+1057927: Will January 2026 be the 3rd hottest on record?
+1057928: Will January 2026 be the 4th or lower hottest on record?
+1058066: Will fewer than 30 tornadoes occur in the United States in January 2026?
+1058067: Will 30 to 59 tornadoes occur in the United States in January 2026?
+1058068: Will 60 to 89 tornadoes occur in the United States in January 2026?
+1058069: Will 90 to 119 tornadoes occur in the United States in January 2026?
+1058070: Will 120 or more tornadoes occur in the United States in January 2026?
+1058134: Will FC Utrecht win on 2026-01-25?
+1058135: Will FC Utrecht vs. Sparta Rotterdam end in a draw?
+1058136: Will Sparta Rotterdam win on 2026-01-25?
+1058137: Will Feyenoord Rotterdam win on 2026-01-25?
+1058138: Will Feyenoord Rotterdam vs. Heracles Almelo end in a draw?
+1058139: Will Heracles Almelo win on 2026-01-25?
+1058141: Will NYC have less than 3 inches of precipitation in January?
+1058142: Will NYC have between 3 and 4 inches of precipitation in January?
+1058143: Will NYC have between 4 and 5 inches of precipitation in January?
+1058144: Will NYC have between 5 and 6 inches of precipitation in January?
+1058145: Will NYC have between 6 and 7 inches of precipitation in January?
+1058146: Will NYC have more than 7 inches of precipitation in January?
+1058147: Ukraine coup attempt by June 30?
+1058172: Ryan Wedding arrested by June 30?
+1058177: Will anyone be charged over Daycare fraud in Minnesota by June 30?
+1058182: Will anyone be charged over Daycare fraud in Minnesota by December 31?
+1058191: Major volcano eruption (VEI ≥6) in 2026?
+1058192: USDC depeg by December 31?
+1058193: USDE depeg by December 31?
+1058194: USDS depeg by December 31?
+1058195: DAI depeg by December 31?
+1058196: USD1 depeg by December 31?
+1058197: PYUSD depeg by December 31?
+1058198: USDTb depeg by December 31?
+1058199: USD0 depeg by December 31?
+1058200: GHO depeg by December 31?
+1058201: USR depeg by December 31?
+1058496: Avalanche vs. Maple Leafs
+1058497: Devils vs. Kraken
+1058498: Golden Knights vs. Senators
+1058499: Penguins vs. Canucks
+1058500: Panthers vs. Blackhawks
+1058501: Ducks vs. Flames
+1058547: Will ONIC win the M7 World Championship?
+1058548: Will Alter Ego win the M7 World Championship?
+1058549: Will Team Liquid PH win the M7 World Championship?
+1058550: Will Aurora Gaming PH win the M7 World Championship?
+1058551: Will SRG.OG win the M7 World Championship?
+1058552: Will CG Esports win the M7 World Championship?
+1058553: Will Evil win the M7 World Championship?
+1058554: Will CFU Gaming win the M7 World Championship?
+1058555: Will Team Falcons win the M7 World Championship?
+1058556: Will Yangon Galacticos win the M7 World Championship?
+1058557: Will Team Spirit win the M7 World Championship?
+1058558: Will Aurora Gaming win the M7 World Championship?
+1058559: Will Black Sentence Esports win the M7 World Championship?
+1058560: Will DianFengYaoGuai win the M7 World Championship?
+1058563: Will Boostgate Esports win the M7 World Championship?
+1058567: Will Team Zone win the M7 World Championship?
+1058702: Will Eyüpspor win on 2026-01-26?
+1058703: Will Eyüpspor vs. Beşiktaş JK end in a draw?
+1058704: Will Beşiktaş JK win on 2026-01-26?
+1058743: Will Fnatic win the LEC 2026 Versus?
+1058744: Will G2 Esports win the LEC 2026 Versus?
+1058745: Will GIANTX win the LEC 2026 Versus?
+1058746: Will Karmine Corp win the LEC 2026 Versus?
+1058747: Will Movistar KOI win the LEC 2026 Versus?
+1058748: Will Natus Vincere win the LEC 2026 Versus?
+1058749: Will Shifters win the LEC 2026 Versus?
+1058750: Will SK Gaming win the LEC 2026 Versus?
+1058751: Will Team Heretics win the LEC 2026 Versus?
+1058752: Will Team Vitality win the LEC 2026 Versus?
+1058753: Will Los Ratones win the LEC 2026 Versus?
+1058754: Will Karmine Corp Blue win the LEC 2026 Versus?
+1058988: Will any Category 4 hurricane make landfall in the US in before 2027?
+1058997: Natural Disaster in 2026?
+1059019: Megaquake by January 31?
+1059020: Megaquake by March 31?
+1059021: Megaquake by June 30?
+1059066: Will a team from LCK (South Korea) win LoL Worlds 2026?
+1059067: Will a team from LPL (China) win LoL Worlds 2026?
+1059068: Will a team from LEC (Europe / EMEA) win LoL Worlds 2026?
+1059069: Will a team from LCP (Asia-Pacific) win LoL Worlds 2026?
+1059070: Will a team from LCS (North America) win LoL Worlds 2026?
+1059071: Will a team from CBLOL (Brazil) win LoL Worlds 2026?
+1059336: Ukraine peace referendum scheduled by March 31?
+1059337: Ukraine peace referendum scheduled by June 30?
+1059369: Will SC Braga win on 2026-01-25?
+1059370: Will SC Braga vs. FC Alverca end in a draw?
+1059371: Will FC Alverca win on 2026-01-25?
+1059380: Will the Logan Paul 1st Edition Charizard sale price be over 500k?
+1059381: Will the Logan Paul 1st Edition Charizard sale price be over 700k?
+1059382: Will the Logan Paul 1st Edition Charizard sale price be over 1m?
+1059407: Will Alexandre Pantoja become UFC champion in 2026?
+1059408: Will Manel Kape become UFC champion in 2026?
+1059409: Will Merab Dvalishvili become UFC champion in 2026?
+1059410: Will Umar Nurmagomedov become UFC champion in 2026?
+1059411: Will Sean O'Malley become UFC champion in 2026?
+1059412: Will Cory Sandhagen become UFC champion in 2026?
+1059413: Will Deiveson Figueiredo become UFC champion in 2026?
+1059414: Will Yair Rodriguez become UFC champion in 2026?
+1059415: Will Diego Lopes become UFC champion in 2026?
+1059416: Will Aljamain Sterling become UFC champion in 2026?
+1059417: Will Arman Tsarukyan become UFC champion in 2026?
+1059418: Will Charles Oliveira become UFC champion in 2026?
+1059419: Will Max Holloway become UFC champion in 2026?
+1059420: Will Paddy Pimblett become UFC champion in 2026?
+1059421: Will Jack Della Maddalena become UFC champion in 2026?
+1059422: Will Shavkat Rakhmonov become UFC champion in 2026?
+1059423: Will Ian Machado Garry become UFC champion in 2026?
+1059424: Will Belal Muhammad become UFC champion in 2026?
+1059425: Will Kamaru Usman become UFC champion in 2026?
+1059426: Will Leon Edwards become UFC champion in 2026?
+1059427: Will Dricus Du Plessis become UFC champion in 2026?
+1059428: Will Nassourdine Imavov become UFC champion in 2026?
+1059429: Will Sean Strickland become UFC champion in 2026?
+1059430: Will Magomed Ankalaev become UFC champion in 2026?
+1059431: Will Jiří Procházka become UFC champion in 2026?
+1059432: Will Ciryl Gane become UFC champion in 2026?

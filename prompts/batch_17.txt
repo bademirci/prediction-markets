@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+954195: Will Pure Storage (PSTG) be added to the S&P 500 by March 31, 2026?
+954196: Will SoFi Technologies (SOFI) be added to the S&P 500 by March 31, 2026?
+954197: Will Ciena (CIEN) be added to the S&P 500 by March 31, 2026?
+954198: Will Strategy (MicroStrategy) (MSTR) be added to the S&P 500 by March 31, 2026?
+954199: Will Alnylam Pharmaceuticals (ALNY) be added to the S&P 500 by March 31, 2026?
+954200: Will Affirm Holdings (AFRM) be added to the S&P 500 by March 31, 2026?
+954345: Trump's travel ban removed by January 31?
+954518: Will the Slovenian Democratic Party (SDS) win the most seats in the 2026 Slovenian parliamentary election?
+954519: Will the Freedom Movement (GS) win the most seats in the 2026 Slovenian parliamentary election?
+954520: Will the Social Democrats (SD) win the most seats in the 2026 Slovenian parliamentary election?
+954521: Will the Democrats (D) win the most seats in the 2026 Slovenian parliamentary election?
+954522: Will New Slovenia – Christian Democrats (NSi) win the most seats in the 2026 Slovenian parliamentary election?
+954523: Will The Left (Levica) win the most seats in the 2026 Slovenian parliamentary election?
+954524: Will Resni.ca (Res) win the most seats in the 2026 Slovenian parliamentary election?
+954525: Will Mi, socialisti! (Mi!) win the most seats in the 2026 Slovenian parliamentary election?
+954526: Will Vesna – Green Party (Vesna) win the most seats in the 2026 Slovenian parliamentary election?
+954527: Will the Slovenian National Party (SNS) win the most seats in the 2026 Slovenian parliamentary election?
+954528: Will the Pirate Party of Slovenia (PPS) win the most seats in the 2026 Slovenian parliamentary election?
+954529: Will the Slovenian People’s Party (SLS) win the most seats in the 2026 Slovenian parliamentary election?
+954530: Will the Party of Generations (SG) win the most seats in the 2026 Slovenian parliamentary election?
+954531: Will Our Country (ND) win the most seats in the 2026 Slovenian parliamentary election?
+954532: Will Prerod – Party of Vladimir Prebilič (PVP) win the most seats in the 2026 Slovenian parliamentary election?
+954704: Will the U.K.'s September–November 2025 unemployment rate be ≤4.9%?
+954705: Will the U.K.'s September–November 2025 unemployment rate be 5.0%?
+954706: Will the U.K.'s September–November 2025 unemployment rate be 5.1%?
+954707: Will the U.K.'s September–November 2025 unemployment rate be 5.2%?
+954708: Will the U.K.'s September–November 2025 unemployment rate be 5.3%?
+954709: Will the U.K.'s September–November 2025 unemployment rate be ≥5.4%?
+954966: Will Nicki Minaj advance from the 2026 California Governor primary election?
+955052: Avatar 4 greenlit by March 31?
+955410: Flames vs. Blue Jackets
+955411: Canadiens vs. Capitals
+955412: Lightning vs. Penguins
+955413: Canucks vs. Senators
+955414: Red Wings vs. Bruins
+955415: Islanders vs. Jets
+955416: Oilers vs. Predators
+955417: Hurricanes vs. Blues
+955418: Maple Leafs vs. Utah
+955419: Stars vs. Ducks
+955424: Trump's new travel ban on Palestinians removed by January 31?
+955425: Will Luigi Mangione smile during next court appearance?
+955534: Will the Doomsday Clock move by ten seconds or more?
+955800: XRP all time high by March 31, 2026?
+955801: XRP all time high by June 30, 2026?
+955802: XRP all time high by September 30, 2026?
+955803: XRP all time high by December 31, 2026?
+955804: Will Club Necaxa win on 2026-01-13?
+955805: Will Club Necaxa vs. CF Monterrey end in a draw?
+955806: Will CF Monterrey win on 2026-01-13?
+955807: Will CF Pachuca win on 2026-01-13?
+955808: Will CF Pachuca vs. Club León FC end in a draw?
+955809: Will Club León FC win on 2026-01-13?
+955810: Will Club Puebla win on 2026-01-13?
+955811: Will Club Puebla vs. Mazatlán FC end in a draw?
+955812: Will Mazatlán FC win on 2026-01-13?
+955813: Will FC Juárez win on 2026-01-13?
+955814: Will FC Juárez vs. CD Guadalajara end in a draw?
+955815: Will CD Guadalajara win on 2026-01-13?
+955816: Will CF Cruz Azul win on 2026-01-13?
+955817: Will CF Cruz Azul vs. Atlas FC end in a draw?
+955818: Will Atlas FC win on 2026-01-13?
+955824: Nuclear weapon detonation by March 31?
+955825: Nuclear weapon detonation by December 31?
+955889: Enhanced ACA premium tax credits extended by January 31?
+956121: Will Morocco win the CAF Africa Cup of Nations Morocco 2025?
+956122: Will Egypt win the CAF Africa Cup of Nations Morocco 2025?
+956124: Will Senegal win the CAF Africa Cup of Nations Morocco 2025?
+956125: Will Nigeria win the CAF Africa Cup of Nations Morocco 2025?
+956317: Will Trump create a tariff dividend by June 30?
+956344: Will India win the 2026 ICC Men’s T20 World Cup?
+956345: Will Australia win the 2026 ICC Men’s T20 World Cup?
+956346: Will England win the 2026 ICC Men’s T20 World Cup?
+956347: Will South Africa win the 2026 ICC Men’s T20 World Cup?
+956348: Will Pakistan win the 2026 ICC Men’s T20 World Cup?
+956349: Will New Zealand win the 2026 ICC Men’s T20 World Cup?
+956350: Will West Indies win the 2026 ICC Men’s T20 World Cup?
+956351: Will Afghanistan win the 2026 ICC Men’s T20 World Cup?
+956352: Will Sri Lanka win the 2026 ICC Men’s T20 World Cup?
+956353: Will Bangladesh win the 2026 ICC Men’s T20 World Cup?
+956354: Will the United States win the 2026 ICC Men’s T20 World Cup?
+956355: Will Ireland win the 2026 ICC Men’s T20 World Cup?
+956356: Will Zimbabwe win the 2026 ICC Men’s T20 World Cup?
+956357: Will the Netherlands win the 2026 ICC Men’s T20 World Cup?
+956358: Will the United Arab Emirates win the 2026 ICC Men’s T20 World Cup?
+956359: Will Oman win the 2026 ICC Men’s T20 World Cup?
+956360: Will Nepal win the 2026 ICC Men’s T20 World Cup?
+956361: Will Namibia win the 2026 ICC Men’s T20 World Cup?
+956362: Will Canada win the 2026 ICC Men’s T20 World Cup?
+956363: Will Italy win the 2026 ICC Men’s T20 World Cup?
+956370: Xi Jinping out by June 30?
+956444: Ukraine signs peace deal with Russia by January 31?
+956449: Ukraine signs peace deal with Russia by June 30?
+956450: Will the U.S. invade Venezuela by January 31, 2026?
+956590: Will China invade Taiwan by June 30, 2026?
+956626: Zelenskyy out as Ukraine president by June 30, 2026?
+956630: Luigi Mangione tried before 2027?
+956635: Will Russia capture all of Myrnohrad by January 15?
+956869: Will Russia capture all of Pokrovsk by January 31?
+956942: Will Russia capture Kostyantynivka by February 28?
+956980: Ukraine agrees not to join NATO by June 30? 
+956981: Ukraine agrees not to join NATO by March 31? 
+957019: US-Iran nuclear deal by June 30?
+957287: Will India finish second in the 2026 ICC Men’s T20 World Cup?
+957288: Will Australia finish second in the 2026 ICC Men’s T20 World Cup?
+957289: Will England finish second in the 2026 ICC Men’s T20 World Cup?
+957290: Will South Africa finish second in the 2026 ICC Men’s T20 World Cup?
+957291: Will Pakistan finish second in the 2026 ICC Men’s T20 World Cup?
+957292: Will New Zealand finish second in the 2026 ICC Men’s T20 World Cup?
+957293: Will West Indies finish second in the 2026 ICC Men’s T20 World Cup?
+957294: Will Afghanistan finish second in the 2026 ICC Men’s T20 World Cup?
+957295: Will Sri Lanka finish second in the 2026 ICC Men’s T20 World Cup?
+957296: Will Bangladesh finish second in the 2026 ICC Men’s T20 World Cup?
+957297: Will the United States finish second in the 2026 ICC Men’s T20 World Cup?
+957298: Will Ireland finish second in the 2026 ICC Men’s T20 World Cup?
+957299: Will Zimbabwe finish second in the 2026 ICC Men’s T20 World Cup?
+957300: Will the Netherlands finish second in the 2026 ICC Men’s T20 World Cup?
+957301: Will the United Arab Emirates finish second in the 2026 ICC Men’s T20 World Cup?
+957302: Will Oman finish second in the 2026 ICC Men’s T20 World Cup?
+957303: Will Nepal finish second in the 2026 ICC Men’s T20 World Cup?
+957304: Will Namibia finish second in the 2026 ICC Men’s T20 World Cup?
+957305: Will Canada finish second in the 2026 ICC Men’s T20 World Cup?
+957306: Will Italy finish second in the 2026 ICC Men’s T20 World Cup?
+957615: Will India reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957616: Will Australia reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957617: Will England reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957618: Will South Africa reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957619: Will Pakistan reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957620: Will New Zealand reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957626: Will West Indies reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957627: Will Afghanistan reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957630: Will Sri Lanka reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957631: Will Bangladesh reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957632: Will the United States reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957633: Will Ireland reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957636: Will Zimbabwe reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957637: Will the Netherlands reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957638: Will the United Arab Emirates reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957639: Will Oman reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957640: Will Nepal reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957641: Will Namibia reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957642: Will Canada reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957643: Will Italy reach the semifinals of the 2026 ICC Men’s T20 World Cup?
+957644: Israel x Hamas Ceasefire Phase II by January 31?
+957646: Israel x Hamas Ceasefire Phase II by June 30?
+957793: Will the U.K.'s monthly inflation be ≤-0.2% in December?
+957794: Will the U.K.'s monthly inflation be -0.1% in December?
+957795: Will the U.K.'s monthly inflation be 0.0% in December?
+957796: Will the U.K.'s monthly inflation be 0.2% in December?
+957797: Will the U.K.'s monthly inflation be ≥0.3% in December?
+957986: AI data center moratorium passed before 2027?
+958240: Will the U.K.'s annual inflation increase by ≤2.8% in December?
+958245: Will the U.K.'s annual inflation increase by 2.9% in December?
+958247: Will the U.K.'s annual inflation increase by 3.0% in December?
+958251: Will the U.K.'s annual inflation increase by 3.1% in December?
+958253: Will the U.K.'s annual inflation increase by ≥3.4% in December?
+958427: Israel x Iran ceasefire broken by June 30, 2026?
+958442: Will the Iranian regime fall by March 31?
+958443: Will the Iranian regime fall by June 30?
+958448: Putin out as President of Russia by June 30?
+958458: Will the Eurozone's monthly inflation be ≤-0.2% in December?
+958459: Will the Eurozone's monthly inflation be -0.1% in December?
+958460: Will the Eurozone's monthly inflation be 0.0% in December?
+958461: Will the Eurozone's monthly inflation be 0.1% in December?
+958462: Will the Eurozone's monthly inflation be 0.2% in December?
+958463: Will the Eurozone's monthly inflation be ≥0.3% in December?
+958476: Will the Eurozone's annual inflation increase by ≤2.0% in December?
+958477: Will the Eurozone's annual inflation increase by 2.1% in December?
+958478: Will the Eurozone's annual inflation increase by 2.2% in December?
+958479: Will the Eurozone's annual inflation increase by 2.3% in December?
+958480: Will the Eurozone's annual inflation increase by ≥2.4% in December?
+959116: Will Shannon Lundgren be the Republican Nominee for IA-02?
+959117: Will Charlie McClintock be the Republican Nominee for IA-02?
+959118: Will Joe Mitchell be the Republican Nominee for IA-02?
+959244: Will Ralph Alvarado be the Republican Nominee for KY-06?
+959245: Will Ryan Dotson be the Republican Nominee for KY-06?
+959246: Will Greg Plucinski be the Republican Nominee for KY-06?
+959247: Will Adam Perez Arquette be the Republican Nominee for KY-06?
+959248: Will Gavin Solomon be the Republican Nominee for KY-06?
+959396: Will Paul LePage be the Republican Nominee for ME-02?
+959398: Will James Clark be the Republican Nominee for ME-02?
+959516: Will Mike Bouchard be the Republican Nominee for MI-10?
+959517: Will Robert Lulgjuraj be the Republican Nominee for MI-10?
+959518: Will Casey Armitage be the Republican Nominee for MI-10?
+959519: Will Steven Elliott be the Republican Nominee for MI-10?
+959520: Will Justin Kirk be the Republican Nominee for MI-10?
+959546: Will Tyler Kistner be the Republican Nominee for MN-02?
+959547: Will Eric Pratt be the Republican Nominee for MN-02?
+960222: Will Jay Byars be the Republican Nominee for SC-01?
+960223: Will Logan Cunningham be the Republican Nominee for SC-01?
+960224: Will Jack Ellison be the Republican Nominee for SC-01?
+960225: Will Jenny Costa Honeycutt be the Republican Nominee for SC-01?
+960226: Will Sam McCown be the Republican Nominee for SC-01?
+960227: Will Justin Myers be the Republican Nominee for SC-01?
+960228: Will Alex Pelbath be the Republican Nominee for SC-01?
+960229: Will Mark Smith be the Republican Nominee for SC-01?
+960230: Will Dan Brown be the Republican Nominee for SC-01?
+960251: Will Sholdon Daniels be the Republican Nominee for TX-30?
+960252: Will Gregor Heise be the Republican Nominee for TX-30?
+960253: Will Everett Jackson be the Republican Nominee for TX-30?
+960254: Will Nils Walker be the Republican Nominee for TX-30?
+960319: Will Marie Gluesenkamp Perez advance to the general election for WA-03?
+960320: Will Brent Hennrich advance to the general election for WA-03?
+960321: Will Suzzanna V. Tanner advance to the general election for WA-03?
+960322: Will Antony Barran advance to the general election for WA-03?
+960323: Will John Braun advance to the general election for WA-03?
+960324: Will Lawrence Kellogg advance to the general election for WA-03?
+960325: Will Eric Vaughan advance to the general election for WA-03?
+964319: Kraken vs. Devils
+964320: Senators vs. Rangers
+964321: Flyers vs. Sabres
+964322: Golden Knights vs. Kings
+964332: Ethereum Up or Down - December 19, 11:30AM-11:35AM ET
+964334: XRP Up or Down - December 19, 11:30AM-11:35AM ET
+964335: Bitcoin Up or Down - December 19, 11:35AM-11:40AM ET
+964336: XRP Up or Down - December 19, 11:35AM-11:40AM ET
+964337: Ethereum Up or Down - December 19, 11:35AM-11:40AM ET
+964338: Solana Up or Down - December 19, 11:35AM-11:40AM ET
+964343: XRP Up or Down - December 19, 11:40AM-11:45AM ET
+964344: Ethereum Up or Down - December 19, 11:40AM-11:45AM ET
+964345: Bitcoin Up or Down - December 19, 11:40AM-11:45AM ET
+964346: Solana Up or Down - December 19, 11:40AM-11:45AM ET
+964347: Bitcoin Up or Down - December 19, 11:45AM-11:50AM ET
+964348: Solana Up or Down - December 19, 11:45AM-11:50AM ET
+964349: XRP Up or Down - December 19, 11:45AM-11:50AM ET
+964350: Ethereum Up or Down - December 19, 11:45AM-11:50AM ET
+964355: Ethereum Up or Down - December 19, 11:50AM-11:55AM ET
+964356: Bitcoin Up or Down - December 19, 11:50AM-11:55AM ET
+964357: XRP Up or Down - December 19, 11:50AM-11:55AM ET
+964358: Solana Up or Down - December 19, 11:50AM-11:55AM ET
+964455: XRP Up or Down - December 19, 11:55AM-12:00PM ET
+964456: Solana Up or Down - December 19, 11:55AM-12:00PM ET
+964457: Ethereum Up or Down - December 19, 11:55AM-12:00PM ET
+964458: Bitcoin Up or Down - December 19, 11:55AM-12:00PM ET
+964467: Bank of England decreases interest rates by 50+ bps after March 2026 meeting?
+964468: Bank of England decreases interest rates by 25 bps after March 2026 meeting?
+964469: No change in Bank of England's interest rates after March 2026 meeting?
+964470: Bank of England increases interest rates after March 2026 meeting?
+964471: Ethereum Up or Down - December 19, 12:00PM-12:05PM ET
+964472: XRP Up or Down - December 19, 12:00PM-12:05PM ET
+964473: Bitcoin Up or Down - December 19, 12:00PM-12:05PM ET
+964474: Solana Up or Down - December 19, 12:00PM-12:05PM ET
+964475: Will the ECB announce a 50+ bps decrease at the March 2026 meeting?
+964476: Will the ECB announce a 25 bps decrease at the March 2026 meeting?
+964477: Will the ECB announce no change at the March 2026 meeting?
+964478: Will the ECB announce an increase at the March 2026 meeting?
+964482: Bitcoin Up or Down - December 19, 12:05PM-12:10PM ET
+964483: XRP Up or Down - December 19, 12:05PM-12:10PM ET
+964484: Solana Up or Down - December 19, 12:05PM-12:10PM ET
+964485: Ethereum Up or Down - December 19, 12:05PM-12:10PM ET
+964794: Will Querétaro FC win on 2026-01-14?
+964795: Will Querétaro FC vs. Club Tijuana end in a draw?
+964796: Will Club Tijuana win on 2026-01-14?
+964797: Will CF América win on 2026-01-14?
+964798: Will CF América vs. Atlético San Luis end in a draw?
+964799: Will Atlético San Luis win on 2026-01-14?
+964800: Will Deportivo Toluca FC win on 2026-01-14?
+964801: Will Deportivo Toluca FC vs. Club Santos Laguna end in a draw?
+964802: Will Club Santos Laguna win on 2026-01-14?
+964803: Will Tigres de la UANL win on 2026-01-14?
+964804: Will Tigres de la UANL vs. Pumas de la UNAM end in a draw?
+964805: Will Pumas de la UNAM win on 2026-01-14?
+964806: Will a dozen eggs cost <$2.50 in January?
+964807: Will a dozen eggs cost between $2.50–2.75 in January?
+964808: Will a dozen eggs cost between $2.75–3.00 in January?
+964809: Will a dozen eggs cost between $3.00–3.25 in January?
+964810: Will a dozen eggs cost between $3.25–3.50 in January?
+964811: Will a dozen eggs cost between $3.50–3.75 in January?
+964812: Will a dozen eggs cost between $3.75–4.00 in January?
+964813: Will a dozen eggs cost >$4.00 in January?
+964875: Will Leavitt say "President" 69+ times during the next White House press briefing?
+964876: Will Leavitt say "President" 79+ times during the next White House press briefing?
+964877: Will Leavitt say "More" or "Again" 22+ times during the next White House press briefing?
+964878: Will Leavitt say "Home" or "Country" 17+ times during the next White House press briefing?
+964879: Will Leavitt say "Vanity Fair" during the next White House press briefing?
+964880: Will Leavitt say "International Criminal Court" or "ICC" during the next White House press briefing?
+964881: Will Leavitt say "Mainstream" during the next White House press briefing?
+964882: Will Leavitt say "Nuclear" or "Iran" during the next White House press briefing?
+964883: Will Leavitt say "Marijuana" or "Weed" during the next White House press briefing?
+964884: Will Leavitt say "Supreme Court" during the next White House press briefing?
+964885: Will Leavitt say "Obamacare" during the next White House press briefing?
+964886: Will Leavitt say "Merry Christmas" during the next White House press briefing?
+964887: Will Leavitt say "Epstein" or "Hoax" during the next White House press briefing?
+964888: Will Leavitt say "Kennedy" or "Autism" during the next White House press briefing?
+964889: Will Leavitt say "TikTok" during the next White House press briefing?
+964890: Will Leavitt say "Minnesota" or "Walz" during the next White House press briefing?
+964891: Will Leavitt say "Pam" or "Bondi" during the next White House press briefing?
+964892: Will Leavitt say "AI" or "Crypto" during the next White House press briefing?
+964899: Will NVIDIA be the largest company in the world by market cap on January 31?
+964900: Will Microsoft be the largest company in the world by market cap on January 31?
+964901: Will Apple be the largest company in the world by market cap on January 31?
+964902: Will Alphabet be the largest company in the world by market cap on January 31?
+964903: Will Tesla be the largest company in the world by market cap on January 31?
+964904: Will Saudi Aramco be the largest company in the world by market cap on January 31?
+964905: Will Amazon be the largest company in the world by market cap on January 31?
+964987: Will NVIDIA be the second-largest company in the world by market cap on January 31?
+964988: Will Microsoft be the second-largest company in the world by market cap on January 31?
+964989: Will Apple be the second-largest company in the world by market cap on January 31?
+964990: Will Alphabet be the second-largest company in the world by market cap on January 31?
+964991: Will Tesla be the second-largest company in the world by market cap on January 31?
+964992: Will Saudi Aramco be the second-largest company in the world by market cap on January 31?
+964993: Will Amazon be the second-largest company in the world by market cap on January 31?
+965244: Will the U.K.'s monthly inflation be 0.1% in December?
+965256: Football.Fun FDV above $100M one day after launch?
+965257: Will the U.K.'s annual inflation increase by 3.2% in December?
+965258: Football.Fun FDV above $200M one day after launch?
+965259: Will the U.K.'s annual inflation increase by 3.3% in December?
+965260: Football.Fun FDV above $300M one day after launch?
+965261: MegaETH market cap (FDV) >$1B one day after launch?
+965784: Tua Tagovailoa traded by next season?
+966634: Will Jeremiyah Love go top 10 in the 2026 NFL draft?
+967151: Will Trove launch a token by March 31, 2026?
+967152: Will Trove launch a token by June 30, 2026?
+967153: Will Trove launch a token by September 30, 2026?
+967154: Will Trove launch a token by December 31, 2026?
+968321: Trump Media x TAE Technologies merger closed by March 31?
+969645: Will monthly inflation increase by 0.1% or less in January?
+969646: Will monthly inflation increase by 0.2% in January?
+969647: Will monthly inflation increase by 0.3% in January?
+969648: Will monthly inflation increase by 0.4% in January?
+969649: Will monthly inflation increase by 0.5% or more in January?
+969660: Will annual inflation increase by ≤2.8% in January?
+969661: Will annual inflation increase by 2.9% in January?
+969662: Will annual inflation increase by 3.0% in January?
+969663: Will annual inflation increase by 3.1% in January?
+969664: Will annual inflation increase by ≥3.2% in January?
+969677: Will Bill Cassidy be the republican nominee for Senate in Louisiana?
+969678: Will Julie Emerson be the republican nominee for Senate in Louisiana?
+969679: Will John Fleming be the republican nominee for Senate in Louisiana?
+969680: Will Blake Miguez be the republican nominee for Senate in Louisiana?
+969681: Will Kathy Seiden be the republican nominee for Senate in Louisiana?
+969682: Will Eric Skrmetta be the republican nominee for Senate in Louisiana?
+969683: Will Samuel “Sammy” Wyatt be the republican nominee for Senate in Louisiana?
+969684: Will Randall Arrington be the republican nominee for Senate in Louisiana?
+969685: Will Tracy Dendy be the republican nominee for Senate in Louisiana?
+969686: Will Chris Holder be the republican nominee for Senate in Louisiana?
+969687: Will Xan John be the republican nominee for Senate in Louisiana?
+969726: Will Tracie Burke be the Democratic nominee for Senate in Louisiana?
+969727: Will Jamie Davis Jr. be the Democratic nominee for Senate in Louisiana?
+969728: Will Jabarie Walker be the Democratic nominee for Senate in Louisiana?
+969760: Will Kent Benham win the Republican Primary for U.S. Senate in Michigan?
+969761: Will Fred Heurtebise win the Republican Primary for U.S. Senate in Michigan?
+969762: Will Mike Rogers win the Republican Primary for U.S. Senate in Michigan?
+969763: Will Genevieve Scott win the Republican Primary for U.S. Senate in Michigan?
+969764: Will Bernadette Smith win the Republican Primary for U.S. Senate in Michigan?
+969765: Will Andrew Kamal win the Republican Primary for U.S. Senate in Michigan?
+972263: Will Kristi Noem leave the Trump administration before 2027?
+972341: Paradex FDV above $500M one day after launch?
+972342: Paradex FDV above $300M one day after launch?
+972672: Canucks vs. Blue Jackets
+972673: Sharks vs. Capitals
+972674: Flyers vs. Penguins
+972675: Canadiens vs. Sabres
+972676: Kraken vs. Bruins
+972677: Jets vs. Wild
+972678: Flames vs. Blackhawks
+972679: Stars vs. Utah
+972680: Islanders vs. Oilers
+972681: Maple Leafs vs. Golden Knights
+972710: Will Toni Brown be the Democratic Nominee for IL-02?
+972711: Will Yumeka Brown be the Democratic Nominee for IL-02?
+972712: Will Eric France be the Democratic Nominee for IL-02?
+972713: Will Jesse Jackson Jr. be the Democratic Nominee for IL-02?
+972714: Will Patrick Keating be the Democratic Nominee for IL-02?
+972715: Will Donna Miller be the Democratic Nominee for IL-02?
+972716: Will Sidney Moore be the Democratic Nominee for IL-02?
+972717: Will Robert Peters be the Democratic Nominee for IL-02?
+972718: Will Willie Preston be the Democratic Nominee for IL-02?
+972719: Will Adal Regis be the Democratic Nominee for IL-02?
+973114: Will Jared Moskowitz be the Democratic Nominee for FL-23?
+973115: Will Oliver Adams Larkin be the Democratic Nominee for FL-23?
+973159: Will Richard Boykin be the Democratic Nominee for IL-07?
+973160: Will Kina Collins be the Democratic Nominee for IL-07?
+973161: Will Melissa Conyears Ervin be the Democratic Nominee for IL-07?
+973162: Will Anthony Driver Jr. be the Democratic Nominee for IL-07?
+973163: Will David Ehrlich be the Democratic Nominee for IL-07?
+973164: Will Thomas Fisher be the Democratic Nominee for IL-07?
+973165: Will La Shawn Ford be the Democratic Nominee for IL-07?
+973166: Will Jason Friedman be the Democratic Nominee for IL-07?
+973167: Will Rory Hoskins be the Democratic Nominee for IL-07?
+973168: Will Anabel Mendoza be the Democratic Nominee for IL-07?
+973169: Will Jazmin Robinson be the Democratic Nominee for IL-07?
+973170: Will Reed Showalter be the Democratic Nominee for IL-07?
+973171: Will Felix Tello be the Democratic Nominee for IL-07?
+973199: Trove FDV above $20M one day after launch?
+973200: Trove FDV above $40M one day after launch?
+973201: Trove FDV above $60M one day after launch?
+973202: Trove FDV above $80M one day after launch?
+973203: Trove FDV above $100M one day after launch?
+973215: Will Junaid Ahmed be the Democratic Nominee for IL-08?
+973216: Will Yasmeen Bankole be the Democratic Nominee for IL-08?
+973217: Will Melissa Bean be the Democratic Nominee for IL-08?
+973218: Will Sanjyot Dunung be the Democratic Nominee for IL-08?
+973219: Will Neil Khot be the Democratic Nominee for IL-08?
+973220: Will Kevin Morrison be the Democratic Nominee for IL-08?
+973221: Will Dan Tully be the Democratic Nominee for IL-08?
+973222: Will Ryan Vetticad be the Democratic Nominee for IL-08?
+973233: Will Person J be the Democratic Nominee for IL-08?
+973234: Will Person K be the Democratic Nominee for IL-08?
+973277: Will Shri Thanedar be the Democratic Nominee for MI-13?
+973278: Will Donavan McKinney be the Democratic Nominee for MI-13?
+973279: Will Shelby Campbell be the Democratic Nominee for MI-13?
+973280: Will Anthony Carbonaro be the Democratic Nominee for MI-13?
+973281: Will Nazmul Hassan be the Democratic Nominee for MI-13?
+973388: Will Grace Meng be the Democratic Nominee for NY-06?
+973389: Will Charles Park be the Democratic Nominee for NY-06?
+973390: Will Yan Xiong be the Democratic Nominee for NY-06?
+973439: Will Adriano Espaillat be the Democratic Nominee for NY-13?
+973440: Will Jaleel Amador be the Democratic Nominee for NY-13?
+973441: Will Darializa Avila Chevalier be the Democratic Nominee for NY-13?
+973442: Will Theo Chino-Tavarez be the Democratic Nominee for NY-13?
+973443: Will James Felton Keith be the Democratic Nominee for NY-13?
+973444: Will Matt Miller be the Democratic Nominee for NY-13?
+973445: Will Megan Rodriguez be the Democratic Nominee for NY-13?
+973446: Will Oscar Romero be the Democratic Nominee for NY-13?
+973497: Will Valerie Foushee be the Democratic Nominee for NC-04?
+973498: Will Nida Allam be the Democratic Nominee for NC-04?
+973499: Will Mary Patterson be the Democratic Nominee for NC-04?
+973535: Will Claude win the okbet trading competition?
+973536: Will Grok win the okbet trading competition?
+973537: Will GPT win the okbet trading competition?
+973538: Will Gemini win the okbet trading competition?
+973539: Will DeepSeek win the okbet trading competition?
+973572: Will Melbourne City FC win on 2026-01-16?
+973573: Will Melbourne City FC vs. Auckland FC end in a draw?
+973574: Will Auckland FC win on 2026-01-16?
+973575: Will Perth Glory FC win on 2026-01-16?
+973576: Will Perth Glory FC vs. Brisbane Roar FC end in a draw?
+973577: Will Brisbane Roar FC win on 2026-01-16?
+973624: Will Ilhan Omar be the Democratic Nominee for MN-05?
+973625: Will Latonya Reeves be the Democratic Nominee for MN-05?
+973715: Meta "Mango" model released by March 31?
+973716: Meta "Mango" model released by June 30?
+974319: Will Fedez & Marco Masini win Sanremo 2026?
+974320: Will Tommaso Paradiso win Sanremo 2026?
+974321: Will Arisa win Sanremo 2026?
+974322: Will Sayf win Sanremo 2026?
+974323: Will Levante win Sanremo 2026?
+974324: Will Ermal Meta win Sanremo 2026?
+974325: Will Luchè win Sanremo 2026?
+974326: Will Nayt win Sanremo 2026?
+974327: Will Michele Bravi win Sanremo 2026?
+974328: Will Malika Ayane win Sanremo 2026?
+974329: Will Chiello win Sanremo 2026?
+974651: Bill Clinton in jail by January 31?
+974652: Bill Clinton charged by January 31?
+974661: Bill Clinton divorce by June 30?
+976948: Will Manchester City FC win on 2026-01-13?
+976949: Will West Bromwich Albion FC win on 2026-01-16?
+976950: Will Newcastle United FC win on 2026-01-13?
+976951: Will West Bromwich Albion FC vs. Middlesbrough FC end in a draw?
+976952: Will Newcastle United FC vs. Manchester City FC end in a draw?
+976953: Will Middlesbrough FC win on 2026-01-16?
+980957: Will SBV Excelsior win on 2026-01-16?
+980958: Will SBV Excelsior vs. Telstar 1963 end in a draw?
+980959: Will Telstar 1963 win on 2026-01-16?
+980960: Will AFC Ajax win on 2026-01-17?
+980961: Will AFC Ajax vs. Go Ahead Eagles end in a draw?
+980962: Will Go Ahead Eagles win on 2026-01-17?
+981441: Panthers vs. Hurricanes
+981442: Sharks vs. Red Wings
+981443: Lightning vs. Blues
+981444: Predators vs. Avalanche
+981445: Ducks vs. Kings
+982030: Will Mazatlán FC win on 2026-01-16?
+982031: Will Mazatlán FC vs. CF Monterrey end in a draw?
+982032: Will CF Monterrey win on 2026-01-16?
+982058: Spread: Sydney FC (-1.5)
+982059: Sydney FC vs. Auckland FC: O/U 1.5
+982060: Sydney FC vs. Auckland FC: O/U 2.5
+982061: Sydney FC vs. Auckland FC: O/U 3.5
+982062: Sydney FC vs. Auckland FC: O/U 4.5
+982063: Sydney FC vs. Auckland FC: Both Teams to Score
+983321: Will Valve add Cache to the Map Pool by end of January?
+983645: Will Western Sydney Wanderers FC win on 2026-01-17?
+983646: Will Western Sydney Wanderers FC vs. Newcastle United Jets FC end in a draw?
+983647: Will Newcastle United Jets FC win on 2026-01-17?
+983648: Will Central Coast Mariners FC win on 2026-01-17?
+983649: Will Central Coast Mariners FC vs. Macarthur FC end in a draw?
+983650: Will Macarthur FC win on 2026-01-17?
+983651: Will Adelaide United FC win on 2026-01-17?
+983652: Will Adelaide United FC vs. Melbourne Victory FC end in a draw?
+983653: Will Melbourne Victory FC win on 2026-01-17?
+983678: Infinex FDV above $200M one day after launch?
+983679: Infinex FDV above $300M one day after launch?
+984441: US strikes Iran by March 31, 2026?
+984442: US strikes Iran by June 30, 2026?
+985972: Will Ipswich Town FC win on 2026-01-17?
+985973: Will Ipswich Town FC vs. Blackburn Rovers FC end in a draw?
+985974: Will Blackburn Rovers FC win on 2026-01-17?
+985985: Will Coventry City FC win on 2026-01-17?
+985986: Will Coventry City FC vs. Leicester City FC end in a draw?
+985988: Will Leicester City FC win on 2026-01-17?
+985998: Will Watford FC win on 2026-01-17?
+986001: Will Watford FC vs. Millwall FC end in a draw?
+986002: Will Millwall FC win on 2026-01-17?
+986007: Will Preston North End FC win on 2026-01-17?
+986009: Will Preston North End FC vs. Derby County FC end in a draw?
+986011: Will Derby County FC win on 2026-01-17?
+986012: Will Oxford United FC win on 2026-01-17?

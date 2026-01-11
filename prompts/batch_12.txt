@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+701744: Will Hyperliquid dip to $8 by December 31, 2026?
+701757: Will BNB reach $1600 by December 31, 2026?
+701758: Will BNB reach $1500 by December 31, 2026?
+701759: Will BNB reach $1400 by December 31, 2026?
+701760: Will BNB reach $1300 by December 31, 2026?
+701761: Will BNB reach $1200 by December 31, 2026?
+701762: Will BNB reach $1100 by December 31, 2026?
+701763: Will BNB reach $1000 by December 31, 2026?
+701764: Will BNB dip to $800 by December 31, 2026?
+701765: Will BNB dip to $700 by December 31, 2026?
+701766: Will BNB dip to $600 by December 31, 2026?
+701767: Will BNB dip to $500 by December 31, 2026?
+701768: Will BNB dip to $400 by December 31, 2026?
+701769: Will BNB dip to $300 by December 31, 2026?
+701770: Will BNB dip to $200 by December 31, 2026?
+701791: Will Ethena reach $1.20 by December 31, 2026?
+701792: Will Ethena reach $1.00 by December 31, 2026?
+701793: Will Ethena reach $0.80 by December 31, 2026?
+701794: Will Ethena reach $0.70 by December 31, 2026?
+701795: Will Ethena reach $0.60 by December 31, 2026?
+701796: Will Ethena reach $0.52 by December 31, 2026?
+701797: Will Ethena reach $0.48 by December 31, 2026?
+701798: Will Ethena reach $0.44 by December 31, 2026?
+701799: Will Ethena reach $0.40 by December 31, 2026?
+701800: Will Ethena reach $0.36 by December 31, 2026?
+701801: Will Ethena reach $0.32 by December 31, 2026?
+701805: Will Ethena dip to $0.16 by December 31, 2026?
+701806: Will Ethena dip to $0.12 by December 31, 2026?
+701807: Will Ethena dip to $0.08 by December 31, 2026?
+701808: Will Ethena dip to $0.04 by December 31, 2026?
+701826: Will Chainlink reach $26 by December 31, 2026?
+701827: Will Chainlink reach $24 by December 31, 2026?
+701828: Will Chainlink reach $22 by December 31, 2026?
+701829: Will Chainlink reach $20 by December 31, 2026?
+701830: Will Chainlink reach $18 by December 31, 2026?
+701831: Will Chainlink reach $16 by December 31, 2026?
+701834: Will Chainlink dip to $10 by December 31, 2026?
+701835: Will Chainlink dip to $8 by December 31, 2026?
+701836: Will Chainlink dip to $6 by December 31, 2026?
+701837: Will Chainlink dip to $4 by December 31, 2026?
+701839: Will Zcash reach $1100 by December 31, 2026?
+701840: Will Zcash reach $1000 by December 31, 2026?
+701841: Will Zcash reach $900 by December 31, 2026?
+701842: Will Zcash reach $800 by December 31, 2026?
+701843: Will Zcash reach $700 by December 31, 2026?
+701844: Will Zcash reach $600 by December 31, 2026?
+701847: Will Zcash dip to $300 by December 31, 2026?
+701848: Will Zcash dip to $200 by December 31, 2026?
+701849: Will Zcash dip to $100 by December 31, 2026?
+701850: Will Zcash dip to $50 by December 31, 2026?
+701858: Will Pump.fun reach $0.0090 by December 31, 2026?
+701859: Will Pump.fun reach $0.0080 by December 31, 2026?
+701860: Will Pump.fun reach $0.0062 by December 31, 2026?
+701861: Will Pump.fun reach $0.0058 by December 31, 2026?
+701862: Will Pump.fun reach $0.0054 by December 31, 2026?
+701863: Will Pump.fun reach $0.0050 by December 31, 2026?
+701865: Will Pump.fun reach $0.0046 by December 31, 2026?
+701867: Will Pump.fun reach $0.0042 by December 31, 2026?
+701868: Will Pump.fun reach $0.0038 by December 31, 2026?
+701869: Will Pump.fun reach $0.0034 by December 31, 2026?
+701874: Will Pump.fun dip to $0.0014 by December 31, 2026?
+701875: Will Pump.fun dip to $0.0010 by December 31, 2026?
+701886: Will Aster reach $2.20 by December 31, 2026?
+701887: Will Aster reach $2.00 by December 31, 2026?
+701888: Will Aster reach $1.80 by December 31, 2026?
+701889: Will Aster reach $1.60 by December 31, 2026?
+701890: Will Aster reach $1.40 by December 31, 2026?
+701894: Will Aster dip to $0.60 by December 31, 2026?
+701895: Will Aster dip to $0.40 by December 31, 2026?
+701896: Will Aster dip to $0.20 by December 31, 2026?
+701897: Will Plasma reach $2.20 by December 31, 2026?
+701898: Will Plasma reach $2.00 by December 31, 2026?
+701899: Will Plasma reach $1.80 by December 31, 2026?
+701900: Will Plasma reach $1.60 by December 31, 2026?
+701901: Will Plasma reach $1.40 by December 31, 2026?
+701902: Will Plasma reach $1.20 by December 31, 2026?
+701922: Will UNI reach $15.50 by December 31, 2026?
+701923: Will UNI reach $14.00 by December 31, 2026?
+701924: Will UNI reach $12.50 by December 31, 2026?
+701925: Will UNI reach $11.00 by December 31, 2026?
+701926: Will UNI reach $9.50 by December 31, 2026?
+701927: Will UNI reach $8.00 by December 31, 2026?
+701930: Will UNI dip to $4.50 by December 31, 2026?
+701931: Will UNI dip to $3.00 by December 31, 2026?
+702099: OKC breaks NBA single-season wins record?
+703235: Blackburn Beavers vs. Eastern Illinois Panthers
+703257: Will the US confirm that aliens exist before 2027?
+703258: Will Jesus Christ return before 2027?
+703513: Will Ken Paxton come in 2nd in the 2026 Texas Republican Primary?
+703514: Will John Cornyn come in 2nd in the 2026 Texas Republican Primary?
+703515: Will Dawn Buckingham come in 2nd in the 2026 Texas Republican Primary?
+703516: Will Beth Van Duyne come in 2nd in the 2026 Texas Republican Primary?
+703517: Will Wesley Hunt come in 2nd in the 2026 Texas Republican Primary?
+703639: Will Ken Paxton come in 3rd in the 2026 Texas Republican Primary?
+703640: Will John Cornyn come in 3rd in the 2026 Texas Republican Primary?
+703641: Will Dawn Buckingham come in 3rd in the 2026 Texas Republican Primary?
+703642: Will Beth Van Duyne come in 3rd in the 2026 Texas Republican Primary?
+703643: Will Wesley Hunt come in 3rd in the 2026 Texas Republican Primary?
+703685: Will the Republican Party win the CA-22 House seat?
+703686: Will the Democratic Party win the CA-22 House seat?
+703689: Will the Republican Party win the CA-27 House seat?
+703690: Will the Democratic Party win the CA-27 House seat?
+703731: Will Janeese Lewis George win the 2026 Democratic D.C. Mayoral Primary?
+703732: Will Muriel Bowser win the 2026 Democratic D.C. Mayoral Primary?
+703733: Will Kenyan McDuffie win the 2026 Democratic D.C. Mayoral Primary?
+703734: Will Robert White Jr. win the 2026 Democratic D.C. Mayoral Primary?
+703735: Will Brianne K. Nadeau win the 2026 Democratic D.C. Mayoral Primary?
+703736: Will Gary Goodweather win the 2026 Democratic D.C. Mayoral Primary?
+703737: Will Karl Racine win the 2026 Democratic D.C. Mayoral Primary?
+703738: Will Christina Henderson win the 2026 Democratic D.C. Mayoral Primary?
+703739: Will Zachary Parker win the 2026 Democratic D.C. Mayoral Primary?
+703740: Will Phil Mendelson win the 2026 Democratic D.C. Mayoral Primary?
+703741: Will Brooke Pinto win the 2026 Democratic D.C. Mayoral Primary?
+703742: Will Brian Schwalb win the 2026 Democratic D.C. Mayoral Primary?
+703772: Will Antonio Reynoso be the Democratic nominee for NY-07?
+703773: Will Julia Salazar be the Democratic nominee for NY-07?
+703774: Will Kristen Gonzalez be the Democratic nominee for NY-07?
+703775: Will Jennifer Gútierrez be the Democratic nominee for NY-07?
+703776: Will Julie Won be the Democratic nominee for NY-07?
+703777: Will Sandy Nurse be the Democratic nominee for NY-07?
+703778: Will Lincoln Restler be the Democratic nominee for NY-07?
+703779: Will Tiffany Cabán be the Democratic nominee for NY-07?
+703780: Will Claire Valdez be the Democratic nominee for NY-07?
+703845: Will Brad Lander be the Democratic nominee for NY-10?
+703846: Will Dan Goldman be the Democratic nominee for NY-10?
+703847: Will Alexa Avilés be the Democratic nominee for NY-10?
+703848: Will Cameron Kasky be the Democratic nominee for NY-10?
+703849: Will Yuh-Line Niou be the Democratic nominee for NY-10?
+703866: Will Ritchie Torres be the Democratic nominee for NY-15?
+703867: Will Michael Blake be the Democratic nominee for NY-15?
+703868: Will Amanda Septimo be the Democratic nominee for NY-15?
+703869: Will Dalourny Nemorin be the Democratic nominee for NY-15?
+703888: Will Cait Conley be the Democratic nominee for NY-17?
+703889: Will Beth Davidson be the Democratic nominee for NY-17?
+703890: Will Peter Chatzky be the Democratic nominee for NY-17?
+703891: Will Effie Phillips-Staley be the Democratic nominee for NY-17?
+703892: Will Jessica Reinmann be the Democratic nominee for NY-17?
+703893: Will Mike Sacks be the Democratic nominee for NY-17?
+703894: Will John Sullivan be the Democratic nominee for NY-17?
+703895: Will John Cappello be the Democratic nominee for NY-17?
+703912: Will Daniel Biss be the Democratic nominee for IL-09?
+703913: Will Kate Abughazaleh be the Democratic nominee for IL-09?
+703914: Will Laura Fine be the Democratic nominee for IL-09?
+703915: Will Jan Schakowsky be the Democratic nominee for IL-09?
+703946: Will Jared Golden be the Democratic nominee for ME-02?
+703947: Will Matthew Dunlap be the Democratic nominee for ME-02?
+703948: Will Joe Baldacci be the Democratic nominee for ME-02?
+703949: Will Jordan Wood be the Democratic nominee for ME-02?
+703986: Will the People Power Party (PPP) win the 2026 South Korean local elections?
+703987: Will the Democratic Party of Korea (DP) win the 2026 South Korean local elections?
+703988: Will the Rebuilding Korea Party (RKP) win the 2026 South Korean local elections?
+703989: Will the Progressive Party (PP) win the 2026 South Korean local elections?
+703991: Will Reform Party (RP) win the 2026 South Korean local elections?
+704002: Will Dan Koh be the Democratic nominee for MA-06?
+704003: Will Dominick Pangallo be the Democratic nominee for MA-06?
+704004: Will Seth Moulton be the Democratic nominee for MA-06?
+704025: Will Shannon Bird be the Democratic nominee for CO-08?
+704026: Will Manny Rutinel be the Democratic nominee for CO-08?
+704027: Will Yadira Caraveo be the Democratic nominee for CO-08?
+704028: Will Amie Baca-Oehlert be the Democratic nominee for CO-08?
+704029: Will John Szemler be the Democratic nominee for CO-08?
+704030: Will Dave Young be the Democratic nominee for CO-08?
+704051: Will Jeremy Moss be the Democratic nominee for MI-11?
+704052: Will Aisha Farooqi be the Democratic nominee for MI-11?
+704053: Will Andy Levin be the Democratic nominee for MI-11?
+704054: Will Dave Woodward be the Democratic nominee for MI-11?
+704075: Infinex FDV above $800M one day after launch?
+704090: Will John Cavanaugh be the Democratic nominee for NE-02?
+704091: Will Denise Powell be the Democratic nominee for NE-02?
+704092: Will Mark Johnston be the Democratic nominee for NE-02?
+704093: Will Evangelos Argyrakis be the Democratic nominee for NE-02?
+704110: Infinex FDV above $600M one day after launch?
+704115: Will Henry Cuellar be the Democratic nominee for TX-28?
+704116: Will Ryan Trevino be the Democratic nominee for TX-28?
+704135: Will Tempo launch a token by March 31 2026?
+704136: Will Tempo launch a token by June 30 2026?
+704137: Will Tempo launch a token by September 30 2026?
+704138: Will Tempo launch a token by December 31 2026?
+704139: Will James Osyf be the Democratic nominee for VA-02?
+704140: Will Elaine Luria be the Democratic nominee for VA-02?
+704141: Will Matt Strickler be the Democratic nominee for VA-02?
+704142: Will Nila Devanath be the Democratic nominee for VA-02?
+704143: Will Patrick Mosolf be the Democratic nominee for VA-02?
+704144: Will Nicolaus Sleister be the Democratic nominee for VA-02?
+704145: Will Burk Stringfellow be the Democratic nominee for VA-02?
+704169: Will Maura Sullivan be the Democratic nominee for NH-01?
+704170: Will Stefany Shaheen be the Democratic nominee for NH-01?
+704171: Will Carleigh Beriont be the Democratic nominee for NH-01?
+704188: Will Sharif Street be the Democratic nominee for PA-03?
+704189: Will Gabriel Caceres be the Democratic nominee for PA-03?
+704190: Will David Oxman be the Democratic nominee for PA-03?
+704191: Will Robin Toldens be the Democratic nominee for PA-03?
+704192: Will Morgan Cephas be the Democratic nominee for PA-03?
+704193: Will Chris Rabb be the Democratic nominee for PA-03?
+704194: Will Ala Stanford be the Democratic nominee for PA-03?
+704239: 1k+ container ship transits of Suez Canal in Q1 2026?
+704240: 2k+ container ship transits of Suez Canal in H1 2026?
+704246: Ventuals FDV above $300M one day after launch?
+704247: Ventuals FDV above $500M one day after launch?
+704248: Ventuals FDV above $800M one day after launch?
+704249: Ventuals FDV above $1B one day after launch?
+704250: Ventuals FDV above $1.5B one day after launch?
+704251: Ventuals FDV above $2B one day after launch?
+704256: Will Wesley Bell be the Democratic nominee for MO-01?
+704257: Will Cori Bush be the Democratic nominee for MO-01?
+704274: Ostium FDV above $700M one day after launch?
+704275: Ostium FDV above $1B one day after launch?
+704276: Ostium FDV above $2B one day after launch?
+704277: Ostium FDV above $3B one day after launch?
+704278: Ostium FDV above $4B one day after launch?
+704280: Will Ben McAdams be the Democratic nominee for UT-01?
+704281: Will Nate Blouin be the Democratic nominee for UT-01?
+704282: Will Kathleen Riebe be the Democratic nominee for UT-01?
+704283: Will Caroline Gleich be the Democratic nominee for UT-01?
+704284: Will Kael Weston be the Democratic nominee for UT-01?
+704285: Will Erin Mendenhall be the Democratic nominee for UT-01?
+704286: Will Jenny Wilson be the Democratic nominee for UT-01?
+704287: Will Brian King be the Democratic nominee for UT-01?
+704288: Will Luz Escamilla be the Democratic nominee for UT-01?
+704314: Will Plasma dip to $0.08 by December 31, 2026?
+704315: Will Robert Lowry be the Republican nominee for TX-21?
+704316: Will Chip Roy be the Republican nominee for TX-21?
+704317: Will Mike Wheeler be the Republican nominee for TX-21?
+704318: Will Peggy Wardlaw be the Republican nominee for TX-21?
+704319: Will Trey Trainor be the Republican nominee for TX-21?
+704320: Will Heather Tessmer be the Republican nominee for TX-21?
+704321: Will Mark Teixeira be the Republican nominee for TX-21?
+704322: Will Kyle Sinclair be the Republican nominee for TX-21?
+704323: Will Paul Rojas be the Republican nominee for TX-21?
+704324: Will Matt Okerson be the Republican nominee for TX-21?
+704325: Will Weston Martinez be the Republican nominee for TX-21?
+704326: Will Denis Goulet be the Republican nominee for TX-21?
+704327: Will Ezekiel Enriquez be the Republican nominee for TX-21?
+704328: Will Jacques DuBose be the Republican nominee for TX-21?
+704329: Will Jason Cahill be the Republican nominee for TX-21?
+704330: Will Daniel Betts be the Republican nominee for TX-21?
+704333: Will Plasma reach $0.24 by December 31, 2026?
+704339: Russia x Ukraine ceasefire by January 31, 2026?
+704340: Will Gina Swoboda be the Republican nominee for AZ-01?
+704341: Will Matt Gress be the Republican nominee for AZ-01?
+704342: Will Jason Duey be the Republican nominee for AZ-01?
+704343: Will Joseph Chaplik be the Republican nominee for AZ-01?
+704344: Will Muchelle Ugenti-Rita be the Republican nominee for AZ-01?
+704345: Will Todd Graham be the Republican nominee for AZ-01?
+704346: Will Mark Brnovich be the Republican nominee for AZ-01?
+704347: Will Kari Lake be the Republican nominee for AZ-01?
+704364: Will Mark Lamb be the Republican nominee for AZ-05?
+704365: Will Jay Feely be the Republican nominee for AZ-05?
+704366: Will Travis Grantham be the Republican nominee for AZ-05?
+704392: Will John Carter be the Republican nominee for TX-31?
+704393: Will Valentina Gomez be the Republican nominee for TX-31?
+704394: Will Raymond Hamden be the Republican nominee for TX-31?
+704423: Will Madison Cawthorn be the Republican nominee for FL-19?
+704424: Will Catalina Lauf be the Republican nominee for FL-19?
+704425: Will Bob Rommel be the Republican nominee for FL-19?
+704426: Will Spencer Roach be the Republican nominee for FL-19?
+704427: Will Jim Oberweis be the Republican nominee for FL-19?
+704453: Will Brinker Harding be the Republican nominee for NE-02?
+704454: Will Brett Lindstrom be the Republican nominee for NE-02?
+704455: Will Dan Frei be the Republican nominee for NE-02?
+704474: Will Byron Donalds be the Republican nominee for Florida Governor?
+704475: Will James Fishback be the Republican nominee for Florida Governor?
+704476: Will Wilton Simpson be the Republican nominee for Florida Governor?
+704477: Will Jay Collins be the Republican nominee for Florida Governor?
+704478: Will Casey DeSantis be the Republican nominee for Florida Governor?
+704479: Will Jimmy Patronis be the Republican nominee for Florida Governor?
+704480: Will Matt Gaetz be the Republican nominee for Florida Governor?
+704497: Will Plasma reach $0.30 by December 31, 2026?
+704499: Will David Jolly be the Democratic nominee for Florida Governor?
+704500: Will Jerry Demings be the Democratic nominee for Florida Governor?
+704501: Will Shevrin Jones be the Democratic nominee for Florida Governor?
+704502: Will Jason Pizzo be the Democratic nominee for Florida Governor?
+704503: Will Fentrice Driskell be the Democratic nominee for Florida Governor?
+704504: Will Daniella Levine Cava be the Democratic nominee for Florida Governor?
+704505: Will Gwen Graham be the Democratic nominee for Florida Governor?
+704506: Will Angie Nixon be the Democratic nominee for Florida Governor?
+704521: Will Plasma reach $0.40 by December 31, 2026?
+704524: Will Plasma reach $0.50 by December 31, 2026?
+704527: Will Plasma reach $0.60 by December 31, 2026?
+704543: 2026 U.S. House election: Republicans flip the Democrats by December 31?
+704784: Will Bitcoin replace SHA-256 before 2027?
+704788: Justin Aguiar convicted of sexual assault before 2027?
+705376: Will a dozen eggs cost <$2.50 in December?
+705377: Will a dozen eggs cost between $2.50–2.75 in December?
+705378: Will a dozen eggs cost between $2.75–3.00 in December?
+705379: Will a dozen eggs cost between $3.00–3.25 in December?
+705380: Will a dozen eggs cost between $3.25–3.50 in December?
+705381: Will a dozen eggs cost between $3.50–3.75 in December?
+705382: Will a dozen eggs cost between $3.75–4.00 in December?
+705383: Will a dozen eggs cost >$4.00 in December?
+705637: Will João Cotrim de Figueiredo qualify for the second round of the 2026 Portugal presidential election?
+705799: Makina FDV above $80M one day after launch?
+705800: Makina FDV above $100M one day after launch?
+705801: Makina FDV above $200M one day after launch?
+705802: Makina FDV above $300M one day after launch?
+705807: Reya FDV above $150M one day after launch?
+705808: Reya FDV above $200M one day after launch?
+705809: Reya FDV above $300M one day after launch?
+705810: Reya FDV above $400M one day after launch?
+705983: Robinhood launches prediction market through MIAXdx by March 31?
+705984: Will Randy Villegas advance from the CA-22 Primary?
+705985: Will Rudy Salas advance from the CA-22 Primary?
+705986: Will David Valadao advance from the CA-22 Primary?
+705987: Will Chris Mathys advance from the CA-22 Primary?
+706000: Robinhood self-certifies sports event contract by March 31? 
+706040: Will Colton Moore win the GA-14 special election?
+706041: Will John Cowan win the GA-14 special election?
+706042: Will Chuck Hufstetler win the GA-14 special election?
+706043: Will Kasey Carpenter win the GA-14 special election?
+706044: Will Katie Dempsey win the GA-14 special election?
+706045: Will Star Black win the GA-14 special election?
+706046: Will Jason Anavitarte win the GA-14 special election?
+706047: Will Laura Loomer win the GA-14 special election?
+706048: Will Jeff Criswell win the GA-14 special election?
+706049: Will Elvis Casely win the GA-14 special election?
+706050: Will Jennifer Strahan win the GA-14 special election?
+706051: Will Shawn Harris win the GA-14 special election?
+706052: Will Marcus Flowers win the GA-14 special election?
+706053: Will Martin Momtahan win the GA-14 special election?
+706054: Will Tyler Paul Smith win the GA-14 special election?
+706055: Will Matt Barton win the GA-14 special election?
+706056: Will Trey Kelley win the GA-14 special election?
+706057: Will Uloma Ekpete Kama win the GA-14 special election?
+706058: Will Rob Ruszkowski win the GA-14 special election?
+706059: Will Clarence Blalock win the GA-14 special election?
+706060: Will Holly McCormack win the GA-14 special election?
+706061: Will Eddie Lumsden win the GA-14 special election?
+706082: Will Sandy Spidel Neumann be the Democratic nominee for Senate in Kansas?
+706083: Will Christy Davis be the Democratic nominee for Senate in Kansas?
+706084: Will Michael Soetaert be the Democratic nominee for Senate in Kansas?
+706085: Will Anne Parelkar be the Democratic nominee for Senate in Kansas?
+706155: Will Cory Booker be the Democratic nominee for Senate in New Jersey?
+706156: Will Saxon Callahan be the Democratic nominee for Senate in New Jersey?
+706157: Will Gregory Tomaini be the Democratic nominee for Senate in New Jersey?
+706182: Will Catarina Martins qualify for the second round of the 2026 Portugal presidential election?
+706183: Will Karishma Manzur be the Democratic nominee for Senate in New Hampshire?
+706184: Will Chris Pappas be the Democratic nominee for Senate in New Hampshire?
+706234: Will Jeff Merkley be the Democratic nominee for Senate in Oregon?
+706235: Will Jacob Ryan be the Democratic nominee for Senate in Oregon?
+706279: Will Trump visit China by April 30?
+706487: Will Fogo launch a token by March 31 2026?
+706490: Will Fogo launch a token by June 30 2026?
+706493: Will Fogo launch a token by September 30 2026?
+706497: Will Fogo launch a token by December 31 2026?
+706859: Will Theo launch a token by March 31 2026?
+706860: Will Theo launch a token by June 30 2026?
+706861: Will Theo launch a token by September 30 2026?
+706862: Will Theo launch a token by December 31 2026?
+707028: Will Solstice launch a token by March 31 2026?
+707031: Will Solstice launch a token by June 30 2026?
+707033: Will Solstice launch a token by September 30 2026?
+707034: Will Solstice launch a token by December 31 2026?
+708764: Will Bryce Reeves be the Republican nominee for Senate in Virginia?
+708765: Will Kim Farington be the Republican nominee for Senate in Virginia?
+708766: Will Al Mina be the Republican nominee for Senate in Virginia?
+708767: Will David Williams be the Republican nominee for Senate in Virginia?
+708768: Will Jason Miyares be the Republican nominee for Senate in Virginia?
+708769: Will Winsome Earle-Sears be the Republican nominee for Senate in Virginia?
+716368: Will turnout in the 2025 Honduran general election be less than 55%?
+716369: Will turnout in the 2025 Honduran general election be between 55% and 60%?
+716370: Will turnout in the 2025 Honduran general election be between 60% and 65%?
+716371: Will turnout in the 2025 Honduran general election be between 65% and 70%?
+716372: Will turnout in the 2025 Honduran general election be between 70% and 75%?
+716373: Will turnout in the 2025 Honduran general election be at least 75%?
+716632: Fogo FDV above $700M one day after launch?
+716633: Fogo FDV above $1B one day after launch?
+716634: Fogo FDV above $2B one day after launch?
+716635: Fogo FDV above $3B one day after launch?
+716640: Theo FDV above $100M one day after launch?
+716641: Theo FDV above $300M one day after launch?
+716642: Theo FDV above $700M one day after launch?
+716643: Theo FDV above $1B one day after launch?
+716650: Pacifica FDV above $500M one day after launch?
+716651: Pacifica FDV above $800M one day after launch?
+716652: Pacifica FDV above $1B one day after launch?
+716653: Pacifica FDV above $2B one day after launch?
+716654: Pacifica FDV above $3B one day after launch?
+716823: Extended FDV above $500M one day after launch?
+716826: Extended FDV above $800M one day after launch?
+716827: Extended FDV above $1B one day after launch?
+716829: Extended FDV above $2B one day after launch?
+716831: Extended FDV above $3B one day after launch?
+716904: Felix Protocol FDV above $100M one day after launch?
+716905: Felix Protocol FDV above $300M one day after launch?
+716906: Felix Protocol FDV above $500M one day after launch?
+716907: Felix Protocol FDV above $800M one day after launch?
+716908: Felix Protocol FDV above $1B one day after launch?
+716909: Felix Protocol FDV above $2B one day after launch?
+716938: Will there be at least 500 measles cases in the U.S. in 2026?
+716939: Will there be at least 1000 measles cases in the U.S. in 2026?
+716940: Will there be at least 2000 measles cases in the U.S. in 2026?
+716941: Will there be at least 5000 measles cases in the U.S. in 2026?
+716942: Will there be at least 10000 measles cases in the U.S. in 2026?
+718182: Will Aztec launch a token by December 31, 2026?
+718188: Will Abstract launch a token by December 31, 2026
+718204: Will Spark launch a token by December 31, 2026
+732179: Felix Protocol FDV above $50M one day after launch?
+732180: Felix Protocol FDV above $25M one day after launch?
+733064: Olympiacos B.C. vs. Fenerbahce
+734114: Zelenskyy out as Ukraine president by March 31, 2026?
+734115: Ukraine election called by March 31, 2026?
+734792: Will Donald Trump visit Alabama in 2026?
+734796: Will Donald Trump visit Alaska in 2026?
+734802: Will Donald Trump visit Arizona in 2026?
+734808: Will Donald Trump visit Arkansas in 2026?
+734813: Will Donald Trump visit California in 2026?
+734816: Will Donald Trump visit Colorado in 2026?
+734823: Will Donald Trump visit Connecticut in 2026?
+734828: Will Donald Trump visit Delaware in 2026?
+734839: Will Donald Trump visit Georgia in 2026?
+734844: Will Donald Trump visit Hawaii in 2026?
+734852: Will Donald Trump visit Idaho in 2026?
+734859: Will Donald Trump visit Illinois in 2026?
+734865: Will Donald Trump visit Indiana in 2026?
+734870: Will Donald Trump visit Iowa in 2026?
+734872: Will Donald Trump visit Kansas in 2026?
+734873: Will Donald Trump visit Kentucky in 2026?
+734874: Will Donald Trump visit Louisiana in 2026?
+734875: Will Donald Trump visit Maine in 2026?
+734877: Will Donald Trump visit Massachusetts in 2026?
+734878: Will Donald Trump visit Michigan in 2026?
+734879: Will Donald Trump visit Minnesota in 2026?
+734880: Will Donald Trump visit Mississippi in 2026?
+734881: Will Donald Trump visit Missouri in 2026?
+734882: Will Donald Trump visit Montana in 2026?
+734883: Will Donald Trump visit Nebraska in 2026?
+734884: Will Donald Trump visit Nevada in 2026?
+734885: Will Donald Trump visit New Hampshire in 2026?
+734886: Will Donald Trump visit New Jersey in 2026?
+734887: Will Donald Trump visit New Mexico in 2026?
+734888: Will Donald Trump visit New York in 2026?
+734889: Will Donald Trump visit North Carolina in 2026?
+734890: Will Donald Trump visit North Dakota in 2026?
+734891: Will Donald Trump visit Ohio in 2026?
+734892: Will Donald Trump visit Oklahoma in 2026?
+734893: Will Donald Trump visit Oregon in 2026?
+734894: Will Donald Trump visit Pennsylvania in 2026?
+734895: Will Donald Trump visit Rhode Island in 2026?
+734896: Will Donald Trump visit South Carolina in 2026?
+734897: Will Donald Trump visit South Dakota in 2026?
+734898: Will Donald Trump visit Tennessee in 2026?
+734899: Will Donald Trump visit Texas in 2026?
+734900: Will Donald Trump visit Utah in 2026?
+734901: Will Donald Trump visit Vermont in 2026?
+734902: Will Donald Trump visit Virginia in 2026?
+734903: Will Donald Trump visit Washington in 2026?
+734904: Will Donald Trump visit West Virginia in 2026?
+734905: Will Donald Trump visit Wisconsin in 2026?
+734906: Will Donald Trump visit Wyoming in 2026?
+737244: Will Nepali Congress win the most seats in the Nepal House of Representatives election?
+737245: Will Nepali Communist Party win the most seats in the Nepal House of Representatives election?
+737246: Will Communist Party of Nepal (UML) win the most seats in the Nepal House of Representatives election?
+737247: Will Rastriya Prajatantra Party win the most seats in the Nepal House of Representatives election?
+737249: Will Loktantrik Samajwadi Party Nepal win the most seats in the Nepal House of Representatives election?
+737250: Will Rastriya Swatantra Party win the most seats in the Nepal House of Representatives election?
+737251: Will Rastriya Janamorcha win the most seats in the Nepal House of Representatives election?
+741099: Will LeBron James retire before next NBA season?
+743435: Will Fomo launch a token by March 31 2026?
+743436: Will Fomo launch a token by June 30 2026?
+743437: Will Fomo launch a token by September 30 2026?
+743438: Will Fomo launch a token by December 31 2026?
+753260: Spread: Blackburn Rovers FC (-1.5)
+753261: Blackburn Rovers FC vs. Sheffield Wednesday FC: O/U 1.5
+753262: Blackburn Rovers FC vs. Sheffield Wednesday FC: O/U 2.5
+753263: Blackburn Rovers FC vs. Sheffield Wednesday FC: O/U 3.5
+753264: Blackburn Rovers FC vs. Sheffield Wednesday FC: Both Teams to Score
+753265: Spread: Charlton Athletic FC (-1.5)
+753266: Charlton Athletic FC vs. Portsmouth FC: O/U 1.5
+753267: Charlton Athletic FC vs. Portsmouth FC: O/U 2.5
+753268: Charlton Athletic FC vs. Portsmouth FC: O/U 3.5
+753269: Charlton Athletic FC vs. Portsmouth FC: Both Teams to Score
+763535: Backpack FDV above $700M one day after launch?
+763536: Infinex FDV above $400M one day after launch?
+776293: Fogo FDV above $300M one day after launch?
+776464: Another S&P 500 Company buys Bitcoin by December 31, 2026?
+779495: Timothy Chalamet confirmed to be EsDeeKid by June 30?
+784479: Will Levante UD win on 2025-12-14?
+784481: Will Levante UD vs. Villarreal CF end in a draw?
+784483: Will Villarreal CF win on 2025-12-14?
+786752: Pete Hegseth out as Secretary of Defense by March 31?
+787477: Will CDU win the most seats in the 2026 Rhineland-Palatinate parliamentary elections?
+787478: Will AfD win the most seats in the 2026 Rhineland-Palatinate parliamentary elections?
+787479: Will Grüne win the most seats in the 2026 Rhineland-Palatinate parliamentary elections?
+787480: Will SPD win the most seats in the 2026 Rhineland-Palatinate parliamentary elections?
+787481: Will FDP win the most seats in the 2026 Rhineland-Palatinate parliamentary elections?
+787482: Will Linke win the most seats in the 2026 Rhineland-Palatinate parliamentary elections?
+787483: Will FW win the most seats in the 2026 Rhineland-Palatinate parliamentary elections?
+787484: Will BSW win the most seats in the 2026 Rhineland-Palatinate parliamentary elections?
+787524: Will Laura Gillen be the Democratic nominee for NY-04?
+787525: Will Gian Jones be the Democratic nominee for NY-04?
+787526: Will Nicholas Sciretta be the Democratic nominee for NY-04?
+787547: Will Kaela Berg be the Democratic nominee for MN-02?
+787548: Will Matt Klein be the Democratic nominee for MN-02?
+787549: Will Matt Little be the Democratic nominee for MN-02?
+787701: Will Brendan Gill be the Democratic nominee for the NJ-11 special election?
+787702: Will Tom Malinowski be the Democratic nominee for the NJ-11 special election?
+787703: Will Analilia Mejia be the Democratic nominee for the NJ-11 special election?
+787704: Will Tahesha Way be the Democratic nominee for the NJ-11 special election?
+787705: Will Anna Lee Williams be the Democratic nominee for the NJ-11 special election?
+787706: Will John Bartlett be the Democratic nominee for the NJ-11 special election?

@@ -1,0 +1,530 @@
+You are a market categorization expert. I will give you 500 prediction market titles from Polymarket.
+
+Categorize each one into EXACTLY ONE of these 5 categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens)
+- **Sports** (NFL, NBA, MLB, soccer, tennis, UFC, any sports betting)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, everything else)
+
+IMPORTANT RULES:
+1. Government budget/spending/DOGE cuts → Finance
+2. Tariffs and trade policy → Politics
+3. Trump deportation/immigration → Politics
+4. Trump as president (not policy) → Politics
+5. Climate/weather → Other
+6. Tech companies (OpenAI, Tesla, SpaceX) → Other
+7. Gaming (GTA, video games) → Other
+8. Celebrity/entertainment → Other
+9. Court cases → Other (unless clearly political)
+10. Crypto price predictions → Crypto
+
+Return ONLY a valid JSON object. No explanations, no markdown, just the JSON:
+{
+  "516938": "Other",
+  "517310": "Politics",
+  ...
+}
+
+Here are all 500 markets to categorize:
+
+516938: Will 2025 be the hottest year on record?
+517310: Will Trump deport less than 250,000?
+517311: Will Trump deport 250,000-500,000 people?
+517313: Will Trump deport 500,000-750,000- people?
+517314: Will Trump deport 750,000-1,000,000 people?
+517315: Will Trump deport 1,000,000-1,250,000 people?
+517316: Will Trump deport 1,250,000-1,500,000 people?
+517317: Will Trump deport 1,500,000-1,750,000 people?
+517318: Will Trump deport 1,750,000-2,000,000 people?
+517319: Will Trump deport 2,000,000 or more people?
+517321: Will Trump deport 750,000 or more people in 2025?
+521255: Will Trump & Elon reduce the deficit in 2025? 
+521944: Will Elon and DOGE cut less than $50b in federal spending in 2025?
+521945: Will Elon and DOGE cut between $50-100b in federal spending in 2025?
+521946: Will Elon and DOGE cut between $100-150b in federal spending in 2025?
+521947: Will Elon and DOGE cut between $150-200b in federal spending in 2025?
+521948: Will Elon and DOGE cut between $200-250b in federal spending in 2025?
+521949: Will Elon and DOGE cut more than $250b in federal spending in 2025?
+521963: Will Elon cut the budget by at least 10% in 2025?
+521964: Will Elon cut the budget by at least 5% in 2025?
+521993: Will Elon and DOGE cut less than 50k employees in 2025?
+521994: Will Elon and DOGE cut 50-100k employees in 2025?
+521995: Will Elon and DOGE cut 100-150k employees in 2025?
+521996: Will Elon and DOGE cut 150-200k employees in 2025?
+521997: Will Elon and DOGE cut more than 200k employees in 2025?
+522145: Will inflation reach more than 3% in 2025?
+522146: Will inflation reach more than 4% in 2025?
+522147: Will inflation reach more than 5% in 2025?
+522148: Will inflation reach more than 6% in 2025?
+522149: Will inflation reach more than 8% in 2025?
+522150: Will inflation reach more than 10% in 2025?
+526939: Brazil unemployment below 6.3% for Q4 2025?
+527079: Will GTA 6 cost $100+?
+528788: Rojas guilty in Texas illegal abortion case?
+528820: Senator Eichorn guilty of soliciting a child?
+531202: BitBoy convicted?
+533851: Negative GDP growth in 2025?
+537484: Will the U.S. collect less than $100b in revenue in 2025?
+537485: Will the U.S. collect between $100b and $200b in revenue in 2025?
+537486: Will the U.S. collect between $200b and $500b in revenue in 2025?
+537487: Will the U.S. collect between $500b and $1t in revenue in 2025?
+537488: Will the U.S. collect between $1t and $2t in revenue in 2025?
+537489: Will the U.S. collect more than $2t in revenue in 2025?
+537490: Will tariffs generate >$250b in 2025?
+540209: Will the Buffalo Bills win Super Bowl 2026?
+540211: Will the Chicago Bears win Super Bowl 2026?
+540215: Will the Denver Broncos win Super Bowl 2026?
+540218: Will the Houston Texans win Super Bowl 2026?
+540220: Will the Jacksonville Jaguars win Super Bowl 2026?
+540223: Will the Los Angeles Chargers win Super Bowl 2026?
+540224: Will the Los Angeles Rams win Super Bowl 2026?
+540227: Will the New England Patriots win Super Bowl 2026?
+540231: Will the Philadelphia Eagles win Super Bowl 2026?
+540232: Will the Pittsburgh Steelers win Super Bowl 2026?
+540233: Will the San Francisco 49ers win Super Bowl 2026?
+540234: Will the Seattle Seahawks win Super Bowl 2026?
+540241: Will the Bears win the NFC Championship?
+540245: Will the Rams win the NFC Championship?
+540249: Will the Eagles win the 2026 NFC Championship?
+540250: Will the 49ers win the 2026 NFC Championship?
+540251: Will the Seahawks win the 2026 NFC Championship?
+540254: Will the Bills win the AFC Championship?
+540256: Will the Patriots win the AFC Championship?
+540261: Will the Steelers win the AFC Championship?
+540262: Will the Texans win the AFC Championship?
+540264: Will the Jaguars win the AFC Championship?
+540266: Will the Broncos win the AFC Championship?
+540269: Will the Chargers win the AFC Championship?
+540816: Russia-Ukraine Ceasefire before GTA VI?
+540817: New Rihanna Album before GTA VI?
+540818: New Playboi Carti Album before GTA VI?
+540819: Will Jesus Christ return before GTA VI?
+540820: Trump out as President before GTA VI?
+540843: Will China invades Taiwan before GTA VI?
+540844: Will bitcoin hit $1m before GTA VI?
+540881: GTA VI released before June 2026?
+541516: Will Aidan Hutchinson be the 2025-2026 NFL Comeback Player of the Year?
+541517: Will Christian McCaffrey be the 2025-2026 NFL Comeback Player of the Year?
+541518: Will Dak Prescott be the 2025-2026 NFL Comeback Player of the Year?
+541519: Will Trevor Lawrence be the 2025-2026 NFL Comeback Player of the Year?
+541520: Will J.J. McCarthy be the 2025-2026 NFL Comeback Player of the Year?
+541521: Will Rashee Rice be the 2025-2026 NFL Comeback Player of the Year?
+541522: Will Maxx Crosby be the 2025-2026 NFL Comeback Player of the Year?
+541523: Will Brandon Aiyuk be the 2025-2026 NFL Comeback Player of the Year?
+541524: Will Tank Dell be the 2025-2026 NFL Comeback Player of the Year?
+541525: Will Derek Carr be the 2025-2026 NFL Comeback Player of the Year?
+541526: Will Tua Tagovailoa be the 2025-2026 NFL Comeback Player of the Year?
+541527: Will Chris Godwin be the 2025-2026 NFL Comeback Player of the Year?
+541528: Will Stefon Diggs be the 2025-2026 NFL Comeback Player of the Year?
+541529: Will Anthony Richardson be the 2025-2026 NFL Comeback Player of the Year?
+541530: Will Chris Olave be the 2025-2026 NFL Comeback Player of the Year?
+541531: Will Cooper Kupp be the 2025-2026 NFL Comeback Player of the Year?
+541532: Will Rashid Shaheed be the 2025-2026 NFL Comeback Player of the Year?
+541533: Will Deshaun Watson be the 2025-2026 NFL Comeback Player of the Year?
+541534: Will Kenneth Walker be the 2025-2026 NFL Comeback Player of the Year?
+541535: Will Tyler Higbee be the 2025-2026 NFL Comeback Player of the Year?
+541536: Will Dre Greenlaw be the 2025-2026 NFL Comeback Player of the Year?
+541537: Will L'Jarius Sneed be the 2025-2026 NFL Comeback Player of the Year?
+541538: Will Hollywood Brown be the 2025-2026 NFL Comeback Player of the Year?
+541539: Will Jaire Alexander be the 2025-2026 NFL Comeback Player of the Year?
+541540: Will Evan Engram be the 2025-2026 NFL Comeback Player of the Year?
+541542: Will Philip Rivers be the 2025-2026 NFL Comeback Player of the Year?
+541550: Will Abdul Carter be the 2025-2026 NFL Defensive Rookie of the Year?
+541551: Will Jalon Walker be the 2025-2026 NFL Defensive Rookie of the Year?
+541552: Will Mason Graham be the 2025-2026 NFL Defensive Rookie of the Year?
+541553: Will Mykel Williams be the 2025-2026 NFL Defensive Rookie of the Year?
+541554: Will Travis Hunter be the 2025-2026 NFL Defensive Rookie of the Year?
+541555: Will Shemar Stewart be the 2025-2026 NFL Defensive Rookie of the Year?
+541556: Will Donovan Ezeiruaku be the 2025-2026 NFL Defensive Rookie of the Year?
+541557: Will Mike Green be the 2025-2026 NFL Defensive Rookie of the Year?
+541558: Will Jihaad Campbell be the 2025-2026 NFL Defensive Rookie of the Year?
+541559: Will James Pearce Jr. be the 2025-2026 NFL Defensive Rookie of the Year?
+541560: Will Walter Nolen be the 2025-2026 NFL Defensive Rookie of the Year?
+541561: Will Malarki Starks be the 2025-2026 NFL Defensive Rookie of the Year?
+541562: Will Will Johnson be the 2025-2026 NFL Defensive Rookie of the Year?
+541563: Will Jahdae Barron be the 2025-2026 NFL Defensive Rookie of the Year?
+541564: Will JT Tuimoloau be the 2025-2026 NFL Defensive Rookie of the Year?
+541565: Will Nick Emmanowori be the 2025-2026 NFL Defensive Rookie of the Year?
+541567: Will Carson Schwesinger be the 2025-2026 NFL Defensive Rookie of the Year?
+541575: Will Ashton Jeanty be the 2025-2026 NFL Offensive Rookie of the Year?
+541576: Will Cameron Ward be the 2025-2026 NFL Offensive Rookie of the Year?
+541577: Will Travis Hunter be the 2025-2026 NFL Offensive Rookie of the Year?
+541578: Will Tetairoa McMillan be the 2025-2026 NFL Offensive Rookie of the Year?
+541579: Will Omarion Hampton be the 2025-2026 NFL Offensive Rookie of the Year?
+541580: Will Matthew Golden be the 2025-2026 NFL Offensive Rookie of the Year?
+541581: Will Shedeur Sanders be the 2025-2026 NFL Offensive Rookie of the Year?
+541582: Will Tyler Shough be the 2025-2026 NFL Offensive Rookie of the Year?
+541583: Will Jaxson Dart be the 2025-2026 NFL Offensive Rookie of the Year?
+541584: Will Tyler Warren be the 2025-2026 NFL Offensive Rookie of the Year?
+541585: Will Emeka Egbuka be the 2025-2026 NFL Offensive Rookie of the Year?
+541586: Will Quinshon Judkins be the 2025-2026 NFL Offensive Rookie of the Year?
+541587: Will RJ Harvey be the 2025-2026 NFL Offensive Rookie of the Year?
+541588: Will TreVeyon Henderson be the 2025-2026 NFL Offensive Rookie of the Year?
+541589: Will Jalen Milroe be the 2025-2026 NFL Offensive Rookie of the Year?
+541590: Will Colston Loveland be the 2025-2026 NFL Offensive Rookie of the Year?
+541591: Will Luther Burden be the 2025-2026 NFL Offensive Rookie of the Year?
+541592: Will Quinn Ewers be the 2025-2026 NFL Offensive Rookie of the Year?
+541593: Will Elijah Arroyo be the 2025-2026 NFL Offensive Rookie of the Year?
+541594: Will Jaydon Blue be the 2025-2026 NFL Offensive Rookie of the Year?
+541595: Will Will Howard be the 2025-2026 NFL Offensive Rookie of the Year?
+541596: Will Dylan Sampson be the 2025-2026 NFL Offensive Rookie of the Year?
+541597: Will Jalen Royals be the 2025-2026 NFL Offensive Rookie of the Year?
+541598: Will Elic Ayomanor be the 2025-2026 NFL Offensive Rookie of the Year?
+541599: Will Jack Bech be the 2025-2026 NFL Offensive Rookie of the Year?
+541601: Will Cam Skattebo be the 2025-2026 NFL Offensive Rookie of the Year?
+541602: Will Harrold Fannin Jr. be the 2025-2026 NFL Offensive Rookie of the Year?
+542325: Will Ben Johnson win NFL Coach of the Year?
+542326: Will Mike Vrabel win NFL Coach of the Year?
+542327: Will Liam Coen win NFL Coach of the Year?
+542328: Will Kellen Moore win NFL Coach of the Year?
+542329: Will Jim Harbaugh win NFL Coach of the Year?
+542330: Will Pete Carroll win NFL Coach of the Year?
+542331: Will Sean Payton win NFL Coach of the Year?
+542332: Will Kyle Shanahan win NFL Coach of the Year?
+542333: Will Dave Canales win NFL Coach of the Year?
+542334: Will Aaron Glenn win NFL Coach of the Year?
+542335: Will Mike Macdonald win NFL Coach of the Year?
+542336: Will Raheem Morris win NFL Coach of the Year?
+542337: Will Mike Tomlin win NFL Coach of the Year?
+542338: Will Matt LaFleur win NFL Coach of the Year?
+542339: Will Jonathan Gannon win NFL Coach of the Year?
+542340: Will Dan Quinn win NFL Coach of the Year?
+542341: Will Mike McDaniel win NFL Coach of the Year?
+542342: Will Kevin O'Connell win NFL Coach of the Year?
+542343: Will Demeco Ryans win NFL Coach of the Year?
+542344: Will Brian Daboll win NFL Coach of the Year?
+542345: Will Zac Taylor win NFL Coach of the Year?
+542346: Will Sean McVay win NFL Coach of the Year?
+542347: Will Brian Schottenheimer win NFL Coach of the Year?
+542348: Will Todd Bowles win NFL Coach of the Year?
+542349: Will Shane Steichen win NFL Coach of the Year?
+542350: Will Kevin Stefanski win NFL Coach of the Year?
+542351: Will Dan Campbell win NFL Coach of the Year?
+542352: Will Brian Callahan win NFL Coach of the Year?
+542353: Will Sean McDermott win NFL Coach of the Year?
+542354: Will John Harbaugh win NFL Coach of the Year?
+542355: Will Nick Sirianni win NFL Coach of the Year?
+542356: Will Andy Reid win NFL Coach of the Year?
+542414: Will Jordan Love lead the NFL in passing yards this season?
+542416: Will Baker Mayfield lead the NFL in passing yards this season?
+544092: Will Harvey Weinstein be sentenced to no prison time?
+544093: Will Harvey Weinstein be sentenced to less than 5 years in prison?
+544094: Will Harvey Weinstein be sentenced to between 5 and 10 years in prison?
+544095: Will Harvey Weinstein be sentenced to between 10 and 20 years in prison?
+544096: Will Harvey Weinstein be sentenced to between 20 and 30 years in prison?
+544097: Will Harvey Weinstein be sentenced to more than 30 years in prison?
+546489: Will Tristan Wirfs win the NFL Protector of the Year? 
+546490: Will Trent Williams win the NFL Protector of the Year? 
+546491: Will Brian O'Neill win the NFL Protector of the Year?
+546492: Will Joe Alt win the NFL Protector of the Year?
+546493: Will Lane Johnson win the NFL Protector of the Year? 
+546494: Will Mike McGlinchey win the NFL Protector of the Year? 
+546495: Will Garett Bolles win the NFL Protector of the Year? 
+546496: Will Dion Dawkins win the NFL Protector of the Year? 
+546497: Will Andrew Wylie win the NFL Protector of the Year? 
+546498: Will Laremy Tunsil win the NFL Protector of the Year? 
+546499: Will Penei Sewell win the NFL Protector of the Year? 
+546500: Will Ronnie Stanley win the NFL Protector of the Year?
+546501: Will Taylor Decker win the NFL Protector of the Year? 
+546502: Will Jordan Mailata win the NFL Protector of the Year? 
+546503: Will Spencer Brown win the NFL Protector of the Year?
+546504: Will Charles Cross win the NFL Protector of the Year? 
+546505: Will Joe Thuney win the NFL Protector of the Year? 
+546506: Will Tyler Linderbaum win the NFL Protector of the Year? 
+546507: Will Creed Humphrey win the NFL Protector of the Year? 
+546509: Will Tyler Smith win the NFL Protector of the Year? 
+546510: Will Ryan Kelly win the NFL Protector of the Year? 
+546511: Will Cam Jurgens win the NFL Protector of the Year? 
+546512: Will Will Campbell win the NFL Protector of the Year? 
+546612: Will OpenAI launch a new consumer hardware product by March 31, 2026?
+549868: Will Dilan Yeşilgöz-Zegerius become the next Prime Minister of the Netherlands?
+549869: Will Frans Timmermans become the next Prime Minister of the Netherlands?
+549870: Will Geert Wilders become the next Prime Minister of the Netherlands?
+549871: Will Nicolien van Vroonhoven-Kok become the next Prime Minister of the Netherlands?
+549872: Will Dick Schoof become the next Prime Minister of the Netherlands?
+549873: Will Caroline van der Plas become the next Prime Minister of the Netherlands?
+549874: Will Rob Jetten become the next Prime Minister of the Netherlands?
+549875: Will Henri Bontenbal become the next Prime Minister of the Netherlands?
+549876: Will Ahmed Aboutaleb become the next Prime Minister of the Netherlands?
+549877: Will Klaas Dijkhoff become the next Prime Minister of the Netherlands?
+550694: Will Italy qualify for the 2026 FIFA World Cup?
+550703: Will Sweden qualify for the 2026 FIFA World Cup?
+550706: Will Poland qualify for the 2026 FIFA World Cup?
+550708: Will Ukraine qualify for the 2026 FIFA World Cup?
+553824: Will the Carolina Hurricanes win the 2026 NHL Stanley Cup?
+553825: Will the Florida Panthers win the 2026 NHL Stanley Cup?
+553826: Will the Edmonton Oilers win the 2026 NHL Stanley Cup?
+553827: Will the Dallas Stars win the 2026 NHL Stanley Cup?
+553828: Will the Colorado Avalanche win the 2026 NHL Stanley Cup?
+553829: Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?
+553830: Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?
+553831: Will the Los Angeles Kings win the 2026 NHL Stanley Cup?
+553832: Will the New Jersey Devils win the 2026 NHL Stanley Cup?
+553833: Will the Winnipeg Jets win the 2026 NHL Stanley Cup?
+553834: Will the Toronto Maple Leafs win the 2026 NHL Stanley Cup?
+553835: Will the Washington Capitals win the 2026 NHL Stanley Cup?
+553836: Will the New York Rangers win the 2026 NHL Stanley Cup?
+553837: Will the Ottawa Senators win the 2026 NHL Stanley Cup?
+553838: Will the Minnesota Wild win the 2026 NHL Stanley Cup?
+553839: Will the Utah Mammoth win the 2026 NHL Stanley Cup?
+553840: Will the St. Louis Blues win the 2026 NHL Stanley Cup?
+553841: Will the Vancouver Canucks win the 2026 NHL Stanley Cup?
+553842: Will the New York Islanders win the 2026 NHL Stanley Cup?
+553843: Will the Philadelphia Flyers win the 2026 NHL Stanley Cup?
+553844: Will the Columbus Blue Jackets win the 2026 NHL Stanley Cup?
+553845: Will the Calgary Flames win the 2026 NHL Stanley Cup?
+553846: Will the Nashville Predators win the 2026 NHL Stanley Cup?
+553847: Will the Detroit Red Wings win the 2026 NHL Stanley Cup?
+553848: Will the Anaheim Ducks win the 2026 NHL Stanley Cup?
+553849: Will the Montreal Canadiens win the 2026 NHL Stanley Cup?
+553850: Will the Boston Bruins win the 2026 NHL Stanley Cup?
+553851: Will the Buffalo Sabres win the 2026 NHL Stanley Cup?
+553852: Will the Pittsburgh Penguins win the 2026 NHL Stanley Cup?
+553853: Will the Seattle Kraken win the 2026 NHL Stanley Cup?
+553854: Will the Chicago Blackhawks win the 2026 NHL Stanley Cup?
+553855: Will the San Jose Sharks win the 2026 NHL Stanley Cup?
+553856: Will the Oklahoma City Thunder win the 2026 NBA Finals?
+553857: Will the Cleveland Cavaliers win the 2026 NBA Finals?
+553858: Will the New York Knicks win the 2026 NBA Finals?
+553859: Will the Minnesota Timberwolves win the 2026 NBA Finals?
+553860: Will the Houston Rockets win the 2026 NBA Finals?
+553861: Will the Indiana Pacers win the 2026 NBA Finals?
+553862: Will the Boston Celtics win the 2026 NBA Finals?
+553863: Will the Los Angeles Lakers win the 2026 NBA Finals?
+553864: Will the Orlando Magic win the 2026 NBA Finals?
+553865: Will the Denver Nuggets win the 2026 NBA Finals?
+553866: Will the San Antonio Spurs win the 2026 NBA Finals?
+553867: Will the Golden State Warriors win the 2026 NBA Finals?
+553868: Will the Los Angeles Clippers win the 2026 NBA Finals?
+553869: Will the Philadelphia 76ers win the 2026 NBA Finals?
+553870: Will the Dallas Mavericks win the 2026 NBA Finals?
+553871: Will the Detroit Pistons win the 2026 NBA Finals?
+553872: Will the Milwaukee Bucks win the 2026 NBA Finals?
+553873: Will the Miami Heat win the 2026 NBA Finals?
+553874: Will the Memphis Grizzlies win the 2026 NBA Finals?
+553875: Will the New Orleans Pelicans win the 2026 NBA Finals?
+553876: Will the Toronto Raptors win the 2026 NBA Finals?
+553877: Will the Phoenix Suns win the 2026 NBA Finals?
+553878: Will the Chicago Bulls win the 2026 NBA Finals?
+553879: Will the Portland Trail Blazers win the 2026 NBA Finals?
+553880: Will the Brooklyn Nets win the 2026 NBA Finals?
+553881: Will the Atlanta Hawks win the 2026 NBA Finals?
+553882: Will the Charlotte Hornets win the 2026 NBA Finals?
+553883: Will the Utah Jazz win the 2026 NBA Finals?
+553884: Will the Sacramento Kings win the 2026 NBA Finals?
+553885: Will the Washington Wizards win the 2026 NBA Finals?
+555781: Will Miley Cyrus perform during the Super Bowl LX halftime show?
+555782: Will Chappell Roan perform during the Super Bowl LX halftime show?
+555783: Will Oasis perform during the Super Bowl LX halftime show?
+555784: Will Christina Aguilera perform during the Super Bowl LX halftime show?
+555785: Will Sabrina Carpenter perform during the Super Bowl LX halftime show?
+555786: Will Metallica perform during the Super Bowl LX halftime show?
+555787: Will Dua Lipa perform during the Super Bowl LX halftime show?
+555788: Will Charli XCX perform during the Super Bowl LX halftime show?
+555789: Will Billie Eilish perform during the Super Bowl LX halftime show?
+555790: Will Post Malone perform during the Super Bowl LX halftime show?
+555791: Will No Doubt perform during the Super Bowl LX halftime show?
+555792: Will Taylor Swift perform during the Super Bowl LX halftime show?
+555793: Will Cardi B perform during the Super Bowl LX halftime show?
+555794: Will Ed Sheeran perform during the Super Bowl LX halftime show?
+555795: Will Doechii perform during the Super Bowl LX halftime show?
+555796: Will Justin Bieber perform during the Super Bowl LX halftime show?
+555797: Will Teddy Swims perform during the Super Bowl LX halftime show?
+555798: Will Adele perform during the Super Bowl LX halftime show?
+555799: Will Bad Bunny perform during the Super Bowl LX halftime show?
+555800: Will Drake perform during the Super Bowl LX halftime show?
+555801: Will Green Day perform during the Super Bowl LX halftime show?
+555802: Will Travis Scott perform during the Super Bowl LX halftime show?
+555803: Will Olivia Rodrigo perform during the Super Bowl LX halftime show?
+555804: Will Luke Combs perform during the Super Bowl LX halftime show?
+555805: Will Benson Boone perform during the Super Bowl LX halftime show?
+555806: Will The Killers perform during the Super Bowl LX halftime show?
+555807: Will Harry Styles perform during the Super Bowl LX halftime show?
+555808: Will Morgan Wallen perform during the Super Bowl LX halftime show?
+555809: Will Gracie Abrams perform during the Super Bowl LX halftime show?
+555810: Will Pink perform during the Super Bowl LX halftime show?
+555811: Will Foo Fighters perform during the Super Bowl LX halftime show?
+555812: Will Robbie Williams perform during the Super Bowl LX halftime show?
+556062: MegaETH market cap (FDV) >$2B one day after launch?
+556063: MegaETH market cap (FDV) >$6B one day after launch?
+556108: Will MegaETH perform an airdrop by June 30? 
+556120: Will Jay-Z perform during the Super Bowl LX halftime show?
+558891: Will Miami Florida win the 2026 College Football National Championship?
+558909: Will Indiana win the 2026 College Football National Championship?
+558934: Will Spain win the 2026 FIFA World Cup?
+558935: Will England win the 2026 FIFA World Cup?
+558936: Will France win the 2026 FIFA World Cup?
+558937: Will Brazil win the 2026 FIFA World Cup?
+558938: Will Argentina win the 2026 FIFA World Cup?
+558939: Will Germany win the 2026 FIFA World Cup?
+558940: Will Portugal win the 2026 FIFA World Cup?
+558941: Will Netherlands win the 2026 FIFA World Cup?
+558942: Will Italy win the 2026 FIFA World Cup?
+558943: Will USA win the 2026 FIFA World Cup?
+558944: Will Uruguay win the 2026 FIFA World Cup?
+558945: Will Mexico win the 2026 FIFA World Cup?
+558946: Will Belgium win the 2026 FIFA World Cup?
+558947: Will Colombia win the 2026 FIFA World Cup?
+558949: Will Japan win the 2026 FIFA World Cup?
+558951: Will Norway win the 2026 FIFA World Cup?
+558952: Will Canada win the 2026 FIFA World Cup?
+558954: Will Tunisia win the 2026 FIFA World Cup?
+558955: Will Ecuador win the 2026 FIFA World Cup?
+558956: Will Paraguay win the 2026 FIFA World Cup?
+558957: Will New Zealand win the 2026 FIFA World Cup?
+558958: Will Australia win the 2026 FIFA World Cup?
+558959: Will Iran win the 2026 FIFA World Cup?
+558960: Will Uzbekistan win the 2026 FIFA World Cup?
+558961: Will South Korea win the 2026 FIFA World Cup?
+558962: Will Jordan win the 2026 FIFA World Cup?
+558963: Will Morocco win the 2026 FIFA World Cup?
+558964: Will South Africa win the 2026 FIFA World Cup?
+558965: Will Senegal win the 2026 FIFA World Cup?
+558966: Will Ivory Coast win the 2026 FIFA World Cup?
+558967: Will Ghana win the 2026 FIFA World Cup?
+558968: Will Egypt win the 2026 FIFA World Cup?
+558969: Will Algeria win the 2026 FIFA World Cup?
+558970: Will Cape Verde win the 2026 FIFA World Cup?
+558971: Will Qatar win the 2026 FIFA World Cup?
+558972: Will Saudi Arabia win the 2026 FIFA World Cup?
+558973: Will Scotland win the 2026 FIFA World Cup?
+558974: Will Switzerland win the 2026 FIFA World Cup?
+558975: Will Austria win the 2026 FIFA World Cup?
+558976: Will Croatia win the 2026 FIFA World Cup?
+558977: Will Haiti win the 2026 FIFA World Cup?
+558978: Will Curaçao win the 2026 FIFA World Cup?
+559651: Xi Jinping out before 2027?
+559652: Will Gavin Newsom win the 2028 Democratic presidential nomination?
+559653: Will Alexandria Ocasio-Cortez win the 2028 Democratic presidential nomination?
+559654: Will Pete Buttigieg win the 2028 Democratic presidential nomination?
+559655: Will Josh Shapiro win the 2028 Democratic presidential nomination?
+559656: Will Wes Moore win the 2028 Democratic presidential nomination?
+559657: Will Stephen A. Smith win the 2028 Democratic presidential nomination?
+559658: Will Kamala Harris win the 2028 Democratic presidential nomination?
+559659: Will Gretchen Whitmer win the 2028 Democratic presidential nomination?
+559660: Will Andy Beshear win the 2028 Democratic presidential nomination?
+559661: Will Jon Ossoff win the 2028 Democratic presidential nomination?
+559662: Will Mark Cuban win the 2028 Democratic presidential nomination?
+559663: Will J.B. Pritzker win the 2028 Democratic presidential nomination?
+559664: Will Raphael Warnock win the 2028 Democratic presidential nomination?
+559665: Will Cory Booker win the 2028 Democratic presidential nomination?
+559666: Will Tim Walz win the 2028 Democratic presidential nomination?
+559667: Will Michelle Obama win the 2028 Democratic presidential nomination?
+559668: Will Mark Kelly win the 2028 Democratic presidential nomination?
+559669: Will Rahm Emanuel win the 2028 Democratic presidential nomination?
+559670: Will Gina Raimondo win the 2028 Democratic presidential nomination?
+559671: Will Zohran Mamdani win the 2028 Democratic presidential nomination?
+559672: Will Roy Cooper win the 2028 Democratic presidential nomination?
+559673: Will John Fetterman win the 2028 Democratic presidential nomination?
+559674: Will Jared Polis win the 2028 Democratic presidential nomination?
+559675: Will Jon Stewart win the 2028 Democratic presidential nomination?
+559676: Will Barack Obama win the 2028 Democratic presidential nomination?
+559677: Will Hillary Clinton win the 2028 Democratic presidential nomination?
+559678: Will Liz Cheney win the 2028 Democratic presidential nomination?
+559679: Will Bernie Sanders win the 2028 Democratic presidential nomination?
+559680: Will Phil Murphy win the 2028 Democratic presidential nomination?
+559681: Will LeBron James win the 2028 Democratic presidential nomination?
+559682: Will Hunter Biden win the 2028 Democratic presidential nomination?
+559683: Will George Clooney win the 2028 Democratic presidential nomination?
+559684: Will Chelsea Clinton win the 2028 Democratic presidential nomination?
+559685: Will MrBeast win the 2028 Democratic presidential nomination?
+559686: Will Dwayne 'The Rock' Johnson win the 2028 Democratic presidential nomination?
+559687: Will Oprah Winfrey win the 2028 Democratic presidential nomination?
+559688: Will Andrew Yang win the 2028 Democratic presidential nomination?
+559689: Will Beto O’Rourke win the 2028 Democratic presidential nomination?
+559690: Will Kim Kardashian win the 2028 Democratic presidential nomination?
+559691: Will Chris Murphy win the 2028 Democratic presidential nomination?
+559692: Will Jasmine Crockett win the 2028 Democratic presidential nomination?
+559693: Will Ruben Gallego win the 2028 Democratic presidential nomination?
+559694: Will Ro Khanna win the 2028 Democratic presidential nomination?
+560317: Putin out as President of Russia by end of 2026?
+561229: Will JD Vance win the 2028 US Presidential Election?
+561230: Will Gavin Newsom win the 2028 US Presidential Election?
+561231: Will Alexandria Ocasio-Cortez win the 2028 US Presidential Election?
+561232: Will Pete Buttigieg win the 2028 US Presidential Election?
+561233: Will Josh Shapiro win the 2028 US Presidential Election?
+561234: Will Marco Rubio win the 2028 US Presidential Election?
+561235: Will Wes Moore win the 2028 US Presidential Election?
+561236: Will Gretchen Whitmer win the 2028 US Presidential Election?
+561237: Will Andy Beshear win the 2028 US Presidential Election?
+561238: Will Glenn Youngkin win the 2028 US Presidential Election?
+561239: Will Kamala Harris win the 2028 US Presidential Election?
+561240: Will Stephen Smith win the 2028 US Presidential Election?
+561241: Will JB Pritzker win the 2028 US Presidential Election?
+561242: Will Tulsi Gabbard win the 2028 US Presidential Election?
+561243: Will Donald Trump win the 2028 US Presidential Election?
+561244: Will Donald Trump Jr. win the 2028 US Presidential Election?
+561245: Will Nikki Haley win the 2028 US Presidential Election?
+561246: Will Ron DeSantis win the 2028 US Presidential Election?
+561247: Will Tim Walz win the 2028 US Presidential Election?
+561248: Will Vivek Ramaswamy win the 2028 US Presidential Election?
+561249: Will Greg Abbott win the 2028 US Presidential Election?
+561250: Will Elon Musk win the 2028 US Presidential Election?
+561251: Will LeBron James win the 2028 US Presidential Election?
+561252: Will Dwayne 'The Rock' Johnson win the 2028 US Presidential Election?
+561253: Will Tucker Carlson win the 2028 US Presidential Election?
+561254: Will Kim Kardashian win the 2028 US Presidential Election?
+561255: Will Ivanka Trump win the 2028 US Presidential Election?
+561256: Will Zohran Mamdani win the 2028 US Presidential Election?
+561257: Will Michelle Obama win the 2028 US Presidential Election?
+561258: Will Jamie Dimon win the 2028 US Presidential Election?
+561365: Will Cooper Flagg win the 2025–26 NBA Rookie of the Year award?
+561366: Will Tre Johnson win the 2025–26 NBA Rookie of the Year award?
+561367: Will Ace Bailey win the 2025–26 NBA Rookie of the Year award?
+561368: Will Dylan Harper win the 2025–26 NBA Rookie of the Year award?
+561369: Will V.J. Edgecombe win the 2025–26 NBA Rookie of the Year award?
+561370: Will Kon Knueppel win the 2025–26 NBA Rookie of the Year award?
+561371: Will Derik Queen win the 2025–26 NBA Rookie of the Year award?
+561372: Will Jeremiah Fears win the 2025–26 NBA Rookie of the Year award?
+561373: Will Cedric Coward win the 2025–26 NBA Rookie of the Year award?
+561377: Will Jase Richardson win the 2025–26 NBA Rookie of the Year award?
+561379: Will Walter Clayton Jr. win the 2025–26 NBA Rookie of the Year award?
+561380: Will Collin Murray-Boyles win the 2025–26 NBA Rookie of the Year award?
+561381: Will Khaman Maluach win the 2025–26 NBA Rookie of the Year award?
+561829: Russia x Ukraine ceasefire by March 31, 2026?
+561973: Will Donald Trump win the 2028 Republican presidential nomination?
+561974: Will J.D. Vance win the 2028 Republican presidential nomination?
+561975: Will Marco Rubio win the 2028 Republican presidential nomination?
+561976: Will Tulsi Gabbard win the 2028 Republican presidential nomination?
+561977: Will Glenn Youngkin win the 2028 Republican presidential nomination?
+561978: Will Donald Trump Jr. win the 2028 Republican presidential nomination?
+561979: Will Ron DeSantis win the 2028 Republican presidential nomination?
+561980: Will Nikki Haley win the 2028 Republican presidential nomination?
+561981: Will Vivek Ramaswamy win the 2028 Republican presidential nomination?
+561982: Will Sarah Huckabee Sanders win the 2028 Republican presidential nomination?
+561983: Will Greg Abbott win the 2028 Republican presidential nomination?
+561984: Will Robert F. Kennedy Jr. win the 2028 Republican presidential nomination?
+561985: Will Brian Kemp win the 2028 Republican presidential nomination?
+561986: Will Byron Donalds win the 2028 Republican presidential nomination?
+561987: Will Elise Stefanik win the 2028 Republican presidential nomination?
+561988: Will Josh Hawley win the 2028 Republican presidential nomination?
+561989: Will Ted Cruz win the 2028 Republican presidential nomination?
+561990: Will Elon Musk win the 2028 Republican presidential nomination?
+561991: Will Matt Gaetz win the 2028 Republican presidential nomination?
+561992: Will Katie Britt win the 2028 Republican presidential nomination?
+561993: Will John Thune win the 2028 Republican presidential nomination?
+561994: Will Kristi Noem win the 2028 Republican presidential nomination?
+561995: Will Mike Pence win the 2028 Republican presidential nomination?
+561996: Will Tucker Carlson win the 2028 Republican presidential nomination?
+561998: Will Ivanka Trump win the 2028 Republican presidential nomination?
+561999: Will Tom Brady win the 2028 Republican presidential nomination?
+562000: Will Rand Paul win the 2028 Republican presidential nomination?
+562001: Will Steve Bannon win the 2028 Republican presidential nomination?
+562002: Will Erika Kirk win the 2028 Republican presidential nomination?
+562003: Will Kim Kardashian win the 2028 Republican presidential nomination?
+562004: Will Marjorie Taylor Greene win the 2028 Republican presidential nomination?
+562186: Will Ken Paxton win the 2026 Texas Republican Primary?
+562187: Will John Cornyn win the 2026 Texas Republican Primary?
+562188: Will Dawn Buckingham win the 2026 Texas Republican Primary?
+562189: Will Beth Van Duyne win the 2026 Texas Republican Primary?
+562190: Will Wesley Hunt win the 2026 Texas Republican Primary?
+562793: Will the Democratic Party control the Senate after the 2026 Midterm elections?
+562794: Will the Republican Party control the Senate after the 2026 Midterm elections?
+562802: Will the Democratic Party control the House after the 2026 Midterm elections?
+562803: Will the Republican Party control the House after the 2026 Midterm elections?
+562828: 2026 Balance of Power: D Senate, D House
+562829: 2026 Balance of Power: D Senate, R House
+562830: 2026 Balance of Power: R Senate, D House
+562831: 2026 Balance of Power: R Senate, R House
+562832: 2026 Balance of Power: Other

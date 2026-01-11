@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+634434: Will Blue Moon win Best Motion Picture – Musical or Comedy at the 83rd Golden Globes?
+634435: Will No Other Choice win Best Motion Picture – Musical or Comedy at the 83rd Golden Globes?
+634436: Will Nouvelle Vague win Best Motion Picture – Musical or Comedy at the 83rd Golden Globes?
+634437: Will One Battle After Another win Best Motion Picture – Musical or Comedy at the 83rd Golden Globes?
+634878: Will the Democrats win the Louisiana Senate race in 2026?
+634879: Will the Republicans win the Louisiana Senate race in 2026?
+634891: Will the Democrats win the Nebraska Senate race in 2026?
+634892: Will the Republicans win the Nebraska Senate race in 2026?
+634974: Will Dan Sullivan win the Alaska Senate race in 2026?
+634975: Will Ann Diener win the Alaska Senate race in 2026?
+634976: Will Mary Peltola win the Alaska Senate race in 2026?
+634977: Will Dustin Darden win the Alaska Senate race in 2026?
+634978: Will Richard Grayson win the Alaska Senate race in 2026?
+635003: Will Click Bishop win the 2026 Alaska governor election?
+635004: Will David Bronson win the 2026 Alaska governor election?
+635005: Will Adam Crum win the 2026 Alaska governor election?
+635006: Will Nancy Dahlstrom win the 2026 Alaska governor election?
+635007: Will Edna DeVries win the 2026 Alaska governor election?
+635008: Will Matt Heilala win the 2026 Alaska governor election?
+635009: Will Shelley Hughes win the 2026 Alaska governor election?
+635010: Will James Parkin win the 2026 Alaska governor election?
+635011: Will Treg Taylor win the 2026 Alaska governor election?
+635012: Will Bernadette Wilson win the 2026 Alaska governor election?
+635013: Will Lisa Murkowski win the 2026 Alaska governor election?
+635014: Will Tom Begich win the 2026 Alaska governor election?
+635015: Will Mary Peltola win the 2026 Alaska governor election?
+635503: Will the next Dutch government be PVV + JA21?
+635504: Will the next Dutch government be PVV + CDA + JA21?
+635505: Will the next Dutch government be PVV + VVD + JA21?
+635506: Will the next Dutch government be PVV + VVD + CDA + JA21?
+635507: Will the next Dutch government be PVV + VVD + JA21 + D66?
+635508: Will the next Dutch government be PVV + VVD + CDA + JA21 + D66?
+635509: Will the next Dutch government be PVV + VVD?
+635510: Will the next Dutch government be PVV + VVD + CDA?
+635511: Will the next Dutch government be PVV + CDA?
+635512: Will the next Dutch government be PVV + CDA + D66?
+635513: Will the next Dutch government be PVV + VVD + D66?
+635514: Will the next Dutch government be PVV + VVD + CDA + D66?
+635515: Will the next Dutch government be VVD + JA21?
+635516: Will the next Dutch government be VVD + CDA + JA21?
+635517: Will the next Dutch government be VVD + CDA + JA21 + D66?
+635518: Will the next Dutch government be VVD + CDA?
+635519: Will the next Dutch government be VVD + D66?
+635520: Will the next Dutch government be CDA + D66?
+635521: Will the next Dutch government be VVD + CDA + D66?
+635522: Will the next Dutch government be GL/PvdA + VVD?
+635523: Will the next Dutch government be GL/PvdA + VVD + CDA?
+635524: Will the next Dutch government be GL/PvdA + VVD + D66?
+635528: Will the next Dutch government be PVV + GL/PvdA + VVD + CDA?
+635529: Will the next Dutch government be PVV + GL/PvdA + VVD + CDA + D66?
+635530: Will the next Dutch government be GL/PvdA + D66 + CDA?
+635532: Will the next Dutch government be GL/PvdA + CDA?
+635533: Will the next Dutch government be GL/PvdA + D66?
+635534: Will the next Dutch government be GL/PvdA?
+635535: Will the next Dutch government be another combination?
+635536: Will there be no coalition by October 31?
+636111: MegaETH market cap (FDV) >$4B one day after launch?
+636921: Will Israel annex Gaza territory by June 30 2026?
+637002: Will Donald Trump win the Nobel Peace Prize in 2026?
+637003: Will Pope Leo XIV win the Nobel Peace Prize in 2026?
+637004: Will Yulia Navalnaya win the Nobel Peace Prize in 2026?
+637005: Will Julian Assange win the Nobel Peace Prize in 2026?
+637006: Will Greta Thunberg win the Nobel Peace Prize in 2026?
+637007: Will Elon Musk win the Nobel Peace Prize in 2026?
+637008: Will UNRWA win the Nobel Peace Prize in 2026?
+637009: Will the International Court of Justice win the Nobel Peace Prize in 2026?
+637010: Will António Guterres win the Nobel Peace Prize in 2026?
+637011: Will Volodymyr Zelenskyy win the Nobel Peace Prize in 2026?
+637012: Will Tamim bin Hamad Al Thani win the Nobel Peace Prize in 2026?
+637013: Will Vladimir Putin win the Nobel Peace Prize in 2026?
+637014: Will Khaled Mashal win the Nobel Peace Prize in 2026?
+637015: Will Benjamin Netanyahu win the Nobel Peace Prize in 2026?
+637016: Will Recep Tayyip Erdoğan win the Nobel Peace Prize in 2026?
+637017: Will Xi Jinping win the Nobel Peace Prize in 2026?
+637018: Will Ahmed al-Sharaa win the Nobel Peace Prize in 2026?
+637019: Will Charlie Kirk win the Nobel Peace Prize in 2026?
+637020: Will Mohammed bin Salman win the Nobel Peace Prize in 2026?
+637021: Will Narendra Modi win the Nobel Peace Prize in 2026?
+637456: Ink FDV above $500M one day after launch?
+637457: Ink FDV above $1B one day after launch?
+637905: Will a new Cabinet of the Netherlands be sworn in by March 31, 2026?
+637906: Will a new Cabinet of the Netherlands be sworn in by June 30, 2026?
+637910: Will Mitch McConnell step down from the Senate before his term ends?
+638513: Belichick out by end of 2025 college football season?
+638649: Will SpaceX Starship Flight Test 12 launch by January 31?
+638650: Will the chopsticks catch SpaceX Starship Flight Test 12 Superheavy booster?
+638651: Will SpaceX Starship Flight Test 12 Superheavy explode?
+638652: Will the Starship for SpaceX Starship Flight Test 12 achieve a successful splashdown?
+643369: Will the Atlanta Hawks make the NBA Playoffs?
+643370: Will the Boston Celtics make the NBA Playoffs?
+643371: Will the Brooklyn Nets make the NBA Playoffs?
+643372: Will the Charlotte Hornets make the NBA Playoffs?
+643373: Will the Chicago Bulls make the NBA Playoffs?
+643374: Will the Cleveland Cavaliers make the NBA Playoffs?
+643375: Will the Dallas Mavericks make the NBA Playoffs?
+643376: Will the Denver Nuggets make the NBA Playoffs?
+643377: Will the Detroit Pistons make the NBA Playoffs?
+643379: Will the Golden State Warriors make the NBA Playoffs?
+643380: Will the Houston Rockets make the NBA Playoffs?
+643384: Will the Indiana Pacers make the NBA Playoffs?
+643386: Will the Los Angeles Clippers make the NBA Playoffs?
+643388: Will the Los Angeles Lakers make the NBA Playoffs?
+643389: Will the Memphis Grizzlies make the NBA Playoffs?
+643390: Will the Miami Heat make the NBA Playoffs?
+643391: Will the Milwaukee Bucks make the NBA Playoffs?
+643392: Will the Minnesota Timberwolves make the NBA Playoffs?
+643393: Will the New Orleans Pelicans make the NBA Playoffs?
+643394: Will the New York Knicks make the NBA Playoffs?
+643395: Will the Oklahoma City Thunder make the NBA Playoffs?
+643396: Will the Orlando Magic make the NBA Playoffs?
+643397: Will the Philadelphia 76ers make the NBA Playoffs?
+643398: Will the Phoenix Suns make the NBA Playoffs?
+643399: Will the Portland Trail Blazers make the NBA Playoffs?
+643400: Will the Sacramento Kings make the NBA Playoffs?
+643401: Will the San Antonio Spurs make the NBA Playoffs?
+643402: Will the Toronto Raptors make the NBA Playoffs?
+643403: Will the Utah Jazz make the NBA Playoffs?
+643404: Will the Washington Wizards make the NBA Playoffs?
+643439: Will the New Orleans Pelicans win the 2025–2026 NBA Southwest Division?
+643440: Will the Dallas Mavericks win the 2025–2026 NBA Southwest Division?
+643441: Will the San Antonio Spurs win the 2025–2026 NBA Southwest Division?
+643442: Will the Memphis Grizzlies win the 2025–2026 NBA Southwest Division?
+643443: Will the Houston Rockets win the 2025–2026 NBA Southwest Division?
+643444: Will the Oklahoma City Thunder win the 2025–2026 NBA Northwest Division?
+643445: Will the Denver Nuggets win the 2025–2026 NBA Northwest Division?
+643446: Will the Minnesota Timberwolves win the 2025–2026 NBA Northwest Division?
+643447: Will the Portland Trail Blazers win the 2025–2026 NBA Northwest Division?
+643448: Will the Utah Jazz win the 2025–2026 NBA Northwest Division?
+643449: Will the Golden State Warriors win the 2025–2026 NBA Pacific Division?
+643450: Will the Los Angeles Clippers win the 2025–2026 NBA Pacific Division?
+643451: Will the Los Angeles Lakers win the 2025–2026 NBA Pacific Division?
+643452: Will the Phoenix Suns win the 2025–2026 NBA Pacific Division?
+643453: Will the Sacramento Kings win the 2025–2026 NBA Pacific Division?
+643454: Will the Chicago Bulls win the 2025–2026 NBA Central Division?
+643455: Will the Cleveland Cavaliers win the 2025–2026 NBA Central Division?
+643456: Will the Detroit Pistons win the 2025–2026 NBA Central Division?
+643457: Will the Indiana Pacers win the 2025–2026 NBA Central Division?
+643458: Will the Milwaukee Bucks win the 2025–2026 NBA Central Division?
+643459: Will the Atlanta Hawks win the 2025–2026 NBA Southeast Division?
+643460: Will the Miami Heat win the 2025–2026 NBA Southeast Division?
+643461: Will the Orlando Magic win the 2025–2026 NBA Southeast Division?
+643462: Will the Washington Wizards win the 2025–2026 NBA Southeast Division?
+643463: Will the Charlotte Hornets win the 2025–2026 NBA Southeast Division?
+643464: Will the Boston Celtics win the 2025–2026 NBA Atlantic Division?
+643465: Will the Brooklyn Nets win the 2025–2026 NBA Atlantic Division?
+643466: Will the New York Knicks win the 2025–2026 NBA Atlantic Division?
+643467: Will the Philadelphia 76ers win the 2025–2026 NBA Atlantic Division?
+643468: Will the Toronto Raptors win the 2025–2026 NBA Atlantic Division?
+643471: Will the Atlanta Hawks finish with the best record in the NBA?
+643472: Will the Boston Celtics finish with the best record in the NBA?
+643473: Will the Brooklyn Nets finish with the best record in the NBA?
+643474: Will the Charlotte Hornets finish with the best record in the NBA?
+643475: Will the Chicago Bulls finish with the best record in the NBA?
+643476: Will the Cleveland Cavaliers finish with the best record in the NBA?
+643477: Will the Dallas Mavericks finish with the best record in the NBA?
+643478: Will the Denver Nuggets finish with the best record in the NBA?
+643479: Will the Detroit Pistons finish with the best record in the NBA?
+643480: Will the Golden State Warriors finish with the best record in the NBA?
+643481: Will the Houston Rockets finish with the best record in the NBA?
+643482: Will the Indiana Pacers finish with the best record in the NBA?
+643483: Will the Los Angeles Clippers finish with the best record in the NBA?
+643484: Will the Los Angeles Lakers finish with the best record in the NBA?
+643485: Will the Memphis Grizzlies finish with the best record in the NBA?
+643486: Will the Miami Heat finish with the best record in the NBA?
+643487: Will the Milwaukee Bucks finish with the best record in the NBA?
+643488: Will the Minnesota Timberwolves finish with the best record in the NBA?
+643489: Will the New Orleans Pelicans finish with the best record in the NBA?
+643490: Will the New York Knicks finish with the best record in the NBA?
+643491: Will the Oklahoma City Thunder finish with the best record in the NBA?
+643492: Will the Orlando Magic finish with the best record in the NBA?
+643493: Will the Philadelphia 76ers finish with the best record in the NBA?
+643494: Will the Phoenix Suns finish with the best record in the NBA?
+643495: Will the Portland Trail Blazers finish with the best record in the NBA?
+643496: Will the Sacramento Kings finish with the best record in the NBA?
+643497: Will the San Antonio Spurs finish with the best record in the NBA?
+643498: Will the Toronto Raptors finish with the best record in the NBA?
+643499: Will the Utah Jazz finish with the best record in the NBA?
+643500: Will the Washington Wizards finish with the best record in the NBA?
+643501: Will the Atlanta Hawks have the worst record in the NBA?
+643502: Will the Boston Celtics have the worst record in the NBA?
+643503: Will the Brooklyn Nets have the worst record in the NBA?
+643504: Will the Charlotte Hornets have the worst record in the NBA?
+643505: Will the Chicago Bulls have the worst record in the NBA?
+643506: Will the Cleveland Cavaliers have the worst record in the NBA?
+643507: Will the Dallas Mavericks have the worst record in the NBA?
+643508: Will the Denver Nuggets have the worst record in the NBA?
+643509: Will the Detroit Pistons have the worst record in the NBA?
+643510: Will the Golden State Warriors have the worst record in the NBA?
+643511: Will the Houston Rockets have the worst record in the NBA?
+643512: Will the Indiana Pacers have the worst record in the NBA?
+643513: Will the Los Angeles Clippers have the worst record in the NBA?
+643514: Will the Los Angeles Lakers have the worst record in the NBA?
+643515: Will the Memphis Grizzlies have the worst record in the NBA?
+643516: Will the Miami Heat have the worst record in the NBA?
+643517: Will the Milwaukee Bucks have the worst record in the NBA?
+643518: Will the Minnesota Timberwolves have the worst record in the NBA?
+643519: Will the New Orleans Pelicans have the worst record in the NBA?
+643520: Will the New York Knicks have the worst record in the NBA?
+643521: Will the Oklahoma City Thunder have the worst record in the NBA?
+643522: Will the Orlando Magic have the worst record in the NBA?
+643523: Will the Philadelphia 76ers have the worst record in the NBA?
+643524: Will the Phoenix Suns have the worst record in the NBA?
+643525: Will the Portland Trail Blazers have the worst record in the NBA?
+643526: Will the Sacramento Kings have the worst record in the NBA?
+643527: Will the San Antonio Spurs have the worst record in the NBA?
+643528: Will the Toronto Raptors have the worst record in the NBA?
+643529: Will the Utah Jazz have the worst record in the NBA?
+643530: Will the Washington Wizards have the worst record in the NBA?
+643550: Will Victor Wembanyama win the 2025–2026 NBA Defensive Player of the Year?
+643551: Will Chet Holmgren win the 2025–2026 NBA Defensive Player of the Year?
+643552: Will Evan Mobley win the 2025–2026 NBA Defensive Player of the Year?
+643553: Will Amen Thompson win the 2025–2026 NBA Defensive Player of the Year?
+643554: Will Dyson Daniels win the 2025–2026 NBA Defensive Player of the Year?
+643555: Will Anthony Davis win the 2025–2026 NBA Defensive Player of the Year?
+643556: Will Draymond Green win the 2025–2026 NBA Defensive Player of the Year?
+643557: Will Jaren Jackson Jr. win the 2025–2026 NBA Defensive Player of the Year?
+643558: Will Ausar Thompson win the 2025–2026 NBA Defensive Player of the Year?
+643559: Will Jalen Suggs win the 2025–2026 NBA Defensive Player of the Year?
+643560: Will Luguentz Dort win the 2025–2026 NBA Defensive Player of the Year?
+643561: Will Jonathan Isaac win the 2025–2026 NBA Defensive Player of the Year?
+643562: Will Ivica Zubac win the 2025–2026 NBA Defensive Player of the Year?
+643563: Will Alex Caruso win the 2025–2026 NBA Defensive Player of the Year?
+643564: Will Zach Edey win the 2025–2026 NBA Defensive Player of the Year?
+643565: Will Brook Lopez win the 2025–2026 NBA Defensive Player of the Year?
+643566: Will Kris Dunn win the 2025–2026 NBA Defensive Player of the Year?
+643567: Will Jalen Duren win the 2025–2026 NBA Defensive Player of the Year?
+643568: Will Jarred Vanderbilt win the 2025–2026 NBA Defensive Player of the Year?
+643569: Will Walker Kessler win the 2025–2026 NBA Defensive Player of the Year?
+643570: Will Rudy Gobert win the 2025–2026 NBA Defensive Player of the Year?
+643571: Will Bilal Coulibaly win the 2025–2026 NBA Defensive Player of the Year?
+643572: Will Kel'el Ware win the 2025–2026 NBA Defensive Player of the Year?
+643573: Will Donovan Clingan win the 2025–2026 NBA Defensive Player of the Year?
+643574: Will Joel Embiid win the 2025–2026 NBA Defensive Player of the Year?
+643575: Will Jarrett Allen win the 2025–2026 NBA Defensive Player of the Year?
+643576: Will Keon Ellis win the 2025–2026 NBA Defensive Player of the Year?
+643577: Will Nicolas Claxton win the 2025–2026 NBA Defensive Player of the Year?
+643578: Will Bam Adebayo win the 2025–2026 NBA Defensive Player of the Year?
+643579: Will Giannis Antetokounmpo win the 2025–2026 NBA Defensive Player of the Year?
+643606: Will DeAndre Hunter win the 2025–2026 NBA Sixth Man of the Year?
+643607: Will Anfernee Simons win the 2025–2026 NBA Sixth Man of the Year?
+643608: Will Onyeka Okongwu win the 2025–2026 NBA Sixth Man of the Year?
+643609: Will Bobby Portis win the 2025–2026 NBA Sixth Man of the Year?
+643610: Will Jordan Clarkson win the 2025–2026 NBA Sixth Man of the Year?
+643611: Will Gradey Dick win the 2025–2026 NBA Sixth Man of the Year?
+643612: Will Aaron Wiggins win the 2025–2026 NBA Sixth Man of the Year?
+643613: Will T.J. McConnell win the 2025–2026 NBA Sixth Man of the Year?
+643614: Will Nikola Jovic win the 2025–2026 NBA Sixth Man of the Year?
+643615: Will Zacharie Risacher win the 2025–2026 NBA Sixth Man of the Year?
+643616: Will Naz Reid win the 2025–2026 NBA Sixth Man of the Year?
+643617: Will Tari Eason win the 2025–2026 NBA Sixth Man of the Year?
+643618: Will Reed Sheppard win the 2025–2026 NBA Sixth Man of the Year?
+643619: Will Jared McCain win the 2025–2026 NBA Sixth Man of the Year?
+643620: Will P.J. Washington win the 2025–2026 NBA Sixth Man of the Year?
+643621: Will Payton Pritchard win the 2025–2026 NBA Sixth Man of the Year?
+643622: Will Obi Toppin win the 2025–2026 NBA Sixth Man of the Year?
+643623: Will Nickeil Alexander-Walker win the 2025–2026 NBA Sixth Man of the Year?
+643624: Will Jerami Grant win the 2025–2026 NBA Sixth Man of the Year?
+643625: Will Collin Sexton win the 2025–2026 NBA Sixth Man of the Year?
+643626: Will John Collins win the 2025–2026 NBA Sixth Man of the Year?
+643627: Will Ty Jerome win the 2025–2026 NBA Sixth Man of the Year?
+643628: Will Bradley Beal win the 2025–2026 NBA Sixth Man of the Year?
+643629: Will Norman Powell win the 2025–2026 NBA Sixth Man of the Year?
+643630: Will Jonathan Kuminga win the 2025–2026 NBA Sixth Man of the Year?
+643631: Will Santi Aldama win the 2025–2026 NBA Sixth Man of the Year?
+643632: Will Caris LeVert win the 2025–2026 NBA Sixth Man of the Year?
+643633: Will Donte DiVincenzo win the 2025–2026 NBA Sixth Man of the Year?
+643634: Will Keldon Johnson win the 2025–2026 NBA Sixth Man of the Year?
+643635: Will Miles McBride win the 2025–2026 NBA Sixth Man of the Year?
+643662: Will Amen Thompson win the 2025–2026 NBA Most Improved Player?
+643663: Will Andrew Nembhard win the 2025–2026 NBA Most Improved Player?
+643664: Will Deni Avdija win the 2025–2026 NBA Most Improved Player?
+643665: Will Ausar Thompson win the 2025–2026 NBA Most Improved Player?
+643666: Will Michael Porter Jr. win the 2025–2026 NBA Most Improved Player?
+643667: Will Kevin Porter win the 2025–2026 NBA Most Improved Player?
+643668: Will Scoot Henderson win the 2025–2026 NBA Most Improved Player?
+643669: Will Jaden Ivey win the 2025–2026 NBA Most Improved Player?
+643670: Will Gradey Dick win the 2025–2026 NBA Most Improved Player?
+643671: Will Alperen Sengun win the 2025–2026 NBA Most Improved Player?
+643672: Will Josh Giddey win the 2025–2026 NBA Most Improved Player?
+643673: Will Shaedon Sharpe win the 2025–2026 NBA Most Improved Player?
+643674: Will Nikola Jovic win the 2025–2026 NBA Most Improved Player?
+643675: Will Reed Sheppard win the 2025–2026 NBA Most Improved Player?
+643676: Will Brandon Miller win the 2025–2026 NBA Most Improved Player?
+643677: Will Chet Holmgren win the 2025–2026 NBA Most Improved Player?
+643678: Will Trey Murphy III win the 2025–2026 NBA Most Improved Player?
+643679: Will Carlton Carrington win the 2025–2026 NBA Most Improved Player?
+643680: Will Jonathan Kuminga win the 2025–2026 NBA Most Improved Player?
+643681: Will Taylor Hendricks win the 2025–2026 NBA Most Improved Player?
+643682: Will Bennedict Mathurin win the 2025–2026 NBA Most Improved Player?
+643683: Will Matas Buzelis win the 2025–2026 NBA Most Improved Player?
+643684: Will Derrick White win the 2025–2026 NBA Most Improved Player?
+643685: Will Payton Pritchard win the 2025–2026 NBA Most Improved Player?
+643686: Will Victor Wembanyama win the 2025–2026 NBA Most Improved Player?
+643687: Will Cam Whitmore win the 2025–2026 NBA Most Improved Player?
+643688: Will Jay Huff win the 2025–2026 NBA Most Improved Player?
+643689: Will Jalen Johnson win the 2025–2026 NBA Most Improved Player?
+643690: Will Kyle Filipowski win the 2025–2026 NBA Most Improved Player?
+643691: Will Kel'el Ware win the 2025–2026 NBA Most Improved Player?
+643692: Will Jalen Duren win the 2025–2026 NBA Most Improved Player?
+643693: Will Ryan Rollins win the 2025–2026 NBA Most Improved Player?
+643694: Will Keyonte George win the 2025–2026 NBA Most Improved Player?
+643718: Will Anthony Edwards win the 2025–2026 NBA Clutch Player of the Year?
+643719: Will Nikola Jokic win the 2025–2026 NBA Clutch Player of the Year?
+643720: Will De'Aaron Fox win the 2025–2026 NBA Clutch Player of the Year?
+643721: Will Paolo Banchero win the 2025–2026 NBA Clutch Player of the Year?
+643722: Will Giannis Antetokounmpo win the 2025–2026 NBA Clutch Player of the Year?
+643723: Will Darius Garland win the 2025–2026 NBA Clutch Player of the Year?
+643724: Will Franz Wagner win the 2025–2026 NBA Clutch Player of the Year?
+643725: Will Jamal Murray win the 2025–2026 NBA Clutch Player of the Year?
+643726: Will Jimmy Butler win the 2025–2026 NBA Clutch Player of the Year?
+643727: Will Joel Embiid win the 2025–2026 NBA Clutch Player of the Year?
+643728: Will Jalen Brunson win the 2025–2026 NBA Clutch Player of the Year?
+643729: Will Luka Doncic win the 2025–2026 NBA Clutch Player of the Year?
+643730: Will Stephen Curry win the 2025–2026 NBA Clutch Player of the Year?
+643731: Will DeMar DeRozan win the 2025–2026 NBA Clutch Player of the Year?
+643732: Will Donovan Mitchell win the 2025–2026 NBA Clutch Player of the Year?
+643733: Will Shai Gilgeous-Alexander win the 2025–2026 NBA Clutch Player of the Year?
+643734: Will Desmond Bane win the 2025–2026 NBA Clutch Player of the Year?
+643735: Will Victor Wembanyama win the 2025–2026 NBA Clutch Player of the Year?
+643736: Will Anthony Davis win the 2025–2026 NBA Clutch Player of the Year?
+643737: Will Pascal Siakam win the 2025–2026 NBA Clutch Player of the Year?
+643738: Will Kevin Durant win the 2025–2026 NBA Clutch Player of the Year?
+643739: Will Trae Young win the 2025–2026 NBA Clutch Player of the Year?
+643740: Will Cade Cunningham win the 2025–2026 NBA Clutch Player of the Year?
+643741: Will Tyrese Maxey win the 2025–2026 NBA Clutch Player of the Year?
+643742: Will Ja Morant win the 2025–2026 NBA Clutch Player of the Year?
+643743: Will Jaylen Brown win the 2025–2026 NBA Clutch Player of the Year?
+643744: Will James Harden win the 2025–2026 NBA Clutch Player of the Year?
+643745: Will Devin Booker win the 2025–2026 NBA Clutch Player of the Year?
+643746: Will Coby White win the 2025–2026 NBA Clutch Player of the Year?
+643747: Will LaMelo Ball win the 2025–2026 NBA Clutch Player of the Year?
+643774: Will Jamahl Mosley win the 2025–2026 NBA Coach of the Year?
+643775: Will Mike Brown win the 2025–2026 NBA Coach of the Year?
+643776: Will Joe Mazzulla win the 2025–2026 NBA Coach of the Year?
+643777: Will Nick Nurse win the 2025–2026 NBA Coach of the Year?
+643778: Will David Adelman win the 2025–2026 NBA Coach of the Year?
+643779: Will Rick Carlisle win the 2025–2026 NBA Coach of the Year?
+643780: Will Mark Daigneault win the 2025–2026 NBA Coach of the Year?
+643781: Will Billy Donovan win the 2025–2026 NBA Coach of the Year?
+643782: Will Doc Rivers win the 2025–2026 NBA Coach of the Year?
+643783: Will Brian Keefe win the 2025–2026 NBA Coach of the Year?
+643784: Will Quin Snyder win the 2025–2026 NBA Coach of the Year?
+643785: Will Ime Udoka win the 2025–2026 NBA Coach of the Year?
+643786: Will Tyronn Lue win the 2025–2026 NBA Coach of the Year?
+643787: Will JJ Redick win the 2025–2026 NBA Coach of the Year?
+643788: Will Mark Daignault win the 2025–2026 NBA Coach of the Year?
+643789: Will Jason Kidd win the 2025–2026 NBA Coach of the Year?
+643790: Will Willie Green win the 2025–2026 NBA Coach of the Year?
+643791: Will Steve Kerr win the 2025–2026 NBA Coach of the Year?
+643792: Will Jordan Ott win the 2025–2026 NBA Coach of the Year?
+643793: Will Will Hardy win the 2025–2026 NBA Coach of the Year?
+643794: Will JB Bickerstaff win the 2025–2026 NBA Coach of the Year?
+643795: Will Darko Rajakovic win the 2025–2026 NBA Coach of the Year?
+643796: Will Erik Spoelstra win the 2025–2026 NBA Coach of the Year?
+643797: Will Mitch Johnson win the 2025–2026 NBA Coach of the Year?
+643798: Will Chauncey Billups win the 2025–2026 NBA Coach of the Year?
+643799: Will Tuomas Iisalo win the 2025–2026 NBA Coach of the Year?
+643800: Will Chris Finch win the 2025–2026 NBA Coach of the Year?
+643801: Will Charles Lee win the 2025–2026 NBA Coach of the Year?
+643802: Will Jordi Fernandez win the 2025–2026 NBA Coach of the Year?
+643803: Will Kenny Atkinson win the 2025–2026 NBA Coach of the Year?
+643830: Will Shai Gilgeous-Alexander lead the NBA in points during the 2025–26 NBA season?
+643831: Will Giannis Antetokounmpo lead the NBA in points during the 2025–26 NBA season?
+643832: Will Luka Doncic lead the NBA in points during the 2025–26 NBA season?
+643833: Will Anthony Edwards lead the NBA in points during the 2025–26 NBA season?
+643834: Will Nikola Jokic lead the NBA in points during the 2025–26 NBA season?
+643835: Will Devin Booker lead the NBA in points during the 2025–26 NBA season?
+643836: Will Joel Embiid lead the NBA in points during the 2025–26 NBA season?
+643837: Will Jaylen Brown lead the NBA in points during the 2025–26 NBA season?
+643838: Will Cade Cunningham lead the NBA in points during the 2025–26 NBA season?
+643839: Will Jalen Brunson lead the NBA in points during the 2025–26 NBA season?
+643840: Will Ja Morant lead the NBA in points during the 2025–26 NBA season?
+643841: Will Victor Wembanyama lead the NBA in points during the 2025–26 NBA season?
+643842: Will Kevin Durant lead the NBA in points during the 2025–26 NBA season?
+643843: Will Paolo Banchero lead the NBA in points during the 2025–26 NBA season?
+643844: Will Zion Williamson lead the NBA in points during the 2025–26 NBA season?
+643845: Will Anthony Davis lead the NBA in points during the 2025–26 NBA season?
+643846: Will Tyrese Maxey lead the NBA in points during the 2025–26 NBA season?
+643847: Will LaMelo Ball lead the NBA in points during the 2025–26 NBA season?
+643848: Will Donovan Mitchell lead the NBA in points during the 2025–26 NBA season?
+643849: Will Cam Thomas lead the NBA in points during the 2025–26 NBA season?
+643850: Will Trae Young lead the NBA in points during the 2025–26 NBA season?
+643851: Will Stephen Curry lead the NBA in points during the 2025–26 NBA season?
+643852: Will Karl-Anthony Towns lead the NBA in points during the 2025–26 NBA season?
+643853: Will Jaren Jackson Jr. lead the NBA in points during the 2025–26 NBA season?
+643854: Will Jalen Green lead the NBA in points during the 2025–26 NBA season?
+643855: Will Kawhi Leonard lead the NBA in points during the 2025–26 NBA season?
+643856: Will Jalen Williams lead the NBA in points during the 2025–26 NBA season?
+643857: Will Pascal Siakam lead the NBA in points during the 2025–26 NBA season?
+643858: Will LeBron James lead the NBA in points during the 2025–26 NBA season?
+643859: Will Michael Porter Jr. lead the NBA in points during the 2025–26 NBA season?
+643860: Will Shaedon Sharpe lead the NBA in points during the 2025–26 NBA season?
+643861: Will Brandon Ingram lead the NBA in points during the 2025–26 NBA season?
+643862: Will CJ McCollum lead the NBA in points during the 2025–26 NBA season?
+643863: Will Franz Wagner lead the NBA in points during the 2025–26 NBA season?
+643864: Will Lauri Markkanen lead the NBA in points during the 2025–26 NBA season?
+643865: Will James Harden lead the NBA in points during the 2025–26 NBA season?
+643866: Will Zach LaVine lead the NBA in points during the 2025–26 NBA season?
+643867: Will DeMar DeRozan lead the NBA in points during the 2025–26 NBA season?
+643868: Will RJ Barrett lead the NBA in points during the 2025–26 NBA season?
+643869: Will Julius Randle lead the NBA in points during the 2025–26 NBA season?
+643870: Will Jordan Poole lead the NBA in points during the 2025–26 NBA season?
+643871: Will Alperen Sengun lead the NBA in points during the 2025–26 NBA season?
+643872: Will Brandon Miller lead the NBA in points during the 2025–26 NBA season?
+643873: Will Desmond Bane lead the NBA in points during the 2025–26 NBA season?
+643900: Will Domantas Sabonis lead the NBA in rebounds during the 2025–26 NBA season?
+643901: Will Nikola Jokic lead the NBA in rebounds during the 2025–26 NBA season?
+643902: Will Walker Kessler lead the NBA in rebounds during the 2025–26 NBA season?
+643903: Will Ivica Zubac lead the NBA in rebounds during the 2025–26 NBA season?
+643904: Will Karl-Anthony Towns lead the NBA in rebounds during the 2025–26 NBA season?
+643905: Will Giannis Antetokounmpo lead the NBA in rebounds during the 2025–26 NBA season?
+643906: Will Victor Wembanyama lead the NBA in rebounds during the 2025–26 NBA season?
+643907: Will Rudy Gobert lead the NBA in rebounds during the 2025–26 NBA season?
+643908: Will Anthony Davis lead the NBA in rebounds during the 2025–26 NBA season?
+643909: Will Jalen Duren lead the NBA in rebounds during the 2025–26 NBA season?
+643910: Will Donovan Clingan lead the NBA in rebounds during the 2025–26 NBA season?
+643911: Will Mark Williams lead the NBA in rebounds during the 2025–26 NBA season?
+643912: Will Alperen Sengun lead the NBA in rebounds during the 2025–26 NBA season?
+643913: Will Deandre Ayton lead the NBA in rebounds during the 2025–26 NBA season?
+643914: Will Mitchell Robinson lead the NBA in rebounds during the 2025–26 NBA season?
+643915: Will Isaiah Hartenstein lead the NBA in rebounds during the 2025–26 NBA season?
+643916: Will Nikola Vucevic lead the NBA in rebounds during the 2025–26 NBA season?
+643917: Will Zach Edey lead the NBA in rebounds during the 2025–26 NBA season?
+643918: Will Kel'el Ware lead the NBA in rebounds during the 2025–26 NBA season?
+643919: Will Yves Missi lead the NBA in rebounds during the 2025–26 NBA season?
+643920: Will Jarrett Allen lead the NBA in rebounds during the 2025–26 NBA season?
+643921: Will Joel Embiid lead the NBA in rebounds during the 2025–26 NBA season?
+643922: Will Chet Holmgren lead the NBA in rebounds during the 2025–26 NBA season?
+643923: Will Evan Mobley lead the NBA in rebounds during the 2025–26 NBA season?
+643924: Will Onyeka Okongwu lead the NBA in rebounds during the 2025–26 NBA season?
+643925: Will Bam Adebayo lead the NBA in rebounds during the 2025–26 NBA season?
+643926: Will Jalen Johnson lead the NBA in rebounds during the 2025–26 NBA season?
+643927: Will Jakob Poeltl lead the NBA in rebounds during the 2025–26 NBA season?
+643928: Will Nic Claxton lead the NBA in rebounds during the 2025–26 NBA season?
+643929: Will LeBron James lead the NBA in rebounds during the 2025–26 NBA season?
+643930: Will Josh Hart lead the NBA in rebounds during the 2025–26 NBA season?
+643931: Will Amen Thompson lead the NBA in rebounds during the 2025–26 NBA season?
+643932: Will Luka Doncic lead the NBA in rebounds during the 2025–26 NBA season?
+643933: Will Josh Giddey lead the NBA in rebounds during the 2025–26 NBA season?
+643934: Will Dereck Lively lead the NBA in rebounds during the 2025–26 NBA season?
+643935: Will Moussa Diabate lead the NBA in rebounds during the 2025–26 NBA season?
+643936: Will Neemias Queta lead the NBA in rebounds during the 2025–26 NBA season?
+643963: Will Trae Young lead the NBA in assists during the 2025–26 NBA season?
+643964: Will Nikola Jokic lead the NBA in assists during the 2025–26 NBA season?
+643965: Will James Harden lead the NBA in assists during the 2025–26 NBA season?
+643966: Will Cade Cunningham lead the NBA in assists during the 2025–26 NBA season?
+643967: Will Luka Doncic lead the NBA in assists during the 2025–26 NBA season?
+643968: Will Isaiah Collier lead the NBA in assists during the 2025–26 NBA season?
+643969: Will Josh Giddey lead the NBA in assists during the 2025–26 NBA season?
+643970: Will LaMelo Ball lead the NBA in assists during the 2025–26 NBA season?
+643971: Will Ja Morant lead the NBA in assists during the 2025–26 NBA season?
+643972: Will Andrew Nembhard lead the NBA in assists during the 2025–26 NBA season?
+643973: Will Devin Booker lead the NBA in assists during the 2025–26 NBA season?
+643974: Will Giannis Antetokounmpo lead the NBA in assists during the 2025–26 NBA season?
+643975: Will De'Aaron Fox lead the NBA in assists during the 2025–26 NBA season?
+643976: Will Jalen Brunson lead the NBA in assists during the 2025–26 NBA season?
+643977: Will Derrick White lead the NBA in assists during the 2025–26 NBA season?
+643978: Will Darius Garland lead the NBA in assists during the 2025–26 NBA season?
+643979: Will LeBron James lead the NBA in assists during the 2025–26 NBA season?
+643980: Will Chris Paul lead the NBA in assists during the 2025–26 NBA season?
+643981: Will Shai Gilgeous-Alexander lead the NBA in assists during the 2025–26 NBA season?
+643982: Will Tyrese Maxey lead the NBA in assists during the 2025–26 NBA season?
+643983: Will Domantas Sabonis lead the NBA in assists during the 2025–26 NBA season?
+643984: Will Immanuel Quickley lead the NBA in assists during the 2025–26 NBA season?
+643985: Will T.J. McConnell lead the NBA in assists during the 2025–26 NBA season?
+643986: Will Draymond Green lead the NBA in assists during the 2025–26 NBA season?
+643987: Will Stephen Curry lead the NBA in assists during the 2025–26 NBA season?
+643988: Will Keyonte George lead the NBA in assists during the 2025–26 NBA season?
+643989: Will Scottie Barnes lead the NBA in assists during the 2025–26 NBA season?
+643990: Will Jimmy Butler lead the NBA in assists during the 2025–26 NBA season?
+643991: Will Alperen Sengun lead the NBA in assists during the 2025–26 NBA season?
+643992: Will Jamal Murray lead the NBA in assists during the 2025–26 NBA season?
+643993: Will Donovan Mitchell lead the NBA in assists during the 2025–26 NBA season?
+644020: Will Stephen Curry lead the NBA in three pointers made during the 2025–26 NBA season?
+644021: Will Anthony Edwards lead the NBA in three pointers made during the 2025–26 NBA season?
+644022: Will Luka Doncic lead the NBA in three pointers made during the 2025–26 NBA season?
+644023: Will Payton Pritchard lead the NBA in three pointers made during the 2025–26 NBA season?
+644024: Will Derrick White lead the NBA in three pointers made during the 2025–26 NBA season?
+644025: Will LaMelo Ball lead the NBA in three pointers made during the 2025–26 NBA season?
+644026: Will Brandon Miller lead the NBA in three pointers made during the 2025–26 NBA season?
+644027: Will Michael Porter Jr. lead the NBA in three pointers made during the 2025–26 NBA season?
+644028: Will Anfernee Simons lead the NBA in three pointers made during the 2025–26 NBA season?
+644029: Will Trey Murphy III lead the NBA in three pointers made during the 2025–26 NBA season?
+644030: Will Donovan Mitchell lead the NBA in three pointers made during the 2025–26 NBA season?
+644031: Will Victor Wembanyama lead the NBA in three pointers made during the 2025–26 NBA season?
+644032: Will Desmond Bane lead the NBA in three pointers made during the 2025–26 NBA season?
+644033: Will Cam Thomas lead the NBA in three pointers made during the 2025–26 NBA season?
+644034: Will Tyrese Maxey lead the NBA in three pointers made during the 2025–26 NBA season?
+644035: Will Coby White lead the NBA in three pointers made during the 2025–26 NBA season?
+644036: Will Jordan Poole lead the NBA in three pointers made during the 2025–26 NBA season?
+644037: Will Trae Young lead the NBA in three pointers made during the 2025–26 NBA season?
+644038: Will Brice Sensabaugh lead the NBA in three pointers made during the 2025–26 NBA season?
+644039: Will Zach LaVine lead the NBA in three pointers made during the 2025–26 NBA season?
+644040: Will Donte DiVincenzo lead the NBA in three pointers made during the 2025–26 NBA season?
+644041: Will Jalen Green lead the NBA in three pointers made during the 2025–26 NBA season?
+644042: Will Jalen Brunson lead the NBA in three pointers made during the 2025–26 NBA season?
+644043: Will Lauri Markkanen lead the NBA in three pointers made during the 2025–26 NBA season?
+644044: Will Austin Reaves lead the NBA in three pointers made during the 2025–26 NBA season?
+644045: Will Darius Garland lead the NBA in three pointers made during the 2025–26 NBA season?
+644046: Will Buddy Hield lead the NBA in three pointers made during the 2025–26 NBA season?

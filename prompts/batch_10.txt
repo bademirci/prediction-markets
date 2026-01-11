@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+676940: Will Bernard Arnault be richest person on December 31?
+676941: Will Jeff Bezos be richest person on December 31?
+676942: Will Jensen Huang be richest person on December 31?
+676943: Will Warren Buffett be richest person on December 31?
+676944: Will Steve Ballmer be richest person on December 31?
+676945: Will Larry Page be richest person on December 31?
+676946: Will Sergey Brin be richest person on December 31?
+676991: Transgender women be banned from the Olympics before Winter Games?
+676992: Will Frank Ocean release a new song in 2026?
+676993: Will Drake release a new song in 2026?
+676995: Will Lana Del Rey release a new song in 2026?
+676996: Will Lil Uzi Vert release a new song in 2026?
+676997: Will Nicki Minaj release a new song in 2026?
+676998: Will Charli XCX release a new song in 2026?
+676999: Will Beyoncé release a new song in 2026?
+677000: Will Kanye West release a new song in 2026?
+677001: Will JAY-Z release a new song in 2026?
+677002: Will SZA release a new song in 2026?
+677003: Will BTS release a new song in 2026?
+677004: Will Olivia Rodrigo release a new song in 2026?
+677005: Will Kendrick Lamar release a new song in 2026?
+677006: Will Taylor Swift release a new song in 2026?
+677021: Will the 10-year Treasury yield hit 4.5% before 2027?
+677022: Will the 10-year Treasury yield hit 4.6% before 2027?
+677023: Will the 10-year Treasury yield hit 4.8% before 2027?
+677024: Will the 10-year Treasury yield hit 5.0% before 2027?
+677025: Will the 10-year Treasury yield hit 5.2% before 2027?
+677026: Will the 10-year Treasury yield hit 5.5% before 2027?
+677027: Will the 10-year Treasury yield hit 5.7% before 2027?
+677028: Will the 10-year Treasury yield hit 6.0% before 2027?
+677053: Will a transgender women athlete compete at the 2026 Winter Olympics?
+677138: Will the 10-year Treasury yield dip below 4.0% before 2027?
+677139: Will the 10-year Treasury yield dip below 3.5% before 2027?
+677140: Will the 10-year Treasury yield dip below 3.0% before 2027?
+677141: Will the 10-year Treasury yield dip below 2.0% before 2027?
+677142: Will the 10-year Treasury yield dip below 1.0% before 2027?
+677143: Will the 10-year Treasury yield dip below 3.6% before 2027?
+677144: Will the 10-year Treasury yield dip below 3.7% before 2027?
+677145: Will the 10-year Treasury yield dip below 3.8% before 2027?
+677146: Will the 10-year Treasury yield dip below 3.9% before 2027?
+677147: Fed emergency rate cut before 2027?
+677164: Will US GDP growth in 2026 be less than 0.5%?
+677165: Will US GDP growth in 2026 be between 0.5% and 1.0%?
+677166: Will US GDP growth in 2026 be between 1.0% and 1.5%?
+677167: Will US GDP growth in 2026 be between 1.5% and 2.0%?
+677168: Will US GDP growth in 2026 be between 2.0% and 2.5%?
+677169: Will US GDP growth in 2026 be greater than 2.5%?
+677178: Will Spark launch a token by March 31?
+677197: Will Hakeem Jeffries win the 2026 New York 8th District Democratic Primary?
+677198: Will Vance Bostic win the 2026 New York 8th District Democratic Primary?
+677199: Will Chi Ossé win the 2026 New York 8th District Democratic Primary?
+677218: Will Half-Life 3 be announced before 2027?
+677273: Israel and Syria normalize relations by December 31, 2026?
+677274: Israel and Syria normalize relations by June 30, 2026?
+677314: Israel and Indonesia normalize relations by June 30, 2026?
+677315: Israel and Indonesia normalize relations by December 31, 2026?
+677320: GOP uses 'Nuclear Option' to break filibuster by March 31, 2026?
+677332: US bank failure by March 31?
+677341: Major U.S. bank bailout before 2027?
+677352: Will India strike Pakistan by March 31?
+677356: Will India strike Pakistan by December 31, 2026?
+677357: Will Hamas agree to disarm by March 31?
+677358: Ukraine election held by December 31, 2026?
+677361: Will Russia capture Kostyantynivka by March 31?
+677366: Will Russia capture Kostyantynivka by December 31, 2026?
+677367: China coup attempt before 2027?
+677375: Will Russia rejoin the G7 before 2027?
+677393: Hezbollah strike on Israel by March 31?
+677394: Modi out before 2027?
+677395: Will Trump send Tomahawk to Ukraine by March 31?
+677396: Iran Nuke before 2027?
+677397: Will Israel launch a major ground offensive in Lebanon by March 31?
+677398: Will Israel launch a major ground offensive in Gaza by March 31?
+677403: US recognizes Russian sovereignty over Ukraine before 2027?
+677404: China x India military clash by December 31, 2026?
+677405: US x Iran nuclear talks resume by March 31? 
+677406: Russian strike on Poland by June 30?
+677407: China x Taiwan military clash before 2027?
+677408: China x Philippines military clash before 2027?
+678116: Will the ECB announce a 50+ bps decrease at the February 2026 meeting?
+678117: Will the ECB announce a 25 bps decrease at the February 2026 meeting?
+678118: Will the ECB announce no change at the February 2026 meeting?
+678119: Will the ECB announce an increase at the February 2026 meeting?
+678407: Will Wicked: For Good be the top grossing movie of 2026?
+678408: Will Wuthering Heights be the top grossing movie of 2026?
+678409: Will Scream 7 be the top grossing movie of 2026?
+678410: Will Michael be the top grossing movie of 2026?
+678411: Will Star Wars: The Mandalorian and Grogu be the top grossing movie of 2026?
+678412: Will Toy Story 5 be the top grossing movie of 2026?
+678413: Will The Odyssey be the top grossing movie of 2026?
+678414: Will Spider-Man: Brand New Day be the top grossing movie of 2026?
+678415: Will The Hunger Games: Sunrise on the Reaping be the top grossing movie of 2026?
+678416: Will Avengers: Doomsday be the top grossing movie of 2026?
+678417: Will Dune: Messiah be the top grossing movie of 2026?
+678418: Will Project Hail Mary be the top grossing movie of 2026?
+678419: Will The Super Mario Galaxy Movie be the top grossing movie of 2026?
+678420: Will Jumanji 3 be the top grossing movie of 2026?
+678439: Will Wuthering Heights have the best domestic opening weekend in 2026?
+678440: Will Scream 7 have the best domestic opening weekend in 2026?
+678441: Will Michael have the best domestic opening weekend in 2026?
+678442: Will Star Wars: The Mandalorian and Grogu have the best domestic opening weekend in 2026?
+678443: Will Toy Story 5 have the best domestic opening weekend in 2026?
+678444: Will The Odyssey have the best domestic opening weekend in 2026?
+678445: Will Spider-Man: Brand New Day have the best domestic opening weekend in 2026?
+678446: Will The Hunger Games: Sunrise on the Reaping have the best domestic opening weekend in 2026?
+678447: Will Avengers: Doomsday have the best domestic opening weekend in 2026?
+678448: Will Dune: Messiah have the best domestic opening weekend in 2026?
+678449: Will Project Hail Mary have the best domestic opening weekend in 2026?
+678669: Paradex FDV above $750M one day after launch?
+678670: Paradex FDV above $1.5B one day after launch?
+678671: Paradex FDV above $3B one day after launch?
+678672: Paradex FDV above $5B one day after launch?
+678673: Paradex FDV above $10B one day after launch?
+678686: Will 2026 be the hottest year on record?
+678687: Will 2026 be the second-hottest year on record?
+678688: Will 2026 be the third-hottest year on record?
+678689: Will 2026 be the fourth-hottest year on record?
+678690: Will 2026 be the fifth-hottest year on record?
+678691: Will 2026 rank as the sixth-hottest year on record or lower?
+678693: Will another AI-generated song reach number 1 on any Billboard chart by June 30?
+678744: Will Israel strike 1 country in 2026?
+678745: Will Israel strike 2 countries in 2026?
+678746: Will Israel strike 3 countries in 2026?
+678747: Will Israel strike 4 countries in 2026?
+678748: Will Israel strike 5 countries in 2026?
+678749: Will Israel strike 6 countries in 2026?
+678750: Will Israel strike 7 countries in 2026?
+678751: Will Israel strike 8 countries in 2026?
+678752: Will Israel strike 9 countries in 2026?
+678753: Will Israel strike 10 countries in 2026?
+678754: Will Israel strike 11 countries in 2026?
+678755: Will Israel strike 12 countries in 2026?
+678756: Will Israel strike 13 countries in 2026?
+678757: Will Israel strike 14 countries in 2026?
+678758: Will Israel strike 15 or more countries in 2026?
+678772: Will the US strike 3 countries in 2026?
+678773: Will the US strike 4 countries in 2026?
+678774: Will the US strike 5 countries in 2026?
+678775: Will the US strike 6 countries in 2026?
+678776: Will the US strike 7 countries in 2026?
+678777: Will the US strike 8 countries in 2026?
+678778: Will the US strike 9 countries in 2026?
+678779: Will the US strike 10 countries in 2026?
+678780: Will the US strike 11 countries in 2026?
+678781: Will the US strike 12 countries in 2026?
+678782: Will the US strike 13 countries in 2026?
+678783: Will the US strike 14 countries in 2026?
+678784: Will the US strike 15 or more countries in 2026?
+678825: Will a US ally get a nuke before 2027?
+678876: Kraken IPO by March 31, 2026?
+678929: Will Oh Se-hoon win the 2026 Seoul Mayoral Election
+678930: Will Na Kyung-won win the 2026 Seoul Mayoral Election
+678931: Will Cho Eun-hee win the 2026 Seoul Mayoral Election
+678932: Will Han Dong-hoon win the 2026 Seoul Mayoral Election
+678933: Will Ahn Cheol-soo win the 2026 Seoul Mayoral Election
+678934: Will Park Ju-min win the 2026 Seoul Mayoral Election
+678935: Will Park Yong-jin win the 2026 Seoul Mayoral Election
+678936: Will Park Hong-keun win the 2026 Seoul Mayoral Election
+678937: Will Chong Won-oh win the 2026 Seoul Mayoral Election
+678938: Will Seo Young-kyo win the 2026 Seoul Mayoral Election
+678939: Will Hong Ihk-pyo win the 2026 Seoul Mayoral Election
+678940: Will Jeon Hyun-heui win the 2026 Seoul Mayoral Election
+678941: Will Cho Kuk win the 2026 Seoul Mayoral Election
+678943: Will Kang Hoon-sik win the 2026 Seoul Mayoral Election
+679003: Will Amy Allen win Songwriter of the Year, Non-Classical at the 68th annual GRAMMY Awards?
+679004: Will Edgar Barrera win Songwriter of the Year, Non-Classical at the 68th annual GRAMMY Awards?
+679005: Will Jessie Jo Dillon win Songwriter of the Year, Non-Classical at the 68th annual GRAMMY Awards?
+679006: Will Tobias Jesso Jr. win Songwriter of the Year, Non-Classical at the 68th annual GRAMMY Awards?
+679007: Will Laura Veltz win Songwriter of the Year, Non-Classical at the 68th annual GRAMMY Awards?
+679018: Will Marine Le Pen win the 2027 French presidential election?
+679019: Will Jordan Bardella win the 2027 French presidential election?
+679020: Will Éric Zemmour win the 2027 French presidential election?
+679021: Will Édouard Philippe win the 2027 French presidential election?
+679022: Will David Lisnard win the 2027 French presidential election?
+679023: Will Xavier Bertrand win the 2027 French presidential election?
+679024: Will Laurent Wauquiez win the 2027 French presidential election?
+679025: Will François Ruffin win the 2027 French presidential election?
+679026: Will Gabriel Attal win the 2027 French presidential election?
+679027: Will Bruno Retailleau win the 2027 French presidential election?
+679028: Will François Hollande win the 2027 French presidential election?
+679029: Will Raphaël Glucksmann win the 2027 French presidential election?
+679030: Will Jean-Luc Mélenchon win the 2027 French presidential election?
+679031: Will Marine Tondelier win the 2027 French presidential election?
+679032: Will Fabien Roussel win the 2027 French presidential election?
+679033: Will Olivier Faure win the 2027 French presidential election?
+679034: Will Dominique de Villepin win the 2027 French presidential election?
+679035: Will Ségolène Royal win the 2027 French presidential election?
+679036: Will François Asselineau win the 2027 French presidential election?
+679037: Will Clémentine Autain win the 2027 French presidential election?
+679038: Will Nicolas Dupont-Aignan win the 2027 French presidential election?
+679039: Will Michel Barnier win the 2027 French presidential election?
+679040: Will Valérie Pécresse win the 2027 French presidential election?
+679041: Will François Bayrou win the 2027 French presidential election?
+679042: Will Élisabeth Borne win the 2027 French presidential election?
+679043: Will Yaël Braun-Pivet win the 2027 French presidential election?
+679044: Will Jean Castex win the 2027 French presidential election?
+679045: Will Gérald Darmanin win the 2027 French presidential election?
+679046: Will Carole Delga win the 2027 French presidential election?
+679047: Will Bernard Cazeneuve win the 2027 French presidential election?
+679048: Will Manuel Bompard win the 2027 French presidential election?
+679049: Will Mathilde Panot win the 2027 French presidential election?
+679051: Will Sarah Knafo win the 2027 French presidential election?
+679052: Will Juan Branco win the 2027 French presidential election?
+679053: Will Clémence Guetté win the 2027 French presidential election?
+679054: Will Sébastien Lecornu win the 2027 French presidential election?
+679152: Will Park Heong-joon win the 2026 Busan Mayoral Election?
+679153: Will Kim Do-eup win the 2026 Busan Mayoral Election?
+679154: Will Cho Kyoung-tae win the 2026 Busan Mayoral Election?
+679155: Will Suh Byung-soo win the 2026 Busan Mayoral Election?
+679156: Will Park Seong-hoon win the 2026 Busan Mayoral Election?
+679157: Will Park Jae-ho win the 2026 Busan Mayoral Election?
+679158: Will Choi In-ho win the 2026 Busan Mayoral Election?
+679159: Will Chun Jae-soo win the 2026 Busan Mayoral Election?
+679160: Will Lee Jae-sung win the 2026 Busan Mayoral Election?
+679161: Will Kim Young-choon win the 2026 Busan Mayoral Election?
+679162: Will Hong Soon-heon win the 2026 Busan Mayoral Election?
+679163: Will Cho Kuk win the 2026 Busan Mayoral Election?
+679226: Will Colin Allred be the Democratic nominee for Senate in Texas?
+679227: Will Emily Morgul be the Democratic nominee for Senate in Texas?
+679228: Will Michael Swanson be the Democratic nominee for Senate in Texas?
+679229: Will James Talarico be the Democratic nominee for Senate in Texas?
+679230: Will Beto O'Rourke be the Democratic nominee for Senate in Texas?
+679231: Will Jasmine Crockett be the Democratic nominee for Senate in Texas?
+679255: Will Steve Botsford Jr. be the Democratic nominee for Senate in Illinois?
+679256: Will Sean Brown be the Democratic nominee for Senate in Illinois?
+679257: Will Awisi Bustos be the Democratic nominee for Senate in Illinois?
+679258: Will Jonathan Dean be the Democratic nominee for Senate in Illinois?
+679259: Will Adam Delgado be the Democratic nominee for Senate in Illinois?
+679260: Will Robin Kelly be the Democratic nominee for Senate in Illinois?
+679261: Will Raja Krishnamoorthi be the Democratic nominee for Senate in Illinois?
+679262: Will Stanley Leavell be the Democratic nominee for Senate in Illinois?
+679263: Will Bryan Maxwell be the Democratic nominee for Senate in Illinois?
+679264: Will Robert Palmer be the Democratic nominee for Senate in Illinois?
+679265: Will Adair Rodriquez be the Democratic nominee for Senate in Illinois?
+679266: Will Kevin Ryan be the Democratic nominee for Senate in Illinois?
+679267: Will Jump Shepherd be the Democratic nominee for Senate in Illinois?
+679268: Will Juliana Stratton be the Democratic nominee for Senate in Illinois?
+679269: Will Christopher Swann be the Democratic nominee for Senate in Illinois?
+679270: Will Anthony Williams be the Democratic nominee for Senate in Illinois?
+679292: Will Panagioti Bartzis be the Republican nominee for Senate in Illinois?
+679293: Will Doug Bennett be the Republican nominee for Senate in Illinois?
+679294: Will R. Cary Capparelli be the Republican nominee for Senate in Illinois?
+679295: Will Casey Chlebek be the Republican nominee for Senate in Illinois?
+679296: Will CaSándra Claiborne be the Republican nominee for Senate in Illinois?
+679297: Will Jeannie Evans be the Republican nominee for Senate in Illinois?
+679298: Will John Goodman be the Republican nominee for Senate in Illinois?
+679299: Will Lloyd Jones be the Republican nominee for Senate in Illinois?
+679300: Will Pamela Denise Long be the Republican nominee for Senate in Illinois?
+679301: Will Januario Ortega be the Republican nominee for Senate in Illinois?
+679302: Will Jimmy Lee Tillman II be the Republican nominee for Senate in Illinois?
+679303: Will Don Tracy be the Republican nominee for Senate in Illinois?
+679364: Will Chris Henry be the Democratic nominee for Senate in Iowa?
+679365: Will Nathan Sage be the Democratic nominee for Senate in Iowa?
+679366: Will Josh Turek be the Democratic nominee for Senate in Iowa?
+679367: Will Zach Wahls be the Democratic nominee for Senate in Iowa?
+679397: Will John Berman be the Republican nominee for Senate in Iowa?
+679398: Will Jim Carlin be the Republican nominee for Senate in Iowa?
+679399: Will Ashley Hinson be the Republican nominee for Senate in Iowa?
+679400: Will Joshua Smith be the Republican nominee for Senate in Iowa?
+679490: Will Kim Dong-yeon win the 2026 Gyeonggi Province Gubernatorial Election?
+679491: Will Kim Byeong-ju win the 2026 Gyeonggi Province Gubernatorial Election?
+679492: Will Choo Mi-ae win the 2026 Gyeonggi Province Gubernatorial Election?
+679493: Will Yeom Tae-yeong win the 2026 Gyeonggi Province Gubernatorial Election?
+679494: Will Han Jun-ho win the 2026 Gyeonggi Province Gubernatorial Election?
+679495: Will Lee Un-ju win the 2026 Gyeonggi Province Gubernatorial Election?
+679496: Will Yoo Seong-min win the 2026 Gyeonggi Province Gubernatorial Election?
+679497: Will Kim Eun-hye win the 2026 Gyeonggi Province Gubernatorial Election?
+679498: Will Han Dong-hoon win the 2026 Gyeonggi Province Gubernatorial Election?
+679499: Will Kim Moon-soo win the 2026 Gyeonggi Province Gubernatorial Election?
+679500: Will Won Hee-ryong win the 2026 Gyeonggi Province Gubernatorial Election?
+679501: Will Ahn Cheol-soo win the 2026 Gyeonggi Province Gubernatorial Election?
+679502: Will Lee Jun-seok win the 2026 Gyeonggi Province Gubernatorial Election?
+679504: Will Na Kyung-won win the 2026 Gyeonggi Province Gubernatorial Election?
+679583: Will John Hickenlooper be the Democratic nominee for Senate in Colorado?
+679584: Will Karen Breslin be the Democratic nominee for Senate in Colorado?
+679585: Will Brashad Hasley be the Democratic nominee for Senate in Colorado?
+679586: Will Nichole Miner be the Democratic nominee for Senate in Colorado?
+679587: Will Michael Scanlon be the Democratic nominee for Senate in Colorado?
+679588: Will Anthony Zimpfer be the Democratic nominee for Senate in Colorado?
+679589: Will Julie Gonzales be the Democratic nominee for Senate in Colorado?
+679605: Will Dathan Jones be the Republican nominee for Senate in Colorado?
+679606: Will Janak Joshi be the Republican nominee for Senate in Colorado?
+679607: Will George Washington Markert be the Republican nominee for Senate in Colorado?
+679650: Will Reagan Box be the Republican nominee for Senate in Georgia?
+679651: Will Earl Carter be the Republican nominee for Senate in Georgia?
+679652: Will Christina Loren Clement be the Republican nominee for Senate in Georgia?
+679653: Will Mike Collins be the Republican nominee for Senate in Georgia?
+679654: Will Derek Dooley be the Republican nominee for Senate in Georgia?
+679655: Will Christoph La'Flare Chapman be the Republican nominee for Senate in Georgia?
+679656: Will Jonathan McColumn be the Republican nominee for Senate in Georgia?
+679657: Will Rick Temple be the Republican nominee for Senate in Georgia?
+679658: Will Vinson Watkins be the Republican nominee for Senate in Georgia?
+679687: Will Backpack launch a token by March 31?
+679688: Will Backpack launch a token by December 31, 2026?
+679689: Will Dakarai Larriett be the Democratic nominee for Senate in Alabama?
+679690: Will Lamont Lavender be the Democratic nominee for Senate in Alabama?
+679691: Will Kyle Sweetser be the Democratic nominee for Senate in Alabama?
+679692: Will Mark Wheeler be the Democratic nominee for Senate in Alabama?
+679709: Backpack FDV above $1B one day after launch?
+679710: Backpack FDV above $2B one day after launch?
+679711: Backpack FDV above $3B one day after launch?
+679712: Backpack FDV above $4B one day after launch?
+679713: Backpack FDV above $5B one day after launch?
+679718: Will Jared Hudson be the Republican nominee for Senate in Alabama?
+679719: Will Steve Marshall be the Republican nominee for Senate in Alabama?
+679720: Will Barry Moore be the Republican nominee for Senate in Alabama?
+679721: Will Morgan Murphy be the Republican nominee for Senate in Alabama?
+679722: Will Rodney Walker be the Republican nominee for Senate in Alabama?
+679889: Will a dLLM be the top AI model before 2027?
+679894: Will xAI release a dLLM by June 30?
+680046: Will Victor Wembanyama record a quadruple double this season?
+680392: Will there be another US government shutdown by January 31?
+680416: Mid-America Christian Evangels vs. Campbell Fighting Camels
+680561: Will monthly inflation increase by 0.1% or less in November?
+680562: Will monthly inflation increase by 0.2% in November?
+680563: Will monthly inflation increase by 0.3% in November?
+680564: Will monthly inflation increase by 0.4% in November?
+680565: Will monthly inflation increase by 0.5% or more in November?
+680566: Will NewJeans perform again by March 31?
+680601: Negative GDP growth in 2026?
+680656: StandX FDV above $5B one day after launch?
+680661: TrumpRX launched by January 31, 2026?
+680662: StandX FDV above $7B one day after launch?
+680664: StandX FDV above $10B one day after launch?
+680919: Aleksandar Vučić out as Serbian President by June 30, 2026?
+680949: Will inflation reach more than 3% in 2026?
+680950: Will inflation reach more than 4% in 2026?
+680951: Will inflation reach more than 5% in 2026?
+680952: Will inflation reach more than 6% in 2026?
+680953: Will inflation reach more than 8% in 2026?
+680954: Will inflation reach more than 10% in 2026?
+681018: Will DISY win the most seats at the Cyprus House of Representatives election?
+681019: Will AKEL win the most seats at the Cyprus House of Representatives election?
+681020: Will DIKO win the most seats at the Cyprus House of Representatives election?
+681021: Will ELAM win the most seats at the Cyprus House of Representatives election?
+681022: Will EDEK win the most seats at the Cyprus House of Representatives election?
+681023: Will DIPA win the most seats at the Cyprus House of Representatives election?
+681024: Will KOSP win the most seats at the Cyprus House of Representatives election?
+681025: Will VOLT win the most seats at the Cyprus House of Representatives election?
+681026: Will DNM (DEK) win the most seats at the Cyprus House of Representatives election?
+681144: Will Ukraine agree to cede territory to Russia before 2027?
+681146: Will a new country buy Bitcoin by June 30, 2026?
+681147: Will a new country buy Bitcoin by December 31, 2026?
+681244: Will Kathy Hochul win the 2026 New York Democratic Gubernatorial Primary?
+681245: Will Antonio Delgado win the 2026 New York Democratic Gubernatorial Primary?
+681313: US takes Panama Canal before 2027?
+681362: Will Eric Ciotti win the 2026 Nice mayoral election?
+681363: Will Christian Estrosi win the 2026 Nice mayoral election?
+681364: Will Jean-Marc Governatori win the 2026 Nice mayoral election?
+681365: Will Juliette Chesnel-Leroux win the 2026 Nice mayoral election?
+681366: Will Mireille Damiano win the 2026 Nice mayoral election?
+681389: Will Jean-Michel Aulas win the 2026 Lyon mayoral election?
+681390: Will Grégory Doucet win the 2026 Lyon mayoral election?
+681391: Will Anaïs Belouassa-Cherifi win the 2026 Lyon mayoral election?
+681392: Will Alexandre Dupalais win the 2026 Lyon mayoral election?
+681393: Will Georges Képénékian win the 2026 Lyon mayoral election?
+681394: Will Nathalie Perrin-Gilbert win the 2026 Lyon mayoral election?
+682144: U.S. Embassy in Damascus reopened by June 30, 2026?
+682162: Fetterman out before 2027?
+682399: Will the Bank of Brazil raise the Selic rate after January 2026 meeting?
+682400: No change in the Selic rate after Bank of Brazil's January 2026 meeting?
+682401: Will the Bank of Brazil lower the Selic rate after January 2026 meeting?
+682405: Will Republicans lose a seat in the House of Representatives in any state Trump won in 2024?
+682705: Will Benjamin Netanyahu be the next Prime Minister of Israel?
+682706: Will Naftali Bennett be the next Prime Minister of Israel?
+682707: Will Yair Lapid be the next Prime Minister of Israel?
+682708: Will Gadi Eizenkot be the next Prime Minister of Israel?
+682709: Will Benny Gantz be the next Prime Minister of Israel?
+682710: Will Avigdor Lieberman be the next Prime Minister of Israel?
+682711: Will Yossi Cohen be the next Prime Minister of Israel?
+682712: Will Yair Golan be the next Prime Minister of Israel?
+682713: Will Itamar Ben Gvir be the next Prime Minister of Israel?
+682714: Will Gideon Sa’ar be the next Prime Minister of Israel?
+682715: Will Yariv Levin be the next Prime Minister of Israel?
+682716: Will Moshe Feiglin be the next Prime Minister of Israel?
+682717: Will Ayelet Shaked be the next Prime Minister of Israel?
+682718: Will Yoaz Hendel be the next Prime Minister of Israel?
+682956: Will Republicans lose a seat in the US Senate for any state Trump won in 2024?
+683206: Will Schumer remain Minority Leader through March 31?
+683278: Will Yoweri Kaguta Museveni win the 2026 Ugandan presidential election?
+683279: Will Robert Kasibante win the 2026 Ugandan presidential election?
+683280: Will Joseph Mabirizi win the 2026 Ugandan presidential election?
+683281: Will Nathan James Nandala Mafabi win the 2026 Ugandan presidential election?
+683282: Will Gregory Mugisha Muntuyera win the 2026 Ugandan presidential election?
+683283: Will Robert Kyagulanyi Ssentamu win the 2026 Ugandan presidential election?
+683284: Will Munyagwa Mubarak Sserunga win the 2026 Ugandan presidential election?
+683285: Will Bulira Frank Kabinga win the 2026 Ugandan presidential election?
+683344: Will the Steam Machine cost $700 or more at release?
+685543: Saint Joseph's Hawks vs. Syracuse Orange
+685601: Georgia College & State Bobcats vs. South Florida Bulls
+686161: Will Infinex launch a token by March 31, 2026?
+686166: Infinex FDV above $1B one day after launch?
+686167: Infinex FDV above $2B one day after launch?
+686168: Infinex FDV above $3B one day after launch?
+686169: Infinex FDV above $4B one day after launch?
+686170: Infinex FDV above $5B one day after launch?
+686179: Will Infinex launch a token by June 30, 2026?
+686250: Will Jayson Tatum play a game this season?
+686306: Will Justin Tucker sign with an NFL team this year?
+686903: Penn State-Shenango Nittany Lions vs. St. Francis (PA) Red Flash
+686917: Austin Peay Governors vs. Southern Illinois Salukis (W)
+686931: Xavier Musketeers vs. Clemson Tigers
+686967: Boston College Eagles vs. Utah State Aggies
+687079: Will AZ win on 2025-12-14?
+687080: Will AZ vs. SBV Excelsior end in a draw?
+687081: Will SBV Excelsior win on 2025-12-14?
+687171: Will Yoo Jeong-bok win the 2026 Incheon mayoral election?
+687172: Will Yoon Sang-hyun win the 2026 Incheon mayoral election?
+687173: Will Bae June-young win the 2026 Incheon mayoral election?
+687175: Will Lee Hak-jae win the 2026 Incheon mayoral election?
+687176: Will Park Chan-dae win the 2026 Incheon mayoral election?
+687177: Will Park Nam-choon win the 2026 Incheon mayoral election?
+687178: Will Chung Il-young win the 2026 Incheon mayoral election?
+687179: Will Yoo Dong-soo win the 2026 Incheon mayoral election?
+687180: Will Kim Kyo-heung win the 2026 Incheon mayoral election?
+687270: Claudia Sheinbaum out as President of Mexico by January 31?
+687271: Will Kim Tae-heum win the 2026 Chungcheongnam Province gubernatorial election?
+687272: Will Chung Jin-suk win the 2026 Chungcheongnam Province gubernatorial election?
+687273: Will Yoon Sang-hyun win the 2026 Chungcheongnam Province gubernatorial election?
+687274: Will Kang Seung-kyu win the 2026 Chungcheongnam Province gubernatorial election?
+687275: Will Sung Il-jong win the 2026 Chungcheongnam Province gubernatorial election?
+687276: Will Yang Seung-jo win the 2026 Chungcheongnam Province gubernatorial election?
+687277: Will Kang Hoon-sik win the 2026 Chungcheongnam Province gubernatorial election?
+687278: Will Moon Jin-seok win the 2026 Chungcheongnam Province gubernatorial election?
+687279: Will Park Soo-hyun win the 2026 Chungcheongnam Province gubernatorial election?
+687301: Will Kim Young-hwan win the 2026 Chungcheongbuk Province gubernatorial election?
+687302: Will Cho Gil-hyeong win the 2026 Chungcheongbuk Province gubernatorial election?
+687303: Will Lee Jong-bae win the 2026 Chungcheongbuk Province gubernatorial election?
+687304: Will Yoon Hee-geun win the 2026 Chungcheongbuk Province gubernatorial election?
+687305: Will Shin Yong-han win the 2026 Chungcheongbuk Province gubernatorial election?
+687306: Will Noh Yeong-min win the 2026 Chungcheongbuk Province gubernatorial election?
+687307: Will Song Ki-sub win the 2026 Chungcheongbuk Province gubernatorial election?
+687308: Will Do Jong-hwan win the 2026 Chungcheongbuk Province gubernatorial election?
+687424: Will Kim Jin-tae win the 2026 Gangwon Province gubernatorial election?
+687425: Will Kim Wan-seop win the 2026 Gangwon Province gubernatorial election?
+687426: Will Lee Chul-gyu win the 2026 Gangwon Province gubernatorial election?
+687427: Will Kweon Seong-dong win the 2026 Gangwon Province gubernatorial election?
+687429: Will Woo Sang-ho win the 2026 Gangwon Province gubernatorial election?
+687430: Will Kim Do-kyun win the 2026 Gangwon Province gubernatorial election?
+687431: Will Lee Kwang-jae win the 2026 Gangwon Province gubernatorial election?
+687432: Will Song Gi-heon win the 2026 Gangwon Province gubernatorial election?
+687433: Will Won Chang-muk win the 2026 Gangwon Province gubernatorial election?
+687507: Will Justin Bieber drop out as a Coachella 2026 Headliner?
+687554: Sundar Pichai out as Google CEO before 2027?
+687555: Tim Cook out as Apple CEO before 2027?
+687556: Dan Clancy out as Twitch CEO before 2027?
+687557: Andy Jassy out as Amazon CEO before 2027?
+687558: Brian Armstrong out as Coinbase CEO before 2027?
+687559: Sam Altman out as OpenAI CEO before 2027?
+687642: China x Japan military clash before 2027?
+687670: Will Trump pardon Sam Bankman-Fried before 2027?
+687671: Will Trump pardon Eric Adams before 2027?
+687672: Will Trump pardon Steve Bannon before 2027?
+687673: Will Trump pardon Roger Ver before 2027?
+687674: Will Trump pardon Julian Assange before 2027?
+687675: Will Trump pardon Himself before 2027?
+687676: Will Trump pardon Diddy before 2027?
+687677: Will Trump pardon Elon Musk before 2027?
+687678: Will Trump pardon Hunter Biden before 2027?
+687679: Will Trump pardon Young Thug before 2027?
+687680: Will Trump pardon Edward Snowden before 2027?
+687681: Will Trump pardon Matt Gaetz before 2027?
+687682: Will Trump pardon Daniel Penny before 2027?
+687683: Will Trump pardon Roger Stone before 2027?
+687684: Will Trump pardon Bob Menendez before 2027?
+687685: Will Trump pardon Joe Exotic "The Tiger King" before 2027?
+687686: Will Trump pardon Derek Chauvin before 2027?
+687687: Will Trump pardon Antoine Massey before 2027?
+687688: Will Trump pardon Elizabeth Holmes before 2027?
+687689: Will Trump pardon Ghislaine Maxwell before 2027?
+687690: Will Trump pardon Do Kwon before 2027?
+688127: Will the UK designate the IRGC a terrorist organization by June 30? 
+688375: Will John Ternus be the next CEO of Apple?
+688376: Will Craig Federighi be the next CEO of Apple?
+688377: Will Sabih Khan be the next CEO of Apple?
+688380: Will Greg Joswiak be the next CEO of Apple?
+688427: Will Trump meet with Nick Fuentes in 2026?
+688432: Will Tucker Carlson interview Trump by February 28?
+688486: Will GMGN launch a token by March 31, 2026?
+688487: Will GMGN launch a token by December 31, 2026?
+689015: Will Hannover 96 win on 2025-11-28?
+689036: Will SV 07 Elversberg win on 2025-11-30?
+689039: Will DSC Arminia Bielefeld win on 2025-11-30?
+689096: Will Real Racing Club win on 2025-11-30?
+689099: Will Córdoba CF win on 2025-11-30?
+689102: Will CD Mirandés win on 2025-11-30?
+689105: Will CD Castellón win on 2025-11-30?
+689166: South Carolina State Bulldogs vs. South Dakota Coyotes
+689260: Southern Miss Golden Eagles vs. Prairie View A&M Panthers
+689399: Miguel Díaz-Canel out as President of Cuba by June 30?
+690175: Aztec FDV above $500M one day after launch?
+690176: Aztec FDV above $800M one day after launch?
+690177: Aztec FDV above $1B one day after launch?
+690178: Aztec FDV above $1.5B one day after launch?
+690179: Aztec FDV above $2B one day after launch?
+690197: Will the Fed’s upper bound reach 5.0% or higher before 2027?
+690198: Will the Fed’s upper bound reach 5.5% or higher before 2027?
+690199: Will the Fed’s upper bound reach 5.25% or higher before 2027?
+690200: Will the Fed’s upper bound reach 4.5% or higher before 2027?
+690201: Will the Fed’s upper bound reach 4.75% or higher before 2027?

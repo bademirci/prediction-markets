@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1135607: Spread: Watford FC (-1.5)
+1135608: Watford FC vs. Portsmouth FC: O/U 1.5
+1135609: Watford FC vs. Portsmouth FC: O/U 2.5
+1135610: Watford FC vs. Portsmouth FC: O/U 3.5
+1135611: Watford FC vs. Portsmouth FC: O/U 4.5
+1135613: Watford FC vs. Portsmouth FC: Both Teams to Score
+1135616: Sabalenka vs. Keys: Set 1 Games O/U 8.5
+1135632: Spread: Southampton FC (-1.5)
+1135633: Southampton FC vs. Sheffield United FC: O/U 1.5
+1135634: Southampton FC vs. Sheffield United FC: O/U 2.5
+1135635: Southampton FC vs. Sheffield United FC: O/U 3.5
+1135636: Southampton FC vs. Sheffield United FC: O/U 4.5
+1135637: Southampton FC vs. Sheffield United FC: Both Teams to Score
+1135671: Heat vs. Bulls: O/U 239.5
+1135880: Bitcoin ETF Flows on January 12?
+1135885: Ethereum ETF Flows on January 12?
+1135933: Heat vs. Bulls: O/U 238.5
+1136154: Heat vs. Bulls: O/U 237.5
+1136361: Partizan vs. Olympiacos B.C.
+1136375: Raptors vs. Pacers
+1136376: Cavaliers vs. 76ers
+1136377: Jazz vs. Bulls
+1136378: Missouri State Bears vs. Western Kentucky Hilltoppers
+1136379: Nets vs. Pelicans
+1136380: Middle Tennessee Blue Raiders vs. Louisiana Tech Bulldogs
+1136381: Nuggets vs. Mavericks
+1136382: Southern Miss Golden Eagles vs. Texas State Bobcats (W)
+1136383: Florida International Golden Panthers vs. Kennesaw State Owls
+1136384: Knicks vs. Kings
+1136385: Troy Trojans vs. Louisiana-Monroe Warhawks (W)
+1136386: Sam Houston Bearkats vs. Jacksonville State Gamecocks
+1136387: Wizards vs. Clippers
+1136388: Georgia Southern Eagles vs. Georgia State Panthers (W)
+1136389: Louisiana-Lafayette Ragin' Cajuns vs. Texas State Bobcats
+1136390: Appalachian State Mountaineers vs. Old Dominion Monarchs (W)
+1136391: Southern Miss Golden Eagles vs. Troy Trojans
+1136392: UCLA Bruins vs. Minnesota Golden Gophers (W)
+1136393: Coastal Carolina Chanticleers vs. Marshall Thundering Herd
+1136394: Iowa State Cyclones vs. Colorado Buffaloes (W)
+1136395: Chattanooga Mocs vs. Wofford Terriers
+1136396: Baylor Bears vs. Utah Utes (W)
+1136397: East Tennessee State Buccaneers vs. Western Carolina Catamounts
+1136398: TCU Horned Frogs vs. West Virginia Mountaineers (W)
+1136399: Furman Paladins vs. Samford Bulldogs
+1136400: Oklahoma State Cowboys vs. Kansas Jayhawks (W)
+1136401: Sacred Heart Pioneers vs. Siena Saints
+1136402: Niagara Purple Eagles vs. Canisius Golden Griffins
+1136403: UNLV Runnin' Rebels vs. San Jose State Spartans (W)
+1136405: Manhattan Jaspers vs. Fairfield Stags
+1136406: Utah State Aggies vs. Fresno State Bulldogs (W)
+1136407: Oral Roberts Golden Eagles vs. Denver Pioneers
+1136408: Nevada Wolf Pack vs. Grand Canyon Antelopes (W)
+1136409: South Dakota State Jackrabbits vs. North Dakota State Bison
+1136410: Wyoming Cowboys vs. Boise State Broncos (W)
+1136411: Saint Joseph's Hawks vs. St. Bonaventure Bonnies (W)
+1136412: Colgate Raiders vs. Loyola Maryland Greyhounds
+1136413: Rhode Island Rams vs. VCU Rams (W)
+1136414: Saint Peter's Peacocks vs. Quinnipiac Bobcats
+1136415: Butler Bulldogs vs. Xavier Musketeers
+1136416: George Washington Revolutionaries vs. Duquesne Dukes (W)
+1136417: USC Upstate Spartans vs. Charleston Southern Buccaneers
+1136418: Loyola Chicago Ramblers vs. George Mason Patriots (W)
+1136419: UNC Asheville Bulldogs vs. Presbyterian Blue Hose
+1136420: UAB Blazers vs. Rice Owls (W)
+1136421: Radford Highlanders vs. Gardner-Webb Runnin' Bulldogs
+1136422: Boston Terriers vs. Lehigh Mountain Hawks (W)
+1136423: High Point Panthers vs. Winthrop Eagles
+1136424: Colorado State Rams vs. Air Force Falcons (W)
+1136425: Iona Gaels vs. Rider Broncs
+1136426: Cincinnati Bearcats vs. UCF Knights (W)
+1136428: Army Black Knights vs. Holy Cross Crusaders
+1136429: Marquette Golden Eagles vs. Seton Hall Pirates (W)
+1136431: Lehigh Mountain Hawks vs. Boston Terriers
+1136433: Washington Huskies vs. Indiana Hoosiers (W)
+1136434: Michigan Wolverines vs. Washington Huskies
+1136436: Penn State Nittany Lions vs. Ohio State Buckeyes (W)
+1136438: Iowa Hawkeyes vs. Purdue Boilermakers
+1136439: Gardner-Webb Runnin' Bulldogs vs. Radford Highlanders (W)
+1136441: UCLA Bruins vs. Penn State Nittany Lions
+1136442: Lafayette Leopards vs. Bucknell Bison (W)
+1136443: Holy Cross Crusaders vs. Army Black Knights (W)
+1136444: Illinois Fighting Illini vs. Northwestern Wildcats
+1136445: Loyola Maryland Greyhounds vs. Colgate Raiders (W)
+1136446: Utah Utes vs. Texas Tech Red Raiders
+1136447: American Eagles vs. Navy Midshipmen (W)
+1136448: UCF Knights vs. Kansas State Wildcats
+1136449: Youngstown State Penguins vs. Wright State Raiders (W)
+1136450: Colorado Buffaloes vs. Cincinnati Bearcats
+1136451: Purdue Fort Wayne Mastodons vs. Green Bay Phoenix (W)
+1136452: TCU Horned Frogs vs. BYU Cougars
+1136453: Buffalo Bulls vs. Ball State Cardinals (W)
+1136454: Arizona State Sun Devils vs. Arizona Wildcats
+1136455: Akron Zips vs. Massachusetts Minutemen (W)
+1136456: Fresno State Bulldogs vs. Utah State Aggies
+1136457: Fairfield Stags vs. Marist Red Foxes (W)
+1136458: St. Bonaventure Bonnies vs. Saint Joseph's Hawks
+1136459: Canisius Golden Griffins vs. Niagara Purple Eagles (W)
+1136460: VCU Rams vs. Rhode Island Rams
+1136461: Mount St. Mary's Mountaineers vs. Manhattan Jaspers (W)
+1136462: La Salle Explorers vs. Richmond Spiders
+1136463: Northern Illinois Huskies vs. Toledo Rockets (W)
+1136464: Fordham Rams vs. Saint Louis Billikens
+1136465: Bowling Green Falcons vs. Western Michigan Broncos (W)
+1136466: Davidson Wildcats vs. George Washington Revolutionaries
+1136467: Rice Owls vs. UTSA Roadrunners
+1136468: Saint Louis Billikens vs. La Salle Explorers (W)
+1136469: Temple Owls vs. Memphis Tigers
+1136470: Merrimack College Warriors vs. Iona Gaels (W)
+1136471: New Mexico Lobos vs. San Diego State Aztecs (W)
+1136472: East Carolina Pirates vs. South Florida Bulls
+1136473: Milwaukee Panthers vs. Northern Kentucky Norse (W)
+1136474: Tulsa Golden Hurricane vs. Charlotte 49ers
+1136475: Charleston Southern Buccaneers vs. UNC Asheville Bulldogs (W)
+1136476: UAB Blazers vs. Tulane Green Wave
+1136477: Richmond Spiders vs. Dayton Flyers (W)
+1136478: Lafayette Leopards vs. Bucknell Bison
+1136479: Fordham Rams vs. Davidson Wildcats (W)
+1136480: Illinois State Redbirds vs. Indiana State Sycamores
+1136481: Drake Bulldogs vs. Southern Illinois Salukis
+1136482: Providence Friars vs. Butler Bulldogs (W)
+1136483: Pittsburgh Panthers vs. Georgia Tech Yellow Jackets
+1136484: Winthrop Eagles vs. Longwood Lancers (W)
+1136485: Presbyterian Blue Hose vs. USC Upstate Spartans (W)
+1136486: Kentucky Wildcats vs. LSU Tigers
+1136487: Detroit Titans vs. Cleveland State Vikings (W)
+1136488: North Carolina Tar Heels vs. Stanford Cardinal
+1136489: South Carolina Gamecocks vs. Arkansas Razorbacks
+1136490: Ohio Bobcats vs. Kent State Golden Flashes (W)
+1136491: Duke Blue Devils vs. California Golden Bears
+1136492: Eastern Michigan Eagles vs. Miami (OH) RedHawks (W)
+1136493: San Diego State Aztecs vs. Wyoming Cowboys
+1136494: Siena Saints vs. Sacred Heart Pioneers (W)
+1136495: North Dakota Fighting Hawks vs. South Dakota Coyotes (W)
+1136496: Nevada Wolf Pack vs. Utah State Aggies
+1136497: Portland Pilots vs. Pepperdine Waves
+1136498: Pacific Tigers vs. Santa Clara Broncos
+1136499: Loyola Marymount Lions vs. Oregon State Beavers
+1136500: Auburn Tigers vs. Missouri Tigers
+1136501: Ole Miss Rebels vs. Georgia Bulldogs
+1136502: Vanderbilt Commodores vs. Texas Longhorns
+1136503: Virginia Tech Hokies vs. SMU Mustangs
+1136523: Heat vs. Bulls: 1H O/U 123.5
+1136697: Will the Logan Paul 1st Edition Charizard sale price be over 1.1m?
+1136698: Will the Logan Paul 1st Edition Charizard sale price be over 1.2m?
+1136699: Will the Logan Paul 1st Edition Charizard sale price be over 1.3m?
+1136700: Will the Logan Paul 1st Edition Charizard sale price be over 1.4m?
+1136701: ICE shooter charged by March 31?
+1136710: Will Logan Paul’s PSA 10 Pokémon Illustrator Sale Price be over $16 million?
+1136711: Will Logan Paul’s PSA 10 Pokémon Illustrator Sale Price be over $17 million?
+1136712: Will Logan Paul’s PSA 10 Pokémon Illustrator Sale Price be over $18 million?
+1136717: Will "Avatar: Fire and Ash" 4th Weekend Box Office be less than 21m?
+1136718: Will "Avatar: Fire and Ash" 4th Weekend Box Office be between 21m and 23m?
+1136719: Will "Avatar: Fire and Ash" 4th Weekend Box Office be greater than 23m?
+1136732: ICE Shooter fired/resigns by March 31?
+1136737: Will ChatGPT be #1 Free App in the US Apple App Store on January 16?
+1136738: Will Google Gemini be #1 Free App in the US Apple App Store on January 16?
+1136739: Will Google be #1 Free App in the US Apple App Store on January 16?
+1136740: Will Threads be #1 Free App in the US Apple App Store on January 16?
+1136741: Will Whatnot: Shop, Sell, Collect be #1 Free App in the US Apple App Store on January 16?
+1136742: Will CapCut: Photo & Video Editor be #1 Free App in the US Apple App Store on January 16?
+1136743: Will Grok be #1 Free App in the US Apple App Store on January 16?
+1136744: Will Freecash - Get Paid Real Money be #1 Free App in the US Apple App Store on January 16?
+1136761: Will ChatGPT be #2 Free App in the US Apple App Store on January 16?
+1136762: Will Google Gemini be #2 Free App in the US Apple App Store on January 16?
+1136763: Will Google be #2 Free App in the US Apple App Store on January 16?
+1136764: Will Threads be #2 Free App in the US Apple App Store on January 16?
+1136765: Will Whatnot: Shop, Sell, Collect be #2 Free App in the US Apple App Store on January 16?
+1136766: Will CapCut: Photo & Video Editor be #2 Free App in the US Apple App Store on January 16?
+1136767: Will Grok be #2 Free App in the US Apple App Store on January 16?
+1136768: Will Freecash - Get Paid Real Money be #2 Free App in the US Apple App Store on January 16?
+1136794: Will CS 2 de Mayo win on 2026-02-04?
+1136795: Will CS 2 de Mayo vs. Club Alianza Lima end in a draw?
+1136796: Will Club Alianza Lima win on 2026-02-04?
+1136810: Will Shadowrocket be #1 Paid App in the US Apple App Store on January 16?
+1136811: Will HotSchedules be #1 Paid App in the US Apple App Store on January 16?
+1136812: Will Streaks be #1 Paid App in the US Apple App Store on January 16?
+1136813: Will Procreate Pocket be #1 Paid App in the US Apple App Store on January 16?
+1136814: Will AnkiMobile Flashcards be #1 Paid App in the US Apple App Store on January 16?
+1136815: Will AutoSleep: Watch Sleep Tracker be #1 Paid App in the US Apple App Store on January 16?
+1136816: Will TonalEnergy Tuner & Metronome be #1 Paid App in the US Apple App Store on January 16?
+1136817: Will Paprika Recipe Manager 3 be #1 Paid App in the US Apple App Store on January 16?
+1136841: Heat vs. Bulls: 1H O/U 122.5
+1136846: Will the total number of TSA passengers for January 15 be less than 1,600,000?
+1136847: Will the total number of TSA passengers for January 15 be between 1,600,000 and 1,700,000?
+1136848: Will the total number of TSA passengers for January 15 be between 1,700,000 and 1,800,000?
+1136849: Will the total number of TSA passengers for January 15 be between 1,800,000 and 1,900,000?
+1136850: Will the total number of TSA passengers for January 15 be between 1,900,000 and 2,000,000?
+1136851: Will the total number of TSA passengers for January 15 be greater than 2,000,000?
+1137033: SNHL: Lausanne vs. Geneve-Servette
+1137039: KHL: Metallurg Magnitogorsk vs. HC Sochi
+1137040: AHL: Grand Rapids Griffins vs. Milwaukee Admirals
+1137041: SNHL: Ajoie vs. SCL Tigers
+1137042: KHL: Avtomobilist Yekaterinburg vs. Traktor
+1137043: AHL: Coachella Valley Firebirds vs. Texas Stars
+1137055: KHL: Torpedo vs. Lokomotiv Yaroslavl
+1137056: AHL: Manitoba Moose vs. Rockford IceHogs
+1137057: AHL: Springfield Thunderbirds vs. Charlotte Checkers
+1137058: KHL: HC Dynamo Moscow vs. Spartak Moscow
+1137059: AHL: Ontario Reign vs. Colorado Eagles
+1137060: KHL: Shanghai Dragons vs. SKA St. Petersburg
+1137061: Blackhawks vs. Blue Jackets
+1137062: Canadiens vs. Jets
+1137063: Bruins vs. Panthers
+1137064: Wild vs. Predators
+1137065: Red Wings vs. Utah
+1137066: Sharks vs. Avalanche
+1137067: Blues vs. Stars
+1137068: Canucks vs. Golden Knights
+1137069: Kraken vs. Kings
+1137070: Oilers vs. Flames
+1137079: Will Vance Joseph be the next Miami Dolphins Head Coach?
+1137080: Will Jeff Hafley be the next Miami Dolphins Head Coach?
+1137081: Will Chris Shula be the next Miami Dolphins Head Coach?
+1137082: Will John Harbaugh be the next Miami Dolphins Head Coach?
+1137083: Will Kevin Stefanski be the next Miami Dolphins Head Coach?
+1137084: Will Bill Belichick be the next Miami Dolphins Head Coach?
+1137085: Will Mike Tomlin be the next Miami Dolphins Head Coach?
+1137119: Will the total number of TSA passengers for January 16 be less than 2,100,000?
+1137120: Will the total number of TSA passengers for January 16 be between 2,100,000 and 2,200,000?
+1137121: Will the total number of TSA passengers for January 16 be between 2,200,000 and 2,300,000?
+1137122: Will the total number of TSA passengers for January 16 be between 2,300,000 and 2,400,000?
+1137123: Will the total number of TSA passengers for January 16 be between 2,400,000 and 2,500,000?
+1137124: Will the total number of TSA passengers for January 16 be greater than 2,500,000?
+1137137: Will the price of Bitcoin be less than $82,000 on January 15?
+1137138: Will the price of Ethereum be above $2,600 on January 15?
+1137139: Will the price of Bitcoin be between $82,000 and $84,000 on January 15?
+1137141: Will the price of Ethereum be above $2,700 on January 15?
+1137142: Will the price of Bitcoin be between $84,000 and $86,000 on January 15?
+1137143: Will the price of Ethereum be above $2,800 on January 15?
+1137146: Will the price of Ethereum be above $2,900 on January 15?
+1137147: Will the price of Bitcoin be between $86,000 and $88,000 on January 15?
+1137148: Will Elon Musk post 65-89 tweets from January 10 to January 12, 2026?
+1137149: Will the price of Ethereum be above $3,000 on January 15?
+1137150: Will the price of Bitcoin be between $88,000 and $90,000 on January 15?
+1137151: Will Elon Musk post 90-114 tweets from January 10 to January 12, 2026?
+1137153: Will Elon Musk post 115-139 tweets from January 10 to January 12, 2026?
+1137154: Will the price of Bitcoin be between $90,000 and $92,000 on January 15?
+1137155: Will the price of Ethereum be above $3,100 on January 15?
+1137156: Will Elon Musk post 140-164 tweets from January 10 to January 12, 2026?
+1137157: Will the price of Bitcoin be between $92,000 and $94,000 on January 15?
+1137158: Will the price of Ethereum be above $3,200 on January 15?
+1137159: Will Elon Musk post 165-189 tweets from January 10 to January 12, 2026?
+1137160: Will the price of Bitcoin be between $94,000 and $96,000 on January 15?
+1137161: Will the price of Ethereum be above $3,300 on January 15?
+1137162: Will Elon Musk post 190-214 tweets from January 10 to January 12, 2026?
+1137163: Will the price of Bitcoin be between $96,000 and $98,000 on January 15?
+1137165: Will the price of Ethereum be above $3,400 on January 15?
+1137166: Will the price of Bitcoin be between $98,000 and $100,000 on January 15?
+1137167: Will Elon Musk post 215-239 tweets from January 10 to January 12, 2026?
+1137168: Will the price of Ethereum be above $3,500 on January 15?
+1137169: Will Elon Musk post 240+ tweets from January 10 to January 12, 2026?
+1137170: Will the price of Bitcoin be greater than $100,000 on January 15?
+1137171: Will the price of Ethereum be above $3,600 on January 15?
+1137175: Will the price of Ethereum be less than $2,700 on January 15?
+1137176: Will the price of Ethereum be between $2,700 and $2,800 on January 15?
+1137177: Will the price of Ethereum be between $2,800 and $2,900 on January 15?
+1137178: Will the price of Ethereum be between $2,900 and $3,000 on January 15?
+1137180: Will the price of Ethereum be between $3,000 and $3,100 on January 15?
+1137181: Will the price of Ethereum be between $3,100 and $3,200 on January 15?
+1137182: Will the price of Ethereum be between $3,200 and $3,300 on January 15?
+1137183: Will the price of Ethereum be between $3,300 and $3,400 on January 15?
+1137185: Will the price of Ethereum be between $3,400 and $3,500 on January 15?
+1137186: Will the price of Bitcoin be above $80,000 on January 15?
+1137187: Will the price of Ethereum be between $3,500 and $3,600 on January 15?
+1137188: Will the price of Bitcoin be above $82,000 on January 15?
+1137189: Will the price of Ethereum be greater than $3,600 on January 15?
+1137190: Will the price of Bitcoin be above $84,000 on January 15?
+1137191: Will the price of Bitcoin be above $86,000 on January 15?
+1137192: Will the price of Bitcoin be above $88,000 on January 15?
+1137193: Will the price of Bitcoin be above $90,000 on January 15?
+1137194: Will the price of Bitcoin be above $92,000 on January 15?
+1137195: Will the price of Bitcoin be above $94,000 on January 15?
+1137196: Will the price of Bitcoin be above $96,000 on January 15?
+1137197: Will the price of Bitcoin be above $98,000 on January 15?
+1137198: Will the price of Bitcoin be above $100,000 on January 15?
+1137200: Will the price of Solana be less than $90 on January 15?
+1137201: Will the price of Solana be between $90 and $100 on January 15?
+1137202: Will the price of Solana be between $100 and $110 on January 15?
+1137203: Will the price of Solana be between $110 and $120 on January 15?
+1137204: Will the price of Solana be between $120 and $130 on January 15?
+1137205: Will the price of Solana be between $130 and $140 on January 15?
+1137206: Will the price of Solana be between $140 and $150 on January 15?
+1137207: Will the price of Solana be above $90 on January 15?
+1137208: Will the price of Solana be between $150 and $160 on January 15?
+1137209: Will the price of Solana be above $100 on January 15?
+1137210: Will the price of Solana be between $160 and $170 on January 15?
+1137211: Will the price of Solana be above $110 on January 15?
+1137212: Will the price of Solana be between $170 and $180 on January 15?
+1137213: Will the price of Solana be above $120 on January 15?
+1137214: Will the price of Solana be greater than $180 on January 15?
+1137215: Will the price of Solana be above $130 on January 15?
+1137216: Will the price of Solana be above $140 on January 15?
+1137217: Will the price of Solana be above $150 on January 15?
+1137218: Will the price of Solana be above $160 on January 15?
+1137219: Will the price of Solana be above $170 on January 15?
+1137220: Will the price of Solana be above $180 on January 15?
+1137221: Will the price of Solana be above $190 on January 15?
+1137222: Will the price of XRP be less than $1.70 on January 15?
+1137223: Will the price of XRP be between $1.70 and $1.80 on January 15?
+1137224: Will the price of XRP be between $1.80 and $1.90 on January 15?
+1137225: Will the price of XRP be between $1.90 and $2.00 on January 15?
+1137226: Will the price of XRP be between $2.00 and $2.10 on January 15?
+1137227: Will the price of XRP be between $2.10 and $2.20 on January 15?
+1137228: Will the price of XRP be between $2.20 and $2.30 on January 15?
+1137229: Will the price of XRP be between $2.30 and $2.40 on January 15?
+1137230: Will the price of XRP be between $2.40 and $2.50 on January 15?
+1137231: Will the price of XRP be between $2.50 and $2.60 on January 15?
+1137232: Will the price of XRP be greater than $2.60 on January 15?
+1137233: Will the price of XRP be above $1.60 on January 15?
+1137234: Will the price of XRP be above $1.70 on January 15?
+1137235: Will the price of XRP be above $1.80 on January 15?
+1137236: Will the price of XRP be above $1.90 on January 15?
+1137237: Will the price of XRP be above $2.00 on January 15?
+1137238: Will the price of XRP be above $2.10 on January 15?
+1137239: Will the price of XRP be above $2.20 on January 15?
+1137240: Will the price of XRP be above $2.30 on January 15?
+1137241: Will the price of XRP be above $2.40 on January 15?
+1137242: Will the price of XRP be above $2.50 on January 15?
+1137243: Will the price of XRP be above $2.60 on January 15?
+1137259: Will Sombr perform at the 2026 Grammy Awards?
+1137260: Will ROSÉ perform at the 2026 Grammy Awards?
+1137261: Will Alex Warren perform at the 2026 Grammy Awards?
+1137262: Will Lady Gaga perform at the 2026 Grammy Awards?
+1137263: Will Leon Thomas perform at the 2026 Grammy Awards?
+1137264: Will SZA perform at the 2026 Grammy Awards?
+1137265: Will Addison Rae perform at the 2026 Grammy Awards?
+1137266: Will KATSEYE perform at the 2026 Grammy Awards?
+1137267: Will Billie Eilish perform at the 2026 Grammy Awards?
+1137268: Will Kendrick Lamar perform at the 2026 Grammy Awards?
+1137269: Will The Marías perform at the 2026 Grammy Awards?
+1137270: Will Lola Young perform at the 2026 Grammy Awards?
+1137271: Will Justin Bieber perform at the 2026 Grammy Awards?
+1137272: Will Ariana Grande perform at the 2026 Grammy Awards?
+1137273: Will Tyler the Creator perform at the 2026 Grammy Awards?
+1137274: Will Bad Bunny perform at the 2026 Grammy Awards?
+1137275: Will Chappell Roan perform at the 2026 Grammy Awards?
+1137276: Will Doechii perform at the 2026 Grammy Awards?
+1137277: Will Miley Cyrus perform at the 2026 Grammy Awards?
+1137278: Will Pusha T perform at the 2026 Grammy Awards?
+1137279: Will Olivia Rodrigo perform at the 2026 Grammy Awards?
+1137280: Will Taylor Swift perform at the 2026 Grammy Awards?
+1137281: Will Dua Lipa perform at the 2026 Grammy Awards?
+1137282: Will Lana Del Rey perform at the 2026 Grammy Awards?
+1137283: Will Malice perform at the 2026 Grammy Awards?
+1137284: Will The Weeknd perform at the 2026 Grammy Awards?
+1137285: Will Travis Scott perform at the 2026 Grammy Awards?
+1137286: Will Drake perform at the 2026 Grammy Awards?
+1137287: Will Olivia Dean perform at the 2026 Grammy Awards?
+1137288: Will Bruno Mars perform at the 2026 Grammy Awards?
+1137289: Will Sabrina Carpenter perform at the 2026 Grammy Awards?
+1137294: Will "Venezuela" or "Maduro" be said at the 83rd Golden Globes?
+1137295: Will "Weird" or "Weirdo" be said at the 83rd Golden Globes?
+1137296: Will "White House" or "Ballroom" be said at the 83rd Golden Globes?
+1137297: Will "Acceptance Speech" be said at the 83rd Golden Globes?
+1137298: Will "Jesus" be said at the 83rd Golden Globes?
+1137299: Will "God" be said at the 83rd Golden Globes?
+1137300: Will "Drink" or "Drunk" be said at the 83rd Golden Globes?
+1137301: Will "Mention" be said at the 83rd Golden Globes?
+1137302: Will "Trump" be said at the 83rd Golden Globes?
+1137303: Will "Epstein" be said at the 83rd Golden Globes?
+1137304: Will "Kamala" be said at the 83rd Golden Globes?
+1137305: Will "Minnesota" be said at the 83rd Golden Globes?
+1137306: Will "AI" or "Artificial Intelligence" be said at the 83rd Golden Globes?
+1137307: Will "Six Seven" be said at the 83rd Golden Globes?
+1137545: Curfew in Minneapolis-Saint Paul by Monday?
+1137681: Map Handicap: VOCA (-1.5)
+1137727: Will the total number of TSA passengers for January 12 - January 18 be less than 14,250,000?
+1137728: Will the total number of TSA passengers for January 12 - January 18 be between 14,250,000 and 14,500,000?
+1137729: Will the total number of TSA passengers for January 12 - January 18 be between 14,500,000 and 14,750,000?
+1137730: Will the total number of TSA passengers for January 12 - January 18 be between 14,750,000 and 15,000,000?
+1137731: Will the total number of TSA passengers for January 12 - January 18 be between 15,000,000 and 15,250,000?
+1137732: Will the total number of TSA passengers for January 12 - January 18 be greater than 15,250,000?
+1137836: Will Real Sociedad de Fútbol win on 2026-01-13?
+1137837: Will Real Sociedad de Fútbol vs. CA Osasuna end in a draw?
+1137838: Will CA Osasuna win on 2026-01-13?
+1137849: Will Cultural y Deportiva Leonesa win on 2026-01-13?
+1137850: Will Cultural y Deportiva Leonesa vs. Athletic Club end in a draw?
+1137855: Will Athletic Club win on 2026-01-13?
+1137864: Will Deportivo Alavés win on 2026-01-14?
+1137865: Will Deportivo Alavés vs. Rayo Vallecano de Madrid end in a draw?
+1137866: Will Rayo Vallecano de Madrid win on 2026-01-14?
+1137867: Will Real Betis Balompié win on 2026-01-14?
+1137868: Will Real Betis Balompié vs. Elche CF end in a draw?
+1137869: Will Elche CF win on 2026-01-14?
+1137870: Will Burgos CF win on 2026-01-15?
+1137871: Will Burgos CF vs. Valencia CF end in a draw?
+1137872: Will Valencia CF win on 2026-01-15?
+1137873: Will Real Racing Club win on 2026-01-15?
+1137874: Will Real Racing Club vs. FC Barcelona end in a draw?
+1137875: Will FC Barcelona win on 2026-01-15?
+1137930: Anyone charged for doxing Delta Force commander heading Maduro grab by March 31?
+1137937: Will Holstein Kiel win on 2026-02-04?
+1137938: Will Holstein Kiel vs. VfB Stuttgart end in a draw?
+1137939: Will VfB Stuttgart win on 2026-02-04?
+1138134: Will Trump visit Minneapolis-Saint Paul by January 16?
+1138152: Will Logan Paul’s PSA 10 Pokémon Illustrator Sale Price be over $20 million?
+1138161: Will Logan Paul’s PSA 10 Pokémon Illustrator Sale Price be over $12 million?
+1138175: Will Trump say "MAGA" or "Make America Great Again" this week? (January 18)
+1138176: Will Trump say "Transgender" this week? (January 18)
+1138177: Will Trump say "Switzerland" this week? (January 18)
+1138178: Will Trump say "Maduro" this week? (January 18)
+1138179: Will Trump say "Eight and a Quarter War" this week? (January 18)
+1138180: Will Trump say "2026" this week? (January 18)
+1138181: Will Trump say "Helicopter" this week? (January 18)
+1138182: Will Trump say "Dancing in the street" this week? (January 18)
+1138183: Will Trump say "Transition" this week? (January 18)
+1138184: Will Trump say "Ass" this week? (January 18)
+1138185: Will Trump say "Stupid person" this week? (January 18)
+1138186: Will Trump say "Mental institution" this week? (January 18)
+1138187: Will Trump say "Anniversary" or "America250" this week? (January 18)
+1138188: Will Trump say "Peanut" this week? (January 18)
+1138189: Will Trump say "Fat" this week? (January 18)
+1138190: Will Trump say "Sean" or "Hannity" this week? (January 18)
+1138191: Will Trump say "Minnesota" this week? (January 18)
+1138192: Will Trump say "Low-IQ" this week? (January 18)
+1138213: SkinRave to win 1 maps?
+1138214: SkinRave to win 2 maps?
+1138215: Voca to win 1 maps?
+1138216: Voca to win 2 maps?
+1138242: Will there be exactly 0 earthquakes of magnitude 6.5 or higher worldwide by January 18?
+1138243: Will there be exactly 1 earthquake of magnitude 6.5 or higher worldwide by January 18?
+1138244: Will there be exactly 2 earthquakes of magnitude 6.5 or higher worldwide by January 18?
+1138247: Will there be exactly 3 earthquakes of magnitude 6.5 or higher worldwide by January 18?
+1138248: Will there be exactly 4 earthquakes of magnitude 6.5 or higher worldwide by January 18?
+1138250: Will there be exactly 5 earthquakes of magnitude 6.5 or higher worldwide by January 18?
+1138251: Will there be more than 5 earthquakes of magnitude 6.5 or higher worldwide by January 18?
+1138254: Counter-Strike: ALGO Esports vs Lilmix (BO3)
+1138255: Counter-Strike: ALGO Esports vs Lilmix - Map 1 Winner
+1138256: Counter-Strike: ALGO Esports vs Lilmix - Map 2 Winner
+1138257: Games Total: O/U 2.5
+1138258: Map Handicap: ALGO (-1.5)
+1138259: Lilmix to win 1 maps?
+1138260: Lilmix to win 2 maps?
+1138261: ALGO Esports to win 1 maps?
+1138262: ALGO Esports to win 2 maps?
+1138263: Will Olympique de Marseille win on 2026-01-21?
+1138264: Will Olympique de Marseille vs. Liverpool FC end in a draw?
+1138265: Will Liverpool FC win on 2026-01-21?
+1138267: Will SK Slavia Praha win on 2026-01-21?
+1138268: Will SK Slavia Praha vs. FC Barcelona end in a draw?
+1138269: Will FC Barcelona win on 2026-01-21?
+1138271: Counter-Strike: MANA eSports vs Bushido Wildcats (BO3)
+1138272: Counter-Strike: MANA eSports vs Bushido Wildcats - Map 1 Winner
+1138273: Counter-Strike: MANA eSports vs Bushido Wildcats - Map 2 Winner
+1138274: Games Total: O/U 2.5
+1138275: Map Handicap: MANA (-1.5)
+1138276: Bushido Wildcats to win 1 maps?
+1138277: Bushido Wildcats to win 2 maps?
+1138278: MANA eSports to win 1 maps?
+1138279: Will Newcastle United FC win on 2026-01-21?
+1138280: MANA eSports to win 2 maps?
+1138281: Will Newcastle United FC vs. PSV end in a draw?
+1138282: Will PSV win on 2026-01-21?
+1138283: Will Atalanta BC win on 2026-01-21?
+1138284: Will Atalanta BC vs. Athletic Club end in a draw?
+1138285: Will Athletic Club win on 2026-01-21?
+1138286: Will Juventus FC win on 2026-01-21?
+1138287: Will Juventus FC vs. Sport Lisboa e Benfica end in a draw?
+1138288: Will Sport Lisboa e Benfica win on 2026-01-21?
+1138289: Will Chelsea FC win on 2026-01-21?
+1138290: Will Chelsea FC vs. Páfos FC end in a draw?
+1138291: Will Páfos FC win on 2026-01-21?
+1138292: Will FC Bayern München win on 2026-01-21?
+1138293: Will FC Bayern München vs. RU Saint-Gilloise end in a draw?
+1138294: Will RU Saint-Gilloise win on 2026-01-21?
+1138323: Will "Jamie" be said 5+ times during the first episode of the Joe Rogan Experience this week? (January 18)
+1138324: Will "Trump" be said 3+ times during the first episode of the Joe Rogan Experience this week? (January 18)
+1138325: Will "Epstein" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138326: Will "Elon" or "Musk" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138327: Will "Maduro" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138328: Will "Woke" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138329: Will "Conspiracy" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138330: Will "Inflation" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138331: Will "Recession" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138332: Will "Alien" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138333: Will "Space" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138334: Will "Diet" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138335: Will "Elk" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138336: Will "Sauna" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138337: Will "Weed" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138338: Will "Venezuela" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138339: Will "Drug" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138340: Will "Oil" be said during the first episode of the Joe Rogan Experience this week? (January 18)
+1138341: Spread: FC Bayern München (-2.5)
+1138342: FC Bayern München vs. RU Saint-Gilloise: O/U 1.5
+1138343: FC Bayern München vs. RU Saint-Gilloise: O/U 2.5
+1138344: FC Bayern München vs. RU Saint-Gilloise: O/U 3.5
+1138345: FC Bayern München vs. RU Saint-Gilloise: O/U 4.5
+1138346: FC Bayern München vs. RU Saint-Gilloise: Both Teams to Score
+1138347: Spread: Chelsea FC (-2.5)
+1138348: Chelsea FC vs. Páfos FC: O/U 1.5
+1138349: Chelsea FC vs. Páfos FC: O/U 2.5
+1138350: Chelsea FC vs. Páfos FC: O/U 3.5
+1138351: Chelsea FC vs. Páfos FC: O/U 4.5
+1138352: Chelsea FC vs. Páfos FC: Both Teams to Score
+1138353: Spread: Juventus FC (-1.5)
+1138354: Juventus FC vs. Sport Lisboa e Benfica: O/U 1.5
+1138355: Juventus FC vs. Sport Lisboa e Benfica: O/U 2.5
+1138356: Juventus FC vs. Sport Lisboa e Benfica: O/U 3.5
+1138357: Juventus FC vs. Sport Lisboa e Benfica: O/U 4.5

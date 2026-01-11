@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1116605: Will the match end in a draw?
+1116606: Will Lyon Rugby win?
+1116607: Will Toulon win?
+1116608: Will the match end in a draw?
+1116609: Will Montpellier win?
+1116610: Will Toulouse win?
+1116611: Will the match end in a draw?
+1116612: Will Pau win?
+1116613: Will Union Bordeaux Begles win?
+1116614: Will the match end in a draw?
+1116615: Will Stade Francais win?
+1116616: Will Perpignan win?
+1116617: Will the match end in a draw?
+1116618: Will Montauban win?
+1116619: Will Castres Olympique win?
+1116620: Will the match end in a draw?
+1116621: Will ASM Clermont Auvergne win?
+1116622: Will Montpellier win?
+1116623: Will the match end in a draw?
+1116624: Will Stade Francais win?
+1116625: Will Racing 92 win?
+1116626: Will the match end in a draw?
+1116627: Will Perpignan win?
+1116628: Will Pau win?
+1116629: Will the match end in a draw?
+1116630: Will Toulon win?
+1116631: Will La Rochelle win?
+1116632: Will the match end in a draw?
+1116633: Will Lyon Rugby win?
+1116634: Will Toulouse win?
+1116635: Will the match end in a draw?
+1116636: Will Bayonne win?
+1116637: Will Montauban win?
+1116638: Will the match end in a draw?
+1116639: Will Union Bordeaux Begles win?
+1116642: Over $6M committed to the Trove public sale?
+1116643: Over $8M committed to the Trove public sale?
+1116644: Over $10M committed to the Trove public sale?
+1116645: Israel x Syria security agreement by March 31?
+1116646: Israel x Syria security agreement by June 30?
+1116654: Palermo FC vs. Spezia Calcio: O/U 1.5
+1116655: Palermo FC vs. Spezia Calcio: O/U 2.5
+1116656: Palermo FC vs. Spezia Calcio: O/U 3.5
+1116657: Palermo FC vs. Spezia Calcio: O/U 4.5
+1116658: Palermo FC vs. Spezia Calcio: Both Teams to Score
+1116660: Delfino Pescara 1936 vs. Modena FC 2018: O/U 1.5
+1116661: Delfino Pescara 1936 vs. Modena FC 2018: O/U 2.5
+1116662: Delfino Pescara 1936 vs. Modena FC 2018: O/U 3.5
+1116663: Delfino Pescara 1936 vs. Modena FC 2018: O/U 4.5
+1116664: Delfino Pescara 1936 vs. Modena FC 2018: Both Teams to Score
+1116673: Will Darren Fletcher be appointed as manager of Manchester United?
+1116674: Will Oliver Glasner be appointed as manager of Manchester United?
+1116675: Will Gareth Southgate be appointed as manager of Manchester United?
+1116676: Will Enzo Maresca be appointed as manager of Manchester United?
+1116677: Will Laurent Blanc be appointed as manager of Manchester United?
+1116678: Will Kieran McKenna be appointed as manager of Manchester United?
+1116679: Will Ole Gunnar Solskjær be appointed as manager of Manchester United?
+1116680: Will Michael Carrick be appointed as manager of Manchester United?
+1116681: Will Xavi be appointed as manager of Manchester United?
+1116682: Will Thomas Tuchel be appointed as manager of Manchester United?
+1116692: Maduro mugshot released by January 16?
+1116701: Viktor Orbán out in 2026?
+1116708: Spread: Texans (-1.5)
+1116713: Spread: Texans (-3.5)
+1116715: Spread: Texans (-6.5)
+1116716: Texans vs. Steelers: O/U 36.5
+1116717: Texans vs. Steelers: O/U 38.5
+1116718: Texans vs. Steelers: O/U 39.5
+1116719: Texans vs. Steelers: O/U 40.5
+1116720: Texans vs. Steelers: O/U 42.5
+1116762: Spread: Bills (-1.5)
+1116767: Spread: Bills (-2.5)
+1116768: Spread: Bills (-3.5)
+1116769: Spread: Bills (-4.5)
+1116770: Bills vs. Jaguars: O/U 47.5
+1116771: Bills vs. Jaguars: O/U 48.5
+1116772: Bills vs. Jaguars: O/U 50.5
+1116773: Bills vs. Jaguars: O/U 51.5
+1116774: Bills vs. Jaguars: O/U 54.5
+1116908: Spread: Eagles (-1.5)
+1116909: Spread: Eagles (-3.5)
+1116910: Spread: Eagles (-4.5)
+1116911: Spread: Eagles (-6.5)
+1116912: Spread: Eagles (-7.5)
+1116913: 49ers vs. Eagles: O/U 41.5
+1116914: 49ers vs. Eagles: O/U 43.5
+1116915: 49ers vs. Eagles: O/U 44.5
+1116916: 49ers vs. Eagles: O/U 46.5
+1116920: 49ers vs. Eagles: O/U 47.5
+1116965: 49ers vs. Eagles: O/U 42.5
+1116966: 49ers vs. Eagles: O/U 45.5
+1116967: 49ers vs. Eagles: O/U 49.5
+1116968: Spread: Patriots (-1.5)
+1116973: Spread: Patriots (-3.5)
+1116974: Spread: Patriots (-4.5)
+1116975: Spread: Patriots (-6.5)
+1116976: Chargers vs. Patriots: O/U 44.5
+1116977: Chargers vs. Patriots: O/U 46.5
+1116978: Chargers vs. Patriots: O/U 47.5
+1116979: Chargers vs. Patriots: O/U 49.5
+1116980: Chargers vs. Patriots: O/U 50.5
+1116981: Will the U.S. invade Mexico in 2026?
+1117207: Nothing Ever Happens: US Strike Edition
+1117220: Forsen to get signed by an LCK prog org by Jun 30?
+1117221: Will Forsen be the NLC 2026 Winter Split MVP?
+1117222: Miguel Díaz-Canel out as leader of Cuba by December 31?
+1117229: Will Israel strike Greater Beirut by January 31, 2026?
+1117230: Will Israel strike Greater Beirut by March 31, 2026?
+1117233: Gustavo Petro out as leader of Colombia by December 31?
+1117242: Nothing Ever Happens: Khamenei
+1117255: Mahmoud Abbas out as Palestinian President by June 30?
+1117256: Mahmoud Abbas out as Palestinian President by December 31?
+1117273: Insurrection Act invoked by March 31?
+1117274: Insurrection Act invoked by June 30?
+1117275: Insurrection Act invoked by December 31?
+1117488: Will "It Was Just an Accident" win Best Motion Picture - Non-English Language at the 83rd Golden Globes?
+1117489: Will "No Other Choice" win Best Motion Picture - Non-English Language at the 83rd Golden Globes?
+1117490: Will "Sentimental Value" win Best Motion Picture - Non-English Language at the 83rd Golden Globes?
+1117491: Will "Sirāt" win Best Motion Picture - Non-English Language at the 83rd Golden Globes?
+1117492: Will "The Secret Agent" win Best Motion Picture - Non-English Language at the 83rd Golden Globes?
+1117493: Will "The Voice of Hind Rajab" win Best Motion Picture - Non-English Language at the 83rd Golden Globes?
+1117522: Will Drake release Iceman before GTA VI?
+1117535: Steelers Team Total: O/U 27.5
+1117536: Texans Team Total: O/U 20.5
+1117537: 1H Spread: Texans (-1.5)
+1117538: Texans vs. Steelers: 1H O/U 19.5
+1117539: Texans vs. Steelers: 1H Moneyline
+1117540: Nico Collins: Anytime Touchdown
+1117541: Woody Marks: Anytime Touchdown
+1117542: Kenneth Gainwell: Anytime Touchdown
+1117543: Jaylen Warren: Anytime Touchdown
+1117544: DK Metcalf: Anytime Touchdown
+1117545: Dalton Schultz: Anytime Touchdown
+1117546: Jayden Higgins: Anytime Touchdown
+1117547: Pat Freiermuth: Anytime Touchdown
+1117548: Nick Chubb: Anytime Touchdown
+1117549: Connor Heyward: Anytime Touchdown
+1117550: C.J. Stroud: Rushing Yards O/U 12.5
+1117551: Jaylen Warren: Rushing Yards O/U 53.5
+1117552: Kenneth Gainwell: Rushing Yards O/U 30.5
+1117553: Woody Marks: Rushing Yards O/U 54.5
+1117554: Nico Collins: Receiving Yards O/U 71.5
+1117555: Dalton Schultz: Receiving Yards O/U 43.5
+1117556: DK Metcalf: Receiving Yards O/U 55.5
+1117557: Jaylen Warren: Receiving Yards O/U 12.5
+1117558: Kenneth Gainwell: Receiving Yards O/U 32.5
+1117559: Pat Freiermuth: Receiving Yards O/U 35.5
+1117560: Woody Marks: Receiving Yards O/U 68.5
+1117561: Jayden Higgins: Receiving Yards O/U 30.5
+1117562: Christian Kirk: Receiving Yards O/U 15.5
+1117563: Jaguars Team Total: O/U 26.5
+1117564: Bills Team Total: O/U 28.5
+1117565: 1H Spread: Bills (-0.5)
+1117566: Bills vs. Jaguars: 1H O/U 24.5
+1117567: Bills vs. Jaguars: 1H Moneyline
+1117568: James Cook: Anytime Touchdown
+1117569: Travis Etienne Jr.: Anytime Touchdown
+1117570: Josh Allen: Anytime Touchdown
+1117571: Trevor Lawrence: Anytime Touchdown
+1117572: Jakobi Meyers: Anytime Touchdown
+1117573: Parker Washington: Anytime Touchdown
+1117574: Brian Thomas Jr.: Anytime Touchdown
+1117575: Brenton Strange: Anytime Touchdown
+1117576: Bhayshul Tuten: Anytime Touchdown
+1117577: Dalton Kincaid: Anytime Touchdown
+1117578: First Touchdown: Travis Etienne
+1117579: First Touchdown: James Cook
+1117580: First Touchdown: Josh Allen
+1117581: First Touchdown: Jakobi Meyers
+1117582: First Touchdown: Parker Washington
+1117583: First Touchdown: Trevor Lawrence
+1117584: First Touchdown: Brian Thomas Jr.
+1117585: First Touchdown: Brenton Strange
+1117586: First Touchdown: Dalton Kincaid
+1117587: First Touchdown: Khalil Shakir
+1117588: James Cook: Rushing Yards O/U 80.5
+1117589: Travis Etienne Jr.: Rushing Yards O/U 64.5
+1117590: Josh Allen: Rushing Yards O/U 36.5
+1117591: Trevor Lawrence: Rushing Yards O/U 25.5
+1117592: Bhayshul Tuten: Rushing Yards O/U 22.5
+1117593: Jakobi Meyers: Receiving Yards O/U 51.5
+1117594: Parker Washington: Receiving Yards O/U 46.5
+1117595: Brian Thomas Jr.: Receiving Yards O/U 42.5
+1117596: Khalil Shakir: Receiving Yards O/U 45.5
+1117597: James Cook: Receiving Yards O/U 13.5
+1117598: Brenton Strange: Receiving Yards O/U 33.5
+1117599: Dalton Kincaid: Receiving Yards O/U 35.5
+1117600: Dawson Knox: Receiving Yards O/U 21.5
+1117601: Travis Etienne Jr.: Receiving Yards O/U 82.5
+1117683: 49ers Team Total: O/U 28.5
+1117684: Eagles Team Total: O/U 25.5
+1117685: 1H Spread: Eagles (-3.5)
+1117686: 49ers vs. Eagles: 1H O/U 22.5
+1117687: 49ers vs. Eagles: 1H Moneyline
+1117688: Christian McCaffrey: Anytime Touchdown
+1117689: Saquon Barkley: Anytime Touchdown
+1117690: Jalen Hurts: Anytime Touchdown
+1117691: A.J. Brown: Anytime Touchdown
+1117692: George Kittle: Anytime Touchdown
+1117693: DeVonta Smith: Anytime Touchdown
+1117694: Dallas Goedert: Anytime Touchdown
+1117695: Jauan Jennings: Anytime Touchdown
+1117696: Ricky Pearsall: Anytime Touchdown
+1117697: Demarcus Robinson: Anytime Touchdown
+1117698: First Touchdown: Saquon Barkley
+1117699: First Touchdown: Christian McCaffrey
+1117700: First Touchdown: Jalen Hurts
+1117701: First Touchdown: A.J. Brown
+1117702: First Touchdown: DeVonta Smith
+1117703: First Touchdown: George Kittle
+1117704: First Touchdown: Dallas Goedert
+1117705: First Touchdown: Jauan Jennings
+1117706: First Touchdown: Ricky Pearsall
+1117707: First Touchdown: DeMarcus Robinson
+1117708: Saquon Barkley: Rushing Yards O/U 82.5
+1117709: Christian McCaffrey: Rushing Yards O/U 59.5
+1117710: Jalen Hurts: Rushing Yards O/U 29.5
+1117711: Brock Purdy: Rushing Yards O/U 17.5
+1117712: Brian Robinson Jr.: Rushing Yards O/U 14.5
+1117713: Jahan Dotson: Receiving Yards O/U 7.5
+1117714: A.J. Brown: Receiving Yards O/U 66.5
+1117715: George Kittle: Receiving Yards O/U 59.5
+1117716: DeVonta Smith: Receiving Yards O/U 55.5
+1117717: Christian McCaffrey: Receiving Yards O/U 45.5
+1117718: Dallas Goedert: Receiving Yards O/U 40.5
+1117719: Saquon Barkley: Receiving Yards O/U 15.5
+1117720: Chargers Team Total: O/U 20.5
+1117721: Patriots Team Total: O/U 24.5
+1117722: 1H Spread: Patriots (-2.5)
+1117723: Chargers vs. Patriots: 1H O/U 22.5
+1117724: Chargers vs. Patriots: 1H Moneyline
+1117725: Omarion Hampton: Anytime Touchdown
+1117726: Kimani Vidal: Anytime Touchdown
+1117727: TreVeyon Henderson: Anytime Touchdown
+1117728: Rhamondre Stevenson: Anytime Touchdown
+1117729: Hunter Henry: Anytime Touchdown
+1117730: Stefon Diggs: Anytime Touchdown
+1117731: Ladd McConkey: Anytime Touchdown
+1117732: Quentin Johnston: Anytime Touchdown
+1117733: Oronde Gadsden: Anytime Touchdown
+1117734: Keenan Allen: Anytime Touchdown
+1117735: First Touchdown: TreVeyon Henderson
+1117736: First Touchdown: Rhamondre Stevenson
+1117737: First Touchdown: Hunter Henry
+1117738: First Touchdown: Stefon Diggs
+1117739: First Touchdown: Omarion Hampton
+1117740: First Touchdown: Kimani Vidal
+1117741: First Touchdown: Ladd McConkey
+1117742: First Touchdown: Quentin Johnston
+1117743: First Touchdown: Keenan Allen
+1117744: First Touchdown: Kayshon Boutte
+1117745: TreVeyon Henderson: Rushing Yards O/U 52.5
+1117746: Justin Herbert: Rushing Yards O/U 29.5
+1117747: Drake Maye: Rushing Yards O/U 26.5
+1117748: Rhamondre Stevenson: Rushing Yards O/U 38.5
+1117749: Stefon Diggs: Receiving Yards O/U 49.5
+1117750: Ladd McConkey: Receiving Yards O/U 38.5
+1117751: Hunter Henry: Receiving Yards O/U 44.5
+1117752: Oronde Gadsden: Receiving Yards O/U 31.5
+1117753: TreVeyon Henderson: Receiving Yards O/U 11.5
+1117754: Quentin Johnston: Receiving Yards O/U 34.5
+1117755: Keenan Allen: Receiving Yards O/U 33.5
+1117756: Kayshon Boutte: Receiving Yards O/U 25.5
+1117757: DeMario Douglas: Receiving Yards O/U 18.5
+1117758: Tre' Harris: Receiving Yards O/U 16.5
+1117779: Will "Dream As One - Avatar: Fire and Ash" win Best Original Song - Motion Picture at the 83rd Golden Globes?
+1117780: Will "Golden - KPop Demon Hunters" win Best Original Song - Motion Picture at the 83rd Golden Globes?
+1117781: Will "I Lied to You - Sinners" win Best Original Song - Motion Picture at the 83rd Golden Globes?
+1117782: Will "No Place Like Home - Wicked: For Good" win Best Original Song - Motion Picture at the 83rd Golden Globes?
+1117783: Will "The Girl in the Bubble - Wicked: For Good" win Best Original Song - Motion Picture at the 83rd Golden Globes?
+1117784: Will "Train Dreams - Train Dreams" win Best Original Song - Motion Picture at the 83rd Golden Globes?
+1117801: Will "Avatar: Fire and Ash" win the award for Cinematic and Box Office Achievement at the 83rd Golden Globes?
+1117802: Will "F1" win the award for Cinematic and Box Office Achievement at the 83rd Golden Globes?
+1117803: Will "KPop Demon Hunters" win the award for Cinematic and Box Office Achievement at the 83rd Golden Globes?
+1117804: Will "Mission: Impossible - The Final Reckoning" win the award for Cinematic and Box Office Achievement at the 83rd Golden Globes?
+1117805: Will "Zootopia 2" win the award for Cinematic and Box Office Achievement at the 83rd Golden Globes?
+1117806: Will "Sinners" win the award for Cinematic and Box Office Achievement at the 83rd Golden Globes?
+1117807: Will "Weapons" win the award for Cinematic and Box Office Achievement at the 83rd Golden Globes?
+1117808: Will "Wicked: For Good" win the award for Cinematic and Box Office Achievement at the 83rd Golden Globes?
+1117833: Will Trump meet with Delcy Rodríguez by March 31?
+1117835: Will "Bill Maher: Is Anyone Else Seeing This?" win Best Performance in Stand-Up Comedy on Television?
+1117836: Will "Brett Goldstein: The Second Best Night of Your Life" win Best Performance in Stand-Up Comedy on Television?
+1117837: Will "Kevin Hart: Acting My Age" win Best Performance in Stand-Up Comedy on Television?
+1117838: Will "Kumail Nanjiani: Night Thoughts" win Best Performance in Stand-Up Comedy on Television?
+1117839: Will "Ricky Gervais: Mortality" win Best Performance in Stand-Up Comedy on Television?
+1117840: Will "Sarah Silverman: Postmortem" win Best Performance in Stand-Up Comedy on Television?
+1118063: Will Buffalo face Chicago in Super Bowl LX?
+1118065: Will Buffalo face Los Angeles R in Super Bowl LX?
+1118066: Will Buffalo face Philadelphia in Super Bowl LX?
+1118067: Will Buffalo face San Francisco in Super Bowl LX?
+1118068: Will Buffalo face Seattle in Super Bowl LX?
+1118070: Will Denver face Chicago in Super Bowl LX?
+1118072: Will Denver face Los Angeles R in Super Bowl LX?
+1118073: Will Denver face Philadelphia in Super Bowl LX?
+1118074: Will Denver face San Francisco in Super Bowl LX?
+1118075: Will Denver face Seattle in Super Bowl LX?
+1118077: Will Houston face Chicago in Super Bowl LX?
+1118079: Will Houston face Los Angeles R in Super Bowl LX?
+1118080: Will Houston face Philadelphia in Super Bowl LX?
+1118081: Will Houston face San Francisco in Super Bowl LX?
+1118082: Will Houston face Seattle in Super Bowl LX?
+1118084: Will Jacksonville face Chicago in Super Bowl LX?
+1118086: Will Jacksonville face Los Angeles R in Super Bowl LX?
+1118087: Will Jacksonville face Philadelphia in Super Bowl LX?
+1118088: Will Jacksonville face San Francisco in Super Bowl LX?
+1118089: Will Jacksonville face Seattle in Super Bowl LX?
+1118091: Will Los Angeles C face Chicago in Super Bowl LX?
+1118093: Will Los Angeles C face Los Angeles R in Super Bowl LX?
+1118094: Will Los Angeles C face Philadelphia in Super Bowl LX?
+1118095: Will Los Angeles C face San Francisco in Super Bowl LX?
+1118096: Will Los Angeles C face Seattle in Super Bowl LX?
+1118098: Will New England face Chicago in Super Bowl LX?
+1118100: Will New England face Los Angeles R in Super Bowl LX?
+1118101: Will New England face Philadelphia in Super Bowl LX?
+1118102: Will New England face San Francisco in Super Bowl LX?
+1118103: Will New England face Seattle in Super Bowl LX?
+1118105: Will Pittsburgh face Chicago in Super Bowl LX?
+1118107: Will Pittsburgh face Los Angeles R in Super Bowl LX?
+1118108: Will Pittsburgh face Philadelphia in Super Bowl LX?
+1118109: Will Pittsburgh face San Francisco in Super Bowl LX?
+1118110: Will Pittsburgh face Seattle in Super Bowl LX?
+1118155: Will Interactive Brokers (IBKR) beat quarterly earnings?
+1118156: Will United Airlines (UAL) beat quarterly earnings?
+1118157: Will Wintrust Financial (WTFC) beat quarterly earnings?
+1118163: Will Buffalo beat Chicago in Super Bowl LX?
+1118165: Will Buffalo beat Los Angeles R in Super Bowl LX?
+1118166: Will Buffalo beat Philadelphia in Super Bowl LX?
+1118167: Will Buffalo beat San Francisco in Super Bowl LX?
+1118168: Will Buffalo beat Seattle in Super Bowl LX?
+1118170: Will Denver beat Chicago in Super Bowl LX?
+1118172: Will Denver beat Los Angeles R in Super Bowl LX?
+1118173: Will Denver beat Philadelphia in Super Bowl LX?
+1118174: Will Denver beat San Francisco in Super Bowl LX?
+1118175: Will Denver beat Seattle in Super Bowl LX?
+1118177: Will Houston beat Chicago in Super Bowl LX?
+1118179: Will Houston beat Los Angeles R in Super Bowl LX?
+1118180: Will Houston beat Philadelphia in Super Bowl LX?
+1118181: Will Houston beat San Francisco in Super Bowl LX?
+1118182: Will Houston beat Seattle in Super Bowl LX?
+1118184: Will Jacksonville beat Chicago in Super Bowl LX?
+1118186: Will Jacksonville beat Los Angeles R in Super Bowl LX?
+1118187: Will Jacksonville beat Philadelphia in Super Bowl LX?
+1118188: Will Jacksonville beat San Francisco in Super Bowl LX?
+1118189: Will Jacksonville beat Seattle in Super Bowl LX?
+1118191: Will Los Angeles C beat Chicago in Super Bowl LX?
+1118193: Will Los Angeles C beat Los Angeles R in Super Bowl LX?
+1118194: Will Los Angeles C beat Philadelphia in Super Bowl LX?
+1118195: Will Los Angeles C beat San Francisco in Super Bowl LX?
+1118196: Will Los Angeles C beat Seattle in Super Bowl LX?
+1118198: Will New England beat Chicago in Super Bowl LX?
+1118200: Will New England beat Los Angeles R in Super Bowl LX?
+1118201: Will New England beat Philadelphia in Super Bowl LX?
+1118202: Will New England beat San Francisco in Super Bowl LX?
+1118203: Will New England beat Seattle in Super Bowl LX?
+1118205: Will Pittsburgh beat Chicago in Super Bowl LX?
+1118207: Will Pittsburgh beat Los Angeles R in Super Bowl LX?
+1118208: Will Pittsburgh beat Philadelphia in Super Bowl LX?
+1118209: Will Pittsburgh beat San Francisco in Super Bowl LX?
+1118210: Will Pittsburgh beat Seattle in Super Bowl LX?
+1118218: Will Chicago beat Buffalo in Super Bowl LX?
+1118219: Will Chicago beat Denver in Super Bowl LX?
+1118220: Will Chicago beat Houston in Super Bowl LX?
+1118221: Will Chicago beat Jacksonville in Super Bowl LX?
+1118222: Will Chicago beat Los Angeles C in Super Bowl LX?
+1118223: Will Chicago beat New England in Super Bowl LX?
+1118224: Will Chicago beat Pittsburgh in Super Bowl LX?
+1118232: Will Los Angeles R beat Buffalo in Super Bowl LX?
+1118233: Will Los Angeles R beat Denver in Super Bowl LX?
+1118234: Will Los Angeles R beat Houston in Super Bowl LX?
+1118235: Will Los Angeles R beat Jacksonville in Super Bowl LX?
+1118236: Will Los Angeles R beat Los Angeles C in Super Bowl LX?
+1118237: Will Los Angeles R beat New England in Super Bowl LX?
+1118238: Will Los Angeles R beat Pittsburgh in Super Bowl LX?
+1118239: Will Philadelphia beat Buffalo in Super Bowl LX?
+1118240: Will Philadelphia beat Denver in Super Bowl LX?
+1118241: Will Philadelphia beat Houston in Super Bowl LX?
+1118242: Will Philadelphia beat Jacksonville in Super Bowl LX?
+1118243: Will Philadelphia beat Los Angeles C in Super Bowl LX?
+1118244: Will Philadelphia beat New England in Super Bowl LX?
+1118245: Will Philadelphia beat Pittsburgh in Super Bowl LX?
+1118246: Will San Francisco beat Buffalo in Super Bowl LX?
+1118247: Will San Francisco beat Denver in Super Bowl LX?
+1118248: Will San Francisco beat Houston in Super Bowl LX?
+1118249: Will San Francisco beat Jacksonville in Super Bowl LX?
+1118250: Will San Francisco beat Los Angeles C in Super Bowl LX?
+1118251: Will San Francisco beat New England in Super Bowl LX?
+1118252: Will San Francisco beat Pittsburgh in Super Bowl LX?
+1118253: Will Seattle beat Buffalo in Super Bowl LX?
+1118254: Will Seattle beat Denver in Super Bowl LX?
+1118255: Will Seattle beat Houston in Super Bowl LX?
+1118256: Will Seattle beat Jacksonville in Super Bowl LX?
+1118257: Will Seattle beat Los Angeles C in Super Bowl LX?
+1118258: Will Seattle beat New England in Super Bowl LX?
+1118259: Will Seattle beat Pittsburgh in Super Bowl LX?
+1118261: Will Bank First (BFC) beat quarterly earnings?
+1118262: Will Netflix (NFLX) beat quarterly earnings?
+1118263: Will US Bancorp (USB) beat quarterly earnings?
+1118342: Will KeyCorp (KEY) beat quarterly earnings?
+1118343: Will 3M (MMM) beat quarterly earnings?
+1118344: Will Mercantile Bank (MBWM) beat quarterly earnings?
+1118513: Will a No. 1 seed win Super Bowl LX
+1118514: Will a No. 2 seed win Super Bowl LX
+1118515: Will a No. 3 seed win Super Bowl LX
+1118516: Will a No. 4 seed win Super Bowl LX
+1118517: Will a No. 5 seed win Super Bowl LX
+1118518: Will a No. 6 seed win Super Bowl LX
+1118519: Will a No. 7 seed win Super Bowl LX
+1118671: Texans Team Total: O/U 30.5
+1118701: Jauan Jennings: Receiving Yards O/U 41.5
+1119389: Will Elon Musk post 120-139 tweets from January 9 to January 16, 2026?
+1119390: Will Elon Musk post 140-159 tweets from January 9 to January 16, 2026?
+1119391: Will Elon Musk post 160-179 tweets from January 9 to January 16, 2026?
+1119392: Will Elon Musk post 180-199 tweets from January 9 to January 16, 2026?
+1119393: Will Elon Musk post 200-219 tweets from January 9 to January 16, 2026?
+1119394: Will Elon Musk post 220-239 tweets from January 9 to January 16, 2026?
+1119395: Will Elon Musk post 240-259 tweets from January 9 to January 16, 2026?
+1119396: Will Elon Musk post 260-279 tweets from January 9 to January 16, 2026?
+1119398: Will Elon Musk post 280-299 tweets from January 9 to January 16, 2026?
+1119399: Will Elon Musk post 300-319 tweets from January 9 to January 16, 2026?
+1119400: Will Elon Musk post 320-339 tweets from January 9 to January 16, 2026?
+1119401: Will Elon Musk post 340-359 tweets from January 9 to January 16, 2026?
+1119402: Will Elon Musk post 360-379 tweets from January 9 to January 16, 2026?
+1119403: Will Elon Musk post 380-399 tweets from January 9 to January 16, 2026?
+1119405: Will Elon Musk post 400-419 tweets from January 9 to January 16, 2026?
+1119406: Will Elon Musk post 420-439 tweets from January 9 to January 16, 2026?
+1119407: Will Elon Musk post 440-459 tweets from January 9 to January 16, 2026?
+1119408: Will Elon Musk post 460-479 tweets from January 9 to January 16, 2026?
+1119409: Will Elon Musk post 480-499 tweets from January 9 to January 16, 2026?
+1119410: Will Elon Musk post 500-519 tweets from January 9 to January 16, 2026?
+1119412: Will Elon Musk post 520-539 tweets from January 9 to January 16, 2026?
+1119414: Will Elon Musk post 540-559 tweets from January 9 to January 16, 2026?
+1119415: Will Elon Musk post 560-579 tweets from January 9 to January 16, 2026?
+1119416: Will Elon Musk post 580+ tweets from January 9 to January 16, 2026?
+1119417: Will Brighton & Hove Albion FC win on 2026-01-19?
+1119418: Will Brighton & Hove Albion FC vs. AFC Bournemouth end in a draw?
+1119419: Will AFC Bournemouth win on 2026-01-19?
+1119421: Will US Cremonese win on 2026-01-19?
+1119422: Will US Cremonese vs. Hellas Verona FC end in a draw?
+1119423: Will Hellas Verona FC win on 2026-01-19?
+1119424: Will SS Lazio win on 2026-01-19?
+1119425: Will SS Lazio vs. Como 1907 end in a draw?
+1119426: Will Como 1907 win on 2026-01-19?
+1119427: Big Bash League: Sydney Thunder vs Melbourne Renegades (Game 1)
+1119428: Big Bash League: Sydney Thunder vs Melbourne Renegades (Game 1) - Who wins the toss?
+1119429: Big Bash League: Sydney Thunder vs Melbourne Renegades (Game 1) - Completed match?
+1119430: Big Bash League: Sydney Thunder vs Melbourne Renegades (Game 1) - Toss Match Double Sydney Thunder Winner
+1119431: Big Bash League: Sydney Thunder vs Melbourne Renegades (Game 1) - Toss Match Double Draw
+1119432: Big Bash League: Sydney Thunder vs Melbourne Renegades (Game 1) - Toss Match Double Melbourne Renegades Winner
+1119433: Big Bash League: Sydney Thunder vs Melbourne Renegades (Game 1) - Most Sixes Sydney Thunder Winner
+1119434: Big Bash League: Sydney Thunder vs Melbourne Renegades (Game 1) - Most Sixes Draw
+1119435: Big Bash League: Sydney Thunder vs Melbourne Renegades (Game 1) - Most Sixes Melbourne Renegades Winner
+1119436: Big Bash League: Sydney Thunder vs Melbourne Renegades (Game 1) - Team Top Batter Sydney Thunder Winner
+1119437: Big Bash League: Sydney Thunder vs Melbourne Renegades (Game 1) - Team Top Batter Draw
+1119438: Big Bash League: Sydney Thunder vs Melbourne Renegades (Game 1) - Team Top Batter Melbourne Renegades Winner
+1119439: SA20: Pretoria Capitals vs MI Cape Town (Game 1)
+1119440: SA20: Pretoria Capitals vs MI Cape Town (Game 1) - Who wins the toss?
+1119441: SA20: Pretoria Capitals vs MI Cape Town (Game 1) - Completed match?
+1119442: SA20: Pretoria Capitals vs MI Cape Town (Game 1) - Toss Match Double Pretoria Capitals Winner
+1119443: SA20: Pretoria Capitals vs MI Cape Town (Game 1) - Toss Match Double Draw
+1119444: SA20: Pretoria Capitals vs MI Cape Town (Game 1) - Toss Match Double MI Cape Town Winner
+1119445: SA20: Pretoria Capitals vs MI Cape Town (Game 1) - Most Sixes Pretoria Capitals Winner
+1119446: SA20: Pretoria Capitals vs MI Cape Town (Game 1) - Most Sixes Draw
+1119447: SA20: Pretoria Capitals vs MI Cape Town (Game 1) - Most Sixes MI Cape Town Winner
+1119448: SA20: Pretoria Capitals vs MI Cape Town (Game 1) - Team Top Batter Pretoria Capitals Winner
+1119449: SA20: Pretoria Capitals vs MI Cape Town (Game 1) - Team Top Batter Draw
+1119450: SA20: Pretoria Capitals vs MI Cape Town (Game 1) - Team Top Batter MI Cape Town Winner
+1119451: BPL: Durdanto Dhaka vs Durbar Rajshahi (Game 1)
+1119452: BPL: Durdanto Dhaka vs Durbar Rajshahi (Game 1) - Who wins the toss?
+1119453: BPL: Durdanto Dhaka vs Durbar Rajshahi (Game 1) - Completed match?
+1119454: BPL: Durdanto Dhaka vs Durbar Rajshahi (Game 1) - Toss Match Double Durdanto Dhaka Winner
+1119455: BPL: Durdanto Dhaka vs Durbar Rajshahi (Game 1) - Toss Match Double Draw
+1119456: BPL: Durdanto Dhaka vs Durbar Rajshahi (Game 1) - Toss Match Double Durbar Rajshahi Winner
+1119457: BPL: Durdanto Dhaka vs Durbar Rajshahi (Game 1) - Most Sixes Durdanto Dhaka Winner
+1119458: BPL: Durdanto Dhaka vs Durbar Rajshahi (Game 1) - Most Sixes Draw
+1119459: BPL: Durdanto Dhaka vs Durbar Rajshahi (Game 1) - Most Sixes Durbar Rajshahi Winner
+1119460: BPL: Durdanto Dhaka vs Durbar Rajshahi (Game 1) - Team Top Batter Durdanto Dhaka Winner
+1119461: BPL: Durdanto Dhaka vs Durbar Rajshahi (Game 1) - Team Top Batter Draw
+1119462: BPL: Durdanto Dhaka vs Durbar Rajshahi (Game 1) - Team Top Batter Durbar Rajshahi Winner
+1119463: BPL: Sylhet Strikers vs Rangpur Riders (Game 1)
+1119464: BPL: Sylhet Strikers vs Rangpur Riders (Game 1) - Who wins the toss?
+1119465: BPL: Sylhet Strikers vs Rangpur Riders (Game 1) - Completed match?
+1119466: BPL: Sylhet Strikers vs Rangpur Riders (Game 1) - Toss Match Double Sylhet Strikers Winner
+1119467: BPL: Sylhet Strikers vs Rangpur Riders (Game 1) - Toss Match Double Draw
+1119468: BPL: Sylhet Strikers vs Rangpur Riders (Game 1) - Toss Match Double Rangpur Riders Winner
+1119469: BPL: Sylhet Strikers vs Rangpur Riders (Game 1) - Most Sixes Sylhet Strikers Winner
+1119470: BPL: Sylhet Strikers vs Rangpur Riders (Game 1) - Most Sixes Draw
+1119471: BPL: Sylhet Strikers vs Rangpur Riders (Game 1) - Most Sixes Rangpur Riders Winner
+1119472: BPL: Sylhet Strikers vs Rangpur Riders (Game 1) - Team Top Batter Sylhet Strikers Winner
+1119473: BPL: Sylhet Strikers vs Rangpur Riders (Game 1) - Team Top Batter Draw
+1119474: BPL: Sylhet Strikers vs Rangpur Riders (Game 1) - Team Top Batter Rangpur Riders Winner
+1119646: New "Stranger Things" episode released by January 31? 
+1119647: New "Stranger Things" episode released by December 31? 
+1119698: Spread: Brighton & Hove Albion FC (-1.5)
+1119701: Brighton & Hove Albion FC vs. AFC Bournemouth: O/U 1.5
+1119704: Brighton & Hove Albion FC vs. AFC Bournemouth: O/U 2.5
+1119705: Brighton & Hove Albion FC vs. AFC Bournemouth: O/U 3.5
+1119706: Brighton & Hove Albion FC vs. AFC Bournemouth: O/U 4.5
+1119707: Brighton & Hove Albion FC vs. AFC Bournemouth: Both Teams to Score
+1119709: SS Lazio vs. Como 1907: O/U 1.5
+1119710: SS Lazio vs. Como 1907: O/U 2.5

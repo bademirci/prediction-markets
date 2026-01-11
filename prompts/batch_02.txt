@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+563650: SCOTUS accepts sports event contract case by July 31, 2026?     
+564161: Will Nikola Jokic win the 2025–2026 NBA MVP?
+564162: Will Shai Gilgeous-Alexander win the 2025–2026 NBA MVP?
+564163: Will Luka Doncic win the 2025–2026 NBA MVP?
+564164: Will Giannis Antetokounmpo win the 2025–2026 NBA MVP?
+564165: Will Anthony Edwards win the 2025–2026 NBA MVP?
+564166: Will Victor Wembanyama win the 2025–2026 NBA MVP?
+564167: Will Jalen Brunson win the 2025–2026 NBA MVP?
+564168: Will Cade Cunningham win the 2025–2026 NBA MVP?
+564169: Will Donovan Mitchell win the 2025–2026 NBA MVP?
+564170: Will Kevin Durant win the 2025–2026 NBA MVP?
+564171: Will Paolo Banchero win the 2025–2026 NBA MVP?
+564172: Will Stephen Curry win the 2025–2026 NBA MVP?
+564173: Will Anthony Davis win the 2025–2026 NBA MVP?
+564174: Will Joel Embiid win the 2025–2026 NBA MVP?
+564175: Will Jaylen Brown win the 2025–2026 NBA MVP?
+564176: Will Trae Young win the 2025–2026 NBA MVP?
+564177: Will Kawhi Leonard win the 2025–2026 NBA MVP?
+564178: Will LeBron James win the 2025–2026 NBA MVP?
+564179: Will Ja Morant win the 2025–2026 NBA MVP?
+564180: Will Devin Booker win the 2025–2026 NBA MVP?
+564181: Will Cooper Flagg win the 2025–2026 NBA MVP?
+564183: Will Tyrese Maxey win the 2025–2026 NBA MVP?
+564194: Will the Cleveland Cavaliers win the NBA Eastern Conference Finals?
+564195: Will the New York Knicks win the NBA Eastern Conference Finals?
+564196: Will the Orlando Magic win the NBA Eastern Conference Finals?
+564197: Will the Atlanta Hawks win the NBA Eastern Conference Finals?
+564198: Will the Detroit Pistons win the NBA Eastern Conference Finals?
+564199: Will the Philadelphia 76ers win the NBA Eastern Conference Finals?
+564200: Will the Boston Celtics win the NBA Eastern Conference Finals?
+564201: Will the Milwaukee Bucks win the NBA Eastern Conference Finals?
+564202: Will the Indiana Pacers win the NBA Eastern Conference Finals?
+564203: Will the Brooklyn Nets win the NBA Eastern Conference Finals?
+564204: Will the Miami Heat win the NBA Eastern Conference Finals?
+564205: Will the Toronto Raptors win the NBA Eastern Conference Finals?
+564206: Will the Chicago Bulls win the NBA Eastern Conference Finals?
+564207: Will the Washington Wizards win the NBA Eastern Conference Finals?
+564208: Will the Charlotte Hornets win the NBA Eastern Conference Finals?
+564210: Will the Oklahoma City Thunder win the NBA Western Conference Finals?
+564211: Will the Denver Nuggets win the NBA Western Conference Finals?
+564212: Will the Houston Rockets win the NBA Western Conference Finals?
+564213: Will the Los Angeles Lakers win the NBA Western Conference Finals?
+564214: Will the Minnesota Timberwolves win the NBA Western Conference Finals?
+564215: Will the Los Angeles Clippers win the NBA Western Conference Finals?
+564216: Will the Golden State Warriors win the NBA Western Conference Finals?
+564217: Will the Dallas Mavericks win the NBA Western Conference Finals?
+564218: Will the San Antonio Spurs win the NBA Western Conference Finals?
+564219: Will the Memphis Grizzlies win the NBA Western Conference Finals?
+564220: Will the Sacramento Kings win the NBA Western Conference Finals?
+564221: Will the New Orleans Pelicans win the NBA Western Conference Finals?
+564222: Will the Phoenix Suns win the NBA Western Conference Finals?
+564223: Will the Portland Trail Blazers win the NBA Western Conference Finals?
+564224: Will the Utah Jazz win the NBA Western Conference Finals?
+565064: Will the Republicans win the 2028 US Presidential Election?
+565065: Will the Democrats win the 2028 US Presidential Election?
+565930: Tesla launches unsupervised full self driving (FSD) by June 30?
+566136: Will PSG win the 2025–26 Champions League?
+566137: Will Liverpool win the 2025–26 Champions League?
+566138: Will Barcelona win the 2025–26 Champions League?
+566139: Will Real Madrid win the 2025–26 Champions League?
+566140: Will Arsenal win the 2025–26 Champions League?
+566141: Will Man City win the 2025–26 Champions League?
+566142: Will Bayern Munich win the 2025–26 Champions League?
+566143: Will Chelsea win the 2025–26 Champions League?
+566144: Will Newcastle win the 2025–26 Champions League?
+566145: Will Inter win the 2025–26 Champions League?
+566146: Will Atletico Madrid win the 2025–26 Champions League?
+566147: Will Napoli win the 2025–26 Champions League?
+566148: Will Juventus win the 2025–26 Champions League?
+566149: Will Tottenham win the 2025–26 Champions League?
+566150: Will Leverkusen win the 2025–26 Champions League?
+566151: Will Dortmund win the 2025–26 Champions League?
+566152: Will Atalanta win the 2025–26 Champions League?
+566153: Will Athletic Club win the 2025–26 Champions League?
+566154: Will Marseille win the 2025–26 Champions League?
+566155: Will Villarreal win the 2025–26 Champions League?
+566156: Will Eintracht Frankfurt win the 2025–26 Champions League?
+566157: Will Monaco win the 2025–26 Champions League?
+566158: Will Benfica win the 2025–26 Champions League?
+566159: Will Sporting win the 2025–26 Champions League?
+566160: Will PSV win the 2025–26 Champions League?
+566163: Will Ajax win the 2025–26 Champions League?
+566165: Will Galatasaray win the 2025–26 Champions League?
+566166: Will Union Saint-Gilloise win the 2025–26 Champions League?
+566167: Will Olympiakos win the 2025–26 Champions League?
+566170: Will Club Brugge win the 2025–26 Champions League?
+566172: Will Bodo Glimt win the 2025–26 Champions League?
+566174: Will Slavia Pragu win the 2025–26 Champions League?
+566186: Will Liverpool win the 2025–26 English Premier League?
+566187: Will Arsenal win the 2025–26 English Premier League?
+566188: Will Manchester City win the 2025–26 English Premier League?
+566189: Will Chelsea win the 2025–26 English Premier League?
+566190: Will Newcastle win the 2025–26 English Premier League?
+566191: Will Manchester United win the 2025–26 English Premier League?
+566192: Will Tottenham win the 2025–26 English Premier League?
+566193: Will Aston Villa win the 2025–26 English Premier League?
+566194: Will Brighton win the 2025–26 English Premier League?
+566195: Will Nottm Forest win the 2025–26 English Premier League?
+566196: Will Bournemouth win the 2025–26 English Premier League?
+566197: Will Everton win the 2025–26 English Premier League?
+566198: Will West Ham win the 2025–26 English Premier League?
+566199: Will Crystal Palace win the 2025–26 English Premier League?
+566200: Will Fulham win the 2025–26 English Premier League?
+566201: Will Brentford win the 2025–26 English Premier League?
+566202: Will Wolves win the 2025–26 English Premier League?
+566203: Will Leeds win the 2025–26 English Premier League?
+566204: Will Burnley win the 2025–26 English Premier League?
+566205: Will Sunderland win the 2025–26 English Premier League?
+566227: Will Real Madrid win the 2025–26 La Liga?
+566228: Will Barcelona win the 2025–26 La Liga?
+566229: Will Atletico Madrid win the 2025–26 La Liga?
+566230: Will Villarreal win the 2025–26 La Liga?
+566231: Will Athletic Bilbao win the 2025–26 La Liga?
+566232: Will Betis win the 2025–26 La Liga?
+566233: Will Real Sociedad win the 2025–26 La Liga?
+566234: Will Girona win the 2025–26 La Liga?
+566235: Will Celta Vigo win the 2025–26 La Liga?
+566236: Will Valencia win the 2025–26 La Liga?
+566237: Will Sevilla win the 2025–26 La Liga?
+566238: Will Espanyol win the 2025–26 La Liga?
+566239: Will Getafe win the 2025–26 La Liga?
+566240: Will Osasuna win the 2025–26 La Liga?
+566241: Will Alaves win the 2025–26 La Liga?
+566242: Will Mallorca win the 2025–26 La Liga?
+566243: Will Levante win the 2025–26 La Liga?
+566244: Will Rayo Vallecano win the 2025–26 La Liga?
+566245: Will Elche win the 2025–26 La Liga?
+566246: Will Oviedo win the 2025–26 La Liga?
+566511: Will Napoli win the 2025–26 Serie A league?
+566512: Will Inter win the 2025–26 Serie A league?
+566513: Will Juventus win the 2025–26 Serie A league?
+566514: Will AC Milan win the 2025–26 Serie A league?
+566515: Will Roma win the 2025–26 Serie A league?
+566516: Will Atalanta win the 2025–26 Serie A league?
+566517: Will Lazio win the 2025–26 Serie A league?
+566518: Will Fiorentina win the 2025–26 Serie A league?
+566519: Will Bologna win the 2025–26 Serie A league?
+566520: Will Como win the 2025–26 Serie A league?
+566521: Will Torino win the 2025–26 Serie A league?
+566522: Will Genoa win the 2025–26 Serie A league?
+566523: Will Sassuolo win the 2025–26 Serie A league?
+566524: Will Parma win the 2025–26 Serie A league?
+566525: Will Udinese win the 2025–26 Serie A league?
+566526: Will Cagliari win the 2025–26 Serie A league?
+566527: Will Verona win the 2025–26 Serie A league?
+566528: Will Lecce win the 2025–26 Serie A league?
+566529: Will Pisa win the 2025–26 Serie A league?
+566530: Will Cremonese win the 2025–26 Serie A league?
+566536: Will Bayern Munich win the 2025–26 Bundesliga?
+566537: Will Leverkusen win the 2025–26 Bundesliga?
+566538: Will Dortmund win the 2025–26 Bundesliga?
+566539: Will RB Leipzig win the 2025–26 Bundesliga?
+566540: Will Eintracht Frankfurt win the 2025–26 Bundesliga?
+566541: Will Freiburg win the 2025–26 Bundesliga?
+566542: Will Mainz win the 2025–26 Bundesliga?
+566543: Will Stuttgart win the 2025–26 Bundesliga?
+566544: Will Mgladbach win the 2025–26 Bundesliga?
+566545: Will VfL Wolfsburg win the 2025–26 Bundesliga?
+566546: Will Werder Bremen win the 2025–26 Bundesliga?
+566547: Will Hoffenheim win the 2025–26 Bundesliga?
+566548: Will Union Berlin win the 2025–26 Bundesliga?
+566549: Will FC Koln win the 2025–26 Bundesliga?
+566550: Will FC Augsburg win the 2025–26 Bundesliga?
+566551: Will Hamburger SV win the 2025–26 Bundesliga?
+566552: Will FC Heidenheim win the 2025–26 Bundesliga?
+566553: Will St Pauli win the 2025–26 Bundesliga?
+566648: Will Josh Allen win the 2025–26 NFL MVP award?
+566649: Will Lamar Jackson win the 2025–26 NFL MVP award?
+566650: Will Joe Burrow win the 2025–26 NFL MVP award?
+566651: Will Patrick Mahomes win the 2025–26 NFL MVP award?
+566652: Will Jayden Daniels win the 2025–26 NFL MVP award?
+566653: Will Jalen Hurts win the 2025–26 NFL MVP award?
+566654: Will Justin Herbert win the 2025–26 NFL MVP award?
+566655: Will Baker Mayfield win the 2025–26 NFL MVP award?
+566656: Will C.J. Stroud win the 2025–26 NFL MVP award?
+566657: Will Jordan Love win the 2025–26 NFL MVP award?
+566658: Will Caleb Williams win the 2025–26 NFL MVP award?
+566659: Will Kyler Murray win the 2025–26 NFL MVP award?
+566660: Will Dak Prescott win the 2025–26 NFL MVP award?
+566661: Will Brock Purdy win the 2025–26 NFL MVP award?
+566662: Will Jared Goff win the 2025–26 NFL MVP award?
+566663: Will Matthew Stafford win the 2025–26 NFL MVP award?
+566664: Will Bo Nix win the 2025–26 NFL MVP award?
+566665: Will Trevor Lawrence win the 2025–26 NFL MVP award?
+566666: Will Drake Maye win the 2025–26 NFL MVP award?
+566667: Will Aaron Rodgers win the 2025–26 NFL MVP award?
+566668: Will Saquon Barkley win the 2025–26 NFL MVP award?
+566669: Will Derrick Henry win the 2025–26 NFL MVP award?
+566670: Will Michael Penix win the 2025–26 NFL MVP award?
+566671: Will J.J. McCarthy win the 2025–26 NFL MVP award?
+566672: Will Sam Darnold win the 2025–26 NFL MVP award?
+566673: Will Tua Tagovailoa win the 2025–26 NFL MVP award?
+566674: Will Jahmyr Gibbs win the 2025–26 NFL MVP award?
+566675: Will Bryce Young win the 2025–26 NFL MVP award?
+566676: Will Bijan Robinson win the 2025–26 NFL MVP award?
+566677: Will Christian McCaffrey win the 2025–26 NFL MVP award?
+566678: Will Justin Fields win the 2025–26 NFL MVP award?
+566679: Will Cameron Ward win the 2025–26 NFL MVP award?
+566680: Will Russell Wilson win the 2025–26 NFL MVP award?
+566681: Will Micah Parsons win the 2025–26 NFL MVP award?
+566682: Will Ja'Marr Chase win the 2025–26 NFL MVP award?
+566683: Will Myles Garrett win the 2025–26 NFL MVP award?
+566684: Will T.J. Watt win the 2025–26 NFL MVP award?
+566685: Will Maxx Crosby win the 2025–26 NFL MVP award?
+566686: Will Justin Jefferson win the 2025–26 NFL MVP award?
+566687: Will CeeDee Lamb win the 2025–26 NFL MVP award?
+566688: Will Geno Smith win the 2025–26 NFL MVP award?
+566690: Will Daniel Jones win the 2025–26 NFL MVP award?
+566691: Will Jonathan Taylor win the 2025–26 NFL MVP award?
+566692: Will Jaxon Smith-Njigba win the 2025–26 NFL MVP award?
+566731: Will PSG win the 2025–26 French Ligue 1?
+566732: Will Monaco win the 2025–26 French Ligue 1?
+566733: Will Marseille win the 2025–26 French Ligue 1?
+566734: Will Lille win the 2025–26 French Ligue 1?
+566735: Will Lyon win the 2025–26 French Ligue 1?
+566736: Will Nice win the 2025–26 French Ligue 1?
+566737: Will Lens win the 2025–26 French Ligue 1?
+566738: Will Strasbourg win the 2025–26 French Ligue 1?
+566739: Will Rennes win the 2025–26 French Ligue 1?
+566740: Will Toulouse win the 2025–26 French Ligue 1?
+566741: Will Nantes win the 2025–26 French Ligue 1?
+566742: Will Auxerre win the 2025–26 French Ligue 1?
+566743: Will Lorient win the 2025–26 French Ligue 1?
+566744: Will Metz win the 2025–26 French Ligue 1?
+566745: Will Le Havre win the 2025–26 French Ligue 1?
+566746: Will Angers win the 2025–26 French Ligue 1?
+566747: Will Paris FC win the 2025–26 French Ligue 1?
+566748: Will Brest win the 2025–26 French Ligue 1?
+566760: Will Trump pardon Ghislaine Maxwell by end of 2026?
+567560: Will the next Prime Minister of Hungary be Viktor Orbán?
+567561: Will the next Prime Minister of Hungary be Péter Magyar?
+567562: Will the next Prime Minister of Hungary be Klára Dobrev?
+567563: Will the next Prime Minister of Hungary be László Toroczkai?
+567621: Will China invade Taiwan by end of 2026?
+567687: Russia x Ukraine ceasefire by end of 2026?
+567688: Netanyahu out by end of 2026?
+567689: Zelenskyy out as Ukraine president by end of 2026?
+567690: Erdoğan out by end of 2026?
+568116: Trump impeached by end of 2026?
+568117: Will Trump resign by December 31, 2026?
+568629: Will Scottie Scheffler win the 2026 Masters tournament?
+568630: Will Rory McIlroy win the 2026 Masters tournament?
+568631: Will Bryson Dechambeau win the 2026 Masters tournament?
+568632: Will Jon Rahm win the 2026 Masters tournament?
+568633: Will Collin Morikawa win the 2026 Masters tournament?
+568634: Will Xander Schauffele win the 2026 Masters tournament?
+568635: Will Ludvig Aberg win the 2026 Masters tournament?
+568636: Will Justin Thomas win the 2026 Masters tournament?
+568637: Will Viktor Hovland win the 2026 Masters tournament?
+568638: Will Brooks Koepka win the 2026 Masters tournament?
+568639: Will Hideki Matsuyama win the 2026 Masters tournament?
+568640: Will Jordan Spieth win the 2026 Masters tournament?
+568641: Will Patrick Cantlay win the 2026 Masters tournament?
+568642: Will Joaquin Niemann win the 2026 Masters tournament?
+568643: Will Tyrrell Hatton win the 2026 Masters tournament?
+568644: Will Cameron Smith win the 2026 Masters tournament?
+568645: Will Will Zalatoris win the 2026 Masters tournament?
+568646: Will Tommy Fleetwood win the 2026 Masters tournament?
+568647: Will Shane Lowry win the 2026 Masters tournament?
+568648: Will Patrick Reed win the 2026 Masters tournament?
+568649: Will Sungjae Im win the 2026 Masters tournament?
+568650: Will Robert MacIntyre win the 2026 Masters tournament?
+568651: Will Corey Conners win the 2026 Masters tournament?
+568652: Will Justin Rose win the 2026 Masters tournament?
+568653: Will Jason Day win the 2026 Masters tournament?
+568654: Will Max Homa win the 2026 Masters tournament?
+568655: Will Min Woo Lee win the 2026 Masters tournament?
+568656: Will Akshay Bhatia win the 2026 Masters tournament?
+568657: Will Russell Henley win the 2026 Masters tournament?
+568658: Will Wyndham Clark win the 2026 Masters tournament?
+568659: Will Sepp Straka win the 2026 Masters tournament?
+568660: Will Tony Finau win the 2026 Masters tournament?
+568661: Will Dustin Johnson win the 2026 Masters tournament?
+568662: Will Sahith Theegala win the 2026 Masters tournament?
+568663: Will Tom Kim win the 2026 Masters tournament?
+568664: Will Keegan Bradley win the 2026 Masters tournament?
+568665: Will Sam Burns win the 2026 Masters tournament?
+568666: Will Matt Fitzpatrick win the 2026 Masters tournament?
+568667: Will Davis Thompson win the 2026 Masters tournament?
+568668: Will Cameron Young win the 2026 Masters tournament?
+568669: Will Adam Scott win the 2026 Masters tournament?
+568670: Will Sergio Garcia win the 2026 Masters tournament?
+568671: Will Aaron Rai win the 2026 Masters tournament?
+568672: Will Maverick McNealy win the 2026 Masters tournament?
+568673: Will Billy Horschel win the 2026 Masters tournament?
+568674: Will Phil Mickelson win the 2026 Masters tournament?
+568675: Will Tiger Woods win the 2026 Masters tournament?
+568676: Will Nicolai Hojgaard win the 2026 Masters tournament?
+568677: Will Denny McCarthy win the 2026 Masters tournament?
+568678: Will Thomas Detry win the 2026 Masters tournament?
+568679: Will Taylor Pendrith win the 2026 Masters tournament?
+568680: Will Brian Harman win the 2026 Masters tournament?
+568681: Will Rasmus Hojgaard win the 2026 Masters tournament?
+568682: Will Byeong Hun An win the 2026 Masters tournament?
+568683: Will Danny Willett win the 2026 Masters tournament?
+568684: Will Bubba Watson win the 2026 Masters tournament?
+568685: Will Charl Schwartzel win the 2026 Masters tournament?
+568686: Will Zach Johnson win the 2026 Masters tournament?
+568687: Will Fred Couples win the 2026 Masters tournament?
+569255: Will PH win the most seats in the 2026 Colombian Senate election?
+569256: Will PCC win the most seats in the 2026 Colombian Senate election?
+569257: Will PLC win the most seats in the 2026 Colombian Senate election?
+569258: Will AV (Green Alliance) win the most seats in the 2026 Colombian Senate election?
+569259: Will CD win the most seats in the 2026 Colombian Senate election?
+569260: Will CR win the most seats in the 2026 Colombian Senate election?
+569261: Will U win the most seats in the 2026 Colombian Senate election?
+569262: Will COM win the most seats in the 2026 Colombian Senate election?
+569263: Will CJL/MIRA win the most seats in the 2026 Colombian Senate election?
+569264: Will MAIS win the most seats in the 2026 Colombian Senate election?
+569265: Will AICO win the most seats in the 2026 Colombian Senate election?
+569266: Will LIGA win the most seats in the 2026 Colombian Senate election?
+569311: Will PH win the most seats in the 2026 Colombian Chamber of Representatives election?
+569312: Will Conservative win the most seats in the 2026 Colombian Chamber of Representatives election?
+569313: Will PLC win the most seats in the 2026 Colombian Chamber of Representatives election?
+569314: Will Green Alliance win the most seats in the 2026 Colombian Chamber of Representatives election?
+569315: Will CD win the most seats in the 2026 Colombian Chamber of Representatives election?
+569316: Will CR win the most seats in the 2026 Colombian Chamber of Representatives election?
+569317: Will La U win the most seats in the 2026 Colombian Chamber of Representatives election?
+569318: Will MIRA‑CJL win the most seats in the 2026 Colombian Chamber of Representatives election?
+569332: Will Vicky Dávila win the 1st round of the 2026 Colombian presidential election?
+569333: Will Luis Gilberto Murillo win the 1st round of the 2026 Colombian presidential election?
+569334: Will Claudia López win the 1st round of the 2026 Colombian presidential election?
+569335: Will David Luna Sánchez win the 1st round of the 2026 Colombian presidential election?
+569336: Will Juan Daniel Oviedo win the 1st round of the 2026 Colombian presidential election?
+569337: Will Miguel Uribe Turbay win the 1st round of the 2026 Colombian presidential election?
+569338: Will Gustavo Bolívar win the 1st round of the 2026 Colombian presidential election?
+569339: Will Sergio Fajardo win the 1st round of the 2026 Colombian presidential election?
+569340: Will Juan Manuel Galán win the 1st round of the 2026 Colombian presidential election?
+569341: Will Germán Vargas Lleras win the 1st round of the 2026 Colombian presidential election?
+569342: Will Paloma Valencia win the 1st round of the 2026 Colombian presidential election?
+569343: Will Iván Cepeda Castro win the 1st round of the 2026 Colombian presidential election?
+569344: Will Abelardo de la Espriella win the 1st round of the 2026 Colombian presidential election?
+569345: Will Roy Barreras win the 1st round of the 2026 Colombian presidential election?
+569346: Will Daniel Quintero win the 1st round of the 2026 Colombian presidential election?
+569347: Will Juan Carlos Pinzón win the 1st round of the 2026 Colombian presidential election?
+569348: Will Mauricio Cárdenas win the 1st round of the 2026 Colombian presidential election?
+569349: Will Enrique Peñalosa win the 1st round of the 2026 Colombian presidential election?
+569356: Will Vicky Dávila win the 2026 Colombian presidential election?
+569357: Will Luis Gilberto Murillo win the 2026 Colombian presidential election?
+569358: Will Claudia López win the 2026 Colombian presidential election?
+569359: Will David Luna Sánchez win the 2026 Colombian presidential election?
+569360: Will Juan Daniel Oviedo win the 2026 Colombian presidential election?
+569362: Will Gustavo Bolívar win the 2026 Colombian presidential election?
+569363: Will Sergio Fajardo win the 2026 Colombian presidential election?
+569364: Will Juan Manuel Galán win the 2026 Colombian presidential election?
+569365: Will Germán Vargas Lleras win the 2026 Colombian presidential election?
+569366: Will Abelardo de la Espriella  win the 2026 Colombian presidential election?
+569367: Will Mauricio Cardenas win the 2026 Colombian presidential election?
+569368: Will Ivan Cepeda Castro win the 2026 Colombian presidential election?
+569369: Will Daniel Quintero win the 2026 Colombian presidential election?
+569370: Will Roy Barreras win the 2026 Colombian presidential election?
+569371: Will Enrique Peñalosa win the 2026 Colombian presidential election?
+569372: Will Juan Carlos Pinzón win the 2026 Colombian presidential election?
+569373: Will Paloma Valencia win the 2026 Colombian presidential election?
+569423: Will Tim Vieira win the 2026 Portugal presidential election?
+569424: Will Joana Amaral Dias win the 2026 Portugal presidential election?
+569425: Will André Pestana win the 2026 Portugal presidential election?
+569426: Will André Ventura win the 2026 Portugal presidential election?
+569427: Will Orlando Cruz win the 2026 Portugal presidential election?
+569428: Will Aristides Teixeira win the 2026 Portugal presidential election?
+569429: Will Manuela Magno win the 2026 Portugal presidential election?
+569430: Will Luís Marques Mendes win the 2026 Portugal presidential election?
+569431: Will Pedro Tinoco de Faria win the 2026 Portugal presidential election?
+569432: Will Henrique Gouveia e Melo win the 2026 Portugal presidential election?
+569433: Will António José Seguro win the 2026 Portugal presidential election?
+569434: Will Vitorino Silva win the 2026 Portugal presidential election?
+569435: Will Ângela Maryah win the 2026 Portugal presidential election?
+569436: Will António Filipe win the 2026 Portugal presidential election?
+569437: Will Raul Perestrello win the 2026 Portugal presidential election?
+569438: Will José Cardoso win the 2026 Portugal presidential election?
+569439: Will Pedro Passos Coelho win the 2026 Portugal presidential election?
+569440: Will Jorge Pinto win the 2026 Portugal presidential election?
+569453: Will any presidential candidate win outright in the first round of the Portugal election?
+569454: Will any presidential candidate win outright in the first round of the Colombia's election?
+572110: Aaron Taylor-Johnson announced as next James Bond?
+572111: James Norton announced as next James Bond?
+572112: Paul Mescal announced as next James Bond?
+572114: Jacob Elordi announced as next James Bond?
+572115: Harris Dickinson announced as next James Bond?
+572116: Tom Hardy announced as next James Bond?
+572117: Pierce Brosnan announced as next James Bond?
+572118: Tom Holland announced as next James Bond?
+572119: Henry Cavill announced as next James Bond?
+572121: Callum Turner announced as next James Bond?
+572122: Jack Lowdon announced as next James Bond?
+572133: No one announced as next James Bond?
+572403: Will Bitcoin hit $80k or $150k first?
+572469: Will Trump nominate Kevin Warsh as the next Fed chair?
+572470: Will Trump nominate Kevin Hassett as the next Fed chair?
+572471: Will Trump nominate Christopher Waller as the next Fed chair?
+572472: Will Trump nominate Bill Pulte as the next Fed chair?
+572473: Will Trump nominate Judy Shelton as the next Fed chair?
+572474: Will Trump nominate David Malpass as the next Fed chair?
+572475: Will Trump nominate Howard Lutnick as the next Fed chair?
+572476: Will Trump nominate Arthur Laffer as the next Fed chair?
+572477: Will Trump nominate Larry Kudlow as the next Fed chair?
+572478: Will Trump nominate Jerome Powell as the next Fed chair?
+572479: Will Trump nominate Ron Paul as the next Fed chair?
+572480: Will Trump nominate Stephen Miran as the next Fed chair?
+572481: Will Trump nominate Scott Bessent as the next Fed chair?
+572482: Will Trump nominate James B. Bullard as the next Fed chair?
+572483: Will Trump nominate Marc Sumerlin as the next Fed chair?
+572484: Will Trump nominate David Zervos as the next Fed chair?
+572485: Will Trump nominate Rick Rieder as the next Fed chair?
+572486: Will Trump nominate Michelle Bowman as the next Fed chair?
+572487: Will Trump nominate Lorie K. Logan as the next Fed chair?
+572488: Will Trump nominate Philip Jefferson as the next Fed chair?
+572489: Will Trump nominate Janet Yellen as the next Fed chair?
+572491: Will Trump nominate Larry Lindsey as the next Fed chair?
+572492: Will Trump nominate Barron Trump as the next Fed chair?
+572494: Will Trump nominate himself as the next Fed chair?
+572506: Will Trump nominate no one before 2027?
+572732: Will Liverpool finish in 2nd place in the 2025-26 English Premier League?
+572733: Will Arsenal finish in 2nd place in the 2025-26 English Premier League?
+572734: Will Manchester City finish in 2nd place in the 2025-26 English Premier League?
+572735: Will Chelsea finish in 2nd place in the 2025-26 English Premier League?
+572736: Will Newcastle finish in 2nd place in the 2025-26 English Premier League?
+572737: Will Manchester United finish in 2nd place in the 2025-26 English Premier League?
+572738: Will Tottenham finish in 2nd place in the 2025-26 English Premier League?
+572739: Will Aston Villa finish in 2nd place in the 2025-26 English Premier League?
+572740: Will Nottm Forest finish in 2nd place in the 2025-26 English Premier League?
+572741: Will Brighton finish in 2nd place in the 2025-26 English Premier League?
+572742: Will Bournemouth finish in 2nd place in the 2025-26 English Premier League?
+572743: Will Everton finish in 2nd place in the 2025-26 English Premier League?
+572744: Will Crystal Palace finish in 2nd place in the 2025-26 English Premier League?
+572745: Will West Ham finish in 2nd place in the 2025-26 English Premier League?
+572746: Will Leeds finish in 2nd place in the 2025-26 English Premier League?
+572747: Will Fulham finish in 2nd place in the 2025-26 English Premier League?
+572748: Will Brentford finish in 2nd place in the 2025-26 English Premier League?
+572749: Will Wolves finish in 2nd place in the 2025-26 English Premier League?
+572750: Will Burnley finish in 2nd place in the 2025-26 English Premier League?
+572751: Will Sunderland finish in 2nd place in the 2025-26 English Premier League?
+572765: Will Liverpool finish in 3rd place in the 2025-26 English Premier League?
+572766: Will Arsenal finish in 3rd place in the 2025-26 English Premier League?
+572767: Will Manchester City finish in 3rd place in the 2025-26 English Premier League?
+572768: Will Chelsea finish in 3rd place in the 2025-26 English Premier League?
+572769: Will Newcastle finish in 3rd place in the 2025-26 English Premier League?
+572770: Will Manchester United finish in 3rd place in the 2025-26 English Premier League?
+572771: Will Tottenham finish in 3rd place in the 2025-26 English Premier League?
+572772: Will Aston Villa finish in 3rd place in the 2025-26 English Premier League?
+572773: Will Nottm Forest finish in 3rd place in the 2025-26 English Premier League?
+572774: Will Brighton finish in 3rd place in the 2025-26 English Premier League?
+572775: Will Bournemouth finish in 3rd place in the 2025-26 English Premier League?
+572776: Will Everton finish in 3rd place in the 2025-26 English Premier League?
+572777: Will Crystal Palace finish in 3rd place in the 2025-26 English Premier League?
+572778: Will West Ham finish in 3rd place in the 2025-26 English Premier League?
+572779: Will Leeds finish in 3rd place in the 2025-26 English Premier League?
+572780: Will Fulham finish in 3rd place in the 2025-26 English Premier League?
+572781: Will Brentford finish in 3rd place in the 2025-26 English Premier League?
+572782: Will Wolves finish in 3rd place in the 2025-26 English Premier League?
+572783: Will Burnley finish in 3rd place in the 2025-26 English Premier League?
+572784: Will Sunderland finish in 3rd place in the 2025-26 English Premier League?
+572816: Will Liverpool finish in last place in the 2025-26 English Premier League?
+572817: Will Arsenal finish in last place in the 2025-26 English Premier League?
+572818: Will Manchester City finish in last place in the 2025-26 English Premier League?
+572819: Will Chelsea finish in last place in the 2025-26 English Premier League?
+572820: Will Newcastle finish in last place in the 2025-26 English Premier League?
+572821: Will Manchester United finish in last place in the 2025-26 English Premier League?
+572822: Will Tottenham finish in last place in the 2025-26 English Premier League?
+572823: Will Aston Villa finish in last place in the 2025-26 English Premier League?
+572824: Will Nottm Forest finish in last place in the 2025-26 English Premier League?
+572825: Will Brighton finish in last place in the 2025-26 English Premier League?
+572826: Will Bournemouth finish in last place in the 2025-26 English Premier League?
+572827: Will Everton finish in last place in the 2025-26 English Premier League?
+572828: Will Crystal Palace finish in last place in the 2025-26 English Premier League?
+572829: Will West Ham finish in last place in the 2025-26 English Premier League?
+572830: Will Leeds finish in last place in the 2025-26 English Premier League?
+572831: Will Fulham finish in last place in the 2025-26 English Premier League?
+572832: Will Brentford finish in last place in the 2025-26 English Premier League?
+572833: Will Wolves finish in last place in the 2025-26 English Premier League?
+572834: Will Burnley finish in last place in the 2025-26 English Premier League?
+572835: Will Sunderland finish in last place in the 2025-26 English Premier League?
+572841: Will Liverpool be relegated from the English Premier League after the 2025–26 season?
+572842: Will Arsenal be relegated from the English Premier League after the 2025–26 season?
+572843: Will Man City be relegated from the English Premier League after the 2025–26 season?
+572844: Will Chelsea be relegated from the English Premier League after the 2025–26 season?
+572845: Will Newcastle be relegated from the English Premier League after the 2025–26 season?
+572846: Will Man Utd be relegated from the English Premier League after the 2025–26 season?
+572847: Will Tottenham be relegated from the English Premier League after the 2025–26 season?
+572848: Will Aston Villa be relegated from the English Premier League after the 2025–26 season?
+572849: Will Nottm Forest be relegated from the English Premier League after the 2025–26 season?
+572850: Will Brighton be relegated from the English Premier League after the 2025–26 season?
+572851: Will Bournemouth be relegated from the English Premier League after the 2025–26 season?
+572852: Will Everton be relegated from the English Premier League after the 2025–26 season?
+572853: Will Crystal Palace be relegated from the English Premier League after the 2025–26 season?
+572854: Will West Ham be relegated from the English Premier League after the 2025–26 season?
+572855: Will Leeds be relegated from the English Premier League after the 2025–26 season?
+572856: Will Fulham be relegated from the English Premier League after the 2025–26 season?
+572857: Will Brentford be relegated from the English Premier League after the 2025–26 season?
+572858: Will Wolves be relegated from the English Premier League after the 2025–26 season?
+572859: Will Burnley be relegated from the English Premier League after the 2025–26 season?
+572860: Will Sunderland be relegated from the English Premier League after the 2025–26 season?
+573647: Will GPT-6 be released before GTA VI?
+573654: Will Bitcoin hit $150k by March 31, 2026?
+573655: Will Bitcoin hit $150k by June 30, 2026?
+573656: Will Bitcoin hit $150k by December 31, 2026?
+573826: Will GPT-6 be released by March 31, 2026?
+573828: Will Claude 5 be released by March 31, 2026?
+573830: Grok 5 released by March 31, 2026?
+574236: Will Wrexham be promoted to the EPL?

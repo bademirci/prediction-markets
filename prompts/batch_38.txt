@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1146638: Will NVIDIA (NVDA) finish week of January 12 above $170?
+1146639: Will NVIDIA (NVDA) finish week of January 12 above $175?
+1146640: Will NVIDIA (NVDA) finish week of January 12 above $180?
+1146641: Will NVIDIA (NVDA) finish week of January 12 above $185?
+1146642: Will NVIDIA (NVDA) finish week of January 12 above $190?
+1146643: Will NVIDIA (NVDA) finish week of January 12 above $195?
+1146644: Will Palantir (PLTR) close at <$168 on the final day of trading of the week of Jan 12 – Jan 16?
+1146645: Will NVIDIA (NVDA) finish week of January 12 above $200?
+1146646: Will Palantir (PLTR) close at $168-$170 on the final day of trading of the week of Jan 12 – Jan 16?
+1146647: Will NVIDIA (NVDA) finish week of January 12 above $205?
+1146648: Will Palantir (PLTR) close at $170-$172 on the final day of trading of the week of Jan 12 – Jan 16?
+1146649: Will NVIDIA (NVDA) finish week of January 12 above $210?
+1146650: Will Palantir (PLTR) close at $172-$174 on the final day of trading of the week of Jan 12 – Jan 16?
+1146651: Will NVIDIA (NVDA) finish week of January 12 above $215?
+1146652: Will Palantir (PLTR) close at $174-$176 on the final day of trading of the week of Jan 12 – Jan 16?
+1146653: Will Palantir (PLTR) close at $176-$178 on the final day of trading of the week of Jan 12 – Jan 16?
+1146654: Will Palantir (PLTR) close at $178-$180 on the final day of trading of the week of Jan 12 – Jan 16?
+1146655: Will Palantir (PLTR) close at $180-$182 on the final day of trading of the week of Jan 12 – Jan 16?
+1146656: Will Palantir (PLTR) close at $182-$184 on the final day of trading of the week of Jan 12 – Jan 16?
+1146657: Will Palantir (PLTR) close at $184-$186 on the final day of trading of the week of Jan 12 – Jan 16?
+1146658: Will Palantir (PLTR) close at >$186 on the final day of trading of the week of Jan 12 – Jan 16?
+1146659: Will Opendoor (OPEN) close at <$2.00 on the final day of trading of the week of Jan 12 – Jan 16?
+1146660: Will Opendoor (OPEN) close at $2.00-$3.00 on the final day of trading of the week of Jan 12 – Jan 16?
+1146661: Will Opendoor (OPEN) close at $3.00-$4.00 on the final day of trading of the week of Jan 12 – Jan 16?
+1146662: Will Opendoor (OPEN) close at $4.00-$5.00 on the final day of trading of the week of Jan 12 – Jan 16?
+1146663: Will Opendoor (OPEN) close at $5.00-$6.00 on the final day of trading of the week of Jan 12 – Jan 16?
+1146664: Will Opendoor (OPEN) close at $6.00-$7.00 on the final day of trading of the week of Jan 12 – Jan 16?
+1146665: Will Opendoor (OPEN) close at $7.00-$8.00 on the final day of trading of the week of Jan 12 – Jan 16?
+1146666: Will Netflix (NFLX) finish week of January 12 above $30?
+1146667: Will Opendoor (OPEN) close at $8.00-$9.00 on the final day of trading of the week of Jan 12 – Jan 16?
+1146668: Will Netflix (NFLX) finish week of January 12 above $40?
+1146669: Will Opendoor (OPEN) close at $9.00-$10 on the final day of trading of the week of Jan 12 – Jan 16?
+1146670: Will Netflix (NFLX) finish week of January 12 above $50?
+1146671: Will Opendoor (OPEN) close at $10-$11 on the final day of trading of the week of Jan 12 – Jan 16?
+1146672: Will Netflix (NFLX) finish week of January 12 above $60?
+1146673: Will Opendoor (OPEN) close at >$11 on the final day of trading of the week of Jan 12 – Jan 16?
+1146674: Will Netflix (NFLX) finish week of January 12 above $70?
+1146675: Will Netflix (NFLX) finish week of January 12 above $80?
+1146676: Will Netflix (NFLX) finish week of January 12 above $90?
+1146677: Will Netflix (NFLX) finish week of January 12 above $100?
+1146678: Will Netflix (NFLX) finish week of January 12 above $110?
+1146679: Will Netflix (NFLX) finish week of January 12 above $120?
+1146680: Will Netflix (NFLX) finish week of January 12 above $130?
+1146681: Will Netflix (NFLX) finish week of January 12 above $140?
+1146682: Will Netflix (NFLX) finish week of January 12 above $150?
+1146683: Will Palantir (PLTR) finish week of January 12 above $171?
+1146684: Will Palantir (PLTR) finish week of January 12 above $172?
+1146685: Will Palantir (PLTR) finish week of January 12 above $173?
+1146686: Will Palantir (PLTR) finish week of January 12 above $174?
+1146687: Will Palantir (PLTR) finish week of January 12 above $175?
+1146688: Will Palantir (PLTR) finish week of January 12 above $176?
+1146689: Will Palantir (PLTR) finish week of January 12 above $177?
+1146690: Will Palantir (PLTR) finish week of January 12 above $178?
+1146691: Will Palantir (PLTR) finish week of January 12 above $179?
+1146692: Will Palantir (PLTR) finish week of January 12 above $180?
+1146693: Will Palantir (PLTR) finish week of January 12 above $181?
+1146694: Will Palantir (PLTR) finish week of January 12 above $182?
+1146695: Will Palantir (PLTR) finish week of January 12 above $183?
+1146696: Will Opendoor (OPEN) finish week of January 12 above $3.50?
+1146697: Will Opendoor (OPEN) finish week of January 12 above $4.00?
+1146698: Will Opendoor (OPEN) finish week of January 12 above $4.50?
+1146699: Will Opendoor (OPEN) finish week of January 12 above $5.00?
+1146700: Will Opendoor (OPEN) finish week of January 12 above $5.50?
+1146701: Will Opendoor (OPEN) finish week of January 12 above $6.00?
+1146702: Will Opendoor (OPEN) finish week of January 12 above $6.50?
+1146703: Will Opendoor (OPEN) finish week of January 12 above $7.00?
+1146704: Will Opendoor (OPEN) finish week of January 12 above $7.50?
+1146705: Will Opendoor (OPEN) finish week of January 12 above $8.00?
+1146706: Will Opendoor (OPEN) finish week of January 12 above $8.50?
+1146707: Will Opendoor (OPEN) finish week of January 12 above $9.00?
+1146708: Will Opendoor (OPEN) finish week of January 12 above $9.50?
+1147041: Bitcoin Up or Down - January 11, 7PM ET
+1147042: Ethereum Up or Down - January 11, 7PM ET
+1147043: Solana Up or Down - January 11, 7PM ET
+1147044: XRP Up or Down - January 11, 7PM ET
+1147090: Bikinis back on X by January 16?
+1147101: Kyle Kuzma: Assists Over 1.5
+1147106: Israel strikes Iran by January 11, 2026?
+1147107: Israel strikes Iran by January 13, 2026?
+1147355: Will Israel or the US target an Iranian nuclear facility?
+1147356: Will Israel or the US target an Iranian oil or gas facility?
+1147357: Will Israel or the US target Tehran?
+1147391: Bitcoin Up or Down - January 11, 8PM ET
+1147392: Ethereum Up or Down - January 11, 8PM ET
+1147393: Solana Up or Down - January 11, 8PM ET
+1147394: XRP Up or Down - January 11, 8PM ET
+1147842: Bitcoin Up or Down - January 11, 9PM ET
+1147843: Ethereum Up or Down - January 11, 9PM ET
+1147844: Solana Up or Down - January 11, 9PM ET
+1147845: XRP Up or Down - January 11, 9PM ET
+1147891: Map Handicap: SR (-1.5)
+1148076: Counter-Strike: FUT Esports vs OG (BO3)
+1148077: Counter-Strike: FUT Esports vs OG - Map 1 Winner
+1148078: Counter-Strike: FUT Esports vs OG - Map 2 Winner
+1148079: Games Total: O/U 2.5
+1148080: Map Handicap: FUT (-1.5)
+1148081: FUT Esports to win 1 maps?
+1148082: FUT Esports to win 2 maps?
+1148083: Total Rounds Over/Under 52.5
+1148084: Total Rounds Over/Under 53.5
+1148085: Total Rounds Over/Under 54.5
+1148086: Series FUT Esports Rounds Handicap (-4.5)
+1148087: Series FUT Esports Rounds Handicap (-2.5)
+1148088: Series FUT Esports Rounds Handicap (-3.5)
+1148089: OG to win 1 maps?
+1148090: OG to win 2 maps?
+1148091: Counter-Strike: FaZe vs EYEBALLERS (BO3)
+1148092: Counter-Strike: FaZe vs EYEBALLERS - Map 1 Winner
+1148093: Counter-Strike: FaZe vs EYEBALLERS - Map 2 Winner
+1148094: Games Total: O/U 2.5
+1148095: EYEBALLERS to win 1 maps?
+1148096: EYEBALLERS to win 2 maps?
+1148097: Series FaZe Rounds Handicap (-8.5)
+1148098: Series FaZe Rounds Handicap (-9.5)
+1148099: Series FaZe Rounds Handicap (-7.5)
+1148100: Total Rounds Over/Under 47.5
+1148101: Total Rounds Over/Under 48.5
+1148102: Total Rounds Over/Under 49.5
+1148103: Map Handicap: FaZe (-1.5)
+1148104: FaZe to win 1 maps?
+1148105: FaZe to win 2 maps?
+1148106: Counter-Strike: Astralis vs fnatic (BO3)
+1148107: Counter-Strike: Astralis vs fnatic - Map 1 Winner
+1148108: Counter-Strike: Astralis vs fnatic - Map 2 Winner
+1148109: Games Total: O/U 2.5
+1148110: Total Rounds Over/Under 55.5
+1148111: Total Rounds Over/Under 53.5
+1148112: Total Rounds Over/Under 54.5
+1148113: Total Rounds Over/Under 52.5
+1148114: Map Handicap: AST (-1.5)
+1148115: fnatic to win 1 maps?
+1148116: fnatic to win 2 maps?
+1148117: Astralis to win 1 maps?
+1148118: Astralis to win 2 maps?
+1148119: Series Astralis Rounds Handicap (-2.5)
+1148120: Series Astralis Rounds Handicap (-3.5)
+1148121: Series Astralis Rounds Handicap (-4.5)
+1148122: Counter-Strike: Aurora Gaming vs HOTU (BO3)
+1148123: Counter-Strike: Aurora Gaming vs HOTU - Map 1 Winner
+1148124: Counter-Strike: Aurora Gaming vs HOTU - Map 2 Winner
+1148125: Games Total: O/U 2.5
+1148126: Series Aurora Gaming Rounds Handicap (-7.5)
+1148127: Map Handicap: AUR (-1.5)
+1148128: Total Rounds Over/Under 50.5
+1148129: Total Rounds Over/Under 49.5
+1148130: Total Rounds Over/Under 51.5
+1148131: Aurora Gaming to win 1 maps?
+1148132: Aurora Gaming to win 2 maps?
+1148133: HOTU to win 1 maps?
+1148134: HOTU to win 2 maps?
+1148135: Series Aurora Gaming Rounds Handicap (-6.5)
+1148136: Series Aurora Gaming Rounds Handicap (-5.5)
+1148137: Counter-Strike: GamerLegion vs Passion UA (BO3)
+1148138: Counter-Strike: GamerLegion vs Passion UA - Map 1 Winner
+1148139: Counter-Strike: GamerLegion vs Passion UA - Map 2 Winner
+1148140: Games Total: O/U 2.5
+1148141: Total Rounds Over/Under 53.5
+1148142: Series GamerLegion Rounds Handicap (-3.5)
+1148143: Series GamerLegion Rounds Handicap (-2.5)
+1148144: Map Handicap: GL (-1.5)
+1148145: GamerLegion to win 1 maps?
+1148146: GamerLegion to win 2 maps?
+1148147: Total Rounds Over/Under 54.5
+1148148: Series Passion UA Rounds Handicap (-2.5)
+1148149: Passion UA to win 1 maps?
+1148150: Passion UA to win 2 maps?
+1148151: Total Rounds Over/Under 55.5
+1148152: Total Rounds Over/Under 56.5
+1148153: Counter-Strike: Heroic vs NRG (BO3)
+1148154: Counter-Strike: Heroic vs NRG - Map 1 Winner
+1148155: Counter-Strike: Heroic vs NRG - Map 2 Winner
+1148156: Games Total: O/U 2.5
+1148157: Total Rounds Over/Under 54.5
+1148158: NRG to win 1 maps?
+1148159: NRG to win 2 maps?
+1148160: Total Rounds Over/Under 52.5
+1148161: Series Heroic Rounds Handicap (-3.5)
+1148162: Map Handicap: HERO (-1.5)
+1148163: Total Rounds Over/Under 55.5
+1148164: Total Rounds Over/Under 53.5
+1148165: Series Heroic Rounds Handicap (-2.5)
+1148166: Series Heroic Rounds Handicap (-4.5)
+1148167: Heroic to win 1 maps?
+1148168: Heroic to win 2 maps?
+1148169: Counter-Strike: Natus Vincere vs Monte (BO3)
+1148170: Counter-Strike: Natus Vincere vs Monte - Map 1 Winner
+1148171: Counter-Strike: Natus Vincere vs Monte - Map 2 Winner
+1148172: Games Total: O/U 2.5
+1148173: Total Rounds Over/Under 44.5
+1148174: Monte to win 1 maps?
+1148175: Monte to win 2 maps?
+1148176: Series Natus Vincere Rounds Handicap (-10.5)
+1148177: Series Natus Vincere Rounds Handicap (-8.5)
+1148178: Series Natus Vincere Rounds Handicap (-9.5)
+1148179: Natus Vincere to win 1 maps?
+1148180: Natus Vincere to win 2 maps?
+1148181: Total Rounds Over/Under 46.5
+1148182: Total Rounds Over/Under 45.5
+1148183: Map Handicap: NAVI (-1.5)
+1148184: Counter-Strike: Vitality vs Virtus.pro (BO3)
+1148185: Counter-Strike: Vitality vs Virtus.pro - Map 1 Winner
+1148186: Counter-Strike: Vitality vs Virtus.pro - Map 2 Winner
+1148187: Games Total: O/U 2.5
+1148188: Map Handicap: VIT (-1.5)
+1148189: Total Rounds Over/Under 42.5
+1148190: Virtus.pro to win 1 maps?
+1148191: Virtus.pro to win 2 maps?
+1148192: Vitality to win 1 maps?
+1148193: Vitality to win 2 maps?
+1148194: Total Rounds Over/Under 43.5
+1148195: Total Rounds Over/Under 41.5
+1148196: Series Vitality Rounds Handicap (-11.5)
+1148197: Series Vitality Rounds Handicap (-10.5)
+1148198: Series Vitality Rounds Handicap (-12.5)
+1148199: Counter-Strike: Gentle Mates vs M80 (BO3)
+1148200: Counter-Strike: Gentle Mates vs M80 - Map 1 Winner
+1148201: Counter-Strike: Gentle Mates vs M80 - Map 2 Winner
+1148202: Games Total: O/U 2.5
+1148203: Total Rounds Over/Under 54.5
+1148204: Total Rounds Over/Under 53.5
+1148205: Total Rounds Over/Under 55.5
+1148206: Gentle Mates to win 1 maps?
+1148207: Gentle Mates to win 2 maps?
+1148208: Series M80 Rounds Handicap (-4.5)
+1148209: Series M80 Rounds Handicap (-3.5)
+1148210: Series M80 Rounds Handicap (-2.5)
+1148211: Map Handicap: M80 (-1.5)
+1148212: M80 to win 1 maps?
+1148213: M80 to win 2 maps?
+1148226: Total Rounds Over/Under 56.5
+1148254: Bitcoin Up or Down - January 11, 10PM ET
+1148255: Ethereum Up or Down - January 11, 10PM ET
+1148256: Solana Up or Down - January 11, 10PM ET
+1148257: Counter-Strike: 3DMAX vs Inner Circle Esports (BO3)
+1148258: Counter-Strike: 3DMAX vs Inner Circle Esports - Map 1 Winner
+1148259: Counter-Strike: 3DMAX vs Inner Circle Esports - Map 2 Winner
+1148260: Games Total: O/U 2.5
+1148261: Map Handicap: 3DMAX (-1.5)
+1148262: 3DMAX to win 1 maps?
+1148263: 3DMAX to win 2 maps?
+1148264: Series 3DMAX Rounds Handicap (-6.5)
+1148265: Total Rounds Over/Under 50.5
+1148266: Total Rounds Over/Under 52.5
+1148267: Total Rounds Over/Under 51.5
+1148268: Series 3DMAX Rounds Handicap (-7.5)
+1148269: Series 3DMAX Rounds Handicap (-5.5)
+1148270: Inner Circle Esports to win 1 maps?
+1148271: Inner Circle Esports to win 2 maps?
+1148272: Total Rounds Over/Under 53.5
+1148273: XRP Up or Down - January 11, 10PM ET
+1148274: Counter-Strike: Liquid vs NIP (BO3)
+1148275: Counter-Strike: Liquid vs NIP - Map 1 Winner
+1148276: Counter-Strike: Liquid vs NIP - Map 2 Winner
+1148277: Games Total: O/U 2.5
+1148278: Series Liquid Rounds Handicap (-2.5)
+1148279: Series Liquid Rounds Handicap (-3.5)
+1148280: Map Handicap: TL (-1.5)
+1148281: NIP to win 1 maps?
+1148282: NIP to win 2 maps?
+1148283: Series Liquid Rounds Handicap (-4.5)
+1148284: Liquid to win 1 maps?
+1148285: Liquid to win 2 maps?
+1148286: Total Rounds Over/Under 55.5
+1148287: Total Rounds Over/Under 53.5
+1148288: Total Rounds Over/Under 54.5
+1148289: Total Rounds Over/Under 52.5
+1148290: Counter-Strike: Team Falcons vs ECSTATIC (BO3)
+1148291: Counter-Strike: Team Falcons vs ECSTATIC - Map 1 Winner
+1148292: Counter-Strike: Team Falcons vs ECSTATIC - Map 2 Winner
+1148293: Games Total: O/U 2.5
+1148294: Series Team Falcons Rounds Handicap (-11.5)
+1148295: Total Rounds Over/Under 39.5
+1148296: Total Rounds Over/Under 41.5
+1148297: Total Rounds Over/Under 40.5
+1148298: Total Rounds Over/Under 42.5
+1148299: ECSTATIC to win 1 maps?
+1148300: ECSTATIC to win 2 maps?
+1148301: Map Handicap: FAL (-1.5)
+1148302: Series Team Falcons Rounds Handicap (-13.5)
+1148303: Series Team Falcons Rounds Handicap (-12.5)
+1148304: Team Falcons to win 1 maps?
+1148305: Team Falcons to win 2 maps?
+1148306: Counter-Strike: PARIVISION vs ENCE (BO3)
+1148307: Counter-Strike: PARIVISION vs ENCE - Map 1 Winner
+1148308: Counter-Strike: PARIVISION vs ENCE - Map 2 Winner
+1148309: Games Total: O/U 2.5
+1148310: Series PARIVISION Rounds Handicap (-6.5)
+1148311: Series PARIVISION Rounds Handicap (-7.5)
+1148312: Series PARIVISION Rounds Handicap (-5.5)
+1148313: Map Handicap: PRV (-1.5)
+1148314: Total Rounds Over/Under 50.5
+1148315: Total Rounds Over/Under 52.5
+1148316: Total Rounds Over/Under 51.5
+1148317: Total Rounds Over/Under 49.5
+1148318: ENCE to win 1 maps?
+1148319: ENCE to win 2 maps?
+1148320: PARIVISION to win 1 maps?
+1148321: PARIVISION to win 2 maps?
+1148322: Counter-Strike: Spirit vs Sinners (BO3)
+1148323: Counter-Strike: Spirit vs Sinners - Map 1 Winner
+1148324: Counter-Strike: Spirit vs Sinners - Map 2 Winner
+1148325: Games Total: O/U 2.5
+1148326: Total Rounds Over/Under 40.5
+1148327: Total Rounds Over/Under 39.5
+1148328: Total Rounds Over/Under 41.5
+1148329: Series Spirit Rounds Handicap (-12.5)
+1148330: Series Spirit Rounds Handicap (-13.5)
+1148331: Series Spirit Rounds Handicap (-11.5)
+1148332: Spirit to win 1 maps?
+1148333: Spirit to win 2 maps?
+1148334: Map Handicap: TS (-1.5)
+1148335: Sinners to win 1 maps?
+1148336: Sinners to win 2 maps?
+1148337: Counter-Strike: paiN vs BetBoom Team (BO3)
+1148338: Counter-Strike: paiN vs BetBoom Team - Map 1 Winner
+1148339: Counter-Strike: paiN vs BetBoom Team - Map 2 Winner
+1148340: Games Total: O/U 2.5
+1148341: Map Handicap: BB (-1.5)
+1148342: Total Rounds Over/Under 55.5
+1148343: Total Rounds Over/Under 53.5
+1148344: Total Rounds Over/Under 54.5
+1148345: Series BetBoom Team Rounds Handicap (-2.5)
+1148346: Series BetBoom Team Rounds Handicap (-3.5)
+1148347: Series paiN Rounds Handicap (-2.5)
+1148348: paiN to win 1 maps?
+1148349: paiN to win 2 maps?
+1148350: BetBoom Team to win 1 maps?
+1148351: BetBoom Team to win 2 maps?
+1148352: Counter-Strike: FURIA vs 9INE (BO3)
+1148353: Counter-Strike: FURIA vs 9INE - Map 1 Winner
+1148354: Counter-Strike: FURIA vs 9INE - Map 2 Winner
+1148355: Games Total: O/U 2.5
+1148356: FURIA to win 1 maps?
+1148357: FURIA to win 2 maps?
+1148358: 9INE to win 1 maps?
+1148359: 9INE to win 2 maps?
+1148360: Series FURIA Rounds Handicap (-11.5)
+1148361: Total Rounds Over/Under 40.5
+1148362: Total Rounds Over/Under 42.5
+1148363: Total Rounds Over/Under 41.5
+1148364: Map Handicap: FURIA (-1.5)
+1148365: Series FURIA Rounds Handicap (-12.5)
+1148366: Series FURIA Rounds Handicap (-13.5)
+1148644: Bitcoin Up or Down - January 11, 11PM ET
+1148645: Ethereum Up or Down - January 11, 11PM ET
+1148646: Solana Up or Down - January 11, 11PM ET
+1148647: XRP Up or Down - January 11, 11PM ET
+1148894: Bitcoin Up or Down - January 12, 12AM ET
+1148895: Ethereum Up or Down - January 12, 12AM ET
+1148896: Will Elon Musk post 0-19 tweets from January 13 to January 20, 2026?
+1148897: Will Elon Musk post 20-39 tweets from January 13 to January 20, 2026?
+1148899: Will Elon Musk post 40-59 tweets from January 13 to January 20, 2026?
+1148901: Will Elon Musk post 60-79 tweets from January 13 to January 20, 2026?
+1148903: Will Elon Musk post 80-99 tweets from January 13 to January 20, 2026?
+1148905: Will Elon Musk post 100-119 tweets from January 13 to January 20, 2026?
+1148907: Will Elon Musk post 120-139 tweets from January 13 to January 20, 2026?
+1148909: Will Elon Musk post 140-159 tweets from January 13 to January 20, 2026?
+1148911: Will Elon Musk post 160-179 tweets from January 13 to January 20, 2026?
+1148913: Will Elon Musk post 180-199 tweets from January 13 to January 20, 2026?
+1148915: Will Elon Musk post 200-219 tweets from January 13 to January 20, 2026?
+1148917: Will Elon Musk post 220-239 tweets from January 13 to January 20, 2026?
+1148918: Solana Up or Down - January 12, 12AM ET
+1148919: Will Elon Musk post 240-259 tweets from January 13 to January 20, 2026?
+1148920: Will Elon Musk post 260-279 tweets from January 13 to January 20, 2026?
+1148921: Will Elon Musk post 280-299 tweets from January 13 to January 20, 2026?
+1148922: Will Elon Musk post 300-319 tweets from January 13 to January 20, 2026?
+1148925: Will Elon Musk post 320-339 tweets from January 13 to January 20, 2026?
+1148926: Will Elon Musk post 340-359 tweets from January 13 to January 20, 2026?
+1148927: Will Elon Musk post 360-379 tweets from January 13 to January 20, 2026?
+1148928: Will Elon Musk post 380-399 tweets from January 13 to January 20, 2026?
+1148929: Will Elon Musk post 400-419 tweets from January 13 to January 20, 2026?
+1148930: Will Elon Musk post 420-439 tweets from January 13 to January 20, 2026?
+1148931: Will Elon Musk post 440-459 tweets from January 13 to January 20, 2026?
+1148932: Will Elon Musk post 460-479 tweets from January 13 to January 20, 2026?
+1148933: XRP Up or Down - January 12, 12AM ET
+1148934: Will Elon Musk post 480-499 tweets from January 13 to January 20, 2026?
+1148936: Will Elon Musk post 500-519 tweets from January 13 to January 20, 2026?
+1148937: Will Elon Musk post 520-539 tweets from January 13 to January 20, 2026?
+1148938: Will Elon Musk post 540-559 tweets from January 13 to January 20, 2026?
+1148940: Will Elon Musk post 560-579 tweets from January 13 to January 20, 2026?
+1148941: Will SV Darmstadt 98 win on 2026-01-23?
+1148942: Will AJ Auxerre win on 2026-01-23?
+1148943: Will Elon Musk post 580-599 tweets from January 13 to January 20, 2026?
+1148944: Will SV Darmstadt 98 vs. 1. FC Nürnberg end in a draw?
+1148945: Will AJ Auxerre vs. Paris Saint-Germain FC end in a draw?
+1148946: Will Elon Musk post 600-619 tweets from January 13 to January 20, 2026?
+1148947: Will 1. FC Nürnberg win on 2026-01-23?
+1148948: Will Paris Saint-Germain FC win on 2026-01-23?
+1148949: Will Elon Musk post 620-639 tweets from January 13 to January 20, 2026?
+1148950: Will Elon Musk post 640-659 tweets from January 13 to January 20, 2026?
+1148951: Will FC St. Pauli 1910 win on 2026-01-23?
+1148952: Will Elon Musk post 660-679 tweets from January 13 to January 20, 2026?
+1148953: Will FC St. Pauli 1910 vs. Hamburger SV end in a draw?
+1148954: Will Hamburger SV win on 2026-01-23?
+1148955: Will Elon Musk post 680-699 tweets from January 13 to January 20, 2026?
+1148956: Will Elon Musk post 700-719 tweets from January 13 to January 20, 2026?
+1148957: Will Elon Musk post 720-739 tweets from January 13 to January 20, 2026?
+1148959: Will Elon Musk post 740+ tweets from January 13 to January 20, 2026?
+1148963: Will DSC Arminia Bielefeld win on 2026-01-23?
+1148965: Will DSC Arminia Bielefeld vs. Holstein Kiel end in a draw?
+1148967: Will Holstein Kiel win on 2026-01-23?
+1148968: Will FC Internazionale Milano win on 2026-01-23?
+1148969: Will FC Internazionale Milano vs. Pisa SC end in a draw?
+1148970: Will Pisa SC win on 2026-01-23?
+1148971: Will Charlton Athletic FC win on 2026-02-06?
+1148972: Will Charlton Athletic FC vs. Queens Park Rangers FC end in a draw?
+1148973: Will Queens Park Rangers FC win on 2026-02-06?
+1148981: ASB Classic: Francisco Comesana vs Valentin Royer
+1148986: Map Handicap: SGE (-1.5)
+1148987: Eintracht Frankfurt to win 1 maps?
+1148988: Eintracht Frankfurt to win 2 maps?
+1148989: Bodax Gaming to win 1 maps?
+1148990: Bodax Gaming to win 2 maps?
+1148991: ASB Classic: Jenson Brooksby vs James Watt
+1148993: ASB Classic: Alejandro Tabilo vs Camilo Ugo Carabelli
+1148998: Map Handicap: S2G (-1.5)
+1149000: Beşiktaş Esports to win 1 maps?
+1149001: Beşiktaş Esports to win 2 maps?
+1149002: S2G Esports to win 1 maps?
+1149003: S2G Esports to win 2 maps?
+1149004: ASB Classic: Alexandre Muller vs Marcos Giron
+1149006: ASB Classic: Mariano Navone vs Alex Michelsen
+1149016: ASB Classic: Roberto Bautista Agut vs Giovanni Mpetshi Perricard
+1149017: ASB Classic: Nuno Borges vs Tomas Etcheverry
+1149018: Valorant: Galatasaray Esports vs FUT Academy (BO3)
+1149019: Valorant: Galatasaray Esports vs FUT Academy - Map 1 Winner
+1149020: Valorant: Galatasaray Esports vs FUT Academy - Map 2 Winner
+1149021: Games Total: O/U 2.5
+1149022: Map Handicap: GS (-1.5)
+1149023: Galatasaray Esports to win 1 maps?
+1149024: Galatasaray Esports to win 2 maps?
+1149025: FUT Academy to win 1 maps?
+1149026: FUT Academy to win 2 maps?
+1149027: ASB Classic: Fabian Marozsan vs Gael Monfils
+1149028: Valorant: Fire Flux Esports vs Misa Esports (BO3)
+1149029: Valorant: Fire Flux Esports vs Misa Esports - Map 1 Winner
+1149030: Valorant: Fire Flux Esports vs Misa Esports - Map 2 Winner
+1149031: Games Total: O/U 2.5
+1149032: Map Handicap: MISA (-1.5)
+1149033: Misa Esports to win 1 maps?
+1149034: Misa Esports to win 2 maps?
+1149035: Fire Flux Esports to win 1 maps?
+1149036: Adelaide International: Tristan Schoolkate vs Rinky Hijikata
+1149037: Fire Flux Esports to win 2 maps?
+1149038: Adelaide International: Thanasi Kokkinakis vs Sebastian Korda
+1149039: Adelaide International: Miomir Kecmanovic vs Valentin Vacherot
+1149040: Big Bash League: Sydney Sixers vs Sydney Thunder (Game 1)
+1149041: Big Bash League: Sydney Sixers vs Sydney Thunder (Game 1) - Who wins the toss?
+1149042: Big Bash League: Sydney Sixers vs Sydney Thunder (Game 1) - Completed match?
+1149043: Adelaide International: Ugo Humbert vs Terence Atmane
+1149044: Big Bash League: Sydney Sixers vs Sydney Thunder (Game 1) - Toss Match Double Sydney Sixers Winner
+1149045: Big Bash League: Sydney Sixers vs Sydney Thunder (Game 1) - Toss Match Double Draw
+1149046: Big Bash League: Sydney Sixers vs Sydney Thunder (Game 1) - Toss Match Double Sydney Thunder Winner
+1149047: Adelaide International: Ethan Quinn vs Marton Fucsovics
+1149048: Big Bash League: Sydney Sixers vs Sydney Thunder (Game 1) - Most Sixes Sydney Sixers Winner
+1149049: Big Bash League: Sydney Sixers vs Sydney Thunder (Game 1) - Most Sixes Draw
+1149050: Big Bash League: Sydney Sixers vs Sydney Thunder (Game 1) - Most Sixes Sydney Thunder Winner
+1149051: Adelaide International: Damir Dzumhur vs Brandon Nakashima
+1149052: Big Bash League: Sydney Sixers vs Sydney Thunder (Game 1) - Team Top Batter Sydney Sixers Winner
+1149053: Adelaide International: Tomas Machac vs James Duckworth
+1149054: Big Bash League: Sydney Sixers vs Sydney Thunder (Game 1) - Team Top Batter Draw
+1149055: Big Bash League: Sydney Sixers vs Sydney Thunder (Game 1) - Team Top Batter Sydney Thunder Winner
+1149056: Adelaide International: Daniel Altmaier vs Jaume Munar
+1149057: Adelaide International: Reilly Opelka vs Alexei Popyrin
+1149058: SA20: MI Cape Town vs Sunrisers Eastern Cape (Game 1)
+1149059: SA20: MI Cape Town vs Sunrisers Eastern Cape (Game 1) - Who wins the toss?
+1149060: SA20: MI Cape Town vs Sunrisers Eastern Cape (Game 1) - Completed match?
+1149061: SA20: MI Cape Town vs Sunrisers Eastern Cape (Game 1) - Toss Match Double MI Cape Town Winner
+1149062: SA20: MI Cape Town vs Sunrisers Eastern Cape (Game 1) - Toss Match Double Draw
+1149063: SA20: MI Cape Town vs Sunrisers Eastern Cape (Game 1) - Toss Match Double Sunrisers Eastern Cape Winner
+1149064: SA20: MI Cape Town vs Sunrisers Eastern Cape (Game 1) - Most Sixes MI Cape Town Winner
+1149065: SA20: MI Cape Town vs Sunrisers Eastern Cape (Game 1) - Most Sixes Draw
+1149066: SA20: MI Cape Town vs Sunrisers Eastern Cape (Game 1) - Most Sixes Sunrisers Eastern Cape Winner
+1149067: SA20: MI Cape Town vs Sunrisers Eastern Cape (Game 1) - Team Top Batter MI Cape Town Winner
+1149068: SA20: MI Cape Town vs Sunrisers Eastern Cape (Game 1) - Team Top Batter Draw
+1149069: SA20: MI Cape Town vs Sunrisers Eastern Cape (Game 1) - Team Top Batter Sunrisers Eastern Cape Winner
+1149073: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1)
+1149074: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Who wins the toss?
+1149076: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Toss Match Double Chattogram Challengers Winner
+1149077: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Toss Match Double Draw
+1149078: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Toss Match Double Durbar Rajshahi Winner
+1149079: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Most Sixes Chattogram Challengers Winner
+1149080: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Most Sixes Draw
+1149081: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Most Sixes Durbar Rajshahi Winner
+1149084: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Team Top Batter Chattogram Challengers Winner
+1149085: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Team Top Batter Draw
+1149086: BPL: Chattogram Challengers vs Durbar Rajshahi (Game 1) - Team Top Batter Durbar Rajshahi Winner
+1149453: Bitcoin Up or Down - January 12, 1AM ET
+1149454: Ethereum Up or Down - January 12, 1AM ET
+1149455: Solana Up or Down - January 12, 1AM ET
+1149456: Spread: Paris Saint-Germain FC (-1.5)
+1149457: AJ Auxerre vs. Paris Saint-Germain FC: O/U 1.5
+1149458: AJ Auxerre vs. Paris Saint-Germain FC: O/U 2.5
+1149459: AJ Auxerre vs. Paris Saint-Germain FC: O/U 3.5
+1149460: AJ Auxerre vs. Paris Saint-Germain FC: O/U 4.5
+1149465: FC St. Pauli 1910 vs. Hamburger SV: O/U 3.5
+1149466: FC Internazionale Milano vs. Pisa SC: O/U 2.5
+1149467: FC St. Pauli 1910 vs. Hamburger SV: O/U 4.5
+1149468: FC Internazionale Milano vs. Pisa SC: O/U 3.5
+1149469: FC St. Pauli 1910 vs. Hamburger SV: Both Teams to Score

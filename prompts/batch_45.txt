@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1157926: Games Total: O/U 2.5
+1157927: Looking for Org to win 1 games?
+1157928: Looking for Org to win 2 games?
+1157929: Map Handicap: M80 (-1.5)
+1157930: M80 to win 1 maps?
+1157931: M80 to win 2 maps?
+1157932: Voca to win 1 maps?
+1157933: Voca to win 2 maps?
+1157934: Counter-Strike: NRG vs Marsborne (BO3)
+1157935: Counter-Strike: NRG vs Marsborne - Map 1 Winner
+1157936: Counter-Strike: NRG vs Marsborne - Map 2 Winner
+1157937: Games Total: O/U 2.5
+1157938: Map Handicap: NRG (-1.5)
+1157939: NRG to win 1 maps?
+1157940: NRG to win 2 maps?
+1157941: Marsborne to win 1 maps?
+1157942: Marsborne to win 2 maps?
+1157943: Dota 2: Rottweilas Latam vs CatChamp (BO3)
+1157944: Dota 2: Rottweilas Latam vs CatChamp - Game 1 Winner
+1157945: Dota 2: Rottweilas Latam vs CatChamp - Game 2 Winner
+1157946: Games Total: O/U 2.5
+1157947: Game Handicap: CAT (-1.5)
+1157948: Rottweilas Latam to win 1 games?
+1157949: Rottweilas Latam to win 2 games?
+1157950: CatChamp to win 1 games?
+1157951: CatChamp to win 2 games?
+1157952: Bitcoin Up or Down - January 12, 1:30AM-1:45AM ET
+1157953: Ethereum Up or Down - January 12, 1:25AM-1:30AM ET
+1157954: XRP Up or Down - January 12, 1:25AM-1:30AM ET
+1157955: Bitcoin Up or Down - January 12, 1:25AM-1:30AM ET
+1157956: Ethereum Up or Down - January 12, 1:30AM-1:45AM ET
+1157957: Solana Up or Down - January 12, 1:25AM-1:30AM ET
+1157958: XRP Up or Down - January 12, 1:30AM-1:45AM ET
+1157959: XRP Up or Down - January 12, 1:30AM-1:35AM ET
+1157960: Solana Up or Down - January 12, 1:30AM-1:35AM ET
+1157961: Ethereum Up or Down - January 12, 1:30AM-1:35AM ET
+1157962: Bitcoin Up or Down - January 12, 1:30AM-1:35AM ET
+1157963: Total Rounds Over/Under 56.5
+1157964: Total Rounds Over/Under 51.5
+1157965: XRP Up or Down - January 12, 1:35AM-1:40AM ET
+1157966: Ethereum Up or Down - January 12, 1:35AM-1:40AM ET
+1157967: Solana Up or Down - January 12, 1:35AM-1:40AM ET
+1157968: Bitcoin Up or Down - January 12, 1:35AM-1:40AM ET
+1157969: Map Handicap: JL (-1.5)
+1157970: Joblife to win 1 maps?
+1157971: Joblife to win 2 maps?
+1157972: Caldya Esport to win 1 maps?
+1157973: Caldya Esport to win 2 maps?
+1157974: Bitcoin Up or Down - January 12, 1:40AM-1:45AM ET
+1157975: Ethereum Up or Down - January 12, 1:40AM-1:45AM ET
+1157976: XRP Up or Down - January 12, 1:40AM-1:45AM ET
+1157977: Solana Up or Down - January 12, 1:40AM-1:45AM ET
+1157978: Bitcoin Up or Down - January 12, 1:45AM-2:00AM ET
+1157979: Ethereum Up or Down - January 12, 1:45AM-2:00AM ET
+1157980: XRP Up or Down - January 12, 1:45AM-2:00AM ET
+1157981: XRP Up or Down - January 12, 1:45AM-1:50AM ET
+1157982: Ethereum Up or Down - January 12, 1:45AM-1:50AM ET
+1157983: Solana Up or Down - January 12, 1:45AM-1:50AM ET
+1157984: Bitcoin Up or Down - January 12, 1:45AM-1:50AM ET
+1157985: Bitcoin Up or Down - January 12, 1:50AM-1:55AM ET
+1157986: Solana Up or Down - January 12, 1:50AM-1:55AM ET
+1157987: Ethereum Up or Down - January 12, 1:50AM-1:55AM ET
+1157988: XRP Up or Down - January 12, 1:50AM-1:55AM ET
+1157989: Bitcoin Up or Down - January 13, 2AM ET
+1157990: Rainbow Six Siege: Virtus.pro vs Twisted Minds (BO3)
+1157992: Rainbow Six Siege: Virtus.pro vs Twisted Minds - Game 1 Winner
+1157993: Rainbow Six Siege: Virtus.pro vs Twisted Minds - Game 2 Winner
+1157994: Ethereum Up or Down - January 13, 2AM ET
+1157995: Games Total: O/U 2.5
+1157996: Game Handicap: VP (-1.5)
+1157997: Virtus.pro to win 1 games?
+1157998: Virtus.pro to win 2 games?
+1157999: Twisted Minds to win 1 games?
+1158000: Twisted Minds to win 2 games?
+1158001: Will Rayo Vallecano de Madrid win on 2026-01-24?
+1158003: Will Rayo Vallecano de Madrid vs. CA Osasuna end in a draw?
+1158004: Will CA Osasuna win on 2026-01-24?
+1158005: Solana Up or Down - January 13, 2AM ET
+1158006: Will Real Valladolid CF win on 2026-01-24?
+1158007: Will Real Valladolid CF vs. Albacete Balompié end in a draw?
+1158008: Will Albacete Balompié win on 2026-01-24?
+1158009: Will Valencia CF win on 2026-01-24?
+1158010: Will Valencia CF vs. RCD Espanyol de Barcelona end in a draw?
+1158011: Will RCD Espanyol de Barcelona win on 2026-01-24?
+1158012: XRP Up or Down - January 13, 2AM ET
+1158013: FC Twente '65 vs. SBV Excelsior: O/U 1.5
+1158014: FC Twente '65 vs. SBV Excelsior: O/U 2.5
+1158015: FC Twente '65 vs. SBV Excelsior: O/U 3.5
+1158016: FC Twente '65 vs. SBV Excelsior: O/U 4.5
+1158017: FC Twente '65 vs. SBV Excelsior: Both Teams to Score
+1158018: Will CD Leganés win on 2026-01-24?
+1158019: Will CD Leganés vs. Real Sociedad de Fútbol B end in a draw?
+1158020: Will Real Sociedad de Fútbol B win on 2026-01-24?
+1158021: Dota 2: Team Lynx vs NAVI Junior (BO3)
+1158022: Dota 2: Team Lynx vs NAVI Junior - Game 1 Winner
+1158023: Dota 2: Team Lynx vs NAVI Junior - Game 2 Winner
+1158024: Games Total: O/U 2.5
+1158025: Game Handicap: LYNX (-1.5)
+1158026: NAVI Junior to win 1 games?
+1158027: NAVI Junior to win 2 games?
+1158028: Team Lynx to win 1 games?
+1158029: Team Lynx to win 2 games?
+1158030: Will Sevilla FC win on 2026-01-24?
+1158031: Will Sevilla FC vs. Athletic Club end in a draw?
+1158032: Will Athletic Club win on 2026-01-24?
+1158033: Counter-Strike: los kogutos vs STATE (BO3)
+1158034: Counter-Strike: los kogutos vs STATE - Map 1 Winner
+1158035: Counter-Strike: los kogutos vs STATE - Map 2 Winner
+1158036: Games Total: O/U 2.5
+1158037: Map Handicap: STA (-1.5)
+1158038: los kogutos to win 1 maps?
+1158039: los kogutos to win 2 maps?
+1158040: STATE to win 1 maps?
+1158041: Will UD Las Palmas win on 2026-01-24?
+1158042: STATE to win 2 maps?
+1158043: Will UD Las Palmas vs. Córdoba CF end in a draw?
+1158044: Will Córdoba CF win on 2026-01-24?
+1158045: PSV vs. NAC Breda: O/U 1.5
+1158046: PSV vs. NAC Breda: O/U 2.5
+1158047: PSV vs. NAC Breda: O/U 3.5
+1158048: PSV vs. NAC Breda: O/U 4.5
+1158049: PSV vs. NAC Breda: Both Teams to Score
+1158050: Will Villarreal CF win on 2026-01-24?
+1158051: Will Villarreal CF vs. Real Madrid CF end in a draw?
+1158052: Will Real Madrid CF win on 2026-01-24?
+1158053: Will Real Sporting de Gijón win on 2026-01-24?
+1158054: Will Real Sporting de Gijón vs. CD Mirandés end in a draw?
+1158055: Will CD Mirandés win on 2026-01-24?
+1158056: Counter-Strike: ChickenBurger vs Eternal Fire Academy (BO3)
+1158057: Counter-Strike: ChickenBurger vs Eternal Fire Academy - Map 1 Winner
+1158058: Counter-Strike: ChickenBurger vs Eternal Fire Academy - Map 2 Winner
+1158059: NEC vs. PEC Zwolle: O/U 1.5
+1158060: Games Total: O/U 2.5
+1158061: NEC vs. PEC Zwolle: O/U 2.5
+1158062: NEC vs. PEC Zwolle: O/U 3.5
+1158063: Map Handicap: ChickenBurger (-1.5)
+1158064: NEC vs. PEC Zwolle: O/U 4.5
+1158065: Eternal Fire Academy to win 1 maps?
+1158066: NEC vs. PEC Zwolle: Both Teams to Score
+1158067: Eternal Fire Academy to win 2 maps?
+1158068: ChickenBurger to win 1 maps?
+1158069: ChickenBurger to win 2 maps?
+1158070: Will Cádiz CF win on 2026-01-24?
+1158071: Will Cádiz CF vs. Granada CF end in a draw?
+1158072: Will Granada CF win on 2026-01-24?
+1158073: AFC Ajax vs. FC Volendam: O/U 1.5
+1158074: AFC Ajax vs. FC Volendam: O/U 2.5
+1158075: AFC Ajax vs. FC Volendam: O/U 3.5
+1158076: AFC Ajax vs. FC Volendam: O/U 4.5
+1158077: AFC Ajax vs. FC Volendam: Both Teams to Score
+1158078: Ethereum Up or Down - January 12, 2:00AM-2:15AM ET
+1158079: XRP Up or Down - January 12, 1:55AM-2:00AM ET
+1158080: XRP Up or Down - January 12, 2:00AM-2:15AM ET
+1158081: Solana Up or Down - January 12, 1:55AM-2:00AM ET
+1158082: Bitcoin Up or Down - January 12, 2:00AM-2:15AM ET
+1158083: Bitcoin Up or Down - January 12, 1:55AM-2:00AM ET
+1158084: Ethereum Up or Down - January 12, 1:55AM-2:00AM ET
+1158085: XRP Up or Down - January 12, 2:00AM-2:05AM ET
+1158086: Solana Up or Down - January 12, 2:00AM-2:05AM ET
+1158087: Ethereum Up or Down - January 12, 2:00AM-2:05AM ET
+1158088: Bitcoin Up or Down - January 12, 2:00AM-2:05AM ET
+1158089: Giannis Antetokounmpo: Points Over 29.5
+1158090: Jamal Murray: Points Over 25.5
+1158091: Aaron Gordon: Points Over 17.5
+1158092: Peyton Watson: Points Over 17.5
+1158093: Kevin Porter Jr.: Points Over 17.5
+1158094: Ryan Rollins: Points Over 14.5
+1158095: Tim Hardaway Jr.: Points Over 12.5
+1158096: Bobby Portis: Points Over 11.5
+1158097: Christian Braun: Points Over 11.5
+1158098: Myles Turner: Points Over 10.5
+1158099: Giannis Antetokounmpo: Rebounds Over 10.5
+1158100: Aaron Gordon: Rebounds Over 6.5
+1158101: Bobby Portis: Rebounds Over 6.5
+1158102: Peyton Watson: Rebounds Over 6.5
+1158103: Jamal Murray: Rebounds Over 4.5
+1158104: Myles Turner: Rebounds Over 4.5
+1158105: Ryan Rollins: Rebounds Over 4.5
+1158106: Kevin Porter Jr.: Rebounds Over 4.5
+1158107: Christian Braun: Rebounds Over 4.5
+1158108: DaRon Holmes II: Rebounds Over 3.5
+1158109: Jamal Murray: Assists Over 8.5
+1158110: Kevin Porter Jr.: Assists Over 7.5
+1158111: Giannis Antetokounmpo: Assists Over 5.5
+1158112: Ryan Rollins: Assists Over 4.5
+1158113: Aaron Gordon: Assists Over 2.5
+1158114: Peyton Watson: Assists Over 2.5
+1158115: Ethereum Up or Down - January 12, 2:05AM-2:10AM ET
+1158116: XRP Up or Down - January 12, 2:05AM-2:10AM ET
+1158117: Bitcoin Up or Down - January 12, 2:05AM-2:10AM ET
+1158118: Solana Up or Down - January 12, 2:05AM-2:10AM ET
+1158119: Series Heroic Rounds Handicap (-5.5)
+1158120: Ethereum Up or Down - January 12, 2:15AM-2:30AM ET
+1158121: Bitcoin Up or Down - January 12, 2:15AM-2:30AM ET
+1158122: XRP Up or Down - January 12, 2:15AM-2:30AM ET
+1158123: Bitcoin Up or Down - January 12, 2:10AM-2:15AM ET
+1158124: Solana Up or Down - January 12, 2:10AM-2:15AM ET
+1158125: Ethereum Up or Down - January 12, 2:10AM-2:15AM ET
+1158126: XRP Up or Down - January 12, 2:10AM-2:15AM ET
+1158187: Solana Up or Down - January 12, 2:15AM-2:20AM ET
+1158188: XRP Up or Down - January 12, 2:15AM-2:20AM ET
+1158189: Ethereum Up or Down - January 12, 2:15AM-2:20AM ET
+1158190: Bitcoin Up or Down - January 12, 2:15AM-2:20AM ET
+1158195: Bitcoin Up or Down - January 12, 2:20AM-2:25AM ET
+1158196: XRP Up or Down - January 12, 2:20AM-2:25AM ET
+1158197: Solana Up or Down - January 12, 2:20AM-2:25AM ET
+1158198: Ethereum Up or Down - January 12, 2:20AM-2:25AM ET
+1158199: Bitcoin Up or Down - January 12, 2:30AM-2:45AM ET
+1158200: Ethereum Up or Down - January 12, 2:30AM-2:45AM ET
+1158201: XRP Up or Down - January 12, 2:30AM-2:45AM ET
+1158202: XRP Up or Down - January 12, 2:25AM-2:30AM ET
+1158203: Bitcoin Up or Down - January 12, 2:25AM-2:30AM ET
+1158204: Ethereum Up or Down - January 12, 2:25AM-2:30AM ET
+1158205: Solana Up or Down - January 12, 2:25AM-2:30AM ET
+1158206: Solana Up or Down - January 12, 2:30AM-2:35AM ET
+1158207: XRP Up or Down - January 12, 2:30AM-2:35AM ET
+1158208: Ethereum Up or Down - January 12, 2:30AM-2:35AM ET
+1158209: Bitcoin Up or Down - January 12, 2:30AM-2:35AM ET
+1158210: XRP Up or Down - January 12, 2:35AM-2:40AM ET
+1158211: Solana Up or Down - January 12, 2:35AM-2:40AM ET
+1158212: Ethereum Up or Down - January 12, 2:35AM-2:40AM ET
+1158213: Bitcoin Up or Down - January 12, 2:35AM-2:40AM ET
+1158214: Solana Up or Down - January 12, 2:40AM-2:45AM ET
+1158215: XRP Up or Down - January 12, 2:40AM-2:45AM ET
+1158216: Ethereum Up or Down - January 12, 2:40AM-2:45AM ET
+1158217: Bitcoin Up or Down - January 12, 2:40AM-2:45AM ET
+1158218: Bitcoin Up or Down - January 12, 2:45AM-3:00AM ET
+1158219: XRP Up or Down - January 12, 2:45AM-3:00AM ET
+1158220: Ethereum Up or Down - January 12, 2:45AM-3:00AM ET
+1158221: XRP Up or Down - January 12, 2:45AM-2:50AM ET
+1158222: Bitcoin Up or Down - January 12, 2:45AM-2:50AM ET
+1158223: Ethereum Up or Down - January 12, 2:45AM-2:50AM ET
+1158224: Solana Up or Down - January 12, 2:45AM-2:50AM ET
+1158225: Ethereum Up or Down - January 12, 2:50AM-2:55AM ET
+1158226: Solana Up or Down - January 12, 2:50AM-2:55AM ET
+1158227: XRP Up or Down - January 12, 2:50AM-2:55AM ET
+1158228: Bitcoin Up or Down - January 12, 2:50AM-2:55AM ET
+1158229: Bitcoin Up or Down - January 13, 3AM ET
+1158230: Dota 2: Execration vs Team Nemesis (BO5)
+1158234: Games Total: O/U 3.5
+1158235: Games Total: O/U 4.5
+1158236: Ethereum Up or Down - January 13, 3AM ET
+1158237: Game Handicap: XctN (-1.5)
+1158238: Game Handicap: XctN (-2.5)
+1158240: Execration to win 2 games?
+1158241: Execration to win 3 games?
+1158242: Team Nemesis to win 1 games?
+1158243: Team Nemesis to win 2 games?
+1158244: Team Nemesis to win 3 games?
+1158245: Series: Team Nemesis Kill Handicap (-3.5)
+1158246: Counter-Strike: Aurora Young Blood vs Ursa (BO3)
+1158247: Series: Team Nemesis Kill Handicap (-2.5)
+1158248: Counter-Strike: Aurora Young Blood vs Ursa - Map 1 Winner
+1158249: Series: Execration Kill Handicap (-2.5)
+1158250: Counter-Strike: Aurora Young Blood vs Ursa - Map 2 Winner
+1158251: Series: Most kills?
+1158252: Games Total: O/U 2.5
+1158253: Will En Avant Guingamp win on 2026-01-24?
+1158254: Will En Avant Guingamp vs. ES Troyes AC end in a draw?
+1158255: Will ES Troyes AC win on 2026-01-24?
+1158256: Map Handicap: URSA (-1.5)
+1158257: Solana Up or Down - January 13, 3AM ET
+1158258: Aurora Young Blood to win 1 maps?
+1158259: Aurora Young Blood to win 2 maps?
+1158260: Ursa to win 1 maps?
+1158261: Ursa to win 2 maps?
+1158262: Will Red Star FC win on 2026-01-24?
+1158263: Will Red Star FC vs. US Boulogne Côte d'Opale end in a draw?
+1158264: Will US Boulogne Côte d'Opale win on 2026-01-24?
+1158265: XRP Up or Down - January 13, 3AM ET
+1158266: Will Stade de Reims win on 2026-01-24?
+1158267: Will Stade de Reims vs. AS Saint-Étienne end in a draw?
+1158268: Will AS Saint-Étienne win on 2026-01-24?
+1158269: Villarreal CF vs. Real Madrid CF: O/U 1.5
+1158270: Villarreal CF vs. Real Madrid CF: O/U 2.5
+1158271: Villarreal CF vs. Real Madrid CF: O/U 3.5
+1158272: Villarreal CF vs. Real Madrid CF: O/U 4.5
+1158273: Villarreal CF vs. Real Madrid CF: Both Teams to Score
+1158274: Sevilla FC vs. Athletic Club: O/U 1.5
+1158275: Sevilla FC vs. Athletic Club: O/U 2.5
+1158276: Sevilla FC vs. Athletic Club: O/U 3.5
+1158277: Sevilla FC vs. Athletic Club: O/U 4.5
+1158278: Sevilla FC vs. Athletic Club: Both Teams to Score
+1158279: Valencia CF vs. RCD Espanyol de Barcelona: O/U 1.5
+1158280: Valencia CF vs. RCD Espanyol de Barcelona: O/U 2.5
+1158281: Valencia CF vs. RCD Espanyol de Barcelona: O/U 3.5
+1158282: Valencia CF vs. RCD Espanyol de Barcelona: O/U 4.5
+1158283: Valencia CF vs. RCD Espanyol de Barcelona: Both Teams to Score
+1158284: Rayo Vallecano de Madrid vs. CA Osasuna: O/U 1.5
+1158285: Rayo Vallecano de Madrid vs. CA Osasuna: O/U 2.5
+1158286: Rayo Vallecano de Madrid vs. CA Osasuna: O/U 3.5
+1158287: Rayo Vallecano de Madrid vs. CA Osasuna: O/U 4.5
+1158288: Rayo Vallecano de Madrid vs. CA Osasuna: Both Teams to Score
+1158289: Solana Up or Down - January 12, 2:55AM-3:00AM ET
+1158290: XRP Up or Down - January 12, 2:55AM-3:00AM ET
+1158291: Ethereum Up or Down - January 12, 2:55AM-3:00AM ET
+1158292: Bitcoin Up or Down - January 12, 2:55AM-3:00AM ET
+1158293: Bitcoin Up or Down - January 12, 3:00AM-3:15AM ET
+1158294: XRP Up or Down - January 12, 3:00AM-3:15AM ET
+1158295: Ethereum Up or Down - January 12, 3:00AM-3:15AM ET
+1158297: Execration to win 2 games?
+1158298: Execration to win 3 games?
+1158299: Series: Execration Kill Handicap (-3.5)
+1158300: XRP Up or Down - January 12, 3:00AM-3:05AM ET
+1158301: Ethereum Up or Down - January 12, 3:00AM-3:05AM ET
+1158302: Bitcoin Up or Down - January 12, 3:00AM-3:05AM ET
+1158303: Solana Up or Down - January 12, 3:00AM-3:05AM ET
+1158304: Tyrese Maxey: Points Over 27.5
+1158305: Joel Embiid: Points Over 24.5
+1158306: Brandon Ingram: Points Over 23.5
+1158307: Scottie Barnes: Points Over 18.5
+1158308: Immanuel Quickley: Points Over 17.5
+1158309: VJ Edgecombe: Points Over 15.5
+1158310: Paul George: Points Over 14.5
+1158311: Sandro Mamukelashvili: Points Over 12.5
+1158312: Quentin Grimes: Points Over 9.5
+1158313: Kelly Oubre Jr.: Points Over 8.5
+1158314: Joel Embiid: Rebounds Over 8.5
+1158315: Scottie Barnes: Rebounds Over 8.5
+1158316: Brandon Ingram: Rebounds Over 6.5
+1158317: Sandro Mamukelashvili: Rebounds Over 6.5
+1158318: Paul George: Rebounds Over 5.5
+1158319: VJ Edgecombe: Rebounds Over 5.5
+1158320: Tyrese Maxey: Rebounds Over 4.5
+1158321: Immanuel Quickley: Rebounds Over 4.5
+1158322: Quentin Grimes: Rebounds Over 3.5
+1158323: Kelly Oubre Jr.: Rebounds Over 3.5
+1158324: Tyrese Maxey: Assists Over 6.5
+1158325: Immanuel Quickley: Assists Over 6.5
+1158326: Scottie Barnes: Assists Over 5.5
+1158327: VJ Edgecombe: Assists Over 4.5
+1158328: Joel Embiid: Assists Over 3.5
+1158329: Paul George: Assists Over 3.5
+1158330: Brandon Ingram: Assists Over 3.5
+1158331: Quentin Grimes: Assists Over 2.5
+1158332: Sandro Mamukelashvili: Assists Over 2.5
+1158333: Spread: Timberwolves (-3.5)
+1158334: Rockets vs. Kings: O/U 221.5
+1158335: Bitcoin Up or Down - January 12, 3:05AM-3:10AM ET
+1158336: XRP Up or Down - January 12, 3:05AM-3:10AM ET
+1158337: Solana Up or Down - January 12, 3:05AM-3:10AM ET
+1158338: Ethereum Up or Down - January 12, 3:05AM-3:10AM ET
+1158339: Ethereum Up or Down - January 12, 3:10AM-3:15AM ET
+1158340: Bitcoin Up or Down - January 12, 3:10AM-3:15AM ET
+1158341: XRP Up or Down - January 12, 3:10AM-3:15AM ET
+1158342: Solana Up or Down - January 12, 3:10AM-3:15AM ET
+1158343: XRP Up or Down - January 12, 3:15AM-3:30AM ET
+1158344: Bitcoin Up or Down - January 12, 3:15AM-3:30AM ET
+1158345: Ethereum Up or Down - January 12, 3:15AM-3:30AM ET
+1158406: Ethereum Up or Down - January 12, 3:15AM-3:20AM ET
+1158407: XRP Up or Down - January 12, 3:15AM-3:20AM ET
+1158408: Bitcoin Up or Down - January 12, 3:15AM-3:20AM ET
+1158409: Solana Up or Down - January 12, 3:15AM-3:20AM ET
+1158414: XRP Up or Down - January 12, 3:20AM-3:25AM ET
+1158415: Bitcoin Up or Down - January 12, 3:20AM-3:25AM ET
+1158416: Ethereum Up or Down - January 12, 3:20AM-3:25AM ET
+1158417: Solana Up or Down - January 12, 3:20AM-3:25AM ET
+1158418: Counter-Strike: FORZE Reload vs STATE (BO3)
+1158419: Counter-Strike: FORZE Reload vs STATE - Map 1 Winner
+1158420: Counter-Strike: FORZE Reload vs STATE - Map 2 Winner
+1158421: Games Total: O/U 2.5
+1158422: Map Handicap: FORZE.R (-1.5)
+1158423: FORZE Reload to win 1 maps?
+1158424: FORZE Reload to win 2 maps?
+1158425: STATE to win 1 maps?
+1158426: STATE to win 2 maps?
+1158427: Tofas vs. Cholet
+1158428: Counter-Strike: AaB esport vs Lilmix (BO3)
+1158429: Counter-Strike: AaB esport vs Lilmix - Map 1 Winner
+1158430: Counter-Strike: AaB esport vs Lilmix - Map 2 Winner
+1158431: Games Total: O/U 2.5
+1158432: Map Handicap: AAB (-1.5)
+1158433: Lilmix to win 1 maps?
+1158434: Lilmix to win 2 maps?
+1158435: AaB esport to win 1 maps?
+1158436: AaB esport to win 2 maps?
+1158437: Gran Canaria vs. Forca Lleida CE
+1158438: Bilbao Basket vs. La Laguna Tenerife
+1158439: Unicaja vs. Granada
+1158440: Basquet Club Andorra vs. CB Breogan Lugo
+1158441: Trapani vs. Pallacanestro Trieste
+1158442: Aquila Basket Trento vs. Vanoli Basket Cremona
+1158443: Derthona Basket vs. Olimpia Milano
+1158444: Perth Wildcats vs. Illawarra Hawks
+1158445: Melbourne United vs. Tasmania JackJumpers
+1158446: Adelaide 36ers vs. South East Melbourne Phoenix
+1158447: Cairns Taipans vs. New Zealand Breakers
+1158448: Liaoning Flying Leopards vs. Qingdao Eagles
+1158449: Xinjiang Flying Tigers vs. Zhejiang Lions
+1158450: Beijing Ducks vs. Jiangsu Dragons
+1158451: Shenzhen Leopards vs. Shanghai Sharks
+1158452: Shandong Hi-Speed Kirin vs. Jilin Northeast Tigers
+1158453: Nanjing Monkey King vs. Guangdong Southern Tigers
+1158454: Ningbo Rockets vs. Shanxi Loongs
+1158455: Zhejiang Golden Bulls vs. Sichuan Blue Whales
+1158456: Guangzhou Loong Lions vs. Tianjin Pioneers
+1158457: Beijing Royal Fighters vs. Fujian Sturgeons
+1158458: ASVEL Lyon-Villeurbanne vs. Boulazac
+1158459: Monaco vs. BCM Gravelines Dunkerque
+1158460: Paris Basketball vs. Strasbourg
+1158461: Obera TC vs. Quimsa
+1158462: La Union vs. Platense
+1158463: San Martin de Corientes vs. Independiente de Oliva
+1158464: Instituto Cordoba vs. Olimpico
+1158465: Argentino vs. Penarol
+1158466: Daegu Pegasus vs. LG Sakers
+1158467: KCC Egis vs. Goyang
+1158468: Seoul Knights vs. Wonju DB Promy
+1158469: Mobis Phoebus vs. Seoul Thunders
+1158470: XRP Up or Down - January 12, 3:30AM-3:45AM ET
+1158471: Bitcoin Up or Down - January 12, 3:25AM-3:30AM ET
+1158472: XRP Up or Down - January 12, 3:25AM-3:30AM ET
+1158473: Bitcoin Up or Down - January 12, 3:30AM-3:45AM ET
+1158474: Ethereum Up or Down - January 12, 3:25AM-3:30AM ET
+1158475: Solana Up or Down - January 12, 3:25AM-3:30AM ET
+1158476: Ethereum Up or Down - January 12, 3:30AM-3:45AM ET
+1158477: Game Handicap: Nem (-1.5)
+1158478: Game Handicap: Nem (-2.5)
+1158479: XRP Up or Down - January 12, 3:30AM-3:35AM ET
+1158480: Solana Up or Down - January 12, 3:30AM-3:35AM ET
+1158481: Bitcoin Up or Down - January 12, 3:30AM-3:35AM ET
+1158482: Ethereum Up or Down - January 12, 3:30AM-3:35AM ET
+1158483: Ethereum Up or Down - January 12, 3:35AM-3:40AM ET
+1158484: Bitcoin Up or Down - January 12, 3:35AM-3:40AM ET
+1158485: Solana Up or Down - January 12, 3:35AM-3:40AM ET
+1158486: XRP Up or Down - January 12, 3:35AM-3:40AM ET
+1158487: Solana Up or Down - January 12, 3:40AM-3:45AM ET
+1158488: Bitcoin Up or Down - January 12, 3:40AM-3:45AM ET
+1158489: Ethereum Up or Down - January 12, 3:40AM-3:45AM ET
+1158490: XRP Up or Down - January 12, 3:40AM-3:45AM ET
+1158491: Bitcoin Up or Down - January 12, 3:45AM-4:00AM ET
+1158492: XRP Up or Down - January 12, 3:45AM-4:00AM ET
+1158493: Ethereum Up or Down - January 12, 3:45AM-4:00AM ET
+1158494: Bitcoin Up or Down - January 12, 3:45AM-3:50AM ET
+1158495: Solana Up or Down - January 12, 3:45AM-3:50AM ET
+1158496: Ethereum Up or Down - January 12, 3:45AM-3:50AM ET
+1158497: XRP Up or Down - January 12, 3:45AM-3:50AM ET
+1158498: XRP Up or Down - January 12, 3:50AM-3:55AM ET
+1158499: Solana Up or Down - January 12, 3:50AM-3:55AM ET
+1158500: Ethereum Up or Down - January 12, 3:50AM-3:55AM ET
+1158501: Bitcoin Up or Down - January 12, 3:50AM-3:55AM ET
+1158502: Bitcoin Up or Down - January 13, 4AM ET
+1158503: Ethereum Up or Down - January 13, 4AM ET
+1158504: Will AC Monza win on 2026-01-24?
+1158505: Will AC Monza vs. Delfino Pescara 1936 end in a draw?
+1158506: Solana Up or Down - January 13, 4AM ET
+1158507: Will Delfino Pescara 1936 win on 2026-01-24?
+1158508: XRP Up or Down - January 13, 4AM ET
+1158509: Will Frosinone Calcio win on 2026-01-24?
+1158510: Will Frosinone Calcio vs. AC Reggiana 1919 end in a draw?
+1158511: Will AC Reggiana 1919 win on 2026-01-24?
+1158512: Will Cesena FC win on 2026-01-24?
+1158513: Will Cesena FC vs. SSC Bari end in a draw?
+1158514: Will SSC Bari win on 2026-01-24?
+1158515: Will SS Juve Stabia win on 2026-01-24?
+1158516: Will SS Juve Stabia vs. Virtus Entella end in a draw?
+1158517: Will Virtus Entella win on 2026-01-24?
+1158518: Will Mantova 1911 win on 2026-01-24?
+1158519: Will Mantova 1911 vs. Venezia FC end in a draw?
+1158520: Will Venezia FC win on 2026-01-24?
+1158521: Will Modena FC 2018 win on 2026-01-24?
+1158522: Will Modena FC 2018 vs. Palermo FC end in a draw?
+1158523: Will Palermo FC win on 2026-01-24?
+1158524: Will Spezia Calcio win on 2026-01-24?
+1158525: Will Spezia Calcio vs. US Avellino 1912 end in a draw?
+1158526: Will US Avellino 1912 win on 2026-01-24?
+1158527: Ethereum Up or Down - January 12, 4:00AM-4:15AM ET
+1158528: XRP Up or Down - January 12, 4:00AM-4:15AM ET
+1158529: Bitcoin Up or Down - January 12, 4:00AM-4:15AM ET
+1158530: Solana Up or Down - January 12, 3:55AM-4:00AM ET
+1158531: Bitcoin Up or Down - January 12, 3:55AM-4:00AM ET
+1158532: Ethereum Up or Down - January 12, 3:55AM-4:00AM ET
+1158533: XRP Up or Down - January 12, 3:55AM-4:00AM ET
+1158534: Ethereum Up or Down - January 12, 4:00AM-8:00AM ET
+1158535: Solana Up or Down - January 12, 4:00AM-4:05AM ET
+1158536: Ethereum Up or Down - January 12, 4:00AM-4:05AM ET
+1158537: Bitcoin Up or Down - January 12, 4:00AM-8:00AM ET
+1158538: Bitcoin Up or Down - January 12, 4:00AM-4:05AM ET
+1158539: Solana Up or Down - January 12, 4:00AM-8:00AM ET
+1158540: XRP Up or Down - January 12, 4:00AM-8:00AM ET
+1158541: XRP Up or Down - January 12, 4:00AM-4:05AM ET
+1158542: Ethereum Up or Down - January 12, 4:05AM-4:10AM ET
+1158543: Solana Up or Down - January 12, 4:05AM-4:10AM ET
+1158544: XRP Up or Down - January 12, 4:05AM-4:10AM ET
+1158545: Bitcoin Up or Down - January 12, 4:05AM-4:10AM ET
+1158547: XRP Up or Down - January 12, 4:10AM-4:15AM ET
+1158548: Bitcoin Up or Down - January 12, 4:10AM-4:15AM ET
+1158549: Solana Up or Down - January 12, 4:10AM-4:15AM ET
+1158550: Ethereum Up or Down - January 12, 4:10AM-4:15AM ET
+1158551: Ethereum Up or Down - January 12, 4:15AM-4:30AM ET
+1158552: Bitcoin Up or Down - January 12, 4:15AM-4:30AM ET
+1158553: XRP Up or Down - January 12, 4:15AM-4:30AM ET
+1158614: Solana Up or Down - January 12, 4:15AM-4:20AM ET
+1158615: Bitcoin Up or Down - January 12, 4:15AM-4:20AM ET
+1158616: XRP Up or Down - January 12, 4:15AM-4:20AM ET
+1158617: Ethereum Up or Down - January 12, 4:15AM-4:20AM ET
+1158622: Bitcoin Up or Down - January 12, 4:20AM-4:25AM ET
+1158623: Ethereum Up or Down - January 12, 4:20AM-4:25AM ET
+1158624: XRP Up or Down - January 12, 4:20AM-4:25AM ET
+1158625: Solana Up or Down - January 12, 4:20AM-4:25AM ET

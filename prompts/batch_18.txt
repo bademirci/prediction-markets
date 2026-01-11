@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+986013: Will Oxford United FC vs. Bristol City FC end in a draw?
+986014: Will Bristol City FC win on 2026-01-17?
+986015: Will Sheffield Wednesday FC win on 2026-01-17?
+986016: Will Sheffield Wednesday FC vs. Portsmouth FC end in a draw?
+986017: Will Portsmouth FC win on 2026-01-17?
+986018: Will Stoke City FC win on 2026-01-17?
+986019: Will Stoke City FC vs. Queens Park Rangers FC end in a draw?
+986020: Will Queens Park Rangers FC win on 2026-01-17?
+986021: Will Wrexham AFC win on 2026-01-17?
+986022: Will Wrexham AFC vs. Norwich City FC end in a draw?
+986023: Will Norwich City FC win on 2026-01-17?
+986024: Will Charlton Athletic FC win on 2026-01-17?
+986025: Will Charlton Athletic FC vs. Sheffield United FC end in a draw?
+986026: Will Sheffield United FC win on 2026-01-17?
+986027: Will Southampton FC win on 2026-01-17?
+986028: Will Southampton FC vs. Hull City AFC end in a draw?
+986029: Will Hull City AFC win on 2026-01-17?
+986030: Will Swansea City AFC win on 2026-01-17?
+986031: Will Swansea City AFC vs. Birmingham City FC end in a draw?
+986032: Will Birmingham City FC win on 2026-01-17?
+988839: Howard Bison vs. UNCW Seahawks
+989072: Will PEC Zwolle win on 2026-01-17?
+989073: Will PEC Zwolle vs. AZ end in a draw?
+989074: Will AZ win on 2026-01-17?
+989075: Will Fortuna Sittard win on 2026-01-17?
+989076: Will Fortuna Sittard vs. PSV end in a draw?
+989077: Will PSV win on 2026-01-17?
+989078: Will NAC Breda win on 2026-01-17?
+989079: Will NAC Breda vs. NEC end in a draw?
+989080: Will NEC win on 2026-01-17?
+989081: Will SC Heerenveen win on 2026-01-18?
+989082: Will SC Heerenveen vs. FC Groningen end in a draw?
+989083: Will FC Groningen win on 2026-01-18?
+989084: Will Heracles Almelo win on 2026-01-18?
+989085: Will Heracles Almelo vs. FC Twente '65 end in a draw?
+989086: Will FC Twente '65 win on 2026-01-18?
+989087: Will FC Volendam win on 2026-01-18?
+989088: Will FC Volendam vs. FC Utrecht end in a draw?
+989089: Will FC Utrecht win on 2026-01-18?
+989368: Wild vs. Sabres
+989369: Rangers vs. Flyers
+989370: Islanders vs. Flames
+989371: Kraken vs. Utah
+989372: Maple Leafs vs. Jets
+989373: Panthers vs. Capitals
+989374: Blue Jackets vs. Penguins
+989375: Canadiens vs. Senators
+989376: Hurricanes vs. Devils
+989377: Bruins vs. Blackhawks
+989378: Predators vs. Golden Knights
+989379: Kings vs. Ducks
+989380: Oilers vs. Canucks
+989761: Will Club Necaxa win on 2026-01-17?
+989762: Will Club Necaxa vs. Atlas FC end in a draw?
+989763: Will Atlas FC win on 2026-01-17?
+989764: Will CD Guadalajara win on 2026-01-17?
+989765: Will CD Guadalajara vs. Querétaro FC end in a draw?
+989766: Will Querétaro FC win on 2026-01-17?
+989767: Will Tigres de la UANL win on 2026-01-17?
+989768: Will Tigres de la UANL vs. Deportivo Toluca FC end in a draw?
+989769: Will Deportivo Toluca FC win on 2026-01-17?
+989770: Will CF Cruz Azul win on 2026-01-17?
+989771: Will CF Cruz Azul vs. Club Puebla end in a draw?
+989772: Will Club Puebla win on 2026-01-17?
+989773: Will Club Tijuana win on 2026-01-17?
+989774: Will Club Tijuana vs. Atlético San Luis end in a draw?
+989775: Will Atlético San Luis win on 2026-01-17?
+989837: Spread: Clemson Tigers (-4.5)
+990469: Call of Duty: G2 Minnesota vs Carolina Royal Ravens (BO5)
+990470: Call of Duty: G2 Minnesota vs Carolina Royal Ravens - Game 1 Winner
+990471: Call of Duty: G2 Minnesota vs Carolina Royal Ravens - Game 2 Winner
+990472: Call of Duty: G2 Minnesota vs Carolina Royal Ravens - Game 3 Winner
+990473: Games Total: O/U 3.5
+990474: Games Total: O/U 4.5
+990475: Call of Duty: Vancouver Surge vs OpTic Texas (BO5)
+990476: Call of Duty: Vancouver Surge vs OpTic Texas - Game 1 Winner
+990477: Call of Duty: Vancouver Surge vs OpTic Texas - Game 2 Winner
+990478: Call of Duty: Vancouver Surge vs OpTic Texas - Game 3 Winner
+990479: Games Total: O/U 3.5
+990480: Games Total: O/U 4.5
+990481: Call of Duty: Toronto KOI vs Los Angeles Thieves (BO5)
+990482: Call of Duty: Toronto KOI vs Los Angeles Thieves - Game 1 Winner
+990483: Call of Duty: Toronto KOI vs Los Angeles Thieves - Game 2 Winner
+990484: Call of Duty: Toronto KOI vs Los Angeles Thieves - Game 3 Winner
+990485: Games Total: O/U 3.5
+990486: Games Total: O/U 4.5
+990487: Call of Duty: Vancouver Surge vs Miami Heretics (BO5)
+990488: Call of Duty: Vancouver Surge vs Miami Heretics - Game 1 Winner
+990489: Call of Duty: Vancouver Surge vs Miami Heretics - Game 2 Winner
+990490: Call of Duty: Vancouver Surge vs Miami Heretics - Game 3 Winner
+990491: Games Total: O/U 3.5
+990492: Games Total: O/U 4.5
+990493: Call of Duty: Riyadh Falcons vs Paris Gentle Mates (BO5)
+990494: Call of Duty: Riyadh Falcons vs Paris Gentle Mates - Game 1 Winner
+990495: Call of Duty: Riyadh Falcons vs Paris Gentle Mates - Game 2 Winner
+990496: Call of Duty: Riyadh Falcons vs Paris Gentle Mates - Game 3 Winner
+990497: Games Total: O/U 3.5
+990498: Games Total: O/U 4.5
+990499: Call of Duty: Miami Heretics vs Boston Breach (BO5)
+990500: Call of Duty: Miami Heretics vs Boston Breach - Game 1 Winner
+990501: Call of Duty: Miami Heretics vs Boston Breach - Game 2 Winner
+990502: Call of Duty: Miami Heretics vs Boston Breach - Game 3 Winner
+990503: Games Total: O/U 3.5
+990504: Games Total: O/U 4.5
+990505: Call of Duty: Toronto KOI vs Carolina Royal Ravens (BO5)
+990506: Call of Duty: Toronto KOI vs Carolina Royal Ravens - Game 1 Winner
+990507: Call of Duty: Toronto KOI vs Carolina Royal Ravens - Game 2 Winner
+990508: Call of Duty: Toronto KOI vs Carolina Royal Ravens - Game 3 Winner
+990509: Games Total: O/U 3.5
+990510: Games Total: O/U 4.5
+990511: Call of Duty: FaZe Vegas vs Cloud9 New York (BO5)
+990512: Call of Duty: FaZe Vegas vs Cloud9 New York - Game 1 Winner
+990513: Call of Duty: FaZe Vegas vs Cloud9 New York - Game 2 Winner
+990514: Call of Duty: FaZe Vegas vs Cloud9 New York - Game 3 Winner
+990515: Games Total: O/U 3.5
+990516: Games Total: O/U 4.5
+990517: Call of Duty: Cloud9 New York vs Boston Breach (BO5)
+990518: Call of Duty: Cloud9 New York vs Boston Breach - Game 1 Winner
+990519: Call of Duty: Cloud9 New York vs Boston Breach - Game 2 Winner
+990520: Call of Duty: Cloud9 New York vs Boston Breach - Game 3 Winner
+990521: Games Total: O/U 3.5
+990522: Games Total: O/U 4.5
+990523: Call of Duty: G2 Minnesota vs FaZe Vegas (BO5)
+990524: Call of Duty: G2 Minnesota vs FaZe Vegas - Game 1 Winner
+990525: Call of Duty: G2 Minnesota vs FaZe Vegas - Game 2 Winner
+990526: Call of Duty: G2 Minnesota vs FaZe Vegas - Game 3 Winner
+990527: Games Total: O/U 3.5
+990528: Games Total: O/U 4.5
+990529: Call of Duty: OpTic Texas vs Los Angeles Thieves (BO5)
+990530: Call of Duty: OpTic Texas vs Los Angeles Thieves - Game 1 Winner
+990531: Call of Duty: OpTic Texas vs Los Angeles Thieves - Game 2 Winner
+990532: Call of Duty: OpTic Texas vs Los Angeles Thieves - Game 3 Winner
+990533: Games Total: O/U 3.5
+990534: Games Total: O/U 4.5
+990535: Call of Duty: OpTic Texas vs Carolina Royal Ravens (BO5)
+990536: Call of Duty: OpTic Texas vs Carolina Royal Ravens - Game 1 Winner
+990537: Call of Duty: OpTic Texas vs Carolina Royal Ravens - Game 2 Winner
+990538: Call of Duty: OpTic Texas vs Carolina Royal Ravens - Game 3 Winner
+990539: Games Total: O/U 3.5
+990540: Games Total: O/U 4.5
+990541: Call of Duty: Toronto KOI vs Paris Gentle Mates (BO5)
+990542: Call of Duty: Toronto KOI vs Paris Gentle Mates - Game 1 Winner
+990543: Call of Duty: Toronto KOI vs Paris Gentle Mates - Game 2 Winner
+990544: Call of Duty: Toronto KOI vs Paris Gentle Mates - Game 3 Winner
+990545: Games Total: O/U 3.5
+990546: Games Total: O/U 4.5
+990547: Call of Duty: Toronto KOI vs G2 Minnesota (BO5)
+990548: Call of Duty: Toronto KOI vs G2 Minnesota - Game 1 Winner
+990549: Call of Duty: Toronto KOI vs G2 Minnesota - Game 2 Winner
+990550: Call of Duty: Toronto KOI vs G2 Minnesota - Game 3 Winner
+990551: Games Total: O/U 3.5
+990552: Games Total: O/U 4.5
+990553: Call of Duty: Riyadh Falcons vs Cloud9 New York (BO5)
+990554: Call of Duty: Riyadh Falcons vs Cloud9 New York - Game 1 Winner
+990555: Call of Duty: Riyadh Falcons vs Cloud9 New York - Game 2 Winner
+990556: Call of Duty: Riyadh Falcons vs Cloud9 New York - Game 3 Winner
+990557: Games Total: O/U 3.5
+990558: Games Total: O/U 4.5
+990559: Call of Duty: Los Angeles Thieves vs Boston Breach (BO5)
+990560: Call of Duty: Los Angeles Thieves vs Boston Breach - Game 1 Winner
+990561: Call of Duty: Los Angeles Thieves vs Boston Breach - Game 2 Winner
+990562: Call of Duty: Los Angeles Thieves vs Boston Breach - Game 3 Winner
+990563: Games Total: O/U 3.5
+990564: Games Total: O/U 4.5
+990565: Call of Duty: Paris Gentle Mates vs Miami Heretics (BO5)
+990566: Call of Duty: Paris Gentle Mates vs Miami Heretics - Game 1 Winner
+990567: Call of Duty: Paris Gentle Mates vs Miami Heretics - Game 2 Winner
+990568: Call of Duty: Paris Gentle Mates vs Miami Heretics - Game 3 Winner
+990569: Games Total: O/U 3.5
+990570: Games Total: O/U 4.5
+990571: Call of Duty: Los Angeles Thieves vs Carolina Royal Ravens (BO5)
+990572: Call of Duty: Los Angeles Thieves vs Carolina Royal Ravens - Game 1 Winner
+990573: Call of Duty: Los Angeles Thieves vs Carolina Royal Ravens - Game 2 Winner
+990574: Call of Duty: Los Angeles Thieves vs Carolina Royal Ravens - Game 3 Winner
+990575: Games Total: O/U 3.5
+990576: Games Total: O/U 4.5
+990577: Call of Duty: Vancouver Surge vs FaZe Vegas (BO5)
+990578: Call of Duty: Vancouver Surge vs FaZe Vegas - Game 1 Winner
+990579: Call of Duty: Vancouver Surge vs FaZe Vegas - Game 2 Winner
+990580: Call of Duty: Vancouver Surge vs FaZe Vegas - Game 3 Winner
+990581: Games Total: O/U 3.5
+990582: Games Total: O/U 4.5
+991006: Will Sydney FC win on 2026-01-18?
+991007: Will Sydney FC vs. Wellington Phoenix FC end in a draw?
+991008: Will Wellington Phoenix FC win on 2026-01-18?
+991021: Bank of Japan decreases interest rates after March 2026 meeting?
+991022: No change in Bank of Japan's interest rates after March 2026 meeting?
+991023: Bank of Japan increases interest rates by 25 bps after March 2026 meeting?
+991024: Bank of Japan increases interest rates by 50+ bps after March 2026 meeting?
+991041: Will the Central Bank of Colombia announce a decrease at the January meeting?
+991042: Will the Central Bank of Colombia announce no change at the January meeting?
+991043: Will the Central Bank of Colombia announce an increase at the January meeting?
+991896: Will Fernando Mendoza be the second pick in the 2026 NFL draft?
+991897: Will Dante Moore be the second pick in the 2026 NFL draft?
+991898: Will Nico Iamaleava be the second pick in the 2026 NFL draft?
+991899: Will Drew Allar be the second pick in the 2026 NFL draft?
+991900: Will Carson Beck be the second pick in the 2026 NFL draft?
+991901: Will Garrett Nussmeier be the second pick in the 2026 NFL draft?
+991902: Will Ty Simpson be the second pick in the 2026 NFL draft?
+991903: Will Francis Mauigoa be the second pick in the 2026 NFL draft?
+991904: Will Kadyn Proctor be the second pick in the 2026 NFL draft?
+991907: Will Trevor Goosby be the second pick in the 2026 NFL draft?
+991908: Will Reuben Bain Jr. be the second pick in the 2026 NFL draft?
+991910: Will Peter Woods be the second pick in the 2026 NFL draft?
+991912: Will LT Overton be the second pick in the 2026 NFL draft?
+991913: Will Keldric Faulk be the second pick in the 2026 NFL draft?
+991914: Will T.J. Parker be the second pick in the 2026 NFL draft?
+991915: Will Kayden McDonald be the second pick in the 2026 NFL draft?
+991916: Will Sonny Styles be the second pick in the 2026 NFL draft?
+991917: Will Arvell Reese be the second pick in the 2026 NFL draft?
+991918: Will Caleb Downs be the second pick in the 2026 NFL draft?
+991920: Will Carnell Tate be the second pick in the 2026 NFL draft?
+991921: Will Jordyn Tyson be the second pick in the 2026 NFL draft?
+991922: Will Jeremiyah Love be the second pick in the 2026 NFL draft?
+991954: Will Fernando Mendoza be the third pick in the 2026 NFL draft?
+991955: Will Dante Moore be the third pick in the 2026 NFL draft?
+991956: Will Nico Iamaleava be the third pick in the 2026 NFL draft?
+991957: Will Drew Allar be the third pick in the 2026 NFL draft?
+991958: Will Carson Beck be the third pick in the 2026 NFL draft?
+991959: Will Garrett Nussmeier be the third pick in the 2026 NFL draft?
+991960: Will Ty Simpson be the third pick in the 2026 NFL draft?
+991961: Will Francis Mauigoa be the third pick in the 2026 NFL draft?
+991962: Will Kadyn Proctor be the third pick in the 2026 NFL draft?
+991965: Will Trevor Goosby be the third pick in the 2026 NFL draft?
+991966: Will Reuben Bain Jr. be the third pick in the 2026 NFL draft?
+991968: Will Peter Woods be the third pick in the 2026 NFL draft?
+991970: Will LT Overton be the third pick in the 2026 NFL draft?
+991971: Will Keldric Faulk be the third pick in the 2026 NFL draft?
+991972: Will T.J. Parker be the third pick in the 2026 NFL draft?
+991973: Will Kayden McDonald be the third pick in the 2026 NFL draft?
+991974: Will Sonny Styles be the third pick in the 2026 NFL draft?
+991975: Will Arvell Reese be the third pick in the 2026 NFL draft?
+991976: Will Caleb Downs be the third pick in the 2026 NFL draft?
+991978: Will Carnell Tate be the third pick in the 2026 NFL draft?
+991979: Will Jordyn Tyson be the third pick in the 2026 NFL draft?
+991980: Will Jeremiyah Love be the third pick in the 2026 NFL draft?
+992020: Will Travis Kelce retire before next season?
+993239: Deportivo Alavés vs. Real Oviedo: O/U 4.5
+994565: Will Feyenoord Rotterdam win on 2026-01-18?
+994566: Will Feyenoord Rotterdam vs. Sparta Rotterdam end in a draw?
+994567: Will Sparta Rotterdam win on 2026-01-18?
+994604: Will the Bank of Mexico announce a decrease at the February meeting?
+994605: Will the Bank of Mexico announce no change at the February meeting?
+994606: Will the Bank of Mexico announce an increase at the February meeting?
+994615: Will a White Spoon win season 2 of Culinary Class Wars?
+994616: Will a Black Spoon win season 2 of Culinary Class Wars?
+994794: Will Trump endorse JD Vance for president before 2027?
+994803: Will Trump endorse any candidate for President before 2027?
+994845: Lightning vs. Stars
+994846: Senators vs. Red Wings
+994847: Blues vs. Oilers
+994856: Sudan civil war ceasefire by March 31, 2026?
+994858: Sudan civil war ceasefire by June 30, 2026?
+994859: Sudan civil war ceasefire by December 31, 2026?
+994884: Another critical Cloudflare incident by January 31?
+994894: Greece x Turkey military engagement by June 30?
+994900: Israel strikes Iran by January 31, 2026?
+995253: Will Alex Honnold free solo Taipei 101 in less than 1 hour?
+995254: Will Alex Honnold free solo Taipei 101 in between 1 hour and 30 minutes and 1 hour and 45 minutes?
+995255: Will Alex Honnold free solo Taipei 101 in between 1 hour and 45 minutes and 2 hours?
+995256: Will Alex Honnold free solo Taipei 101 in between 2 hours and 2 hours and 15 minutes?
+995257: Will Alex Honnold free solo Taipei 101 in between 2 hours and 15 minutes and 2 hours and 30 minutes?
+995258: Will Alex Honnold free solo Taipei 101 in over 2 hours and 30 minutes?
+995274: Will Pumas de la UNAM win on 2026-01-18?
+995275: Will Pumas de la UNAM vs. Club León FC end in a draw?
+995276: Will Club León FC win on 2026-01-18?
+995277: Will Club Santos Laguna win on 2026-01-18?
+995278: Will Club Santos Laguna vs. FC Juárez end in a draw?
+995279: Will FC Juárez win on 2026-01-18?
+995280: Will CF Pachuca win on 2026-01-18?
+995281: Will CF Pachuca vs. CF América end in a draw?
+995282: Will CF América win on 2026-01-18?
+995291: Will Alex Honnold free solo Taipei 101?
+995609: Will FC Sochaux-Montbéliard win on 2026-01-10?
+995610: Will FC Sochaux-Montbéliard vs. Racing Club de Lens end in a draw?
+995611: Will Racing Club de Lens win on 2026-01-10?
+995612: Will FC Metz win on 2026-01-11?
+995613: Will FC Metz vs. Montpellier HSC end in a draw?
+995614: Will Montpellier HSC win on 2026-01-11?
+995615: Will FC Nantes win on 2026-01-11?
+995616: Will FC Nantes vs. OGC Nice end in a draw?
+995617: Will OGC Nice win on 2026-01-11?
+995618: Will US Chantilly win on 2026-01-11?
+995619: Will US Chantilly vs. Stade Rennais FC 1901 end in a draw?
+995620: Will Stade Rennais FC 1901 win on 2026-01-11?
+995621: Will Le Mans FC win on 2026-01-11?
+995622: Will Le Mans FC vs. AS Nancy-Lorraine end in a draw?
+995623: Will AS Nancy-Lorraine win on 2026-01-11?
+995624: Will Lille OSC win on 2026-01-11?
+995625: Will Lille OSC vs. Olympique Lyonnais end in a draw?
+995626: Will Olympique Lyonnais win on 2026-01-11?
+995627: Will Paris Saint-Germain FC win on 2026-01-12?
+995628: Will Paris Saint-Germain FC vs. Paris FC end in a draw?
+995629: Will Paris FC win on 2026-01-12?
+995630: Will Bayeux FC win on 2026-01-13?
+995631: Will Bayeux FC vs. Olympique de Marseille end in a draw?
+995632: Will Olympique de Marseille win on 2026-01-13?
+995645: Will Albin Kurti be the next Prime Minister of Kosovo?
+995646: Will Lumir Abdixhiku be the next Prime Minister of Kosovo?
+995647: Will Ramush Haradinaj be the next Prime Minister of Kosovo?
+995648: Will Memli Krasniqi be the next Prime Minister of Kosovo?
+995676: Will both candidates advancing to the general election for Governor of California from the June 2, 2026 primary be affiliated with the Democratic Party?
+995677: Will both candidates advancing to the general election for Governor of California from the June 2, 2026 primary be affiliated with the Republican Party?
+995678: Will one Democratic Party candidate and one Republican Party candidate advance to the general election for Governor of California from the June 2, 2026 primary?
+995702: Will Bad Bunny be the top Spotify artist for 2026?
+995703: Will Taylor Swift be the top Spotify artist for 2026?
+995704: Will Drake be the top Spotify artist for 2026?
+995705: Will The Weeknd be the top Spotify artist for 2026?
+995706: Will Morgan Wallen be the top Spotify artist for 2026?
+995707: Will Bruno Mars be the top Spotify artist for 2026?
+995708: Will Sabrina Carpenter be the top Spotify artist for 2026?
+995709: Will Kendrick Lamar be the top Spotify artist for 2026?
+995710: Will Chappell Roan be the top Spotify artist for 2026?
+995711: Will Beyoncé be the top Spotify artist for 2026?
+995773: SpaceX goes public through Bill Ackman "SPAR" company?
+996324: Will OpenAI have a #1 AI model by June 30?
+996325: Will DeepSeek have a #1 AI model by June 30?
+996326: Will xAI have a #1 AI model by June 30?
+996327: Will Anthropic have a #1 AI model by June 30?
+996328: Will Meta have a #1 AI model by June 30?
+996329: Will Mistral have a #1 AI model by June 30?
+996330: Will Alibaba have a #1 AI model by June 30?
+996331: Will Nvidia have a #1 AI model by June 30?
+996332: Will Baidu have a #1 AI model by June 30?
+996333: Will Z.ai have a #1 AI model by June 30?
+996334: Will Meituan have a #1 AI model by June 30?
+996364: Will Bedri Hamza be the next Prime Minister of Kosovo?
+996369: Will Fatmir Limaj be the next Prime Minister of Kosovo?
+996382: Will the RSF capture Kadugli by January 31?
+996383: Will Smash Into Pieces win Melodifestivalen 2026?
+996384: Will Greczula win Melodifestivalen 2026?
+996385: Will AleXa win Melodifestivalen 2026?
+996386: Will Felicia win Melodifestivalen 2026?
+996387: Will Medina win Melodifestivalen 2026?
+996388: Will A*Teens win Melodifestivalen 2026?
+996389: Will Robin Bengtsson win Melodifestivalen 2026?
+996390: Will Sanna Nielsen win Melodifestivalen 2026?
+996391: Will Jacqline win Melodifestivalen 2026?
+996392: Will Cimberly win Melodifestivalen 2026?
+996414: Will the RSF capture Dilling by January 31?
+996415: Will Emilija win Supernova 2026?
+996416: Will Kautkaili win Supernova 2026?
+996417: Will Atvara win Supernova 2026?
+996418: Will Jānis Rugājs win Supernova 2026?
+996419: Will Miks Galvanovskis win Supernova 2026?
+996420: Will Legzdina win Supernova 2026?
+996421: Will Elpo win Supernova 2026?
+996422: Will Robert Ox win Supernova 2026?
+996423: Will Agnesse win Supernova 2026?
+996424: Will Tikasha Sakama win Supernova 2026?
+996746: Will Vanilla Ninja win Eesti Laul 2026?
+996747: Will Ollie win Eesti Laul 2026?
+996748: Will Noëp win Eesti Laul 2026?
+996749: Will Uliana win Eesti Laul 2026?
+996750: Will Stockholm Cowboys win Eesti Laul 2026?
+996751: Will Clicherik & Mäx win Eesti Laul 2026?
+996752: Will Getter Jaani win Eesti Laul 2026?
+996753: Will Ant & Minimal Wind win Eesti Laul 2026?
+996754: Will Grete Paia win Eesti Laul 2026?
+996755: Will Laura Pritts win Eesti Laul 2026?
+996756: Will Marta Pikani win Eesti Laul 2026?
+996757: Will Robert Linna win Eesti Laul 2026?
+996811: Will the RSF capture Khartoum by June 30?
+996814: Will the RSF capture El Obeid by January 31?
+996893: Epstein client list released by June 30?
+997078: U.S. Government Funding Lapse on January 31?
+997082: Will Alex Honnold free solo Taipei 101 in between 1 hour and 1 hour and 15 minutes?
+997088: Will Alex Honnold free solo Taipei 101 in between 1 hour and 15 minutes and 1 hour and 30 minutes?
+997089: Will Alex Honnold not complete a free solo of Taipei 101 by January 31?
+997090: Nothing Ever Happens: Elon Edition
+997170: Nothing Ever Happens: Israel Edition
+997488: Will Trump acquire Greenland before 2027?
+997518: Will the 1st pick in the 2026 NFL draft be a QB?
+997617: Will the 1st pick in the 2026 NFL draft be traded?
+999071: Will the Las Vegas Raiders draft a quarterback in the first round of the 2026 NFL Draft?
+999072: Will the New York Jets draft a quarterback in the first round of the 2026 NFL Draft?
+999073: Will the Miami Dolphins draft a quarterback in the first round of the 2026 NFL Draft?
+999074: Will the Los Angeles Rams draft a quarterback in the first round of the 2026 NFL Draft?
+999075: Will the Cleveland Browns draft a quarterback in the first round of the 2026 NFL Draft?
+999076: Will the Pittsburgh Steelers draft a quarterback in the first round of the 2026 NFL Draft?
+999077: Will the New Orleans Saints draft a quarterback in the first round of the 2026 NFL Draft?
+999078: Will the Seattle Seahawks draft a quarterback in the first round of the 2026 NFL Draft?
+999079: Will the New York Giants draft a quarterback in the first round of the 2026 NFL Draft?
+999080: Will the Indianapolis Colts draft a quarterback in the first round of the 2026 NFL Draft?
+999081: Will the Arizona Cardinals draft a quarterback in the first round of the 2026 NFL Draft?
+999082: Will the Tennessee Titans draft a quarterback in the first round of the 2026 NFL Draft?
+999095: ECB rate hike in 2026?
+999108: ECB rate cut in 2026?
+1003190: Will the All India Trinamool Congress (AITC) win the most seats in the 2026 Assam Legislative Assembly election?
+1003191: Will the Bharatiya Janata Party (BJP) win the most seats in the 2026 Assam Legislative Assembly election?
+1003192: Will the Communist Party of India (CPI) win the most seats in the 2026 Assam Legislative Assembly election?
+1003193: Will the Communist Party of India (Marxist) (CPI(M)) win the most seats in the 2026 Assam Legislative Assembly election?
+1003194: Will the Indian National Congress (INC) win the most seats in the 2026 Assam Legislative Assembly election?
+1003195: Will the Nationalist Congress Party (NCP) win the most seats in the 2026 Assam Legislative Assembly election?
+1003196: Will the National People’s Party (NPEP) win the most seats in the 2026 Assam Legislative Assembly election?
+1003197: Will the Asom Gana Parishad (AGP) win the most seats in the 2026 Assam Legislative Assembly election?
+1003198: Will the All India United Democratic Front (AIUDF) win the most seats in the 2026 Assam Legislative Assembly election?
+1003199: Will the Bodoland People’s Front (BPF) win the most seats in the 2026 Assam Legislative Assembly election?
+1003556: Will "One Battle After Another" win Outstanding Performance by a Cast in a Motion Picture at the 32nd Actor Awards?
+1003557: Will "Sinners" win Outstanding Performance by a Cast in a Motion Picture at the 32nd Actor Awards?
+1003558: Will "Marty Supreme" win Outstanding Performance by a Cast in a Motion Picture at the 32nd Actor Awards?
+1003559: Will "Wicked: For Good" win Outstanding Performance by a Cast in a Motion Picture at the 32nd Actor Awards?
+1003560: Will "Hamnet" win Outstanding Performance by a Cast in a Motion Picture at the 32nd Actor Awards?
+1003561: Will "Bugonia" win Outstanding Performance by a Cast in a Motion Picture at the 32nd Actor Awards?
+1003562: Will "Sentimental Value" win Outstanding Performance by a Cast in a Motion Picture at the 32nd Actor Awards?
+1003563: Will "Frankenstein" win Outstanding Performance by a Cast in a Motion Picture at the 32nd Actor Awards?
+1003598: Will Timothée Chalamet win Outstanding Performance by a Male Actor in a Leading Role at the 2026 SAG Awards?
+1003599: Will Leonardo DiCaprio win Outstanding Performance by a Male Actor in a Leading Role at the 2026 SAG Awards?
+1003600: Will Joel Edgerton win Outstanding Performance by a Male Actor in a Leading Role at the 2026 SAG Awards?
+1003601: Will Ethan Hawke win Outstanding Performance by a Male Actor in a Leading Role at the 2026 SAG Awards?
+1003602: Will Michael B. Jordan win Outstanding Performance by a Male Actor in a Leading Role at the 2026 SAG Awards?
+1003603: Will Wagner Moura win Outstanding Performance by a Male Actor in a Leading Role at the 2026 SAG Awards?
+1003604: Will Jesse Plemons win Outstanding Performance by a Male Actor in a Leading Role at the 2026 SAG Awards?
+1003635: Will Jessie Buckley win Best Actress in a Motion Picture at the 2026 SAG Awards?
+1003636: Will Cynthia Erivo win Best Actress in a Motion Picture at the 2026 SAG Awards?
+1003637: Will Renate Reinsve win Best Actress in a Motion Picture at the 2026 SAG Awards?
+1003638: Will Rose Byrne win Best Actress in a Motion Picture at the 2026 SAG Awards?
+1003639: Will Lucy Liu win Best Actress in a Motion Picture at the 2026 SAG Awards?
+1003640: Will Emma Stone win Best Actress in a Motion Picture at the 2026 SAG Awards?
+1003641: Will Teyana Taylor win Best Actress in a Motion Picture at the 2026 SAG Awards?
+1003642: Will Gwyneth Paltrow win Best Actress in a Motion Picture at the 2026 SAG Awards?
+1003643: Will Odessa A'zion win Best Actress in a Motion Picture at the 2026 SAG Awards?
+1003644: Will Kate Hudson win Best Actress in a Motion Picture at the 2026 SAG Awards?
+1003645: Will Chase Infiniti win Best Actress in a Motion Picture at the 2026 SAG Awards?
+1003671: Will Benicio del Toro win Best Supporting Actor in a Motion Picture at the 2026 SAG Awards?
+1003672: Will Sean Penn win Best Supporting Actor in a Motion Picture at the 2026 SAG Awards?
+1003673: Will Stellan Skarsgard win Best Supporting Actor in a Motion Picture at the 2026 SAG Awards?
+1003674: Will Paul Mescal win Best Supporting Actor in a Motion Picture at the 2026 SAG Awards?
+1003675: Will Jacob Elordi win Best Supporting Actor in a Motion Picture at the 2026 SAG Awards?
+1003676: Will Adam Sandler win Best Supporting Actor in a Motion Picture at the 2026 SAG Awards?
+1003677: Will Miles Caton win Best Supporting Actor in a Motion Picture at the 2026 SAG Awards?
+1003708: Will Teyana Taylor win Best Supporting Actress in a Motion Picture at the 2026 SAG Awards?
+1003709: Will Ariana Grande win Best Supporting Actress in a Motion Picture at the 2026 SAG Awards?
+1003710: Will Elle Fanning win Best Supporting Actress in a Motion Picture at the 2026 SAG Awards?
+1003711: Will Amy Madigan win Best Supporting Actress in a Motion Picture at the 2026 SAG Awards?
+1003712: Will Inga Ibsdotter Lilleaas win Best Supporting Actress in a Motion Picture at the 2026 SAG Awards?
+1003713: Will Emily Blunt win Best Supporting Actress in a Motion Picture at the 2026 SAG Awards?
+1003714: Will Gwyneth Paltrow win Best Supporting Actress in a Motion Picture at the 2026 SAG Awards?
+1003715: Will Wunmi Mosaku win Best Supporting Actress in a Motion Picture at the 2026 SAG Awards?
+1003716: Will Regina Hall win Best Supporting Actress in a Motion Picture at the 2026 SAG Awards?
+1003717: Will Glenn Close win Best Supporting Actress in a Motion Picture at the 2026 SAG Awards?
+1003718: Will Odessa A'zion win Best Supporting Actress in a Motion Picture at the 2026 SAG Awards?
+1003757: Will One Battle After Another win Best Cast in a Motion Picture at the 2026 SAG Awards?
+1003758: Will Sinners win Best Cast in a Motion Picture at the 2026 SAG Awards?
+1003759: Will Wicked: For Good win Best Cast in a Motion Picture at the 2026 SAG Awards?
+1003760: Will Hamnet win Best Cast in a Motion Picture at the 2026 SAG Awards?
+1003761: Will Sentimental Value win Best Cast in a Motion Picture at the 2026 SAG Awards?
+1003762: Will Jay Kelly win Best Cast in a Motion Picture at the 2026 SAG Awards?
+1003763: Will Marty Supreme win Best Cast in a Motion Picture at the 2026 SAG Awards?
+1003764: Will Song Sung Blue win Best Cast in a Motion Picture at the 2026 SAG Awards?
+1003765: Will Nouvelle Vague win Best Cast in a Motion Picture at the 2026 SAG Awards?
+1003790: Will the All India Trinamool Congress (AITC) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?
+1003791: Will the Bharatiya Janata Party (BJP) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?
+1003793: Will the Bahujan Samaj Party (BSP) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?
+1003795: Will the Communist Party of India (CPI) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?
+1003797: Will the Communist Party of India (Marxist) (CPI(M)) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?
+1003798: Will the Indian National Congress (INC) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?
+1003799: Will the Nationalist Congress Party (NCP) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?
+1003800: Will the National People’s Party (NPEP) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?
+1003801: Will the All India Anna Dravida Munnetra Kazhagam (ADMK) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?
+1003802: Will the Desiya Murpokku Dravida Kazhagam (DMDK) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?
+1003803: Will the Dravida Munnetra Kazhagam (DMK) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?
+1003835: Will Stephen Graham win Best Actor in a Television Movie or Limited Series at the 2026 SAG Awards?
+1003836: Will Owen Cooper win Best Actor in a Television Movie or Limited Series at the 2026 SAG Awards?
+1003837: Will Matthew Rhys win Best Actor in a Television Movie or Limited Series at the 2026 SAG Awards?
+1003838: Will Michael Shannon win Best Actor in a Television Movie or Limited Series at the 2026 SAG Awards?
+1003839: Will Matthew Macfayden win Best Actor in a Television Movie or Limited Series at the 2026 SAG Awards?
+1003840: Will Michael Chernus win Best Actor in a Television Movie or Limited Series at the 2026 SAG Awards?
+1003841: Will Jason Clarke win Best Actor in a Television Movie or Limited Series at the 2026 SAG Awards?
+1003842: Will Jason Bateman win Best Actor in a Television Movie or Limited Series at the 2026 SAG Awards?
+1003843: Will Charlie Hunnam win Best Actor in a Television Movie or Limited Series at the 2026 SAG Awards?
+1003997: Florida A&M Rattlers vs. Georgia Tech Yellow Jackets
+1004028: Will the Bharatiya Janata Party (BJP) win the most seats in the 2026 Puducherry Legislative Assembly election?
+1004029: Will the Bahujan Samaj Party (BSP) win the most seats in the 2026 Puducherry Legislative Assembly election?
+1004030: Will the Communist Party of India (CPI) win the most seats in the 2026 Puducherry Legislative Assembly election?
+1004031: Will the Communist Party of India (Marxist) (CPI(M)) win the most seats in the 2026 Puducherry Legislative Assembly election?
+1004032: Will the Indian National Congress (INC) win the most seats in the 2026 Puducherry Legislative Assembly election?
+1004033: Will the All India N.R. Congress (AINRC) win the most seats in the 2026 Puducherry Legislative Assembly election?
+1004034: Will the All India Anna Dravida Munnetra Kazhagam (ADMK) win the most seats in the 2026 Puducherry Legislative Assembly election?
+1004035: Will the Dravida Munnetra Kazhagam (DMK) win the most seats in the 2026 Puducherry Legislative Assembly election?
+1004367: Will the Bharatiya Janata Party (BJP) win the most seats in the 2026 Kerala Legislative Assembly election?
+1004368: Will the Bahujan Samaj Party (BSP) win the most seats in the 2026 Kerala Legislative Assembly election?
+1004370: Will the Communist Party of India (CPI) win the most seats in the 2026 Kerala Legislative Assembly election?
+1004371: Will the Communist Party of India (Marxist) (CPI(M)) win the most seats in the 2026 Kerala Legislative Assembly election?
+1004372: Will the Indian National Congress (INC) win the most seats in the 2026 Kerala Legislative Assembly election?
+1004373: Will the Nationalist Congress Party (NCP) win the most seats in the 2026 Kerala Legislative Assembly election?
+1004374: Will the Indian Union Muslim League (IUML) win the most seats in the 2026 Kerala Legislative Assembly election?
+1004375: Will the Janata Dal (Secular) (JD(S)) win the most seats in the 2026 Kerala Legislative Assembly election?
+1004377: Will the Kerala Congress (M) (KEC(M)) win the most seats in the 2026 Kerala Legislative Assembly election?
+1004378: Will the Revolutionary Socialist Party (RSP) win the most seats in the 2026 Kerala Legislative Assembly election?
+1004441: Will the Indian Union Muslim League (IUML) win fewer than 10 seats in the 2026 Kerala Legislative Assembly election?
+1004442: Will the Indian Union Muslim League (IUML) win between 10 and 12 seats in the 2026 Kerala Legislative Assembly election?
+1004443: Will the Indian Union Muslim League (IUML) win between 13 and 15 seats in the 2026 Kerala Legislative Assembly election?
+1004444: Will the Indian Union Muslim League (IUML) win between 16 and 18 seats in the 2026 Kerala Legislative Assembly election?
+1004445: Will the Indian Union Muslim League (IUML) win between 19 and 21 seats in the 2026 Kerala Legislative Assembly election?
+1004446: Will the Indian Union Muslim League (IUML) win 22 or more seats in the 2026 Kerala Legislative Assembly election?
+1004539: Ukraine strikes another tanker in Black Sea by January 15, 2026?
+1004697: Swiss National Bank decreases policy rate after March Meeting?
+1004698: No change in Swiss National Bank policy rate after March Meeting?
+1004699: Swiss National Bank increases policy rate after March Meeting?

@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+644047: Will James Harden lead the NBA in three pointers made during the 2025–26 NBA season?
+644048: Will Norman Powell lead the NBA in three pointers made during the 2025–26 NBA season?
+644049: Will Keyonte George lead the NBA in three pointers made during the 2025–26 NBA season?
+644050: Will Gary Trent Jr. lead the NBA in three pointers made during the 2025–26 NBA season?
+644051: Will Shaedon Sharpe lead the NBA in three pointers made during the 2025–26 NBA season?
+644052: Will Paul George lead the NBA in three pointers made during the 2025–26 NBA season?
+644053: Will Jaren Jackson Jr. lead the NBA in three pointers made during the 2025–26 NBA season?
+644054: Will Jamal Murray lead the NBA in three pointers made during the 2025–26 NBA season?
+644055: Will CJ McCollum lead the NBA in three pointers made during the 2025–26 NBA season?
+644056: Will Devin Booker lead the NBA in three pointers made during the 2025–26 NBA season?
+644057: Will Duncan Robinson lead the NBA in three pointers made during the 2025–26 NBA season?
+644058: Will LeBron James lead the NBA in three pointers made during the 2025–26 NBA season?
+644059: Will Klay Thompson lead the NBA in three pointers made during the 2025–26 NBA season?
+644060: Will Karl-Anthony Towns lead the NBA in three pointers made during the 2025–26 NBA season?
+644061: Will Kevin Durant lead the NBA in three pointers made during the 2025–26 NBA season?
+644062: Will Kristaps Porzingis lead the NBA in three pointers made during the 2025–26 NBA season?
+644063: Will Jaylen Brown lead the NBA in three pointers made during the 2025–26 NBA season?
+644064: Will Sam Hauser lead the NBA in three pointers made during the 2025–26 NBA season?
+644065: Will De'Andre Hunter lead the NBA in three pointers made during the 2025–26 NBA season?
+644066: Will AJ Green lead the NBA in three pointers made during the 2025–26 NBA season?
+644095: Will Victor Wembanyama lead the NBA in blocks during the 2025–26 NBA season?
+644096: Will Walker Kessler lead the NBA in blocks during the 2025–26 NBA season?
+644097: Will Chet Holmgren lead the NBA in blocks during the 2025–26 NBA season?
+644098: Will Anthony Davis lead the NBA in blocks during the 2025–26 NBA season?
+644099: Will Donovan Clingan lead the NBA in blocks during the 2025–26 NBA season?
+644100: Will Jaren Jackson Jr. lead the NBA in blocks during the 2025–26 NBA season?
+644101: Will Myles Turner lead the NBA in blocks during the 2025–26 NBA season?
+644102: Will Rudy Gobert lead the NBA in blocks during the 2025–26 NBA season?
+644103: Will Mitchell Robinson lead the NBA in blocks during the 2025–26 NBA season?
+644104: Will Alexandre Sarr lead the NBA in blocks during the 2025–26 NBA season?
+644105: Will Daniel Gafford lead the NBA in blocks during the 2025–26 NBA season?
+644106: Will Evan Mobley lead the NBA in blocks during the 2025–26 NBA season?
+644107: Will Kristaps Porzingis lead the NBA in blocks during the 2025–26 NBA season?
+644108: Will Ivica Zubac lead the NBA in blocks during the 2025–26 NBA season?
+644109: Will Deandre Ayton lead the NBA in blocks during the 2025–26 NBA season?
+644110: Will Joel Embiid lead the NBA in blocks during the 2025–26 NBA season?
+644111: Will Yves Missi lead the NBA in blocks during the 2025–26 NBA season?
+644112: Will Amen Thompson lead the NBA in blocks during the 2025–26 NBA season?
+644113: Will Nic Claxton lead the NBA in blocks during the 2025–26 NBA season?
+644114: Will Jay Huff lead the NBA in blocks during the 2025–26 NBA season?
+644115: Will Dereck Lively lead the NBA in blocks during the 2025–26 NBA season?
+644116: Will Mark Williams lead the NBA in blocks during the 2025–26 NBA season?
+644117: Will Jalen Duren lead the NBA in blocks during the 2025–26 NBA season?
+644118: Will Luke Kornet lead the NBA in blocks during the 2025–26 NBA season?
+644119: Will Jakob Poeltl lead the NBA in blocks during the 2025–26 NBA season?
+644120: Will Jarrett Allen lead the NBA in blocks during the 2025–26 NBA season?
+644121: Will Draymond Green lead the NBA in blocks during the 2025–26 NBA season?
+644122: Will Bam Adebayo lead the NBA in blocks during the 2025–26 NBA season?
+644123: Will Isaiah Hartenstein lead the NBA in blocks during the 2025–26 NBA season?
+644124: Will Kel'el Ware lead the NBA in blocks during the 2025–26 NBA season?
+644125: Will Giannis Antetokounmpo lead the NBA in blocks during the 2025–26 NBA season?
+644126: Will Jonathan Isaac lead the NBA in blocks during the 2025–26 NBA season?
+644127: Will Isaiah Stewart lead the NBA in blocks during the 2025–26 NBA season?
+644128: Will Brook Lopez lead the NBA in blocks during the 2025–26 NBA season?
+644129: Will Jalen Johnson lead the NBA in blocks during the 2025–26 NBA season?
+644130: Will Kevin Durant lead the NBA in blocks during the 2025–26 NBA season?
+644131: Will Cooper Flagg lead the NBA in blocks during the 2025–26 NBA season?
+644132: Will Shai Gilgeous-Alexander lead the NBA in blocks during the 2025–26 NBA season?
+644159: Will Dyson Daniels lead the NBA in steals during the 2025–26 NBA season?
+644160: Will Ausar Thompson lead the NBA in steals during the 2025–26 NBA season?
+644161: Will Amen Thompson lead the NBA in steals during the 2025–26 NBA season?
+644162: Will Shai Gilgeous-Alexander lead the NBA in steals during the 2025–26 NBA season?
+644163: Will Cason Wallace lead the NBA in steals during the 2025–26 NBA season?
+644164: Will Herbert Jones lead the NBA in steals during the 2025–26 NBA season?
+644165: Will Alex Caruso lead the NBA in steals during the 2025–26 NBA season?
+644166: Will Luka Doncic lead the NBA in steals during the 2025–26 NBA season?
+644167: Will Toumani Camara lead the NBA in steals during the 2025–26 NBA season?
+644168: Will Nikola Jokic lead the NBA in steals during the 2025–26 NBA season?
+644169: Will Jalen Williams lead the NBA in steals during the 2025–26 NBA season?
+644170: Will Matisse Thybulle lead the NBA in steals during the 2025–26 NBA season?
+644171: Will De'Aaron Fox lead the NBA in steals during the 2025–26 NBA season?
+644172: Will Tyrese Maxey lead the NBA in steals during the 2025–26 NBA season?
+644173: Will Tari Eason lead the NBA in steals during the 2025–26 NBA season?
+644174: Will Kawhi Leonard lead the NBA in steals during the 2025–26 NBA season?
+644175: Will Kris Dunn lead the NBA in steals during the 2025–26 NBA season?
+644176: Will Jimmy Butler lead the NBA in steals during the 2025–26 NBA season?
+644177: Will Keon Ellis lead the NBA in steals during the 2025–26 NBA season?
+644178: Will Victor Wembanyama lead the NBA in steals during the 2025–26 NBA season?
+644179: Will OG Anunoby lead the NBA in steals during the 2025–26 NBA season?
+644180: Will Jaden McDaniels lead the NBA in steals during the 2025–26 NBA season?
+644181: Will Andrew Nembhard lead the NBA in steals during the 2025–26 NBA season?
+644182: Will Jalen Suggs lead the NBA in steals during the 2025–26 NBA season?
+644183: Will Paul George lead the NBA in steals during the 2025–26 NBA season?
+644184: Will Draymond Green lead the NBA in steals during the 2025–26 NBA season?
+644185: Will Josh Hart lead the NBA in steals during the 2025–26 NBA season?
+644186: Will Anthony Edwards lead the NBA in steals during the 2025–26 NBA season?
+644187: Will James Harden lead the NBA in steals during the 2025–26 NBA season?
+644188: Will Luguentz Dort lead the NBA in steals during the 2025–26 NBA season?
+644189: Will T.J. McConnell lead the NBA in steals during the 2025–26 NBA season?
+644190: Will LaMelo Ball lead the NBA in steals during the 2025–26 NBA season?
+644191: Will Jordan Poole lead the NBA in steals during the 2025–26 NBA season?
+644192: Will Scottie Barnes lead the NBA in steals during the 2025–26 NBA season?
+644193: Will Mikal Bridges lead the NBA in steals during the 2025–26 NBA season?
+644194: Will Kelly Oubre Jr. lead the NBA in steals during the 2025–26 NBA season?
+644195: Will Jaren Jackson Jr. lead the NBA in steals during the 2025–26 NBA season?
+644196: Will Franz Wagner lead the NBA in steals during the 2025–26 NBA season?
+644197: Will Paolo Banchero lead the NBA in steals during the 2025–26 NBA season?
+644198: Will Anthony Davis lead the NBA in steals during the 2025–26 NBA season?
+644199: Will Lonzo Ball lead the NBA in steals during the 2025–26 NBA season?
+644200: Will Bam Adebayo lead the NBA in steals during the 2025–26 NBA season?
+644201: Will Reed Sheppard lead the NBA in steals during the 2025–26 NBA season?
+644353: Will the Boston Celtics finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644354: Will the Philadelphia 76ers finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644355: Will the Milwaukee Bucks finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644356: Will the New York Knicks finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644357: Will the Cleveland Cavaliers finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644358: Will the Miami Heat finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644359: Will the Indiana Pacers finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644360: Will the Orlando Magic finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644361: Will the Toronto Raptors finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644362: Will the Chicago Bulls finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644363: Will the Atlanta Hawks finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644364: Will the Brooklyn Nets finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644365: Will the Charlotte Hornets finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644366: Will the Detroit Pistons finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644367: Will the Washington Wizards finish as the #1 seed in the 2025–2026 NBA Eastern Conference?
+644369: Will the Denver Nuggets finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644370: Will the Oklahoma City Thunder finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644371: Will the Minnesota Timberwolves finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644372: Will the Dallas Mavericks finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644373: Will the Phoenix Suns finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644374: Will the Los Angeles Lakers finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644375: Will the Golden State Warriors finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644376: Will the Los Angeles Clippers finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644377: Will the Sacramento Kings finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644378: Will the Memphis Grizzlies finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644379: Will the New Orleans Pelicans finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644380: Will the San Antonio Spurs finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644381: Will the Utah Jazz finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644382: Will the Houston Rockets finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644383: Will the Portland Trail Blazers finish as the #1 seed in the 2025–2026 NBA Western Conference?
+644387: Will the Atlanta Hawks win more than 47.5 regular season games in 2025–26?
+644388: Will the Boston Celtics win more than 41.5 regular season games in 2025–26?
+644389: Will the Brooklyn Nets win more than 19.5 regular season games in 2025–26?
+644390: Will the Charlotte Hornets win more than 27.5 regular season games in 2025–26?
+644391: Will the Chicago Bulls win more than 33.5 regular season games in 2025–26?
+644392: Will the Cleveland Cavaliers win more than 56.5 regular season games in 2025–26?
+644393: Will the Dallas Mavericks win more than 41.5 regular season games in 2025–26?
+644394: Will the Denver Nuggets win more than 53.5 regular season games in 2025–26?
+644395: Will the Detroit Pistons win more than 46.5 regular season games in 2025–26?
+644396: Will the Golden State Warriors win more than 47.5 regular season games in 2025–26?
+644397: Will the Houston Rockets win more than 52.5 regular season games in 2025–26?
+644398: Will the Indiana Pacers win more than 37.5 regular season games in 2025–26?
+644399: Will the Los Angeles Clippers win more than 49.5 regular season games in 2025–26?
+644400: Will the Los Angeles Lakers win more than 46.5 regular season games in 2025–26?
+644401: Will the Memphis Grizzlies win more than 39.5 regular season games in 2025–26?
+644402: Will the Miami Heat win more than 37.5 regular season games in 2025–26?
+644403: Will the Milwaukee Bucks win more than 43.5 regular season games in 2025–26?
+644404: Will the Minnesota Timberwolves win more than 49.5 regular season games in 2025–26?
+644405: Will the New Orleans Pelicans win more than 30.5 regular season games in 2025–26?
+644406: Will the New York Knicks win more than 53.5 regular season games in 2025–26?
+644407: Will the Oklahoma City Thunder win more than 62.5 regular season games in 2025–26?
+644408: Will the Orlando Magic win more than 51.5 regular season games in 2025–26?
+644409: Will the Philadelphia 76ers win more than 43.5 regular season games in 2025–26?
+644410: Will the Phoenix Suns win more than 30.5 regular season games in 2025–26?
+644411: Will the Portland Trail Blazers win more than 35.5 regular season games in 2025–26?
+644412: Will the San Antonio Spurs win more than 44.5 regular season games in 2025–26?
+644413: Will the Sacramento Kings win more than 32.5 regular season games in 2025–26?
+644414: Will the Toronto Raptors win more than 39.5 regular season games in 2025–26?
+644415: Will the Utah Jazz win more than 18.5 regular season games in 2025–26?
+644416: Will the Washington Wizards win more than 20.5 regular season games in 2025–26?
+644510: Spain snap election called by June 30, 2026?
+644804: French election called by June 30, 2026?
+644940: Will the Carolina Hurricanes win the 2025–2026 NHL Presidents' Trophy?
+644941: Will the Vegas Golden Knights win the 2025–2026 NHL Presidents' Trophy?
+644942: Will the Edmonton Oilers win the 2025–2026 NHL Presidents' Trophy?
+644943: Will the Winnipeg Jets win the 2025–2026 NHL Presidents' Trophy?
+644944: Will the Washington Capitals win the 2025–2026 NHL Presidents' Trophy?
+644945: Will the Florida Panthers win the 2025–2026 NHL Presidents' Trophy?
+644946: Will the Minnesota Wild win the 2025–2026 NHL Presidents' Trophy?
+644947: Will the Los Angeles Kings win the 2025–2026 NHL Presidents' Trophy?
+644948: Will the New York Rangers win the 2025–2026 NHL Presidents' Trophy?
+644949: Will the Ottawa Senators win the 2025–2026 NHL Presidents' Trophy?
+644950: Will the Detroit Red Wings win the 2025–2026 NHL Presidents' Trophy?
+644951: Will the Columbus Blue Jackets win the 2025–2026 NHL Presidents' Trophy?
+644952: Will the Philadelphia Flyers win the 2025–2026 NHL Presidents' Trophy?
+644953: Will the Boston Bruins win the 2025–2026 NHL Presidents' Trophy?
+644954: Will the Seattle Kraken win the 2025–2026 NHL Presidents' Trophy?
+644955: Will the San Jose Sharks win the 2025–2026 NHL Presidents' Trophy?
+644956: Will the Colorado Avalanche win the 2025–2026 NHL Presidents' Trophy?
+644957: Will the New Jersey Devils win the 2025–2026 NHL Presidents' Trophy?
+644958: Will the Dallas Stars win the 2025–2026 NHL Presidents' Trophy?
+644959: Will the Tampa Bay Lightning win the 2025–2026 NHL Presidents' Trophy?
+644960: Will the Toronto Maple Leafs win the 2025–2026 NHL Presidents' Trophy?
+644961: Will the Utah Mammoth win the 2025–2026 NHL Presidents' Trophy?
+644962: Will the Montreal Canadiens win the 2025–2026 NHL Presidents' Trophy?
+644963: Will the St. Louis Blues win the 2025–2026 NHL Presidents' Trophy?
+644964: Will the Vancouver Canucks win the 2025–2026 NHL Presidents' Trophy?
+644965: Will the Nashville Predators win the 2025–2026 NHL Presidents' Trophy?
+644966: Will the New York Islanders win the 2025–2026 NHL Presidents' Trophy?
+644967: Will the Anaheim Ducks win the 2025–2026 NHL Presidents' Trophy?
+644968: Will the Buffalo Sabres win the 2025–2026 NHL Presidents' Trophy?
+644969: Will the Calgary Flames win the 2025–2026 NHL Presidents' Trophy?
+644970: Will the Pittsburgh Penguins win the 2025–2026 NHL Presidents' Trophy?
+644971: Will the Chicago Blackhawks win the 2025–2026 NHL Presidents' Trophy?
+645082: Will Connor McDavid win the 2025–2026 NHL Art Ross Trophy?
+645083: Will Nathan MacKinnon win the 2025–2026 NHL Art Ross Trophy?
+645084: Will Jack Eichel win the 2025–2026 NHL Art Ross Trophy?
+645085: Will Nikita Kucherov win the 2025–2026 NHL Art Ross Trophy?
+645086: Will Kirill Kaprizov win the 2025–2026 NHL Art Ross Trophy?
+645087: Will Leon Draisaitl win the 2025–2026 NHL Art Ross Trophy?
+645088: Will David Pastrnak win the 2025–2026 NHL Art Ross Trophy?
+645089: Will Mitchell Marner win the 2025–2026 NHL Art Ross Trophy?
+645090: Will Jack Hughes win the 2025–2026 NHL Art Ross Trophy?
+645091: Will Auston Matthews win the 2025–2026 NHL Art Ross Trophy?
+645092: Will Cale Makar win the 2025–2026 NHL Art Ross Trophy?
+645093: Will William Nylander win the 2025–2026 NHL Art Ross Trophy?
+645094: Will Nick Suzuki win the 2025–2026 NHL Art Ross Trophy?
+645095: Will Kyle Connor win the 2025–2026 NHL Art Ross Trophy?
+645096: Will Artemi Panarin win the 2025–2026 NHL Art Ross Trophy?
+645097: Will Jesper Bratt win the 2025–2026 NHL Art Ross Trophy?
+645098: Will Elias Pettersson win the 2025–2026 NHL Art Ross Trophy?
+645099: Will Martin Necas win the 2025–2026 NHL Art Ross Trophy?
+645100: Will Robert Thomas win the 2025–2026 NHL Art Ross Trophy?
+645101: Will Brayden Point win the 2025–2026 NHL Art Ross Trophy?
+645102: Will Mikko Rantanen win the 2025–2026 NHL Art Ross Trophy?
+645103: Will Andrei Svechnikov win the 2025–2026 NHL Art Ross Trophy?
+645104: Will Quinn Hughes win the 2025–2026 NHL Art Ross Trophy?
+645105: Will Kevin Fiala win the 2025–2026 NHL Art Ross Trophy?
+645106: Will Brady Tkachuk win the 2025–2026 NHL Art Ross Trophy?
+645107: Will Adam Fox win the 2025–2026 NHL Art Ross Trophy?
+645108: Will Dylan Guenther win the 2025–2026 NHL Art Ross Trophy?
+645109: Will Mika Zibanejad win the 2025–2026 NHL Art Ross Trophy?
+645110: Will Juraj Slafkovsky win the 2025–2026 NHL Art Ross Trophy?
+645111: Will Noah Dobson win the 2025–2026 NHL Art Ross Trophy?
+645112: Will Carter Verhaeghe win the 2025–2026 NHL Art Ross Trophy?
+645113: Will Patrik Laine win the 2025–2026 NHL Art Ross Trophy?
+645114: Will Brock Boeser win the 2025–2026 NHL Art Ross Trophy?
+645115: Will Miro Heiskanen win the 2025–2026 NHL Art Ross Trophy?
+645116: Will Vincent Trocheck win the 2025–2026 NHL Art Ross Trophy?
+645117: Will Tomas Hertl win the 2025–2026 NHL Art Ross Trophy?
+645118: Will Jonathan Marchessault win the 2025–2026 NHL Art Ross Trophy?
+645119: Will Evgenii Malkin win the 2025–2026 NHL Art Ross Trophy?
+645120: Will Troy Terry win the 2025–2026 NHL Art Ross Trophy?
+645121: Will Steven Stamkos win the 2025–2026 NHL Art Ross Trophy?
+645122: Will Mathew Barzal win the 2025–2026 NHL Art Ross Trophy?
+645123: Will Pavel Buchnevich win the 2025–2026 NHL Art Ross Trophy?
+645124: Will Quinton Byfield win the 2025–2026 NHL Art Ross Trophy?
+645125: Will Bo Horvat win the 2025–2026 NHL Art Ross Trophy?
+645126: Will Brock Nelson win the 2025–2026 NHL Art Ross Trophy?
+645127: Will Ivan Demidov win the 2025–2026 NHL Art Ross Trophy?
+645128: Will Adam Fantilli win the 2025–2026 NHL Art Ross Trophy?
+645129: Will Matthew Knies win the 2025–2026 NHL Art Ross Trophy?
+645130: Will Aleksander Barkov win the 2025–2026 NHL Art Ross Trophy?
+645131: Will William Eklund win the 2025–2026 NHL Art Ross Trophy?
+645132: Will Brad Marchand win the 2025–2026 NHL Art Ross Trophy?
+645133: Will Zach Hyman win the 2025–2026 NHL Art Ross Trophy?
+645134: Will Josh Morrissey win the 2025–2026 NHL Art Ross Trophy?
+645135: Will Shea Theodore win the 2025–2026 NHL Art Ross Trophy?
+645136: Will Matthew Tkachuk win the 2025–2026 NHL Art Ross Trophy?
+645137: Will Matt Boldy win the 2025–2026 NHL Art Ross Trophy?
+645138: Will Nazem Kadri win the 2025–2026 NHL Art Ross Trophy?
+645139: Will Sam Reinhart win the 2025–2026 NHL Art Ross Trophy?
+645140: Will Alex DeBrincat win the 2025–2026 NHL Art Ross Trophy?
+645141: Will Adrian Kempe win the 2025–2026 NHL Art Ross Trophy?
+645142: Will Nico Hischier win the 2025–2026 NHL Art Ross Trophy?
+645143: Will Tim Stutzle win the 2025–2026 NHL Art Ross Trophy?
+645144: Will John Tavares win the 2025–2026 NHL Art Ross Trophy?
+645145: Will Jake Guentzel win the 2025–2026 NHL Art Ross Trophy?
+645146: Will Anze Kopitar win the 2025–2026 NHL Art Ross Trophy?
+645147: Will Lane Hutson win the 2025–2026 NHL Art Ross Trophy?
+645148: Will Jordan Kyrou win the 2025–2026 NHL Art Ross Trophy?
+645149: Will Cole Caufield win the 2025–2026 NHL Art Ross Trophy?
+645150: Will Dylan Strome win the 2025–2026 NHL Art Ross Trophy?
+645151: Will Kirill Marchenko win the 2025–2026 NHL Art Ross Trophy?
+645152: Will Macklin Celebrini win the 2025–2026 NHL Art Ross Trophy?
+645153: Will Logan Cooley win the 2025–2026 NHL Art Ross Trophy?
+645154: Will Wyatt Johnston win the 2025–2026 NHL Art Ross Trophy?
+645155: Will Rasmus Dahlin win the 2025–2026 NHL Art Ross Trophy?
+645156: Will Lucas Raymond win the 2025–2026 NHL Art Ross Trophy?
+645157: Will Seth Jarvis win the 2025–2026 NHL Art Ross Trophy?
+645158: Will Matvei Michkov win the 2025–2026 NHL Art Ross Trophy?
+645159: Will Alexander Ovechkin win the 2025–2026 NHL Art Ross Trophy?
+645160: Will Dylan Holloway win the 2025–2026 NHL Art Ross Trophy?
+645161: Will Brandon Hagel win the 2025–2026 NHL Art Ross Trophy?
+645162: Will Sidney Crosby win the 2025–2026 NHL Art Ross Trophy?
+645163: Will Filip Forsberg win the 2025–2026 NHL Art Ross Trophy?
+645164: Will Sebastian Aho win the 2025–2026 NHL Art Ross Trophy?
+645165: Will Dylan Larkin win the 2025–2026 NHL Art Ross Trophy?
+645166: Will Drake Batherson win the 2025–2026 NHL Art Ross Trophy?
+645167: Will Zach Werenski win the 2025–2026 NHL Art Ross Trophy?
+645168: Will Tom Wilson win the 2025–2026 NHL Art Ross Trophy?
+645169: Will Alex Tuch win the 2025–2026 NHL Art Ross Trophy?
+645170: Will Mark Stone win the 2025–2026 NHL Art Ross Trophy?
+645171: Will Evan Bouchard win the 2025–2026 NHL Art Ross Trophy?
+645172: Will Tage Thompson win the 2025–2026 NHL Art Ross Trophy?
+645173: Will Mark Scheifele win the 2025–2026 NHL Art Ross Trophy?
+645174: Will Roope Hintz win the 2025–2026 NHL Art Ross Trophy?
+645175: Will Clayton Keller win the 2025–2026 NHL Art Ross Trophy?
+645176: Will Nikolaj Ehlers win the 2025–2026 NHL Art Ross Trophy?
+645177: Will Jason Robertson win the 2025–2026 NHL Art Ross Trophy?
+645178: Will J.T. Miller win the 2025–2026 NHL Art Ross Trophy?
+645179: Will Travis Konecny win the 2025–2026 NHL Art Ross Trophy?
+645180: Will Connor Bedard win the 2025–2026 NHL Art Ross Trophy?
+645181: Will Victor Hedman win the 2025–2026 NHL Art Ross Trophy?
+645182: Will John-Jason Peterka win the 2025–2026 NHL Art Ross Trophy?
+645258: Will Connor McDavid win the 2025–2026 NHL Hart Memorial Trophy?
+645259: Will Nathan MacKinnon win the 2025–2026 NHL Hart Memorial Trophy?
+645260: Will Kirill Kaprizov win the 2025–2026 NHL Hart Memorial Trophy?
+645261: Will Leon Draisaitl win the 2025–2026 NHL Hart Memorial Trophy?
+645262: Will Nikita Kucherov win the 2025–2026 NHL Hart Memorial Trophy?
+645263: Will Auston Matthews win the 2025–2026 NHL Hart Memorial Trophy?
+645264: Will David Pastrnak win the 2025–2026 NHL Hart Memorial Trophy?
+645265: Will Cale Makar win the 2025–2026 NHL Hart Memorial Trophy?
+645266: Will Jack Hughes win the 2025–2026 NHL Hart Memorial Trophy?
+645267: Will Jack Eichel win the 2025–2026 NHL Hart Memorial Trophy?
+645268: Will Mitchell Marner win the 2025–2026 NHL Hart Memorial Trophy?
+645269: Will Quinn Hughes win the 2025–2026 NHL Hart Memorial Trophy?
+645270: Will Connor Hellebuyck win the 2025–2026 NHL Hart Memorial Trophy?
+645271: Will Igor Shesterkin win the 2025–2026 NHL Hart Memorial Trophy?
+645272: Will Artemi Panarin win the 2025–2026 NHL Hart Memorial Trophy?
+645273: Will William Nylander win the 2025–2026 NHL Hart Memorial Trophy?
+645274: Will Miro Heiskanen win the 2025–2026 NHL Hart Memorial Trophy?
+645275: Will Dylan Larkin win the 2025–2026 NHL Hart Memorial Trophy?
+645276: Will Lane Hutson win the 2025–2026 NHL Hart Memorial Trophy?
+645277: Will Linus Ullmark win the 2025–2026 NHL Hart Memorial Trophy?
+645278: Will Nico Hischier win the 2025–2026 NHL Hart Memorial Trophy?
+645279: Will Logan Thompson win the 2025–2026 NHL Hart Memorial Trophy?
+645280: Will Kyle Connor win the 2025–2026 NHL Hart Memorial Trophy?
+645281: Will Andrei Vasilevskiy win the 2025–2026 NHL Hart Memorial Trophy?
+645282: Will Jonathan Huberdeau win the 2025–2026 NHL Hart Memorial Trophy?
+645283: Will Alex DeBrincat win the 2025–2026 NHL Hart Memorial Trophy?
+645284: Will Chris Kreider win the 2025–2026 NHL Hart Memorial Trophy?
+645285: Will Tomas Hertl win the 2025–2026 NHL Hart Memorial Trophy?
+645286: Will Elias Lindholm win the 2025–2026 NHL Hart Memorial Trophy?
+645287: Will Jonathan Toews win the 2025–2026 NHL Hart Memorial Trophy?
+645288: Will Logan Stankoven win the 2025–2026 NHL Hart Memorial Trophy?
+645289: Will Trevor Zegras win the 2025–2026 NHL Hart Memorial Trophy?
+645290: Will Nikolaj Ehlers win the 2025–2026 NHL Hart Memorial Trophy?
+645291: Will Claude Giroux win the 2025–2026 NHL Hart Memorial Trophy?
+645292: Will Brock Faber win the 2025–2026 NHL Hart Memorial Trophy?
+645293: Will Matty Beniers win the 2025–2026 NHL Hart Memorial Trophy?
+645294: Will Ryan O'Reilly win the 2025–2026 NHL Hart Memorial Trophy?
+645295: Will Dylan Strome win the 2025–2026 NHL Hart Memorial Trophy?
+645296: Will Tage Thompson win the 2025–2026 NHL Hart Memorial Trophy?
+645297: Will Jason Robertson win the 2025–2026 NHL Hart Memorial Trophy?
+645298: Will Macklin Celebrini win the 2025–2026 NHL Hart Memorial Trophy?
+645299: Will Alexander Nikishin win the 2025–2026 NHL Hart Memorial Trophy?
+645300: Will Brad Marchand win the 2025–2026 NHL Hart Memorial Trophy?
+645301: Will Timo Meier win the 2025–2026 NHL Hart Memorial Trophy?
+645302: Will Zach Hyman win the 2025–2026 NHL Hart Memorial Trophy?
+645303: Will Evan Bouchard win the 2025–2026 NHL Hart Memorial Trophy?
+645304: Will Patrick Kane win the 2025–2026 NHL Hart Memorial Trophy?
+645305: Will Brady Tkachuk win the 2025–2026 NHL Hart Memorial Trophy?
+645306: Will Juraj Slafkovsky win the 2025–2026 NHL Hart Memorial Trophy?
+645307: Will Carter Verhaeghe win the 2025–2026 NHL Hart Memorial Trophy?
+645308: Will Clayton Keller win the 2025–2026 NHL Hart Memorial Trophy?
+645309: Will Jacob Markstrom win the 2025–2026 NHL Hart Memorial Trophy?
+645310: Will Wyatt Johnston win the 2025–2026 NHL Hart Memorial Trophy?
+645311: Will Matvei Michkov win the 2025–2026 NHL Hart Memorial Trophy?
+645312: Will Sidney Crosby win the 2025–2026 NHL Hart Memorial Trophy?
+645313: Will Zach Werenski win the 2025–2026 NHL Hart Memorial Trophy?
+645314: Will Mathew Barzal win the 2025–2026 NHL Hart Memorial Trophy?
+645315: Will Roman Josi win the 2025–2026 NHL Hart Memorial Trophy?
+645316: Will Cole Caufield win the 2025–2026 NHL Hart Memorial Trophy?
+645317: Will Brock Boeser win the 2025–2026 NHL Hart Memorial Trophy?
+645318: Will Andrei Svechnikov win the 2025–2026 NHL Hart Memorial Trophy?
+645319: Will Mika Zibanejad win the 2025–2026 NHL Hart Memorial Trophy?
+645320: Will Matt Duchene win the 2025–2026 NHL Hart Memorial Trophy?
+645321: Will Adin Hill win the 2025–2026 NHL Hart Memorial Trophy?
+645322: Will Anze Kopitar win the 2025–2026 NHL Hart Memorial Trophy?
+645323: Will Mark Stone win the 2025–2026 NHL Hart Memorial Trophy?
+645324: Will Filip Gustavsson win the 2025–2026 NHL Hart Memorial Trophy?
+645325: Will Dustin Wolf win the 2025–2026 NHL Hart Memorial Trophy?
+645326: Will Jordan Binnington win the 2025–2026 NHL Hart Memorial Trophy?
+645327: Will Jesper Bratt win the 2025–2026 NHL Hart Memorial Trophy?
+645328: Will Ilya Sorokin win the 2025–2026 NHL Hart Memorial Trophy?
+645329: Will Sergei Bobrovsky win the 2025–2026 NHL Hart Memorial Trophy?
+645330: Will Patrik Laine win the 2025–2026 NHL Hart Memorial Trophy?
+645331: Will Elias Pettersson win the 2025–2026 NHL Hart Memorial Trophy?
+645332: Will Mackenzie Blackwood win the 2025–2026 NHL Hart Memorial Trophy?
+645333: Will Stuart Skinner win the 2025–2026 NHL Hart Memorial Trophy?
+645334: Will Darcy Kuemper win the 2025–2026 NHL Hart Memorial Trophy?
+645335: Will Sebastian Aho win the 2025–2026 NHL Hart Memorial Trophy?
+645336: Will Filip Forsberg win the 2025–2026 NHL Hart Memorial Trophy?
+645337: Will Tim Stutzle win the 2025–2026 NHL Hart Memorial Trophy?
+645338: Will Adrian Kempe win the 2025–2026 NHL Hart Memorial Trophy?
+645339: Will Martin Necas win the 2025–2026 NHL Hart Memorial Trophy?
+645340: Will Victor Hedman win the 2025–2026 NHL Hart Memorial Trophy?
+645341: Will Quinton Byfield win the 2025–2026 NHL Hart Memorial Trophy?
+645342: Will Kirill Marchenko win the 2025–2026 NHL Hart Memorial Trophy?
+645343: Will Rasmus Dahlin win the 2025–2026 NHL Hart Memorial Trophy?
+645344: Will Aleksander Barkov win the 2025–2026 NHL Hart Memorial Trophy?
+645345: Will Matthew Tkachuk win the 2025–2026 NHL Hart Memorial Trophy?
+645346: Will Connor Bedard win the 2025–2026 NHL Hart Memorial Trophy?
+645347: Will Roope Hintz win the 2025–2026 NHL Hart Memorial Trophy?
+645348: Will Sam Reinhart win the 2025–2026 NHL Hart Memorial Trophy?
+645349: Will John-Jason Peterka win the 2025–2026 NHL Hart Memorial Trophy?
+645350: Will Brayden Point win the 2025–2026 NHL Hart Memorial Trophy?
+645351: Will J.T. Miller win the 2025–2026 NHL Hart Memorial Trophy?
+645352: Will Thatcher Demko win the 2025–2026 NHL Hart Memorial Trophy?
+645353: Will Owen Tippett win the 2025–2026 NHL Hart Memorial Trophy?
+645354: Will Jake Oettinger win the 2025–2026 NHL Hart Memorial Trophy?
+645355: Will Steven Stamkos win the 2025–2026 NHL Hart Memorial Trophy?
+645356: Will Travis Konecny win the 2025–2026 NHL Hart Memorial Trophy?
+645357: Will Alexander Ovechkin win the 2025–2026 NHL Hart Memorial Trophy?
+645358: Will Nick Suzuki win the 2025–2026 NHL Hart Memorial Trophy?
+645359: Will Robert Thomas win the 2025–2026 NHL Hart Memorial Trophy?
+645360: Will Ivan Demidov win the 2025–2026 NHL Hart Memorial Trophy?
+645361: Will Juuse Saros win the 2025–2026 NHL Hart Memorial Trophy?
+645362: Will Jordan Kyrou win the 2025–2026 NHL Hart Memorial Trophy?
+645363: Will Evgeni Malkin win the 2025–2026 NHL Hart Memorial Trophy?
+645364: Will Adam Fox win the 2025–2026 NHL Hart Memorial Trophy?
+645365: Will Alexis Lafrenière win the 2025–2026 NHL Hart Memorial Trophy?
+645366: Will Nazem Kadri win the 2025–2026 NHL Hart Memorial Trophy?
+645367: Will Lucas Raymond win the 2025–2026 NHL Hart Memorial Trophy?
+645368: Will Seth Jarvis win the 2025–2026 NHL Hart Memorial Trophy?
+645369: Will Mark Scheifele win the 2025–2026 NHL Hart Memorial Trophy?
+645370: Will Will Smith win the 2025–2026 NHL Hart Memorial Trophy?
+645371: Will Jake Guentzel win the 2025–2026 NHL Hart Memorial Trophy?
+645372: Will Matt Boldy win the 2025–2026 NHL Hart Memorial Trophy?
+645373: Will Erik Karlsson win the 2025–2026 NHL Hart Memorial Trophy?
+645374: Will Cutter Gauthier win the 2025–2026 NHL Hart Memorial Trophy?
+645375: Will Kevin Fiala win the 2025–2026 NHL Hart Memorial Trophy?
+645397: Will Matthew Schaefer win the 2025–2026 NHL Calder Memorial Trophy?
+645398: Will Ivan Demidov win the 2025–2026 NHL Calder Memorial Trophy?
+645399: Will Jimmy Snuggerud win the 2025–2026 NHL Calder Memorial Trophy?
+645400: Will Zeev Buium win the 2025–2026 NHL Calder Memorial Trophy?
+645401: Will Alexander Nikishin win the 2025–2026 NHL Calder Memorial Trophy?
+645402: Will Arseniy Gritsyuk win the 2025–2026 NHL Calder Memorial Trophy?
+645403: Will Michael Misa win the 2025–2026 NHL Calder Memorial Trophy?
+645404: Will Oliver Kapanen win the 2025–2026 NHL Calder Memorial Trophy?
+645405: Will Zayne Parekh win the 2025–2026 NHL Calder Memorial Trophy?
+645406: Will Nikita Chibrikov win the 2025–2026 NHL Calder Memorial Trophy?
+645407: Will Ryan Leonard win the 2025–2026 NHL Calder Memorial Trophy?
+645408: Will Samuel Honzek win the 2025–2026 NHL Calder Memorial Trophy?
+645409: Will Linus Karlsson win the 2025–2026 NHL Calder Memorial Trophy?
+645410: Will Owen Pickering win the 2025–2026 NHL Calder Memorial Trophy?
+645411: Will Sam Rinzel win the 2025–2026 NHL Calder Memorial Trophy?
+645412: Will Joakim Kemell win the 2025–2026 NHL Calder Memorial Trophy?
+645413: Will Justin Sourdif win the 2025–2026 NHL Calder Memorial Trophy?
+645414: Will Logan Mailloux win the 2025–2026 NHL Calder Memorial Trophy?
+645415: Will Easton Cowan win the 2025–2026 NHL Calder Memorial Trophy?
+645416: Will James Hagens win the 2025–2026 NHL Calder Memorial Trophy?
+645417: Will Maxim Shabanov win the 2025–2026 NHL Calder Memorial Trophy?
+645418: Will Axel Sandin-Pellikka win the 2025–2026 NHL Calder Memorial Trophy?
+645419: Will Beckett Sennecke win the 2025–2026 NHL Calder Memorial Trophy?
+645420: Will Colton Dach win the 2025–2026 NHL Calder Memorial Trophy?
+645421: Will Yaroslav Askarov win the 2025–2026 NHL Calder Memorial Trophy?
+645422: Will Alex Bump win the 2025–2026 NHL Calder Memorial Trophy?
+645423: Will Lane Hutson win the 2025–2026 NHL Calder Memorial Trophy?
+645424: Will Leo Sahlin-Wallenius win the 2025–2026 NHL Calder Memorial Trophy?
+645425: Will Dmitri Simashev win the 2025–2026 NHL Calder Memorial Trophy?
+645426: Will Seamus Casey win the 2025–2026 NHL Calder Memorial Trophy?
+645427: Will Brennan Othmann win the 2025–2026 NHL Calder Memorial Trophy?
+645428: Will Oliver Moore win the 2025–2026 NHL Calder Memorial Trophy?
+645429: Will Tom Willander win the 2025–2026 NHL Calder Memorial Trophy?
+645430: Will Karsen Dorwart win the 2025–2026 NHL Calder Memorial Trophy?
+645431: Will Liam Greentree win the 2025–2026 NHL Calder Memorial Trophy?
+645432: Will Daniil But win the 2025–2026 NHL Calder Memorial Trophy?
+645433: Will Carter King win the 2025–2026 NHL Calder Memorial Trophy?
+645434: Will Trevor Connelly win the 2025–2026 NHL Calder Memorial Trophy?
+645435: Will Shane Lachance win the 2025–2026 NHL Calder Memorial Trophy?
+645436: Will Dans Locmelis win the 2025–2026 NHL Calder Memorial Trophy?
+645437: Will Justin Robidas win the 2025–2026 NHL Calder Memorial Trophy?
+645438: Will Fabian Lysell win the 2025–2026 NHL Calder Memorial Trophy?
+645439: Will Ethan Del Mastro win the 2025–2026 NHL Calder Memorial Trophy?
+645440: Will Maveric Lamoureux win the 2025–2026 NHL Calder Memorial Trophy?
+645441: Will Scott Morrow win the 2025–2026 NHL Calder Memorial Trophy?
+645442: Will Noah Ostlund win the 2025–2026 NHL Calder Memorial Trophy?
+645443: Will Ville Ottavainen win the 2025–2026 NHL Calder Memorial Trophy?
+645444: Will Luca Del Bel Belluz win the 2025–2026 NHL Calder Memorial Trophy?
+645445: Will Jonathan Lekkerimaki win the 2025–2026 NHL Calder Memorial Trophy?
+645446: Will Rory Kerins win the 2025–2026 NHL Calder Memorial Trophy?
+645447: Will Luca Cagnoni win the 2025–2026 NHL Calder Memorial Trophy?
+645448: Will Helge Grans win the 2025–2026 NHL Calder Memorial Trophy?
+645449: Will Isaac Howard win the 2025–2026 NHL Calder Memorial Trophy?
+645450: Will Gabe Perreault win the 2025–2026 NHL Calder Memorial Trophy?
+645451: Will Matthew Savoie win the 2025–2026 NHL Calder Memorial Trophy?
+645452: Will Jesper Wallstedt win the 2025–2026 NHL Calder Memorial Trophy?
+645453: Will Bradly Nadeau win the 2025–2026 NHL Calder Memorial Trophy?
+645454: Will Fraser Minten win the 2025–2026 NHL Calder Memorial Trophy?
+645455: Will Jake O'Brien win the 2025–2026 NHL Calder Memorial Trophy?
+645456: Will Calum Ritchie win the 2025–2026 NHL Calder Memorial Trophy?
+645457: Will Levi Merilainen win the 2025–2026 NHL Calder Memorial Trophy?
+645458: Will Berkly Catton win the 2025–2026 NHL Calder Memorial Trophy?
+645459: Will Dalibor Dvorsky win the 2025–2026 NHL Calder Memorial Trophy?
+645460: Will Sam Dickinson win the 2025–2026 NHL Calder Memorial Trophy?
+645461: Will Matthew Wood win the 2025–2026 NHL Calder Memorial Trophy?
+645462: Will Cutter Gauthier win the 2025–2026 NHL Calder Memorial Trophy?
+645463: Will Artyom Levshunov win the 2025–2026 NHL Calder Memorial Trophy?
+645464: Will Jani Nyman win the 2025–2026 NHL Calder Memorial Trophy?
+645465: Will Will Smith win the 2025–2026 NHL Calder Memorial Trophy?
+645466: Will Rutger McGroarty win the 2025–2026 NHL Calder Memorial Trophy?
+645467: Will Brad Lambert win the 2025–2026 NHL Calder Memorial Trophy?
+645468: Will Aydar Suniev win the 2025–2026 NHL Calder Memorial Trophy?
+645469: Will Danila Yurov win the 2025–2026 NHL Calder Memorial Trophy?
+645470: Will Jett Luchanko win the 2025–2026 NHL Calder Memorial Trophy?
+645471: Will Jacob Fowler win the 2025–2026 NHL Calder Memorial Trophy?
+645472: Will Andrew Cristall win the 2025–2026 NHL Calder Memorial Trophy?
+645473: Will Liam Ohgren win the 2025–2026 NHL Calder Memorial Trophy?
+645474: Will Cameron Lund win the 2025–2026 NHL Calder Memorial Trophy?
+645475: Will Ville Koivunen win the 2025–2026 NHL Calder Memorial Trophy?
+645476: Will Jack DeVine win the 2025–2026 NHL Calder Memorial Trophy?
+645477: Will Ozzy Wiesblatt win the 2025–2026 NHL Calder Memorial Trophy?
+645499: Will Sam Reinhart win the 2025–2026 NHL Frank J. Selke Trophy?
+645500: Will Nico Hischier win the 2025–2026 NHL Frank J. Selke Trophy?
+645501: Will Anthony Cirelli win the 2025–2026 NHL Frank J. Selke Trophy?
+645502: Will Jack Eichel win the 2025–2026 NHL Frank J. Selke Trophy?
+645503: Will Leon Draisaitl win the 2025–2026 NHL Frank J. Selke Trophy?

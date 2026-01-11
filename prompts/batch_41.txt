@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1154011: Will RC Deportivo La Coruña win on 2026-01-13?
+1154013: Solana Up or Down - January 12, 1PM ET
+1154015: Will RC Deportivo La Coruña vs. Club Atlético de Madrid end in a draw?
+1154017: Will Club Atlético de Madrid win on 2026-01-13?
+1154024: Macarthur FC vs. Melbourne City FC: O/U 1.5
+1154025: Macarthur FC vs. Melbourne City FC: O/U 2.5
+1154026: Macarthur FC vs. Melbourne City FC: O/U 3.5
+1154027: Macarthur FC vs. Melbourne City FC: O/U 4.5
+1154028: Macarthur FC vs. Melbourne City FC: Both Teams to Score
+1154029: XRP Up or Down - January 12, 1PM ET
+1154033: Will Albacete Balompié win on 2026-01-14?
+1154035: Will Albacete Balompié vs. Real Madrid CF end in a draw?
+1154036: Will Real Madrid CF win on 2026-01-14?
+1154037: Game Handicap: OXG (-1.5)
+1154038: DarkZero Esports to win 1 games?
+1154039: DarkZero Esports to win 2 games?
+1154040: Brisbane Roar FC vs. Adelaide United FC: O/U 1.5
+1154041: Oxygen Esports to win 1 games?
+1154042: Brisbane Roar FC vs. Adelaide United FC: O/U 2.5
+1154043: Oxygen Esports to win 2 games?
+1154044: Brisbane Roar FC vs. Adelaide United FC: O/U 3.5
+1154045: Brisbane Roar FC vs. Adelaide United FC: O/U 4.5
+1154046: Brisbane Roar FC vs. Adelaide United FC: Both Teams to Score
+1154047: Auckland FC vs. Central Coast Mariners FC: O/U 1.5
+1154048: Auckland FC vs. Central Coast Mariners FC: O/U 2.5
+1154049: Auckland FC vs. Central Coast Mariners FC: O/U 3.5
+1154050: Auckland FC vs. Central Coast Mariners FC: O/U 4.5
+1154051: Auckland FC vs. Central Coast Mariners FC: Both Teams to Score
+1154076: XRP Up or Down - January 11, 1:00PM-1:15PM ET
+1154077: Bitcoin Up or Down - January 11, 1:00PM-1:15PM ET
+1154078: Ethereum Up or Down - January 11, 1:00PM-1:15PM ET
+1154079: Ethereum Up or Down - January 11, 12:55PM-1:00PM ET
+1154080: Solana Up or Down - January 11, 1:00PM-1:15PM ET
+1154081: Bitcoin Up or Down - January 11, 12:55PM-1:00PM ET
+1154082: Solana Up or Down - January 11, 12:55PM-1:00PM ET
+1154083: XRP Up or Down - January 11, 12:55PM-1:00PM ET
+1154085: Solana Up or Down - January 11, 1:00PM-1:05PM ET
+1154086: Ethereum Up or Down - January 11, 1:00PM-1:05PM ET
+1154087: Bitcoin Up or Down - January 11, 1:00PM-1:05PM ET
+1154088: XRP Up or Down - January 11, 1:00PM-1:05PM ET
+1154091: Bitcoin Up or Down - January 11, 1:05PM-1:10PM ET
+1154092: Ethereum Up or Down - January 11, 1:05PM-1:10PM ET
+1154093: XRP Up or Down - January 11, 1:05PM-1:10PM ET
+1154094: Solana Up or Down - January 11, 1:05PM-1:10PM ET
+1154096: XRP Up or Down - January 11, 1:15PM-1:30PM ET
+1154097: Bitcoin Up or Down - January 11, 1:10PM-1:15PM ET
+1154098: Bitcoin Up or Down - January 11, 1:15PM-1:30PM ET
+1154099: XRP Up or Down - January 11, 1:10PM-1:15PM ET
+1154100: Ethereum Up or Down - January 11, 1:15PM-1:30PM ET
+1154101: Ethereum Up or Down - January 11, 1:10PM-1:15PM ET
+1154102: Solana Up or Down - January 11, 1:10PM-1:15PM ET
+1154103: Solana Up or Down - January 11, 1:15PM-1:30PM ET
+1154273: XRP Up or Down - January 11, 1:15PM-1:20PM ET
+1154274: Ethereum Up or Down - January 11, 1:15PM-1:20PM ET
+1154275: Solana Up or Down - January 11, 1:15PM-1:20PM ET
+1154280: Bitcoin Up or Down - January 11, 1:15PM-1:20PM ET
+1154327: Miami vs. Indiana
+1154328: Spread: Indiana (-7.5)
+1154329: O/U 48.5
+1154331: Solana Up or Down - January 11, 1:20PM-1:25PM ET
+1154332: Bitcoin Up or Down - January 11, 1:20PM-1:25PM ET
+1154333: Ethereum Up or Down - January 11, 1:20PM-1:25PM ET
+1154334: XRP Up or Down - January 11, 1:20PM-1:25PM ET
+1154336: Will CA Central Córdoba win on 2026-02-06?
+1154337: Will CA Central Córdoba vs. CA Unión end in a draw?
+1154338: Will CA Unión win on 2026-02-06?
+1154339: Solana Up or Down - January 11, 1:30PM-1:45PM ET
+1154340: Solana Up or Down - January 11, 1:25PM-1:30PM ET
+1154341: XRP Up or Down - January 11, 1:25PM-1:30PM ET
+1154342: Ethereum Up or Down - January 11, 1:25PM-1:30PM ET
+1154343: Bitcoin Up or Down - January 11, 1:25PM-1:30PM ET
+1154344: XRP Up or Down - January 11, 1:30PM-1:45PM ET
+1154345: Bitcoin Up or Down - January 11, 1:30PM-1:45PM ET
+1154346: Ethereum Up or Down - January 11, 1:30PM-1:45PM ET
+1154347: Ethereum Up or Down - January 11, 1:30PM-1:35PM ET
+1154348: Bitcoin Up or Down - January 11, 1:30PM-1:35PM ET
+1154349: Solana Up or Down - January 11, 1:30PM-1:35PM ET
+1154350: XRP Up or Down - January 11, 1:30PM-1:35PM ET
+1154351: Ethereum Up or Down - January 11, 1:35PM-1:40PM ET
+1154352: Bitcoin Up or Down - January 11, 1:35PM-1:40PM ET
+1154353: XRP Up or Down - January 11, 1:35PM-1:40PM ET
+1154354: Solana Up or Down - January 11, 1:35PM-1:40PM ET
+1154358: Ethereum Up or Down - January 11, 1:45PM-2:00PM ET
+1154359: Solana Up or Down - January 11, 1:45PM-2:00PM ET
+1154360: Ethereum Up or Down - January 11, 1:40PM-1:45PM ET
+1154361: XRP Up or Down - January 11, 1:45PM-2:00PM ET
+1154362: Bitcoin Up or Down - January 11, 1:45PM-2:00PM ET
+1154363: XRP Up or Down - January 11, 1:40PM-1:45PM ET
+1154364: Bitcoin Up or Down - January 11, 1:40PM-1:45PM ET
+1154365: Solana Up or Down - January 11, 1:40PM-1:45PM ET
+1154368: Bitcoin Up or Down - January 11, 1:45PM-1:50PM ET
+1154369: Ethereum Up or Down - January 11, 1:45PM-1:50PM ET
+1154370: XRP Up or Down - January 11, 1:45PM-1:50PM ET
+1154371: Solana Up or Down - January 11, 1:45PM-1:50PM ET
+1154372: XRP Up or Down - January 11, 1:50PM-1:55PM ET
+1154373: Ethereum Up or Down - January 11, 1:50PM-1:55PM ET
+1154374: Bitcoin Up or Down - January 11, 1:50PM-1:55PM ET
+1154375: Solana Up or Down - January 11, 1:50PM-1:55PM ET
+1154376: Bitcoin Up or Down - January 12, 2PM ET
+1154377: Ethereum Up or Down - January 12, 2PM ET
+1154378: Solana Up or Down - January 12, 2PM ET
+1154379: XRP Up or Down - January 12, 2PM ET
+1154396: Ethereum Up or Down - January 11, 1:55PM-2:00PM ET
+1154397: Bitcoin Up or Down - January 11, 1:55PM-2:00PM ET
+1154398: XRP Up or Down - January 11, 1:55PM-2:00PM ET
+1154399: Solana Up or Down - January 11, 1:55PM-2:00PM ET
+1154400: Ethereum Up or Down - January 11, 2:00PM-2:15PM ET
+1154401: Solana Up or Down - January 11, 2:00PM-2:15PM ET
+1154402: Bitcoin Up or Down - January 11, 2:00PM-2:15PM ET
+1154403: XRP Up or Down - January 11, 2:00PM-2:15PM ET
+1154406: XRP Up or Down - January 11, 2:00PM-2:05PM ET
+1154407: Solana Up or Down - January 11, 2:00PM-2:05PM ET
+1154408: Bitcoin Up or Down - January 11, 2:00PM-2:05PM ET
+1154409: Ethereum Up or Down - January 11, 2:00PM-2:05PM ET
+1154410: Spread: Magic (-6.5)
+1154411: Pelicans vs. Magic: O/U 234.5
+1154412: Ethereum Up or Down - January 11, 2:05PM-2:10PM ET
+1154413: Solana Up or Down - January 11, 2:05PM-2:10PM ET
+1154414: Bitcoin Up or Down - January 11, 2:05PM-2:10PM ET
+1154415: XRP Up or Down - January 11, 2:05PM-2:10PM ET
+1154417: XRP Up or Down - January 11, 2:15PM-2:30PM ET
+1154418: Ethereum Up or Down - January 11, 2:15PM-2:30PM ET
+1154419: Bitcoin Up or Down - January 11, 2:15PM-2:30PM ET
+1154420: Ethereum Up or Down - January 11, 2:10PM-2:15PM ET
+1154421: Solana Up or Down - January 11, 2:10PM-2:15PM ET
+1154422: XRP Up or Down - January 11, 2:10PM-2:15PM ET
+1154423: Bitcoin Up or Down - January 11, 2:10PM-2:15PM ET
+1154424: Solana Up or Down - January 11, 2:15PM-2:30PM ET
+1154592: Solana Up or Down - January 11, 2:15PM-2:20PM ET
+1154593: Bitcoin Up or Down - January 11, 2:15PM-2:20PM ET
+1154598: XRP Up or Down - January 11, 2:15PM-2:20PM ET
+1154599: Ethereum Up or Down - January 11, 2:15PM-2:20PM ET
+1154649: Miami vs. Indiana: 1H Moneyline
+1154650: Bitcoin Up or Down - January 11, 2:20PM-2:25PM ET
+1154651: Ethereum Up or Down - January 11, 2:20PM-2:25PM ET
+1154652: Solana Up or Down - January 11, 2:20PM-2:25PM ET
+1154653: XRP Up or Down - January 11, 2:20PM-2:25PM ET
+1154654: XRP Up or Down - January 11, 2:30PM-2:45PM ET
+1154655: Solana Up or Down - January 11, 2:25PM-2:30PM ET
+1154656: Bitcoin Up or Down - January 11, 2:30PM-2:45PM ET
+1154657: Bitcoin Up or Down - January 11, 2:25PM-2:30PM ET
+1154658: Ethereum Up or Down - January 11, 2:30PM-2:45PM ET
+1154659: Solana Up or Down - January 11, 2:30PM-2:45PM ET
+1154660: Ethereum Up or Down - January 11, 2:25PM-2:30PM ET
+1154661: XRP Up or Down - January 11, 2:25PM-2:30PM ET
+1154662: Will France win?
+1154663: Will the match end in a draw?
+1154664: Will Ireland win?
+1154665: Will Italy win?
+1154666: Will the match end in a draw?
+1154667: Will Scotland win?
+1154668: Will England win?
+1154669: Will the match end in a draw?
+1154670: Will Wales win?
+1154671: Will Saracens win?
+1154672: Will the match end in a draw?
+1154673: Will Toulouse win?
+1154674: Will Sharks win?
+1154675: Will the match end in a draw?
+1154676: Will ASM Clermont Auvergne win?
+1154677: Will Toulouse win?
+1154678: Will the match end in a draw?
+1154679: Will Sale Sharks win?
+1154680: Will Glasgow Warriors win?
+1154681: Will the match end in a draw?
+1154682: Will Saracens win?
+1154683: Will Toulon win?
+1154684: Will the match end in a draw?
+1154685: Will Munster win?
+1154686: Will Bath win?
+1154687: Will the match end in a draw?
+1154688: Will Edinburgh win?
+1154689: Will Munster win?
+1154690: Will the match end in a draw?
+1154691: Will Castres Olympique win?
+1154692: Will Gloucester win?
+1154693: Will the match end in a draw?
+1154694: Will Toulon win?
+1154695: Will Leicester Tigers win?
+1154696: Will the match end in a draw?
+1154697: Will Bayonne win?
+1154698: Will Harlequins win?
+1154699: Will the match end in a draw?
+1154700: Will Stormers win?
+1154701: Will Bayonne win?
+1154702: Will the match end in a draw?
+1154703: Will Leinster win?
+1154704: Will Stormers win?
+1154705: Will the match end in a draw?
+1154706: Will Leicester Tigers win?
+1154707: Will La Rochelle win?
+1154708: Will the match end in a draw?
+1154709: Will Harlequins win?
+1154710: Will Scarlets win?
+1154711: Will the match end in a draw?
+1154712: Will Pau win?
+1154713: Will Union Bordeaux Begles win?
+1154714: Will the match end in a draw?
+1154715: Will Northampton Saints win?
+1154716: Will Pau win?
+1154717: Will the match end in a draw?
+1154718: Will Bulls win?
+1154719: Will Bristol Bears win?
+1154720: Will the match end in a draw?
+1154721: Will Union Bordeaux Begles win?
+1154722: Will Northampton Saints win?
+1154723: Will the match end in a draw?
+1154724: Will Scarlets win?
+1154725: Will Ospreys win?
+1154726: Will the match end in a draw?
+1154727: Will Lions win?
+1154728: Will Edinburgh win?
+1154729: Will the match end in a draw?
+1154730: Will Bulls win?
+1154731: Will Munster win?
+1154732: Will the match end in a draw?
+1154733: Will Dragons win?
+1154734: Will Scarlets win?
+1154735: Will the match end in a draw?
+1154736: Will Ulster win?
+1154737: Will Connacht win?
+1154738: Will the match end in a draw?
+1154739: Will Leinster win?
+1154740: Will Stormers win?
+1154741: Will the match end in a draw?
+1154742: Will Sharks win?
+1154743: Will Zebre win?
+1154744: Will the match end in a draw?
+1154745: Will Glasgow Warriors win?
+1154746: Will Cardiff Rugby win?
+1154747: Will the match end in a draw?
+1154748: Will Benetton Treviso win?
+1154749: Will Benetton Treviso win?
+1154750: Will the match end in a draw?
+1154751: Will Scarlets win?
+1154752: Will Glasgow Warriors win?
+1154753: Will the match end in a draw?
+1154754: Will Munster win?
+1154755: Will Lions win?
+1154756: Will the match end in a draw?
+1154757: Will Bulls win?
+1154758: Will Sharks win?
+1154759: Will the match end in a draw?
+1154760: Will Stormers win?
+1154761: Will Zebre win?
+1154762: Will the match end in a draw?
+1154763: Will Connacht win?
+1154764: Will Leinster win?
+1154765: Will the match end in a draw?
+1154766: Will Edinburgh win?
+1154767: Will Ospreys win?
+1154768: Will the match end in a draw?
+1154769: Will Dragons win?
+1154770: Will Ulster win?
+1154771: Will the match end in a draw?
+1154772: Will Cardiff Rugby win?
+1154773: XRP Up or Down - January 11, 2:30PM-2:35PM ET
+1154774: Ethereum Up or Down - January 11, 2:30PM-2:35PM ET
+1154775: Bitcoin Up or Down - January 11, 2:30PM-2:35PM ET
+1154776: Solana Up or Down - January 11, 2:30PM-2:35PM ET
+1154778: XRP Up or Down - January 11, 2:35PM-2:40PM ET
+1154779: Solana Up or Down - January 11, 2:35PM-2:40PM ET
+1154780: Ethereum Up or Down - January 11, 2:35PM-2:40PM ET
+1154781: Bitcoin Up or Down - January 11, 2:35PM-2:40PM ET
+1154784: Solana Up or Down - January 11, 2:45PM-3:00PM ET
+1154785: Bitcoin Up or Down - January 11, 2:40PM-2:45PM ET
+1154786: Solana Up or Down - January 11, 2:40PM-2:45PM ET
+1154787: Ethereum Up or Down - January 11, 2:40PM-2:45PM ET
+1154788: XRP Up or Down - January 11, 2:45PM-3:00PM ET
+1154789: Bitcoin Up or Down - January 11, 2:45PM-3:00PM ET
+1154790: XRP Up or Down - January 11, 2:40PM-2:45PM ET
+1154791: Ethereum Up or Down - January 11, 2:45PM-3:00PM ET
+1154795: Solana Up or Down - January 11, 2:45PM-2:50PM ET
+1154796: Bitcoin Up or Down - January 11, 2:45PM-2:50PM ET
+1154797: XRP Up or Down - January 11, 2:45PM-2:50PM ET
+1154798: Ethereum Up or Down - January 11, 2:45PM-2:50PM ET
+1154800: Bitcoin Up or Down - January 11, 2:50PM-2:55PM ET
+1154801: Ethereum Up or Down - January 11, 2:50PM-2:55PM ET
+1154802: Solana Up or Down - January 11, 2:50PM-2:55PM ET
+1154803: XRP Up or Down - January 11, 2:50PM-2:55PM ET
+1154804: Bitcoin Up or Down - January 12, 3PM ET
+1154805: Málaga CF vs. Burgos CF: O/U 1.5
+1154806: Ethereum Up or Down - January 12, 3PM ET
+1154807: Málaga CF vs. Burgos CF: O/U 2.5
+1154808: Málaga CF vs. Burgos CF: O/U 3.5
+1154809: Málaga CF vs. Burgos CF: O/U 4.5
+1154810: Málaga CF vs. Burgos CF: Both Teams to Score
+1154811: Solana Up or Down - January 12, 3PM ET
+1154812: XRP Up or Down - January 12, 3PM ET
+1154814: Set Handicap: Raducanu (-1.5) vs Osorio (+1.5)
+1154815: Set Handicap: Ruzic (-1.5) vs Arango (+1.5)
+1154816: Set Handicap: Sramkova (-1.5) vs Gracheva (+1.5)
+1154817: Set Handicap: Maneiro (-1.5) vs Preston (+1.5)
+1154818: Set Handicap: Krejcikova (-1.5) vs Stearns (+1.5)
+1154819: Set Handicap: Wang (-1.5) vs Gibson (+1.5)
+1154820: Set Handicap: Maria (-1.5) vs Williams (+1.5)
+1154821: Set Handicap: Frech (-1.5) vs Jacquemot (+1.5)
+1154822: Set Handicap: Jovic (-1.5) vs Tjen (+1.5)
+1154823: Set Handicap: Kessler (-1.5) vs Danilovic (+1.5)
+1154827: Bitcoin Up or Down - January 11, 2:55PM-3:00PM ET
+1154828: XRP Up or Down - January 11, 2:55PM-3:00PM ET
+1154829: Solana Up or Down - January 11, 2:55PM-3:00PM ET
+1154830: Ethereum Up or Down - January 11, 2:55PM-3:00PM ET
+1154832: Solana Up or Down - January 11, 3:00PM-3:15PM ET
+1154833: XRP Up or Down - January 11, 3:00PM-3:15PM ET
+1154834: Bitcoin Up or Down - January 11, 3:00PM-3:15PM ET
+1154835: Ethereum Up or Down - January 11, 3:00PM-3:15PM ET
+1154836: Bitcoin Up or Down - January 11, 3:00PM-3:05PM ET
+1154837: Ethereum Up or Down - January 11, 3:00PM-3:05PM ET
+1154838: XRP Up or Down - January 11, 3:00PM-3:05PM ET
+1154839: Solana Up or Down - January 11, 3:00PM-3:05PM ET
+1154848: Spread: Grizzlies (-4.5)
+1154849: Nets vs. Grizzlies: O/U 224.5
+1154850: Spread: Knicks (-5.5)
+1154851: Knicks vs. Trail Blazers: O/U 230.5
+1154852: Spread: Suns (-14.5)
+1154853: Wizards vs. Suns: O/U 229.5
+1154854: Spread: Rockets (-12.5)
+1154855: Rockets vs. Kings: O/U 222.5
+1154856: XRP Up or Down - January 11, 3:05PM-3:10PM ET
+1154857: Bitcoin Up or Down - January 11, 3:05PM-3:10PM ET
+1154858: Solana Up or Down - January 11, 3:05PM-3:10PM ET
+1154859: Ethereum Up or Down - January 11, 3:05PM-3:10PM ET
+1154864: Ethereum Up or Down - January 11, 3:15PM-3:30PM ET
+1154865: Ethereum Up or Down - January 11, 3:10PM-3:15PM ET
+1154866: XRP Up or Down - January 11, 3:10PM-3:15PM ET
+1154867: Bitcoin Up or Down - January 11, 3:15PM-3:30PM ET
+1154868: Bitcoin Up or Down - January 11, 3:10PM-3:15PM ET
+1154869: XRP Up or Down - January 11, 3:15PM-3:30PM ET
+1154870: Solana Up or Down - January 11, 3:10PM-3:15PM ET
+1154871: Solana Up or Down - January 11, 3:15PM-3:30PM ET
+1155044: Ethereum Up or Down - January 11, 3:15PM-3:20PM ET
+1155045: Solana Up or Down - January 11, 3:15PM-3:20PM ET
+1155046: Bitcoin Up or Down - January 11, 3:15PM-3:20PM ET
+1155047: XRP Up or Down - January 11, 3:15PM-3:20PM ET
+1155105: Bitcoin Up or Down - January 11, 3:20PM-3:25PM ET
+1155106: Solana Up or Down - January 11, 3:20PM-3:25PM ET
+1155107: Ethereum Up or Down - January 11, 3:20PM-3:25PM ET
+1155108: XRP Up or Down - January 11, 3:20PM-3:25PM ET
+1155110: Will Al Kholood Saudi Club win on 2026-02-07?
+1155111: Will Al Kholood Saudi Club vs. Al Shabab Saudi Club end in a draw?
+1155112: Will Al Shabab Saudi Club win on 2026-02-07?
+1155113: Will Al Taawoun Saudi Club win on 2026-02-07?
+1155114: Will Al Taawoun Saudi Club vs. Al Khaleej Saudi Club end in a draw?
+1155115: Will Al Khaleej Saudi Club win on 2026-02-07?
+1155116: Will Al Qadisiyah Saudi Club win on 2026-02-07?
+1155117: Will Al Qadisiyah Saudi Club vs. Al Fateh Saudi Club end in a draw?
+1155118: Will Al Fateh Saudi Club win on 2026-02-07?
+1155121: XRP Up or Down - January 11, 3:25PM-3:30PM ET
+1155122: Solana Up or Down - January 11, 3:25PM-3:30PM ET
+1155123: XRP Up or Down - January 11, 3:30PM-3:45PM ET
+1155124: Bitcoin Up or Down - January 11, 3:25PM-3:30PM ET
+1155125: Solana Up or Down - January 11, 3:30PM-3:45PM ET
+1155126: Ethereum Up or Down - January 11, 3:25PM-3:30PM ET
+1155127: Ethereum Up or Down - January 11, 3:30PM-3:45PM ET
+1155128: Bitcoin Up or Down - January 11, 3:30PM-3:45PM ET
+1155129: Bitcoin Up or Down - January 11, 3:30PM-3:35PM ET
+1155130: XRP Up or Down - January 11, 3:30PM-3:35PM ET
+1155131: Solana Up or Down - January 11, 3:30PM-3:35PM ET
+1155132: Ethereum Up or Down - January 11, 3:30PM-3:35PM ET
+1155133: XRP Up or Down - January 11, 3:35PM-3:40PM ET
+1155134: Bitcoin Up or Down - January 11, 3:35PM-3:40PM ET
+1155135: Solana Up or Down - January 11, 3:35PM-3:40PM ET
+1155136: Ethereum Up or Down - January 11, 3:35PM-3:40PM ET
+1155137: Ethereum Up or Down - January 11, 3:45PM-4:00PM ET
+1155138: Bitcoin Up or Down - January 11, 3:45PM-4:00PM ET
+1155139: Solana Up or Down - January 11, 3:45PM-4:00PM ET
+1155140: XRP Up or Down - January 11, 3:40PM-3:45PM ET
+1155141: Solana Up or Down - January 11, 3:40PM-3:45PM ET
+1155142: Bitcoin Up or Down - January 11, 3:40PM-3:45PM ET
+1155143: XRP Up or Down - January 11, 3:45PM-4:00PM ET
+1155144: Ethereum Up or Down - January 11, 3:40PM-3:45PM ET
+1155145: Bitcoin Up or Down - January 11, 3:45PM-3:50PM ET
+1155146: Solana Up or Down - January 11, 3:45PM-3:50PM ET
+1155147: Ethereum Up or Down - January 11, 3:45PM-3:50PM ET
+1155148: XRP Up or Down - January 11, 3:45PM-3:50PM ET
+1155149: XRP Up or Down - January 11, 3:50PM-3:55PM ET
+1155150: Bitcoin Up or Down - January 11, 3:50PM-3:55PM ET
+1155151: Solana Up or Down - January 11, 3:50PM-3:55PM ET
+1155152: Ethereum Up or Down - January 11, 3:50PM-3:55PM ET
+1155153: Bitcoin Up or Down - January 12, 4PM ET
+1155158: Ethereum Up or Down - January 12, 4PM ET
+1155159: Solana Up or Down - January 12, 4PM ET
+1155160: FC Annecy vs. Clermont Foot 63: O/U 1.5
+1155161: FC Annecy vs. Clermont Foot 63: O/U 2.5
+1155162: FC Annecy vs. Clermont Foot 63: O/U 3.5
+1155163: FC Annecy vs. Clermont Foot 63: O/U 4.5
+1155164: FC Annecy vs. Clermont Foot 63: Both Teams to Score
+1155165: XRP Up or Down - January 12, 4PM ET
+1155166: Pau FC vs. Grenoble Foot 38: O/U 1.5
+1155167: Pau FC vs. Grenoble Foot 38: O/U 2.5
+1155168: Pau FC vs. Grenoble Foot 38: O/U 3.5
+1155169: Pau FC vs. Grenoble Foot 38: O/U 4.5
+1155170: Pau FC vs. Grenoble Foot 38: Both Teams to Score
+1155171: Amiens SC vs. Stade Lavallois Mayenne FC: O/U 1.5
+1155172: Amiens SC vs. Stade Lavallois Mayenne FC: O/U 2.5
+1155173: Amiens SC vs. Stade Lavallois Mayenne FC: O/U 3.5
+1155174: Amiens SC vs. Stade Lavallois Mayenne FC: O/U 4.5
+1155175: Amiens SC vs. Stade Lavallois Mayenne FC: Both Teams to Score
+1155176: AS Nancy-Lorraine vs. Rodez Aveyron Football: O/U 1.5
+1155177: AS Nancy-Lorraine vs. Rodez Aveyron Football: O/U 2.5
+1155178: AS Nancy-Lorraine vs. Rodez Aveyron Football: O/U 3.5
+1155179: AS Nancy-Lorraine vs. Rodez Aveyron Football: O/U 4.5
+1155180: AS Nancy-Lorraine vs. Rodez Aveyron Football: Both Teams to Score
+1155181: SC Bastia vs. Montpellier HSC: O/U 1.5
+1155182: SC Bastia vs. Montpellier HSC: O/U 2.5
+1155183: SC Bastia vs. Montpellier HSC: O/U 3.5
+1155184: SC Bastia vs. Montpellier HSC: O/U 4.5
+1155185: SC Bastia vs. Montpellier HSC: Both Teams to Score
+1155186: Set Handicap: Borges (-1.5) vs Etcheverry (+1.5)
+1155187: Set Handicap: Brooksby (-1.5) vs Watt (+1.5)
+1155188: Set Handicap: Marozsan (-1.5) vs Monfils (+1.5)
+1155189: Set Handicap: Perricard (-1.5) vs Agut (+1.5)
+1155190: Set Handicap: Royer (-1.5) vs Comesana (+1.5)
+1155191: Set Handicap: Michelsen (-1.5) vs Navone (+1.5)
+1155192: Set Handicap: Tabilo (-1.5) vs Carabelli (+1.5)
+1155193: Set Handicap: Giron (-1.5) vs Muller (+1.5)
+1155199: XRP Up or Down - January 11, 3:55PM-4:00PM ET
+1155200: Bitcoin Up or Down - January 11, 3:55PM-4:00PM ET
+1155201: Solana Up or Down - January 11, 3:55PM-4:00PM ET
+1155202: Ethereum Up or Down - January 11, 3:55PM-4:00PM ET
+1155203: Solana Up or Down - January 11, 4:00PM-4:15PM ET
+1155204: Bitcoin Up or Down - January 11, 4:00PM-4:15PM ET
+1155205: Ethereum Up or Down - January 11, 4:00PM-4:15PM ET
+1155206: XRP Up or Down - January 11, 4:00PM-4:15PM ET
+1155207: Bitcoin Up or Down - January 11, 4:00PM-8:00PM ET
+1155208: Bitcoin Up or Down - January 11, 4:00PM-4:05PM ET
+1155209: Ethereum Up or Down - January 11, 4:00PM-4:05PM ET
+1155210: XRP Up or Down - January 11, 4:00PM-8:00PM ET
+1155211: Solana Up or Down - January 11, 4:00PM-8:00PM ET
+1155212: XRP Up or Down - January 11, 4:00PM-4:05PM ET
+1155213: Solana Up or Down - January 11, 4:00PM-4:05PM ET
+1155214: Ethereum Up or Down - January 11, 4:00PM-8:00PM ET
+1155215: Spread: Knicks (-4.5)
+1155216: Knicks vs. Trail Blazers: O/U 231.5
+1155217: Spread: Suns (-13.5)
+1155218: Spread: Warriors (-7.5)
+1155219: Hawks vs. Warriors: O/U 236.5
+1155220: Spread: Warriors (-6.5)
+1155221: Hawks vs. Warriors: O/U 235.5
+1155222: Bitcoin Up or Down - January 11, 4:05PM-4:10PM ET
+1155223: Solana Up or Down - January 11, 4:05PM-4:10PM ET
+1155224: XRP Up or Down - January 11, 4:05PM-4:10PM ET
+1155225: Ethereum Up or Down - January 11, 4:05PM-4:10PM ET
+1155226: XRP Up or Down - January 11, 4:15PM-4:30PM ET
+1155227: Solana Up or Down - January 11, 4:10PM-4:15PM ET
+1155228: Bitcoin Up or Down - January 11, 4:10PM-4:15PM ET
+1155229: Ethereum Up or Down - January 11, 4:15PM-4:30PM ET
+1155230: Solana Up or Down - January 11, 4:15PM-4:30PM ET
+1155231: Bitcoin Up or Down - January 11, 4:15PM-4:30PM ET
+1155232: XRP Up or Down - January 11, 4:10PM-4:15PM ET
+1155233: Ethereum Up or Down - January 11, 4:10PM-4:15PM ET
+1155401: Solana Up or Down - January 11, 4:15PM-4:20PM ET
+1155405: Bitcoin Up or Down - January 11, 4:15PM-4:20PM ET
+1155406: Ethereum Up or Down - January 11, 4:15PM-4:20PM ET
+1155407: XRP Up or Down - January 11, 4:15PM-4:20PM ET
+1155422: Bitcoin Up or Down - January 11, 4:20PM-4:25PM ET
+1155423: Solana Up or Down - January 11, 4:20PM-4:25PM ET
+1155424: XRP Up or Down - January 11, 4:20PM-4:25PM ET
+1155425: Ethereum Up or Down - January 11, 4:20PM-4:25PM ET
+1155430: Map Handicap: VOCA (-1.5)
+1155431: SkinRave to win 1 maps?
+1155432: SkinRave to win 2 maps?
+1155433: Voca to win 1 maps?
+1155434: Voca to win 2 maps?
+1155435: Will Auckland FC win on 2026-02-06?
+1155436: Will Auckland FC vs. Sydney FC end in a draw?
+1155437: Will Sydney FC win on 2026-02-06?
+1155438: Will Brisbane Roar FC win on 2026-02-07?
+1155439: Will Brisbane Roar FC vs. Central Coast Mariners FC end in a draw?
+1155440: Will Central Coast Mariners FC win on 2026-02-07?
+1155441: Will Western Sydney Wanderers FC win on 2026-02-07?
+1155442: Will Western Sydney Wanderers FC vs. Melbourne City FC end in a draw?
+1155443: Will Melbourne City FC win on 2026-02-07?
+1155444: Ethereum Up or Down - January 11, 4:30PM-4:45PM ET
+1155445: Bitcoin Up or Down - January 11, 4:30PM-4:45PM ET
+1155446: Solana Up or Down - January 11, 4:30PM-4:45PM ET
+1155447: Solana Up or Down - January 11, 4:25PM-4:30PM ET
+1155448: XRP Up or Down - January 11, 4:25PM-4:30PM ET
+1155449: XRP Up or Down - January 11, 4:30PM-4:45PM ET
+1155450: Bitcoin Up or Down - January 11, 4:25PM-4:30PM ET
+1155451: Ethereum Up or Down - January 11, 4:25PM-4:30PM ET
+1155452: Ethereum Up or Down - January 11, 4:30PM-4:35PM ET
+1155453: Bitcoin Up or Down - January 11, 4:30PM-4:35PM ET
+1155454: XRP Up or Down - January 11, 4:30PM-4:35PM ET
+1155455: Solana Up or Down - January 11, 4:30PM-4:35PM ET
+1155456: Bitcoin Up or Down - January 11, 4:35PM-4:40PM ET
+1155457: Ethereum Up or Down - January 11, 4:35PM-4:40PM ET
+1155458: Solana Up or Down - January 11, 4:35PM-4:40PM ET
+1155459: XRP Up or Down - January 11, 4:35PM-4:40PM ET
+1155460: Bitcoin Up or Down - January 11, 4:40PM-4:45PM ET
+1155461: Ethereum Up or Down - January 11, 4:40PM-4:45PM ET
+1155462: Ethereum Up or Down - January 11, 4:45PM-5:00PM ET
+1155463: XRP Up or Down - January 11, 4:40PM-4:45PM ET
+1155464: XRP Up or Down - January 11, 4:45PM-5:00PM ET
+1155465: Solana Up or Down - January 11, 4:40PM-4:45PM ET
+1155466: Bitcoin Up or Down - January 11, 4:45PM-5:00PM ET
+1155467: Solana Up or Down - January 11, 4:45PM-5:00PM ET
+1155468: XRP Up or Down - January 11, 4:45PM-4:50PM ET
+1155469: Bitcoin Up or Down - January 11, 4:45PM-4:50PM ET

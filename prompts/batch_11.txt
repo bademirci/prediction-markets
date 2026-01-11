@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+690202: Will the Fed’s upper bound reach 4.25% or higher before 2027?
+690203: Will the Fed’s lower bound reach 2.0% or lower before 2027?
+690204: Will the Fed’s lower bound reach 1.0% or lower before 2027?
+690205: Will the Fed’s lower bound reach 1.25% or lower before 2027?
+690206: Will the Fed’s lower bound reach 1.5% or lower before 2027?
+690207: Will the Fed’s lower bound reach 1.75% or lower before 2027?
+690208: Will the Fed’s lower bound reach 0.75% or lower before 2027?
+690209: Will the Fed’s lower bound reach 0.5% or lower before 2027?
+690210: Will the Fed’s lower bound reach 0.25% or lower before 2027?
+690211: Will the Fed’s lower bound reach 0% or lower before 2027?
+690212: Will the Fed’s lower bound reach 2.25% or lower before 2027?
+690213: U.S. Congress member out over Epstein files by April 30?
+690214: Will the Fed’s lower bound reach 2.5% or lower before 2027?
+690215: Will the Fed’s lower bound reach 2.75% or lower before 2027?
+690220: Will the Fed’s lower bound reach 3.0% or lower before 2027?
+690221: Will the Fed’s lower bound reach 3.25% or lower before 2027?
+690236: Will Trump end Department of Education before 2027?
+690590: Hyperbeat FDV above $50M one day after launch?
+690591: Hyperbeat FDV above $100M one day after launch?
+690592: Hyperbeat FDV above $200M one day after launch?
+690593: Hyperbeat FDV above $300M one day after launch?
+690594: Hyperbeat FDV above $400M one day after launch?
+690612: Will Extended launch a token by March 31 2026?
+690613: Will Extended launch a token by June 30 2026?
+690614: Will Extended launch a token by September 30 2026?
+690615: Will Extended launch a token by December 31 2026?
+690622: USD.AI FDV above $300M one day after launch?
+690623: USD.AI FDV above $500M one day after launch?
+690624: USD.AI FDV above $800M one day after launch?
+690625: USD.AI FDV above $1B one day after launch?
+690626: USD.AI FDV above $2B one day after launch?
+690627: USD.AI FDV above $3B one day after launch?
+690631: Will Ostium launch a token by December 31, 2026?
+690651: Will Felix Protocol launch a token by December 31, 2026?
+690660: Will prjx launch a token by December 31, 2026?
+690672: Will Arc launch a token by March 31 2026?
+690673: Will Arc launch a token by June 30 2026?
+690674: Will Arc launch a token by September 30 2026?
+690675: Will Arc launch a token by December 31 2026?
+690677: Ranger FDV above $15M one day after launch?
+690678: Ranger FDV above $20M one day after launch?
+690679: Ranger FDV above $30M one day after launch?
+690680: Ranger FDV above $40M one day after launch?
+690681: Ranger FDV above $50M one day after launch?
+690682: Ranger FDV above $60M one day after launch?
+690683: Will Variational launch a token by December 31, 2026?
+690689: Will Pacifica launch a token by March 31 2026?
+690690: Will Pacifica launch a token by June 30 2026?
+690691: Will Pacifica launch a token by September 30 2026?
+690692: Will Pacifica launch a token by December 31 2026?
+690693: Will Base launch a token by December 31, 2026?
+690694: Zama FDV above $800M one day after launch?
+690695: Zama FDV above $1B one day after launch?
+690696: Zama FDV above $2B one day after launch?
+690697: Zama FDV above $3B one day after launch?
+690698: Zama FDV above $4B one day after launch?
+690699: Sentient FDV above $200M one day after launch?
+690700: Sentient FDV above $400M one day after launch?
+690701: Sentient FDV above $600M one day after launch?
+690702: Sentient FDV above $800M one day after launch?
+690703: Sentient FDV above $1B one day after launch?
+690704: Sentient FDV above $2B one day after launch?
+691336: AI Industry Downturn by March 31, 2026?
+691340: AI Industry Downturn by December 31, 2026?
+691445: Louisiana-Monroe Warhawks vs. Clemson Tigers (W)
+691547: Kraken IPO by December 31, 2026?
+691548: Kraken IPO closing market cap above $16B?
+691549: Kraken IPO closing market cap above $18B?
+691550: Kraken IPO closing market cap above $20B?
+691551: Kraken IPO closing market cap above $22B?
+691552: Kraken IPO closing market cap above $24B?
+691553: Kraken IPO closing market cap above $26B?
+691554: Kraken IPO closing market cap above $28B?
+691634: Will Trump pardon Stefan Brodie before 2027?
+691635: Will Trump pardon Donald Brodie before 2027?
+691963: Ansem mindshare all time high by March 31?
+691964: CBB mindshare all time high by March 31?
+691965: CZ mindshare all time high by March 31?
+691966: Cobie mindshare all time high by March 31?
+691967: Bonk Guy mindshare all time high by March 31?
+691968: threadguy mindshare all time high by March 31?
+691969: Arthur_0x mindshare all time high by March 31?
+691970: Sisyphus mindshare all time high by March 31?
+691980: Will Jack Doherty be sentenced to no prison time?
+691981: Will Jack Doherty be sentenced to less than 2 years in prison?
+691982: Will Jack Doherty be sentenced to 2 to 5 years in prison?
+691983: Will Jack Doherty be sentenced to at least 5 years in prison?
+692165: Will Google Gemini 3 score at least 45% on Humanity’s Last Exam by January 31?
+692177: Will UK GDP growth in Q4 2025 be negative?
+692178: Will UK GDP growth in Q4 2025 be between 0% and 0.5%?
+692179: Will UK GDP growth in Q4 2025 be between 0.5% and 1.0%?
+692180: Will UK GDP growth in Q4 2025 be between 1.0% and 1.5%?
+692181: Will UK GDP growth in Q4 2025 be between 1.5% and 2.0%?
+692182: Will UK GDP growth in Q4 2025 be between 2.0% and 2.5%?
+692183: Will UK GDP growth in Q4 2025 be greater than 2.5%?
+692201: Will Eurozone GDP growth in Q4 2025 be negative?
+692202: Will Eurozone GDP growth in Q4 2025 be between 0.0 and 0.5%?
+692203: Will Eurozone GDP growth in Q4 2025 be between 0.5 and 1.0%?
+692204: Will Eurozone GDP growth in Q4 2025 be between 1.0 and 1.5%?
+692205: Will Eurozone GDP growth in Q4 2025 be between 1.5 and 2.0%?
+692206: Will Eurozone GDP growth in Q4 2025 be between 2.0 and 2.5%?
+692207: Will Eurozone GDP growth in Q4 2025 be above 2.5%?
+692250: MicroStrategy sells any Bitcoin by March 31, 2026?
+692251: Will China GDP growth in Q4 2025 be less than 2.5%?
+692252: Will China GDP growth in Q4 2025 be between 2.5% and 3.0%?
+692253: Will China GDP growth in Q4 2025 be between 3.0% and 3.5%?
+692254: Will China GDP growth in Q4 2025 be between 3.5% and 4.0%?
+692255: Will China GDP growth in Q4 2025 be between 4.0% and 4.5%?
+692256: Will China GDP growth in Q4 2025 be between 4.5% and 5.0%?
+692257: Will China GDP growth in Q4 2025 be over 5.0%?
+692258: MicroStrategy sells any Bitcoin by June 30, 2026?
+692259: Will Gavin Newsom announce a Presidential run before 2027?
+692260: Will Alexandria Ocasio-Cortez announce a Presidential run before 2027?
+692261: Will Pete Buttigieg announce a Presidential run before 2027?
+692262: Will Josh Shapiro announce a Presidential run before 2027?
+692263: Will Wes Moore announce a Presidential run before 2027?
+692264: Will Stephen A. Smith announce a Presidential run before 2027?
+692265: Will Kamala Harris announce a Presidential run before 2027?
+692266: Will Gretchen Whitmer announce a Presidential run before 2027?
+692267: Will Andy Beshear announce a Presidential run before 2027?
+692268: Will Jon Ossoff announce a Presidential run before 2027?
+692269: Will Mark Cuban announce a Presidential run before 2027?
+692270: Will J.B. Pritzker announce a Presidential run before 2027?
+692271: Will Raphael Warnock announce a Presidential run before 2027?
+692272: Will Cory Booker announce a Presidential run before 2027?
+692273: Will Tim Walz announce a Presidential run before 2027?
+692274: Will Michelle Obama announce a Presidential run before 2027?
+692275: Will Mark Kelly announce a Presidential run before 2027?
+692276: Will Rahm Emanuel announce a Presidential run before 2027?
+692277: Will Gina Raimondo announce a Presidential run before 2027?
+692278: Will Zohran Mamdani announce a Presidential run before 2027?
+692279: Will Roy Cooper announce a Presidential run before 2027?
+692280: Will John Fetterman announce a Presidential run before 2027?
+692281: Will Jared Polis announce a Presidential run before 2027?
+692282: Will Jon Stewart announce a Presidential run before 2027?
+692283: Will Barack Obama announce a Presidential run before 2027?
+692284: Will Hillary Clinton announce a Presidential run before 2027?
+692285: Will Liz Cheney announce a Presidential run before 2027?
+692286: Will Bernie Sanders announce a Presidential run before 2027?
+692287: Will Phil Murphy announce a Presidential run before 2027?
+692288: Will LeBron James announce a Presidential run before 2027?
+692289: Will Hunter Biden announce a Presidential run before 2027?
+692290: Will George Clooney announce a Presidential run before 2027?
+692291: Will Chelsea Clinton announce a Presidential run before 2027?
+692292: Will MrBeast announce a Presidential run before 2027?
+692293: Will Dwayne 'The Rock' Johnson announce a Presidential run before 2027?
+692294: Will Oprah Winfrey announce a Presidential run before 2027?
+692295: Will Andrew Yang announce a Presidential run before 2027?
+692296: Will Beto O’Rourke announce a Presidential run before 2027?
+692297: Will Kim Kardashian announce a Presidential run before 2027?
+692298: Will Donald Trump announce a presidential run before 2027?
+692299: Will J.D. Vance announce a presidential run before 2027?
+692300: Will Marco Rubio announce a presidential run before 2027?
+692301: Will Tulsi Gabbard announce a presidential run before 2027?
+692302: Will Glenn Youngkin announce a presidential run before 2027?
+692303: Will Donald Trump Jr. announce a presidential run before 2027?
+692304: Will Ron DeSantis announce a presidential run before 2027?
+692305: Will Nikki Haley announce a presidential run before 2027?
+692306: Will Vivek Ramaswamy announce a presidential run before 2027?
+692307: Will Sarah Huckabee Sanders announce a presidential run before 2027?
+692308: Will Greg Abbott announce a presidential run before 2027?
+692309: Will Brian Kemp announce a presidential run before 2027?
+692310: Will Byron Donalds announce a presidential run before 2027?
+692311: Will Elise Stefanik announce a presidential run before 2027?
+692312: Will Josh Hawley announce a presidential run before 2027?
+692313: Will Ted Cruz announce a presidential run before 2027?
+692314: Will Elon Musk announce a presidential run before 2027?
+692315: Will Matt Gaetz announce a presidential run before 2027?
+692316: Will Katie Britt announce a presidential run before 2027?
+692317: Will John Thune announce a presidential run before 2027?
+692318: Will Kristi Noem announce a presidential run before 2027?
+692319: Will Mike Pence announce a presidential run before 2027?
+692320: Will Tucker Carlson announce a presidential run before 2027?
+692321: Will Robert F. Kennedy Jr. announce a presidential run before 2027?
+692322: Will Ivanka Trump announce a presidential run before 2027?
+692323: Will Tom Brady announce a presidential run before 2027?
+692324: Will Rand Paul announce a presidential run before 2027?
+692325: Will Steve Bannon announce a presidential run before 2027?
+692326: Will Erika Kirk announce a presidential run before 2027?
+692327: Will Marjorie Taylor Greene announce a presidential run before 2027?
+692368: Tom Lee mindshare all time high by March 31?
+692380: Flood mindshare all time high by March 31?
+692390: Proph3T mindshare all time high by March 31?
+692401: mert mindshare all time high by March 31?
+692582: Will Ubisoft announce bankruptcy by June 30?
+692944: Will Ohio Revoke Any OSB License Over Event-Contract Activity by March 31?
+693227: Tim Cook out as Apple CEO by March 31?
+693288: Will CDU win the most seats in the 2026 Baden-Württemberg parliamentary elections?
+693289: Will AfD win the most seats in the 2026 Baden-Württemberg parliamentary elections?
+693290: Will SPD win the most seats in the 2026 Baden-Württemberg parliamentary elections?
+693291: Will The Greens win the most seats in the 2026 Baden-Württemberg parliamentary elections?
+693292: Will The Left win the most seats in the 2026 Baden-Württemberg parliamentary elections?
+693293: Will FDP win the most seats in the 2026 Baden-Württemberg parliamentary elections?
+693294: Will BSW win the most seats in the 2026 Baden-Württemberg parliamentary elections?
+693427: New Half-Life game by March 31?
+693428: New Half-Life game by June 30?
+693482: Will North Korea recognize Israel by June 30?
+693483: Will Cuba recognize Israel by June 30
+693484: Will Saudi Arabia recognize Israel by June 30?
+693485: Will Lebanon recognize Israel by June 30?
+693486: Will Afghanistan recognize Israel by June 30?
+693487: Will Iraq recognize Israel by June 30?
+693488: Will Pakistan recognize Israel by June 30?
+693489: Will Syria recognize Israel by June 30?
+693491: Will Venezuela recognize Israel by June 30?
+693493: Will Tunisia recognize Israel by June 30?
+693494: Will Kuwait recognize Israel by June 30?
+693495: Will Qatar recognize Israel by June 30?
+693496: Will Indonesia recognize Israel by June 30?
+693502: Will Malaysia recognize Israel by June 30?
+693506: Will Bangladesh recognize Israel by June 30?
+693519: Ukraine agrees to limit size of armed forces before 2027?
+693563: Will Polymarket mindshare hit 80%?
+693573: Will BRION win the LCK 2026 season playoffs?
+693574: Will Dplus win the LCK 2026 season playoffs?
+693575: Will DRX win the LCK 2026 season playoffs?
+693576: Will FEARX win the LCK 2026 season playoffs?
+693577: Will Freecs win the LCK 2026 season playoffs?
+693578: Will Gen.G Esports win the LCK 2026 season playoffs?
+693579: Will Hanwha Life Esports win the LCK 2026 season playoffs?
+693580: Will KT Rolster win the LCK 2026 season playoffs?
+693581: Will Nongshim RedForce win the LCK 2026 season playoffs?
+693582: Will T1 win the LCK 2026 season playoffs?
+693647: Will Polymarket mindshare hit 85%?
+693673: Will Anyone's Legend win the LPL 2026 season?
+693674: Will Bilibili Gaming win the LPL 2026 season?
+693675: Will EDward Gaming win the LPL 2026 season?
+693676: Will Invictus Gaming win the LPL 2026 season?
+693677: Will JD Gaming win the LPL 2026 season?
+693678: Will LGD Gaming win the LPL 2026 season?
+693679: Will LNG Esports win the LPL 2026 season?
+693680: Will Ninjas in Pyjamas win the LPL 2026 season?
+693681: Will Oh My God win the LPL 2026 season?
+693682: Will Royal Never Give Up win the LPL 2026 season?
+693683: Will Team WE win the LPL 2026 season?
+693684: Will ThunderTalk Gaming win the LPL 2026 season?
+693685: Will Top Esports win the LPL 2026 season?
+693686: Will Ultra Prime win the LPL 2026 season?
+693687: Will Weibo Gaming win the LPL 2026 season?
+693720: Will Polymarket mindshare hit 90%?
+693776: Will Aristotle self-certify sports event contracts by March 31, 2026?
+693777: Will Railbird self-certify sports event contracts by March 31, 2026?
+693778: Will ForecastEx self-certify sports event contracts by March 31, 2026?
+693780: Will Cboe Futures Exchange self-certify sports event contracts by March 31, 2026?
+693781: Will Intercontinental Exchange self-certify sports event contracts by March 31, 2026?
+693782: Will the Small Exchange self-certify sports event contracts by March 31, 2026?
+693783: Will LedgerX self-certify sports event contracts by March 31, 2026?
+693835: Will the maximum Arctic sea ice extent this winter be <14m square kilometers?
+693836: Will the maximum Arctic sea ice extent this winter be between 14m & 14.2m square kilometers?
+693837: Will the maximum Arctic sea ice extent this winter be between 14.2m & 14.4m square kilometers?
+693838: Will the maximum Arctic sea ice extent this winter be between 14.4m & 14.6m square kilometers?
+693839: Will the maximum Arctic sea ice extent this winter be between 14.6m & 14.8m square kilometers?
+693840: Will the maximum Arctic sea ice extent this winter be between 14.8m & 15m square kilometers?
+693841: Will the maximum Arctic sea ice extent this winter be at least 15m square kilometers?
+693869: Will the minimum Arctic sea ice extent this summer be less than 4m square kilometers?
+693870: Will the minimum Arctic sea ice extent this summer be between 4.0m & 4.2m square kilometers?
+693871: Will the minimum Arctic sea ice extent this summer be between 4.2m & 4.4m square kilometers?
+693872: Will the minimum Arctic sea ice extent this summer be between 4.4m & 4.6m square kilometers?
+693873: Will the minimum Arctic sea ice extent this summer be between 4.6m & 4.8m square kilometers?
+693874: Will the minimum Arctic sea ice extent this summer be between 4.8m & 5m square kilometers?
+693875: Will the minimum Arctic sea ice extent this summer be at least 5m square kilometers?
+693940: Will MicroStrategy announce bankruptcy before 2027?
+693941: Will Beyond Meat announce bankruptcy before 2027?
+693943: Will Workhorse announce bankruptcy before 2027?
+693944: Will C3.ai announce bankruptcy before 2027?
+693967: Will Perplexity AI announce bankruptcy before 2027?
+694027: Russia x Ukraine Peace Parlay
+694040: Somalians who defrauded government to fund terrorists deported?
+694160: Will Axiom launch a token by December 31, 2026?
+694865: Will OpenAI announce bankruptcy before 2027?
+694866: Will JetBlue Airways announce bankruptcy before 2027?
+694867: Will Xerox announce bankruptcy before 2027?
+694868: Will Lucid announce bankruptcy before 2027?
+694871: Will Rivian announce bankruptcy before 2027?
+694874: Will SoundHound AI announce bankruptcy before 2027?
+694875: Will Anthropic announce bankruptcy before 2027?-kuQe
+694876: Will Lovable announce bankruptcy before 2027?
+694932: Will Snapchat be acquired before 2027?
+694935: Will Zoom Video Communications be acquired before 2027?
+694936: Will Nebius Group be acquired before 2027?
+694937: Will BP be acquired before 2027?
+694938: Will Viking Therapeutics be acquired before 2027?
+694939: Will Ubisoft be acquired before 2027?
+694940: Will GitLab be acquired before 2027?
+694941: Will Pizza Hut be acquired before 2027?
+694982: Will monthly inflation be lower than 1.5% in December?
+694983: Will monthly inflation be between 1.5% and 1.7% in December?
+694984: Will monthly inflation be between 1.8% and 2.0% in December?
+694985: Will monthly inflation be between 2.1% and 2.3% in December?
+694986: Will monthly inflation be between 2.4% and 2.6% in December?
+694987: Will monthly inflation be between 2.7% and 2.9% in December?
+694988: Will monthly inflation be 3.0% or higher in December?
+695018: Will Candace Owens announce a presidential run before 2027?
+695082: Will Micah Lasher be the democratic nominee for NY-12?
+695083: Will Jack Schlossberg be the democratic nominee for NY-12?
+695084: Will Cameron Kasky be the democratic nominee for NY-12?
+695085: Will Alex Bores be the democratic nominee for NY-12?
+695086: Will Lina Khan be the democratic nominee for NY-12?
+695087: Will Erik Bottcher be the democratic nominee for NY-12?
+695088: Will Julie Menin be the democratic nominee for NY-12?
+695089: Will Carolyn Maloney be the democratic nominee for NY-12?
+695090: Will Chelsea Clinton be the democratic nominee for NY-12?
+695091: Will Andrew Cuomo be the democratic nominee for NY-12?
+695092: Will Liam Elkind be the democratic nominee for NY-12?
+695093: Will Brad Hoylman-Sigal be the democratic nominee for NY-12?
+695094: Will Scott Stringer be the democratic nominee for NY-12?
+695095: Will Keith Powers be the democratic nominee for NY-12?
+695096: Will Liz Krueger be the democratic nominee for NY-12?
+695097: Will Gale Brewer be the democratic nominee for NY-12?
+695098: Will Cynthia Nixon be the democratic nominee for NY-12?
+695099: Will Brad Lander be the democratic nominee for NY-12?
+695100: Will George Conway be the democratic nominee for NY-12?
+695208: New COVID variant of concern before 2027?
+695455: Will Mexico GDP growth in Q4 2025 be less than 0.0%?
+695456: Will Mexico GDP growth in Q4 2025 be between 0.0% and 0.5%?
+695457: Will Mexico GDP growth in Q4 2025 be between 0.5% and 1.0%?
+695458: Will Mexico GDP growth in Q4 2025 be between 1.0% and 1.5%?
+695459: Will Mexico GDP growth in Q4 2025 be between 1.5% and 2.0%?
+695460: Will Mexico GDP growth in Q4 2025 be between 2.0% and 2.5%?
+695461: Will Mexico GDP growth in Q4 2025 be over 2.5%?
+695557: BLS delays another CPI release before 2027?
+695591: FIFA World Cup 2026 Qualification Longshots Parlay
+695596: Will Damac Saudi Club win on 2025-12-19?
+695597: Will Damac Saudi Club vs. Al Ahli Saudi Club end in a draw?
+695598: Will Al Ahli Saudi Club win on 2025-12-19?
+695599: Will Al Qadisiyah Saudi Club win on 2025-12-19?
+695600: Will Al Qadisiyah Saudi Club vs. Al Ettifaq Saudi Club end in a draw?
+695601: Will Al Ettifaq Saudi Club win on 2025-12-19?
+695602: Will Al Taawoun Saudi Club win on 2025-12-19?
+695603: Will Al Taawoun Saudi Club vs. Al Hilal Saudi Club end in a draw?
+695604: Will Al Hilal Saudi Club win on 2025-12-19?
+695629: Google Gemini Parlay
+695664: Will Tim Vieira qualify for the second round of the 2026 Portugal presidential election?
+695665: Will Joana Amaral Dias qualify for the second round of the 2026 Portugal presidential election?
+695666: Will André Pestana qualify for the second round of the 2026 Portugal presidential election?
+695667: Will André Ventura qualify for the second round of the 2026 Portugal presidential election?
+695668: Will Orlando Cruz qualify for the second round of the 2026 Portugal presidential election?
+695669: Will Aristides Teixeira qualify for the second round of the 2026 Portugal presidential election?
+695670: Will Manuela Magno qualify for the second round of the 2026 Portugal presidential election?
+695671: Will Luís Marques Mendes qualify for the second round of the 2026 Portugal presidential election?
+695672: Will Pedro Tinoco de Faria qualify for the second round of the 2026 Portugal presidential election?
+695673: Will Henrique Gouveia e Melo qualify for the second round of the 2026 Portugal presidential election?
+695674: Will António José Seguro qualify for the second round of the 2026 Portugal presidential election?
+695675: Will Vitorino Silva qualify for the second round of the 2026 Portugal presidential election?
+695676: Will Ângela Maryah qualify for the second round of the 2026 Portugal presidential election?
+695677: Will António Filipe qualify for the second round of the 2026 Portugal presidential election?
+695678: Will Raul Perestrello qualify for the second round of the 2026 Portugal presidential election?
+695679: Will José Cardoso qualify for the second round of the 2026 Portugal presidential election?
+695680: Will Pedro Passos Coelho qualify for the second round of the 2026 Portugal presidential election?
+695681: Will Jorge Pinto qualify for the second round of the 2026 Portugal presidential election?
+696293: Tush Push banned for 2026 NFL Season?
+696997: Holy Cross Crusaders vs. Purdue Fort Wayne Mastodons
+697015: Houston Cougars vs. Arkansas State Red Wolves
+697018: Clemson Tigers vs. Western Carolina Catamounts
+697020: Michigan State Spartans vs. Temple Owls
+697453: Will Al Shabab Saudi Club win on 2025-12-20?
+697454: Will Al Shabab Saudi Club vs. Al Riyadh Saudi Club end in a draw?
+697455: Will Al Riyadh Saudi Club win on 2025-12-20?
+697456: Will Al Fateh Saudi Club win on 2025-12-20?
+697457: Will Al Fateh Saudi Club vs. Al Okhdood SC end in a draw?
+697458: Will Al Okhdood SC win on 2025-12-20?
+697459: Will Al Hazem SC win on 2025-12-20?
+697460: Will Al Hazem SC vs. Al Ittihad Saudi Club end in a draw?
+697461: Will Al Ittihad Saudi Club win on 2025-12-20?
+697523: Will Unit launch a token by December 31, 2026?
+698396: Massachusetts-Lowell River Hawks vs. LIU Sharks
+698435: Bellarmine Knights vs. Northern Illinois Huskies
+698482: Eureka Red Devils vs. Indiana State Sycamores (W)
+699218: Will Al Fayha Saudi Club win on 2025-12-21?
+699219: Will Al Fayha Saudi Club vs. NEOM SC end in a draw?
+699220: Will NEOM SC win on 2025-12-21?
+699221: Will Al Khaleej Saudi Club win on 2025-12-21?
+699222: Will Al Khaleej Saudi Club vs. Al Kholood Saudi Club end in a draw?
+699223: Will Al Kholood Saudi Club win on 2025-12-21?
+699224: Will Al Najmah Saudi Club win on 2025-12-21?
+699225: Will Al Najmah Saudi Club vs. Al Nassr Saudi Club end in a draw?
+699226: Will Al Nassr Saudi Club win on 2025-12-21?
+700018: Will Ventuals launch a token by March 31 2026?
+700019: Will Ventuals launch a token by June 30 2026?
+700020: Will Ventuals launch a token by September 30 2026?
+700021: Will Ventuals launch a token by December 31 2026?
+700386: Will Carvana announce bankruptcy before 2027?
+700395: Will Lovable be acquired before 2027?
+700396: Will Perplexity AI be acquired before 2027?
+700397: Will Anthropic be acquired before 2027?
+700398: Will OpenAI be acquired before 2027?
+700425: Will Han Duck-soo be sentenced to prison before 2027?
+700645: Will Ashley B. Moody be the Republican nominee for Senate in Florida?
+700646: Will Michaelangelo Hamilton be the Republican nominee for Senate in Florida?
+700647: Will Jake Lang be the Republican nominee for Senate in Florida?
+700648: Will A.C. Toulme be the Republican nominee for Senate in Florida?
+700693: Han Duck-soo in jail by January 31?
+700763: Will Cole Bettles receive the most votes in the CA-11 primary?
+700764: Will Saikat Chakrabarti receive the most votes in the CA-11 primary?
+700765: Will Darren Helton receive the most votes in the CA-11 primary?
+700766: Will Scott Wiener receive the most votes in the CA-11 primary?
+700767: Will Jingchao Xiong receive the most votes in the CA-11 primary?
+700768: Will David Ganezer receive the most votes in the CA-11 primary?
+700769: Will Connie Chan receive the most votes in the CA-11 primary?
+700785: Another Canada election called by June 30?
+700881: Will Israel annex any territory by June 30?
+701008: Will Leonard Gates win the PDC World Darts Championship?
+701290: Will China invade Taiwan by March 31, 2026?
+701299: Will The Clearing Company self-certify sports event contracts by March 31, 2026?
+701486: Will Bitcoin reach $200,000 by December 31, 2026?
+701487: Will Bitcoin reach $190,000 by December 31, 2026?
+701488: Will Bitcoin reach $180,000 by December 31, 2026?
+701489: Will Bitcoin reach $170,000 by December 31, 2026?
+701490: Will Bitcoin reach $160,000 by December 31, 2026?
+701491: Will Bitcoin reach $150,000 by December 31, 2026?
+701492: Will Bitcoin reach $140,000 by December 31, 2026?
+701493: Will Bitcoin reach $130,000 by December 31, 2026?
+701494: Will Bitcoin reach $120,000 by December 31, 2026?
+701495: Will Bitcoin reach $110,000 by December 31, 2026?
+701496: Will Bitcoin reach $100,000 by December 31, 2026?
+701499: Will Bitcoin dip to $75,000 by December 31, 2026?
+701500: Will Bitcoin dip to $65,000 by December 31, 2026?
+701501: Will Bitcoin dip to $55,000 by December 31, 2026?
+701502: Will Bitcoin dip to $45,000 by December 31, 2026?
+701503: Will Bitcoin dip to $35,000 by December 31, 2026?
+701504: Will Bitcoin dip to $25,000 by December 31, 2026?
+701539: Will Ethereum reach $10,000 by December 31, 2026?
+701540: Will Ethereum reach $8,000 by December 31, 2026?
+701541: Will Ethereum reach $7,500 by December 31, 2026?
+701542: Will Ethereum reach $7,000 by December 31, 2026?
+701543: Will Ethereum reach $6,500 by December 31, 2026?
+701544: Will Ethereum reach $6,000 by December 31, 2026?
+701545: Will Ethereum reach $5,500 by December 31, 2026?
+701546: Will Ethereum reach $5,000 by December 31, 2026?
+701547: Will Ethereum reach $4,500 by December 31, 2026?
+701548: Will Ethereum reach $4,000 by December 31, 2026?
+701549: Will Ethereum reach $3,500 by December 31, 2026?
+701550: Will Ethereum dip to $2,500 by December 31, 2026?
+701551: Will Ethereum dip to $2,000 by December 31, 2026?
+701552: Will Ethereum dip to $1,500 by December 31, 2026?
+701553: Will Ethereum dip to $1,000 by December 31, 2026?
+701554: Will Ethereum dip to $800 by December 31, 2026?
+701563: Will Solana reach $600 by December 31, 2026?
+701564: Will Solana reach $400 by December 31, 2026?
+701565: Will Solana reach $320 by December 31, 2026?
+701566: Will Solana reach $300 by December 31, 2026?
+701567: Will Solana reach $280 by December 31, 2026?
+701568: Will Solana reach $260 by December 31, 2026?
+701569: Will Solana reach $240 by December 31, 2026?
+701570: Will Solana reach $220 by December 31, 2026?
+701571: Will Solana reach $200 by December 31, 2026?
+701572: Will Solana reach $180 by December 31, 2026?
+701573: Will Solana reach $160 by December 31, 2026?
+701576: Will Solana dip to $100 by December 31, 2026?
+701577: Will Solana dip to $80 by December 31, 2026?
+701578: Will Solana dip to $60 by December 31, 2026?
+701579: Will Solana dip to $40 by December 31, 2026?
+701580: Will Solana dip to $20 by December 31, 2026?
+701587: Will XRP reach $5.00 by December 31, 2026?
+701588: Will XRP reach $4.20 by December 31, 2026?
+701589: Will XRP reach $4.00 by December 31, 2026?
+701590: Will XRP reach $3.80 by December 31, 2026?
+701591: Will XRP reach $3.60 by December 31, 2026?
+701592: Will XRP reach $3.40 by December 31, 2026?
+701593: Will XRP reach $3.20 by December 31, 2026?
+701594: Will XRP reach $3.00 by December 31, 2026?
+701595: Will XRP reach $2.80 by December 31, 2026?
+701596: Will XRP reach $2.60 by December 31, 2026?
+701600: Will XRP dip to $1.60 by December 31, 2026?
+701601: Will XRP dip to $1.40 by December 31, 2026?
+701602: Will XRP dip to $1.20 by December 31, 2026?
+701603: Will XRP dip to $1.00 by December 31, 2026?
+701604: Will XRP dip to $0.80 by December 31, 2026?
+701605: Will XRP dip to $0.60 by December 31, 2026?
+701606: Will XRP dip to $0.40 by December 31, 2026?
+701607: Will XRP dip to $0.20 by December 31, 2026?
+701701: Labour leadership election scheduled by March 31?
+701702: Labour leadership election scheduled by June 30?
+701708: Will Dogecoin reach $0.52 by December 31, 2026?
+701709: Will Dogecoin reach $0.48 by December 31, 2026?
+701710: Will Dogecoin reach $0.44 by December 31, 2026?
+701711: Will Dogecoin reach $0.40 by December 31, 2026?
+701712: Will Dogecoin reach $0.36 by December 31, 2026?
+701713: Will Dogecoin reach $0.32 by December 31, 2026?
+701714: Will Dogecoin reach $0.28 by December 31, 2026?
+701715: Will Dogecoin reach $0.24 by December 31, 2026?
+701716: Will Dogecoin reach $0.20 by December 31, 2026?
+701717: Will Dogecoin reach $0.16 by December 31, 2026?
+701719: Will Dogecoin dip to $0.10 by December 31, 2026?
+701720: Will Dogecoin dip to $0.06 by December 31, 2026?
+701721: Will Dogecoin dip to $0.02 by December 31, 2026?
+701726: Will Hyperliquid reach $100 by December 31, 2026?
+701727: Will Hyperliquid reach $80 by December 31, 2026?
+701728: Will Hyperliquid reach $70 by December 31, 2026?
+701729: Will Hyperliquid reach $66 by December 31, 2026?
+701730: Will Hyperliquid reach $62 by December 31, 2026?
+701731: Will Hyperliquid reach $58 by December 31, 2026?
+701732: Will Hyperliquid reach $54 by December 31, 2026?
+701733: Will Hyperliquid reach $50 by December 31, 2026?
+701734: Will Hyperliquid reach $46 by December 31, 2026?
+701735: Will Hyperliquid reach $42 by December 31, 2026?
+701736: Will Hyperliquid reach $38 by December 31, 2026?
+701741: Will Hyperliquid dip to $20 by December 31, 2026?
+701742: Will Hyperliquid dip to $16 by December 31, 2026?
+701743: Will Hyperliquid dip to $12 by December 31, 2026?

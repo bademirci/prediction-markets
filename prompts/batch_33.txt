@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1129968: Will the WNBA and WNBPA sign a new CBA by Jan. 31, 2026?
+1129969: Will the WNBA and WNBPA sign a new CBA by Mar. 31, 2026?
+1129970: Will the WNBA and WNBPA sign a new CBA by June 30, 2026?
+1130012: Will United Russia (ER) gain the most seats in the next Russian parliamentary election?
+1130013: Will the Communist Party of the Russian Federation (KPRF) gain the most seats in the next Russian parliamentary election?
+1130014: Will A Just Russia – For Truth (SRZP) gain the most seats in the next Russian parliamentary election?
+1130015: Will the Liberal Democratic Party of Russia (LDPR) gain the most seats in the next Russian parliamentary election?
+1130016: Will New People (NL) gain the most seats in the next Russian parliamentary election?
+1130017: Will Rodina gain the most seats in the next Russian parliamentary election?
+1130018: Will Civic Platform (GP) gain the most seats in the next Russian parliamentary election?
+1130065: Will Elon Musk rejoin the Trump Administration in 2026?
+1130070: Will Bayer 04 Leverkusen win on 2026-02-03?
+1130071: Will Bayer 04 Leverkusen vs. FC St. Pauli 1910 end in a draw?
+1130072: Will FC St. Pauli 1910 win on 2026-02-03?
+1130201: 30-year mortgage rate below 6% by January 31?
+1130265: Will CA Banfield win on 2026-02-03?
+1130266: Will CA Banfield vs. AA Estudiantes end in a draw?
+1130267: Will AA Estudiantes win on 2026-02-03?
+1130268: Will Instituto AC Córdoba win on 2026-02-03?
+1130269: Will Instituto AC Córdoba vs. CA Lanús end in a draw?
+1130270: Will CA Lanús win on 2026-02-03?
+1130282: Will CS Independiente Rivadavia win on 2026-02-03?
+1130283: Will CS Independiente Rivadavia vs. CA Sarmiento end in a draw?
+1130284: Will CA Sarmiento win on 2026-02-03?
+1130309: Will 'Don't Be Dumb' debut week album sales be less than 75k?
+1130310: Will 'Don't Be Dumb' debut week album sales be between 75k and 100k?
+1130311: Will 'Don't Be Dumb' debut week album sales be between 100k and 125k?
+1130312: Will 'Don't Be Dumb' debut week album sales be between 125k and 150k?
+1130313: Will 'Don't Be Dumb' debut week album sales be between 150k and 175k?
+1130314: Will 'Don't Be Dumb' debut week album sales be between 175k and 200k?
+1130315: Will 'Don't Be Dumb' debut week album sales be at least 200k?
+1130326: Will Olympiakós SFP win on 2026-01-20?
+1130327: Will Olympiakós SFP vs. Bayer 04 Leverkusen end in a draw?
+1130328: Will Bayer 04 Leverkusen win on 2026-01-20?
+1130331: Will Tottenham Hotspur FC win on 2026-01-20?
+1130332: Will Tottenham Hotspur FC vs. BV Borussia 09 Dortmund end in a draw?
+1130333: Will BV Borussia 09 Dortmund win on 2026-01-20?
+1130334: Will Villarreal CF win on 2026-01-20?
+1130335: Will Villarreal CF vs. AFC Ajax end in a draw?
+1130336: Will AFC Ajax win on 2026-01-20?
+1130337: Will Real Madrid CF win on 2026-01-20?
+1130338: Will Real Madrid CF vs. AS Monaco FC end in a draw?
+1130339: Will AS Monaco FC win on 2026-01-20?
+1130340: Will FC Internazionale Milano win on 2026-01-20?
+1130341: Will FC Internazionale Milano vs. Arsenal FC end in a draw?
+1130342: Will Arsenal FC win on 2026-01-20?
+1130343: Will Sporting CP win on 2026-01-20?
+1130344: Will Sporting CP vs. Paris Saint-Germain FC end in a draw?
+1130345: Will Paris Saint-Germain FC win on 2026-01-20?
+1130346: Will FC København win on 2026-01-20?
+1130347: Will FC København vs. SSC Napoli end in a draw?
+1130348: Will SSC Napoli win on 2026-01-20?
+1130349: Will Galatasaray SK win on 2026-01-21?
+1130350: Will Galatasaray SK vs. Club Atlético de Madrid end in a draw?
+1130351: Will Club Atlético de Madrid win on 2026-01-21?
+1130352: Will Qarabağ Ağdam FK win on 2026-01-21?
+1130353: Will Qarabağ Ağdam FK vs. Eintracht Frankfurt end in a draw?
+1130354: Will Eintracht Frankfurt win on 2026-01-21?
+1130382: Spread: Eintracht Frankfurt (-1.5)
+1130383: Qarabağ Ağdam FK vs. Eintracht Frankfurt: O/U 1.5
+1130384: Qarabağ Ağdam FK vs. Eintracht Frankfurt: O/U 2.5
+1130385: Qarabağ Ağdam FK vs. Eintracht Frankfurt: O/U 3.5
+1130386: Qarabağ Ağdam FK vs. Eintracht Frankfurt: O/U 4.5
+1130387: Qarabağ Ağdam FK vs. Eintracht Frankfurt: Both Teams to Score
+1130388: Spread: Club Atlético de Madrid (-1.5)
+1130389: Galatasaray SK vs. Club Atlético de Madrid: O/U 1.5
+1130390: Galatasaray SK vs. Club Atlético de Madrid: O/U 2.5
+1130391: Galatasaray SK vs. Club Atlético de Madrid: O/U 3.5
+1130392: Galatasaray SK vs. Club Atlético de Madrid: O/U 4.5
+1130393: Galatasaray SK vs. Club Atlético de Madrid: Both Teams to Score
+1130394: Spread: SSC Napoli (-1.5)
+1130395: FC København vs. SSC Napoli: O/U 1.5
+1130396: FC København vs. SSC Napoli: O/U 2.5
+1130397: FC København vs. SSC Napoli: O/U 3.5
+1130398: FC København vs. SSC Napoli: O/U 4.5
+1130399: FC København vs. SSC Napoli: Both Teams to Score
+1130400: Spread: Paris Saint-Germain FC (-1.5)
+1130401: Sporting CP vs. Paris Saint-Germain FC: O/U 1.5
+1130402: Sporting CP vs. Paris Saint-Germain FC: O/U 2.5
+1130403: Sporting CP vs. Paris Saint-Germain FC: O/U 3.5
+1130404: Sporting CP vs. Paris Saint-Germain FC: O/U 4.5
+1130405: Sporting CP vs. Paris Saint-Germain FC: Both Teams to Score
+1130406: Spread: Arsenal FC (-1.5)
+1130407: FC Internazionale Milano vs. Arsenal FC: O/U 1.5
+1130408: FC Internazionale Milano vs. Arsenal FC: O/U 2.5
+1130409: FC Internazionale Milano vs. Arsenal FC: O/U 3.5
+1130410: FC Internazionale Milano vs. Arsenal FC: O/U 4.5
+1130411: FC Internazionale Milano vs. Arsenal FC: Both Teams to Score
+1130412: Spread: Real Madrid CF (-1.5)
+1130413: Real Madrid CF vs. AS Monaco FC: O/U 1.5
+1130414: Real Madrid CF vs. AS Monaco FC: O/U 2.5
+1130415: Real Madrid CF vs. AS Monaco FC: O/U 3.5
+1130416: Real Madrid CF vs. AS Monaco FC: O/U 4.5
+1130417: Real Madrid CF vs. AS Monaco FC: Both Teams to Score
+1130418: Spread: Villarreal CF (-1.5)
+1130419: Villarreal CF vs. AFC Ajax: O/U 1.5
+1130420: Villarreal CF vs. AFC Ajax: O/U 2.5
+1130421: Villarreal CF vs. AFC Ajax: O/U 3.5
+1130422: Villarreal CF vs. AFC Ajax: O/U 4.5
+1130423: Villarreal CF vs. AFC Ajax: Both Teams to Score
+1130424: Spread: Tottenham Hotspur FC (-1.5)
+1130425: Tottenham Hotspur FC vs. BV Borussia 09 Dortmund: O/U 1.5
+1130426: Tottenham Hotspur FC vs. BV Borussia 09 Dortmund: O/U 2.5
+1130427: Tottenham Hotspur FC vs. BV Borussia 09 Dortmund: O/U 3.5
+1130428: Tottenham Hotspur FC vs. BV Borussia 09 Dortmund: O/U 4.5
+1130429: Tottenham Hotspur FC vs. BV Borussia 09 Dortmund: Both Teams to Score
+1130430: Spread: Olympiakós SFP (-1.5)
+1130431: Olympiakós SFP vs. Bayer 04 Leverkusen: O/U 1.5
+1130432: Olympiakós SFP vs. Bayer 04 Leverkusen: O/U 2.5
+1130433: Olympiakós SFP vs. Bayer 04 Leverkusen: O/U 3.5
+1130434: Olympiakós SFP vs. Bayer 04 Leverkusen: O/U 4.5
+1130435: Olympiakós SFP vs. Bayer 04 Leverkusen: Both Teams to Score
+1130445: Will Trump admin release any more Epstein related files by January 17?
+1130446: Will Trump admin release any more Epstein related files by January 24?
+1130447: Will Trump admin release any more Epstein related files by January 31?
+1130721: Will Morgan Wallen be the Billboard #1 top artist in 2026?
+1130722: Will Kendrick Lamar be the Billboard #1 top artist in 2026?
+1130723: Will Taylor Swift be the Billboard #1 top artist in 2026?
+1130724: Will Sabrina Carpenter be the Billboard #1 top artist in 2026?
+1130725: Will SZA be the Billboard #1 top artist in 2026?
+1130726: Will Drake be the Billboard #1 top artist in 2026?
+1130727: Will Bad Bunny be the Billboard #1 top artist in 2026?
+1130728: Will Billie Eilish be the Billboard #1 top artist in 2026?
+1130729: Will Tyler, The Creator be the Billboard #1 top artist in 2026?
+1130730: Will The Weeknd be the Billboard #1 top artist in 2026?
+1130731: Will Post Malone be the Billboard #1 top artist in 2026?
+1130732: Will Luke Combs be the Billboard #1 top artist in 2026?
+1130733: Will Olivia Rodrigo be the Billboard #1 top artist in 2026?
+1130734: Will Zach Bryan be the Billboard #1 top artist in 2026?
+1130735: Will Doja Cat be the Billboard #1 top artist in 2026?
+1130736: Will Ed Sheeran be the Billboard #1 top artist in 2026?
+1130755: Will the Rolex Submariner hit $18,000 or higher in December?
+1130756: Will the Rolex Submariner hit $17,950 or higher in December?
+1130757: Will the Rolex Submariner hit $17,850 or lower in December?
+1130758: Will the Rolex Submariner hit $17,800 or lower in December?
+1130799: Will Rob Ashton win the Canadian NDP Leadership election?
+1130800: Will Tanille Johnson win the Canadian NDP Leadership election?
+1130801: Will Avi Lewis win the Canadian NDP Leadership election?
+1130802: Will Heather McPherson win the Canadian NDP Leadership election?
+1130803: Will Tony McQuail win the Canadian NDP Leadership election?
+1130804: Will Bianca Mugyenyi win the Canadian NDP Leadership election?
+1130863: Will A$AP Rocky have a #1 song on the Billboard Hot 100 in 2026?
+1130864: Will Ariana Grande have a #1 song on the Billboard Hot 100 in 2026?
+1130865: Will Bad Bunny have a #1 song on the Billboard Hot 100 in 2026?
+1130866: Will Billie Eilish have a #1 song on the Billboard Hot 100 in 2026?
+1130867: Will Doja Cat have a #1 song on the Billboard Hot 100 in 2026?
+1130868: Will Drake have a #1 song on the Billboard Hot 100 in 2026?
+1130869: Will Ed Sheeran have a #1 song on the Billboard Hot 100 in 2026?
+1130870: Will Future have a #1 song on the Billboard Hot 100 in 2026?
+1130871: Will Harry Styles have a #1 song on the Billboard Hot 100 in 2026?
+1130872: Will Jack Harlow have a #1 song on the Billboard Hot 100 in 2026?
+1130873: Will Kendrick Lamar have a #1 song on the Billboard Hot 100 in 2026?
+1130874: Will Lil Baby have a #1 song on the Billboard Hot 100 in 2026?
+1130875: Will Luke Combs have a #1 song on the Billboard Hot 100 in 2026?
+1130876: Will Morgan Wallen have a #1 song on the Billboard Hot 100 in 2026?
+1130877: Will Olivia Rodrigo have a #1 song on the Billboard Hot 100 in 2026?
+1130878: Will Peso Pluma have a #1 song on the Billboard Hot 100 in 2026?
+1130879: Will Playboi Carti have a #1 song on the Billboard Hot 100 in 2026?
+1130880: Will Post Malone have a #1 song on the Billboard Hot 100 in 2026?
+1130881: Will Rihanna have a #1 song on the Billboard Hot 100 in 2026?
+1130882: Will Sabrina Carpenter have a #1 song on the Billboard Hot 100 in 2026?
+1130883: Will SZA have a #1 song on the Billboard Hot 100 in 2026?
+1130885: Will The Weeknd have a #1 song on the Billboard Hot 100 in 2026?
+1130886: Will Travis Scott have a #1 song on the Billboard Hot 100 in 2026?
+1130887: Will Tyler, The Creator have a #1 song on the Billboard Hot 100 in 2026?
+1130888: Will Zach Bryan have a #1 song on the Billboard Hot 100 in 2026?
+1130889: Will Kanye West have a #1 song on the Billboard Hot 100 in 2026?
+1130890: Will Frank Ocean have a #1 song on the Billboard Hot 100 in 2026?
+1131150: Will the Doge-1 Lunar Mission launch before 2027?
+1131151: Will there be at least 20 measles cases in the U.S. by January 31, 2026?
+1131152: Will there be at least 40 measles cases in the U.S. by January 31, 2026?
+1131161: Lai Ching-te out as President of Taiwan in 2026?
+1131170: Human moon landing in 2026?
+1131477: Will BRICS add a new member in 2026?
+1131482: Will a country leave BRICS in 2026?
+1131693: Will Israel launch a major ground offensive in Lebanon by January 31?
+1131797: Will FURIA win IEM Krakow 2026?
+1131798: Will Team Vitality win IEM Krakow 2026?
+1131799: Will Team Falcons win IEM Krakow 2026?
+1131800: Will Team Spirit win IEM Krakow 2026?
+1131801: Will Natus Vincere win IEM Krakow 2026?
+1131802: Will MOUZ win IEM Krakow 2026?
+1131803: Will FaZe Clan win IEM Krakow 2026?
+1131804: Will The MongolZ win IEM Krakow 2026?
+1131805: Will Aurora Gaming win IEM Krakow 2026?
+1131806: Will B8 win IEM Krakow 2026?
+1131807: Will Legacy win IEM Krakow 2026?
+1131808: Will G2 Esports win IEM Krakow 2026?
+1131809: Will Team Liquid win IEM Krakow 2026?
+1131810: Will 3DMAX win IEM Krakow 2026?
+1131811: Will Astralis win IEM Krakow 2026?
+1131812: Will PARIVISION win IEM Krakow 2026?
+1131813: Will HEROIC win IEM Krakow 2026?
+1131814: Will paiN Gaming win IEM Krakow 2026?
+1131815: Will FUT Esports win IEM Krakow 2026?
+1131816: Will Ninjas in Pyjamas win IEM Krakow 2026?
+1131817: Will Passion UA win IEM Krakow 2026?
+1131818: Will BC.Game Esports win IEM Krakow 2026?
+1131819: Will NRG win IEM Krakow 2026?
+1131820: Will GamerLegion win IEM Krakow 2026?
+1131844: Will M80 win fl0m's Mythical LAN?
+1131845: Will NRG win fl0m's Mythical LAN?
+1131847: Will Marsborne win fl0m's Mythical LAN?
+1131848: Will Team Voca win fl0m's Mythical LAN?
+1131899: Israel nuclear weapon use against Iran by January 31?
+1132150: Map Handicap: WSG (-1.5)
+1132157: Counter-Strike: HyperSpirit vs  CSDIILIT (BO3)
+1132158: Counter-Strike: HyperSpirit vs  CSDIILIT - Map 1 Winner
+1132159: Counter-Strike: HyperSpirit vs  CSDIILIT - Map 2 Winner
+1132160: Games Total: O/U 2.5
+1132161: Map Handicap: HS (-1.5)
+1132162: HyperSpirit to win 0 maps?
+1132163: HyperSpirit to win 1 maps?
+1132164: HyperSpirit to win 2 maps?
+1132165:  CSDIILIT to win 0 maps?
+1132166:  CSDIILIT to win 1 maps?
+1132167:  CSDIILIT to win 2 maps?
+1132209: Al Ettifaq Saudi Club vs. NEOM SC: O/U 1.5
+1132210: Al Ettifaq Saudi Club vs. NEOM SC: O/U 2.5
+1132211: Al Ettifaq Saudi Club vs. NEOM SC: O/U 3.5
+1132212: Al Ettifaq Saudi Club vs. NEOM SC: O/U 4.5
+1132213: Al Ettifaq Saudi Club vs. NEOM SC: Both Teams to Score
+1132214: Damac Saudi Club vs. Al Nassr Saudi Club: O/U 1.5
+1132215: Damac Saudi Club vs. Al Nassr Saudi Club: O/U 2.5
+1132216: Damac Saudi Club vs. Al Nassr Saudi Club: O/U 3.5
+1132217: Damac Saudi Club vs. Al Nassr Saudi Club: O/U 4.5
+1132218: Damac Saudi Club vs. Al Nassr Saudi Club: Both Teams to Score
+1132219: Al Okhdood SC vs. Al Riyadh Saudi Club: O/U 1.5
+1132220: Al Okhdood SC vs. Al Riyadh Saudi Club: O/U 2.5
+1132221: Al Okhdood SC vs. Al Riyadh Saudi Club: O/U 3.5
+1132222: Al Okhdood SC vs. Al Riyadh Saudi Club: O/U 4.5
+1132223: Al Okhdood SC vs. Al Riyadh Saudi Club: Both Teams to Score
+1132473: Will Chris Haworth win the 2026 Carvana Masters Men's Singles tournament?
+1132474: Will Federico Staksrud win the 2026 Carvana Masters Men's Singles tournament?
+1132475: Will Christian Alshon win the 2026 Carvana Masters Men's Singles tournament?
+1132476: Will JW Johnson win the 2026 Carvana Masters Men's Singles tournament?
+1132477: Will Tyson McGuffin win the 2026 Carvana Masters Men's Singles tournament?
+1132478: Will Gabe Tardio win the 2026 Carvana Masters Men's Singles tournament?
+1132479: Will Hunter Johnson win the 2026 Carvana Masters Men's Singles tournament?
+1132480: Will Jack Sock win the 2026 Carvana Masters Men's Singles tournament?
+1132481: Will Dylan Frazier win the 2026 Carvana Masters Men's Singles tournament?
+1132482: Will Connor Garnett win the 2026 Carvana Masters Men's Singles tournament?
+1132567: Spread: Heat (-6.5)
+1132568: Heat vs. Bulls: O/U 241.5
+1132569: Spread: Heat (-5.5)
+1133375: Spread: Heat (-7.5)
+1133589: Will Newcastle United FC win on 2026-02-04?
+1133590: Will Manchester City FC win on 2026-02-04?
+1133591: Will Manchester City FC vs. Newcastle United FC end in a draw?
+1133592: International ODI: India vs New Zealand (Game 2)
+1133593: International ODI: India vs New Zealand (Game 2) - Who wins the toss?
+1133594: International ODI: India vs New Zealand (Game 2) - Completed match?
+1133595: International ODI: India vs New Zealand (Game 2) - Team Top Batter India Winner
+1133596: International ODI: India vs New Zealand (Game 2) - Team Top Batter Draw
+1133597: International ODI: India vs New Zealand (Game 2) - Team Top Batter New Zealand Winner
+1133599: Big Bash League: Hobart Hurricanes vs Brisbane Heat (Game 1)
+1133600: Big Bash League: Hobart Hurricanes vs Brisbane Heat (Game 1) - Who wins the toss?
+1133601: Big Bash League: Hobart Hurricanes vs Brisbane Heat (Game 1) - Completed match?
+1133602: Big Bash League: Hobart Hurricanes vs Brisbane Heat (Game 1) - Toss Match Double Hobart Hurricanes Winner
+1133603: Big Bash League: Hobart Hurricanes vs Brisbane Heat (Game 1) - Toss Match Double Draw
+1133604: Big Bash League: Hobart Hurricanes vs Brisbane Heat (Game 1) - Toss Match Double Brisbane Heat Winner
+1133605: Big Bash League: Hobart Hurricanes vs Brisbane Heat (Game 1) - Most Sixes Hobart Hurricanes Winner
+1133606: Big Bash League: Hobart Hurricanes vs Brisbane Heat (Game 1) - Most Sixes Draw
+1133607: Big Bash League: Hobart Hurricanes vs Brisbane Heat (Game 1) - Most Sixes Brisbane Heat Winner
+1133608: Big Bash League: Hobart Hurricanes vs Brisbane Heat (Game 1) - Team Top Batter Hobart Hurricanes Winner
+1133609: Big Bash League: Hobart Hurricanes vs Brisbane Heat (Game 1) - Team Top Batter Draw
+1133610: Big Bash League: Hobart Hurricanes vs Brisbane Heat (Game 1) - Team Top Batter Brisbane Heat Winner
+1133611: SA20: Sunrisers Eastern Cape vs Joburg Super Kings (Game 1)
+1133612: SA20: Sunrisers Eastern Cape vs Joburg Super Kings (Game 1) - Who wins the toss?
+1133613: SA20: Sunrisers Eastern Cape vs Joburg Super Kings (Game 1) - Completed match?
+1133614: SA20: Sunrisers Eastern Cape vs Joburg Super Kings (Game 1) - Toss Match Double Sunrisers Eastern Cape Winner
+1133615: SA20: Sunrisers Eastern Cape vs Joburg Super Kings (Game 1) - Toss Match Double Draw
+1133616: SA20: Sunrisers Eastern Cape vs Joburg Super Kings (Game 1) - Toss Match Double Joburg Super Kings Winner
+1133617: SA20: Sunrisers Eastern Cape vs Joburg Super Kings (Game 1) - Most Sixes Sunrisers Eastern Cape Winner
+1133618: SA20: Sunrisers Eastern Cape vs Joburg Super Kings (Game 1) - Most Sixes Draw
+1133619: SA20: Sunrisers Eastern Cape vs Joburg Super Kings (Game 1) - Most Sixes Joburg Super Kings Winner
+1133620: SA20: Sunrisers Eastern Cape vs Joburg Super Kings (Game 1) - Team Top Batter Sunrisers Eastern Cape Winner
+1133621: SA20: Sunrisers Eastern Cape vs Joburg Super Kings (Game 1) - Team Top Batter Draw
+1133622: SA20: Sunrisers Eastern Cape vs Joburg Super Kings (Game 1) - Team Top Batter Joburg Super Kings Winner
+1133663: Norman Powell: Points Over 23.5
+1133664: Tyler Herro: Points Over 19.5
+1133665: Bam Adebayo: Points Over 16.5
+1133666: Andrew Wiggins: Points Over 14.5
+1133667: Jaime Jaquez Jr.: Points Over 12.5
+1133668: Kel'el Ware: Points Over 10.5
+1133669: Nikola Jović: Points Over 9.5
+1133670: Davion Mitchell: Points Over 9.5
+1133671: Bam Adebayo: Rebounds Over 9.5
+1133672: Kel'el Ware: Rebounds Over 9.5
+1133673: Andrew Wiggins: Rebounds Over 4.5
+1133674: Tyler Herro: Rebounds Over 4.5
+1133675: Norman Powell: Rebounds Over 3.5
+1133676: Nikola Jović: Rebounds Over 3.5
+1133677: Jaime Jaquez Jr.: Rebounds Over 3.5
+1133678: Davion Mitchell: Rebounds Over 2.5
+1133679: Davion Mitchell: Assists Over 7.5
+1133680: Tyler Herro: Assists Over 3.5
+1133681: Nikola Jović: Assists Over 3.5
+1133682: Jaime Jaquez Jr.: Assists Over 3.5
+1133683: Bam Adebayo: Assists Over 2.5
+1133684: Norman Powell: Assists Over 2.5
+1133685: Andrew Wiggins: Assists Over 2.5
+1133887: Counter-Strike: illwill vs Universe (BO3)
+1133888: Counter-Strike: illwill vs Universe - Map 1 Winner
+1133889: Counter-Strike: illwill vs Universe - Map 2 Winner
+1133890: Games Total: O/U 2.5
+1133891: Map Handicap: ILWL (-1.5)
+1133892: illwill to win 0 maps?
+1133893: illwill to win 1 maps?
+1133894: illwill to win 2 maps?
+1133895: Universe to win 0 maps?
+1133896: Universe to win 1 maps?
+1133897: Universe to win 2 maps?
+1133898: Counter-Strike: ARCRED vs 777 (BO3)
+1133899: Counter-Strike: ARCRED vs 777 - Map 1 Winner
+1133900: Counter-Strike: ARCRED vs 777 - Map 2 Winner
+1133901: Games Total: O/U 2.5
+1133902: Map Handicap: ARC (-1.5)
+1133903: 777 to win 0 maps?
+1133904: 777 to win 1 maps?
+1133905: 777 to win 2 maps?
+1133906: ARCRED to win 0 maps?
+1133907: ARCRED to win 1 maps?
+1133908: ARCRED to win 2 maps?
+1133909: Counter-Strike:  CSDIILIT vs MASONIC (BO3)
+1133910: Counter-Strike:  CSDIILIT vs MASONIC - Map 1 Winner
+1133911: Counter-Strike:  CSDIILIT vs MASONIC - Map 2 Winner
+1133912: Games Total: O/U 2.5
+1133913: Map Handicap:  CSDIILIT (-1.5)
+1133914: MASONIC to win 0 maps?
+1133915: MASONIC to win 1 maps?
+1133916: MASONIC to win 2 maps?
+1133917:  CSDIILIT to win 0 maps?
+1133918:  CSDIILIT to win 1 maps?
+1133919:  CSDIILIT to win 2 maps?
+1133920: Counter-Strike: BASEMENT BOYS vs HyperSpirit (BO3)
+1133921: Counter-Strike: BASEMENT BOYS vs HyperSpirit - Map 1 Winner
+1133922: Counter-Strike: BASEMENT BOYS vs HyperSpirit - Map 2 Winner
+1133923: Games Total: O/U 2.5
+1133924: Map Handicap: HS (-1.5)
+1133925: HyperSpirit to win 0 maps?
+1133926: HyperSpirit to win 1 maps?
+1133927: HyperSpirit to win 2 maps?
+1133928: BASEMENT BOYS to win 0 maps?
+1133929: BASEMENT BOYS to win 1 maps?
+1133930: BASEMENT BOYS to win 2 maps?
+1133996: Heat vs. Bulls: O/U 240.5
+1133997: 1H Spread: Heat (-3.5)
+1133998: Heat vs. Bulls: 1H O/U 124.5
+1133999: Heat vs. Bulls: 1H Moneyline
+1134000: Tyler Herro: Points Over 20.5
+1134001: Nikola Vučević: Points Over 18.5
+1134002: Nikola Vučević: Rebounds Over 10.5
+1134003: Matas Buzelis: Rebounds Over 6.5
+1134004: Tre Jones: Assists Over 6.5
+1134005: Nikola Vučević: Assists Over 4.5
+1134006: Ayo Dosunmu: Assists Over 4.5
+1134882: Counter-Strike: Acend vs Ursa (BO3)
+1134883: Counter-Strike: Acend vs Ursa - Map 1 Winner
+1134884: Counter-Strike: Acend vs Ursa - Map 2 Winner
+1134885: Games Total: O/U 2.5
+1134886: Map Handicap: ACE (-1.5)
+1134887: Ursa to win 0 maps?
+1134888: Ursa to win 1 maps?
+1134889: Ursa to win 2 maps?
+1134890: Acend to win 0 maps?
+1134891: Acend to win 1 maps?
+1134892: Acend to win 2 maps?
+1134893: LoL: Nongshim Esports Academy vs DN SOOPers Challengers (BO3)
+1134894: LoL: Nongshim Esports Academy vs DN SOOPers Challengers - Game 1 Winner
+1134895: LoL: Nongshim Esports Academy vs DN SOOPers Challengers - Game 2 Winner
+1134896: Games Total: O/U 2.5
+1134897: Counter-Strike: Bushido Wildcats vs Bebop (BO3)
+1134898: Counter-Strike: Bushido Wildcats vs Bebop - Map 1 Winner
+1134899: Game Handicap: DNS.C (-1.5)
+1134900: Counter-Strike: Bushido Wildcats vs Bebop - Map 2 Winner
+1134901: Nongshim Esports Academy to win 0 games?
+1134903: Nongshim Esports Academy to win 1 games?
+1134904: Nongshim Esports Academy to win 2 games?
+1134905: DN SOOPers Challengers to win 0 games?
+1134906: DN SOOPers Challengers to win 1 games?
+1134907: DN SOOPers Challengers to win 2 games?
+1134908: Map Handicap: BBP (-1.5)
+1134911: Bushido Wildcats to win 2 maps?
+1134926: LoL: BNK FearX Youth vs HANJIN BRION Challengers (BO3)
+1134927: LoL: BNK FearX Youth vs HANJIN BRION Challengers - Game 1 Winner
+1134928: LoL: BNK FearX Youth vs HANJIN BRION Challengers - Game 2 Winner
+1134929: Games Total: O/U 2.5
+1134930: Game Handicap: FOX.Y (-1.5)
+1134931: BNK FearX Youth to win 0 games?
+1134932: BNK FearX Youth to win 1 games?
+1134933: BNK FearX Youth to win 2 games?
+1134934: HANJIN BRION Challengers to win 0 games?
+1134935: HANJIN BRION Challengers to win 1 games?
+1134936: HANJIN BRION Challengers to win 2 games?
+1134948: LoL: T1 Academy vs KT Rolster Challengers (BO3)
+1134949: LoL: T1 Academy vs KT Rolster Challengers - Game 1 Winner
+1134950: LoL: T1 Academy vs KT Rolster Challengers - Game 2 Winner
+1134951: Games Total: O/U 2.5
+1134952: Game Handicap: T1.A (-1.5)
+1134953: KT Rolster Challengers to win 0 games?
+1134954: KT Rolster Challengers to win 1 games?
+1134955: KT Rolster Challengers to win 2 games?
+1134956: T1 Academy to win 0 games?
+1134957: T1 Academy to win 1 games?
+1134958: T1 Academy to win 2 games?
+1134959: LoL: Gen.G Global Academy vs Dplus KIA Challengers (BO3)
+1134960: LoL: Gen.G Global Academy vs Dplus KIA Challengers - Game 1 Winner
+1134961: LoL: Gen.G Global Academy vs Dplus KIA Challengers - Game 2 Winner
+1134962: Games Total: O/U 2.5
+1134963: Game Handicap: DK.C (-1.5)
+1134964: Gen.G Global Academy to win 0 games?
+1134965: Gen.G Global Academy to win 1 games?
+1134966: Gen.G Global Academy to win 2 games?
+1134967: Dplus KIA Challengers to win 0 games?
+1134968: Dplus KIA Challengers to win 1 games?
+1134969: Dplus KIA Challengers to win 2 games?
+1134970: LoL: DRX Challengers vs Hanwha Life Esports Challengers (BO3)
+1134971: LoL: DRX Challengers vs Hanwha Life Esports Challengers - Game 1 Winner
+1134972: LoL: DRX Challengers vs Hanwha Life Esports Challengers - Game 2 Winner
+1134973: Games Total: O/U 2.5
+1134974: Game Handicap: HLE (-1.5)
+1134975: DRX Challengers to win 0 games?
+1134976: DRX Challengers to win 1 games?
+1134977: DRX Challengers to win 2 games?
+1134978: Hanwha Life Esports Challengers to win 0 games?
+1134979: Hanwha Life Esports Challengers to win 1 games?
+1134980: Hanwha Life Esports Challengers to win 2 games?
+1134981: LoL: Gen.G Global Academy vs Hanwha Life Esports Challengers (BO3)
+1134982: LoL: Gen.G Global Academy vs Hanwha Life Esports Challengers - Game 1 Winner
+1134983: LoL: Gen.G Global Academy vs Hanwha Life Esports Challengers - Game 2 Winner
+1134984: Games Total: O/U 2.5
+1134985: Game Handicap: HLE (-1.5)
+1134986: Gen.G Global Academy to win 0 games?
+1134987: Gen.G Global Academy to win 1 games?
+1134988: Gen.G Global Academy to win 2 games?
+1134989: Hanwha Life Esports Challengers to win 0 games?
+1134990: Hanwha Life Esports Challengers to win 1 games?
+1134991: Hanwha Life Esports Challengers to win 2 games?
+1134992: LoL: BNK FearX Youth vs DN SOOPers Challengers (BO3)
+1134993: LoL: BNK FearX Youth vs DN SOOPers Challengers - Game 1 Winner
+1134994: LoL: BNK FearX Youth vs DN SOOPers Challengers - Game 2 Winner
+1134995: Games Total: O/U 2.5
+1134996: Game Handicap: DNS.C (-1.5)
+1134997: BNK FearX Youth to win 0 games?
+1134998: BNK FearX Youth to win 1 games?
+1134999: BNK FearX Youth to win 2 games?
+1135000: DN SOOPers Challengers to win 0 games?
+1135001: DN SOOPers Challengers to win 1 games?
+1135002: DN SOOPers Challengers to win 2 games?
+1135003: LoL: T1 Academy vs HANJIN BRION Challengers (BO3)
+1135004: LoL: T1 Academy vs HANJIN BRION Challengers - Game 1 Winner
+1135005: LoL: T1 Academy vs HANJIN BRION Challengers - Game 2 Winner
+1135006: Games Total: O/U 2.5
+1135007: Game Handicap: T1.A (-1.5)
+1135008: T1 Academy to win 0 games?
+1135009: T1 Academy to win 1 games?
+1135010: T1 Academy to win 2 games?
+1135011: HANJIN BRION Challengers to win 0 games?
+1135012: HANJIN BRION Challengers to win 1 games?
+1135013: HANJIN BRION Challengers to win 2 games?
+1135048: Counter-Strike: ARCRED vs MINLATE (BO3)
+1135049: Counter-Strike: ARCRED vs MINLATE - Map 1 Winner
+1135050: Counter-Strike: ARCRED vs MINLATE - Map 2 Winner
+1135051: Games Total: O/U 2.5
+1135052: Map Handicap: ARC (-1.5)
+1135053: ARCRED to win 0 maps?
+1135054: ARCRED to win 1 maps?
+1135055: ARCRED to win 2 maps?
+1135056: MINLATE to win 0 maps?
+1135057: MINLATE to win 1 maps?
+1135058: MINLATE to win 2 maps?
+1135059: Counter-Strike: UNiTY esports vs petardka (BO3)
+1135060: Counter-Strike: UNiTY esports vs petardka - Map 1 Winner
+1135061: Counter-Strike: UNiTY esports vs petardka - Map 2 Winner
+1135062: Games Total: O/U 2.5
+1135063: Map Handicap: UNiTY (-1.5)
+1135064: UNiTY esports to win 0 maps?
+1135065: UNiTY esports to win 1 maps?
+1135066: UNiTY esports to win 2 maps?
+1135067: petardka to win 0 maps?
+1135068: petardka to win 1 maps?
+1135069: petardka to win 2 maps?
+1135071: Counter-Strike: BASEMENT BOYS vs illwill (BO3)
+1135072: Counter-Strike: BASEMENT BOYS vs illwill - Map 1 Winner
+1135073: Counter-Strike: BASEMENT BOYS vs illwill - Map 2 Winner
+1135074: Games Total: O/U 2.5
+1135075: Map Handicap: ILWL (-1.5)
+1135076: BASEMENT BOYS to win 0 maps?
+1135077: BASEMENT BOYS to win 1 maps?
+1135079: BASEMENT BOYS to win 2 maps?
+1135080: illwill to win 0 maps?
+1135081: illwill to win 1 maps?
+1135082: illwill to win 2 maps?
+1135591: Spread: Middlesbrough FC (-1.5)
+1135592: Stoke City FC vs. Middlesbrough FC: O/U 1.5
+1135593: Stoke City FC vs. Middlesbrough FC: O/U 2.5
+1135594: Stoke City FC vs. Middlesbrough FC: O/U 3.5
+1135595: Stoke City FC vs. Middlesbrough FC: O/U 4.5
+1135596: Stoke City FC vs. Middlesbrough FC: Both Teams to Score

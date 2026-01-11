@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1157297: Will US Lecce vs. SS Lazio end in a draw?
+1157298: Will Manchester City FC win on 2026-01-24?
+1157299: Will SS Lazio win on 2026-01-24?
+1157300: Will Manchester City FC vs. Wolverhampton Wanderers FC end in a draw?
+1157301: Will Wolverhampton Wanderers FC win on 2026-01-24?
+1157302: Will Southampton FC win on 2026-02-07?
+1157303: Will Southampton FC vs. Watford FC end in a draw?
+1157304: Will Watford FC win on 2026-02-07?
+1157305: Will Birmingham City FC win on 2026-02-07?
+1157306: Will Birmingham City FC vs. Leicester City FC end in a draw?
+1157307: Will Leicester City FC win on 2026-02-07?
+1157308: Will AFC Bournemouth win on 2026-01-24?
+1157309: Will AFC Bournemouth vs. Liverpool FC end in a draw?
+1157310: Will Liverpool FC win on 2026-01-24?
+1157311: Will West Bromwich Albion FC win on 2026-02-07?
+1157312: Will West Bromwich Albion FC vs. Stoke City FC end in a draw?
+1157313: Will Stoke City FC win on 2026-02-07?
+1157314: Will 1. FC Heidenheim 1846 win on 2026-01-24?
+1157315: Will 1. FC Heidenheim 1846 vs. RB Leipzig end in a draw?
+1157316: Will RB Leipzig win on 2026-01-24?
+1157317: Will Hull City AFC win on 2026-02-07?
+1157318: Will Hull City AFC vs. Bristol City FC end in a draw?
+1157319: Will Bristol City FC win on 2026-02-07?
+1157320: Will FC Bayern München win on 2026-01-24?
+1157321: Will FC Bayern München vs. FC Augsburg end in a draw?
+1157322: Will FC Augsburg win on 2026-01-24?
+1157323: Will Wrexham AFC win on 2026-02-07?
+1157324: Will Wrexham AFC vs. Millwall FC end in a draw?
+1157325: Will Millwall FC win on 2026-02-07?
+1157326: Will 1. FC Union Berlin win on 2026-01-24?
+1157327: Will 1. FC Union Berlin vs. BV Borussia 09 Dortmund end in a draw?
+1157328: Will BV Borussia 09 Dortmund win on 2026-01-24?
+1157329: Will Preston North End FC win on 2026-02-07?
+1157330: Will Preston North End FC vs. Portsmouth FC end in a draw?
+1157331: Will Portsmouth FC win on 2026-02-07?
+1157332: Will Coventry City FC win on 2026-02-07?
+1157333: Will Coventry City FC vs. Oxford United FC end in a draw?
+1157334: Will Oxford United FC win on 2026-02-07?
+1157335: Big Bash League: Adelaide Strikers vs Melbourne Renegades (Game 1)
+1157336: Big Bash League: Adelaide Strikers vs Melbourne Renegades (Game 1) - Who wins the toss?
+1157337: Big Bash League: Adelaide Strikers vs Melbourne Renegades (Game 1) - Completed match?
+1157338: Big Bash League: Adelaide Strikers vs Melbourne Renegades (Game 1) - Toss Match Double Adelaide Strikers Winner
+1157339: Big Bash League: Adelaide Strikers vs Melbourne Renegades (Game 1) - Toss Match Double Draw
+1157340: Big Bash League: Adelaide Strikers vs Melbourne Renegades (Game 1) - Toss Match Double Melbourne Renegades Winner
+1157341: Big Bash League: Adelaide Strikers vs Melbourne Renegades (Game 1) - Most Sixes Adelaide Strikers Winner
+1157342: Big Bash League: Adelaide Strikers vs Melbourne Renegades (Game 1) - Most Sixes Draw
+1157343: Big Bash League: Adelaide Strikers vs Melbourne Renegades (Game 1) - Most Sixes Melbourne Renegades Winner
+1157344: Big Bash League: Adelaide Strikers vs Melbourne Renegades (Game 1) - Team Top Batter Adelaide Strikers Winner
+1157345: Big Bash League: Adelaide Strikers vs Melbourne Renegades (Game 1) - Team Top Batter Draw
+1157346: Big Bash League: Adelaide Strikers vs Melbourne Renegades (Game 1) - Team Top Batter Melbourne Renegades Winner
+1157347: Big Bash League: Perth Scorchers vs Melbourne Stars (Game 1)
+1157348: Big Bash League: Perth Scorchers vs Melbourne Stars (Game 1) - Who wins the toss?
+1157349: Big Bash League: Perth Scorchers vs Melbourne Stars (Game 1) - Completed match?
+1157350: Merrimack College Warriors vs. Saint Peter's Peacocks: O/U 132.5
+1157351: Big Bash League: Perth Scorchers vs Melbourne Stars (Game 1) - Toss Match Double Perth Scorchers Winner
+1157352: Big Bash League: Perth Scorchers vs Melbourne Stars (Game 1) - Toss Match Double Draw
+1157353: Big Bash League: Perth Scorchers vs Melbourne Stars (Game 1) - Toss Match Double Melbourne Stars Winner
+1157354: Spread: Quinnipiac Bobcats (-4.5)
+1157355: Big Bash League: Perth Scorchers vs Melbourne Stars (Game 1) - Most Sixes Perth Scorchers Winner
+1157356: Big Bash League: Perth Scorchers vs Melbourne Stars (Game 1) - Most Sixes Draw
+1157357: Big Bash League: Perth Scorchers vs Melbourne Stars (Game 1) - Most Sixes Melbourne Stars Winner
+1157358: Big Bash League: Perth Scorchers vs Melbourne Stars (Game 1) - Team Top Batter Perth Scorchers Winner
+1157359: Big Bash League: Perth Scorchers vs Melbourne Stars (Game 1) - Team Top Batter Draw
+1157360: Big Bash League: Perth Scorchers vs Melbourne Stars (Game 1) - Team Top Batter Melbourne Stars Winner
+1157361: SA20: Joburg Super Kings vs Pretoria Capitals (Game 1)
+1157362: SA20: Joburg Super Kings vs Pretoria Capitals (Game 1) - Who wins the toss?
+1157363: SA20: Joburg Super Kings vs Pretoria Capitals (Game 1) - Completed match?
+1157364: SA20: Joburg Super Kings vs Pretoria Capitals (Game 1) - Toss Match Double Joburg Super Kings Winner
+1157365: SA20: Joburg Super Kings vs Pretoria Capitals (Game 1) - Toss Match Double Draw
+1157366: SA20: Joburg Super Kings vs Pretoria Capitals (Game 1) - Toss Match Double Pretoria Capitals Winner
+1157367: SA20: Joburg Super Kings vs Pretoria Capitals (Game 1) - Most Sixes Joburg Super Kings Winner
+1157368: SA20: Joburg Super Kings vs Pretoria Capitals (Game 1) - Most Sixes Draw
+1157369: SA20: Joburg Super Kings vs Pretoria Capitals (Game 1) - Most Sixes Pretoria Capitals Winner
+1157370: SA20: Joburg Super Kings vs Pretoria Capitals (Game 1) - Team Top Batter Joburg Super Kings Winner
+1157371: SA20: Joburg Super Kings vs Pretoria Capitals (Game 1) - Team Top Batter Draw
+1157372: SA20: Joburg Super Kings vs Pretoria Capitals (Game 1) - Team Top Batter Pretoria Capitals Winner
+1157373: SA20: Durban's Super Giants vs Paarl Royals (Game 1)
+1157374: SA20: Durban's Super Giants vs Paarl Royals (Game 1) - Who wins the toss?
+1157375: SA20: Durban's Super Giants vs Paarl Royals (Game 1) - Completed match?
+1157376: SA20: Durban's Super Giants vs Paarl Royals (Game 1) - Toss Match Double Durban's Super Giants Winner
+1157377: SA20: Durban's Super Giants vs Paarl Royals (Game 1) - Toss Match Double Draw
+1157378: SA20: Durban's Super Giants vs Paarl Royals (Game 1) - Toss Match Double Paarl Royals Winner
+1157379: SA20: Durban's Super Giants vs Paarl Royals (Game 1) - Most Sixes Durban's Super Giants Winner
+1157380: SA20: Durban's Super Giants vs Paarl Royals (Game 1) - Most Sixes Draw
+1157381: SA20: Durban's Super Giants vs Paarl Royals (Game 1) - Most Sixes Paarl Royals Winner
+1157382: SA20: Durban's Super Giants vs Paarl Royals (Game 1) - Team Top Batter Durban's Super Giants Winner
+1157383: SA20: Durban's Super Giants vs Paarl Royals (Game 1) - Team Top Batter Draw
+1157384: SA20: Durban's Super Giants vs Paarl Royals (Game 1) - Team Top Batter Paarl Royals Winner
+1157385: BPL: Durdanto Dhaka vs Chattogram Challengers (Game 1)
+1157386: BPL: Durdanto Dhaka vs Chattogram Challengers (Game 1) - Who wins the toss?
+1157387: BPL: Durdanto Dhaka vs Chattogram Challengers (Game 1) - Completed match?
+1157388: BPL: Durdanto Dhaka vs Chattogram Challengers (Game 1) - Toss Match Double Durdanto Dhaka Winner
+1157389: BPL: Durdanto Dhaka vs Chattogram Challengers (Game 1) - Toss Match Double Draw
+1157390: BPL: Durdanto Dhaka vs Chattogram Challengers (Game 1) - Toss Match Double Chattogram Challengers Winner
+1157391: BPL: Durdanto Dhaka vs Chattogram Challengers (Game 1) - Most Sixes Durdanto Dhaka Winner
+1157392: BPL: Durdanto Dhaka vs Chattogram Challengers (Game 1) - Most Sixes Draw
+1157393: BPL: Durdanto Dhaka vs Chattogram Challengers (Game 1) - Most Sixes Chattogram Challengers Winner
+1157394: BPL: Durdanto Dhaka vs Chattogram Challengers (Game 1) - Team Top Batter Durdanto Dhaka Winner
+1157395: BPL: Durdanto Dhaka vs Chattogram Challengers (Game 1) - Team Top Batter Draw
+1157396: BPL: Durdanto Dhaka vs Chattogram Challengers (Game 1) - Team Top Batter Chattogram Challengers Winner
+1157397: BPL: Noakhali vs Rangpur Riders (Game 1)
+1157398: BPL: Noakhali vs Rangpur Riders (Game 1) - Who wins the toss?
+1157399: BPL: Noakhali vs Rangpur Riders (Game 1) - Completed match?
+1157400: BPL: Noakhali vs Rangpur Riders (Game 1) - Toss Match Double Noakhali Winner
+1157401: BPL: Noakhali vs Rangpur Riders (Game 1) - Toss Match Double Draw
+1157402: BPL: Noakhali vs Rangpur Riders (Game 1) - Toss Match Double Rangpur Riders Winner
+1157403: BPL: Noakhali vs Rangpur Riders (Game 1) - Most Sixes Noakhali Winner
+1157404: BPL: Noakhali vs Rangpur Riders (Game 1) - Most Sixes Draw
+1157405: BPL: Noakhali vs Rangpur Riders (Game 1) - Most Sixes Rangpur Riders Winner
+1157406: BPL: Noakhali vs Rangpur Riders (Game 1) - Team Top Batter Noakhali Winner
+1157407: BPL: Noakhali vs Rangpur Riders (Game 1) - Team Top Batter Draw
+1157408: BPL: Noakhali vs Rangpur Riders (Game 1) - Team Top Batter Rangpur Riders Winner
+1157409: XRP Up or Down - January 11, 11:55PM-12:00AM ET
+1157410: Solana Up or Down - January 11, 11:55PM-12:00AM ET
+1157411: XRP Up or Down - January 12, 12:00AM-12:15AM ET
+1157412: Bitcoin Up or Down - January 11, 11:55PM-12:00AM ET
+1157413: Ethereum Up or Down - January 11, 11:55PM-12:00AM ET
+1157414: Ethereum Up or Down - January 12, 12:00AM-12:15AM ET
+1157415: Bitcoin Up or Down - January 12, 12:00AM-12:15AM ET
+1157416: Ethereum Up or Down - January 12, 12:00AM-12:05AM ET
+1157417: Bitcoin Up or Down - January 12, 12:00AM-12:05AM ET
+1157418: Bitcoin Up or Down - January 12, 12:00AM-4:00AM ET
+1157419: Solana Up or Down - January 12, 12:00AM-4:00AM ET
+1157420: XRP Up or Down - January 12, 12:00AM-12:05AM ET
+1157421: XRP Up or Down - January 12, 12:00AM-4:00AM ET
+1157422: Ethereum Up or Down - January 12, 12:00AM-4:00AM ET
+1157423: Solana Up or Down - January 12, 12:00AM-12:05AM ET
+1157424: 1H Spread: Grizzlies (-3.5)
+1157425: Nets vs. Grizzlies: 1H O/U 113.5
+1157426: Nets vs. Grizzlies: 1H Moneyline
+1157427: Jaren Jackson Jr.: Points Over 20.5
+1157428: Cam Thomas: Points Over 19.5
+1157429: Noah Clowney: Points Over 15.5
+1157430: Santi Aldama: Points Over 14.5
+1157431: Egor Demin: Points Over 13.5
+1157432: Cam Spencer: Points Over 13.5
+1157433: Nicolas Claxton: Points Over 12.5
+1157434: Jaylen Wells: Points Over 12.5
+1157435: Cedric Coward: Points Over 12.5
+1157436: Jock Landale: Points Over 11.5
+1157437: Nicolas Claxton: Rebounds Over 7.5
+1157438: Jock Landale: Rebounds Over 7.5
+1157439: Santi Aldama: Rebounds Over 6.5
+1157440: Cedric Coward: Rebounds Over 6.5
+1157441: Day'Ron Sharpe: Rebounds Over 6.5
+1157442: Jaren Jackson Jr.: Rebounds Over 5.5
+1157443: Danny Wolf: Rebounds Over 4.5
+1157444: Terance Mann: Rebounds Over 3.5
+1157445: Noah Clowney: Rebounds Over 3.5
+1157446: Jaylen Wells: Rebounds Over 3.5
+1157447: Cam Spencer: Assists Over 7.5
+1157448: Egor Demin: Assists Over 4.5
+1157449: Nicolas Claxton: Assists Over 3.5
+1157450: Terance Mann: Assists Over 3.5
+1157451: Santi Aldama: Assists Over 3.5
+1157452: Cam Thomas: Assists Over 2.5
+1157453: Cedric Coward: Assists Over 2.5
+1157454: Danny Wolf: Assists Over 2.5
+1157455: 1H Spread: 76ers (-2.5)
+1157456: 76ers vs. Raptors: 1H O/U 115.5
+1157457: 76ers vs. Raptors: 1H Moneyline
+1157458: 76ers vs. Raptors: O/U 222.5
+1157459: Knicks vs. Trail Blazers: 1H O/U 115.5
+1157460: Shai Gilgeous-Alexander: Points Over 30.5
+1157461: Norman Powell: Points Over 21.5
+1157462: Jalen Williams: Points Over 17.5
+1157463: Chet Holmgren: Points Over 17.5
+1157464: Bam Adebayo: Points Over 14.5
+1157465: Andrew Wiggins: Points Over 12.5
+1157466: Ajay Mitchell: Points Over 12.5
+1157467: Jaime Jaquez Jr.: Points Over 11.5
+1157468: Aaron Wiggins: Points Over 10.5
+1157469: Kel'el Ware: Points Over 9.5
+1157470: Kel'el Ware: Rebounds Over 10.5
+1157471: Chet Holmgren: Rebounds Over 9.5
+1157472: Bam Adebayo: Rebounds Over 8.5
+1157473: Jalen Williams: Rebounds Over 5.5
+1157474: Shai Gilgeous-Alexander: Rebounds Over 4.5
+1157475: Andrew Wiggins: Rebounds Over 4.5
+1157476: Jaime Jaquez Jr.: Rebounds Over 4.5
+1157477: Luguentz Dort: Rebounds Over 3.5
+1157478: Norman Powell: Rebounds Over 3.5
+1157479: Cason Wallace: Rebounds Over 3.5
+1157480: Shai Gilgeous-Alexander: Assists Over 6.5
+1157481: Davion Mitchell: Assists Over 6.5
+1157482: Jalen Williams: Assists Over 5.5
+1157483: Jaime Jaquez Jr.: Assists Over 3.5
+1157484: Ajay Mitchell: Assists Over 3.5
+1157485: Bam Adebayo: Assists Over 2.5
+1157486: Andrew Wiggins: Assists Over 2.5
+1157487: Norman Powell: Assists Over 2.5
+1157488: Chet Holmgren: Assists Over 1.5
+1157489: 1H Spread: Bucks (-1.5)
+1157490: Bucks vs. Nuggets: 1H O/U 114.5
+1157491: Bucks vs. Nuggets: 1H Moneyline
+1157492: Wizards vs. Suns: O/U 228.5
+1157493: 1H Spread: Suns (-8.5)
+1157494: Wizards vs. Suns: 1H O/U 117.5
+1157495: Wizards vs. Suns: 1H Moneyline
+1157496: Wizards vs. Suns: O/U 227.5
+1157497: 1H Spread: Rockets (-7.5)
+1157498: Rockets vs. Kings: 1H O/U 108.5
+1157499: Rockets vs. Kings: 1H Moneyline
+1157500: Ethereum Up or Down - January 12, 12:05AM-12:10AM ET
+1157501: XRP Up or Down - January 12, 12:05AM-12:10AM ET
+1157502: Solana Up or Down - January 12, 12:05AM-12:10AM ET
+1157503: Bitcoin Up or Down - January 12, 12:05AM-12:10AM ET
+1157504: Bitcoin Up or Down - January 12, 12:10AM-12:15AM ET
+1157505: XRP Up or Down - January 12, 12:10AM-12:15AM ET
+1157506: Ethereum Up or Down - January 12, 12:10AM-12:15AM ET
+1157507: Solana Up or Down - January 12, 12:10AM-12:15AM ET
+1157508: Bitcoin Up or Down - January 12, 12:15AM-12:30AM ET
+1157509: Ethereum Up or Down - January 12, 12:15AM-12:30AM ET
+1157510: XRP Up or Down - January 12, 12:15AM-12:30AM ET
+1157511: US strikes Iran by January 12, 2026?
+1157512: US strikes Iran by January 13, 2026?
+1157513: US strikes Iran by January 16, 2026?
+1157574: XRP Up or Down - January 12, 12:15AM-12:20AM ET
+1157575: Ethereum Up or Down - January 12, 12:15AM-12:20AM ET
+1157576: Solana Up or Down - January 12, 12:15AM-12:20AM ET
+1157577: Bitcoin Up or Down - January 12, 12:15AM-12:20AM ET
+1157582: Will France, UK or Germany strike Iran by January 31?
+1157583: Solana Up or Down - January 12, 12:20AM-12:25AM ET
+1157584: XRP Up or Down - January 12, 12:20AM-12:25AM ET
+1157585: Bitcoin Up or Down - January 12, 12:20AM-12:25AM ET
+1157586: Ethereum Up or Down - January 12, 12:20AM-12:25AM ET
+1157587: Will the US strike Yemen next?
+1157588: Will the US strike Cuba nex
+1157589: Will the US strike Venezuela next?
+1157590: Will the US strike Somalia next?
+1157591: Will the US strike Iraq next?
+1157592: Will the US strike Iran next?
+1157593: Will the US strike Nigeria next?
+1157594: Will the US strike Syria next?
+1157595: Will the US strike another country first?
+1157596: Will the US not strike another country before 2027?
+1157597: Will the US strike Mexico next?
+1157598: Will the US strike Colombia next?
+1157599: Ethereum Up or Down - January 12, 12:25AM-12:30AM ET
+1157600: XRP Up or Down - January 12, 12:30AM-12:45AM ET
+1157601: Bitcoin Up or Down - January 12, 12:25AM-12:30AM ET
+1157602: Solana Up or Down - January 12, 12:25AM-12:30AM ET
+1157603: Bitcoin Up or Down - January 12, 12:30AM-12:45AM ET
+1157604: XRP Up or Down - January 12, 12:25AM-12:30AM ET
+1157605: Ethereum Up or Down - January 12, 12:30AM-12:45AM ET
+1157606: Solana Up or Down - January 12, 12:30AM-12:35AM ET
+1157607: Ethereum Up or Down - January 12, 12:30AM-12:35AM ET
+1157608: XRP Up or Down - January 12, 12:30AM-12:35AM ET
+1157609: Bitcoin Up or Down - January 12, 12:30AM-12:35AM ET
+1157610: Solana Up or Down - January 12, 12:35AM-12:40AM ET
+1157611: Bitcoin Up or Down - January 12, 12:35AM-12:40AM ET
+1157612: XRP Up or Down - January 12, 12:35AM-12:40AM ET
+1157613: Ethereum Up or Down - January 12, 12:35AM-12:40AM ET
+1157614: Bitcoin Up or Down - January 12, 12:45AM-1:00AM ET
+1157615: Bitcoin Up or Down - January 12, 12:40AM-12:45AM ET
+1157616: XRP Up or Down - January 12, 12:45AM-1:00AM ET
+1157617: Ethereum Up or Down - January 12, 12:40AM-12:45AM ET
+1157618: XRP Up or Down - January 12, 12:40AM-12:45AM ET
+1157619: Solana Up or Down - January 12, 12:40AM-12:45AM ET
+1157620: Ethereum Up or Down - January 12, 12:45AM-1:00AM ET
+1157621: Ethereum Up or Down - January 12, 12:45AM-12:50AM ET
+1157622: Bitcoin Up or Down - January 12, 12:45AM-12:50AM ET
+1157623: XRP Up or Down - January 12, 12:45AM-12:50AM ET
+1157624: Solana Up or Down - January 12, 12:45AM-12:50AM ET
+1157625: Bitcoin Up or Down - January 12, 12:50AM-12:55AM ET
+1157626: XRP Up or Down - January 12, 12:50AM-12:55AM ET
+1157627: Ethereum Up or Down - January 12, 12:50AM-12:55AM ET
+1157628: Solana Up or Down - January 12, 12:50AM-12:55AM ET
+1157629: Bitcoin Up or Down - January 13, 1AM ET
+1157630: Ethereum Up or Down - January 13, 1AM ET
+1157631: Solana Up or Down - January 13, 1AM ET
+1157632: XRP Up or Down - January 13, 1AM ET
+1157633: Fearnley vs. Vukic: Set 1 Games O/U 8.5
+1157634: Fearnley vs. Vukic: Total Sets O/U 2.5
+1157635: Set 1 Winner: Fearnley vs Vukic
+1157636: Fearnley vs. Vukic: Match O/U 21.5
+1157637: Fearnley vs. Vukic: Set 1 Games O/U 9.5
+1157638: Fearnley vs. Vukic: Match O/U 22.5
+1157639: Fearnley vs. Vukic: Match O/U 23.5
+1157640: Fearnley vs. Vukic: Set 1 Games O/U 10.5
+1157641: Spread: Olympique de Marseille (-1.5)
+1157642: Olympique de Marseille vs. Racing Club de Lens: O/U 1.5
+1157643: Olympique de Marseille vs. Racing Club de Lens: O/U 2.5
+1157644: Olympique de Marseille vs. Racing Club de Lens: O/U 3.5
+1157645: US Lecce vs. SS Lazio: O/U 1.5
+1157646: Olympique de Marseille vs. Racing Club de Lens: O/U 4.5
+1157647: US Lecce vs. SS Lazio: O/U 2.5
+1157648: Olympique de Marseille vs. Racing Club de Lens: Both Teams to Score
+1157649: US Lecce vs. SS Lazio: O/U 3.5
+1157650: US Lecce vs. SS Lazio: O/U 4.5
+1157651: US Lecce vs. SS Lazio: Both Teams to Score
+1157652: 1. FC Union Berlin vs. BV Borussia 09 Dortmund: O/U 1.5
+1157653: 1. FC Union Berlin vs. BV Borussia 09 Dortmund: O/U 2.5
+1157654: 1. FC Union Berlin vs. BV Borussia 09 Dortmund: O/U 3.5
+1157655: Spread: Liverpool FC (-1.5)
+1157656: AFC Bournemouth vs. Liverpool FC: O/U 1.5
+1157657: 1. FC Union Berlin vs. BV Borussia 09 Dortmund: O/U 4.5
+1157658: AFC Bournemouth vs. Liverpool FC: O/U 2.5
+1157659: AFC Bournemouth vs. Liverpool FC: O/U 3.5
+1157660: 1. FC Union Berlin vs. BV Borussia 09 Dortmund: Both Teams to Score
+1157661: AFC Bournemouth vs. Liverpool FC: O/U 4.5
+1157662: AFC Bournemouth vs. Liverpool FC: Both Teams to Score
+1157663: Misolic vs. Shevchenko: Set 1 Games O/U 8.5
+1157664: Misolic vs. Shevchenko: Total Sets O/U 2.5
+1157665: Misolic vs. Shevchenko: Match O/U 21.5
+1157666: Set 1 Winner: Misolic vs Shevchenko
+1157667: Misolic vs. Shevchenko: Set 1 Games O/U 9.5
+1157668: Misolic vs. Shevchenko: Match O/U 22.5
+1157669: Misolic vs. Shevchenko: Set 1 Games O/U 10.5
+1157670: Misolic vs. Shevchenko: Match O/U 23.5
+1157671: Spread: AS Monaco FC (-1.5)
+1157672: ACF Fiorentina vs. Cagliari Calcio: O/U 1.5
+1157673: Le Havre AC vs. AS Monaco FC: O/U 1.5
+1157674: ACF Fiorentina vs. Cagliari Calcio: O/U 2.5
+1157675: Le Havre AC vs. AS Monaco FC: O/U 2.5
+1157676: Le Havre AC vs. AS Monaco FC: O/U 3.5
+1157677: ACF Fiorentina vs. Cagliari Calcio: O/U 3.5
+1157678: Le Havre AC vs. AS Monaco FC: O/U 4.5
+1157679: Le Havre AC vs. AS Monaco FC: Both Teams to Score
+1157680: ACF Fiorentina vs. Cagliari Calcio: O/U 4.5
+1157681: ACF Fiorentina vs. Cagliari Calcio: Both Teams to Score
+1157682: FC Bayern München vs. FC Augsburg: O/U 1.5
+1157683: FC Bayern München vs. FC Augsburg: O/U 2.5
+1157684: FC Bayern München vs. FC Augsburg: O/U 3.5
+1157685: FC Bayern München vs. FC Augsburg: O/U 4.5
+1157686: Spread: Manchester City FC (-2.5)
+1157687: FC Bayern München vs. FC Augsburg: Both Teams to Score
+1157688: Manchester City FC vs. Wolverhampton Wanderers FC: O/U 1.5
+1157689: Manchester City FC vs. Wolverhampton Wanderers FC: O/U 2.5
+1157690: Manchester City FC vs. Wolverhampton Wanderers FC: O/U 3.5
+1157691: Manchester City FC vs. Wolverhampton Wanderers FC: O/U 4.5
+1157692: Manchester City FC vs. Wolverhampton Wanderers FC: Both Teams to Score
+1157693: Como 1907 vs. Torino FC: O/U 1.5
+1157694: Como 1907 vs. Torino FC: O/U 2.5
+1157695: Spread: Stade Rennais FC 1901 (-1.5)
+1157696: Como 1907 vs. Torino FC: O/U 3.5
+1157697: Stade Rennais FC 1901 vs. FC Lorient: O/U 1.5
+1157698: Como 1907 vs. Torino FC: O/U 4.5
+1157699: Stade Rennais FC 1901 vs. FC Lorient: O/U 2.5
+1157700: Como 1907 vs. Torino FC: Both Teams to Score
+1157701: Stade Rennais FC 1901 vs. FC Lorient: O/U 3.5
+1157702: Stade Rennais FC 1901 vs. FC Lorient: O/U 4.5
+1157703: Stade Rennais FC 1901 vs. FC Lorient: Both Teams to Score
+1157704: 1. FC Heidenheim 1846 vs. RB Leipzig: O/U 1.5
+1157705: 1. FC Heidenheim 1846 vs. RB Leipzig: O/U 2.5
+1157706: 1. FC Heidenheim 1846 vs. RB Leipzig: O/U 3.5
+1157707: 1. FC Heidenheim 1846 vs. RB Leipzig: O/U 4.5
+1157708: 1. FC Heidenheim 1846 vs. RB Leipzig: Both Teams to Score
+1157709: Spread: Fulham FC (-1.5)
+1157710: Fulham FC vs. Brighton & Hove Albion FC: O/U 1.5
+1157711: Fulham FC vs. Brighton & Hove Albion FC: O/U 2.5
+1157712: Fulham FC vs. Brighton & Hove Albion FC: O/U 3.5
+1157713: Fulham FC vs. Brighton & Hove Albion FC: O/U 4.5
+1157714: Fulham FC vs. Brighton & Hove Albion FC: Both Teams to Score
+1157715: 1. FSV Mainz 05 vs. VfL Wolfsburg: O/U 1.5
+1157716: 1. FSV Mainz 05 vs. VfL Wolfsburg: O/U 2.5
+1157717: 1. FSV Mainz 05 vs. VfL Wolfsburg: O/U 3.5
+1157718: 1. FSV Mainz 05 vs. VfL Wolfsburg: O/U 4.5
+1157719: 1. FSV Mainz 05 vs. VfL Wolfsburg: Both Teams to Score
+1157720: Spread: Tottenham Hotspur FC (-1.5)
+1157721: Burnley FC vs. Tottenham Hotspur FC: O/U 1.5
+1157722: Burnley FC vs. Tottenham Hotspur FC: O/U 2.5
+1157723: Burnley FC vs. Tottenham Hotspur FC: O/U 3.5
+1157724: Burnley FC vs. Tottenham Hotspur FC: O/U 4.5
+1157725: Burnley FC vs. Tottenham Hotspur FC: Both Teams to Score
+1157726: Eintracht Frankfurt vs. TSG 1899 Hoffenheim: O/U 1.5
+1157727: Eintracht Frankfurt vs. TSG 1899 Hoffenheim: O/U 2.5
+1157728: Eintracht Frankfurt vs. TSG 1899 Hoffenheim: O/U 3.5
+1157729: Spread: West Ham United FC (-1.5)
+1157730: Eintracht Frankfurt vs. TSG 1899 Hoffenheim: O/U 4.5
+1157731: West Ham United FC vs. Sunderland AFC: O/U 1.5
+1157732: Eintracht Frankfurt vs. TSG 1899 Hoffenheim: Both Teams to Score
+1157733: West Ham United FC vs. Sunderland AFC: O/U 2.5
+1157734: West Ham United FC vs. Sunderland AFC: O/U 3.5
+1157735: West Ham United FC vs. Sunderland AFC: O/U 4.5
+1157736: West Ham United FC vs. Sunderland AFC: Both Teams to Score
+1157737: Bayer 04 Leverkusen vs. SV Werder Bremen: O/U 1.5
+1157738: Bayer 04 Leverkusen vs. SV Werder Bremen: O/U 2.5
+1157739: Bayer 04 Leverkusen vs. SV Werder Bremen: O/U 3.5
+1157740: Bayer 04 Leverkusen vs. SV Werder Bremen: O/U 4.5
+1157741: Bayer 04 Leverkusen vs. SV Werder Bremen: Both Teams to Score
+1157742: Ethereum Up or Down - January 12, 12:55AM-1:00AM ET
+1157743: Bitcoin Up or Down - January 12, 12:55AM-1:00AM ET
+1157744: Bitcoin Up or Down - January 12, 1:00AM-1:15AM ET
+1157745: Solana Up or Down - January 12, 12:55AM-1:00AM ET
+1157746: XRP Up or Down - January 12, 1:00AM-1:15AM ET
+1157747: XRP Up or Down - January 12, 12:55AM-1:00AM ET
+1157748: Ethereum Up or Down - January 12, 1:00AM-1:15AM ET
+1157749: Solana Up or Down - January 12, 1:00AM-1:05AM ET
+1157750: XRP Up or Down - January 12, 1:00AM-1:05AM ET
+1157751: Bitcoin Up or Down - January 12, 1:00AM-1:05AM ET
+1157752: Ethereum Up or Down - January 12, 1:00AM-1:05AM ET
+1157753: Jalen Brunson: Points Over 27.5
+1157754: Deni Avdija: Points Over 25.5
+1157755: Karl-Anthony Towns: Points Over 20.5
+1157756: Shaedon Sharpe: Points Over 20.5
+1157757: OG Anunoby: Points Over 14.5
+1157758: Mikal Bridges: Points Over 14.5
+1157759: Toumani Camara: Points Over 13.5
+1157760: Miles McBride: Points Over 11.5
+1157761: Donovan Clingan: Points Over 10.5
+1157762: Jrue Holiday: Points Over 10.5
+1157763: Donovan Clingan: Rebounds Over 11.5
+1157764: Karl-Anthony Towns: Rebounds Over 10.5
+1157765: Mitchell Robinson: Rebounds Over 8.5
+1157766: Deni Avdija: Rebounds Over 7.5
+1157767: Josh Hart: Rebounds Over 6.5
+1157768: OG Anunoby: Rebounds Over 4.5
+1157769: Mikal Bridges: Rebounds Over 4.5
+1157770: Toumani Camara: Rebounds Over 4.5
+1157771: Jalen Brunson: Rebounds Over 3.5
+1157772: Shaedon Sharpe: Rebounds Over 3.5
+1157773: Jalen Brunson: Assists Over 6.5
+1157774: Deni Avdija: Assists Over 6.5
+1157775: Jrue Holiday: Assists Over 5.5
+1157776: Mikal Bridges: Assists Over 4.5
+1157777: Josh Hart: Assists Over 4.5
+1157778: Karl-Anthony Towns: Assists Over 2.5
+1157779: Shaedon Sharpe: Assists Over 2.5
+1157780: Toumani Camara: Assists Over 2.5
+1157781: Miles McBride: Assists Over 2.5
+1157782: OG Anunoby: Assists Over 1.5
+1157783: 1H Spread: Timberwolves (-1.5)
+1157784: Spurs vs. Timberwolves: 1H O/U 121.5
+1157785: Spurs vs. Timberwolves: 1H Moneyline
+1157786: Anthony Edwards: Points Over 28.5
+1157787: Julius Randle: Points Over 21.5
+1157788: Victor Wembanyama: Points Over 21.5
+1157789: De'Aaron Fox: Points Over 19.5
+1157790: Stephon Castle: Points Over 15.5
+1157791: Jaden McDaniels: Points Over 14.5
+1157792: Donte DiVincenzo: Points Over 13.5
+1157793: Naz Reid: Points Over 13.5
+1157794: Julian Champagnie: Points Over 12.5
+1157795: Keldon Johnson: Points Over 12.5
+1157796: Rudy Gobert: Rebounds Over 10.5
+1157797: Victor Wembanyama: Rebounds Over 9.5
+1157798: Julius Randle: Rebounds Over 6.5
+1157799: Julian Champagnie: Rebounds Over 6.5
+1157800: Keldon Johnson: Rebounds Over 6.5
+1157801: Naz Reid: Rebounds Over 5.5
+1157802: Luke Kornet: Rebounds Over 5.5
+1157803: Anthony Edwards: Rebounds Over 5.5
+1157804: Stephon Castle: Rebounds Over 4.5
+1157805: Donte DiVincenzo: Rebounds Over 4.5
+1157806: Stephon Castle: Assists Over 6.5
+1157807: De'Aaron Fox: Assists Over 5.5
+1157808: Julius Randle: Assists Over 5.5
+1157809: Donte DiVincenzo: Assists Over 4.5
+1157810: Dylan Harper: Assists Over 3.5
+1157811: Anthony Edwards: Assists Over 3.5
+1157812: Victor Wembanyama: Assists Over 2.5
+1157813: Jaden McDaniels: Assists Over 2.5
+1157814: Naz Reid: Assists Over 2.5
+1157815: Alexandre Sarr: Points Over 16.5
+1157816: Kyshawn George: Points Over 13.5
+1157817: Tre Johnson: Points Over 12.5
+1157818: Alexandre Sarr: Rebounds Over 7.5
+1157819: Justin Champagnie: Rebounds Over 6.5
+1157820: Bilal Coulibaly: Rebounds Over 4.5
+1157821: Bub Carrington: Assists Over 4.5
+1157822: Kyshawn George: Assists Over 3.5
+1157823: Alexandre Sarr: Assists Over 2.5
+1157824: Khris Middleton: Assists Over 2.5
+1157825: Bilal Coulibaly: Assists Over 2.5
+1157826: Tre Johnson: Assists Over 2.5
+1157827: Hawks vs. Warriors: O/U 233.5
+1157828: Draymond Green: Assists Over 6.5
+1157829: Bitcoin Up or Down - January 12, 1:05AM-1:10AM ET
+1157830: Solana Up or Down - January 12, 1:05AM-1:10AM ET
+1157831: XRP Up or Down - January 12, 1:05AM-1:10AM ET
+1157832: Ethereum Up or Down - January 12, 1:05AM-1:10AM ET
+1157833: XRP Up or Down - January 12, 1:15AM-1:30AM ET
+1157834: Bitcoin Up or Down - January 12, 1:15AM-1:30AM ET
+1157835: Ethereum Up or Down - January 12, 1:15AM-1:30AM ET
+1157836: XRP Up or Down - January 12, 1:10AM-1:15AM ET
+1157837: Ethereum Up or Down - January 12, 1:10AM-1:15AM ET
+1157838: Bitcoin Up or Down - January 12, 1:10AM-1:15AM ET
+1157839: Solana Up or Down - January 12, 1:10AM-1:15AM ET
+1157840: Series: Team Falcons Kill Handicap (-27.5)
+1157901: XRP Up or Down - January 12, 1:15AM-1:20AM ET
+1157902: Bitcoin Up or Down - January 12, 1:15AM-1:20AM ET
+1157903: Solana Up or Down - January 12, 1:15AM-1:20AM ET
+1157904: Ethereum Up or Down - January 12, 1:15AM-1:20AM ET
+1157905: Series: Aurora Kill Handicap (-16.5)
+1157906: Series: Aurora Kill Handicap (-20.5)
+1157912: Solana Up or Down - January 12, 1:20AM-1:25AM ET
+1157913: Bitcoin Up or Down - January 12, 1:20AM-1:25AM ET
+1157914: Ethereum Up or Down - January 12, 1:20AM-1:25AM ET
+1157915: XRP Up or Down - January 12, 1:20AM-1:25AM ET
+1157916: Dota 2: Looking for Org vs Heroic (BO3)
+1157917: Dota 2: Looking for Org vs Heroic - Game 1 Winner
+1157918: Dota 2: Looking for Org vs Heroic - Game 2 Winner
+1157919: Games Total: O/U 2.5
+1157920: Game Handicap: HEROIC (-1.5)
+1157921: Counter-Strike: M80 vs Voca (BO3)
+1157922: Counter-Strike: M80 vs Voca - Map 1 Winner
+1157923: Heroic to win 1 games?
+1157924: Counter-Strike: M80 vs Voca - Map 2 Winner
+1157925: Heroic to win 2 games?

@@ -1,0 +1,523 @@
+You are a market categorization expert. Categorize each market into EXACTLY ONE category:
+
+Categories:
+- **Politics** (elections, politicians, government policy, immigration, foreign relations, tariffs, political figures)
+- **Finance** (Fed rates, inflation, GDP, unemployment, economic indicators, government budget/spending, revenue)
+- **Crypto** (Bitcoin, Ethereum, crypto prices, blockchain, tokens, DeFi)
+- **Sports** (NFL, NBA, MLB, NHL, soccer, tennis, UFC, boxing, any sports)
+- **Other** (entertainment, weather, science, tech companies, celebrities, gaming, TV shows, everything else)
+
+Rules:
+1. DOGE/budget cuts → Finance
+2. Trump deportation/immigration → Politics
+3. Trump as president (policy) → Politics
+4. GTA/gaming → Other
+5. Celebrity/music → Other
+6. Court cases → Other
+7. Weather/climate → Other
+
+Return ONLY valid JSON, no explanations:
+{{"id": "category", "id": "category", ...}}
+
+Markets to categorize:
+
+1102510: Nottingham Forest FC vs. Arsenal FC: Both Teams to Score
+1102511: Cagliari Calcio vs. Juventus FC: O/U 3.5
+1102512: Cagliari Calcio vs. Juventus FC: O/U 4.5
+1102513: BV Borussia 09 Dortmund vs. FC St. Pauli 1910: O/U 2.5
+1102514: Cagliari Calcio vs. Juventus FC: Both Teams to Score
+1102515: BV Borussia 09 Dortmund vs. FC St. Pauli 1910: O/U 3.5
+1102516: BV Borussia 09 Dortmund vs. FC St. Pauli 1910: O/U 4.5
+1102517: BV Borussia 09 Dortmund vs. FC St. Pauli 1910: Both Teams to Score
+1102526: Leeds United FC vs. Fulham FC: O/U 1.5
+1102527: Leeds United FC vs. Fulham FC: O/U 2.5
+1102528: Leeds United FC vs. Fulham FC: O/U 3.5
+1102529: Spread: Racing Club de Lens (-1.5)
+1102530: Racing Club de Lens vs. AJ Auxerre: O/U 1.5
+1102531: Leeds United FC vs. Fulham FC: O/U 4.5
+1102532: Racing Club de Lens vs. AJ Auxerre: O/U 2.5
+1102533: Leeds United FC vs. Fulham FC: Both Teams to Score
+1102534: Racing Club de Lens vs. AJ Auxerre: O/U 3.5
+1102535: Racing Club de Lens vs. AJ Auxerre: O/U 4.5
+1102536: SSC Napoli vs. US Sassuolo Calcio: O/U 1.5
+1102537: Racing Club de Lens vs. AJ Auxerre: Both Teams to Score
+1102538: SSC Napoli vs. US Sassuolo Calcio: O/U 2.5
+1102539: SSC Napoli vs. US Sassuolo Calcio: O/U 3.5
+1102540: SSC Napoli vs. US Sassuolo Calcio: O/U 4.5
+1102541: SSC Napoli vs. US Sassuolo Calcio: Both Teams to Score
+1102542: VfL Wolfsburg vs. 1. FC Heidenheim 1846: O/U 1.5
+1102543: VfL Wolfsburg vs. 1. FC Heidenheim 1846: O/U 2.5
+1102544: VfL Wolfsburg vs. 1. FC Heidenheim 1846: O/U 3.5
+1102545: VfL Wolfsburg vs. 1. FC Heidenheim 1846: O/U 4.5
+1102546: VfL Wolfsburg vs. 1. FC Heidenheim 1846: Both Teams to Score
+1102547: Chelsea FC vs. Brentford FC: O/U 1.5
+1102548: Chelsea FC vs. Brentford FC: O/U 2.5
+1102549: Chelsea FC vs. Brentford FC: O/U 3.5
+1102550: Chelsea FC vs. Brentford FC: O/U 4.5
+1102551: Chelsea FC vs. Brentford FC: Both Teams to Score
+1102552: Udinese Calcio vs. FC Internazionale Milano: O/U 1.5
+1102553: Udinese Calcio vs. FC Internazionale Milano: O/U 2.5
+1102554: Udinese Calcio vs. FC Internazionale Milano: O/U 3.5
+1102555: Udinese Calcio vs. FC Internazionale Milano: O/U 4.5
+1102556: Udinese Calcio vs. FC Internazionale Milano: Both Teams to Score
+1102557: 1. FC Köln vs. 1. FSV Mainz 05: O/U 1.5
+1102558: 1. FC Köln vs. 1. FSV Mainz 05: O/U 2.5
+1102559: 1. FC Köln vs. 1. FSV Mainz 05: O/U 3.5
+1102560: 1. FC Köln vs. 1. FSV Mainz 05: O/U 4.5
+1102561: 1. FC Köln vs. 1. FSV Mainz 05: Both Teams to Score
+1102562: Sunderland AFC vs. Crystal Palace FC: O/U 1.5
+1102563: Sunderland AFC vs. Crystal Palace FC: O/U 2.5
+1102564: Sunderland AFC vs. Crystal Palace FC: O/U 3.5
+1102565: Sunderland AFC vs. Crystal Palace FC: O/U 4.5
+1102566: Sunderland AFC vs. Crystal Palace FC: Both Teams to Score
+1102567: TSG 1899 Hoffenheim vs. Bayer 04 Leverkusen: O/U 1.5
+1102568: TSG 1899 Hoffenheim vs. Bayer 04 Leverkusen: O/U 2.5
+1102569: TSG 1899 Hoffenheim vs. Bayer 04 Leverkusen: O/U 3.5
+1102570: TSG 1899 Hoffenheim vs. Bayer 04 Leverkusen: O/U 4.5
+1102571: TSG 1899 Hoffenheim vs. Bayer 04 Leverkusen: Both Teams to Score
+1102572: Tottenham Hotspur FC vs. West Ham United FC: O/U 1.5
+1102573: Tottenham Hotspur FC vs. West Ham United FC: O/U 2.5
+1102574: Tottenham Hotspur FC vs. West Ham United FC: O/U 3.5
+1102575: Tottenham Hotspur FC vs. West Ham United FC: O/U 4.5
+1102576: Tottenham Hotspur FC vs. West Ham United FC: Both Teams to Score
+1102577: Hamburger SV vs. Borussia Mönchengladbach: O/U 1.5
+1102578: Hamburger SV vs. Borussia Mönchengladbach: O/U 2.5
+1102579: Hamburger SV vs. Borussia Mönchengladbach: O/U 3.5
+1102580: Hamburger SV vs. Borussia Mönchengladbach: O/U 4.5
+1102581: Hamburger SV vs. Borussia Mönchengladbach: Both Teams to Score
+1102582: Liverpool FC vs. Burnley FC: O/U 1.5
+1102583: Liverpool FC vs. Burnley FC: O/U 2.5
+1102584: Liverpool FC vs. Burnley FC: O/U 3.5
+1102585: Liverpool FC vs. Burnley FC: O/U 4.5
+1102586: Liverpool FC vs. Burnley FC: Both Teams to Score
+1102587: Manchester United FC vs. Manchester City FC: O/U 1.5
+1102588: Manchester United FC vs. Manchester City FC: O/U 2.5
+1102589: Manchester United FC vs. Manchester City FC: O/U 3.5
+1102590: Manchester United FC vs. Manchester City FC: O/U 4.5
+1102591: Manchester United FC vs. Manchester City FC: Both Teams to Score
+1102806: Will AD Ceuta FC win on 2026-01-17?
+1102807: Will AD Ceuta FC vs. Real Valladolid CF end in a draw?
+1102808: Will Real Valladolid CF win on 2026-01-17?
+1102809: Will Real Madrid CF win on 2026-01-17?
+1102810: Will Real Madrid CF vs. Levante UD end in a draw?
+1102811: Will Levante UD win on 2026-01-17?
+1102813: NAC Breda vs. NEC: O/U 1.5
+1102814: NAC Breda vs. NEC: O/U 2.5
+1102815: NAC Breda vs. NEC: O/U 3.5
+1102816: Will Cultural y Deportiva Leonesa win on 2026-01-17?
+1102817: NAC Breda vs. NEC: O/U 4.5
+1102818: Will Cultural y Deportiva Leonesa vs. Real Sporting de Gijón end in a draw?
+1102819: NAC Breda vs. NEC: Both Teams to Score
+1102820: Will Real Sporting de Gijón win on 2026-01-17?
+1102821: Will RCD Mallorca win on 2026-01-17?
+1102822: Will RCD Mallorca vs. Athletic Club end in a draw?
+1102823: Will Athletic Club win on 2026-01-17?
+1102835: Will Real Zaragoza win on 2026-01-17?
+1102836: Fortuna Sittard vs. PSV: O/U 1.5
+1102837: Will Real Zaragoza vs. Real Sociedad de Fútbol B end in a draw?
+1102838: Fortuna Sittard vs. PSV: O/U 2.5
+1102839: Will Real Sociedad de Fútbol B win on 2026-01-17?
+1102840: Fortuna Sittard vs. PSV: O/U 3.5
+1102841: Will CA Osasuna win on 2026-01-17?
+1102842: Fortuna Sittard vs. PSV: O/U 4.5
+1102843: Will CA Osasuna vs. Real Oviedo end in a draw?
+1102844: Will Real Oviedo win on 2026-01-17?
+1102845: Fortuna Sittard vs. PSV: Both Teams to Score
+1102857: Will UD Almería win on 2026-01-17?
+1102858: Will UD Almería vs. RC Deportivo La Coruña end in a draw?
+1102859: Will RC Deportivo La Coruña win on 2026-01-17?
+1102860: Will Real Betis Balompié win on 2026-01-17?
+1102861: Will Real Betis Balompié vs. Villarreal CF end in a draw?
+1102862: Will Villarreal CF win on 2026-01-17?
+1102863: PEC Zwolle vs. AZ: O/U 1.5
+1102864: PEC Zwolle vs. AZ: O/U 2.5
+1102865: PEC Zwolle vs. AZ: O/U 3.5
+1102866: PEC Zwolle vs. AZ: O/U 4.5
+1102867: PEC Zwolle vs. AZ: Both Teams to Score
+1102872: AFC Ajax vs. Go Ahead Eagles: O/U 1.5
+1102873: AFC Ajax vs. Go Ahead Eagles: O/U 2.5
+1102874: AFC Ajax vs. Go Ahead Eagles: O/U 3.5
+1102875: AFC Ajax vs. Go Ahead Eagles: O/U 4.5
+1102876: AFC Ajax vs. Go Ahead Eagles: Both Teams to Score
+1103140: Will ES Troyes AC win on 2026-01-17?
+1103141: Will ES Troyes AC vs. Stade de Reims end in a draw?
+1103142: Will Stade de Reims win on 2026-01-17?
+1103144: Will Grenoble Foot 38 win on 2026-01-17?
+1103145: Will Grenoble Foot 38 vs. Red Star FC end in a draw?
+1103146: Will Red Star FC win on 2026-01-17?
+1103147: Will AS Saint-Étienne win on 2026-01-17?
+1103148: Will AS Saint-Étienne vs. Clermont Foot 63 end in a draw?
+1103149: Will Clermont Foot 63 win on 2026-01-17?
+1103150: Real Betis Balompié vs. Villarreal CF: O/U 1.5
+1103151: Real Betis Balompié vs. Villarreal CF: O/U 2.5
+1103152: Real Betis Balompié vs. Villarreal CF: O/U 3.5
+1103153: Real Betis Balompié vs. Villarreal CF: O/U 4.5
+1103154: Real Betis Balompié vs. Villarreal CF: Both Teams to Score
+1103155: CA Osasuna vs. Real Oviedo: O/U 1.5
+1103156: CA Osasuna vs. Real Oviedo: O/U 2.5
+1103157: CA Osasuna vs. Real Oviedo: O/U 3.5
+1103158: CA Osasuna vs. Real Oviedo: O/U 4.5
+1103159: CA Osasuna vs. Real Oviedo: Both Teams to Score
+1103160: RCD Mallorca vs. Athletic Club: O/U 1.5
+1103161: RCD Mallorca vs. Athletic Club: O/U 2.5
+1103162: RCD Mallorca vs. Athletic Club: O/U 3.5
+1103163: RCD Mallorca vs. Athletic Club: O/U 4.5
+1103164: RCD Mallorca vs. Athletic Club: Both Teams to Score
+1103165: Real Madrid CF vs. Levante UD: O/U 1.5
+1103166: Real Madrid CF vs. Levante UD: O/U 2.5
+1103167: Real Madrid CF vs. Levante UD: O/U 3.5
+1103168: Real Madrid CF vs. Levante UD: O/U 4.5
+1103169: Real Madrid CF vs. Levante UD: Both Teams to Score
+1103334: Will AC Monza win on 2026-01-17?
+1103335: Will AC Monza vs. Frosinone Calcio end in a draw?
+1103336: Will Frosinone Calcio win on 2026-01-17?
+1103337: Club Tijuana vs. Atlético San Luis: O/U 1.5
+1103338: Club Tijuana vs. Atlético San Luis: O/U 2.5
+1103339: Club Tijuana vs. Atlético San Luis: O/U 3.5
+1103340: Club Tijuana vs. Atlético San Luis: O/U 4.5
+1103341: Club Tijuana vs. Atlético San Luis: Both Teams to Score
+1103343: LoL: Top Esports vs Bilibili Gaming (BO3)
+1103344: LoL: Top Esports vs Bilibili Gaming - Game 1 Winner
+1103345: LoL: Top Esports vs Bilibili Gaming - Game 2 Winner
+1103346: Games Total: O/U 2.5
+1103347: Game Handicap: BLG (-1.5)
+1103348: Will US Avellino 1912 win on 2026-01-17?
+1103349: Bilibili Gaming to win 0 games?
+1103350: Bilibili Gaming to win 1 games?
+1103351: Bilibili Gaming to win 2 games?
+1103352: Will US Avellino 1912 vs. Carrarese Calcio end in a draw?
+1103353: Will Carrarese Calcio win on 2026-01-17?
+1103354: Top Esports to win 1 games?
+1103355: Top Esports to win 0 games?
+1103356: Top Esports to win 2 games?
+1103357: CF Cruz Azul vs. Club Puebla: O/U 1.5
+1103358: CF Cruz Azul vs. Club Puebla: O/U 2.5
+1103360: CF Cruz Azul vs. Club Puebla: O/U 3.5
+1103361: CF Cruz Azul vs. Club Puebla: O/U 4.5
+1103362: Will Calcio Padova win on 2026-01-17?
+1103363: CF Cruz Azul vs. Club Puebla: Both Teams to Score
+1103364: Will Calcio Padova vs. Mantova 1911 end in a draw?
+1103365: Will Mantova 1911 win on 2026-01-17?
+1103366: Tigres de la UANL vs. Deportivo Toluca FC: O/U 1.5
+1103367: Will Venezia FC win on 2026-01-17?
+1103368: Tigres de la UANL vs. Deportivo Toluca FC: O/U 2.5
+1103369: Will Venezia FC vs. US Catanzaro 1929 end in a draw?
+1103370: Tigres de la UANL vs. Deportivo Toluca FC: O/U 3.5
+1103371: Will US Catanzaro 1929 win on 2026-01-17?
+1103372: Tigres de la UANL vs. Deportivo Toluca FC: O/U 4.5
+1103373: Tigres de la UANL vs. Deportivo Toluca FC: Both Teams to Score
+1103374: Will Empoli FC win on 2026-01-17?
+1103375: Will Empoli FC vs. FC Südtirol end in a draw?
+1103376: Will FC Südtirol win on 2026-01-17?
+1103377: CD Guadalajara vs. Querétaro FC: O/U 1.5
+1103378: CD Guadalajara vs. Querétaro FC: O/U 2.5
+1103379: CD Guadalajara vs. Querétaro FC: O/U 3.5
+1103380: CD Guadalajara vs. Querétaro FC: O/U 4.5
+1103381: CD Guadalajara vs. Querétaro FC: Both Teams to Score
+1103382: Will AC Reggiana 1919 win on 2026-01-17?
+1103383: Will AC Reggiana 1919 vs. Cesena FC end in a draw?
+1103384: Will Cesena FC win on 2026-01-17?
+1103385: Club Necaxa vs. Atlas FC: O/U 1.5
+1103386: Club Necaxa vs. Atlas FC: O/U 2.5
+1103387: Club Necaxa vs. Atlas FC: O/U 3.5
+1103388: Club Necaxa vs. Atlas FC: O/U 4.5
+1103389: Club Necaxa vs. Atlas FC: Both Teams to Score
+1103390: Will SSC Bari win on 2026-01-17?
+1103391: Will SSC Bari vs. SS Juve Stabia end in a draw?
+1103392: Will SS Juve Stabia win on 2026-01-17?
+1103743: LoL: Anyone's Legend vs JD Gaming (BO3)
+1103744: LoL: Anyone's Legend vs JD Gaming - Game 1 Winner
+1103745: LoL: Anyone's Legend vs JD Gaming - Game 2 Winner
+1103746: Games Total: O/U 2.5
+1103979: Swansea City AFC vs. Birmingham City FC: O/U 1.5
+1103980: Swansea City AFC vs. Birmingham City FC: O/U 2.5
+1103981: Swansea City AFC vs. Birmingham City FC: O/U 3.5
+1103982: Swansea City AFC vs. Birmingham City FC: O/U 4.5
+1103983: Swansea City AFC vs. Birmingham City FC: Both Teams to Score
+1103992: Southampton FC vs. Hull City AFC: O/U 1.5
+1103993: Southampton FC vs. Hull City AFC: O/U 2.5
+1103994: Southampton FC vs. Hull City AFC: O/U 3.5
+1103995: Southampton FC vs. Hull City AFC: O/U 4.5
+1103996: Southampton FC vs. Hull City AFC: Both Teams to Score
+1103997: Charlton Athletic FC vs. Sheffield United FC: O/U 1.5
+1103998: Charlton Athletic FC vs. Sheffield United FC: O/U 2.5
+1103999: Charlton Athletic FC vs. Sheffield United FC: O/U 3.5
+1104000: Charlton Athletic FC vs. Sheffield United FC: O/U 4.5
+1104001: Charlton Athletic FC vs. Sheffield United FC: Both Teams to Score
+1104011: Wrexham AFC vs. Norwich City FC: O/U 1.5
+1104012: Wrexham AFC vs. Norwich City FC: O/U 2.5
+1104013: Wrexham AFC vs. Norwich City FC: O/U 3.5
+1104014: Wrexham AFC vs. Norwich City FC: O/U 4.5
+1104015: Wrexham AFC vs. Norwich City FC: Both Teams to Score
+1104033: Stoke City FC vs. Queens Park Rangers FC: O/U 1.5
+1104034: Stoke City FC vs. Queens Park Rangers FC: O/U 2.5
+1104035: Stoke City FC vs. Queens Park Rangers FC: O/U 3.5
+1104036: Stoke City FC vs. Queens Park Rangers FC: O/U 4.5
+1104037: Stoke City FC vs. Queens Park Rangers FC: Both Teams to Score
+1104047: Sheffield Wednesday FC vs. Portsmouth FC: O/U 1.5
+1104048: Sheffield Wednesday FC vs. Portsmouth FC: O/U 2.5
+1104049: Sheffield Wednesday FC vs. Portsmouth FC: O/U 3.5
+1104050: Sheffield Wednesday FC vs. Portsmouth FC: O/U 4.5
+1104051: Sheffield Wednesday FC vs. Portsmouth FC: Both Teams to Score
+1104061: Oxford United FC vs. Bristol City FC: O/U 1.5
+1104062: Oxford United FC vs. Bristol City FC: O/U 2.5
+1104063: Oxford United FC vs. Bristol City FC: O/U 3.5
+1104064: Oxford United FC vs. Bristol City FC: O/U 4.5
+1104065: Oxford United FC vs. Bristol City FC: Both Teams to Score
+1104075: Preston North End FC vs. Derby County FC: O/U 1.5
+1104076: Preston North End FC vs. Derby County FC: O/U 2.5
+1104077: Preston North End FC vs. Derby County FC: O/U 3.5
+1104078: Preston North End FC vs. Derby County FC: O/U 4.5
+1104079: Preston North End FC vs. Derby County FC: Both Teams to Score
+1104096: Watford FC vs. Millwall FC: O/U 1.5
+1104097: Watford FC vs. Millwall FC: O/U 2.5
+1104098: Watford FC vs. Millwall FC: O/U 3.5
+1104099: Watford FC vs. Millwall FC: O/U 4.5
+1104100: Watford FC vs. Millwall FC: Both Teams to Score
+1104114: Coventry City FC vs. Leicester City FC: O/U 1.5
+1104117: Coventry City FC vs. Leicester City FC: O/U 2.5
+1104120: Coventry City FC vs. Leicester City FC: O/U 3.5
+1104121: Coventry City FC vs. Leicester City FC: O/U 4.5
+1104122: Coventry City FC vs. Leicester City FC: Both Teams to Score
+1104133: Ipswich Town FC vs. Blackburn Rovers FC: O/U 1.5
+1104134: Ipswich Town FC vs. Blackburn Rovers FC: O/U 2.5
+1104135: Ipswich Town FC vs. Blackburn Rovers FC: O/U 3.5
+1104136: Ipswich Town FC vs. Blackburn Rovers FC: O/U 4.5
+1104137: Ipswich Town FC vs. Blackburn Rovers FC: Both Teams to Score
+1104378: Florida Atlantic Owls vs. Tulane Green Wave: O/U 153.5
+1104382: Spread: Richmond Spiders (-2.5)
+1104584: Spread: Siena Saints (-8.5)
+1104594: Spread: Kennesaw State Owls (-7.5)
+1104688: Hertha BSC vs. FC Schalke 04: O/U 1.5
+1104689: Hertha BSC vs. FC Schalke 04: O/U 2.5
+1104690: Hertha BSC vs. FC Schalke 04: O/U 3.5
+1104691: Hertha BSC vs. FC Schalke 04: O/U 4.5
+1104692: Hertha BSC vs. FC Schalke 04: Both Teams to Score
+1104693: SG Dynamo Dresden vs. SpVgg Greuther Fürth: O/U 1.5
+1104694: SG Dynamo Dresden vs. SpVgg Greuther Fürth: O/U 2.5
+1104695: SG Dynamo Dresden vs. SpVgg Greuther Fürth: O/U 3.5
+1104696: SG Dynamo Dresden vs. SpVgg Greuther Fürth: O/U 4.5
+1104697: SG Dynamo Dresden vs. SpVgg Greuther Fürth: Both Teams to Score
+1104698: 1. FC Nürnberg vs. SV 07 Elversberg: O/U 1.5
+1104699: 1. FC Nürnberg vs. SV 07 Elversberg: O/U 2.5
+1104700: 1. FC Nürnberg vs. SV 07 Elversberg: O/U 3.5
+1104701: 1. FC Nürnberg vs. SV 07 Elversberg: O/U 4.5
+1104702: 1. FC Nürnberg vs. SV 07 Elversberg: Both Teams to Score
+1104703: SC Preußen Münster vs. Karlsruher SC: O/U 1.5
+1104704: SC Preußen Münster vs. Karlsruher SC: O/U 2.5
+1104705: SC Preußen Münster vs. Karlsruher SC: O/U 3.5
+1104706: SC Preußen Münster vs. Karlsruher SC: O/U 4.5
+1104707: SC Preußen Münster vs. Karlsruher SC: Both Teams to Score
+1104922: Miami (OH) RedHawks vs. Toledo Rockets
+1104932: Akron Zips vs. Bowling Green Falcons
+1105082: First Touchdown: Houston Defense
+1105119: Spread: Central Connecticut State Blue Devils (-7.5)
+1105217: Will PEC Zwolle win on 2026-01-31?
+1105218: Will PEC Zwolle vs. Telstar 1963 end in a draw?
+1105219: Will Telstar 1963 win on 2026-01-31?
+1105220: Will Sparta Rotterdam win on 2026-01-31?
+1105221: Will Sparta Rotterdam vs. FC Groningen end in a draw?
+1105222: Will FC Groningen win on 2026-01-31?
+1105223: Will SBV Excelsior win on 2026-02-01?
+1105224: Will SBV Excelsior vs. AFC Ajax end in a draw?
+1105225: Will AFC Ajax win on 2026-02-01?
+1105226: Will PSV win on 2026-02-01?
+1105227: Will PSV vs. Feyenoord Rotterdam end in a draw?
+1105228: Will Feyenoord Rotterdam win on 2026-02-01?
+1105229: Will Heracles Almelo win on 2026-02-01?
+1105230: Will Heracles Almelo vs. Fortuna Sittard end in a draw?
+1105231: Will Fortuna Sittard win on 2026-02-01?
+1105267: LoL: Fluxo W7M vs LOS (BO1)
+1105269: LoL: Team Heretics vs Shifters (BO1)
+1105309: Florida Atlantic Owls vs. Tulane Green Wave: O/U 158.5
+1105454: AHL: Henderson Silver Knights vs. Ontario Reign
+1105459: AHL: Iowa Wild vs. Tucson Roadrunners
+1105482: Kings vs. Flyers
+1105483: Avalanche vs. Red Wings
+1105484: Rangers vs. Penguins
+1105485: Jets vs. Panthers
+1105486: Sharks vs. Flames
+1105487: Hurricanes vs. Capitals
+1105488: Maple Leafs vs. Canucks
+1105489: Blue Jackets vs. Blues
+1105490: Devils vs. Senators
+1105491: Predators vs. Islanders
+1105492: Canadiens vs. Sabres
+1105493: Stars vs. Utah
+1105494: Kraken vs. Golden Knights
+1105495: Wild vs. Oilers
+1105530: Will the price of Ethereum be above $2,600 on January 11?
+1105531: Will the price of Bitcoin be less than $82,000 on January 11?
+1105532: Will the price of Ethereum be above $2,700 on January 11?
+1105533: Will the price of Bitcoin be between $82,000 and $84,000 on January 11?
+1105534: Will the price of Ethereum be above $2,800 on January 11?
+1105535: Will the price of Bitcoin be between $84,000 and $86,000 on January 11?
+1105536: Will the price of Ethereum be above $2,900 on January 11?
+1105537: Will the price of Bitcoin be between $86,000 and $88,000 on January 11?
+1105538: Will the price of Ethereum be above $3,000 on January 11?
+1105539: Will the price of Bitcoin be between $88,000 and $90,000 on January 11?
+1105540: Will the price of Ethereum be above $3,100 on January 11?
+1105541: Will the price of Bitcoin be between $90,000 and $92,000 on January 11?
+1105542: Will the price of Ethereum be above $3,200 on January 11?
+1105543: Will the price of Bitcoin be between $92,000 and $94,000 on January 11?
+1105544: Will the price of Ethereum be above $3,300 on January 11?
+1105545: Will the price of Bitcoin be between $94,000 and $96,000 on January 11?
+1105547: Will the price of Ethereum be above $3,400 on January 11?
+1105548: Will the price of Bitcoin be between $96,000 and $98,000 on January 11?
+1105549: Will the price of Ethereum be above $3,500 on January 11?
+1105550: Will the price of Bitcoin be between $98,000 and $100,000 on January 11?
+1105552: Will the price of Ethereum be above $3,600 on January 11?
+1105553: Will the price of Bitcoin be greater than $100,000 on January 11?
+1105554: Honor of Kings: eStar Pro vs JD Gaming (BO5)
+1105555: Honor of Kings: eStar Pro vs JD Gaming - Game 1 Winner
+1105556: Honor of Kings: eStar Pro vs JD Gaming - Game 2 Winner
+1105557: Honor of Kings: eStar Pro vs JD Gaming - Game 3 Winner
+1105558: Games Total: O/U 3.5
+1105559: Games Total: O/U 4.5
+1105560: LoL: Los Ratones vs Karmine Corp Blue (BO1)
+1105563: Will the price of Ethereum be less than $2,700 on January 11?
+1105564: Will the price of Ethereum be between $2,700 and $2,800 on January 11?
+1105565: Will the price of Ethereum be between $2,800 and $2,900 on January 11?
+1105566: Will the price of Ethereum be between $2,900 and $3,000 on January 11?
+1105567: Will the price of Ethereum be between $3,000 and $3,100 on January 11?
+1105568: Will the price of Ethereum be between $3,100 and $3,200 on January 11?
+1105569: Will the price of Ethereum be between $3,200 and $3,300 on January 11?
+1105570: Will the price of Ethereum be between $3,300 and $3,400 on January 11?
+1105571: Will the price of Ethereum be between $3,400 and $3,500 on January 11?
+1105572: Will the price of Ethereum be between $3,500 and $3,600 on January 11?
+1105573: LoL: paiN Gaming vs FURIA Esports (BO1)
+1105575: Will the price of Ethereum be greater than $3,600 on January 11?
+1105576: Will the price of Bitcoin be above $82,000 on January 11?
+1105578: Will the price of Bitcoin be above $84,000 on January 11?
+1105579: Will the price of Bitcoin be above $86,000 on January 11?
+1105580: Will the price of Bitcoin be above $88,000 on January 11?
+1105581: Will the price of Bitcoin be above $90,000 on January 11?
+1105582: Will the price of Bitcoin be above $92,000 on January 11?
+1105583: Will the price of Bitcoin be above $94,000 on January 11?
+1105584: Will the price of Bitcoin be above $96,000 on January 11?
+1105585: Will the price of Bitcoin be above $98,000 on January 11?
+1105586: Will the price of Bitcoin be above $100,000 on January 11?
+1105587: Will the price of Bitcoin be above $102,000 on January 11?
+1105588: Will the price of Solana be less than $90 on January 11?
+1105589: Will the price of Solana be between $90 and $100 on January 11?
+1105590: Will the price of Solana be between $100 and $110 on January 11?
+1105591: Will the price of Solana be between $110 and $120 on January 11?
+1105592: Will the price of Solana be between $120 and $130 on January 11?
+1105593: Honor of Kings: Douyu Gaming vs Wolves (BO5)
+1105594: Will the price of Solana be between $130 and $140 on January 11?
+1105595: Will the price of Solana be between $140 and $150 on January 11?
+1105596: Honor of Kings: Douyu Gaming vs Wolves - Game 1 Winner
+1105597: Honor of Kings: Douyu Gaming vs Wolves - Game 2 Winner
+1105598: Will the price of Solana be between $150 and $160 on January 11?
+1105599: Honor of Kings: Douyu Gaming vs Wolves - Game 3 Winner
+1105600: Will the price of Solana be between $160 and $170 on January 11?
+1105601: Games Total: O/U 3.5
+1105602: Will the price of Solana be between $170 and $180 on January 11?
+1105603: Games Total: O/U 4.5
+1105604: Will the price of Solana be greater than $180 on January 11?
+1105605: Will the price of Solana be above $90 on January 11?
+1105606: Will the price of Solana be above $100 on January 11?
+1105607: Will the price of Solana be above $110 on January 11?
+1105608: Will the price of Solana be above $120 on January 11?
+1105609: Will the price of Solana be above $130 on January 11?
+1105610: Will the price of Solana be above $140 on January 11?
+1105611: Will the price of Solana be above $150 on January 11?
+1105612: Will the price of Solana be above $160 on January 11?
+1105613: Honor of Kings: Weibo Gaming vs AG Super Play (BO5)
+1105614: Will the price of Solana be above $170 on January 11?
+1105615: Honor of Kings: Weibo Gaming vs AG Super Play - Game 1 Winner
+1105616: Will the price of Solana be above $180 on January 11?
+1105617: Honor of Kings: Weibo Gaming vs AG Super Play - Game 2 Winner
+1105618: Will the price of Solana be above $190 on January 11?
+1105619: Honor of Kings: Weibo Gaming vs AG Super Play - Game 3 Winner
+1105620: Games Total: O/U 3.5
+1105621: Games Total: O/U 4.5
+1105622: Will the price of XRP be less than $1.60 on January 11?
+1105623: Will the price of XRP be between $1.60 and $1.70 on January 11?
+1105624: Will the price of XRP be between $1.70 and $1.80 on January 11?
+1105625: Will the price of XRP be between $1.80 and $1.90 on January 11?
+1105626: Will the price of XRP be between $1.90 and $2.00 on January 11?
+1105627: Will the price of XRP be between $2.00 and $2.10 on January 11?
+1105628: Will the price of XRP be between $2.10 and $2.20 on January 11?
+1105629: Will the price of XRP be between $2.20 and $2.30 on January 11?
+1105630: Will the price of XRP be between $2.30 and $2.40 on January 11?
+1105631: Will the price of XRP be between $2.40 and $2.50 on January 11?
+1105632: Will the price of XRP be greater than $2.50 on January 11?
+1105633: Will the price of XRP be above $1.60 on January 11?
+1105634: Will the price of XRP be above $1.70 on January 11?
+1105635: Will the price of XRP be above $1.80 on January 11?
+1105636: Will the price of XRP be above $1.90 on January 11?
+1105637: Will the price of XRP be above $2.00 on January 11?
+1105638: Will the price of XRP be above $2.10 on January 11?
+1105639: Honor of Kings: Qing Jiu Club vs TOP Esports Armor (BO5)
+1105640: Will the price of XRP be above $2.20 on January 11?
+1105641: Honor of Kings: Qing Jiu Club vs TOP Esports Armor - Game 1 Winner
+1105642: Will the price of XRP be above $2.30 on January 11?
+1105643: Honor of Kings: Qing Jiu Club vs TOP Esports Armor - Game 2 Winner
+1105644: Will the price of XRP be above $2.40 on January 11?
+1105645: Will the price of XRP be above $2.50 on January 11?
+1105646: Honor of Kings: Qing Jiu Club vs TOP Esports Armor - Game 3 Winner
+1105647: Will the price of XRP be above $2.60 on January 11?
+1105648: Games Total: O/U 3.5
+1105649: Games Total: O/U 4.5
+1105650: Honor of Kings: Hero JiuJing vs Talent Gaming (BO5)
+1105651: Honor of Kings: Hero JiuJing vs Talent Gaming - Game 1 Winner
+1105652: Honor of Kings: Hero JiuJing vs Talent Gaming - Game 2 Winner
+1105653: Honor of Kings: Hero JiuJing vs Talent Gaming - Game 3 Winner
+1105654: Games Total: O/U 3.5
+1105655: Games Total: O/U 4.5
+1105656: Honor of Kings: Dragon Ranger Gaming vs KuaiShow Gaming (BO5)
+1105657: Honor of Kings: Dragon Ranger Gaming vs KuaiShow Gaming - Game 1 Winner
+1105658: Honor of Kings: Dragon Ranger Gaming vs KuaiShow Gaming - Game 2 Winner
+1105659: Honor of Kings: Dragon Ranger Gaming vs KuaiShow Gaming - Game 3 Winner
+1105660: Games Total: O/U 3.5
+1105661: Games Total: O/U 4.5
+1105662: Honor of Kings: Douyu Gaming vs Rogue Warriors (BO5)
+1105663: Honor of Kings: Douyu Gaming vs Rogue Warriors - Game 1 Winner
+1105664: Honor of Kings: Douyu Gaming vs Rogue Warriors - Game 2 Winner
+1105665: Honor of Kings: Douyu Gaming vs Rogue Warriors - Game 3 Winner
+1105666: Games Total: O/U 3.5
+1105667: Games Total: O/U 4.5
+1105668: Honor of Kings: Team WE vs Royal Never Give Up (BO5)
+1105669: Honor of Kings: Team WE vs Royal Never Give Up - Game 1 Winner
+1105670: Honor of Kings: Team WE vs Royal Never Give Up - Game 2 Winner
+1105671: Honor of Kings: Team WE vs Royal Never Give Up - Game 3 Winner
+1105672: Games Total: O/U 3.5
+1105673: Games Total: O/U 4.5
+1105674: Honor of Kings: LGD NBW vs Wolves (BO5)
+1105675: Honor of Kings: LGD NBW vs Wolves - Game 1 Winner
+1105676: Honor of Kings: LGD NBW vs Wolves - Game 2 Winner
+1105677: Honor of Kings: LGD NBW vs Wolves - Game 3 Winner
+1105678: Games Total: O/U 3.5
+1105679: Games Total: O/U 4.5
+1105680: Honor of Kings: Dragon Ranger Gaming vs eStar Pro (BO5)
+1105681: Honor of Kings: Dragon Ranger Gaming vs eStar Pro - Game 1 Winner
+1105682: Honor of Kings: Dragon Ranger Gaming vs eStar Pro - Game 2 Winner
+1105683: Honor of Kings: Dragon Ranger Gaming vs eStar Pro - Game 3 Winner
+1105684: Games Total: O/U 3.5
+1105685: Games Total: O/U 4.5
+1105686: Honor of Kings: TC Grouping vs Qing Jiu Club (BO5)
+1105688: Honor of Kings: TC Grouping vs Qing Jiu Club - Game 2 Winner
+1105689: Honor of Kings: TC Grouping vs Qing Jiu Club - Game 3 Winner
+1105690: Games Total: O/U 3.5
+1105691: Games Total: O/U 4.5
+1105692: Honor of Kings: AG Super Play vs EDward Gaming (BO5)
+1105693: Honor of Kings: AG Super Play vs EDward Gaming - Game 1 Winner
+1105694: Honor of Kings: AG Super Play vs EDward Gaming - Game 2 Winner
+1105695: Honor of Kings: AG Super Play vs EDward Gaming - Game 3 Winner
+1105696: Games Total: O/U 3.5
+1105697: Games Total: O/U 4.5
+1105698: Honor of Kings: JD Gaming vs KuaiShow Gaming (BO5)
+1105699: Honor of Kings: JD Gaming vs KuaiShow Gaming - Game 1 Winner
+1105700: Honor of Kings: JD Gaming vs KuaiShow Gaming - Game 2 Winner
+1105701: Honor of Kings: JD Gaming vs KuaiShow Gaming - Game 3 Winner
+1105702: Games Total: O/U 3.5
+1105703: Games Total: O/U 4.5
+1105704: Honor of Kings: LGD NBW vs Rogue Warriors (BO5)
+1105705: Honor of Kings: LGD NBW vs Rogue Warriors - Game 1 Winner
+1105706: Honor of Kings: LGD NBW vs Rogue Warriors - Game 2 Winner
+1105707: Honor of Kings: LGD NBW vs Rogue Warriors - Game 3 Winner
+1105708: Games Total: O/U 3.5
+1105709: Games Total: O/U 4.5
+1105710: Honor of Kings: Weibo Gaming vs TOP Esports Armor (BO5)
+1105711: Honor of Kings: Weibo Gaming vs TOP Esports Armor - Game 1 Winner
