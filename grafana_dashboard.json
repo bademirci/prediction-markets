@@ -1,0 +1,124 @@
+{
+  "dashboard": {
+    "title": "Polymarket Esports Dashboard",
+    "tags": ["polymarket", "esports", "trading"],
+    "timezone": "browser",
+    "refresh": "5s",
+    "templating": {
+      "list": [
+        {
+          "name": "category",
+          "type": "query",
+          "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+          "query": "SELECT DISTINCT computed_category FROM polymarket.markets_dim WHERE active = 1 ORDER BY computed_category",
+          "current": {"text": "Esports", "value": "Esports"},
+          "refresh": 1
+        },
+        {
+          "name": "market",
+          "type": "query",
+          "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+          "query": "SELECT condition_id AS __value, question AS __text FROM polymarket.markets_dim WHERE computed_category = '${category}' AND active = 1 ORDER BY volume_total DESC LIMIT 50",
+          "refresh": 1
+        },
+        {
+          "name": "token",
+          "type": "query",
+          "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+          "query": "SELECT arrayJoin(clob_token_ids) AS token_id FROM polymarket.markets_dim WHERE condition_id = '${market}'",
+          "refresh": 1
+        }
+      ]
+    },
+    "panels": [
+      {
+        "id": 1,
+        "title": "📈 BBO + Trades",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 0, "w": 16, "h": 10},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "rawSql": "SELECT ts_bucket AS time, bid_px AS \"Bid\", ask_px AS \"Ask\" FROM polymarket.bbo_1s WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(ts_bucket) ORDER BY ts_bucket",
+            "format": "time_series"
+          },
+          {
+            "rawSql": "SELECT ts AS time, price AS \"Trade\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(ts) ORDER BY ts",
+            "format": "time_series"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {"unit": "percentunit", "min": 0, "max": 1}
+        }
+      },
+      {
+        "id": 2,
+        "title": "📊 Ingestion Health",
+        "type": "timeseries",
+        "gridPos": {"x": 16, "y": 0, "w": 8, "h": 5},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "rawSql": "SELECT toStartOfMinute(ts) AS time, count() AS trades_per_min FROM polymarket.trades_raw WHERE $__timeFilter(ts) GROUP BY time ORDER BY time",
+            "format": "time_series"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "📡 BBO Messages",
+        "type": "timeseries",
+        "gridPos": {"x": 16, "y": 5, "w": 8, "h": 5},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "rawSql": "SELECT toStartOfMinute(ts) AS time, count() AS bbo_per_min FROM polymarket.bbo_raw WHERE $__timeFilter(ts) GROUP BY time ORDER BY time",
+            "format": "time_series"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "📊 5-Minute Volume (Bid vs Ask)",
+        "type": "barchart",
+        "gridPos": {"x": 0, "y": 10, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "rawSql": "SELECT toStartOfInterval(ts, INTERVAL 5 MINUTE) AS time, sumIf(price * size, side = 'BUY') AS vol_buy, sumIf(price * size, side = 'SELL') AS vol_sell FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(ts) GROUP BY time ORDER BY time",
+            "format": "time_series"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "📈 Cumulative Volume & Delta",
+        "type": "timeseries",
+        "gridPos": {"x": 12, "y": 10, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "rawSql": "SELECT ts AS time, sum(price * size) OVER (ORDER BY ts) AS cum_volume, sum(CASE WHEN side = 'BUY' THEN price * size ELSE -(price * size) END) OVER (ORDER BY ts) AS cum_delta FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(ts) ORDER BY ts",
+            "format": "time_series"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "🏆 Top Active Markets",
+        "type": "table",
+        "gridPos": {"x": 0, "y": 18, "w": 24, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "rawSql": "SELECT m.question, m.computed_category AS category, count() AS trades, round(sum(t.price * t.size), 2) AS volume FROM polymarket.trades_raw t JOIN polymarket.markets_dim m ON t.condition_id = m.condition_id WHERE $__timeFilter(t.ts) AND m.computed_category = '${category}' GROUP BY m.condition_id, m.question, m.computed_category ORDER BY volume DESC LIMIT 20",
+            "format": "table"
+          }
+        ]
+      }
+    ],
+    "time": {"from": "now-1h", "to": "now"},
+    "schemaVersion": 39
+  },
+  "overwrite": true
+}
