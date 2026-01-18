@@ -1,0 +1,549 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "polymarket-hft-microstructure",
+    "title": "Polymarket HFT & Market Microstructure",
+    "tags": ["polymarket", "hft", "microstructure", "trading"],
+    "timezone": "browser",
+    "refresh": "5s",
+    "templating": {
+      "list": [
+        {
+          "name": "category",
+          "label": "Category",
+          "type": "query",
+          "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+          "definition": "SELECT DISTINCT computed_category FROM polymarket.markets_dim ORDER BY computed_category",
+          "query": "SELECT DISTINCT computed_category FROM polymarket.markets_dim ORDER BY computed_category",
+          "current": {"text": "Esports", "value": "Esports"},
+          "refresh": 1,
+          "sort": 1
+        },
+        {
+          "name": "market",
+          "label": "Market",
+          "type": "query",
+          "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+          "definition": "SELECT DISTINCT t.condition_id AS __value, any(m.question) AS __text FROM polymarket.trades_raw t JOIN polymarket.markets_dim m ON t.condition_id = m.condition_id WHERE m.computed_category = '${category}' GROUP BY t.condition_id ORDER BY count() DESC LIMIT 30",
+          "query": "SELECT DISTINCT t.condition_id AS __value, any(m.question) AS __text FROM polymarket.trades_raw t JOIN polymarket.markets_dim m ON t.condition_id = m.condition_id WHERE m.computed_category = '${category}' GROUP BY t.condition_id ORDER BY count() DESC LIMIT 30",
+          "refresh": 1,
+          "sort": 0
+        },
+        {
+          "name": "token",
+          "label": "Token",
+          "type": "query",
+          "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+          "definition": "SELECT DISTINCT token_id FROM polymarket.trades_raw WHERE condition_id = '${market}' LIMIT 1",
+          "query": "SELECT DISTINCT token_id FROM polymarket.trades_raw WHERE condition_id = '${market}' LIMIT 1",
+          "refresh": 1
+        }
+      ]
+    },
+    "panels": [
+      {
+        "id": 1,
+        "title": "Trades and BBO",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 0, "w": 24, "h": 10},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT exchange_ts AS time, ask_px AS \"ASK\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(exchange_ts) AND ask_px IS NOT NULL ORDER BY exchange_ts",
+            "refId": "ASK",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT exchange_ts AS time, bid_px AS \"BID\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(exchange_ts) AND bid_px IS NOT NULL ORDER BY exchange_ts",
+            "refId": "BID",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT exchange_ts AS time, price AS \"Bid Hit\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND side = 'SELL' AND $__timeFilter(exchange_ts) ORDER BY exchange_ts",
+            "refId": "BidHit",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT exchange_ts AS time, price AS \"Quote Lifted\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND side = 'BUY' AND $__timeFilter(exchange_ts) ORDER BY exchange_ts",
+            "refId": "QuoteLifted",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percentunit",
+            "min": 0,
+            "max": 1,
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "linear",
+              "pointSize": 5,
+              "showPoints": "never"
+            },
+            "color": {"mode": "palette-classic"}
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "Bid Hit"},
+              "properties": [
+                {"id": "custom.drawStyle", "value": "points"},
+                {"id": "custom.pointSize", "value": 8},
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "green"}}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "Quote Lifted"},
+              "properties": [
+                {"id": "custom.drawStyle", "value": "points"},
+                {"id": "custom.pointSize", "value": 8},
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "yellow"}}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "ASK"},
+              "properties": [
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "light-blue"}}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "BID"},
+              "properties": [
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "orange"}}
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "title": "5s Volume",
+        "type": "barchart",
+        "gridPos": {"x": 0, "y": 10, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT toStartOfInterval(exchange_ts, INTERVAL 5 SECOND) AS time, sumIf(price * size, side = 'BUY') AS \"sz ASK\", sumIf(price * size, side = 'SELL') AS \"sz BID\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(exchange_ts) GROUP BY time ORDER BY time",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "currencyUSD",
+            "custom": {
+              "stacking": {"group": "A", "mode": "normal"}
+            },
+            "color": {"mode": "palette-classic"}
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "sz ASK"},
+              "properties": [
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "green"}}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "sz BID"},
+              "properties": [
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "yellow"}}
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "title": "60s Volume & Cumulative",
+        "type": "timeseries",
+        "gridPos": {"x": 12, "y": 10, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT toStartOfInterval(exchange_ts, INTERVAL 60 SECOND) AS time, sum(price * size) AS \"60s Volume\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(exchange_ts) GROUP BY time ORDER BY time",
+            "refId": "Volume60s",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT exchange_ts AS time, sum(price * size) OVER (ORDER BY exchange_ts) AS \"Cumulative Traded Volume\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(exchange_ts) ORDER BY exchange_ts",
+            "refId": "CumVolume",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT exchange_ts AS time, sum(CASE WHEN side = 'BUY' THEN price * size ELSE -(price * size) END) OVER (ORDER BY exchange_ts) AS \"Cumulative Volume Delta\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(exchange_ts) ORDER BY exchange_ts",
+            "refId": "CumDelta",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "currencyUSD",
+            "custom": {
+              "drawStyle": "bars",
+              "lineInterpolation": "linear"
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "60s Volume"},
+              "properties": [
+                {"id": "custom.drawStyle", "value": "bars"},
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "light-blue"}},
+                {"id": "unit", "value": "currencyUSD"}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "Cumulative Traded Volume"},
+              "properties": [
+                {"id": "custom.drawStyle", "value": "line"},
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "black"}},
+                {"id": "unit", "value": "currencyUSD"}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "Cumulative Volume Delta"},
+              "properties": [
+                {"id": "custom.drawStyle", "value": "line"},
+                {"id": "custom.lineStyle", "value": {"dash": [10, 10]}},
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "dark-gray"}},
+                {"id": "unit", "value": "currencyUSD"}
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "title": "Orderbook Depth (within 10c of touch)",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 18, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "WITH best_ask AS (SELECT exchange_ts, ask_px AS touch_price FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND ask_px IS NOT NULL AND $__timeFilter(exchange_ts)) SELECT ob.exchange_ts AS time, sum(ob.ask_sz) / 1000 AS \"Ask Depth (1000 Shares)\" FROM polymarket.orderbook_levels ob JOIN best_ask ba ON ob.exchange_ts = ba.exchange_ts WHERE ob.condition_id = '${market}' AND ob.token_id = '${token}' AND ob.ask_px IS NOT NULL AND ob.ask_px <= ba.touch_price + 0.10 AND ob.ask_px >= ba.touch_price AND $__timeFilter(ob.exchange_ts) GROUP BY ob.exchange_ts ORDER BY ob.exchange_ts",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "short",
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "linear"
+            }
+          }
+        }
+      },
+      {
+        "id": 5,
+        "title": "5m Volume (Buy vs Sell)",
+        "type": "barchart",
+        "gridPos": {"x": 12, "y": 18, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT toStartOfInterval(exchange_ts, INTERVAL 5 MINUTE) AS time, sumIf(price * size, side = 'BUY') AS \"sz ASK\", sumIf(price * size, side = 'SELL') AS \"sz BID\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(exchange_ts) GROUP BY time ORDER BY time",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "currencyUSD",
+            "custom": {
+              "stacking": {"group": "A", "mode": "normal"}
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "sz ASK"},
+              "properties": [
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "green"}}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "sz BID"},
+              "properties": [
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "yellow"}}
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "title": "Dual-Timeframe: Short (3min) & Long (5h)",
+        "type": "row",
+        "gridPos": {"x": 0, "y": 26, "w": 24, "h": 1},
+        "collapsed": false
+      },
+      {
+        "id": 7,
+        "title": "Trades and BBO (Short: 3min)",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 27, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT exchange_ts AS time, ask_px AS \"ASK\", bid_px AS \"BID\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND exchange_ts >= now() - INTERVAL 3 MINUTE AND ask_px IS NOT NULL AND bid_px IS NOT NULL ORDER BY exchange_ts",
+            "refId": "BBO",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT exchange_ts AS time, price AS \"Bid Hit\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND side = 'SELL' AND exchange_ts >= now() - INTERVAL 3 MINUTE ORDER BY exchange_ts",
+            "refId": "BidHit",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT exchange_ts AS time, price AS \"Quote Lifted\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND side = 'BUY' AND exchange_ts >= now() - INTERVAL 3 MINUTE ORDER BY exchange_ts",
+            "refId": "QuoteLifted",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percentunit",
+            "min": 0,
+            "max": 1,
+            "custom": {
+              "drawStyle": "line",
+              "pointSize": 5
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "Bid Hit"},
+              "properties": [
+                {"id": "custom.drawStyle", "value": "points"},
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "green"}}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "Quote Lifted"},
+              "properties": [
+                {"id": "custom.drawStyle", "value": "points"},
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "yellow"}}
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "title": "Trades and BBO (Long: 5h)",
+        "type": "timeseries",
+        "gridPos": {"x": 12, "y": 27, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT exchange_ts AS time, ask_px AS \"ASK\", bid_px AS \"BID\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND exchange_ts >= now() - INTERVAL 5 HOUR AND ask_px IS NOT NULL AND bid_px IS NOT NULL ORDER BY exchange_ts",
+            "refId": "BBO",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT exchange_ts AS time, price AS \"Bid Hit\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND side = 'SELL' AND exchange_ts >= now() - INTERVAL 5 HOUR ORDER BY exchange_ts",
+            "refId": "BidHit",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT exchange_ts AS time, price AS \"Quote Lifted\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND side = 'BUY' AND exchange_ts >= now() - INTERVAL 5 HOUR ORDER BY exchange_ts",
+            "refId": "QuoteLifted",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percentunit",
+            "min": 0,
+            "max": 1,
+            "custom": {
+              "drawStyle": "line",
+              "pointSize": 5
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "Bid Hit"},
+              "properties": [
+                {"id": "custom.drawStyle", "value": "points"},
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "green"}}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "Quote Lifted"},
+              "properties": [
+                {"id": "custom.drawStyle", "value": "points"},
+                {"id": "color", "value": {"mode": "fixed", "fixedColor": "yellow"}}
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "title": "Smart Money Tracking (Top Takers)",
+        "type": "table",
+        "gridPos": {"x": 0, "y": 35, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT taker_address AS \"Taker Address\", count() AS \"Trade Count\", round(sum(price * size), 2) AS \"Total Volume (USD)\", round(avg(price), 4) AS \"Avg Price\", sumIf(price * size, side = 'BUY') AS \"Buy Volume\", sumIf(price * size, side = 'SELL') AS \"Sell Volume\", round(avg(delta_t_ms), 2) AS \"Avg Latency (ms)\" FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND taker_address != '' AND $__timeFilter(exchange_ts) GROUP BY taker_address ORDER BY sum(price * size) DESC LIMIT 20",
+            "refId": "A",
+            "format": 2
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Network Latency Heatmap (delta_t_ms)",
+        "type": "heatmap",
+        "gridPos": {"x": 12, "y": 35, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT toStartOfMinute(exchange_ts) AS time, delta_t_ms AS value FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(exchange_ts) AND delta_t_ms IS NOT NULL ORDER BY exchange_ts",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "ms",
+            "custom": {
+              "scaleDistribution": {"type": "linear"}
+            }
+          }
+        },
+        "options": {
+          "calculate": true,
+          "cellGap": 2,
+          "color": {
+            "mode": "spectrum",
+            "scheme": "Spectral",
+            "fill": "dark-orange",
+            "reverse": false,
+            "exponent": 0.5,
+            "steps": 64
+          },
+          "exemplars": {
+            "color": "rgba(255,0,255,0.7)"
+          },
+          "filterValues": {
+            "le": 1e-9
+          },
+          "legend": {
+            "show": true
+          },
+          "rowsFrame": {
+            "layout": "auto"
+          },
+          "tooltip": {
+            "show": true,
+            "yHistogram": false
+          },
+          "yAxis": {
+            "axisPlacement": "left",
+            "reverse": false,
+            "unit": "ms"
+          }
+        }
+      },
+      {
+        "id": 11,
+        "title": "Orderbook Depth Heatmap (10 Levels)",
+        "type": "heatmap",
+        "gridPos": {"x": 0, "y": 43, "w": 24, "h": 10},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT toStartOfMinute(exchange_ts) AS time, toString(level) AS \"Level\", (bid_sz + ask_sz) AS \"Total Liquidity\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level <= 10 AND $__timeFilter(exchange_ts) AND bid_sz IS NOT NULL AND ask_sz IS NOT NULL ORDER BY exchange_ts, level",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "short",
+            "custom": {
+              "scaleDistribution": {"type": "linear"}
+            }
+          }
+        },
+        "options": {
+          "calculate": true,
+          "cellGap": 2,
+          "color": {
+            "mode": "spectrum",
+            "scheme": "Blues",
+            "fill": "dark-blue",
+            "reverse": false,
+            "exponent": 0.5,
+            "steps": 64
+          },
+          "exemplars": {
+            "color": "rgba(255,0,255,0.7)"
+          },
+          "filterValues": {
+            "le": 1e-9
+          },
+          "legend": {
+            "show": true
+          },
+          "rowsFrame": {
+            "layout": "auto"
+          },
+          "tooltip": {
+            "show": true,
+            "yHistogram": false
+          },
+          "yAxis": {
+            "axisPlacement": "left",
+            "reverse": true,
+            "unit": "short"
+          }
+        }
+      }
+    ],
+    "time": {"from": "now-2h", "to": "now"},
+    "schemaVersion": 39
+  },
+  "overwrite": true
+}

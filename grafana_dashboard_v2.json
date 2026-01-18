@@ -82,7 +82,7 @@
         "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
         "targets": [
           {
-            "rawSql": "SELECT toStartOfMinute(ts) AS time, count() AS bbo FROM polymarket.bbo_raw WHERE ts >= now() - INTERVAL 1 HOUR GROUP BY time ORDER BY time",
+            "rawSql": "SELECT toStartOfMinute(exchange_ts) AS time, count() AS orderbook_updates FROM polymarket.orderbook_levels WHERE level = 1 AND exchange_ts >= now() - INTERVAL 1 HOUR GROUP BY time ORDER BY time",
             "refId": "A",
             "format": "time_series"
           }

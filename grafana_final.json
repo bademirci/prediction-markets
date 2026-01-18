@@ -51,7 +51,7 @@
           {
             "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
             "queryType": "sql",
-            "rawSql": "SELECT ts AS time, price FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND ts >= now() - INTERVAL 2 HOUR ORDER BY ts",
+            "rawSql": "SELECT exchange_ts AS time, price FROM polymarket.trades_raw WHERE condition_id = '${market}' AND token_id = '${token}' AND exchange_ts >= now() - INTERVAL 2 HOUR ORDER BY exchange_ts",
             "refId": "A",
             "format": 1
           }
@@ -70,7 +70,7 @@
           {
             "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
             "queryType": "sql",
-            "rawSql": "SELECT toStartOfMinute(ts) AS time, count() AS trades FROM polymarket.trades_raw WHERE ts >= now() - INTERVAL 2 HOUR GROUP BY time ORDER BY time",
+            "rawSql": "SELECT toStartOfMinute(exchange_ts) AS time, count() AS trades FROM polymarket.trades_raw WHERE exchange_ts >= now() - INTERVAL 2 HOUR GROUP BY time ORDER BY time",
             "refId": "A",
             "format": 1
           }
@@ -78,7 +78,7 @@
       },
       {
         "id": 3,
-        "title": "📡 BBO/min",
+        "title": "📡 Orderbook Updates/min",
         "type": "timeseries",
         "gridPos": {"x": 16, "y": 5, "w": 8, "h": 5},
         "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
@@ -86,7 +86,7 @@
           {
             "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
             "queryType": "sql",
-            "rawSql": "SELECT toStartOfMinute(ts) AS time, count() AS bbo FROM polymarket.bbo_raw WHERE ts >= now() - INTERVAL 2 HOUR GROUP BY time ORDER BY time",
+            "rawSql": "SELECT toStartOfMinute(exchange_ts) AS time, count() AS orderbook_updates FROM polymarket.orderbook_levels WHERE exchange_ts >= now() - INTERVAL 2 HOUR AND level = 1 GROUP BY time ORDER BY time",
             "refId": "A",
             "format": 1
           }
@@ -102,7 +102,7 @@
           {
             "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
             "queryType": "sql",
-            "rawSql": "SELECT toStartOfInterval(ts, INTERVAL 5 MINUTE) AS time, sumIf(price * size, side = 'BUY') AS Buy, sumIf(price * size, side = 'SELL') AS Sell FROM polymarket.trades_raw WHERE condition_id = '${market}' AND ts >= now() - INTERVAL 2 HOUR GROUP BY time ORDER BY time",
+            "rawSql": "SELECT toStartOfInterval(exchange_ts, INTERVAL 5 MINUTE) AS time, sumIf(price * size, side = 'BUY') AS Buy, sumIf(price * size, side = 'SELL') AS Sell FROM polymarket.trades_raw WHERE condition_id = '${market}' AND exchange_ts >= now() - INTERVAL 2 HOUR GROUP BY time ORDER BY time",
             "refId": "A",
             "format": 1
           }
@@ -118,7 +118,7 @@
           {
             "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
             "queryType": "sql",
-            "rawSql": "SELECT ts AS time, sum(price * size) OVER (ORDER BY ts) AS cumulative FROM polymarket.trades_raw WHERE condition_id = '${market}' AND ts >= now() - INTERVAL 2 HOUR ORDER BY ts",
+            "rawSql": "SELECT exchange_ts AS time, sum(price * size) OVER (ORDER BY exchange_ts) AS cumulative FROM polymarket.trades_raw WHERE condition_id = '${market}' AND exchange_ts >= now() - INTERVAL 2 HOUR ORDER BY exchange_ts",
             "refId": "A",
             "format": 1
           }
@@ -126,15 +126,34 @@
       },
       {
         "id": 6,
-        "title": "🏆 Top Active Markets (${category})",
-        "type": "table",
-        "gridPos": {"x": 0, "y": 18, "w": 24, "h": 8},
+        "title": "⚡ Network Latency (delta_t_ms)",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 18, "w": 12, "h": 8},
         "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
         "targets": [
           {
             "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
             "queryType": "sql",
-            "rawSql": "SELECT any(m.question) AS Market, count() AS Trades, round(sum(t.price * t.size), 2) AS Volume FROM polymarket.trades_raw t JOIN polymarket.markets_dim m ON t.condition_id = m.condition_id WHERE t.ts >= now() - INTERVAL 2 HOUR AND m.computed_category = '${category}' GROUP BY t.condition_id ORDER BY Trades DESC LIMIT 15",
+            "rawSql": "SELECT toStartOfMinute(exchange_ts) AS time, avg(delta_t_ms) AS avg_latency_ms, max(delta_t_ms) AS max_latency_ms FROM polymarket.trades_raw WHERE condition_id = '${market}' AND exchange_ts >= now() - INTERVAL 2 HOUR GROUP BY time ORDER BY time",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {"unit": "ms"}
+        }
+      },
+      {
+        "id": 7,
+        "title": "🏆 Top Active Markets (${category})",
+        "type": "table",
+        "gridPos": {"x": 12, "y": 18, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT any(m.question) AS Market, count() AS Trades, round(sum(t.price * t.size), 2) AS Volume FROM polymarket.trades_raw t JOIN polymarket.markets_dim m ON t.condition_id = m.condition_id WHERE t.exchange_ts >= now() - INTERVAL 2 HOUR AND m.computed_category = '${category}' GROUP BY t.condition_id ORDER BY Trades DESC LIMIT 15",
             "refId": "A",
             "format": 2
           }

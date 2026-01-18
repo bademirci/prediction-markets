@@ -72,7 +72,7 @@
         "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
         "targets": [
           {
-            "rawSql": "SELECT toStartOfMinute(ts) AS time, count() AS bbo_per_min FROM polymarket.bbo_raw WHERE $__timeFilter(ts) GROUP BY time ORDER BY time",
+            "rawSql": "SELECT toStartOfMinute(exchange_ts) AS time, count() AS orderbook_updates_per_min FROM polymarket.orderbook_levels WHERE level = 1 AND $__timeFilter(exchange_ts) GROUP BY time ORDER BY time",
             "format": "time_series"
           }
         ]
