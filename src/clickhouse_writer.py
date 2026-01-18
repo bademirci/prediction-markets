@@ -19,6 +19,7 @@ class ClickHouseWriter:
         # Buffers for batch inserts
         self._trade_buffer: list[dict] = []
         self._bbo_buffer: list[dict] = []
+        self._orderbook_levels_buffer: list[dict] = []
         self._market_buffer: list[dict] = []
         
         # Lock for thread safety
@@ -50,6 +51,11 @@ class ClickHouseWriter:
         """Add BBO snapshot to buffer."""
         async with self._lock:
             self._bbo_buffer.append(bbo)
+    
+    async def buffer_orderbook_levels(self, levels: list[dict]) -> None:
+        """Add orderbook levels to buffer."""
+        async with self._lock:
+            self._orderbook_levels_buffer.extend(levels)
     
     async def buffer_market(self, market: dict) -> None:
         """Add market to buffer."""
@@ -135,6 +141,43 @@ class ClickHouseWriter:
         
         return len(bbos)
     
+    async def flush_orderbook_levels(self) -> int:
+        """Flush orderbook levels buffer to ClickHouse."""
+        async with self._lock:
+            if not self._orderbook_levels_buffer:
+                return 0
+            
+            levels = self._orderbook_levels_buffer.copy()
+            self._orderbook_levels_buffer.clear()
+        
+        columns = [
+            'ts', 'market_id', 'condition_id', 'token_id', 'level',
+            'bid_px', 'bid_sz', 'ask_px', 'ask_sz', 'source'
+        ]
+        
+        data = []
+        for level in levels:
+            data.append([
+                level['ts'],
+                level['market_id'],
+                level['condition_id'],
+                level['token_id'],
+                level['level'],
+                level.get('bid_px'),
+                level.get('bid_sz'),
+                level.get('ask_px'),
+                level.get('ask_sz'),
+                level.get('source', 'websocket'),
+            ])
+        
+        self.client.insert(
+            'orderbook_levels',
+            data,
+            column_names=columns,
+        )
+        
+        return len(levels)
+    
     async def flush_markets(self) -> int:
         """Flush market buffer to ClickHouse."""
         async with self._lock:
@@ -186,10 +229,12 @@ class ClickHouseWriter:
         """Flush all buffers."""
         trades = await self.flush_trades()
         bbos = await self.flush_bbo()
+        levels = await self.flush_orderbook_levels()
         markets = await self.flush_markets()
         
         return {
             'trades': trades,
             'bbo': bbos,
+            'orderbook_levels': levels,
             'markets': markets,
         }

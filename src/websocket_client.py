@@ -186,19 +186,89 @@ class PolymarketWebSocket:
         bids = event.get('bids', [])
         asks = event.get('asks', [])
         
+        # Parse all bids and asks
+        parsed_bids = []
+        parsed_asks = []
+        
+        for bid in bids:
+            if isinstance(bid, dict):
+                price = float(bid.get('price', 0)) if bid.get('price') else None
+                size = float(bid.get('size', 0)) if bid.get('size') else None
+            elif isinstance(bid, (list, tuple)) and len(bid) >= 2:
+                price = float(bid[0]) if bid[0] else None
+                size = float(bid[1]) if bid[1] else None
+            else:
+                continue
+            
+            if price is not None and size is not None:
+                parsed_bids.append({'price': price, 'size': size})
+        
+        for ask in asks:
+            if isinstance(ask, dict):
+                price = float(ask.get('price', 0)) if ask.get('price') else None
+                size = float(ask.get('size', 0)) if ask.get('size') else None
+            elif isinstance(ask, (list, tuple)) and len(ask) >= 2:
+                price = float(ask[0]) if ask[0] else None
+                size = float(ask[1]) if ask[1] else None
+            else:
+                continue
+            
+            if price is not None and size is not None:
+                parsed_asks.append({'price': price, 'size': size})
+        
+        # Sort: bids descending (highest first = best bid), asks ascending (lowest first = best ask)
+        parsed_bids.sort(key=lambda x: x['price'], reverse=True)
+        parsed_asks.sort(key=lambda x: x['price'])
+        
+        # Extract best 3 levels from realistic price range
+        levels = []
+        for level in range(1, 4):  # Lvl1, Lvl2, Lvl3
+            bid_px = None
+            bid_sz = None
+            ask_px = None
+            ask_sz = None
+            
+            if len(parsed_bids) >= level:
+                bid_px = parsed_bids[level - 1]['price']
+                bid_sz = parsed_bids[level - 1]['size']
+            
+            if len(parsed_asks) >= level:
+                ask_px = parsed_asks[level - 1]['price']
+                ask_sz = parsed_asks[level - 1]['size']
+            
+            levels.append({
+                'ts': ts,
+                'market_id': event.get('market', ''),
+                'condition_id': event.get('market', ''),
+                'token_id': event.get('asset_id', ''),
+                'level': level,
+                'bid_px': bid_px,
+                'bid_sz': bid_sz,
+                'ask_px': ask_px,
+                'ask_sz': ask_sz,
+                'source': 'websocket',
+            })
+        
+        # BBO: best bid (highest) and best ask (lowest) from realistic range
+        bbo_bid_px = parsed_bids[0]['price'] if parsed_bids else None
+        bbo_bid_sz = parsed_bids[0]['size'] if parsed_bids else None
+        bbo_ask_px = parsed_asks[0]['price'] if parsed_asks else None
+        bbo_ask_sz = parsed_asks[0]['size'] if parsed_asks else None
+        
         bbo = {
             'ts': ts,
             'market_id': event.get('market', ''),
             'condition_id': event.get('market', ''),
             'token_id': event.get('asset_id', ''),
-            'bid_px': float(bids[0]['price']) if bids else None,
-            'bid_sz': float(bids[0]['size']) if bids else None,
-            'ask_px': float(asks[0]['price']) if asks else None,
-            'ask_sz': float(asks[0]['size']) if asks else None,
+            'bid_px': bbo_bid_px,
+            'bid_sz': bbo_bid_sz,
+            'ask_px': bbo_ask_px,
+            'ask_sz': bbo_ask_sz,
             'source': 'websocket',
         }
         
-        await self.on_book(bbo)
+        # Send all levels
+        await self.on_book({'bbo': bbo, 'levels': levels})
     
     async def close(self) -> None:
         """Close WebSocket connection."""

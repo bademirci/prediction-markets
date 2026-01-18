@@ -1,0 +1,511 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "polymarket-orderbook",
+    "title": "Polymarket Order Book Dashboard",
+    "tags": ["polymarket", "orderbook", "trading"],
+    "timezone": "browser",
+    "refresh": "2s",
+    "templating": {
+      "list": [
+        {
+          "name": "category",
+          "label": "Category",
+          "type": "query",
+          "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+          "definition": "SELECT computed_category FROM polymarket.markets_dim GROUP BY computed_category ORDER BY computed_category",
+          "query": "SELECT computed_category FROM polymarket.markets_dim GROUP BY computed_category ORDER BY computed_category",
+          "current": {"text": "Sports", "value": "Sports"},
+          "refresh": 1,
+          "sort": 1
+        },
+        {
+          "name": "market",
+          "label": "Market",
+          "type": "query",
+          "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+          "definition": "SELECT condition_id AS __value, question AS __text FROM polymarket.markets_dim WHERE computed_category = '${category}' AND length(clob_token_ids) > 0 ORDER BY updated_at DESC",
+          "query": "SELECT condition_id AS __value, question AS __text FROM polymarket.markets_dim WHERE computed_category = '${category}' AND length(clob_token_ids) > 0 ORDER BY updated_at DESC",
+          "refresh": 1,
+          "sort": 0
+        },
+        {
+          "name": "token",
+          "label": "Token",
+          "type": "query",
+          "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+          "definition": "SELECT DISTINCT token_id FROM polymarket.orderbook_levels WHERE condition_id = '${market}' LIMIT 1",
+          "query": "SELECT DISTINCT token_id FROM polymarket.orderbook_levels WHERE condition_id = '${market}' LIMIT 1",
+          "refresh": 1
+        }
+      ]
+    },
+    "panels": [
+      {
+        "id": 1,
+        "title": "YES Implied Probability",
+        "type": "stat",
+        "gridPos": {"x": 0, "y": 0, "w": 6, "h": 4},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT round(argMax((bid_px + ask_px) / 2, ts) * 100, 2) AS value FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_px IS NOT NULL AND ask_px IS NOT NULL",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "color": {"mode": "thresholds"},
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": null, "color": "green"},
+                {"value": 50, "color": "yellow"},
+                {"value": 80, "color": "red"}
+              ]
+            }
+          }
+        },
+        "options": {
+          "colorMode": "value",
+          "graphMode": "none",
+          "textMode": "value"
+        }
+      },
+      {
+        "id": 2,
+        "title": "NO Implied Probability",
+        "type": "stat",
+        "gridPos": {"x": 6, "y": 0, "w": 6, "h": 4},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT round((1 - argMax((bid_px + ask_px) / 2, ts)) * 100, 2) AS value FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_px IS NOT NULL AND ask_px IS NOT NULL",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "color": {"mode": "thresholds"},
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": null, "color": "red"},
+                {"value": 50, "color": "yellow"},
+                {"value": 80, "color": "green"}
+              ]
+            }
+          }
+        },
+        "options": {
+          "colorMode": "value",
+          "graphMode": "none",
+          "textMode": "value"
+        }
+      },
+      {
+        "id": 3,
+        "title": "Market Pressure (All)",
+        "type": "gauge",
+        "gridPos": {"x": 12, "y": 0, "w": 6, "h": 4},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT avg(CASE WHEN (bid_sz + ask_sz) > 0 THEN (bid_sz - ask_sz) / (bid_sz + ask_sz) ELSE 0 END) AS value FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_sz IS NOT NULL AND ask_sz IS NOT NULL",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "min": -1,
+            "max": 1,
+            "unit": "none",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": null, "color": "red"},
+                {"value": -0.3, "color": "yellow"},
+                {"value": 0.3, "color": "green"}
+              ]
+            }
+          }
+        },
+        "options": {
+          "orientation": "auto",
+          "displayMode": "gradient",
+          "showThresholdLabels": true,
+          "showThresholdMarkers": true
+        }
+      },
+      {
+        "id": 4,
+        "title": "Order Book Price Levels - All 3 Levels",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 4, "w": 16, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, bid_px AS \"YES Bid Lvl1\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_px IS NOT NULL ORDER BY ts",
+            "refId": "A",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, bid_px AS \"YES Bid Lvl2\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 2 AND $__timeFilter(ts) AND bid_px IS NOT NULL ORDER BY ts",
+            "refId": "B",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, bid_px AS \"YES Bid Lvl3\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 3 AND $__timeFilter(ts) AND bid_px IS NOT NULL ORDER BY ts",
+            "refId": "C",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, ask_px AS \"YES Ask Lvl1\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND ask_px IS NOT NULL ORDER BY ts",
+            "refId": "D",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, ask_px AS \"YES Ask Lvl2\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 2 AND $__timeFilter(ts) AND ask_px IS NOT NULL ORDER BY ts",
+            "refId": "E",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, ask_px AS \"YES Ask Lvl3\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 3 AND $__timeFilter(ts) AND ask_px IS NOT NULL ORDER BY ts",
+            "refId": "F",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percentunit",
+            "min": 0,
+            "max": 1,
+            "custom": {
+              "drawStyle": "line",
+              "lineWidth": 1,
+              "fillOpacity": 0,
+              "pointSize": 2
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byRegexp", "options": "/Bid/"},
+              "properties": [{"id": "color", "value": {"mode": "fixed", "fixedColor": "green"}}]
+            },
+            {
+              "matcher": {"id": "byRegexp", "options": "/Ask/"},
+              "properties": [{"id": "color", "value": {"mode": "fixed", "fixedColor": "red"}}]
+            }
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "title": "Order Book Price Levels - All 3 Levels",
+        "type": "table",
+        "gridPos": {"x": 16, "y": 4, "w": 8, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT CASE WHEN level = 1 THEN 'YES Bid Lvl1' WHEN level = 2 THEN 'YES Bid Lvl2' WHEN level = 3 THEN 'YES Bid Lvl3' END AS name, argMax(bid_px, ts) AS last, round(avg(bid_px), 4) AS mean, max(bid_px) AS max, min(bid_px) AS min FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(ts) AND bid_px IS NOT NULL GROUP BY level UNION ALL SELECT CASE WHEN level = 1 THEN 'YES Ask Lvl1' WHEN level = 2 THEN 'YES Ask Lvl2' WHEN level = 3 THEN 'YES Ask Lvl3' END AS name, argMax(ask_px, ts) AS last, round(avg(ask_px), 4) AS mean, max(ask_px) AS max, min(ask_px) AS min FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(ts) AND ask_px IS NOT NULL GROUP BY level ORDER BY name",
+            "refId": "A",
+            "format": 2
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Order Book Sizes - All 3 Levels",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 12, "w": 16, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, bid_sz AS \"YES Bid Size Lvl1\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_sz IS NOT NULL ORDER BY ts",
+            "refId": "A",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, bid_sz AS \"YES Bid Size Lvl2\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 2 AND $__timeFilter(ts) AND bid_sz IS NOT NULL ORDER BY ts",
+            "refId": "B",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, bid_sz AS \"YES Bid Size Lvl3\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 3 AND $__timeFilter(ts) AND bid_sz IS NOT NULL ORDER BY ts",
+            "refId": "C",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, ask_sz AS \"YES Ask Size Lvl1\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND ask_sz IS NOT NULL ORDER BY ts",
+            "refId": "D",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, ask_sz AS \"YES Ask Size Lvl2\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 2 AND $__timeFilter(ts) AND ask_sz IS NOT NULL ORDER BY ts",
+            "refId": "E",
+            "format": 1
+          },
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, ask_sz AS \"YES Ask Size Lvl3\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 3 AND $__timeFilter(ts) AND ask_sz IS NOT NULL ORDER BY ts",
+            "refId": "F",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "short",
+            "custom": {
+              "drawStyle": "bars",
+              "barAlignment": 0,
+              "fillOpacity": 50
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byRegexp", "options": "/Bid/"},
+              "properties": [{"id": "color", "value": {"mode": "fixed", "fixedColor": "green"}}]
+            },
+            {
+              "matcher": {"id": "byRegexp", "options": "/Ask/"},
+              "properties": [{"id": "color", "value": {"mode": "fixed", "fixedColor": "red"}}]
+            }
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "title": "Order Book Sizes - All 3 Levels",
+        "type": "table",
+        "gridPos": {"x": 16, "y": 12, "w": 8, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT CASE WHEN level = 1 THEN 'YES Bid Size Lvl1' WHEN level = 2 THEN 'YES Bid Size Lvl2' WHEN level = 3 THEN 'YES Bid Size Lvl3' END AS name, argMax(bid_sz, ts) AS last, round(avg(bid_sz), 2) AS mean, round(sum(bid_sz), 0) AS total FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(ts) AND bid_sz IS NOT NULL GROUP BY level UNION ALL SELECT CASE WHEN level = 1 THEN 'YES Ask Size Lvl1' WHEN level = 2 THEN 'YES Ask Size Lvl2' WHEN level = 3 THEN 'YES Ask Size Lvl3' END AS name, argMax(ask_sz, ts) AS last, round(avg(ask_sz), 2) AS mean, round(sum(ask_sz), 0) AS total FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND $__timeFilter(ts) AND ask_sz IS NOT NULL GROUP BY level ORDER BY name",
+            "refId": "A",
+            "format": 2
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Mid Price Evolution",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 20, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, (bid_px + ask_px) / 2 AS \"YES Mid Price\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_px IS NOT NULL AND ask_px IS NOT NULL ORDER BY ts",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percentunit",
+            "min": 0,
+            "max": 1,
+            "custom": {
+              "drawStyle": "line",
+              "lineWidth": 2,
+              "fillOpacity": 0
+            }
+          }
+        }
+      },
+      {
+        "id": 9,
+        "title": "Mid Price Evolution",
+        "type": "table",
+        "gridPos": {"x": 12, "y": 20, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT 'YES Mid Price' AS name, argMax((bid_px + ask_px) / 2, ts) AS last, round(avg((bid_px + ask_px) / 2), 4) AS mean, round(argMax((bid_px + ask_px) / 2, ts) - min((bid_px + ask_px) / 2), 4) AS delta FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_px IS NOT NULL AND ask_px IS NOT NULL",
+            "refId": "A",
+            "format": 2
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Order Book Imbalance (Positive = Buy Pressure)",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 28, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, CASE WHEN (bid_sz + ask_sz) > 0 THEN (bid_sz - ask_sz) / (bid_sz + ask_sz) ELSE 0 END AS \"YES Imbalance\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_sz IS NOT NULL AND ask_sz IS NOT NULL ORDER BY ts",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "none",
+            "min": -1,
+            "max": 1,
+            "custom": {
+              "drawStyle": "bars",
+              "barAlignment": 0,
+              "fillOpacity": 50
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "YES Imbalance"},
+              "properties": [{"id": "color", "value": {"mode": "fixed", "fixedColor": "green"}}]
+            }
+          ]
+        }
+      },
+      {
+        "id": 11,
+        "title": "Order Book Imbalance",
+        "type": "table",
+        "gridPos": {"x": 12, "y": 28, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT 'YES Imbalance' AS name, argMax(CASE WHEN (bid_sz + ask_sz) > 0 THEN (bid_sz - ask_sz) / (bid_sz + ask_sz) ELSE 0 END, ts) AS last, round(avg(CASE WHEN (bid_sz + ask_sz) > 0 THEN (bid_sz - ask_sz) / (bid_sz + ask_sz) ELSE 0 END), 4) AS mean, max(CASE WHEN (bid_sz + ask_sz) > 0 THEN (bid_sz - ask_sz) / (bid_sz + ask_sz) ELSE 0 END) AS max, min(CASE WHEN (bid_sz + ask_sz) > 0 THEN (bid_sz - ask_sz) / (bid_sz + ask_sz) ELSE 0 END) AS min FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_sz IS NOT NULL AND ask_sz IS NOT NULL",
+            "refId": "A",
+            "format": 2
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "title": "Bid-Ask Spread by Level",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 36, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, ask_px - bid_px AS \"Spread (Lvl1)\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_px IS NOT NULL AND ask_px IS NOT NULL ORDER BY ts",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "none",
+            "custom": {
+              "drawStyle": "bars",
+              "barAlignment": 0,
+              "fillOpacity": 50
+            }
+          }
+        }
+      },
+      {
+        "id": 13,
+        "title": "Bid-Ask Spread by Level",
+        "type": "table",
+        "gridPos": {"x": 12, "y": 36, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT 'Spread (Lvl1)' AS name, argMax(ask_px - bid_px, ts) AS last, round(avg(ask_px - bid_px), 4) AS mean, max(ask_px - bid_px) AS max FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_px IS NOT NULL AND ask_px IS NOT NULL",
+            "refId": "A",
+            "format": 2
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Total Book Liquidity Over Time",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 44, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, bid_sz + ask_sz AS \"YES Total Liquidity\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_sz IS NOT NULL AND ask_sz IS NOT NULL ORDER BY ts",
+            "refId": "A",
+            "format": 1
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "short",
+            "custom": {
+              "drawStyle": "line",
+              "lineWidth": 2,
+              "fillOpacity": 20
+            }
+          }
+        }
+      },
+      {
+        "id": 15,
+        "title": "Total Book Liquidity Over Time",
+        "type": "table",
+        "gridPos": {"x": 12, "y": 44, "w": 12, "h": 8},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT 'YES Total Liquidity' AS name, argMax(bid_sz + ask_sz, ts) AS last, round(avg(bid_sz + ask_sz), 0) AS mean, min(bid_sz + ask_sz) AS min FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND token_id = '${token}' AND level = 1 AND $__timeFilter(ts) AND bid_sz IS NOT NULL AND ask_sz IS NOT NULL",
+            "refId": "A",
+            "format": 2
+          }
+        ]
+      }
+    ],
+    "time": {"from": "now-1h", "to": "now"},
+    "schemaVersion": 39
+  },
+  "overwrite": true
+}

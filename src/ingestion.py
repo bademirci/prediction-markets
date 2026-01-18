@@ -146,14 +146,42 @@ class PolymarketIngestion:
             markets = await self.rest_client.fetch_active_markets(
                 limit=self.config.max_markets
             )
+
+            # Keywords to auto-detect Sports/Esports if not in our manual list
+            sports_keywords = [
+                " vs ", "League", "Cup", "Tournament", "Championship", "NBA", "NFL", 
+                "Premier League", "Champions League", "UFC", "F1", "Grand Prix",
+                "Dota", "Counter-Strike", "CS2", "LoL", "Valorant", "Overwatch"
+            ]
             
             for market in markets:
                 condition_id = market['condition_id']
-                market_id = market.get('market_id', '')
+                market_id_str = str(market.get('market_id', ''))
                 
-                # Add computed category from our categorization
-                market['computed_category'] = COMPUTED_CATEGORIES.get(market_id, 'Other')
+                # 1. Try to get from our curated list
+                computed_cat = COMPUTED_CATEGORIES.get(market_id_str)
+
+                # 2. If not in list (NEW MARKET), try to infer
+                if not computed_cat:
+                    api_category = market.get('category', 'Unknown')
+                    question_text = market.get('question', '')
+                    
+                    # Trust API if it says Sports
+                    if api_category == 'Sports':
+                        computed_cat = 'Sports'
+                    # Check keywords for new Esports/Sports markets
+                    elif any(k in question_text for k in sports_keywords):
+                        computed_cat = 'Sports'
+                    else:
+                        computed_cat = api_category
+
+                # Add computed category
+                market['computed_category'] = computed_cat or 'Other'
                 
+                # Apply category filter if set
+                if self.config.category_filter and market['computed_category'] != self.config.category_filter:
+                    continue
+
                 self._markets[condition_id] = market
                 
                 # Map token IDs to condition ID
@@ -167,7 +195,7 @@ class PolymarketIngestion:
             count = await self.writer.flush_markets()
             self._stats['markets_synced'] = len(markets)
             
-            print(f"✅ Synced {count} markets, {len(self._token_to_market)} tokens")
+            print(f"✅ Synced {count} markets, {len(self._token_to_market)} tokens (filtered: {self.config.category_filter})")
             
         except Exception as e:
             print(f"❌ Error syncing markets: {e}")
@@ -185,18 +213,38 @@ class PolymarketIngestion:
         
         await self.writer.buffer_trade(trade)
     
-    async def _on_book(self, bbo: dict) -> None:
-        """Handle incoming BBO update from WebSocket."""
+    async def _on_book(self, book_data: dict) -> None:
+        """Handle incoming BBO and orderbook levels update from WebSocket."""
         self._stats['bbo_received'] += 1
         
-        # Enrich with market_id if missing
+        # Handle new format: {'bbo': {...}, 'levels': [...]}
+        if 'bbo' in book_data and 'levels' in book_data:
+            bbo = book_data['bbo']
+            levels = book_data['levels']
+        else:
+            # Backward compatibility: old format (just BBO)
+            bbo = book_data
+            levels = []
+        
+        # Enrich BBO with market_id if missing
         if not bbo.get('market_id') and bbo.get('token_id'):
             condition_id = self._token_to_market.get(bbo['token_id'])
             if condition_id:
                 bbo['market_id'] = self._markets.get(condition_id, {}).get('market_id', '')
                 bbo['condition_id'] = condition_id
         
+        # Enrich levels with market_id if missing
+        for level in levels:
+            if not level.get('market_id') and level.get('token_id'):
+                condition_id = self._token_to_market.get(level['token_id'])
+                if condition_id:
+                    level['market_id'] = self._markets.get(condition_id, {}).get('market_id', '')
+                    level['condition_id'] = condition_id
+        
+        # Buffer both BBO (for backward compatibility) and levels
         await self.writer.buffer_bbo(bbo)
+        if levels:
+            await self.writer.buffer_orderbook_levels(levels)
     
     async def _run_websocket(self, token_ids: list[str]) -> None:
         """Run WebSocket connection."""

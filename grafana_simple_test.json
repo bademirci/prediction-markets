@@ -1,0 +1,41 @@
+{
+  "dashboard": {
+    "title": "JDG Test Dashboard",
+    "tags": ["test"],
+    "timezone": "browser",
+    "refresh": "10s",
+    "templating": {
+      "list": [
+        {
+          "name": "market",
+          "type": "query",
+          "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+          "query": "SELECT condition_id AS __value, question AS __text FROM polymarket.markets_dim WHERE computed_category = 'Sports' AND active = 1 AND question LIKE '%JD Gaming%' ORDER BY updated_at DESC LIMIT 20",
+          "current": {"text": "All", "value": "$__all"},
+          "refresh": 1,
+          "sort": 0
+        }
+      ]
+    },
+    "panels": [
+      {
+        "id": 1,
+        "title": "Test - Orderbook Levels",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 0, "w": 24, "h": 10},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "queryType": "sql",
+            "rawSql": "SELECT ts AS time, level, bid_px AS \"Bid\", ask_px AS \"Ask\" FROM polymarket.orderbook_levels WHERE condition_id = '${market}' AND level = 1 AND $__timeFilter(ts) AND bid_px IS NOT NULL ORDER BY ts",
+            "refId": "A",
+            "format": 1
+          }
+        ]
+      }
+    ],
+    "time": {"from": "now-1h", "to": "now"},
+    "schemaVersion": 39
+  },
+  "overwrite": true
+}

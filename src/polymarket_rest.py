@@ -104,16 +104,31 @@ class PolymarketRestClient:
             
             book = orjson.loads(response.content)
             
-            # Extract best bid/ask
+            # Extract bids and asks
             bids = book.get('bids', [])
             asks = book.get('asks', [])
             
+            # Parse and sort bids: descending (highest first = best bid)
+            parsed_bids = []
+            for bid in bids:
+                price = float(bid.get('price', 0))
+                size = float(bid.get('size', 0))
+                parsed_bids.append({'price': price, 'size': size})
+            parsed_bids.sort(key=lambda x: x['price'], reverse=True)
+            
+            # Parse and sort asks: ascending (lowest first = best ask)
+            parsed_asks = []
+            for ask in asks:
+                price = float(ask.get('price', 0))
+                size = float(ask.get('size', 0))
+                parsed_asks.append({'price': price, 'size': size})
+            parsed_asks.sort(key=lambda x: x['price'])
+            
             # Best bid is highest price, best ask is lowest price
-            # bids are typically sorted descending, asks ascending
-            best_bid_px = float(bids[0]['price']) if bids else None
-            best_bid_sz = float(bids[0]['size']) if bids else None
-            best_ask_px = float(asks[0]['price']) if asks else None
-            best_ask_sz = float(asks[0]['size']) if asks else None
+            best_bid_px = parsed_bids[0]['price'] if parsed_bids else None
+            best_bid_sz = parsed_bids[0]['size'] if parsed_bids else None
+            best_ask_px = parsed_asks[0]['price'] if parsed_asks else None
+            best_ask_sz = parsed_asks[0]['size'] if parsed_asks else None
             
             return {
                 'ts': datetime.now(timezone.utc),

@@ -34,8 +34,8 @@ class Config:
     flush_interval: float = 1.0  # seconds
     max_markets: int = 25000     # All markets
     
-    # Focus filter (None = all, or category name like 'Esports')
-    category_filter: str | None = "Esports"
+    # Focus filter (None = all, or category name like 'Sports')
+    category_filter: str | None = None
 
 
 def get_config() -> Config:
