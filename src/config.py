@@ -33,6 +33,9 @@ class Config:
     batch_size: int = 1000
     flush_interval: float = 1.0  # seconds
     max_markets: int = 1000000   # All markets (no practical limit)
+    ws_tokens_per_connection: int = 1000
+    ws_subscribe_batch_size: int = 200
+    max_ws_connections: int = 10
     
     # Focus filter (None = all, or category name like 'Sports')
     category_filter: str | None = None

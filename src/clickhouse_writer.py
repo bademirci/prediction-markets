@@ -115,7 +115,29 @@ class ClickHouseWriter:
             ENGINE = ReplacingMergeTree(updated_at)
             ORDER BY (condition_id, market_id)
         """)
+        self._ensure_markets_dim_schema()
         print("🛠️ HFT Schemas Initialized (Trades, Orderbook, Markets)")
+    
+    def _ensure_markets_dim_schema(self) -> None:
+        """Ensure markets_dim has expected category columns."""
+        if not self.client:
+            return
+        
+        try:
+            result = self.client.query("DESCRIBE TABLE markets_dim")
+        except Exception as e:
+            print(f"⚠️ markets_dim schema check failed: {e}")
+            return
+        
+        existing = {row[0] for row in result.result_rows}
+        if "category" not in existing:
+            self.client.command(
+                "ALTER TABLE markets_dim ADD COLUMN IF NOT EXISTS category LowCardinality(String) AFTER slug"
+            )
+        if "computed_category" not in existing:
+            self.client.command(
+                "ALTER TABLE markets_dim ADD COLUMN IF NOT EXISTS computed_category LowCardinality(String) AFTER category"
+            )
     
     def close(self) -> None:
         """Close connection."""

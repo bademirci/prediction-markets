@@ -29,7 +29,7 @@ class PolymarketIngestion:
         # Initialize components
         self.writer = ClickHouseWriter(self.config.clickhouse)
         self.rest_client = PolymarketRestClient(self.config.polymarket)
-        self.ws_client: PolymarketWebSocket | None = None
+        self.ws_clients: list[PolymarketWebSocket] = []
         
         # State
         self._running = False
@@ -54,12 +54,6 @@ class PolymarketIngestion:
         self._running = True
         
         await self._sync_markets()
-        
-        self.ws_client = PolymarketWebSocket(
-            config=self.config.polymarket,
-            on_trade=self._on_trade,
-            on_book=self._on_book,
-        )
         
         token_ids = list(self._token_to_market.keys())
         
@@ -97,11 +91,8 @@ class PolymarketIngestion:
         
         print(f"📊 Subscribing to {len(token_ids)} tokens...")
         
-        # Start WebSocket connection and subscription in background
-        ws_task = asyncio.create_task(self._run_websocket(token_ids))
-        
         tasks = [
-            ws_task,
+            asyncio.create_task(self._run_websocket(token_ids)),
             asyncio.create_task(self._run_flusher()),
             asyncio.create_task(self._run_market_sync()),
             asyncio.create_task(self._run_stats_reporter()),
@@ -117,8 +108,8 @@ class PolymarketIngestion:
         print("⏹️ Stopping ingestion...")
         self._running = False
         
-        if self.ws_client:
-            await self.ws_client.close()
+        for ws_client in self.ws_clients:
+            await ws_client.close()
         
         results = await self.writer.flush_all()
         print(f"📤 Final flush: {results}")
@@ -128,14 +119,24 @@ class PolymarketIngestion:
         print("✅ Ingestion stopped")
 
     async def _enrich_market_info(self, item: dict) -> None:
-        if not item.get('market_id') and item.get('token_id'):
-            condition_id = self._token_to_market.get(item['token_id'])
-            if condition_id:
-                market_data = self._markets.get(condition_id, {})
-                item['condition_id'] = condition_id
-                item['market_id'] = market_data.get('market_id', '')
-                if 'computed_category' in market_data:
-                    item['category'] = market_data['computed_category']
+        token_id = item.get('token_id')
+        if not token_id:
+            return
+        
+        token_id = str(token_id)
+        item['token_id'] = token_id
+        condition_id = self._token_to_market.get(token_id)
+        if not condition_id:
+            return
+        
+        market_data = self._markets.get(condition_id, {})
+        item['condition_id'] = condition_id
+        
+        if item.get('market_id') in ('', condition_id, None):
+            item['market_id'] = market_data.get('market_id', '')
+        
+        if 'computed_category' in market_data:
+            item['category'] = market_data['computed_category']
 
     async def _on_trade(self, trade: dict) -> None:
         self._stats['trades_received'] += 1
@@ -179,6 +180,7 @@ class PolymarketIngestion:
                 
                 self._markets[cond_id] = market
                 for token_id in market.get('clob_token_ids', []):
+                    token_id = str(token_id)
                     self._token_to_market[token_id] = cond_id
                 
                 await self.writer.buffer_market(market)
@@ -191,71 +193,41 @@ class PolymarketIngestion:
             print(f"❌ Error syncing markets: {e}")
     
     async def _run_websocket(self, token_ids: list[str]) -> None:
-        """Subscribe to tokens in batches to avoid WebSocket limits."""
-        if not self.ws_client: return
-        
-        # WebSocket subscription limit - subscribe in batches
-        # Polymarket WebSocket may have limits on number of tokens per subscription
-        batch_size = 1000  # Subscribe to 1000 tokens at a time
+        """Subscribe to tokens across multiple WebSocket connections."""
         total_tokens = len(token_ids)
-        total_batches = (total_tokens + batch_size - 1) // batch_size
-        
-        print(f"📡 Subscribing to {total_tokens:,} tokens in {total_batches} batches of {batch_size}...")
-        
-        # Manually connect WebSocket (don't use connect() as it blocks on _listen)
-        import websockets
-        self.ws_client._running = True
-        
-        try:
-            print(f"🔌 Connecting to {self.ws_client.config.websocket_url}...")
-            self.ws_client._ws = await websockets.connect(
-                self.ws_client.config.websocket_url,
-                ping_interval=20,
-                ping_timeout=10,
-                max_size=None,
+        tokens_per_connection = max(1, self.config.ws_tokens_per_connection)
+        total_connections = (total_tokens + tokens_per_connection - 1) // tokens_per_connection
+        if total_connections > self.config.max_ws_connections:
+            tokens_per_connection = max(
+                tokens_per_connection,
+                (total_tokens + self.config.max_ws_connections - 1) // self.config.max_ws_connections,
             )
-            print("✅ WebSocket connected!")
+            total_connections = (total_tokens + tokens_per_connection - 1) // tokens_per_connection
+        
+        print(
+            f"📡 Subscribing to {total_tokens:,} tokens across "
+            f"{total_connections} WebSocket connections "
+            f"({tokens_per_connection} tokens/connection)..."
+        )
+        
+        self.ws_clients = []
+        tasks = []
+        
+        for i in range(0, total_tokens, tokens_per_connection):
+            chunk = token_ids[i:i + tokens_per_connection]
+            ws_client = PolymarketWebSocket(
+                config=self.config.polymarket,
+                on_trade=self._on_trade,
+                on_book=self._on_book,
+                subscribe_batch_size=self.config.ws_subscribe_batch_size,
+            )
+            self.ws_clients.append(ws_client)
             
-            # Start _listen in background
-            listen_task = asyncio.create_task(self.ws_client._listen())
-            
-            # Small delay for connection to stabilize
-            await asyncio.sleep(1)
-            
-            # Subscribe in batches
-            successful_batches = 0
-            failed_batches = 0
-            
-            for i in range(0, total_tokens, batch_size):
-                batch = token_ids[i:i + batch_size]
-                batch_num = i//batch_size + 1
-                
-                try:
-                    await self.ws_client.subscribe(batch)
-                    successful_batches += 1
-                    if batch_num % 10 == 0 or batch_num <= 5 or batch_num > total_batches - 5:
-                        print(f"   ✅ Batch {batch_num}/{total_batches}: {len(batch)} tokens subscribed")
-                except Exception as e:
-                    failed_batches += 1
-                    print(f"   ❌ Batch {batch_num}/{total_batches} failed: {e}")
-                
-                # Small delay between batches to avoid overwhelming the WebSocket
-                if i + batch_size < total_tokens:
-                    await asyncio.sleep(0.5)
-            
-            print(f"\n📊 Subscription Summary:")
-            print(f"   ✅ Successful: {successful_batches}/{total_batches} batches")
-            print(f"   ❌ Failed: {failed_batches}/{total_batches} batches")
-            print(f"   📡 Total tokens attempted: {total_tokens:,}")
-            print(f"   📡 Estimated subscribed: {successful_batches * batch_size:,} tokens")
-            
-            # Keep listen task running
-            await listen_task
-            
-        except Exception as e:
-            print(f"❌ WebSocket error: {e}")
-            import traceback
-            traceback.print_exc()
+            await ws_client.subscribe(chunk)
+            tasks.append(asyncio.create_task(ws_client.connect()))
+            print(f"   ✅ Connection {len(self.ws_clients)}/{total_connections}: queued {len(chunk)} tokens")
+        
+        await asyncio.gather(*tasks)
     
     async def _run_flusher(self) -> None:
         while self._running:
