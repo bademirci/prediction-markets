@@ -19,11 +19,13 @@ class PolymarketWebSocket:
         on_trade: Callable[[dict], Any] | None = None,
         on_price_change: Callable[[dict], Any] | None = None,
         on_book: Callable[[dict], Any] | None = None,
+        subscribe_batch_size: int = 200,
     ):
         self.config = config
         self.on_trade = on_trade
         self.on_price_change = on_price_change
         self.on_book = on_book
+        self.subscribe_batch_size = max(1, subscribe_batch_size)
         
         self._ws: WebSocketClientProtocol | None = None
         self._running = False
@@ -53,7 +55,9 @@ class PolymarketWebSocket:
                     
                     # Send any queued subscriptions
                     if self._subscribed_tokens:
-                        await self._send_subscribe(list(self._subscribed_tokens))
+                        tokens = list(self._subscribed_tokens)
+                        for i in range(0, len(tokens), self.subscribe_batch_size):
+                            await self._send_subscribe(tokens[i:i + self.subscribe_batch_size])
                 
                 await self._listen()
                 
@@ -157,12 +161,13 @@ class PolymarketWebSocket:
         else:
              exchange_ts = receipt_ts
 
+        token_id = event.get('asset_id', event.get('asset', ''))
         trade = {
             'exchange_ts': exchange_ts,
             'local_ts': receipt_ts,
             'market_id': event.get('market', event.get('condition_id', '')),
             'condition_id': event.get('condition_id', event.get('market', '')),
-            'token_id': event.get('asset_id', event.get('asset', '')),
+            'token_id': str(token_id) if token_id is not None else '',
             'side': event.get('side', 'UNKNOWN'),
             'price': float(event.get('price', 0)),
             'size': float(event.get('size', 0)),
@@ -189,6 +194,7 @@ class PolymarketWebSocket:
 
         raw_bids = event.get('bids', [])
         raw_asks = event.get('asks', [])
+        token_id = event.get('asset_id', '')
 
         bids = [{'p': float(b['price']), 's': float(b['size'])} for b in raw_bids if b.get('price') and b.get('size')]
         asks = [{'p': float(a['price']), 's': float(a['size'])} for a in raw_asks if a.get('price') and a.get('size')]
@@ -213,7 +219,7 @@ class PolymarketWebSocket:
                 'local_ts': receipt_ts,
                 'market_id': event.get('market', ''),
                 'condition_id': event.get('market', ''),
-                'token_id': event.get('asset_id', ''),
+                'token_id': str(token_id) if token_id is not None else '',
                 'level': i + 1,
                 'bid_px': bid_px,
                 'bid_sz': bid_sz,
