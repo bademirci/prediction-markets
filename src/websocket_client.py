@@ -40,18 +40,20 @@ class PolymarketWebSocket:
         """Connect with exponential backoff retry."""
         while self._running:
             try:
-                print(f"🔌 Connecting to {self.config.websocket_url}...")
-                self._ws = await websockets.connect(
-                    self.config.websocket_url,
-                    ping_interval=20,
-                    ping_timeout=10,
-                    max_size=None,
-                )
-                print("✅ WebSocket connected!")
-                self._reconnect_delay = 1.0
-                
-                if self._subscribed_tokens:
-                    await self._send_subscribe(list(self._subscribed_tokens))
+                if not self._ws or not self._ws.open:
+                    print(f"🔌 Connecting to {self.config.websocket_url}...")
+                    self._ws = await websockets.connect(
+                        self.config.websocket_url,
+                        ping_interval=20,
+                        ping_timeout=10,
+                        max_size=None,
+                    )
+                    print("✅ WebSocket connected!")
+                    self._reconnect_delay = 1.0
+                    
+                    # Send any queued subscriptions
+                    if self._subscribed_tokens:
+                        await self._send_subscribe(list(self._subscribed_tokens))
                 
                 await self._listen()
                 
@@ -71,20 +73,30 @@ class PolymarketWebSocket:
         
         if self._ws and self._ws.open:
             await self._send_subscribe(token_ids)
+        else:
+            # Store for later when connection is established
+            print(f"📝 Queued {len(token_ids)} tokens for subscription (WebSocket not connected yet)")
     
     async def _send_subscribe(self, token_ids: list[str]) -> None:
         """Send subscribe message."""
         if not self._ws:
             return
         
-        message = {
-            "type": "subscribe",
-            "channel": "market",
-            "assets_ids": token_ids,
-        }
+        if not token_ids:
+            return
         
-        await self._ws.send(orjson.dumps(message).decode())
-        print(f"📡 Subscribed to {len(token_ids)} tokens")
+        try:
+            message = {
+                "type": "subscribe",
+                "channel": "market",
+                "assets_ids": token_ids,
+            }
+            
+            await self._ws.send(orjson.dumps(message).decode())
+            print(f"📡 ✅ Subscribed to {len(token_ids)} tokens")
+        except Exception as e:
+            print(f"❌ Subscription error for {len(token_ids)} tokens: {e}")
+            raise
     
     async def _listen(self) -> None:
         """Listen for messages with immediate timestamping."""
@@ -109,9 +121,27 @@ class PolymarketWebSocket:
         """Handle single event."""
         event_type = event.get('event_type') or event.get('type')
         
-        if event_type in ('trade', 'last_trade_price'):
+        # Debug: Log unknown event types (first 10 only)
+        if event_type not in ('trade', 'last_trade_price', 'book', 'TRADE', 'BOOK', 'price_change') and not hasattr(self, '_unknown_events_logged'):
+            if not hasattr(self, '_unknown_event_count'):
+                self._unknown_event_count = 0
+            if self._unknown_event_count < 10:
+                print(f"🔍 Unknown event type: {event_type}, keys: {list(event.keys())[:10]}")
+                self._unknown_event_count += 1
+                if self._unknown_event_count >= 10:
+                    self._unknown_events_logged = True
+        
+        # Handle trade events - Polymarket market channel uses 'last_trade_price' for trades
+        # Also check for trade-like data (has price, size, side but no bids/asks)
+        is_trade = (
+            event_type in ('trade', 'last_trade_price', 'TRADE', 'trade_executed', 'execution') or
+            ('price' in event and 'size' in event and 'side' in event and 'bids' not in event and 'asks' not in event)
+        )
+        
+        if is_trade:
             await self._handle_trade(event, receipt_ts)
-        elif event_type == 'book':
+        elif event_type in ('book', 'BOOK') or ('bids' in event or 'asks' in event):
+            # Book update - check if it has bids/asks even if event_type is missing
             await self._handle_book(event, receipt_ts)
     
     async def _handle_trade(self, event: dict, receipt_ts: datetime) -> None:

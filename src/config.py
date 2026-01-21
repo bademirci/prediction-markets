@@ -32,7 +32,7 @@ class Config:
     # Ingestion settings
     batch_size: int = 1000
     flush_interval: float = 1.0  # seconds
-    max_markets: int = 25000     # All markets
+    max_markets: int = 1000000   # All markets (no practical limit)
     
     # Focus filter (None = all, or category name like 'Sports')
     category_filter: str | None = None

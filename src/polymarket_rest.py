@@ -19,14 +19,18 @@ class PolymarketRestClient:
         """Close HTTP client."""
         await self.http_client.aclose()
     
-    async def fetch_active_markets(self, limit: int = 100) -> list[dict]:
-        """Fetch active markets from Gamma API with pagination."""
+    async def fetch_active_markets(self, limit: int = 1000000) -> list[dict]:
+        """Fetch active markets from Gamma API with pagination.
+        
+        Args:
+            limit: Maximum number of markets to fetch (default: 1M, effectively no limit)
+        """
         url = f"{self.config.gamma_api_url}/markets"
         
-        # Paginate through all markets
+        # Paginate through all markets until we hit the limit or run out
         all_markets_raw = []
         offset = 0
-        page_size = min(500, limit)  # API max is 500
+        page_size = 500  # API max is 500
         
         while len(all_markets_raw) < limit:
             params = {
@@ -46,11 +50,17 @@ class PolymarketRestClient:
             all_markets_raw.extend(batch)
             offset += page_size
             
+            # If we got fewer than page_size, we've reached the end
             if len(batch) < page_size:
                 break  # Last page
+            
+            # Progress indicator every 10k markets
+            if len(all_markets_raw) % 10000 == 0:
+                print(f"   Fetched {len(all_markets_raw):,} markets so far...")
         
-        markets_raw = all_markets_raw[:limit]
-        print(f"   Fetched {len(markets_raw)} markets from API")
+        # Apply limit if specified (but we already stopped if we hit it)
+        markets_raw = all_markets_raw[:limit] if limit < len(all_markets_raw) else all_markets_raw
+        print(f"   ✅ Fetched {len(markets_raw):,} markets from API")
         
         # Transform to our schema
         markets = []

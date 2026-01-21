@@ -97,8 +97,11 @@ class PolymarketIngestion:
         
         print(f"📊 Subscribing to {len(token_ids)} tokens...")
         
+        # Start WebSocket connection and subscription in background
+        ws_task = asyncio.create_task(self._run_websocket(token_ids))
+        
         tasks = [
-            asyncio.create_task(self._run_websocket(token_ids)),
+            ws_task,
             asyncio.create_task(self._run_flusher()),
             asyncio.create_task(self._run_market_sync()),
             asyncio.create_task(self._run_stats_reporter()),
@@ -188,9 +191,71 @@ class PolymarketIngestion:
             print(f"❌ Error syncing markets: {e}")
     
     async def _run_websocket(self, token_ids: list[str]) -> None:
+        """Subscribe to tokens in batches to avoid WebSocket limits."""
         if not self.ws_client: return
-        await self.ws_client.subscribe(token_ids)
-        await self.ws_client.connect()
+        
+        # WebSocket subscription limit - subscribe in batches
+        # Polymarket WebSocket may have limits on number of tokens per subscription
+        batch_size = 1000  # Subscribe to 1000 tokens at a time
+        total_tokens = len(token_ids)
+        total_batches = (total_tokens + batch_size - 1) // batch_size
+        
+        print(f"📡 Subscribing to {total_tokens:,} tokens in {total_batches} batches of {batch_size}...")
+        
+        # Manually connect WebSocket (don't use connect() as it blocks on _listen)
+        import websockets
+        self.ws_client._running = True
+        
+        try:
+            print(f"🔌 Connecting to {self.ws_client.config.websocket_url}...")
+            self.ws_client._ws = await websockets.connect(
+                self.ws_client.config.websocket_url,
+                ping_interval=20,
+                ping_timeout=10,
+                max_size=None,
+            )
+            print("✅ WebSocket connected!")
+            
+            # Start _listen in background
+            listen_task = asyncio.create_task(self.ws_client._listen())
+            
+            # Small delay for connection to stabilize
+            await asyncio.sleep(1)
+            
+            # Subscribe in batches
+            successful_batches = 0
+            failed_batches = 0
+            
+            for i in range(0, total_tokens, batch_size):
+                batch = token_ids[i:i + batch_size]
+                batch_num = i//batch_size + 1
+                
+                try:
+                    await self.ws_client.subscribe(batch)
+                    successful_batches += 1
+                    if batch_num % 10 == 0 or batch_num <= 5 or batch_num > total_batches - 5:
+                        print(f"   ✅ Batch {batch_num}/{total_batches}: {len(batch)} tokens subscribed")
+                except Exception as e:
+                    failed_batches += 1
+                    print(f"   ❌ Batch {batch_num}/{total_batches} failed: {e}")
+                
+                # Small delay between batches to avoid overwhelming the WebSocket
+                if i + batch_size < total_tokens:
+                    await asyncio.sleep(0.5)
+            
+            print(f"\n📊 Subscription Summary:")
+            print(f"   ✅ Successful: {successful_batches}/{total_batches} batches")
+            print(f"   ❌ Failed: {failed_batches}/{total_batches} batches")
+            print(f"   📡 Total tokens attempted: {total_tokens:,}")
+            print(f"   📡 Estimated subscribed: {successful_batches * batch_size:,} tokens")
+            
+            # Keep listen task running
+            await listen_task
+            
+        except Exception as e:
+            print(f"❌ WebSocket error: {e}")
+            import traceback
+            traceback.print_exc()
     
     async def _run_flusher(self) -> None:
         while self._running:
