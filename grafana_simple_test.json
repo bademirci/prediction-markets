@@ -10,7 +10,7 @@
           "name": "market",
           "type": "query",
           "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
-          "query": "SELECT condition_id AS __value, question AS __text FROM polymarket.markets_dim WHERE computed_category = 'Sports' AND active = 1 AND question LIKE '%JD Gaming%' ORDER BY updated_at DESC LIMIT 20",
+          "query": "SELECT condition_id AS __value, argMax(question, updated_at) AS __text FROM polymarket.markets_dim WHERE updated_at >= now() - INTERVAL 1 DAY AND computed_category = 'Sports' AND question LIKE '%JD Gaming%' GROUP BY condition_id ORDER BY __text LIMIT 200",
           "current": {"text": "All", "value": "$__all"},
           "refresh": 1,
           "sort": 0

@@ -13,8 +13,8 @@
           "label": "Category",
           "type": "query",
           "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
-          "definition": "SELECT DISTINCT computed_category FROM polymarket.markets_dim ORDER BY computed_category",
-          "query": "SELECT DISTINCT computed_category FROM polymarket.markets_dim ORDER BY computed_category",
+          "definition": "SELECT DISTINCT computed_category FROM polymarket.markets_dim WHERE updated_at >= now() - INTERVAL 1 DAY ORDER BY computed_category",
+          "query": "SELECT DISTINCT computed_category FROM polymarket.markets_dim WHERE updated_at >= now() - INTERVAL 1 DAY ORDER BY computed_category",
           "current": {"text": "Other", "value": "Other"},
           "includeAll": true,
           "allValue": null,
@@ -26,8 +26,8 @@
           "label": "Market",
           "type": "query",
           "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
-          "definition": "SELECT DISTINCT condition_id AS __value, any(question) AS __text FROM (SELECT DISTINCT t.condition_id, m.question FROM polymarket.trades_raw t JOIN polymarket.markets_dim m ON t.condition_id = m.condition_id WHERE ('${category}' = '$__all' OR m.computed_category = '${category}') UNION ALL SELECT DISTINCT o.condition_id, m.question FROM polymarket.orderbook_levels o JOIN polymarket.markets_dim m ON o.condition_id = m.condition_id WHERE ('${category}' = '$__all' OR m.computed_category = '${category}')) GROUP BY condition_id ORDER BY count() DESC LIMIT 50",
-          "query": "SELECT DISTINCT condition_id AS __value, any(question) AS __text FROM (SELECT DISTINCT t.condition_id, m.question FROM polymarket.trades_raw t JOIN polymarket.markets_dim m ON t.condition_id = m.condition_id WHERE ('${category}' = '$__all' OR m.computed_category = '${category}') UNION ALL SELECT DISTINCT o.condition_id, m.question FROM polymarket.orderbook_levels o JOIN polymarket.markets_dim m ON o.condition_id = m.condition_id WHERE ('${category}' = '$__all' OR m.computed_category = '${category}')) GROUP BY condition_id ORDER BY count() DESC LIMIT 50",
+          "definition": "SELECT condition_id AS __value, argMax(question, updated_at) AS __text FROM polymarket.markets_dim WHERE updated_at >= now() - INTERVAL 1 DAY AND ('${category}' = '$__all' OR computed_category = '${category}') GROUP BY condition_id ORDER BY __text LIMIT 50000",
+          "query": "SELECT condition_id AS __value, argMax(question, updated_at) AS __text FROM polymarket.markets_dim WHERE updated_at >= now() - INTERVAL 1 DAY AND ('${category}' = '$__all' OR computed_category = '${category}') GROUP BY condition_id ORDER BY __text LIMIT 50000",
           "refresh": 1,
           "sort": 0
         },
@@ -36,8 +36,8 @@
           "label": "Token",
           "type": "query",
           "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
-          "definition": "SELECT DISTINCT COALESCE((SELECT token_id FROM polymarket.trades_raw WHERE condition_id = '${market}' LIMIT 1), (SELECT token_id FROM polymarket.orderbook_levels WHERE condition_id = '${market}' LIMIT 1)) AS token_id",
-          "query": "SELECT DISTINCT COALESCE((SELECT token_id FROM polymarket.trades_raw WHERE condition_id = '${market}' LIMIT 1), (SELECT token_id FROM polymarket.orderbook_levels WHERE condition_id = '${market}' LIMIT 1)) AS token_id",
+          "definition": "SELECT arrayJoin(argMax(clob_token_ids, updated_at)) AS token_id FROM polymarket.markets_dim WHERE condition_id = '${market}'",
+          "query": "SELECT arrayJoin(argMax(clob_token_ids, updated_at)) AS token_id FROM polymarket.markets_dim WHERE condition_id = '${market}'",
           "refresh": 1
         }
       ]

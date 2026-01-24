@@ -96,6 +96,12 @@ class ClickHouseWriter:
             (
                 market_id String,
                 condition_id String,
+                event_id String,
+                event_slug String,
+                event_title String,
+                event_start_date Nullable(DateTime),
+                event_end_date Nullable(DateTime),
+                event_tags Array(String),
                 question String,
                 slug String,
                 category LowCardinality(String),
@@ -130,6 +136,30 @@ class ClickHouseWriter:
             return
         
         existing = {row[0] for row in result.result_rows}
+        if "event_id" not in existing:
+            self.client.command(
+                "ALTER TABLE markets_dim ADD COLUMN IF NOT EXISTS event_id String AFTER condition_id"
+            )
+        if "event_slug" not in existing:
+            self.client.command(
+                "ALTER TABLE markets_dim ADD COLUMN IF NOT EXISTS event_slug String AFTER event_id"
+            )
+        if "event_title" not in existing:
+            self.client.command(
+                "ALTER TABLE markets_dim ADD COLUMN IF NOT EXISTS event_title String AFTER event_slug"
+            )
+        if "event_start_date" not in existing:
+            self.client.command(
+                "ALTER TABLE markets_dim ADD COLUMN IF NOT EXISTS event_start_date Nullable(DateTime) AFTER event_title"
+            )
+        if "event_end_date" not in existing:
+            self.client.command(
+                "ALTER TABLE markets_dim ADD COLUMN IF NOT EXISTS event_end_date Nullable(DateTime) AFTER event_start_date"
+            )
+        if "event_tags" not in existing:
+            self.client.command(
+                "ALTER TABLE markets_dim ADD COLUMN IF NOT EXISTS event_tags Array(String) AFTER event_end_date"
+            )
         if "category" not in existing:
             self.client.command(
                 "ALTER TABLE markets_dim ADD COLUMN IF NOT EXISTS category LowCardinality(String) AFTER slug"
@@ -263,7 +293,9 @@ class ClickHouseWriter:
             self._market_buffer.clear()
         
         columns = [
-            'market_id', 'condition_id', 'question', 'slug', 'category',
+            'market_id', 'condition_id', 'event_id', 'event_slug', 'event_title',
+            'event_start_date', 'event_end_date', 'event_tags',
+            'question', 'slug', 'category',
             'computed_category', 'outcomes', 'clob_token_ids', 'end_date', 'active', 'closed',
             'volume_total', 'liquidity', 'best_bid', 'best_ask', 'last_trade_price',
             'updated_at'
@@ -277,6 +309,12 @@ class ClickHouseWriter:
             data.append([
                 m['market_id'],
                 m['condition_id'],
+                m.get('event_id', ''),
+                m.get('event_slug', ''),
+                m.get('event_title', ''),
+                m.get('event_start_date'),
+                m.get('event_end_date'),
+                m.get('event_tags', []),
                 m['question'],
                 m['slug'],
                 m['category'],

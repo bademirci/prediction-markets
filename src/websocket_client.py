@@ -6,6 +6,7 @@ import orjson
 from datetime import datetime, timezone
 from typing import Callable, Any
 from websockets.client import WebSocketClientProtocol
+from websockets.protocol import State
 
 from .config import PolymarketConfig
 
@@ -27,7 +28,7 @@ class PolymarketWebSocket:
         self.on_book = on_book
         self.subscribe_batch_size = max(1, subscribe_batch_size)
         
-        self._ws: WebSocketClientProtocol | None = None
+        self._ws: WebSocketClientProtocol | Any | None = None
         self._running = False
         self._subscribed_tokens: set[str] = set()
         self._reconnect_delay = 1.0
@@ -42,7 +43,7 @@ class PolymarketWebSocket:
         """Connect with exponential backoff retry."""
         while self._running:
             try:
-                if not self._ws or not self._ws.open:
+                if not self._is_ws_open():
                     print(f"🔌 Connecting to {self.config.websocket_url}...")
                     self._ws = await websockets.connect(
                         self.config.websocket_url,
@@ -75,11 +76,26 @@ class PolymarketWebSocket:
         """Subscribe to market updates for given tokens."""
         self._subscribed_tokens.update(token_ids)
         
-        if self._ws and self._ws.open:
-            await self._send_subscribe(token_ids)
+        if self._is_ws_open():
+            for i in range(0, len(token_ids), self.subscribe_batch_size):
+                await self._send_subscribe(token_ids[i:i + self.subscribe_batch_size])
         else:
             # Store for later when connection is established
             print(f"📝 Queued {len(token_ids)} tokens for subscription (WebSocket not connected yet)")
+
+    def _is_ws_open(self) -> bool:
+        if not self._ws:
+            return False
+        state = getattr(self._ws, "state", None)
+        if state is not None:
+            return state is State.OPEN
+        is_open = getattr(self._ws, "open", None)
+        if isinstance(is_open, bool):
+            return is_open
+        is_closed = getattr(self._ws, "closed", None)
+        if isinstance(is_closed, bool):
+            return not is_closed
+        return False
     
     async def _send_subscribe(self, token_ids: list[str]) -> None:
         """Send subscribe message."""
@@ -111,6 +127,10 @@ class PolymarketWebSocket:
             # HFT CRITICAL: Capture Receipt Time immediately
             receipt_ts = datetime.now(timezone.utc)
             
+            # Skip empty messages
+            if not message or not message.strip():
+                continue
+            
             try:
                 data = orjson.loads(message)
                 if isinstance(data, list):
@@ -118,7 +138,11 @@ class PolymarketWebSocket:
                         await self._handle_event(event, receipt_ts)
                 else:
                     await self._handle_event(data, receipt_ts)
+            except orjson.JSONDecodeError:
+                # Silently skip invalid JSON (could be binary data, ping/pong, etc.)
+                continue
             except Exception as e:
+                # Only log non-JSON errors (they might be important)
                 print(f"⚠️ Error handling message: {e}")
     
     async def _handle_event(self, event: dict, receipt_ts: datetime) -> None:

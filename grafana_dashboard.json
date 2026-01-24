@@ -10,7 +10,7 @@
           "name": "category",
           "type": "query",
           "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
-          "query": "SELECT DISTINCT computed_category FROM polymarket.markets_dim WHERE active = 1 ORDER BY computed_category",
+          "query": "SELECT DISTINCT computed_category FROM polymarket.markets_dim WHERE updated_at >= now() - INTERVAL 1 DAY ORDER BY computed_category",
           "current": {"text": "Esports", "value": "Esports"},
           "refresh": 1
         },
@@ -18,14 +18,14 @@
           "name": "market",
           "type": "query",
           "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
-          "query": "SELECT condition_id AS __value, question AS __text FROM polymarket.markets_dim WHERE computed_category = '${category}' AND active = 1 ORDER BY volume_total DESC LIMIT 50",
+          "query": "SELECT condition_id AS __value, argMax(question, updated_at) AS __text FROM polymarket.markets_dim WHERE updated_at >= now() - INTERVAL 1 DAY AND computed_category = '${category}' GROUP BY condition_id ORDER BY __text LIMIT 50000",
           "refresh": 1
         },
         {
           "name": "token",
           "type": "query",
           "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
-          "query": "SELECT arrayJoin(clob_token_ids) AS token_id FROM polymarket.markets_dim WHERE condition_id = '${market}'",
+          "query": "SELECT arrayJoin(argMax(clob_token_ids, updated_at)) AS token_id FROM polymarket.markets_dim WHERE condition_id = '${market}'",
           "refresh": 1
         }
       ]

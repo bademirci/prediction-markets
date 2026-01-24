@@ -22,15 +22,23 @@ def search_market(search_term: str):
         
         # Search in markets_dim
         query = """
-        SELECT 
+        SELECT
             condition_id,
             market_id,
             question,
             category,
             computed_category
-        FROM markets_dim
-        WHERE question LIKE %(search)s
-           OR question ILIKE %(search)s
+        FROM (
+            SELECT
+                argMax(condition_id, updated_at) AS condition_id,
+                market_id,
+                argMax(question, updated_at) AS question,
+                argMax(category, updated_at) AS category,
+                argMax(computed_category, updated_at) AS computed_category
+            FROM markets_dim
+            GROUP BY market_id
+        )
+        WHERE question ILIKE %(search)s
         ORDER BY question
         LIMIT 20
         """
@@ -43,11 +51,12 @@ def search_market(search_term: str):
             
             all_query = """
             SELECT 
-                condition_id,
+                argMax(condition_id, updated_at) AS condition_id,
                 market_id,
-                question,
-                category
+                argMax(question, updated_at) AS question,
+                argMax(category, updated_at) AS category
             FROM markets_dim
+            GROUP BY market_id
             ORDER BY question
             LIMIT 20
             """
@@ -77,7 +86,7 @@ def search_market(search_term: str):
                 if trades_result.result_rows:
                     trade_count, first, last = trades_result.result_rows[0]
                     print(f"   📈 Trades: {trade_count:,}")
-                    if first and last:
+                    if trade_count > 0 and first and last:
                         print(f"   📅 İlk: {first}, Son: {last}")
                 
                 orderbook_query = """

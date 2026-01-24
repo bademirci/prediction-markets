@@ -35,6 +35,8 @@ class PolymarketIngestion:
         self._running = False
         self._markets: dict[str, dict] = {}
         self._token_to_market: dict[str, str] = {}
+        self._subscribed_tokens: set[str] = set()
+        self._ws_rr_index: int = 0
         
         # Stats
         self._stats = {
@@ -156,11 +158,14 @@ class PolymarketIngestion:
     async def _sync_markets(self) -> None:
         print("📥 Syncing markets...")
         try:
+            prev_tokens = set(self._token_to_market.keys())
             markets = await self.rest_client.fetch_active_markets(limit=self.config.max_markets)
             
             sports_keywords = [
-                " vs ", "League", "Cup", "Tournament", "Championship", "NBA", "NFL", 
-                "Premier League", "Champions League", "UFC", "F1", "Grand Prix"
+                " vs ", " vs. ", " v ", " v. ",
+                "league", "cup", "tournament", "championship",
+                "nba", "nfl", "premier league", "champions league",
+                "ufc", "f1", "grand prix"
             ]
             
             for market in markets:
@@ -171,9 +176,10 @@ class PolymarketIngestion:
                 if not computed_cat:
                     api_cat = market.get('category', 'Unknown')
                     q_text = market.get('question', '')
+                    q_text_lower = q_text.lower()
                     
                     if api_cat == 'Sports': computed_cat = 'Sports'
-                    elif any(k in q_text for k in sports_keywords): computed_cat = 'Sports'
+                    elif any(k in q_text_lower for k in sports_keywords): computed_cat = 'Sports'
                     else: computed_cat = api_cat
                 
                 market['computed_category'] = computed_cat or 'Other'
@@ -189,8 +195,24 @@ class PolymarketIngestion:
             self._stats['markets_synced'] = len(markets)
             print(f"✅ Synced {count} markets. Known tokens: {len(self._token_to_market)}")
             
+            new_tokens = set(self._token_to_market.keys()) - prev_tokens
+            if new_tokens and self.ws_clients:
+                await self._subscribe_new_tokens(new_tokens)
+            
         except Exception as e:
             print(f"❌ Error syncing markets: {e}")
+
+    async def _subscribe_new_tokens(self, new_tokens: set[str]) -> None:
+        tokens = list(new_tokens)
+        print(f"📡 Subscribing to {len(tokens)} new tokens...")
+        for i in range(0, len(tokens), self.config.ws_subscribe_batch_size):
+            batch = tokens[i:i + self.config.ws_subscribe_batch_size]
+            if not self.ws_clients:
+                break
+            ws_client = self.ws_clients[self._ws_rr_index % len(self.ws_clients)]
+            self._ws_rr_index += 1
+            await ws_client.subscribe(batch)
+        self._subscribed_tokens.update(new_tokens)
     
     async def _run_websocket(self, token_ids: list[str]) -> None:
         """Subscribe to tokens across multiple WebSocket connections."""

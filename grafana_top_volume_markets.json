@@ -1,0 +1,79 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "polymarket-top-volume",
+    "title": "Polymarket Top Volume Markets",
+    "tags": ["polymarket", "volume", "markets"],
+    "timezone": "browser",
+    "refresh": "30s",
+    "time": {"from": "now-24h", "to": "now"},
+    "templating": {
+      "list": [
+        {
+          "name": "category",
+          "label": "Category",
+          "type": "query",
+          "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+          "definition": "SELECT DISTINCT computed_category FROM polymarket.markets_dim WHERE updated_at >= now() - INTERVAL 1 DAY ORDER BY computed_category",
+          "query": "SELECT DISTINCT computed_category FROM polymarket.markets_dim WHERE updated_at >= now() - INTERVAL 1 DAY ORDER BY computed_category",
+          "includeAll": true,
+          "allValue": null,
+          "refresh": 1,
+          "sort": 1
+        }
+      ]
+    },
+    "panels": [
+      {
+        "id": 1,
+        "title": "🏆 Top Markets by API Volume (All Active, snapshot)",
+        "type": "table",
+        "gridPos": {"x": 0, "y": 0, "w": 24, "h": 9},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT condition_id AS condition_id, argMax(question, updated_at) AS market, round(max(volume_total), 2) AS volume_total, max(updated_at) AS last_updated FROM polymarket.markets_dim WHERE active = 1 AND ('${category}' = '$__all' OR computed_category = '${category}') GROUP BY condition_id ORDER BY volume_total DESC LIMIT 50",
+            "refId": "A",
+            "format": 2
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "📈 Most Active Orderbook Markets (Last 24h, ingested)",
+        "type": "table",
+        "gridPos": {"x": 0, "y": 9, "w": 24, "h": 9},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT o.condition_id AS condition_id, argMax(m.question, m.updated_at) AS market, count() AS orderbook_updates_24h, max(o.exchange_ts) AS last_ob_ts FROM polymarket.orderbook_levels o LEFT JOIN polymarket.markets_dim m ON o.condition_id = m.condition_id WHERE o.exchange_ts >= now() - INTERVAL 24 HOUR AND ('${category}' = '$__all' OR m.computed_category = '${category}') GROUP BY o.condition_id ORDER BY orderbook_updates_24h DESC LIMIT 50",
+            "refId": "A",
+            "format": 2
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "🏆 Top Markets by Trade Volume (Last 24h, ingested)",
+        "type": "table",
+        "gridPos": {"x": 0, "y": 18, "w": 24, "h": 9},
+        "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+        "targets": [
+          {
+            "datasource": {"type": "grafana-clickhouse-datasource", "uid": "ff9v08z0shkw0e"},
+            "queryType": "sql",
+            "rawSql": "SELECT t.condition_id AS condition_id, argMax(m.question, m.updated_at) AS market, round(sum(t.price * t.size), 2) AS volume_24h, count() AS trades_24h, max(t.exchange_ts) AS last_trade_ts FROM polymarket.trades_raw t LEFT JOIN polymarket.markets_dim m ON t.condition_id = m.condition_id WHERE t.exchange_ts >= now() - INTERVAL 24 HOUR AND ('${category}' = '$__all' OR m.computed_category = '${category}') GROUP BY t.condition_id ORDER BY volume_24h DESC LIMIT 50",
+            "refId": "A",
+            "format": 2
+          }
+        ]
+      }
+    ],
+    "schemaVersion": 39
+  },
+  "overwrite": true
+}

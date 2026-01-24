@@ -82,10 +82,51 @@ class PolymarketRestClient:
                     end_date = datetime.fromisoformat(m['endDate'].replace('Z', '+00:00'))
                 except (ValueError, TypeError):
                     pass
+
+            # Parse event info (first event)
+            event_id = ''
+            event_slug = ''
+            event_title = ''
+            event_start_date = None
+            event_end_date = None
+            event_tags: list[str] = []
+            events = m.get('events', [])
+            if isinstance(events, str):
+                try:
+                    events = orjson.loads(events)
+                except Exception:
+                    events = []
+            if isinstance(events, list) and events:
+                e = events[0]
+                event_id = str(e.get('id', ''))
+                event_slug = e.get('slug', '') or ''
+                event_title = e.get('title', '') or ''
+                if e.get('startDate'):
+                    try:
+                        event_start_date = datetime.fromisoformat(e['startDate'].replace('Z', '+00:00'))
+                    except (ValueError, TypeError):
+                        pass
+                if e.get('endDate'):
+                    try:
+                        event_end_date = datetime.fromisoformat(e['endDate'].replace('Z', '+00:00'))
+                    except (ValueError, TypeError):
+                        pass
+                tags = e.get('tags', []) if isinstance(e, dict) else []
+                if isinstance(tags, list):
+                    for t in tags:
+                        label = t.get('label') if isinstance(t, dict) else None
+                        if label:
+                            event_tags.append(label)
             
             markets.append({
                 'market_id': str(m['id']),
                 'condition_id': m.get('conditionId', ''),
+                'event_id': event_id,
+                'event_slug': event_slug,
+                'event_title': event_title,
+                'event_start_date': event_start_date,
+                'event_end_date': event_end_date,
+                'event_tags': event_tags,
                 'question': m.get('question', ''),
                 'slug': m.get('slug', ''),
                 'category': m.get('category', 'Unknown'),
@@ -188,3 +229,75 @@ class PolymarketRestClient:
             })
         
         return trades
+
+    async def fetch_active_events(self, limit: int = 1000000) -> list[dict]:
+        """Fetch active events from Gamma API with pagination.
+
+        Args:
+            limit: Maximum number of events to fetch (default: 1M, effectively no limit)
+        """
+        url = f"{self.config.gamma_api_url}/events"
+
+        all_events_raw = []
+        offset = 0
+        page_size = 500
+
+        while len(all_events_raw) < limit:
+            params = {
+                "limit": page_size,
+                "offset": offset,
+                "active": "true",
+                "closed": "false",
+            }
+
+            response = await self.http_client.get(url, params=params)
+            response.raise_for_status()
+
+            batch = orjson.loads(response.content)
+            if not batch:
+                break
+
+            all_events_raw.extend(batch)
+            offset += page_size
+
+            if len(batch) < page_size:
+                break
+
+            if len(all_events_raw) % 10000 == 0:
+                print(f"   Fetched {len(all_events_raw):,} events so far...")
+
+        events_raw = all_events_raw[:limit] if limit < len(all_events_raw) else all_events_raw
+        print(f"   ✅ Fetched {len(events_raw):,} events from API")
+
+        events = []
+        for e in events_raw:
+            start_date = None
+            end_date = None
+            if e.get('startDate'):
+                try:
+                    start_date = datetime.fromisoformat(e['startDate'].replace('Z', '+00:00'))
+                except (ValueError, TypeError):
+                    pass
+            if e.get('endDate'):
+                try:
+                    end_date = datetime.fromisoformat(e['endDate'].replace('Z', '+00:00'))
+                except (ValueError, TypeError):
+                    pass
+
+            tags = []
+            for t in e.get('tags', []) or []:
+                label = t.get('label')
+                if label:
+                    tags.append(label)
+
+            events.append({
+                'event_id': str(e.get('id', '')),
+                'event_slug': e.get('slug', ''),
+                'event_title': e.get('title', ''),
+                'event_start_date': start_date,
+                'event_end_date': end_date,
+                'event_tags': tags,
+                'markets': e.get('markets', []) or [],
+            })
+
+        return events

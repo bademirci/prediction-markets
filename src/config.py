@@ -33,6 +33,7 @@ class Config:
     batch_size: int = 1000
     flush_interval: float = 1.0  # seconds
     max_markets: int = 1000000   # All markets (no practical limit)
+    max_events: int = 1000000    # All events (no practical limit)
     ws_tokens_per_connection: int = 1000
     ws_subscribe_batch_size: int = 200
     max_ws_connections: int = 10
